@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <id>Intent.NextJS.Core</id>
+  <version>3.0.0</version>
+  <summary>A custom module for Intent.Modules.NodeJS.</summary>
+  <description>A custom module for Intent.Modules.NodeJS.</description>
+  <authors>Intent.Modules.NodeJS</authors>
+  <templates>
+    <template id="Intent.NextJS.Core.Templates.MainTemplate" externalReference="b0a8435b-723e-428e-a8ef-1be63dee5c46">
+      <role>main.ts</role>
+    </template>
+    <template id="Intent.NextJS.Core.Templates.AppModule" externalReference="3617addd-e98a-4f2b-a9f2-c8cdce720f14">
+      <role>app.module.ts</role>
+    </template>
+  </templates>
+  <dependencies>
+    <dependency id="Intent.Common" version="2.2.0" />
+    <dependency id="Intent.Common.Types" version="2.2.0" />
+  </dependencies>
+  <files>
+    <file src="$outDir$/$id$.dll" />
+    <file src="$outDir$/$id$.pdb" />
+  </files>
+  <metadata />
+</package>

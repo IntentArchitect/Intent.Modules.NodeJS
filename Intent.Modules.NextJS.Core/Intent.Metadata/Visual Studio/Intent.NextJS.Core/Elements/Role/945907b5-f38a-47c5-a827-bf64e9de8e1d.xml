@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="945907b5-f38a-47c5-a827-bf64e9de8e1d" type="Role" typeId="025e933b-b602-4b6d-95ab-0ec36ae940da">
+  <name>DesignerConfig</name>
+  <display>DesignerConfig</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>96615273-0852-4d59-acfb-67f62095564b</parentFolderId>
+  <packageId>b3a947a8-f9b4-4d7a-9494-eea2b12b4e04</packageId>
+  <packageName>Intent.NextJS.Core</packageName>
+  <stereotypes />
+  <childElements />
+</class>
