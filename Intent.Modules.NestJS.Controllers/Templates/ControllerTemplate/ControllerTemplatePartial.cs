@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Intent.Engine;
 using Intent.Modelers.Services.Api;
 using Intent.Modules.Common.Templates;
@@ -11,6 +12,11 @@ using Intent.Templates;
 
 namespace Intent.Modules.NestJS.Controllers.Templates.ControllerTemplate
 {
+    public interface IControllerTemplateDecorator
+    {
+
+    }
+
     [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
     partial class ControllerTemplate : TypeScriptTemplateBase<ServiceModel>
     {
@@ -21,16 +27,37 @@ namespace Intent.Modules.NestJS.Controllers.Templates.ControllerTemplate
         {
         }
 
+        public string ServiceClassName => GetTemplateClassName(ServiceTemplate.ServiceTemplate.TemplateId, Model);
+
+        public string GetParameterDefinitions(OperationModel operation)
+        {
+            return string.Join(", ", new[] { "@Req() req: Request" }.Concat(operation.Parameters.Select(p => $"{GetParameterDefinitionDecorator(operation, p)}{p.Name.ToCamelCase()}: {GetTypeName(p.TypeReference)}")));
+        }
+
+        private string GetParameterDefinitionDecorator(OperationModel operation, ParameterModel parameter)
+        {
+            return "";
+        }
+
+        public string GetReturnType(OperationModel operation)
+        {
+            return operation.ReturnType != null ? GetTypeName(operation.ReturnType) : "void";
+        }
+
+        public string GetParameters(OperationModel operation)
+        {
+            return string.Join(", ", operation.Parameters.Select(p => $"{p.Name.ToCamelCase()}"));
+        }
+
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
         public override ITemplateFileConfig DefineDefaultFileMetadata()
         {
             return new TypeScriptDefaultFileMetadata(
                 overwriteBehaviour: OverwriteBehaviour.Always,
-                fileName: "${Model.Name}",
-                relativeLocation: "Controller",
-                className: "${Model.Name}"
+                fileName: $"{Model.GetModelName().ToDotCase()}.controller",
+                relativeLocation: "controller",
+                className: $"{Model.GetModelName()}Controller"
             );
         }
-
     }
 }

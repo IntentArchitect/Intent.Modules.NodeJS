@@ -18,7 +18,7 @@ namespace Intent.Modules.NextJS.Core.Templates.AppModule
 
         public AppModule(IOutputTarget outputTarget, object model) : base(TemplateId, outputTarget, model)
         {
-            ExecutionContext.EventDispatcher.Subscribe();
+            //ExecutionContext.EventDispatcher.Subscribe();
         }
 
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
@@ -26,7 +26,7 @@ namespace Intent.Modules.NextJS.Core.Templates.AppModule
         {
             return new TypeScriptDefaultFileMetadata(
                 overwriteBehaviour: OverwriteBehaviour.Always,
-                fileName: "AppModule",
+                fileName: "app.module",
                 relativeLocation: "",
                 className: "AppModule"
             );

@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Intent.Modules\Modules\Intent.Modules.Common.TypeScript\Intent.Modules.Common.TypeScript.csproj" />
+    <ProjectReference Include="..\..\Intent.Modules\Modules\Intent.Modules.Common\Intent.Modules.Common.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,13 +25,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Templates\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="Templates\ControllerTemplate\ControllerTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>ControllerTemplate.cs</LastGenOutput>
+    </None>
+  
+    <None Update="Templates\ServiceTemplate\ServiceTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ServiceTemplate.cs</LastGenOutput>
     </None>
   </ItemGroup>
 
@@ -39,6 +41,12 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>ControllerTemplate.tt</DependentUpon>
+    </Compile>
+  
+    <Compile Update="Templates\ServiceTemplate\ServiceTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ServiceTemplate.tt</DependentUpon>
     </Compile>
   </ItemGroup>
 

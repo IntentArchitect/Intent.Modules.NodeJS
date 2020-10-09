@@ -14,11 +14,11 @@ using Intent.Templates;
 namespace Intent.Modules.NextJS.Core.Templates.MainTemplate
 {
     [IntentManaged(Mode.Merge, Body = Mode.Merge, Signature = Mode.Fully)]
-    public class MainTemplateRegistration : NoModelTemplateRegistrationBase
+    public class MainTemplateRegistration : SingleFileTemplateRegistration
     {
         public override string TemplateId => MainTemplate.TemplateId;
 
-        public override ITemplate CreateTemplateInstance(IProject project)
+        public override ITemplate CreateTemplateInstance(IOutputTarget project)
         {
             return new MainTemplate(project, null);
         }

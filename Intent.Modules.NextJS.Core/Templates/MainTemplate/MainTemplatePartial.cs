@@ -27,7 +27,7 @@ namespace Intent.Modules.NextJS.Core.Templates.MainTemplate
         {
             return new TypeScriptDefaultFileMetadata(
                 overwriteBehaviour: OverwriteBehaviour.Always,
-                fileName: "Main",
+                fileName: "main",
                 relativeLocation: "",
                 className: "Main"
             );

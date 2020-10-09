@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="87c2abfe-25d0-4202-95cc-1e62b954ef50" type="Service" typeId="b16578a5-27b1-4047-a8df-f0b783d706bd">
+  <name>AppController</name>
+  <display>AppController</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>f1541612-73c4-4a4b-b2dd-534c92c9707a</parentFolderId>
+  <packageId>f1541612-73c4-4a4b-b2dd-534c92c9707a</packageId>
+  <packageName>TestApplication.Services</packageName>
+  <stereotypes />
+  <childElements>
+    <childElement id="5541418d-fde8-4917-ac71-84e1c46f06e6" type="Operation" typeId="e030c97a-e066-40a7-8188-808c275df3cb">
+      <name>FindAll</name>
+      <display>FindAll(param: string, param2: int): void</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="1d0362d9-2f84-47f5-a339-84d52d209686">
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>87c2abfe-25d0-4202-95cc-1e62b954ef50</parentFolderId>
+      <packageId>f1541612-73c4-4a4b-b2dd-534c92c9707a</packageId>
+      <packageName>TestApplication.Services</packageName>
+      <stereotypes />
+      <childElements>
+        <childElement id="16f3e91c-ee76-476d-8a68-fc523b41aff1" type="Parameter" typeId="00208d20-469d-41cb-8501-768fd5eb796b">
+          <name>param</name>
+          <display>in : param: string</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="a913c3ea-2778-4140-8520-4dd8675ed87f">
+            <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>false</isMapped>
+          <parentFolderId>5541418d-fde8-4917-ac71-84e1c46f06e6</parentFolderId>
+          <packageId>f1541612-73c4-4a4b-b2dd-534c92c9707a</packageId>
+          <packageName>TestApplication.Services</packageName>
+          <stereotypes />
+          <childElements />
+        </childElement>
+        <childElement id="88cbbed5-5e76-4d3d-b3df-1cef203fc5b2" type="Parameter" typeId="00208d20-469d-41cb-8501-768fd5eb796b">
+          <name>param2</name>
+          <display>in : param2: int</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="212b5775-a172-448a-a84f-18b153f8b888">
+            <typeId>fb0a362d-e9e2-40de-b6ff-5ce8167cbe74</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>false</isMapped>
+          <parentFolderId>5541418d-fde8-4917-ac71-84e1c46f06e6</parentFolderId>
+          <packageId>f1541612-73c4-4a4b-b2dd-534c92c9707a</packageId>
+          <packageName>TestApplication.Services</packageName>
+          <stereotypes />
+          <childElements />
+        </childElement>
+      </childElements>
+    </childElement>
+  </childElements>
+</class>
