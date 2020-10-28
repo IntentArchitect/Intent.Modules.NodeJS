@@ -39,7 +39,7 @@ namespace Intent.Modules.NestJS.Controllers.Templates.ServiceTemplate
             return new TypeScriptDefaultFileMetadata(
                 overwriteBehaviour: OverwriteBehaviour.Always,
                 fileName: $"{Model.GetModelName().ToDotCase()}.service",
-                relativeLocation: "service",
+                relativeLocation: "",
                 className: $"{Model.GetModelName()}Service"
             );
         }

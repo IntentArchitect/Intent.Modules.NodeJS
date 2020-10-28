@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="0faa586e-ecaa-4b87-b48a-ad7f3e9a0479" type="Role" typeId="8663c9f9-2852-45e7-aaa1-0883a2e6f1da">
+  <name>Intent.NestJS.Controllers.Templates.ServiceTemplate</name>
+  <display>Intent.NestJS.Controllers.Templates.ServiceTemplate</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>30d2b77f-078a-4156-b7d1-5374289392bb</parentFolderId>
+  <packageId>1d6e6af7-a1b5-4fa1-b46f-50685dd8bb7a</packageId>
+  <packageName>root</packageName>
+  <stereotypes />
+  <childElements />
+</class>

@@ -58,7 +58,7 @@
       <ProjectRelativeFilePath>Templates/ServiceTemplate/ServiceTemplateRegistration.cs</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
-      <SolutionRelativeFilePath>..\Intent.Modules.NodeJS.Intent.NestJS.Controllers.sln</SolutionRelativeFilePath>
+      <SolutionRelativeFilePath>..\Intent.NestJS.Controllers.sln</SolutionRelativeFilePath>
     </FileLog>
   </FileLogs>
 </outputLog>

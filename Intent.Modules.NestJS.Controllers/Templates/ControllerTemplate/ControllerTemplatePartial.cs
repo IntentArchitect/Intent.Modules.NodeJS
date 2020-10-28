@@ -55,7 +55,7 @@ namespace Intent.Modules.NestJS.Controllers.Templates.ControllerTemplate
             return new TypeScriptDefaultFileMetadata(
                 overwriteBehaviour: OverwriteBehaviour.Always,
                 fileName: $"{Model.GetModelName().ToDotCase()}.controller",
-                relativeLocation: "controller",
+                relativeLocation: "",
                 className: $"{Model.GetModelName()}Controller"
             );
         }

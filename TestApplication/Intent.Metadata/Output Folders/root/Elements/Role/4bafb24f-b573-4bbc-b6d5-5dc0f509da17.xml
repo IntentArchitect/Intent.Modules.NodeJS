@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="4bafb24f-b573-4bbc-b6d5-5dc0f509da17" type="Role" typeId="8663c9f9-2852-45e7-aaa1-0883a2e6f1da">
+  <name>app.module.ts</name>
+  <display>app.module.ts</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>1d6e6af7-a1b5-4fa1-b46f-50685dd8bb7a</parentFolderId>
+  <packageId>1d6e6af7-a1b5-4fa1-b46f-50685dd8bb7a</packageId>
+  <packageName>root</packageName>
+  <stereotypes />
+  <childElements />
+</class>
