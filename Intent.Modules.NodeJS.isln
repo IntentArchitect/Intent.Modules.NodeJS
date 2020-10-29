@@ -7,8 +7,9 @@
   <metadataRelativePath>Intent.Metadata</metadataRelativePath>
   <modulesCacheRelativePath>.intent/modules</modulesCacheRelativePath>
   <applications>
-    <application id="7f96c1f3-13ba-4fb0-83bd-d383cb54fd85" name="Intent.NextJS.Core" relativePath="Intent.Modules.NextJS.Core/Intent.Modules.NextJS.Core.application.config" />
     <application id="f87dc841-bb66-490e-9de9-9b6d070554a7" name="Intent.Modules.NestJS.Controllers" relativePath="Intent.Modules.NestJS.Controllers/Intent.Modules.NestJS.Controllers.application.config" />
     <application id="cff39af5-9f69-4fe4-9561-e879557f119c" name="TestApplication" relativePath="TestApplication/TestApplication.application.config" />
+    <application id="6ab70093-5fac-4f17-8c9a-a50664bfa47b" name="Intent.TypeORM.Entities" relativePath="Intent.Modules.TypeORM.Entities\Intent.TypeORM.Entities.application.config" />
+    <application id="7f96c1f3-13ba-4fb0-83bd-d383cb54fd85" name="Intent.NextJS.Core" relativePath="Intent.Modules.NestJS.Core\Intent.Modules.NestJS.Core.application.config" />
   </applications>
 </solution>

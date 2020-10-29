@@ -33,6 +33,11 @@
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>ServiceTemplate.cs</LastGenOutput>
     </None>
+  
+    <None Update="Templates\ControllerBaseTemplate\ControllerBaseTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ControllerBaseTemplate.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
@@ -45,6 +50,12 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>ServiceTemplate.tt</DependentUpon>
+    </Compile>
+  
+    <Compile Update="Templates\ControllerBaseTemplate\ControllerBaseTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ControllerBaseTemplate.tt</DependentUpon>
     </Compile>
   </ItemGroup>
 

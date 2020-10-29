@@ -19,6 +19,26 @@
     </FileLog>
     <FileLog>
       <ProjectId>f147fd9a-501e-4202-80c5-fe7d2fb03a4f</ProjectId>
+      <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Controllers\Templates\ControllerBaseTemplate\ControllerBaseTemplate.cs</SolutionRelativeFilePath>
+      <ProjectRelativeFilePath>Templates/ControllerBaseTemplate/ControllerBaseTemplate.cs</ProjectRelativeFilePath>
+    </FileLog>
+    <FileLog>
+      <ProjectId>f147fd9a-501e-4202-80c5-fe7d2fb03a4f</ProjectId>
+      <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Controllers\Templates\ControllerBaseTemplate\ControllerBaseTemplate.tt</SolutionRelativeFilePath>
+      <ProjectRelativeFilePath>Templates/ControllerBaseTemplate/ControllerBaseTemplate.tt</ProjectRelativeFilePath>
+    </FileLog>
+    <FileLog>
+      <ProjectId>f147fd9a-501e-4202-80c5-fe7d2fb03a4f</ProjectId>
+      <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Controllers\Templates\ControllerBaseTemplate\ControllerBaseTemplatePartial.cs</SolutionRelativeFilePath>
+      <ProjectRelativeFilePath>Templates/ControllerBaseTemplate/ControllerBaseTemplatePartial.cs</ProjectRelativeFilePath>
+    </FileLog>
+    <FileLog>
+      <ProjectId>f147fd9a-501e-4202-80c5-fe7d2fb03a4f</ProjectId>
+      <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Controllers\Templates\ControllerBaseTemplate\ControllerBaseTemplateRegistration.cs</SolutionRelativeFilePath>
+      <ProjectRelativeFilePath>Templates/ControllerBaseTemplate/ControllerBaseTemplateRegistration.cs</ProjectRelativeFilePath>
+    </FileLog>
+    <FileLog>
+      <ProjectId>f147fd9a-501e-4202-80c5-fe7d2fb03a4f</ProjectId>
       <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Controllers\Templates\ControllerTemplate\ControllerTemplate.cs</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>Templates/ControllerTemplate/ControllerTemplate.cs</ProjectRelativeFilePath>
     </FileLog>

@@ -7,16 +7,19 @@
   <authors>Intent.Modules.NodeJS</authors>
   <templates>
     <template id="Intent.NestJS.Controllers.Templates.ControllerTemplate" externalReference="6a139daa-2e95-4170-b396-95b9edef8685">
-      <role>Intent.NestJS.Controllers.Templates.ControllerTemplate</role>
+      <role>{Service}.controller.ts</role>
     </template>
     <template id="Intent.NestJS.Controllers.Templates.ServiceTemplate" externalReference="27c77612-3eb9-4b20-bba4-8faef34bfa4a">
-      <role>Intent.NestJS.Controllers.Templates.ServiceTemplate</role>
+      <role>{Service}.service.ts</role>
+    </template>
+    <template id="Intent.NestJS.Controllers.Templates.ControllerBaseTemplate" externalReference="bfbea13c-a046-4d49-acfb-aa0fabd1a292">
+      <role>Intent.NestJS.Controllers.Templates.ControllerBaseTemplate</role>
     </template>
   </templates>
   <dependencies>
-    <dependency id="Intent.Common" version="2.2.0" />
-    <dependency id="Intent.Common.Types" version="2.2.0" />
-    <dependency id="Intent.Modelers.Services" version="3.0.0" />
+    <dependency id="Intent.Common" version="3.0.0-beta" />
+    <dependency id="Intent.Common.Types" version="3.0.0-beta" />
+    <dependency id="Intent.Modelers.Services" version="3.0.0-beta" />
     <dependency id="Intent.Common.TypeScript" version="3.0.0-beta" />
   </dependencies>
   <files>

@@ -17,7 +17,7 @@ export class <#= ClassName #> {
   constructor() {}
 <#  foreach(var operation in Model.Operations) { #>
 
-  @IntentIgnoreBody()
+  @IntentIgnore()
   async <#= operation.Name.ToCamelCase() #>(<#= GetParameterDefinitions(operation) #>): Promise<<#= GetReturnType(operation) #>> {
     throw new Error("Write your implementation here...")
   }

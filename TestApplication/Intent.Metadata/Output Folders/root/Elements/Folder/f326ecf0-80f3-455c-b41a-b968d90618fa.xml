@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <class id="f326ecf0-80f3-455c-b41a-b968d90618fa" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
-  <name>controllers</name>
-  <display>controllers</display>
+  <name>web</name>
+  <display>web</display>
   <isAbstract>false</isAbstract>
   <genericTypes />
   <isMapped>false</isMapped>
-  <parentFolderId>1d6e6af7-a1b5-4fa1-b46f-50685dd8bb7a</parentFolderId>
+  <parentFolderId>0f406754-36be-4fad-8143-6764262c0ae5</parentFolderId>
   <packageId>1d6e6af7-a1b5-4fa1-b46f-50685dd8bb7a</packageId>
   <packageName>root</packageName>
   <stereotypes />

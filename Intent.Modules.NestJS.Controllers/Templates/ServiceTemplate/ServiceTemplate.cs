@@ -47,7 +47,7 @@ namespace Intent.Modules.NestJS.Controllers.Templates.ServiceTemplate
             
             #line default
             #line hidden
-            this.Write("\r\n  @IntentIgnoreBody()\r\n  async ");
+            this.Write("\r\n  @IntentIgnore()\r\n  async ");
             
             #line 21 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\ServiceTemplate\ServiceTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(operation.Name.ToCamelCase()));

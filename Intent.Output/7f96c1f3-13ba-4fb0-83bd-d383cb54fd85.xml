@@ -4,52 +4,52 @@
   <FileLogs>
     <FileLog>
       <ProjectId>96615273-0852-4d59-acfb-67f62095564b</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.NextJS.Core\Intent.Modules.NextJS.Core.csproj</SolutionRelativeFilePath>
-      <ProjectRelativeFilePath>Intent.Modules.NextJS.Core.csproj</ProjectRelativeFilePath>
+      <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Core\Intent.Modules.NestJS.Core.csproj</SolutionRelativeFilePath>
+      <ProjectRelativeFilePath>Intent.Modules.NestJS.Core.csproj</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>96615273-0852-4d59-acfb-67f62095564b</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.NextJS.Core\Intent.Modules.NextJS.Core.imodspec</SolutionRelativeFilePath>
-      <ProjectRelativeFilePath>Intent.Modules.NextJS.Core.imodspec</ProjectRelativeFilePath>
+      <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Core\Intent.Modules.NestJS.Core.imodspec</SolutionRelativeFilePath>
+      <ProjectRelativeFilePath>Intent.Modules.NestJS.Core.imodspec</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>96615273-0852-4d59-acfb-67f62095564b</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.NextJS.Core\Templates\AppModule\AppModule.cs</SolutionRelativeFilePath>
+      <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Core\Templates\AppModule\AppModule.cs</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>Templates/AppModule/AppModule.cs</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>96615273-0852-4d59-acfb-67f62095564b</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.NextJS.Core\Templates\AppModule\AppModule.tt</SolutionRelativeFilePath>
+      <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Core\Templates\AppModule\AppModule.tt</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>Templates/AppModule/AppModule.tt</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>96615273-0852-4d59-acfb-67f62095564b</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.NextJS.Core\Templates\AppModule\AppModulePartial.cs</SolutionRelativeFilePath>
+      <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Core\Templates\AppModule\AppModulePartial.cs</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>Templates/AppModule/AppModulePartial.cs</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>96615273-0852-4d59-acfb-67f62095564b</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.NextJS.Core\Templates\AppModule\AppModuleRegistration.cs</SolutionRelativeFilePath>
+      <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Core\Templates\AppModule\AppModuleRegistration.cs</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>Templates/AppModule/AppModuleRegistration.cs</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>96615273-0852-4d59-acfb-67f62095564b</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.NextJS.Core\Templates\MainTemplate\MainTemplate.cs</SolutionRelativeFilePath>
+      <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Core\Templates\MainTemplate\MainTemplate.cs</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>Templates/MainTemplate/MainTemplate.cs</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>96615273-0852-4d59-acfb-67f62095564b</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.NextJS.Core\Templates\MainTemplate\MainTemplate.tt</SolutionRelativeFilePath>
+      <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Core\Templates\MainTemplate\MainTemplate.tt</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>Templates/MainTemplate/MainTemplate.tt</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>96615273-0852-4d59-acfb-67f62095564b</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.NextJS.Core\Templates\MainTemplate\MainTemplatePartial.cs</SolutionRelativeFilePath>
+      <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Core\Templates\MainTemplate\MainTemplatePartial.cs</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>Templates/MainTemplate/MainTemplatePartial.cs</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>96615273-0852-4d59-acfb-67f62095564b</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.NextJS.Core\Templates\MainTemplate\MainTemplateRegistration.cs</SolutionRelativeFilePath>
+      <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Core\Templates\MainTemplate\MainTemplateRegistration.cs</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>Templates/MainTemplate/MainTemplateRegistration.cs</ProjectRelativeFilePath>
     </FileLog>
   </FileLogs>
