@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<settings>
+  <targetDesignerId>27916ede-58c6-4356-87b1-0b0628d1e2a7</targetDesignerId>
+  <createPackages>
+    <package  typeId="07e7b690-a59d-4b72-8440-4308a121d32c" type="Visual Studio Solution">
+      <name>${application.name}</name>
+      <childElements>
+        <element typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f" type="Folder">
+          <name>server</name>
+          <childElements>
+            <element typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f" type="Folder">
+              <name>src</name>
+              <childElements>
+                <element typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f" type="Folder">
+                  <name>domain</name>
+                  <childElements>
+                    <element typeId="8663c9f9-2852-45e7-aaa1-0883a2e6f1da" type="Role">
+                      <name>Entities</name>
+                    </element>
+                  </childElements>
+                </element>
+                <element typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f" type="Folder">
+                  <name>repository</name>
+                  <childElements>
+                    <element typeId="8663c9f9-2852-45e7-aaa1-0883a2e6f1da" type="Role">
+                      <name>Repositories</name>
+                    </element>
+                  </childElements>
+                </element>
+                <element typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f" type="Folder">
+                  <name>services</name>
+                  <childElements>
+                    <element typeId="8663c9f9-2852-45e7-aaa1-0883a2e6f1da" type="Role">
+                      <name>Services</name>
+                    </element>
+                  </childElements>
+                </element>
+                <element typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f" type="Folder">
+                  <name>web</name>
+                  <childElements>
+                    <element typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f" type="Folder">
+                      <name>rest</name>
+                      <childElements>
+                        <element typeId="8663c9f9-2852-45e7-aaa1-0883a2e6f1da" type="Role">
+                          <name>Controllers</name>
+                        </element>
+                      </childElements>
+                    </element>
+                  </childElements>
+                </element>
+                <element typeId="8663c9f9-2852-45e7-aaa1-0883a2e6f1da" type="Role">
+                  <name>Startup</name>
+                </element>
+              </childElements>
+            </element>
+          </childElements>
+        </element>
+      </childElements>
+    </package>
+  </createPackages>
+</settings>

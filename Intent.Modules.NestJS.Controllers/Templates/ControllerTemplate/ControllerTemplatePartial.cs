@@ -21,13 +21,13 @@ namespace Intent.Modules.NestJS.Controllers.Templates.ControllerTemplate
     partial class ControllerTemplate : TypeScriptTemplateBase<ServiceModel>
     {
         [IntentManaged(Mode.Fully)]
-        public const string TemplateId = "Intent.NestJS.Controllers.Templates.ControllerTemplate";
+        public const string TemplateId = "Intent.NestJS.Controllers.ControllerTemplate";
 
         public ControllerTemplate(IOutputTarget outputTarget, ServiceModel model) : base(TemplateId, outputTarget, model)
         {
         }
 
-        public string ServiceClassName => GetTemplateClassName(ServiceTemplate.ServiceTemplate.TemplateId, Model);
+        public string ServiceClassName => GetTypeName(ServiceTemplate.ServiceTemplate.TemplateId, Model);
 
         public string GetParameterDefinitions(OperationModel operation)
         {
@@ -50,13 +50,11 @@ namespace Intent.Modules.NestJS.Controllers.Templates.ControllerTemplate
         }
 
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
-        public override ITemplateFileConfig DefineDefaultFileMetadata()
+        public override ITemplateFileConfig GetTemplateFileConfig()
         {
-            return new TypeScriptDefaultFileMetadata(
-                overwriteBehaviour: OverwriteBehaviour.Always,
-                fileName: $"{Model.GetModelName().ToDotCase()}.controller",
-                relativeLocation: "",
-                className: $"{Model.GetModelName()}Controller"
+            return new TypeScriptFileConfig(
+                className: $"{Model.GetModelName()}Controller",
+                fileName: $"{Model.GetModelName().ToDotCase()}.controller"
             );
         }
     }

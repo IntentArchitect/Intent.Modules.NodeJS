@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="ee4b8091-daea-4af5-9ab4-b60cb0984534" type="Class" typeId="04e12b51-ed12-42a3-9667-a6aa81bb6d10">
+  <name>Profile</name>
+  <display>Profile</display>
+  <isAbstract>false</isAbstract>
+  <order>0</order>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>4430ccfb-9fe8-4712-89bd-6a6e48b94eb3</parentFolderId>
+  <packageId>4430ccfb-9fe8-4712-89bd-6a6e48b94eb3</packageId>
+  <packageName>Domain</packageName>
+  <stereotypes />
+  <childElements>
+    <childElement id="0544a8eb-6554-4f3e-a828-dada457e60d2" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+      <name>gender</name>
+      <display>gender: string</display>
+      <isAbstract>false</isAbstract>
+      <order>0</order>
+      <genericTypes />
+      <typeReference id="eec6c2a4-9fb5-4722-8250-df72f0e680f2">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>ee4b8091-daea-4af5-9ab4-b60cb0984534</parentFolderId>
+      <packageId>4430ccfb-9fe8-4712-89bd-6a6e48b94eb3</packageId>
+      <packageName>Domain</packageName>
+      <stereotypes />
+      <childElements />
+    </childElement>
+    <childElement id="d3919f95-c7b1-4232-9532-d5fc0b4574df" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+      <name>photo</name>
+      <display>photo: string</display>
+      <isAbstract>false</isAbstract>
+      <order>0</order>
+      <genericTypes />
+      <typeReference id="3f88ec31-6e85-41a5-bd50-e3725942ffe2">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>ee4b8091-daea-4af5-9ab4-b60cb0984534</parentFolderId>
+      <packageId>4430ccfb-9fe8-4712-89bd-6a6e48b94eb3</packageId>
+      <packageName>Domain</packageName>
+      <stereotypes />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

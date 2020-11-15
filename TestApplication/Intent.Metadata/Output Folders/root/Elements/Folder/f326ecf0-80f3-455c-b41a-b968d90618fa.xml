@@ -3,6 +3,7 @@
   <name>web</name>
   <display>web</display>
   <isAbstract>false</isAbstract>
+  <order>3</order>
   <genericTypes />
   <isMapped>false</isMapped>
   <parentFolderId>0f406754-36be-4fad-8143-6764262c0ae5</parentFolderId>

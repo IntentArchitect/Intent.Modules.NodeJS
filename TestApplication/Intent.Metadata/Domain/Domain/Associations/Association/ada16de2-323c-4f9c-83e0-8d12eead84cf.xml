@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="ada16de2-323c-4f9c-83e0-8d12eead84cf">
+  <sourceEnd id="626f9df8-db0d-4908-9467-293f51e7d6ec">
+    <name>Users</name>
+    <display>Users : User[*]</display>
+    <typeReference id="36e2c65c-8e62-4899-a677-85d46eef3e6a">
+      <typeId>f6fffe45-a2fb-478d-ace5-0a841b5520c2</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>true</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Domain</typePackageName>
+      <typePackageId>4430ccfb-9fe8-4712-89bd-6a6e48b94eb3</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+  </sourceEnd>
+  <targetEnd id="ada16de2-323c-4f9c-83e0-8d12eead84cf">
+    <name>Profile</name>
+    <display>Profile : Profile</display>
+    <typeReference id="bc709aba-b2e8-41aa-9985-c2fbbb9a023c">
+      <typeId>ee4b8091-daea-4af5-9ab4-b60cb0984534</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Domain</typePackageName>
+      <typePackageId>4430ccfb-9fe8-4712-89bd-6a6e48b94eb3</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+  </targetEnd>
+  <associationType>Association</associationType>
+  <associationTypeId>eaf9ed4e-0b61-4ac1-ba88-09f912c12087</associationTypeId>
+  <stereotypes />
+</association>

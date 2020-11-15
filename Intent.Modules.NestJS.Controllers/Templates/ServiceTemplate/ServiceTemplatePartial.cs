@@ -16,12 +16,11 @@ namespace Intent.Modules.NestJS.Controllers.Templates.ServiceTemplate
     partial class ServiceTemplate : TypeScriptTemplateBase<ServiceModel>
     {
         [IntentManaged(Mode.Fully)]
-        public const string TemplateId = "Intent.NestJS.Controllers.Templates.ServiceTemplate";
+        public const string TemplateId = "Intent.NestJS.Controllers.ServiceTemplate";
 
         public ServiceTemplate(IOutputTarget outputTarget, ServiceModel model) : base(TemplateId, outputTarget, model)
         {
         }
-
 
         public string GetParameterDefinitions(OperationModel operation)
         {
@@ -34,13 +33,11 @@ namespace Intent.Modules.NestJS.Controllers.Templates.ServiceTemplate
         }
 
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
-        public override ITemplateFileConfig DefineDefaultFileMetadata()
+        public override ITemplateFileConfig GetTemplateFileConfig()
         {
-            return new TypeScriptDefaultFileMetadata(
-                overwriteBehaviour: OverwriteBehaviour.Always,
-                fileName: $"{Model.GetModelName().ToDotCase()}.service",
-                relativeLocation: "",
-                className: $"{Model.GetModelName()}Service"
+            return new TypeScriptFileConfig(
+                className: $"{Model.GetModelName()}Service",
+                fileName: $"{Model.GetModelName().ToDotCase()}.service"
             );
         }
 

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="fd5f7479-205b-45bf-ab01-19d27c9bf7a4" type="Folder" typeId="3407a825-1331-4f3f-89a4-901903ed97ce">
+  <name>Api</name>
+  <display>Api</display>
+  <isAbstract>false</isAbstract>
+  <order>0</order>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>96615273-0852-4d59-acfb-67f62095564b</parentFolderId>
+  <packageId>b3a947a8-f9b4-4d7a-9494-eea2b12b4e04</packageId>
+  <packageName>Intent.Modueles.NodeJs</packageName>
+  <stereotypes>
+    <stereotype stereotypeDefinitionId="61132551-825d-4c6e-b9f1-0f95249d08d4" name="Folder Options">
+      <addedByDefault>true</addedByDefault>
+      <definitionPackageName>Intent.VisualStudio.Projects</definitionPackageName>
+      <definitionPackageId>a0636ab7-d3a1-430b-9609-11a18aa3cc7f</definitionPackageId>
+      <properties>
+        <property name="4bfbefd0-d22e-4ca0-9723-92ae273feca4" display="Namespace Provider" value="true" isActive="true" />
+      </properties>
+    </stereotype>
+  </stereotypes>
+  <childElements>
+    <childElement id="379c9988-acb0-413a-8941-4c9a2e62af16" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
+      <name>ModuleBuilder.Templates.Api.ApiAssociationModel</name>
+      <display>ModuleBuilder.Templates.Api.ApiAssociationModel</display>
+      <isAbstract>false</isAbstract>
+      <order>1</order>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>fd5f7479-205b-45bf-ab01-19d27c9bf7a4</parentFolderId>
+      <packageId>b3a947a8-f9b4-4d7a-9494-eea2b12b4e04</packageId>
+      <packageName>Intent.Modueles.NodeJs</packageName>
+      <stereotypes />
+      <childElements />
+    </childElement>
+    <childElement id="41426115-65ad-4b44-bf8d-36beb4a5457e" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
+      <name>ModuleBuilder.Templates.Api.ApiElementExtensionModel</name>
+      <display>ModuleBuilder.Templates.Api.ApiElementExtensionModel</display>
+      <isAbstract>false</isAbstract>
+      <order>2</order>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>fd5f7479-205b-45bf-ab01-19d27c9bf7a4</parentFolderId>
+      <packageId>b3a947a8-f9b4-4d7a-9494-eea2b12b4e04</packageId>
+      <packageName>Intent.Modueles.NodeJs</packageName>
+      <stereotypes />
+      <childElements />
+    </childElement>
+    <childElement id="e2b6d963-7cc2-4a7b-bef4-e0f3e931bfa7" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
+      <name>ModuleBuilder.Templates.Api.ApiElementModel</name>
+      <display>ModuleBuilder.Templates.Api.ApiElementModel</display>
+      <isAbstract>false</isAbstract>
+      <order>3</order>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>fd5f7479-205b-45bf-ab01-19d27c9bf7a4</parentFolderId>
+      <packageId>b3a947a8-f9b4-4d7a-9494-eea2b12b4e04</packageId>
+      <packageName>Intent.Modueles.NodeJs</packageName>
+      <stereotypes />
+      <childElements />
+    </childElement>
+    <childElement id="0812dc50-df8a-4e78-897f-8bfa12da4517" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
+      <name>ModuleBuilder.Templates.Api.ApiPackageModel</name>
+      <display>ModuleBuilder.Templates.Api.ApiPackageModel</display>
+      <isAbstract>false</isAbstract>
+      <order>4</order>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>fd5f7479-205b-45bf-ab01-19d27c9bf7a4</parentFolderId>
+      <packageId>b3a947a8-f9b4-4d7a-9494-eea2b12b4e04</packageId>
+      <packageName>Intent.Modueles.NodeJs</packageName>
+      <stereotypes />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

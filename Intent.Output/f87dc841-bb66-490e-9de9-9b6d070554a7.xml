@@ -18,67 +18,67 @@
       <ProjectRelativeFilePath>README.txt</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
-      <ProjectId>f147fd9a-501e-4202-80c5-fe7d2fb03a4f</ProjectId>
+      <ProjectId>a4ce5c50-1a9e-4e01-bd6e-45b7aed04495</ProjectId>
       <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Controllers\Templates\ControllerBaseTemplate\ControllerBaseTemplate.cs</SolutionRelativeFilePath>
-      <ProjectRelativeFilePath>Templates/ControllerBaseTemplate/ControllerBaseTemplate.cs</ProjectRelativeFilePath>
+      <ProjectRelativeFilePath>ControllerBaseTemplate/ControllerBaseTemplate.cs</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
-      <ProjectId>f147fd9a-501e-4202-80c5-fe7d2fb03a4f</ProjectId>
+      <ProjectId>a4ce5c50-1a9e-4e01-bd6e-45b7aed04495</ProjectId>
       <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Controllers\Templates\ControllerBaseTemplate\ControllerBaseTemplate.tt</SolutionRelativeFilePath>
-      <ProjectRelativeFilePath>Templates/ControllerBaseTemplate/ControllerBaseTemplate.tt</ProjectRelativeFilePath>
+      <ProjectRelativeFilePath>ControllerBaseTemplate/ControllerBaseTemplate.tt</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
-      <ProjectId>f147fd9a-501e-4202-80c5-fe7d2fb03a4f</ProjectId>
+      <ProjectId>a4ce5c50-1a9e-4e01-bd6e-45b7aed04495</ProjectId>
       <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Controllers\Templates\ControllerBaseTemplate\ControllerBaseTemplatePartial.cs</SolutionRelativeFilePath>
-      <ProjectRelativeFilePath>Templates/ControllerBaseTemplate/ControllerBaseTemplatePartial.cs</ProjectRelativeFilePath>
+      <ProjectRelativeFilePath>ControllerBaseTemplate/ControllerBaseTemplatePartial.cs</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
-      <ProjectId>f147fd9a-501e-4202-80c5-fe7d2fb03a4f</ProjectId>
+      <ProjectId>a4ce5c50-1a9e-4e01-bd6e-45b7aed04495</ProjectId>
       <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Controllers\Templates\ControllerBaseTemplate\ControllerBaseTemplateRegistration.cs</SolutionRelativeFilePath>
-      <ProjectRelativeFilePath>Templates/ControllerBaseTemplate/ControllerBaseTemplateRegistration.cs</ProjectRelativeFilePath>
+      <ProjectRelativeFilePath>ControllerBaseTemplate/ControllerBaseTemplateRegistration.cs</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
-      <ProjectId>f147fd9a-501e-4202-80c5-fe7d2fb03a4f</ProjectId>
+      <ProjectId>a4ce5c50-1a9e-4e01-bd6e-45b7aed04495</ProjectId>
       <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Controllers\Templates\ControllerTemplate\ControllerTemplate.cs</SolutionRelativeFilePath>
-      <ProjectRelativeFilePath>Templates/ControllerTemplate/ControllerTemplate.cs</ProjectRelativeFilePath>
+      <ProjectRelativeFilePath>ControllerTemplate/ControllerTemplate.cs</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
-      <ProjectId>f147fd9a-501e-4202-80c5-fe7d2fb03a4f</ProjectId>
+      <ProjectId>a4ce5c50-1a9e-4e01-bd6e-45b7aed04495</ProjectId>
       <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Controllers\Templates\ControllerTemplate\ControllerTemplate.tt</SolutionRelativeFilePath>
-      <ProjectRelativeFilePath>Templates/ControllerTemplate/ControllerTemplate.tt</ProjectRelativeFilePath>
+      <ProjectRelativeFilePath>ControllerTemplate/ControllerTemplate.tt</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
-      <ProjectId>f147fd9a-501e-4202-80c5-fe7d2fb03a4f</ProjectId>
+      <ProjectId>a4ce5c50-1a9e-4e01-bd6e-45b7aed04495</ProjectId>
       <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Controllers\Templates\ControllerTemplate\ControllerTemplatePartial.cs</SolutionRelativeFilePath>
-      <ProjectRelativeFilePath>Templates/ControllerTemplate/ControllerTemplatePartial.cs</ProjectRelativeFilePath>
+      <ProjectRelativeFilePath>ControllerTemplate/ControllerTemplatePartial.cs</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
-      <ProjectId>f147fd9a-501e-4202-80c5-fe7d2fb03a4f</ProjectId>
+      <ProjectId>a4ce5c50-1a9e-4e01-bd6e-45b7aed04495</ProjectId>
       <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Controllers\Templates\ControllerTemplate\ControllerTemplateRegistration.cs</SolutionRelativeFilePath>
-      <ProjectRelativeFilePath>Templates/ControllerTemplate/ControllerTemplateRegistration.cs</ProjectRelativeFilePath>
+      <ProjectRelativeFilePath>ControllerTemplate/ControllerTemplateRegistration.cs</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
-      <ProjectId>f147fd9a-501e-4202-80c5-fe7d2fb03a4f</ProjectId>
+      <ProjectId>a4ce5c50-1a9e-4e01-bd6e-45b7aed04495</ProjectId>
       <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Controllers\Templates\ServiceTemplate\ServiceTemplate.cs</SolutionRelativeFilePath>
-      <ProjectRelativeFilePath>Templates/ServiceTemplate/ServiceTemplate.cs</ProjectRelativeFilePath>
+      <ProjectRelativeFilePath>ServiceTemplate/ServiceTemplate.cs</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
-      <ProjectId>f147fd9a-501e-4202-80c5-fe7d2fb03a4f</ProjectId>
+      <ProjectId>a4ce5c50-1a9e-4e01-bd6e-45b7aed04495</ProjectId>
       <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Controllers\Templates\ServiceTemplate\ServiceTemplate.tt</SolutionRelativeFilePath>
-      <ProjectRelativeFilePath>Templates/ServiceTemplate/ServiceTemplate.tt</ProjectRelativeFilePath>
+      <ProjectRelativeFilePath>ServiceTemplate/ServiceTemplate.tt</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
-      <ProjectId>f147fd9a-501e-4202-80c5-fe7d2fb03a4f</ProjectId>
+      <ProjectId>a4ce5c50-1a9e-4e01-bd6e-45b7aed04495</ProjectId>
       <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Controllers\Templates\ServiceTemplate\ServiceTemplatePartial.cs</SolutionRelativeFilePath>
-      <ProjectRelativeFilePath>Templates/ServiceTemplate/ServiceTemplatePartial.cs</ProjectRelativeFilePath>
+      <ProjectRelativeFilePath>ServiceTemplate/ServiceTemplatePartial.cs</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
-      <ProjectId>f147fd9a-501e-4202-80c5-fe7d2fb03a4f</ProjectId>
+      <ProjectId>a4ce5c50-1a9e-4e01-bd6e-45b7aed04495</ProjectId>
       <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Controllers\Templates\ServiceTemplate\ServiceTemplateRegistration.cs</SolutionRelativeFilePath>
-      <ProjectRelativeFilePath>Templates/ServiceTemplate/ServiceTemplateRegistration.cs</ProjectRelativeFilePath>
+      <ProjectRelativeFilePath>ServiceTemplate/ServiceTemplateRegistration.cs</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
-      <SolutionRelativeFilePath>..\Intent.NestJS.Controllers.sln</SolutionRelativeFilePath>
+      <SolutionRelativeFilePath>..\Intent.Modules.NodeJs.sln</SolutionRelativeFilePath>
     </FileLog>
   </FileLogs>
 </outputLog>

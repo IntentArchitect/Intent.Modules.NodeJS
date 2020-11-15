@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="c0055dfc-ddbb-4a2b-8ab0-6916f609292b" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+  <name>rest</name>
+  <display>rest</display>
+  <isAbstract>false</isAbstract>
+  <order>0</order>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>f326ecf0-80f3-455c-b41a-b968d90618fa</parentFolderId>
+  <packageId>1d6e6af7-a1b5-4fa1-b46f-50685dd8bb7a</packageId>
+  <packageName>root</packageName>
+  <stereotypes />
+  <childElements>
+    <childElement id="a13b5b25-0621-489a-ba45-7f9b3ce2fcd7" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Intent.NestJS.Controllers.ControllerBaseTemplate</name>
+      <display>Intent.NestJS.Controllers.ControllerBaseTemplate</display>
+      <isAbstract>false</isAbstract>
+      <order>0</order>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>c0055dfc-ddbb-4a2b-8ab0-6916f609292b</parentFolderId>
+      <packageId>1d6e6af7-a1b5-4fa1-b46f-50685dd8bb7a</packageId>
+      <packageName>root</packageName>
+      <stereotypes />
+      <childElements />
+    </childElement>
+    <childElement id="b4d6d8ef-944c-42ec-a383-7ce76fd25129" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Intent.NestJS.Controllers.ControllerTemplate</name>
+      <display>Intent.NestJS.Controllers.ControllerTemplate</display>
+      <isAbstract>false</isAbstract>
+      <order>1</order>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>c0055dfc-ddbb-4a2b-8ab0-6916f609292b</parentFolderId>
+      <packageId>1d6e6af7-a1b5-4fa1-b46f-50685dd8bb7a</packageId>
+      <packageName>root</packageName>
+      <stereotypes />
+      <childElements />
+    </childElement>
+    <childElement id="81c6e503-b735-4fde-8354-b138785ebea7" type="Role" typeId="8663c9f9-2852-45e7-aaa1-0883a2e6f1da">
+      <name>Controllers</name>
+      <display>Controllers</display>
+      <isAbstract>false</isAbstract>
+      <order>2</order>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>c0055dfc-ddbb-4a2b-8ab0-6916f609292b</parentFolderId>
+      <packageId>1d6e6af7-a1b5-4fa1-b46f-50685dd8bb7a</packageId>
+      <packageName>root</packageName>
+      <stereotypes />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>
