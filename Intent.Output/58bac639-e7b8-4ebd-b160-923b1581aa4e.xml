@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<outputLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ApplicationId>58bac639-e7b8-4ebd-b160-923b1581aa4e</ApplicationId>
+  <FileLogs>
+    <FileLog>
+      <ProjectId>4a552a10-949b-45ce-8d6b-61f56798a2ca</ProjectId>
+      <SolutionRelativeFilePath>..\Intent.ApplicationTemplate.NodeJS\Intent.ApplicationTemplate.NestJS.Web\metadata.iatspec</SolutionRelativeFilePath>
+      <ProjectRelativeFilePath>Intent.ApplicationTemplate.NestJS.Web/metadata.iatspec</ProjectRelativeFilePath>
+    </FileLog>
+    <FileLog>
+      <ProjectId>4a552a10-949b-45ce-8d6b-61f56798a2ca</ProjectId>
+      <SolutionRelativeFilePath>..\Intent.ApplicationTemplate.NodeJS\Intent.ApplicationTemplate.NodeJS.csproj</SolutionRelativeFilePath>
+      <ProjectRelativeFilePath>Intent.ApplicationTemplate.NodeJS.csproj</ProjectRelativeFilePath>
+    </FileLog>
+    <FileLog>
+      <SolutionRelativeFilePath>..\Intent.Modules.NodeJS.sln</SolutionRelativeFilePath>
+    </FileLog>
+  </FileLogs>
+</outputLog>

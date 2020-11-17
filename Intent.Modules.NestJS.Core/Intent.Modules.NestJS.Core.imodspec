@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package>
   <id>Intent.NestJS.Core</id>
-  <version>3.0.0</version>
+  <version>3.0.0-beta.3</version>
   <summary>A custom module for Intent.Modules.NodeJS.</summary>
   <description>A custom module for Intent.Modules.NodeJS.</description>
   <authors>Intent.Modules.NodeJS</authors>
@@ -14,9 +14,9 @@
     </template>
   </templates>
   <dependencies>
-    <dependency id="Intent.Common" version="3.0.0-beta" />
-    <dependency id="Intent.Common.Types" version="3.0.0-beta" />
-    <dependency id="Intent.Common.TypeScript" version="3.0.0-beta" />
+    <dependency id="Intent.Common" version="3.0.0-beta.3" />
+    <dependency id="Intent.Common.Types" version="3.0.0-beta.3" />
+    <dependency id="Intent.Common.TypeScript" version="3.0.0-beta.3" />
   </dependencies>
   <files>
     <file src="$outDir$/$id$.dll" />

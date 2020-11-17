@@ -242,6 +242,6 @@ ModelManifest.xml
 # FAKE - F# Make
 .fake/
 
-**/Intent.Modules/**
+*.imod
 .intent/
-/Modules/Intent.ApplicationTemplates/*.iat
+*.iat

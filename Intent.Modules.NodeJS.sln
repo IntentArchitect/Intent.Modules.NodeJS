@@ -1,4 +1,3 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
@@ -7,9 +6,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intent.Modules.NestJS.Contr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intent.Modules.TypeORM.Entities", "Intent.Modules.TypeORM.Entities\Intent.Modules.TypeORM.Entities.csproj", "{3296CE45-064B-4978-900E-427CB564F955}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intent.ApplicationTemplates.NodeJs.Server", "Intent.ApplicationTemplates.NodeJs.Server\Intent.ApplicationTemplates.NodeJs.Server.csproj", "{327DB66D-E9E1-4D91-830C-30343219A23E}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intent.Modules.NestJS.Core", "Intent.Modules.NestJS.Core\Intent.Modules.NestJS.Core.csproj", "{AB51A39E-1A29-4E00-B843-A1677244C708}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intent.ApplicationTemplate.NodeJS", "Intent.ApplicationTemplate.NodeJS\Intent.ApplicationTemplate.NodeJS.csproj", "{4A552A10-949B-45CE-8D6B-61F56798A2CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +24,14 @@ Global
 		{3296CE45-064B-4978-900E-427CB564F955}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3296CE45-064B-4978-900E-427CB564F955}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3296CE45-064B-4978-900E-427CB564F955}.Release|Any CPU.Build.0 = Release|Any CPU
-		{327DB66D-E9E1-4D91-830C-30343219A23E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{327DB66D-E9E1-4D91-830C-30343219A23E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{327DB66D-E9E1-4D91-830C-30343219A23E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{327DB66D-E9E1-4D91-830C-30343219A23E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AB51A39E-1A29-4E00-B843-A1677244C708}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AB51A39E-1A29-4E00-B843-A1677244C708}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB51A39E-1A29-4E00-B843-A1677244C708}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB51A39E-1A29-4E00-B843-A1677244C708}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A552A10-949B-45CE-8D6B-61F56798A2CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A552A10-949B-45CE-8D6B-61F56798A2CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A552A10-949B-45CE-8D6B-61F56798A2CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A552A10-949B-45CE-8D6B-61F56798A2CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
