@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package>
   <id>Intent.TypeORM.Entities</id>
-  <version>3.0.0-beta.3</version>
+  <version>3.0.0</version>
+  <supportedClientVersions>[3.0.0,4.0.0)</supportedClientVersions>
   <summary>A custom module for Intent.Modules.NodeJS.</summary>
   <description>A custom module for Intent.Modules.NodeJS.</description>
   <authors>Intent.Modules.NodeJS</authors>
@@ -9,21 +10,21 @@
   <templates>
     <template id="Intent.TypeORM.Entities.EntityBaseTemplate" externalReference="fe8ac95d-3d20-4216-8d82-a39346b418ed">
       <role>Entities</role>
-      <location>Entities</location>
     </template>
     <template id="Intent.TypeORM.Entities.EntityTemplate" externalReference="2d3ccbf7-3635-42ef-8600-11cd07009934">
       <role>Entities</role>
-      <location>Entities</location>
     </template>
     <template id="Intent.TypeORM.Entities.RepositoryTemplate" externalReference="6460b69c-1989-48f2-97d8-46007f7a157e">
       <role>Repositories</role>
     </template>
   </templates>
+  <decorators></decorators>
+  <factoryExtensions></factoryExtensions>
   <dependencies>
-    <dependency id="Intent.Common" version="3.0.0-beta.3" />
-    <dependency id="Intent.Common.Types" version="3.0.0-beta.3" />
-    <dependency id="Intent.Common.TypeScript" version="3.0.0-beta.3" />
-    <dependency id="Intent.Modelers.Domain" version="3.0.0-beta.3" />
+    <dependency id="Intent.Common" version="3.0.0" />
+    <dependency id="Intent.Common.Types" version="3.0.0" />
+    <dependency id="Intent.Common.TypeScript" version="3.0.0" />
+    <dependency id="Intent.Modelers.Domain" version="3.0.0" />
   </dependencies>
   <files>
     <file src="$outDir$/$id$.dll" />

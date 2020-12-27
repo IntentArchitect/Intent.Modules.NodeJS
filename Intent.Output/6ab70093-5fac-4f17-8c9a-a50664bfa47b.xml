@@ -9,8 +9,8 @@
     </FileLog>
     <FileLog>
       <ProjectId>9d34d137-f8cd-4985-8989-1b4a83d47a22</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.TypeORM.Entities\Intent.Modules.TypeORM.Entities.imodspec</SolutionRelativeFilePath>
-      <ProjectRelativeFilePath>Intent.Modules.TypeORM.Entities.imodspec</ProjectRelativeFilePath>
+      <SolutionRelativeFilePath>..\Intent.Modules.TypeORM.Entities\Intent.TypeORM.Entities.imodspec</SolutionRelativeFilePath>
+      <ProjectRelativeFilePath>Intent.TypeORM.Entities.imodspec</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>9d34d137-f8cd-4985-8989-1b4a83d47a22</ProjectId>

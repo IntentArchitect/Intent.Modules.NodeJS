@@ -6,7 +6,7 @@ using Intent.Modules.Common.Templates;
 using System.Collections.Generic;
 
 [assembly: DefaultIntentManaged(Mode.Merge)]
-[assembly: IntentTemplate("ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial", Version = "1.0")]
+[assembly: IntentTemplate("Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial", Version = "1.0")]
 
 namespace Intent.Modules.NestJS.Core.Templates.Main
 {

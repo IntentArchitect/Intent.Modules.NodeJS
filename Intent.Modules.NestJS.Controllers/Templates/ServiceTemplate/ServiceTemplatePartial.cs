@@ -8,12 +8,12 @@ using Intent.RoslynWeaver.Attributes;
 using Intent.Templates;
 
 [assembly: DefaultIntentManaged(Mode.Merge)]
-[assembly: IntentTemplate("ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial", Version = "1.0")]
+[assembly: IntentTemplate("Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial", Version = "1.0")]
 
 namespace Intent.Modules.NestJS.Controllers.Templates.ServiceTemplate
 {
     [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
-    partial class ServiceTemplate : TypeScriptTemplateBase<ServiceModel>
+    partial class ServiceTemplate : TypeScriptTemplateBase<Intent.Modelers.Services.Api.ServiceModel>
     {
         [IntentManaged(Mode.Fully)]
         public const string TemplateId = "Intent.NestJS.Controllers.ServiceTemplate";

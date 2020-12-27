@@ -9,8 +9,8 @@
     </FileLog>
     <FileLog>
       <ProjectId>96615273-0852-4d59-acfb-67f62095564b</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Core\Intent.Modules.NestJS.Core.imodspec</SolutionRelativeFilePath>
-      <ProjectRelativeFilePath>Intent.Modules.NestJS.Core.imodspec</ProjectRelativeFilePath>
+      <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Core\Intent.NestJS.Core.imodspec</SolutionRelativeFilePath>
+      <ProjectRelativeFilePath>Intent.NestJS.Core.imodspec</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>b0d2955c-78d9-48d7-8e68-199ef7673464</ProjectId>
