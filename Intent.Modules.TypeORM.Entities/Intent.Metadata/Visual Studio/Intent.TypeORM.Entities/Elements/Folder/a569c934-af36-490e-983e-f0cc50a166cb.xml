@@ -51,10 +51,12 @@
       <display>Intent.ModuleBuilder.Templates.TemplateDecorator</display>
       <externalReference>Intent.ModuleBuilder</externalReference>
       <isAbstract>false</isAbstract>
-      <order>0</order>
+      <order>2</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>a569c934-af36-490e-983e-f0cc50a166cb</parentFolderId>
+      <packageId>b0e28c08-9acb-4731-bedc-80c9ebb637b7</packageId>
+      <packageName>Intent.TypeORM.Entities</packageName>
       <stereotypes />
       <childElements />
     </childElement>
@@ -63,10 +65,12 @@
       <display>Intent.ModuleBuilder.Templates.TemplateDecoratorRegistration</display>
       <externalReference>Intent.ModuleBuilder</externalReference>
       <isAbstract>false</isAbstract>
-      <order>0</order>
+      <order>3</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>a569c934-af36-490e-983e-f0cc50a166cb</parentFolderId>
+      <packageId>b0e28c08-9acb-4731-bedc-80c9ebb637b7</packageId>
+      <packageName>Intent.TypeORM.Entities</packageName>
       <stereotypes />
       <childElements />
     </childElement>

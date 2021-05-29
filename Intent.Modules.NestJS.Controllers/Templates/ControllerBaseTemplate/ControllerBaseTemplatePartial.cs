@@ -15,9 +15,10 @@ namespace Intent.Modules.NestJS.Controllers.Templates.ControllerBaseTemplate
     partial class ControllerBaseTemplate : TypeScriptTemplateBase<object>
     {
         [IntentManaged(Mode.Fully)]
-        public const string TemplateId = "Intent.NestJS.Controllers.ControllerBaseTemplate";
+        public const string TemplateId = "Intent.NodeJS.NestJS.Controllers.ControllerBaseTemplate";
 
-        public ControllerBaseTemplate(IOutputTarget outputTarget, object model) : base(TemplateId, outputTarget, model)
+        [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
+        public ControllerBaseTemplate(IOutputTarget outputTarget, object model = null) : base(TemplateId, outputTarget, model)
         {
         }
 

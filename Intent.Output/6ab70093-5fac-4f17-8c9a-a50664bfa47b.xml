@@ -3,78 +3,57 @@
   <ApplicationId>6ab70093-5fac-4f17-8c9a-a50664bfa47b</ApplicationId>
   <FileLogs>
     <FileLog>
+      <ProjectId>a569c934-af36-490e-983e-f0cc50a166cb</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.Templates.TemplateDecoratora813dd33-004c-49c9-b3f5-d29be2256027</CorrelationId>
+      <SolutionRelativeFilePath>../Intent.Modules.TypeORM.Entities/Decorators/EntityTypeOrmDecorator.cs</SolutionRelativeFilePath>
+      <ProjectRelativeFilePath>EntityTypeOrmDecorator.cs</ProjectRelativeFilePath>
+    </FileLog>
+    <FileLog>
+      <ProjectId>a569c934-af36-490e-983e-f0cc50a166cb</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.Templates.TemplateDecoratorRegistrationa813dd33-004c-49c9-b3f5-d29be2256027</CorrelationId>
+      <SolutionRelativeFilePath>../Intent.Modules.TypeORM.Entities/Decorators/EntityTypeOrmDecoratorRegistration.cs</SolutionRelativeFilePath>
+      <ProjectRelativeFilePath>EntityTypeOrmDecoratorRegistration.cs</ProjectRelativeFilePath>
+    </FileLog>
+    <FileLog>
       <ProjectId>9d34d137-f8cd-4985-8989-1b4a83d47a22</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.TypeORM.Entities\Intent.Modules.TypeORM.Entities.csproj</SolutionRelativeFilePath>
+      <CorrelationId>Intent.VisualStudio.Projects.CoreLibrary.CSProject9d34d137-f8cd-4985-8989-1b4a83d47a22</CorrelationId>
+      <SolutionRelativeFilePath>../Intent.Modules.TypeORM.Entities/Intent.Modules.TypeORM.Entities.csproj</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>Intent.Modules.TypeORM.Entities.csproj</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>9d34d137-f8cd-4985-8989-1b4a83d47a22</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.TypeORM.Entities\Intent.TypeORM.Entities.imodspec</SolutionRelativeFilePath>
-      <ProjectRelativeFilePath>Intent.TypeORM.Entities.imodspec</ProjectRelativeFilePath>
+      <CorrelationId>Intent.ModuleBuilder.IModeSpecFile</CorrelationId>
+      <SolutionRelativeFilePath>../Intent.Modules.TypeORM.Entities/Intent.NodeJS.TypeORM.imodspec</SolutionRelativeFilePath>
+      <ProjectRelativeFilePath>Intent.NodeJS.TypeORM.imodspec</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>9d34d137-f8cd-4985-8989-1b4a83d47a22</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.TypeORM.Entities\README.txt</SolutionRelativeFilePath>
+      <CorrelationId>Intent.ModuleBuilder.ReadMe</CorrelationId>
+      <SolutionRelativeFilePath>../Intent.Modules.TypeORM.Entities/README.txt</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>README.txt</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>c8df7c4a-ae2c-4ca5-a1c2-cfc8a8c6d91d</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.TypeORM.Entities\Templates\EntityBaseTemplate\EntityBaseTemplate.cs</SolutionRelativeFilePath>
-      <ProjectRelativeFilePath>EntityBaseTemplate/EntityBaseTemplate.cs</ProjectRelativeFilePath>
-    </FileLog>
-    <FileLog>
-      <ProjectId>c8df7c4a-ae2c-4ca5-a1c2-cfc8a8c6d91d</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.TypeORM.Entities\Templates\EntityBaseTemplate\EntityBaseTemplate.tt</SolutionRelativeFilePath>
-      <ProjectRelativeFilePath>EntityBaseTemplate/EntityBaseTemplate.tt</ProjectRelativeFilePath>
-    </FileLog>
-    <FileLog>
-      <ProjectId>c8df7c4a-ae2c-4ca5-a1c2-cfc8a8c6d91d</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.TypeORM.Entities\Templates\EntityBaseTemplate\EntityBaseTemplatePartial.cs</SolutionRelativeFilePath>
-      <ProjectRelativeFilePath>EntityBaseTemplate/EntityBaseTemplatePartial.cs</ProjectRelativeFilePath>
-    </FileLog>
-    <FileLog>
-      <ProjectId>c8df7c4a-ae2c-4ca5-a1c2-cfc8a8c6d91d</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.TypeORM.Entities\Templates\EntityBaseTemplate\EntityBaseTemplateRegistration.cs</SolutionRelativeFilePath>
-      <ProjectRelativeFilePath>EntityBaseTemplate/EntityBaseTemplateRegistration.cs</ProjectRelativeFilePath>
-    </FileLog>
-    <FileLog>
-      <ProjectId>c8df7c4a-ae2c-4ca5-a1c2-cfc8a8c6d91d</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.TypeORM.Entities\Templates\EntityTemplate\EntityTemplate.cs</SolutionRelativeFilePath>
-      <ProjectRelativeFilePath>EntityTemplate/EntityTemplate.cs</ProjectRelativeFilePath>
-    </FileLog>
-    <FileLog>
-      <ProjectId>c8df7c4a-ae2c-4ca5-a1c2-cfc8a8c6d91d</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.TypeORM.Entities\Templates\EntityTemplate\EntityTemplate.tt</SolutionRelativeFilePath>
-      <ProjectRelativeFilePath>EntityTemplate/EntityTemplate.tt</ProjectRelativeFilePath>
-    </FileLog>
-    <FileLog>
-      <ProjectId>c8df7c4a-ae2c-4ca5-a1c2-cfc8a8c6d91d</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.TypeORM.Entities\Templates\EntityTemplate\EntityTemplatePartial.cs</SolutionRelativeFilePath>
-      <ProjectRelativeFilePath>EntityTemplate/EntityTemplatePartial.cs</ProjectRelativeFilePath>
-    </FileLog>
-    <FileLog>
-      <ProjectId>c8df7c4a-ae2c-4ca5-a1c2-cfc8a8c6d91d</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.TypeORM.Entities\Templates\EntityTemplate\EntityTemplateRegistration.cs</SolutionRelativeFilePath>
-      <ProjectRelativeFilePath>EntityTemplate/EntityTemplateRegistration.cs</ProjectRelativeFilePath>
-    </FileLog>
-    <FileLog>
-      <ProjectId>c8df7c4a-ae2c-4ca5-a1c2-cfc8a8c6d91d</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.TypeORM.Entities\Templates\RepositoryTemplate\RepositoryTemplate.cs</SolutionRelativeFilePath>
+      <CorrelationId>ModuleBuilder.Typescript.Templates.TypescriptTemplate.PreProcessT46460b69c-1989-48f2-97d8-46007f7a157e</CorrelationId>
+      <SolutionRelativeFilePath>../Intent.Modules.TypeORM.Entities/Templates/RepositoryTemplate/RepositoryTemplate.cs</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>RepositoryTemplate/RepositoryTemplate.cs</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>c8df7c4a-ae2c-4ca5-a1c2-cfc8a8c6d91d</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.TypeORM.Entities\Templates\RepositoryTemplate\RepositoryTemplate.tt</SolutionRelativeFilePath>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate6460b69c-1989-48f2-97d8-46007f7a157e</CorrelationId>
+      <SolutionRelativeFilePath>../Intent.Modules.TypeORM.Entities/Templates/RepositoryTemplate/RepositoryTemplate.tt</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>RepositoryTemplate/RepositoryTemplate.tt</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>c8df7c4a-ae2c-4ca5-a1c2-cfc8a8c6d91d</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.TypeORM.Entities\Templates\RepositoryTemplate\RepositoryTemplatePartial.cs</SolutionRelativeFilePath>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial6460b69c-1989-48f2-97d8-46007f7a157e</CorrelationId>
+      <SolutionRelativeFilePath>../Intent.Modules.TypeORM.Entities/Templates/RepositoryTemplate/RepositoryTemplatePartial.cs</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>RepositoryTemplate/RepositoryTemplatePartial.cs</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>c8df7c4a-ae2c-4ca5-a1c2-cfc8a8c6d91d</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.TypeORM.Entities\Templates\RepositoryTemplate\RepositoryTemplateRegistration.cs</SolutionRelativeFilePath>
+      <CorrelationId>Intent.ModuleBuilder.TemplateRegistration.FilePerModel6460b69c-1989-48f2-97d8-46007f7a157e</CorrelationId>
+      <SolutionRelativeFilePath>../Intent.Modules.TypeORM.Entities/Templates/RepositoryTemplate/RepositoryTemplateRegistration.cs</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>RepositoryTemplate/RepositoryTemplateRegistration.cs</ProjectRelativeFilePath>
     </FileLog>
   </FileLogs>

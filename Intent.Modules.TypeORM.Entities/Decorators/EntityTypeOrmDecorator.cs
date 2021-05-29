@@ -1,0 +1,109 @@
+using System;
+using System.Collections.Generic;
+using Intent.Engine;
+using Intent.Modelers.Domain.Api;
+using Intent.Module.TypeScript.Domain.Templates.Entity;
+using Intent.Modules.Common.Templates;
+using Intent.RoslynWeaver.Attributes;
+
+[assembly: DefaultIntentManaged(Mode.Merge)]
+[assembly: IntentTemplate("Intent.ModuleBuilder.Templates.TemplateDecorator", Version = "1.0")]
+
+namespace Intent.Modules.TypeORM.Entities.Decorators
+{
+    [IntentManaged(Mode.Merge)]
+    public class EntityTypeOrmDecorator : EntityDecorator
+    {
+        [IntentManaged(Mode.Fully)]
+        public const string DecoratorId = "Intent.NodeJS.TypeORM.EntityTypeOrmDecorator";
+
+        private readonly EntityTemplate _template;
+        private readonly IApplication _application;
+
+        [IntentManaged(Mode.Merge)]
+        public EntityTypeOrmDecorator(EntityTemplate template, IApplication application)
+        {
+            _template = template;
+            _application = application;
+        }
+
+        public override string GetBeforeFields()
+        {
+            return $@"
+  @{_template.ImportType("ObjectIdColumn", "typeorm")}()
+  @{_template.ImportType("PrimaryGeneratedColumn", "typeorm")}('uuid')
+  id?: string;
+";
+        }
+
+        public override string GetAfterFields()
+        {
+            return $@"
+  @{_template.ImportType("Column", "typeorm")}({{ nullable: true }})
+  createdBy?: string;
+
+  @{_template.ImportType("Column", "typeorm")}({{ nullable: true }})
+  createdDate?: Date;
+
+  @{_template.ImportType("Column", "typeorm")}({{ nullable: true }})
+  lastModifiedBy?: string;
+
+  @{_template.ImportType("Column", "typeorm")}({{ nullable: true }})
+  lastModifiedDate?: Date;";
+        }
+
+        public override IEnumerable<string> GetClassDecorators()
+        {
+            return new[] { $"@{_template.ImportType("Entity", "typeorm")}('{_template.ClassName.ToSnakeCase()}')" };
+        }
+
+        public override IEnumerable<string> GetFieldDecorators(AttributeModel attribute)
+        {
+            var hasNonDefaultSettings = false;
+            var settings = new List<string>();
+            if (attribute.TypeReference.IsNullable)
+            {
+                hasNonDefaultSettings = true;
+                settings.Add("isNullable: true");
+            }
+            return new[] { $@"@{_template.ImportType("Column", "typeorm")}({(hasNonDefaultSettings ? $"{{ {string.Join(", ", settings)} }}" : "")})" };
+        }
+
+        public override IEnumerable<string> GetFieldDecorators(AssociationEndModel thatEnd)
+        {
+            if (!thatEnd.IsNavigable)
+            {
+                throw new InvalidOperationException("Cannot call this method if associationEnd is not navigable.");
+            }
+
+            var statements = new List<string>();
+            var sourceEnd = thatEnd.OtherEnd();
+            if (!sourceEnd.IsCollection && !thatEnd.IsCollection) // one-to-one
+            {
+                statements.Add($"@{_template.ImportType("OneToOne", "typeorm")}(() => {_template.GetTypeName(thatEnd.Element)}{(sourceEnd.IsNavigable ? $", {thatEnd.Name} => {thatEnd.Name}.{sourceEnd.Name}" : "")})");
+                if (thatEnd.IsTargetEnd())
+                {
+                    statements.Add($"@{_template.ImportType("JoinColumn", "typeorm")}()");
+                }
+            }
+            else if (!sourceEnd.IsCollection && thatEnd.IsCollection) // one-to-many
+            {
+                statements.Add($"@{_template.ImportType("OneToMany", "typeorm")}(() => {_template.GetTypeName(thatEnd.Element)}{(sourceEnd.IsNavigable ? $", {thatEnd.Name} => {thatEnd.Name}.{sourceEnd.Name}" : "")})");
+            }
+            else if (sourceEnd.IsCollection && !thatEnd.IsCollection) // many-to-one
+            {
+                statements.Add($"@{_template.ImportType("ManyToOne", "typeorm")}(() => {_template.GetTypeName(thatEnd.Element)}{(sourceEnd.IsNavigable ? $", {thatEnd.Name} => {thatEnd.Name}.{sourceEnd.Name}" : "")})");
+            }
+            else if (sourceEnd.IsCollection && thatEnd.IsCollection) // many-to-many
+            {
+                statements.Add($"@{_template.ImportType("ManyToMany", "typeorm")}(() => {_template.GetTypeName(thatEnd.Element)}{(sourceEnd.IsNavigable ? $", {thatEnd.Name} => {thatEnd.Name}.{sourceEnd.Name}" : "")})");
+                if (thatEnd.IsTargetEnd())
+                {
+                    statements.Add($"@{_template.ImportType("JoinColumn", "typeorm")}()");
+                }
+            }
+
+            return statements;
+        }
+    }
+}

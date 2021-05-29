@@ -4,48 +4,87 @@
   <FileLogs>
     <FileLog>
       <ProjectId>0f406754-36be-4fad-8143-6764262c0ae5</ProjectId>
-      <SolutionRelativeFilePath>..\TestApplication\server\src\app.module.ts</SolutionRelativeFilePath>
+      <CorrelationId>Intent.NestJS.Core.AppModule</CorrelationId>
+      <SolutionRelativeFilePath>../TestApplication/source/src/app.module.ts</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>app.module.ts</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>ea28b293-a335-4503-951f-be2f675469e1</ProjectId>
-      <SolutionRelativeFilePath>..\TestApplication\server\src\entities\account.entity.ts</SolutionRelativeFilePath>
+      <CorrelationId>Intent.TypeScript.Domain.Entityf5691cb4-1436-4be5-957c-06ee8754efb6</CorrelationId>
+      <SolutionRelativeFilePath>../TestApplication/source/src/entities/account.entity.ts</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>account.entity.ts</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>ea28b293-a335-4503-951f-be2f675469e1</ProjectId>
-      <SolutionRelativeFilePath>..\TestApplication\server\src\entities\base.entity.ts</SolutionRelativeFilePath>
-      <ProjectRelativeFilePath>base.entity.ts</ProjectRelativeFilePath>
-    </FileLog>
-    <FileLog>
-      <ProjectId>ea28b293-a335-4503-951f-be2f675469e1</ProjectId>
-      <SolutionRelativeFilePath>..\TestApplication\server\src\entities\profile.entity.ts</SolutionRelativeFilePath>
+      <CorrelationId>Intent.TypeScript.Domain.Entityee4b8091-daea-4af5-9ab4-b60cb0984534</CorrelationId>
+      <SolutionRelativeFilePath>../TestApplication/source/src/entities/profile.entity.ts</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>profile.entity.ts</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>ea28b293-a335-4503-951f-be2f675469e1</ProjectId>
-      <SolutionRelativeFilePath>..\TestApplication\server\src\entities\user.entity.ts</SolutionRelativeFilePath>
+      <CorrelationId>Intent.TypeScript.Domain.Entityf6fffe45-a2fb-478d-ace5-0a841b5520c2</CorrelationId>
+      <SolutionRelativeFilePath>../TestApplication/source/src/entities/user.entity.ts</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>user.entity.ts</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
+      <ProjectId>e80a99a4-b141-493c-a209-b278406e9a80</ProjectId>
+      <CorrelationId>Intent.TypeScript.Weaving.Decorators.IntentDecorators</CorrelationId>
+      <SolutionRelativeFilePath>../TestApplication/source/src/intent/intent.decorators.ts</SolutionRelativeFilePath>
+      <ProjectRelativeFilePath>intent.decorators.ts</ProjectRelativeFilePath>
+    </FileLog>
+    <FileLog>
       <ProjectId>0f406754-36be-4fad-8143-6764262c0ae5</ProjectId>
-      <SolutionRelativeFilePath>..\TestApplication\server\src\main.ts</SolutionRelativeFilePath>
+      <CorrelationId>Intent.NestJS.Core.Main</CorrelationId>
+      <SolutionRelativeFilePath>../TestApplication/source/src/main.ts</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>main.ts</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>4277a457-6780-429e-a786-d2b6635899e8</ProjectId>
-      <SolutionRelativeFilePath>..\TestApplication\server\src\repository\account.repository.ts</SolutionRelativeFilePath>
+      <CorrelationId>Intent.TypeORM.Entities.RepositoryTemplatef5691cb4-1436-4be5-957c-06ee8754efb6</CorrelationId>
+      <SolutionRelativeFilePath>../TestApplication/source/src/repository/account.repository.ts</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>account.repository.ts</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>4277a457-6780-429e-a786-d2b6635899e8</ProjectId>
-      <SolutionRelativeFilePath>..\TestApplication\server\src\repository\profile.repository.ts</SolutionRelativeFilePath>
+      <CorrelationId>Intent.TypeORM.Entities.RepositoryTemplateee4b8091-daea-4af5-9ab4-b60cb0984534</CorrelationId>
+      <SolutionRelativeFilePath>../TestApplication/source/src/repository/profile.repository.ts</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>profile.repository.ts</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>4277a457-6780-429e-a786-d2b6635899e8</ProjectId>
-      <SolutionRelativeFilePath>..\TestApplication\server\src\repository\user.repository.ts</SolutionRelativeFilePath>
+      <CorrelationId>Intent.TypeORM.Entities.RepositoryTemplatef6fffe45-a2fb-478d-ace5-0a841b5520c2</CorrelationId>
+      <SolutionRelativeFilePath>../TestApplication/source/src/repository/user.repository.ts</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>user.repository.ts</ProjectRelativeFilePath>
+    </FileLog>
+    <FileLog>
+      <ProjectId>b38f5fc9-879f-4365-bc63-17a46111ced2</ProjectId>
+      <CorrelationId>Intent.NestJS.Controllers.DtoModel377128cd-f176-405f-9839-c7c8d45302cb</CorrelationId>
+      <SolutionRelativeFilePath>../TestApplication/source/src/services/dto/user.dto.ts</SolutionRelativeFilePath>
+      <ProjectRelativeFilePath>user.dto.ts</ProjectRelativeFilePath>
+    </FileLog>
+    <FileLog>
+      <ProjectId>b38f5fc9-879f-4365-bc63-17a46111ced2</ProjectId>
+      <CorrelationId>Intent.NestJS.Controllers.DtoModel0613426f-15ef-4730-818d-18f4c5e5d085</CorrelationId>
+      <SolutionRelativeFilePath>../TestApplication/source/src/services/dto/user-update.dto.ts</SolutionRelativeFilePath>
+      <ProjectRelativeFilePath>user-update.dto.ts</ProjectRelativeFilePath>
+    </FileLog>
+    <FileLog>
+      <ProjectId>30d2b77f-078a-4156-b7d1-5374289392bb</ProjectId>
+      <CorrelationId>Intent.NestJS.Controllers.ServiceTemplate87c2abfe-25d0-4202-95cc-1e62b954ef50</CorrelationId>
+      <SolutionRelativeFilePath>../TestApplication/source/src/services/users.service.ts</SolutionRelativeFilePath>
+      <ProjectRelativeFilePath>users.service.ts</ProjectRelativeFilePath>
+    </FileLog>
+    <FileLog>
+      <ProjectId>c0055dfc-ddbb-4a2b-8ab0-6916f609292b</ProjectId>
+      <CorrelationId>Intent.NestJS.Controllers.ControllerBaseTemplate</CorrelationId>
+      <SolutionRelativeFilePath>../TestApplication/source/src/web/rest/controller.base.ts</SolutionRelativeFilePath>
+      <ProjectRelativeFilePath>controller.base.ts</ProjectRelativeFilePath>
+    </FileLog>
+    <FileLog>
+      <ProjectId>c0055dfc-ddbb-4a2b-8ab0-6916f609292b</ProjectId>
+      <CorrelationId>Intent.NestJS.Controllers.ControllerTemplate87c2abfe-25d0-4202-95cc-1e62b954ef50</CorrelationId>
+      <SolutionRelativeFilePath>../TestApplication/source/src/web/rest/users.controller.ts</SolutionRelativeFilePath>
+      <ProjectRelativeFilePath>users.controller.ts</ProjectRelativeFilePath>
     </FileLog>
   </FileLogs>
 </outputLog>

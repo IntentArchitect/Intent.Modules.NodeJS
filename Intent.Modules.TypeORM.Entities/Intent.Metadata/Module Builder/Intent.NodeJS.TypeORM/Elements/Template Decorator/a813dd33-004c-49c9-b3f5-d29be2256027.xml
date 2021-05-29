@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="a813dd33-004c-49c9-b3f5-d29be2256027" type="Template Decorator" typeId="f0f46278-29ea-42bd-9206-0e7034f623bc">
+  <name>EntityTypeOrmDecorator</name>
+  <display>EntityTypeOrmDecorator: EntityDecorator</display>
+  <isAbstract>false</isAbstract>
+  <order>1</order>
+  <genericTypes />
+  <typeReference id="bafbe21c-a35a-41fd-aeb3-99bc5efcbee3">
+    <typeId>57ed37be-cc15-4775-9682-7e053ddaa927</typeId>
+    <isNavigable>true</isNavigable>
+    <isNullable>false</isNullable>
+    <isCollection>false</isCollection>
+    <isRequired>true</isRequired>
+    <typePackageName>Intent.TypeScript.Domain</typePackageName>
+    <typePackageId>6dfd9d00-52a1-4b85-ac68-f3a7179aa21a</typePackageId>
+    <stereotypes />
+    <genericTypeParameters />
+  </typeReference>
+  <isMapped>false</isMapped>
+  <parentFolderId>62374542-4fb1-4bf1-a322-f45b423ab2a8</parentFolderId>
+  <packageId>62374542-4fb1-4bf1-a322-f45b423ab2a8</packageId>
+  <packageName>Intent.NodeJS.TypeORM</packageName>
+  <stereotypes />
+  <childElements />
+</class>

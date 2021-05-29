@@ -4,52 +4,52 @@
   <FileLogs>
     <FileLog>
       <ProjectId>96615273-0852-4d59-acfb-67f62095564b</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Core\Intent.Modules.NestJS.Core.csproj</SolutionRelativeFilePath>
+      <SolutionRelativeFilePath>../Intent.Modules.NestJS.Core/Intent.Modules.NestJS.Core.csproj</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>Intent.Modules.NestJS.Core.csproj</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>96615273-0852-4d59-acfb-67f62095564b</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Core\Intent.NestJS.Core.imodspec</SolutionRelativeFilePath>
-      <ProjectRelativeFilePath>Intent.NestJS.Core.imodspec</ProjectRelativeFilePath>
+      <SolutionRelativeFilePath>../Intent.Modules.NestJS.Core/Intent.NodeJS.NestJS.Core.imodspec</SolutionRelativeFilePath>
+      <ProjectRelativeFilePath>Intent.NodeJS.NestJS.Core.imodspec</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>b0d2955c-78d9-48d7-8e68-199ef7673464</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Core\Templates\AppModule\AppModuleTemplate.cs</SolutionRelativeFilePath>
+      <SolutionRelativeFilePath>../Intent.Modules.NestJS.Core/Templates/AppModule/AppModuleTemplate.cs</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>AppModule/AppModuleTemplate.cs</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>b0d2955c-78d9-48d7-8e68-199ef7673464</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Core\Templates\AppModule\AppModuleTemplate.tt</SolutionRelativeFilePath>
+      <SolutionRelativeFilePath>../Intent.Modules.NestJS.Core/Templates/AppModule/AppModuleTemplate.tt</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>AppModule/AppModuleTemplate.tt</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>b0d2955c-78d9-48d7-8e68-199ef7673464</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Core\Templates\AppModule\AppModuleTemplatePartial.cs</SolutionRelativeFilePath>
+      <SolutionRelativeFilePath>../Intent.Modules.NestJS.Core/Templates/AppModule/AppModuleTemplatePartial.cs</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>AppModule/AppModuleTemplatePartial.cs</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>b0d2955c-78d9-48d7-8e68-199ef7673464</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Core\Templates\AppModule\AppModuleTemplateRegistration.cs</SolutionRelativeFilePath>
+      <SolutionRelativeFilePath>../Intent.Modules.NestJS.Core/Templates/AppModule/AppModuleTemplateRegistration.cs</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>AppModule/AppModuleTemplateRegistration.cs</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>b0d2955c-78d9-48d7-8e68-199ef7673464</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Core\Templates\Main\MainTemplate.cs</SolutionRelativeFilePath>
+      <SolutionRelativeFilePath>../Intent.Modules.NestJS.Core/Templates/Main/MainTemplate.cs</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>Main/MainTemplate.cs</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>b0d2955c-78d9-48d7-8e68-199ef7673464</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Core\Templates\Main\MainTemplate.tt</SolutionRelativeFilePath>
+      <SolutionRelativeFilePath>../Intent.Modules.NestJS.Core/Templates/Main/MainTemplate.tt</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>Main/MainTemplate.tt</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>b0d2955c-78d9-48d7-8e68-199ef7673464</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Core\Templates\Main\MainTemplatePartial.cs</SolutionRelativeFilePath>
+      <SolutionRelativeFilePath>../Intent.Modules.NestJS.Core/Templates/Main/MainTemplatePartial.cs</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>Main/MainTemplatePartial.cs</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>b0d2955c-78d9-48d7-8e68-199ef7673464</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.Modules.NestJS.Core\Templates\Main\MainTemplateRegistration.cs</SolutionRelativeFilePath>
+      <SolutionRelativeFilePath>../Intent.Modules.NestJS.Core/Templates/Main/MainTemplateRegistration.cs</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>Main/MainTemplateRegistration.cs</ProjectRelativeFilePath>
     </FileLog>
   </FileLogs>

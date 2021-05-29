@@ -8,9 +8,19 @@
 <#@ import namespace="Intent.Templates" #>
 <#@ import namespace="Intent.Metadata.Models" #>
 import { NestFactory } from '@nestjs/core';
+import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 async function bootstrap() {
   const app = await NestFactory.create(<#= AppModuleClass #>);
+  
+  const config = new DocumentBuilder()
+    .setTitle('<#= OutputTarget.Application.Name #>')
+    .setDescription('<#= OutputTarget.Application.Description #>')
+    .setVersion('1.0')
+    .build();
+  const document = SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup('swagger', app, document);
+
   await app.listen(3000);
 }
 bootstrap();

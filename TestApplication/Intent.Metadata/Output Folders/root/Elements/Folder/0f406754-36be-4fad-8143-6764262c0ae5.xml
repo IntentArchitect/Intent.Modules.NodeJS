@@ -3,19 +3,20 @@
   <name>src</name>
   <display>src</display>
   <isAbstract>false</isAbstract>
-  <order>0</order>
+  <order>1</order>
   <genericTypes />
   <isMapped>false</isMapped>
-  <parentFolderId>8c5eea14-aca2-4960-918c-a918867a8cd7</parentFolderId>
+  <parentFolderId>1d6e6af7-a1b5-4fa1-b46f-50685dd8bb7a</parentFolderId>
   <packageId>1d6e6af7-a1b5-4fa1-b46f-50685dd8bb7a</packageId>
   <packageName>root</packageName>
   <stereotypes />
   <childElements>
-    <childElement id="93612ee2-683b-4169-8618-a4534f671d85" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+    <childElement id="5f6d8f1d-e89b-47d2-91a8-d74549e29bee" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
       <name>Intent.NestJS.Core.AppModule</name>
       <display>Intent.NestJS.Core.AppModule</display>
+      <externalReference>Intent.NestJS.Core</externalReference>
       <isAbstract>false</isAbstract>
-      <order>4</order>
+      <order>5</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>0f406754-36be-4fad-8143-6764262c0ae5</parentFolderId>
@@ -24,11 +25,12 @@
       <stereotypes />
       <childElements />
     </childElement>
-    <childElement id="d16d6080-d31a-45e2-a62f-49d6f3d7b218" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+    <childElement id="c15d15b8-0a13-4392-97ae-47220ef6457a" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
       <name>Intent.NestJS.Core.Main</name>
       <display>Intent.NestJS.Core.Main</display>
+      <externalReference>Intent.NestJS.Core</externalReference>
       <isAbstract>false</isAbstract>
-      <order>5</order>
+      <order>6</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>0f406754-36be-4fad-8143-6764262c0ae5</parentFolderId>
@@ -41,7 +43,7 @@
       <name>Startup</name>
       <display>Startup</display>
       <isAbstract>false</isAbstract>
-      <order>6</order>
+      <order>7</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>0f406754-36be-4fad-8143-6764262c0ae5</parentFolderId>

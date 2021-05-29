@@ -4,16 +4,16 @@
   <FileLogs>
     <FileLog>
       <ProjectId>4a552a10-949b-45ce-8d6b-61f56798a2ca</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.ApplicationTemplate.NodeJS\Intent.ApplicationTemplate.NestJS.Web\metadata.iatspec</SolutionRelativeFilePath>
+      <SolutionRelativeFilePath>../Intent.ApplicationTemplate.NodeJS/Intent.ApplicationTemplate.NestJS.Web/metadata.iatspec</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>Intent.ApplicationTemplate.NestJS.Web/metadata.iatspec</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>4a552a10-949b-45ce-8d6b-61f56798a2ca</ProjectId>
-      <SolutionRelativeFilePath>..\Intent.ApplicationTemplate.NodeJS\Intent.ApplicationTemplate.NodeJS.csproj</SolutionRelativeFilePath>
+      <SolutionRelativeFilePath>../Intent.ApplicationTemplate.NodeJS/Intent.ApplicationTemplate.NodeJS.csproj</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>Intent.ApplicationTemplate.NodeJS.csproj</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
-      <SolutionRelativeFilePath>..\Intent.Modules.NodeJS.sln</SolutionRelativeFilePath>
+      <SolutionRelativeFilePath>../Intent.Modules.NodeJS.sln</SolutionRelativeFilePath>
     </FileLog>
   </FileLogs>
 </outputLog>

@@ -1,27 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <class id="87c2abfe-25d0-4202-95cc-1e62b954ef50" type="Service" typeId="b16578a5-27b1-4047-a8df-f0b783d706bd">
-  <name>AppController</name>
-  <display>AppController</display>
+  <name>UsersController</name>
+  <display>UsersController</display>
   <isAbstract>false</isAbstract>
-  <order>0</order>
+  <order>1</order>
   <genericTypes />
   <isMapped>false</isMapped>
   <parentFolderId>f1541612-73c4-4a4b-b2dd-534c92c9707a</parentFolderId>
   <packageId>f1541612-73c4-4a4b-b2dd-534c92c9707a</packageId>
   <packageName>TestApplication.Services</packageName>
-  <stereotypes />
+  <stereotypes>
+    <stereotype stereotypeDefinitionId="c29224ec-d473-4b95-ad4a-ec55c676c4fd" name="Http Service Settings">
+      <addedByDefault>true</addedByDefault>
+      <definitionPackageName>Intent.Metadata.WebApi</definitionPackageName>
+      <definitionPackageId>0011387a-b122-45d7-9cdb-8e21b315ab9f</definitionPackageId>
+      <properties>
+        <property name="1e223bd0-7a72-435a-8741-a612d88e4a12" display="Route" value="" isActive="true" />
+      </properties>
+    </stereotype>
+  </stereotypes>
   <childElements>
     <childElement id="5541418d-fde8-4917-ac71-84e1c46f06e6" type="Operation" typeId="e030c97a-e066-40a7-8188-808c275df3cb">
       <name>FindAll</name>
-      <display>FindAll(param: string, param2: int): void</display>
+      <display>FindAll(): UserDTO[*]</display>
       <isAbstract>false</isAbstract>
       <order>0</order>
       <genericTypes />
       <typeReference id="1d0362d9-2f84-47f5-a339-84d52d209686">
+        <typeId>377128cd-f176-405f-9839-c7c8d45302cb</typeId>
         <isNavigable>true</isNavigable>
         <isNullable>false</isNullable>
-        <isCollection>false</isCollection>
+        <isCollection>true</isCollection>
         <isRequired>true</isRequired>
+        <typePackageName>TestApplication.Services</typePackageName>
+        <typePackageId>f1541612-73c4-4a4b-b2dd-534c92c9707a</typePackageId>
         <stereotypes />
         <genericTypeParameters />
       </typeReference>
@@ -30,71 +42,23 @@
       <packageId>f1541612-73c4-4a4b-b2dd-534c92c9707a</packageId>
       <packageName>TestApplication.Services</packageName>
       <stereotypes>
-        <stereotype stereotypeDefinitionId="4ae0c451-fda8-4099-ab08-a2acc737d4d2" name="Security">
+        <stereotype stereotypeDefinitionId="b4581ed2-42ec-4ae2-83dd-dcdd5f0837b6" name="Http Settings">
           <addedByDefault>true</addedByDefault>
-          <definitionPackageName>TestApplication.Services</definitionPackageName>
-          <definitionPackageId>f1541612-73c4-4a4b-b2dd-534c92c9707a</definitionPackageId>
+          <definitionPackageName>Intent.Metadata.WebApi</definitionPackageName>
+          <definitionPackageId>0011387a-b122-45d7-9cdb-8e21b315ab9f</definitionPackageId>
           <properties>
-            <property name="851de332-986c-4dfa-83e0-bada019625c0" display="Is Secured" value="true" isActive="true" />
+            <property name="801c3e61-4431-4d81-93fa-7e57d33cb3fa" display="Verb" value="GET" isActive="true" />
+            <property name="5dd3e07d-76eb-45d4-9956-4325fb068acc" display="Route" value="" isActive="true" />
           </properties>
         </stereotype>
       </stereotypes>
-      <childElements>
-        <childElement id="16f3e91c-ee76-476d-8a68-fc523b41aff1" type="Parameter" typeId="00208d20-469d-41cb-8501-768fd5eb796b">
-          <name>param</name>
-          <display>in : param: string</display>
-          <isAbstract>false</isAbstract>
-          <order>0</order>
-          <genericTypes />
-          <typeReference id="a913c3ea-2778-4140-8520-4dd8675ed87f">
-            <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
-            <isNavigable>true</isNavigable>
-            <isNullable>false</isNullable>
-            <isCollection>false</isCollection>
-            <isRequired>true</isRequired>
-            <typePackageName>Intent.Common.Types</typePackageName>
-            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
-            <stereotypes />
-            <genericTypeParameters />
-          </typeReference>
-          <isMapped>false</isMapped>
-          <parentFolderId>5541418d-fde8-4917-ac71-84e1c46f06e6</parentFolderId>
-          <packageId>f1541612-73c4-4a4b-b2dd-534c92c9707a</packageId>
-          <packageName>TestApplication.Services</packageName>
-          <stereotypes />
-          <childElements />
-        </childElement>
-        <childElement id="88cbbed5-5e76-4d3d-b3df-1cef203fc5b2" type="Parameter" typeId="00208d20-469d-41cb-8501-768fd5eb796b">
-          <name>param2</name>
-          <display>in : param2: int</display>
-          <isAbstract>false</isAbstract>
-          <order>0</order>
-          <genericTypes />
-          <typeReference id="212b5775-a172-448a-a84f-18b153f8b888">
-            <typeId>fb0a362d-e9e2-40de-b6ff-5ce8167cbe74</typeId>
-            <isNavigable>true</isNavigable>
-            <isNullable>false</isNullable>
-            <isCollection>false</isCollection>
-            <isRequired>true</isRequired>
-            <typePackageName>Intent.Common.Types</typePackageName>
-            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
-            <stereotypes />
-            <genericTypeParameters />
-          </typeReference>
-          <isMapped>false</isMapped>
-          <parentFolderId>5541418d-fde8-4917-ac71-84e1c46f06e6</parentFolderId>
-          <packageId>f1541612-73c4-4a4b-b2dd-534c92c9707a</packageId>
-          <packageName>TestApplication.Services</packageName>
-          <stereotypes />
-          <childElements />
-        </childElement>
-      </childElements>
+      <childElements />
     </childElement>
     <childElement id="ceda64e6-2c50-4a20-9b9e-c9ba9ac226b0" type="Operation" typeId="e030c97a-e066-40a7-8188-808c275df3cb">
       <name>GetById</name>
       <display>GetById(id: string): UserDTO</display>
       <isAbstract>false</isAbstract>
-      <order>0</order>
+      <order>1</order>
       <genericTypes />
       <typeReference id="6671fdc0-ba3e-41f9-a8f8-745e7b1022c5">
         <typeId>377128cd-f176-405f-9839-c7c8d45302cb</typeId>
@@ -112,12 +76,13 @@
       <packageId>f1541612-73c4-4a4b-b2dd-534c92c9707a</packageId>
       <packageName>TestApplication.Services</packageName>
       <stereotypes>
-        <stereotype stereotypeDefinitionId="4ae0c451-fda8-4099-ab08-a2acc737d4d2" name="Security">
+        <stereotype stereotypeDefinitionId="b4581ed2-42ec-4ae2-83dd-dcdd5f0837b6" name="Http Settings">
           <addedByDefault>true</addedByDefault>
-          <definitionPackageName>TestApplication.Services</definitionPackageName>
-          <definitionPackageId>f1541612-73c4-4a4b-b2dd-534c92c9707a</definitionPackageId>
+          <definitionPackageName>Intent.Metadata.WebApi</definitionPackageName>
+          <definitionPackageId>0011387a-b122-45d7-9cdb-8e21b315ab9f</definitionPackageId>
           <properties>
-            <property name="851de332-986c-4dfa-83e0-bada019625c0" display="Is Secured" value="true" isActive="true" />
+            <property name="801c3e61-4431-4d81-93fa-7e57d33cb3fa" display="Verb" value="GET" isActive="true" />
+            <property name="5dd3e07d-76eb-45d4-9956-4325fb068acc" display="Route" value="{id}" isActive="true" />
           </properties>
         </stereotype>
       </stereotypes>
@@ -126,7 +91,7 @@
           <name>id</name>
           <display>in : id: string</display>
           <isAbstract>false</isAbstract>
-          <order>0</order>
+          <order>1</order>
           <genericTypes />
           <typeReference id="bde1669d-fcf1-49cf-a95b-ba46508fe586">
             <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
@@ -143,7 +108,179 @@
           <parentFolderId>ceda64e6-2c50-4a20-9b9e-c9ba9ac226b0</parentFolderId>
           <packageId>f1541612-73c4-4a4b-b2dd-534c92c9707a</packageId>
           <packageName>TestApplication.Services</packageName>
-          <stereotypes />
+          <stereotypes>
+            <stereotype stereotypeDefinitionId="d01df110-1208-4af8-a913-92a49d219552" name="Parameter Settings">
+              <addedByDefault>true</addedByDefault>
+              <definitionPackageName>Intent.Metadata.WebApi</definitionPackageName>
+              <definitionPackageId>0011387a-b122-45d7-9cdb-8e21b315ab9f</definitionPackageId>
+              <properties>
+                <property name="d2630e0f-f930-404f-b453-1e8052a712f5" display="Source" value="Default" isActive="true" />
+              </properties>
+            </stereotype>
+          </stereotypes>
+          <childElements />
+        </childElement>
+      </childElements>
+    </childElement>
+    <childElement id="b0fd19e0-54c3-4bfd-b06f-29e087d6743b" type="Operation" typeId="e030c97a-e066-40a7-8188-808c275df3cb">
+      <name>Create</name>
+      <display>Create(dto: UserDTO): void</display>
+      <isAbstract>false</isAbstract>
+      <order>2</order>
+      <genericTypes />
+      <typeReference id="c85f76be-9bcd-4354-b0f0-83ff42347646">
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>87c2abfe-25d0-4202-95cc-1e62b954ef50</parentFolderId>
+      <packageId>f1541612-73c4-4a4b-b2dd-534c92c9707a</packageId>
+      <packageName>TestApplication.Services</packageName>
+      <stereotypes>
+        <stereotype stereotypeDefinitionId="b4581ed2-42ec-4ae2-83dd-dcdd5f0837b6" name="Http Settings">
+          <addedByDefault>true</addedByDefault>
+          <definitionPackageName>Intent.Metadata.WebApi</definitionPackageName>
+          <definitionPackageId>0011387a-b122-45d7-9cdb-8e21b315ab9f</definitionPackageId>
+          <properties>
+            <property name="801c3e61-4431-4d81-93fa-7e57d33cb3fa" display="Verb" value="POST" isActive="true" />
+            <property name="5dd3e07d-76eb-45d4-9956-4325fb068acc" display="Route" value="" isActive="true" />
+          </properties>
+        </stereotype>
+      </stereotypes>
+      <childElements>
+        <childElement id="f1607658-37d9-456f-9e09-20d18867b559" type="Parameter" typeId="00208d20-469d-41cb-8501-768fd5eb796b">
+          <name>dto</name>
+          <display>in : dto: UserDTO</display>
+          <isAbstract>false</isAbstract>
+          <order>1</order>
+          <genericTypes />
+          <typeReference id="dbf00374-31c4-4656-ba1b-13bd3d5bb31a">
+            <typeId>377128cd-f176-405f-9839-c7c8d45302cb</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>TestApplication.Services</typePackageName>
+            <typePackageId>f1541612-73c4-4a4b-b2dd-534c92c9707a</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>false</isMapped>
+          <parentFolderId>b0fd19e0-54c3-4bfd-b06f-29e087d6743b</parentFolderId>
+          <packageId>f1541612-73c4-4a4b-b2dd-534c92c9707a</packageId>
+          <packageName>TestApplication.Services</packageName>
+          <stereotypes>
+            <stereotype stereotypeDefinitionId="d01df110-1208-4af8-a913-92a49d219552" name="Parameter Settings">
+              <addedByDefault>true</addedByDefault>
+              <definitionPackageName>Intent.Metadata.WebApi</definitionPackageName>
+              <definitionPackageId>0011387a-b122-45d7-9cdb-8e21b315ab9f</definitionPackageId>
+              <properties>
+                <property name="d2630e0f-f930-404f-b453-1e8052a712f5" display="Source" value="Default" isActive="true" />
+              </properties>
+            </stereotype>
+          </stereotypes>
+          <childElements />
+        </childElement>
+      </childElements>
+    </childElement>
+    <childElement id="2143ebbd-34fa-4fdd-8dee-c97b83867854" type="Operation" typeId="e030c97a-e066-40a7-8188-808c275df3cb">
+      <name>Update</name>
+      <display>Update(id: guid, dto: UserUpdateDTO): void</display>
+      <isAbstract>false</isAbstract>
+      <order>3</order>
+      <genericTypes />
+      <typeReference id="0055e813-01a8-462d-97fc-2007c2f01b9e">
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>87c2abfe-25d0-4202-95cc-1e62b954ef50</parentFolderId>
+      <packageId>f1541612-73c4-4a4b-b2dd-534c92c9707a</packageId>
+      <packageName>TestApplication.Services</packageName>
+      <stereotypes>
+        <stereotype stereotypeDefinitionId="b4581ed2-42ec-4ae2-83dd-dcdd5f0837b6" name="Http Settings">
+          <addedByDefault>true</addedByDefault>
+          <definitionPackageName>Intent.Metadata.WebApi</definitionPackageName>
+          <definitionPackageId>0011387a-b122-45d7-9cdb-8e21b315ab9f</definitionPackageId>
+          <properties>
+            <property name="801c3e61-4431-4d81-93fa-7e57d33cb3fa" display="Verb" value="PUT" isActive="true" />
+            <property name="5dd3e07d-76eb-45d4-9956-4325fb068acc" display="Route" value="{id}" isActive="true" />
+          </properties>
+        </stereotype>
+      </stereotypes>
+      <childElements>
+        <childElement id="818ccdd8-993e-45ed-a48d-77bbfa8c7b1e" type="Parameter" typeId="00208d20-469d-41cb-8501-768fd5eb796b">
+          <name>id</name>
+          <display>in : id: guid</display>
+          <isAbstract>false</isAbstract>
+          <order>1</order>
+          <genericTypes />
+          <typeReference id="14d29ee6-3a9b-4bf8-a260-9d8ff034ffd9">
+            <typeId>6b649125-18ea-48fd-a6ba-0bfff0d8f488</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>false</isMapped>
+          <parentFolderId>2143ebbd-34fa-4fdd-8dee-c97b83867854</parentFolderId>
+          <packageId>f1541612-73c4-4a4b-b2dd-534c92c9707a</packageId>
+          <packageName>TestApplication.Services</packageName>
+          <stereotypes>
+            <stereotype stereotypeDefinitionId="d01df110-1208-4af8-a913-92a49d219552" name="Parameter Settings">
+              <addedByDefault>true</addedByDefault>
+              <definitionPackageName>Intent.Metadata.WebApi</definitionPackageName>
+              <definitionPackageId>0011387a-b122-45d7-9cdb-8e21b315ab9f</definitionPackageId>
+              <properties>
+                <property name="d2630e0f-f930-404f-b453-1e8052a712f5" display="Source" value="Default" isActive="true" />
+              </properties>
+            </stereotype>
+          </stereotypes>
+          <childElements />
+        </childElement>
+        <childElement id="4020c687-8270-40a6-88e6-5a62f5ac77cb" type="Parameter" typeId="00208d20-469d-41cb-8501-768fd5eb796b">
+          <name>dto</name>
+          <display>in : dto: UserUpdateDTO</display>
+          <isAbstract>false</isAbstract>
+          <order>2</order>
+          <genericTypes />
+          <typeReference id="85d42d71-3797-4b71-9fc8-2e494a205fd5">
+            <typeId>0613426f-15ef-4730-818d-18f4c5e5d085</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>TestApplication.Services</typePackageName>
+            <typePackageId>f1541612-73c4-4a4b-b2dd-534c92c9707a</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>false</isMapped>
+          <parentFolderId>2143ebbd-34fa-4fdd-8dee-c97b83867854</parentFolderId>
+          <packageId>f1541612-73c4-4a4b-b2dd-534c92c9707a</packageId>
+          <packageName>TestApplication.Services</packageName>
+          <stereotypes>
+            <stereotype stereotypeDefinitionId="d01df110-1208-4af8-a913-92a49d219552" name="Parameter Settings">
+              <addedByDefault>true</addedByDefault>
+              <definitionPackageName>Intent.Metadata.WebApi</definitionPackageName>
+              <definitionPackageId>0011387a-b122-45d7-9cdb-8e21b315ab9f</definitionPackageId>
+              <properties>
+                <property name="d2630e0f-f930-404f-b453-1e8052a712f5" display="Source" value="Default" isActive="true" />
+              </properties>
+            </stereotype>
+          </stereotypes>
           <childElements />
         </childElement>
       </childElements>

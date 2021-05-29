@@ -10,6 +10,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intent.Modules.NestJS.Core"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intent.ApplicationTemplate.NodeJS", "Intent.ApplicationTemplate.NodeJS\Intent.ApplicationTemplate.NodeJS.csproj", "{4A552A10-949B-45CE-8D6B-61F56798A2CA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intent.Module.TypeScript.Domain", "Intent.Module.TypeScript.Domain\Intent.Module.TypeScript.Domain.csproj", "{CC9A4C9E-686E-403B-84D7-00B3F54236E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intent.Modules.NodeJS.Services.CRUD", "Intent.Modules.NodeJS.Services.CRUD\Intent.Modules.NodeJS.Services.CRUD.csproj", "{E68440B8-D33A-45D5-BE5A-5D0EC43621DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,11 +36,21 @@ Global
 		{4A552A10-949B-45CE-8D6B-61F56798A2CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A552A10-949B-45CE-8D6B-61F56798A2CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A552A10-949B-45CE-8D6B-61F56798A2CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC9A4C9E-686E-403B-84D7-00B3F54236E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC9A4C9E-686E-403B-84D7-00B3F54236E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC9A4C9E-686E-403B-84D7-00B3F54236E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC9A4C9E-686E-403B-84D7-00B3F54236E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E68440B8-D33A-45D5-BE5A-5D0EC43621DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E68440B8-D33A-45D5-BE5A-5D0EC43621DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E68440B8-D33A-45D5-BE5A-5D0EC43621DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E68440B8-D33A-45D5-BE5A-5D0EC43621DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {24A3AC39-3DED-43E4-B1AE-5E047737EE73}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = postSolution
 	EndGlobalSection
 EndGlobal

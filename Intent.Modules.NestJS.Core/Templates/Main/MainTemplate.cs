@@ -32,15 +32,32 @@ namespace Intent.Modules.NestJS.Core.Templates.Main
         /// </summary>
         public override string TransformText()
         {
-            this.Write("import { NestFactory } from \'@nestjs/core\';\r\n\r\nasync function bootstrap() {\r\n  co" +
-                    "nst app = await NestFactory.create(");
+            this.Write("import { NestFactory } from \'@nestjs/core\';\r\nimport { DocumentBuilder, SwaggerMod" +
+                    "ule } from \'@nestjs/swagger\';\r\n\r\nasync function bootstrap() {\r\n  const app = awa" +
+                    "it NestFactory.create(");
             
-            #line 13 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Core\Templates\Main\MainTemplate.tt"
+            #line 14 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Core\Templates\Main\MainTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(AppModuleClass));
             
             #line default
             #line hidden
-            this.Write(");\r\n  await app.listen(3000);\r\n}\r\nbootstrap();");
+            this.Write(");\r\n  \r\n  const config = new DocumentBuilder()\r\n    .setTitle(\'");
+            
+            #line 17 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Core\Templates\Main\MainTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(OutputTarget.Application.Name));
+            
+            #line default
+            #line hidden
+            this.Write("\')\r\n    .setDescription(\'");
+            
+            #line 18 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Core\Templates\Main\MainTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(OutputTarget.Application.Description));
+            
+            #line default
+            #line hidden
+            this.Write("\')\r\n    .setVersion(\'1.0\')\r\n    .build();\r\n  const document = SwaggerModule.creat" +
+                    "eDocument(app, config);\r\n  SwaggerModule.setup(\'swagger\', app, document);\r\n\r\n  a" +
+                    "wait app.listen(3000);\r\n}\r\nbootstrap();");
             return this.GenerationEnvironment.ToString();
         }
     }

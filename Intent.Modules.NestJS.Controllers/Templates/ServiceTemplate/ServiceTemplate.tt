@@ -1,4 +1,4 @@
-<#@ template language="C#" inherits="TypeScriptTemplateBase<Intent.Modelers.Services.Api.ServiceModel>" #>
+<#@ template language="C#" inherits="TypeScriptTemplateBase<Intent.Modelers.Services.Api.ServiceModel, Intent.Modules.NestJS.Controllers.Templates.ServiceTemplate.ServiceDecorator>" #>
 <#@ assembly name="System.Core" #>
 <#@ import namespace="System.Collections.Generic" #>
 <#@ import namespace="System.Linq" #>
@@ -8,18 +8,19 @@
 <#@ import namespace="Intent.Templates" #>
 <#@ import namespace="Intent.Metadata.Models" #>
 <#@ import namespace="Intent.Modelers.Services.Api" #>
+<#@ import namespace="Intent.Modules.TypeScript.Weaving.Decorators" #>
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class <#= ClassName #> {
 
-  @IntentIgnore()
-  constructor() {}
+  //@IntentCanAdd()
+  constructor(<#= GetConstructorParameters() #>) {}
 <#  foreach(var operation in Model.Operations) { #>
 
-  @IntentIgnore()
+  <#= this.IntentIgnoreBodyDecorator() #>
   async <#= operation.Name.ToCamelCase() #>(<#= GetParameterDefinitions(operation) #>): Promise<<#= GetReturnType(operation) #>> {
-    throw new Error("Write your implementation here...")
+    <#= GetImplementation(operation) #>
   }
 <#  } #>
 }

@@ -8,8 +8,11 @@
 <#@ import namespace="Intent.Templates" #>
 <#@ import namespace="Intent.Metadata.Models" #>
 <#@ import namespace="Intent.Modelers.Domain.Api" #>
+<#@ import namespace="Intent.Module.TypeScript.Domain.Templates.Entity" #>
+import { EntityRepository, Repository } from "typeorm";
 
-export class <#= ClassName #>
+@EntityRepository(<#= GetTypeName(EntityTemplate.TemplateId, Model) #>)
+export class <#= ClassName #> extends Repository<<#= GetTypeName(EntityTemplate.TemplateId, Model) #>> {}
 {
 
 }

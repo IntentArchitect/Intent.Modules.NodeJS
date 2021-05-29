@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <class id="4d81fd4b-2549-43da-8eb6-8987ab0ed41e" type="Component Group" typeId="027f8bb9-9b28-4c1d-a516-8c3daa70e46d">
-  <name>Services</name>
-  <display>Services</display>
+  <name>Api</name>
+  <display>Api</display>
   <isAbstract>false</isAbstract>
-  <order>2</order>
+  <order>1</order>
   <genericTypes />
   <isMapped>false</isMapped>
   <parentFolderId>4c7176c7-0764-4a59-9583-5465261386ec</parentFolderId>
@@ -35,8 +35,8 @@
       </stereotypes>
       <childElements>
         <childElement id="0a2984ef-8e82-4188-a044-9a372185908b" type="Module" typeId="ef75f8f0-520c-4ab8-814f-5e75f4877dd7">
-          <name>Intent.NestJS.Core</name>
-          <display>Intent.NestJS.Core</display>
+          <name>Intent.NodeJS.NestJS.Core</name>
+          <display>Intent.NodeJS.NestJS.Core</display>
           <isAbstract>false</isAbstract>
           <order>0</order>
           <genericTypes />
@@ -50,15 +50,15 @@
               <definitionPackageName>Intent.ApplicationTemplate.Builder</definitionPackageName>
               <definitionPackageId>002e9a7f-e5b7-4392-a60f-b60ae4e86262</definitionPackageId>
               <properties>
-                <property name="8235e942-6dec-4576-be44-3543b35ca44c" display="Version" value="3.0.0" isActive="true" />
+                <property name="8235e942-6dec-4576-be44-3543b35ca44c" display="Version" value="1.0.0" isActive="true" />
               </properties>
             </stereotype>
           </stereotypes>
           <childElements />
         </childElement>
         <childElement id="da1d89a8-2abd-4956-aa40-de91bf07ea27" type="Module" typeId="ef75f8f0-520c-4ab8-814f-5e75f4877dd7">
-          <name>Intent.NestJS.Controllers</name>
-          <display>Intent.NestJS.Controllers</display>
+          <name>Intent.NodeJS.NestJS.Controllers</name>
+          <display>Intent.NodeJS.NestJS.Controllers</display>
           <isAbstract>false</isAbstract>
           <order>1</order>
           <genericTypes />
@@ -72,7 +72,7 @@
               <definitionPackageName>Intent.ApplicationTemplate.Builder</definitionPackageName>
               <definitionPackageId>002e9a7f-e5b7-4392-a60f-b60ae4e86262</definitionPackageId>
               <properties>
-                <property name="8235e942-6dec-4576-be44-3543b35ca44c" display="Version" value="3.0.0" isActive="true" />
+                <property name="8235e942-6dec-4576-be44-3543b35ca44c" display="Version" value="1.0.0" isActive="true" />
               </properties>
             </stereotype>
           </stereotypes>

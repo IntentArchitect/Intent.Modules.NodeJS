@@ -17,6 +17,7 @@ namespace Intent.Modules.TypeORM.Entities.Templates.RepositoryTemplate
     using Intent.Templates;
     using Intent.Metadata.Models;
     using Intent.Modelers.Domain.Api;
+    using Intent.Module.TypeScript.Domain.Templates.Entity;
     using System;
     
     /// <summary>
@@ -25,7 +26,7 @@ namespace Intent.Modules.TypeORM.Entities.Templates.RepositoryTemplate
     
     #line 1 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\RepositoryTemplate\RepositoryTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
-    public partial class RepositoryTemplate : TypeScriptTemplateBase<ClassModel>
+    public partial class RepositoryTemplate : TypeScriptTemplateBase<Intent.Modelers.Domain.Api.ClassModel>
     {
 #line hidden
         /// <summary>
@@ -33,14 +34,29 @@ namespace Intent.Modules.TypeORM.Entities.Templates.RepositoryTemplate
         /// </summary>
         public override string TransformText()
         {
-            this.Write("\r\nexport class ");
+            this.Write("\n");
+            this.Write("import { EntityRepository, Repository } from \"typeorm\";\r\n\r\n@EntityRepository(");
             
-            #line 12 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\RepositoryTemplate\RepositoryTemplate.tt"
+            #line 13 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\RepositoryTemplate\RepositoryTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(GetTypeName(EntityTemplate.TemplateId, Model)));
+            
+            #line default
+            #line hidden
+            this.Write(")\r\nexport class ");
+            
+            #line 14 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\RepositoryTemplate\RepositoryTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ClassName));
             
             #line default
             #line hidden
-            this.Write("\r\n{\r\n\r\n}");
+            this.Write(" extends Repository<");
+            
+            #line 14 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\RepositoryTemplate\RepositoryTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(GetTypeName(EntityTemplate.TemplateId, Model)));
+            
+            #line default
+            #line hidden
+            this.Write("> {}\r\n{\r\n\r\n}");
             return this.GenerationEnvironment.ToString();
         }
     }

@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -31,6 +31,7 @@
   <ItemGroup>
     <PackageReference Include="Intent.Modules.Common" Version="3.0.*" />
     <PackageReference Include="Intent.Modules.Common.Typescript" Version="3.0.*" />
+    <PackageReference Include="Intent.Modules.TypeScript.Weaving.Decorators" Version="1.0.0" />
     <PackageReference Include="Intent.Packager" Version="3.0.*">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

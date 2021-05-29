@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="15e457e1-3a4a-4384-a218-aa8247247006" type="Template Decorator" typeId="f0f46278-29ea-42bd-9206-0e7034f623bc">
+  <name>ServiceCrudImplementationDecorator</name>
+  <display>ServiceCrudImplementationDecorator: ServiceDecorator</display>
+  <isAbstract>false</isAbstract>
+  <order>1</order>
+  <genericTypes />
+  <typeReference id="6d36730b-e88e-4118-b7b8-5ea045ba46d3">
+    <typeId>756c3531-1c81-4b08-bb39-3d80b6d7fdf4</typeId>
+    <isNavigable>true</isNavigable>
+    <isNullable>false</isNullable>
+    <isCollection>false</isCollection>
+    <isRequired>true</isRequired>
+    <typePackageName>Intent.NodeJS.NestJS.Controllers</typePackageName>
+    <typePackageId>1caaea83-9ac7-4c42-a3bd-b328cf3160fc</typePackageId>
+    <stereotypes />
+    <genericTypeParameters />
+  </typeReference>
+  <isMapped>false</isMapped>
+  <parentFolderId>b2ab446c-e1c0-4c8b-aa61-1326fdc26dd4</parentFolderId>
+  <packageId>b2ab446c-e1c0-4c8b-aa61-1326fdc26dd4</packageId>
+  <packageName>Intent.Modules.NodeJS.Services.CRUD</packageName>
+  <stereotypes />
+  <childElements />
+</class>

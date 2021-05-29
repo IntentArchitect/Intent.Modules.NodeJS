@@ -25,7 +25,7 @@ namespace Intent.Modules.NestJS.Controllers.Templates.ControllerTemplate
     
     #line 1 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\ControllerTemplate\ControllerTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
-    public partial class ControllerTemplate : TypeScriptTemplateBase<ServiceModel>
+    public partial class ControllerTemplate : TypeScriptTemplateBase<Intent.Modelers.Services.Api.ServiceModel>
     {
 #line hidden
         /// <summary>
@@ -33,8 +33,8 @@ namespace Intent.Modules.NestJS.Controllers.Templates.ControllerTemplate
         /// </summary>
         public override string TransformText()
         {
-            this.Write("import { Body, Controller, Delete, Get, Param, Post, Put, Req } from \'@nestjs/com" +
-                    "mon\';\r\n\r\n\r\n@Controller(\'api/users\')\r\nexport class ");
+            this.Write("import { Controller, Logger } from \'@nestjs/common\';\r\n\r\n\r\n@Controller(\'api/users\'" +
+                    ")\r\nexport class ");
             
             #line 15 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\ControllerTemplate\ControllerTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ClassName));
@@ -69,7 +69,14 @@ namespace Intent.Modules.NestJS.Controllers.Templates.ControllerTemplate
             
             #line default
             #line hidden
-            this.Write("\r\n  @Get(\'/\')\r\n  async ");
+            this.Write("\r\n  ");
+            
+            #line 21 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\ControllerTemplate\ControllerTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(GetOperationAnnotations(operation)));
+            
+            #line default
+            #line hidden
+            this.Write("\r\n  async ");
             
             #line 22 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\ControllerTemplate\ControllerTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(operation.Name.ToCamelCase()));
@@ -79,7 +86,7 @@ namespace Intent.Modules.NestJS.Controllers.Templates.ControllerTemplate
             this.Write("(");
             
             #line 22 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\ControllerTemplate\ControllerTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(GetParameterDefinitions(operation)));
+            this.Write(this.ToStringHelper.ToStringWithCulture(GetOperationParameters(operation)));
             
             #line default
             #line hidden

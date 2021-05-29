@@ -12,5 +12,7 @@
     <application id="6ab70093-5fac-4f17-8c9a-a50664bfa47b" name="Intent.TypeORM.Entities" relativePath="Intent.Modules.TypeORM.Entities\Intent.TypeORM.Entities.application.config" />
     <application id="7f96c1f3-13ba-4fb0-83bd-d383cb54fd85" name="Intent.NextJS.Core" relativePath="Intent.Modules.NestJS.Core\Intent.Modules.NestJS.Core.application.config" />
     <application id="58bac639-e7b8-4ebd-b160-923b1581aa4e" name="Intent.ApplicationTemplate.NodeJS" relativePath="Intent.ApplicationTemplate.NodeJS\Intent.ApplicationTemplate.NodeJS.application.config" />
+    <application id="4be7ca06-8560-4ea2-8ff2-c3f1b75d4c65" name="Intent.Module.TypeScript.Domain" relativePath="Intent.Module.TypeScript.Domain/Intent.Module.TypeScript.Domain.application.config" />
+    <application id="8f523d62-b84f-4618-9465-18cf0336dba7" name="Intent.Modules.NodeJS.Services.CRUD" relativePath="Intent.Modules.NodeJS.Services.CRUD/Intent.Modules.NodeJS.Services.CRUD.application.config" />
   </applications>
 </solution>

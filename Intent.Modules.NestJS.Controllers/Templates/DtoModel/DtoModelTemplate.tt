@@ -1,0 +1,18 @@
+<#@ template language="C#" inherits="TypeScriptTemplateBase<Intent.Modelers.Services.Api.DTOModel>" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="Intent.Modules.Common" #>
+<#@ import namespace="Intent.Modules.Common.Templates" #>
+<#@ import namespace="Intent.Modules.Common.TypeScript.Templates" #>
+<#@ import namespace="Intent.Templates" #>
+<#@ import namespace="Intent.Metadata.Models" #>
+<#@ import namespace="Intent.Modelers.Services.Api" #>
+
+export class <#= ClassName #>
+{<#  foreach(var field in Model.Fields) { #>
+
+  <#= GetFieldDecorators(field) #>
+  <#= field.Name #><#= field.TypeReference.IsNullable ? "?" : "" #>: <#= GetTypeName(field.TypeReference) #>;
+<#  } #>
+}

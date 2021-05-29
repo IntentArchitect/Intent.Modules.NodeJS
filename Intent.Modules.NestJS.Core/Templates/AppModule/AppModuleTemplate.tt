@@ -7,12 +7,14 @@
 <#@ import namespace="Intent.Modules.Common.TypeScript.Templates" #>
 <#@ import namespace="Intent.Templates" #>
 <#@ import namespace="Intent.Metadata.Models" #>
+<#@ import namespace="Intent.Modules.TypeScript.Weaving.Decorators" #>
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
+<#= this.IntentMergeDecorator() #>
 @Module({
-  imports: [],
-  controllers: [],
-  providers: []
+  imports: [<#= GetModuleImports() #>],
+  controllers: [<#= GetControllers() #>],
+  providers: [<#= GetProviders() #>]
 })
 export class <#= ClassName #> {}

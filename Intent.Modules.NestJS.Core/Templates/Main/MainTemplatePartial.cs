@@ -14,7 +14,7 @@ namespace Intent.Modules.NestJS.Core.Templates.Main
     partial class MainTemplate : TypeScriptTemplateBase<object>
     {
         [IntentManaged(Mode.Fully)]
-        public const string TemplateId = "Intent.NestJS.Core.Main";
+        public const string TemplateId = "Intent.NodeJS.NestJS.Core.Main";
 
         public MainTemplate(IOutputTarget outputTarget, object model) : base(TemplateId, outputTarget, model)
         {

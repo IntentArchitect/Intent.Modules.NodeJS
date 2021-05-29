@@ -1,7 +1,9 @@
 using System.Collections.Generic;
+using System.Linq;
 using Intent.Engine;
 using Intent.Modules.Common.Templates;
 using Intent.Modules.Common.TypeScript.Templates;
+using Intent.Modules.NestJS.Core.Events;
 using Intent.RoslynWeaver.Attributes;
 using Intent.Templates;
 
@@ -13,12 +15,26 @@ namespace Intent.Modules.NestJS.Core.Templates.AppModule
     [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
     partial class AppModuleTemplate : TypeScriptTemplateBase<object>
     {
+        private readonly IList<string> _controllers = new List<string>();
+        private readonly IList<string> _providers = new List<string>();
+
         [IntentManaged(Mode.Fully)]
-        public const string TemplateId = "Intent.NestJS.Core.AppModule";
+        public const string TemplateId = "Intent.NodeJS.NestJS.Core.AppModule";
 
         public AppModuleTemplate(IOutputTarget outputTarget, object model) : base(TemplateId, outputTarget, model)
         {
-            //ExecutionContext.EventDispatcher.Subscribe();
+            ExecutionContext.EventDispatcher.Subscribe<NestJsControllerCreatedEvent>(HandleEvent);
+            ExecutionContext.EventDispatcher.Subscribe<NestJsProviderCreatedEvent>(HandleEvent);
+        }
+
+        private void HandleEvent(NestJsControllerCreatedEvent @event)
+        {
+            _controllers.Add(GetTypeName(@event.TemplateId, @event.ModelId));
+        }
+
+        private void HandleEvent(NestJsProviderCreatedEvent @event)
+        {
+            _providers.Add(GetTypeName(@event.TemplateId, @event.ModelId));
         }
 
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
@@ -29,19 +45,26 @@ namespace Intent.Modules.NestJS.Core.Templates.AppModule
                 fileName: "app.module"
             );
         }
-    }
 
-    public class NestJsProviderCreatedEvent
-    {
-        public string ModuleId { get; set; }
-        public string TemplateId { get; set; }
-        public string ModelId { get; set; }
-    }
+        private string GetModuleImports()
+        {
+            return "";
+        }
 
-    public class NestJsControllerCreatedEvent
-    {
-        public string ModuleId { get; set; }
-        public string TemplateId { get; set; }
-        public string ModelId { get; set; }
+        private string GetControllers()
+        {
+            return _controllers.Any() ? @"
+    " + string.Join(@",
+    ", _controllers) + @"
+  " : "";
+        }
+
+        private string GetProviders()
+        {
+            return _providers.Any() ? @"
+    " + string.Join(@",
+    ", _providers) + @"
+  " : "";
+        }
     }
 }

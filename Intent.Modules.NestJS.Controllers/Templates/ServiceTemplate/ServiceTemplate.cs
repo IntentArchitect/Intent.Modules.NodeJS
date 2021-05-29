@@ -17,6 +17,7 @@ namespace Intent.Modules.NestJS.Controllers.Templates.ServiceTemplate
     using Intent.Templates;
     using Intent.Metadata.Models;
     using Intent.Modelers.Services.Api;
+    using Intent.Modules.TypeScript.Weaving.Decorators;
     using System;
     
     /// <summary>
@@ -25,7 +26,7 @@ namespace Intent.Modules.NestJS.Controllers.Templates.ServiceTemplate
     
     #line 1 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\ServiceTemplate\ServiceTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
-    public partial class ServiceTemplate : TypeScriptTemplateBase<ServiceModel>
+    public partial class ServiceTemplate : TypeScriptTemplateBase<Intent.Modelers.Services.Api.ServiceModel, Intent.Modules.NestJS.Controllers.Templates.ServiceTemplate.ServiceDecorator>
     {
 #line hidden
         /// <summary>
@@ -35,42 +36,63 @@ namespace Intent.Modules.NestJS.Controllers.Templates.ServiceTemplate
         {
             this.Write("import { Injectable } from \'@nestjs/common\';\r\n\r\n@Injectable()\r\nexport class ");
             
-            #line 14 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\ServiceTemplate\ServiceTemplate.tt"
+            #line 15 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\ServiceTemplate\ServiceTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ClassName));
             
             #line default
             #line hidden
-            this.Write(" {\r\n\r\n  @IntentIgnore()\r\n  constructor() {}\r\n");
+            this.Write(" {\r\n\r\n  //@IntentCanAdd()\r\n  constructor(");
             
             #line 18 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\ServiceTemplate\ServiceTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(GetConstructorParameters()));
+            
+            #line default
+            #line hidden
+            this.Write(") {}\r\n");
+            
+            #line 19 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\ServiceTemplate\ServiceTemplate.tt"
   foreach(var operation in Model.Operations) { 
             
             #line default
             #line hidden
-            this.Write("\r\n  @IntentIgnore()\r\n  async ");
+            this.Write("\r\n  ");
             
             #line 21 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\ServiceTemplate\ServiceTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(this.IntentIgnoreBodyDecorator()));
+            
+            #line default
+            #line hidden
+            this.Write("\r\n  async ");
+            
+            #line 22 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\ServiceTemplate\ServiceTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(operation.Name.ToCamelCase()));
             
             #line default
             #line hidden
             this.Write("(");
             
-            #line 21 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\ServiceTemplate\ServiceTemplate.tt"
+            #line 22 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\ServiceTemplate\ServiceTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(GetParameterDefinitions(operation)));
             
             #line default
             #line hidden
             this.Write("): Promise<");
             
-            #line 21 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\ServiceTemplate\ServiceTemplate.tt"
+            #line 22 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\ServiceTemplate\ServiceTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(GetReturnType(operation)));
             
             #line default
             #line hidden
-            this.Write("> {\r\n    throw new Error(\"Write your implementation here...\")\r\n  }\r\n");
+            this.Write("> {\r\n    ");
             
-            #line 24 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\ServiceTemplate\ServiceTemplate.tt"
+            #line 23 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\ServiceTemplate\ServiceTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(GetImplementation(operation)));
+            
+            #line default
+            #line hidden
+            this.Write("\r\n  }\r\n");
+            
+            #line 25 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\ServiceTemplate\ServiceTemplate.tt"
   } 
             
             #line default

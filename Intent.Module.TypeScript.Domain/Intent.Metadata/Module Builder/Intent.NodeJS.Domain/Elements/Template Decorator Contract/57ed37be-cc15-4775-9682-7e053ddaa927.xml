@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="57ed37be-cc15-4775-9682-7e053ddaa927" type="Template Decorator Contract" typeId="ac1da322-377e-45cf-a2d9-d147a4d91457">
+  <name>EntityDecorator</name>
+  <display>EntityDecorator</display>
+  <isAbstract>false</isAbstract>
+  <order>1</order>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>23688484-4023-4f11-83fe-6630d3074256</parentFolderId>
+  <packageId>6dfd9d00-52a1-4b85-ac68-f3a7179aa21a</packageId>
+  <packageName>Intent.NodeJS.Domain</packageName>
+  <stereotypes />
+  <childElements />
+</class>

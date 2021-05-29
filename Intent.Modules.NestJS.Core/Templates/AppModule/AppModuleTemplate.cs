@@ -16,6 +16,7 @@ namespace Intent.Modules.NestJS.Core.Templates.AppModule
     using Intent.Modules.Common.TypeScript.Templates;
     using Intent.Templates;
     using Intent.Metadata.Models;
+    using Intent.Modules.TypeScript.Weaving.Decorators;
     using System;
     
     /// <summary>
@@ -32,11 +33,39 @@ namespace Intent.Modules.NestJS.Core.Templates.AppModule
         /// </summary>
         public override string TransformText()
         {
+            this.Write("\n");
             this.Write("import { Module } from \'@nestjs/common\';\r\nimport { TypeOrmModule } from \'@nestjs/" +
-                    "typeorm\';\r\n\r\n@Module({\r\n  imports: [],\r\n  controllers: [],\r\n  providers: []\r\n})\r" +
-                    "\nexport class ");
+                    "typeorm\';\r\n\r\n");
             
-            #line 18 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Core\Templates\AppModule\AppModuleTemplate.tt"
+            #line 13 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Core\Templates\AppModule\AppModuleTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(this.IntentMergeDecorator()));
+            
+            #line default
+            #line hidden
+            this.Write("\r\n@Module({\r\n  imports: [");
+            
+            #line 15 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Core\Templates\AppModule\AppModuleTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(GetModuleImports()));
+            
+            #line default
+            #line hidden
+            this.Write("],\r\n  controllers: [");
+            
+            #line 16 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Core\Templates\AppModule\AppModuleTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(GetControllers()));
+            
+            #line default
+            #line hidden
+            this.Write("],\r\n  providers: [");
+            
+            #line 17 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Core\Templates\AppModule\AppModuleTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(GetProviders()));
+            
+            #line default
+            #line hidden
+            this.Write("]\r\n})\r\nexport class ");
+            
+            #line 19 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Core\Templates\AppModule\AppModuleTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ClassName));
             
             #line default

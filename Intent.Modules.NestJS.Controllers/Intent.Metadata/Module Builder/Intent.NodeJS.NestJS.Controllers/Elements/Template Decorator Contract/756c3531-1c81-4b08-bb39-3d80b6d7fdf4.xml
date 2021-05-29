@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="756c3531-1c81-4b08-bb39-3d80b6d7fdf4" type="Template Decorator Contract" typeId="ac1da322-377e-45cf-a2d9-d147a4d91457">
+  <name>ServiceDecorator</name>
+  <display>ServiceDecorator</display>
+  <isAbstract>false</isAbstract>
+  <order>1</order>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>27c77612-3eb9-4b20-bba4-8faef34bfa4a</parentFolderId>
+  <packageId>1caaea83-9ac7-4c42-a3bd-b328cf3160fc</packageId>
+  <packageName>Intent.NodeJS.NestJS.Controllers</packageName>
+  <stereotypes />
+  <childElements />
+</class>

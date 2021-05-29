@@ -15,9 +15,10 @@ namespace Intent.Modules.TypeORM.Entities.Templates.RepositoryTemplate
     partial class RepositoryTemplate : TypeScriptTemplateBase<Intent.Modelers.Domain.Api.ClassModel>
     {
         [IntentManaged(Mode.Fully)]
-        public const string TemplateId = "Intent.TypeORM.Entities.RepositoryTemplate";
+        public const string TemplateId = "Intent.NodeJS.TypeORM.RepositoryTemplate";
 
-        public RepositoryTemplate(IOutputTarget outputTarget, ClassModel model) : base(TemplateId, outputTarget, model)
+        [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
+        public RepositoryTemplate(IOutputTarget outputTarget, Intent.Modelers.Domain.Api.ClassModel model) : base(TemplateId, outputTarget, model)
         {
         }
 
