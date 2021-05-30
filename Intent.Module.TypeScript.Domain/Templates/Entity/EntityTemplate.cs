@@ -69,7 +69,7 @@ namespace Intent.Module.TypeScript.Domain.Templates.Entity
             this.Write("\r\n  ");
             
             #line 15 "C:\Dev\Intent.Modules.NodeJS\Intent.Module.TypeScript.Domain\Templates\Entity\EntityTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(attribute.Name));
+            this.Write(this.ToStringHelper.ToStringWithCulture(attribute.Name.ToCamelCase()));
             
             #line default
             #line hidden
@@ -109,7 +109,7 @@ namespace Intent.Module.TypeScript.Domain.Templates.Entity
             this.Write("\r\n  ");
             
             #line 19 "C:\Dev\Intent.Modules.NodeJS\Intent.Module.TypeScript.Domain\Templates\Entity\EntityTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(associationEnd.Name));
+            this.Write(this.ToStringHelper.ToStringWithCulture(associationEnd.Name.ToCamelCase()));
             
             #line default
             #line hidden

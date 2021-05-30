@@ -89,8 +89,9 @@ namespace Intent.Modules.NodeJS.Services.CRUD.CrudStrategies
 
         public string GetImplementation(ClassModel targetEntity, OperationModel operation)
         {
-            return $@"var element = await this.{_repository.ToCamelCase()}.find({_idProperty.Name.ToPascalCase()});
-    return element.mapTo{_template.GetTypeName(DtoModelTemplate.TemplateId, _dtoToReturn)}(_mapper);";
+            var dto = _template.GetTypeName(DtoModelTemplate.TemplateId, _dtoToReturn);
+            return $@"var {targetEntity.Name.ToCamelCase()} = await this.{_repository.ToCamelCase()}.findOne({_idProperty.Name.ToCamelCase()}, {{ relations: {dto}.requiredRelations }});
+    return {dto}.from{targetEntity.Name.ToPascalCase()}({targetEntity.Name.ToCamelCase()});";
         }
     }
 }

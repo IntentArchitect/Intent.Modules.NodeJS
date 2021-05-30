@@ -72,8 +72,10 @@ namespace Intent.Modules.NodeJS.Services.CRUD.CrudStrategies
 
         public string GetImplementation(ClassModel targetEntity, OperationModel operation)
         {
-            return $@"var existing{targetEntity.Name} = await {_repository.ToCamelCase()}.findOne({_idParam.Name.ToPascalCase()});
-    {GetPropertyAssignments(targetEntity, operation.Parameters.Single(x => !x.Equals(_idParam)))}";
+            return $@"var existing{targetEntity.Name} = await this.{_repository.ToCamelCase()}.findOne({_idParam.Name.ToCamelCase()});
+    {GetPropertyAssignments(targetEntity, operation.Parameters.Single(x => !x.Equals(_idParam)))}
+
+    await this.{_repository.ToCamelCase()}.save(existing{targetEntity.Name});";
         }
 
         private string GetPropertyAssignments(ClassModel targetEntity, ParameterModel dtoParam)
@@ -93,7 +95,7 @@ namespace Intent.Modules.NodeJS.Services.CRUD.CrudStrategies
                     sb.AppendLine($"    // WARNING: No matching type for Domain: {attribute.Name} and DTO: {property.Name}");
                     continue;
                 }
-                sb.AppendLine($"    existing{targetEntity.Name}.{attribute.Name.ToPascalCase()} = {dtoParam.Name.ToCamelCase()}.{property.Name.ToPascalCase()};");
+                sb.AppendLine($"    existing{targetEntity.Name.ToPascalCase()}.{attribute.Name.ToCamelCase()} = {dtoParam.Name.ToCamelCase()}.{property.Name.ToCamelCase()};");
             }
 
             return sb.ToString().Trim();

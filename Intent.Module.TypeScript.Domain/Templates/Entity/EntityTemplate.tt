@@ -12,10 +12,10 @@
 export class <#= ClassName #> {
 <#= GetDecoratorsOutput(x => x.GetBeforeFields()) #><#  foreach(var attribute in Model.Attributes) { #>
   <#= GetAttributeDecorators(attribute) #>
-  <#= attribute.Name #><#= attribute.TypeReference.IsNullable ? "?" : "" #>: <#= GetTypeName(attribute.TypeReference) #>;
+  <#= attribute.Name.ToCamelCase() #><#= attribute.TypeReference.IsNullable ? "?" : "" #>: <#= GetTypeName(attribute.TypeReference) #>;
 <#  } #>
 <#  foreach(var associationEnd in Model.AssociatedClasses.Where(x => x.IsNavigable)) { #>
   <#= GetAssociationDecorators(associationEnd) #>
-  <#= associationEnd.Name #><#= associationEnd.IsNullable ? "?" : "" #>: <#= GetTypeName(associationEnd) #>;
+  <#= associationEnd.Name.ToCamelCase() #><#= associationEnd.IsNullable ? "?" : "" #>: <#= GetTypeName(associationEnd) #>;
 <#  } #><#= GetDecoratorsOutput(x => x.GetAfterFields()) #>
 }

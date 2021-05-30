@@ -13,6 +13,19 @@ export class <#= ClassName #>
 {<#  foreach(var field in Model.Fields) { #>
 
   <#= GetFieldDecorators(field) #>
-  <#= field.Name #><#= field.TypeReference.IsNullable ? "?" : "" #>: <#= GetTypeName(field.TypeReference) #>;
+  <#= field.Name.ToCamelCase() #><#= field.TypeReference.IsNullable ? "?" : "" #>: <#= GetTypeName(field.TypeReference) #>;
+<#  }
+    if (Model.IsMapped) {#>
+
+  static from<#= GetTypeName(Model.Mapping) #>(<#= Model.Mapping.Element.Name.ToCamelCase() #>: <#= GetTypeName(Model.Mapping) #>) {
+    if (<#= Model.Mapping.Element.Name.ToCamelCase() #> == null) {
+        return null;
+    }
+    const dto = new <#= ClassName #>();
+    <#= GetMappings() #>
+    return dto;
+  }
+
+  static requiredRelations: string[] = [<#=  string.Join(", ", GetRequiredRelations().Select(x => "\"" + x + "\"")) #>];
 <#  } #>
 }

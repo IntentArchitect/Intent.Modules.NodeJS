@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Intent.Engine;
+using Intent.Metadata.RDBMS.Api;
 using Intent.Modelers.Domain.Api;
 using Intent.Module.TypeScript.Domain.Templates.Entity;
 using Intent.Modules.Common.Templates;
@@ -29,6 +31,10 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
 
         public override string GetBeforeFields()
         {
+            if (_template.Model.Attributes.Any(x => x.HasPrimaryKey()))
+            {
+                return base.GetBeforeFields();
+            }
             return $@"
   @{_template.ImportType("ObjectIdColumn", "typeorm")}()
   @{_template.ImportType("PrimaryGeneratedColumn", "typeorm")}('uuid')
@@ -59,6 +65,15 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
 
         public override IEnumerable<string> GetFieldDecorators(AttributeModel attribute)
         {
+            if (attribute.HasPrimaryKey())
+            {
+                return new[]
+                {
+                    $"@{_template.ImportType("ObjectIdColumn", "typeorm")}()",
+                    $"@{_template.ImportType("PrimaryGeneratedColumn", "typeorm")}({(attribute.TypeReference.Element.Name == "guid" ? "'uuid'" : "")})"
+                };
+            }
+
             var hasNonDefaultSettings = false;
             var settings = new List<string>();
             if (attribute.TypeReference.IsNullable)
@@ -80,7 +95,7 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
             var sourceEnd = thatEnd.OtherEnd();
             if (!sourceEnd.IsCollection && !thatEnd.IsCollection) // one-to-one
             {
-                statements.Add($"@{_template.ImportType("OneToOne", "typeorm")}(() => {_template.GetTypeName(thatEnd.Element)}{(sourceEnd.IsNavigable ? $", {thatEnd.Name} => {thatEnd.Name}.{sourceEnd.Name}" : "")})");
+                statements.Add($"@{_template.ImportType("OneToOne", "typeorm")}(() => {_template.GetTypeName(thatEnd.Element)}{(sourceEnd.IsNavigable ? $", {thatEnd.Name.ToCamelCase()} => {thatEnd.Name.ToCamelCase()}.{sourceEnd.Name.ToCamelCase()}" : "")})");
                 if (thatEnd.IsTargetEnd())
                 {
                     statements.Add($"@{_template.ImportType("JoinColumn", "typeorm")}()");
@@ -88,18 +103,18 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
             }
             else if (!sourceEnd.IsCollection && thatEnd.IsCollection) // one-to-many
             {
-                statements.Add($"@{_template.ImportType("OneToMany", "typeorm")}(() => {_template.GetTypeName(thatEnd.Element)}{(sourceEnd.IsNavigable ? $", {thatEnd.Name} => {thatEnd.Name}.{sourceEnd.Name}" : "")})");
+                statements.Add($"@{_template.ImportType("OneToMany", "typeorm")}(() => {_template.GetTypeName(thatEnd.Element)}{(sourceEnd.IsNavigable ? $", {thatEnd.Name.ToCamelCase()} => {thatEnd.Name.ToCamelCase()}.{sourceEnd.Name.ToCamelCase()}" : "")})");
             }
             else if (sourceEnd.IsCollection && !thatEnd.IsCollection) // many-to-one
             {
-                statements.Add($"@{_template.ImportType("ManyToOne", "typeorm")}(() => {_template.GetTypeName(thatEnd.Element)}{(sourceEnd.IsNavigable ? $", {thatEnd.Name} => {thatEnd.Name}.{sourceEnd.Name}" : "")})");
+                statements.Add($"@{_template.ImportType("ManyToOne", "typeorm")}(() => {_template.GetTypeName(thatEnd.Element)}{(sourceEnd.IsNavigable ? $", {thatEnd.Name.ToCamelCase()} => {thatEnd.Name.ToCamelCase()}.{sourceEnd.Name.ToCamelCase()}" : "")})");
             }
             else if (sourceEnd.IsCollection && thatEnd.IsCollection) // many-to-many
             {
-                statements.Add($"@{_template.ImportType("ManyToMany", "typeorm")}(() => {_template.GetTypeName(thatEnd.Element)}{(sourceEnd.IsNavigable ? $", {thatEnd.Name} => {thatEnd.Name}.{sourceEnd.Name}" : "")})");
+                statements.Add($"@{_template.ImportType("ManyToMany", "typeorm")}(() => {_template.GetTypeName(thatEnd.Element)}{(sourceEnd.IsNavigable ? $", {thatEnd.Name.ToCamelCase()} => {thatEnd.Name.ToCamelCase()}.{sourceEnd.Name.ToCamelCase()}" : "")})");
                 if (thatEnd.IsTargetEnd())
                 {
-                    statements.Add($"@{_template.ImportType("JoinColumn", "typeorm")}()");
+                    statements.Add($"@{_template.ImportType("JoinTable", "typeorm")}()");
                 }
             }
 

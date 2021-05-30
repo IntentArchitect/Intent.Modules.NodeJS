@@ -11,7 +11,7 @@
 import { Controller, Logger } from '@nestjs/common';
 
 
-@Controller('api/users')
+<#= GetClassDecorators() #>
 export class <#= ClassName #> {
   logger = new Logger('<#= ClassName #>');
 

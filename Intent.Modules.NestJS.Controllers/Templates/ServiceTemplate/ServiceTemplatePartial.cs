@@ -60,7 +60,7 @@ namespace Intent.Modules.NestJS.Controllers.Templates.ServiceTemplate
             var output = GetDecorators().Aggregate(x => x.GetImplementation(operation));
             if (string.IsNullOrWhiteSpace(output))
             {
-                return @"throw new NotImplementedException(""Write your implementation for this service here..."");";
+                return @"throw new Error(""Write your implementation for this service here..."");";
             }
             return output;
         }

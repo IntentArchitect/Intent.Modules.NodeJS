@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Intent.Module.TypeScript.Domain\Intent.Module.TypeScript.Domain.csproj" />
     <ProjectReference Include="..\Intent.Modules.NestJS.Core\Intent.Modules.NestJS.Core.csproj" />
   </ItemGroup>
 

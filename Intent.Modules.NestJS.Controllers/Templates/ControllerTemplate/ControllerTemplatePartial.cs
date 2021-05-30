@@ -61,6 +61,12 @@ namespace Intent.Modules.NestJS.Controllers.Templates.ControllerTemplate
             );
         }
 
+
+        private string GetClassDecorators()
+        {
+            return $@"@Controller('{Model.GetHttpServiceSettings().Route() ?? $"api/{Model.Name.RemoveSuffix("Service", "Controller").ToLower()}"}')";
+        }
+
         private string GetOperationAnnotations(OperationModel o)
         {
             var attributes = new List<string>();
@@ -72,7 +78,7 @@ namespace Intent.Modules.NestJS.Controllers.Templates.ControllerTemplate
         private string GetOperationParameters(OperationModel operation)
         {
             var parameters = new List<string>();
-            parameters.Add("@Req() req: Request");
+            parameters.Add($"@{ImportType("Req", "@nestjs/common")}() req: {ImportType("Request", "@nestjs/common")}");
             var verb = GetHttpVerb(operation);
             switch (verb)
             {

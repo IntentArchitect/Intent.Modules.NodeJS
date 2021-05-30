@@ -33,8 +33,14 @@ namespace Intent.Modules.NestJS.Controllers.Templates.ControllerTemplate
         /// </summary>
         public override string TransformText()
         {
-            this.Write("import { Controller, Logger } from \'@nestjs/common\';\r\n\r\n\r\n@Controller(\'api/users\'" +
-                    ")\r\nexport class ");
+            this.Write("import { Controller, Logger } from \'@nestjs/common\';\r\n\r\n\r\n");
+            
+            #line 14 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\ControllerTemplate\ControllerTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(GetClassDecorators()));
+            
+            #line default
+            #line hidden
+            this.Write("\r\nexport class ");
             
             #line 15 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\ControllerTemplate\ControllerTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ClassName));
