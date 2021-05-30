@@ -14,13 +14,19 @@
     <template id="Intent.NodeJS.NestJS.Core.Main" externalReference="b0a8435b-723e-428e-a8ef-1be63dee5c46">
       <role>Startup</role>
     </template>
+    <template id="Intent.NodeJS.NestJS.Core.ZipFileContent" externalReference="bb9942de-891f-4be5-818b-cf02935a551c">
+      <role>Default</role>
+    </template>
   </templates>
-  <decorators></decorators>
+  <decorators>
+    <decorator id="Intent.NodeJS.NestJS.Core.PackageJsonFileNestJsDecorator" externalReference="dc17a069-72ae-4843-9ad5-19859e195e30" />
+  </decorators>
   <factoryExtensions></factoryExtensions>
   <dependencies>
-    <dependency id="Intent.Common" version="3.0.0" />
-    <dependency id="Intent.Common.Types" version="3.0.0" />
-    <dependency id="Intent.Common.TypeScript" version="3.0.0" />
+    <dependency id="Intent.Common" version="3.0.6" />
+    <dependency id="Intent.Common.Types" version="3.0.5" />
+    <dependency id="Intent.Common.TypeScript" version="3.0.7" />
+    <dependency id="Intent.Npm" version="1.0.0" />
   </dependencies>
   <files>
     <file src="$outDir$/$id$.dll" />

@@ -11,6 +11,9 @@
     <template id="Intent.NodeJS.TypeORM.RepositoryTemplate" externalReference="6460b69c-1989-48f2-97d8-46007f7a157e">
       <role>Repositories</role>
     </template>
+    <template id="Intent.NodeJS.TypeORM.OrmConfig" externalReference="37f0dc31-67fd-460b-80ee-2ab07f3aaf32">
+      <role>Startup</role>
+    </template>
   </templates>
   <decorators>
     <decorator id="Intent.NodeJS.TypeORM.EntityTypeOrmDecorator" externalReference="a813dd33-004c-49c9-b3f5-d29be2256027" />

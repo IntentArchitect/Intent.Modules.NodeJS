@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="ac222e29-37db-4cb2-88a6-4949f41e7953" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+  <name>services</name>
+  <display>services</display>
+  <isAbstract>false</isAbstract>
+  <order>3</order>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>1b4d4af1-fa72-4e01-843b-a7ab3ad4ee64</parentFolderId>
+  <packageId>ace2a404-f488-43ed-9558-7ab1488bbc1f</packageId>
+  <packageName>NewApplication</packageName>
+  <stereotypes />
+  <childElements>
+    <childElement id="294cccf8-b7b6-4329-9f45-4254abc848ff" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Intent.NodeJS.NestJS.Controllers.ServiceTemplate</name>
+      <display>Intent.NodeJS.NestJS.Controllers.ServiceTemplate</display>
+      <externalReference>Intent.NodeJS.NestJS.Controllers</externalReference>
+      <isAbstract>false</isAbstract>
+      <order>1</order>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>ac222e29-37db-4cb2-88a6-4949f41e7953</parentFolderId>
+      <packageId>ace2a404-f488-43ed-9558-7ab1488bbc1f</packageId>
+      <packageName>NewApplication</packageName>
+      <stereotypes />
+      <childElements />
+    </childElement>
+    <childElement id="4d776d2e-a296-4003-b50d-ba2cb344fc20" type="Role" typeId="8663c9f9-2852-45e7-aaa1-0883a2e6f1da">
+      <name>Services</name>
+      <display>Services</display>
+      <isAbstract>false</isAbstract>
+      <order>2</order>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>ac222e29-37db-4cb2-88a6-4949f41e7953</parentFolderId>
+      <packageId>ace2a404-f488-43ed-9558-7ab1488bbc1f</packageId>
+      <packageName>NewApplication</packageName>
+      <stereotypes />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

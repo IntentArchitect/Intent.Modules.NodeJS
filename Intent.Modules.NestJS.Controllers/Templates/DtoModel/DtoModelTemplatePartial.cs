@@ -68,7 +68,7 @@ namespace Intent.Modules.NestJS.Controllers.Templates.DtoModel
 
         private string GetPath(IEnumerable<IElementMappingPathTarget> path)
         {
-            return string.Join(".", path
+            return string.Join("?.", path
                 .Where(x => x.Specialization != GeneralizationModel.SpecializationType)
                 .Select(x => x.Specialization == OperationModel.SpecializationType ? $"{x.Name.ToCamelCase()}()" : x.Name.ToCamelCase()));
         }

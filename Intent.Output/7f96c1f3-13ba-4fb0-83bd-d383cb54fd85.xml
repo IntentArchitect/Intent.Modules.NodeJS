@@ -3,54 +3,88 @@
   <ApplicationId>7f96c1f3-13ba-4fb0-83bd-d383cb54fd85</ApplicationId>
   <FileLogs>
     <FileLog>
+      <ProjectId>9ecab0d4-7276-4fa5-800a-f3ad49983b39</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.Templates.TemplateDecoratordc17a069-72ae-4843-9ad5-19859e195e30</CorrelationId>
+      <SolutionRelativeFilePath>../Intent.Modules.NestJS.Core/Decorators/PackageJsonFileNestJsDecorator.cs</SolutionRelativeFilePath>
+      <ProjectRelativeFilePath>PackageJsonFileNestJsDecorator.cs</ProjectRelativeFilePath>
+    </FileLog>
+    <FileLog>
+      <ProjectId>9ecab0d4-7276-4fa5-800a-f3ad49983b39</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.Templates.TemplateDecoratorRegistrationdc17a069-72ae-4843-9ad5-19859e195e30</CorrelationId>
+      <SolutionRelativeFilePath>../Intent.Modules.NestJS.Core/Decorators/PackageJsonFileNestJsDecoratorRegistration.cs</SolutionRelativeFilePath>
+      <ProjectRelativeFilePath>PackageJsonFileNestJsDecoratorRegistration.cs</ProjectRelativeFilePath>
+    </FileLog>
+    <FileLog>
       <ProjectId>96615273-0852-4d59-acfb-67f62095564b</ProjectId>
+      <CorrelationId>Intent.VisualStudio.Projects.CoreLibrary.CSProject96615273-0852-4d59-acfb-67f62095564b</CorrelationId>
       <SolutionRelativeFilePath>../Intent.Modules.NestJS.Core/Intent.Modules.NestJS.Core.csproj</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>Intent.Modules.NestJS.Core.csproj</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>96615273-0852-4d59-acfb-67f62095564b</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.IModeSpecFile</CorrelationId>
       <SolutionRelativeFilePath>../Intent.Modules.NestJS.Core/Intent.NodeJS.NestJS.Core.imodspec</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>Intent.NodeJS.NestJS.Core.imodspec</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>b0d2955c-78d9-48d7-8e68-199ef7673464</ProjectId>
+      <CorrelationId>ModuleBuilder.Typescript.Templates.TypescriptTemplate.PreProcessT43617addd-e98a-4f2b-a9f2-c8cdce720f14</CorrelationId>
       <SolutionRelativeFilePath>../Intent.Modules.NestJS.Core/Templates/AppModule/AppModuleTemplate.cs</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>AppModule/AppModuleTemplate.cs</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>b0d2955c-78d9-48d7-8e68-199ef7673464</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate3617addd-e98a-4f2b-a9f2-c8cdce720f14</CorrelationId>
       <SolutionRelativeFilePath>../Intent.Modules.NestJS.Core/Templates/AppModule/AppModuleTemplate.tt</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>AppModule/AppModuleTemplate.tt</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>b0d2955c-78d9-48d7-8e68-199ef7673464</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial3617addd-e98a-4f2b-a9f2-c8cdce720f14</CorrelationId>
       <SolutionRelativeFilePath>../Intent.Modules.NestJS.Core/Templates/AppModule/AppModuleTemplatePartial.cs</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>AppModule/AppModuleTemplatePartial.cs</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>b0d2955c-78d9-48d7-8e68-199ef7673464</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.TemplateRegistration.SingleFileNoModel3617addd-e98a-4f2b-a9f2-c8cdce720f14</CorrelationId>
       <SolutionRelativeFilePath>../Intent.Modules.NestJS.Core/Templates/AppModule/AppModuleTemplateRegistration.cs</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>AppModule/AppModuleTemplateRegistration.cs</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>b0d2955c-78d9-48d7-8e68-199ef7673464</ProjectId>
+      <CorrelationId>ModuleBuilder.Typescript.Templates.TypescriptTemplate.PreProcessT4b0a8435b-723e-428e-a8ef-1be63dee5c46</CorrelationId>
       <SolutionRelativeFilePath>../Intent.Modules.NestJS.Core/Templates/Main/MainTemplate.cs</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>Main/MainTemplate.cs</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>b0d2955c-78d9-48d7-8e68-199ef7673464</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateb0a8435b-723e-428e-a8ef-1be63dee5c46</CorrelationId>
       <SolutionRelativeFilePath>../Intent.Modules.NestJS.Core/Templates/Main/MainTemplate.tt</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>Main/MainTemplate.tt</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>b0d2955c-78d9-48d7-8e68-199ef7673464</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartialb0a8435b-723e-428e-a8ef-1be63dee5c46</CorrelationId>
       <SolutionRelativeFilePath>../Intent.Modules.NestJS.Core/Templates/Main/MainTemplatePartial.cs</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>Main/MainTemplatePartial.cs</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>b0d2955c-78d9-48d7-8e68-199ef7673464</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.TemplateRegistration.SingleFileNoModelb0a8435b-723e-428e-a8ef-1be63dee5c46</CorrelationId>
       <SolutionRelativeFilePath>../Intent.Modules.NestJS.Core/Templates/Main/MainTemplateRegistration.cs</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>Main/MainTemplateRegistration.cs</ProjectRelativeFilePath>
+    </FileLog>
+    <FileLog>
+      <ProjectId>b0d2955c-78d9-48d7-8e68-199ef7673464</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.ProjectItemTemplate.Partialbb9942de-891f-4be5-818b-cf02935a551c</CorrelationId>
+      <SolutionRelativeFilePath>../Intent.Modules.NestJS.Core/Templates/ZipFileContent/ZipFileContentTemplatePartial.cs</SolutionRelativeFilePath>
+      <ProjectRelativeFilePath>ZipFileContent/ZipFileContentTemplatePartial.cs</ProjectRelativeFilePath>
+    </FileLog>
+    <FileLog>
+      <ProjectId>b0d2955c-78d9-48d7-8e68-199ef7673464</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.TemplateRegistration.Custombb9942de-891f-4be5-818b-cf02935a551c</CorrelationId>
+      <SolutionRelativeFilePath>../Intent.Modules.NestJS.Core/Templates/ZipFileContent/ZipFileContentTemplateRegistration.cs</SolutionRelativeFilePath>
+      <ProjectRelativeFilePath>ZipFileContent/ZipFileContentTemplateRegistration.cs</ProjectRelativeFilePath>
     </FileLog>
   </FileLogs>
 </outputLog>

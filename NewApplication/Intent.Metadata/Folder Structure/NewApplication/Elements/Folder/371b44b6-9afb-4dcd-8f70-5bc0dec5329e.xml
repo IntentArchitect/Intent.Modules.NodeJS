@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="371b44b6-9afb-4dcd-8f70-5bc0dec5329e" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+  <name>rest</name>
+  <display>rest</display>
+  <isAbstract>false</isAbstract>
+  <order>0</order>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>caf80d0f-439f-412d-9963-2ec966c0da54</parentFolderId>
+  <packageId>ace2a404-f488-43ed-9558-7ab1488bbc1f</packageId>
+  <packageName>NewApplication</packageName>
+  <stereotypes />
+  <childElements>
+    <childElement id="e32c056c-4fab-4120-89f6-d24f1bcd99c8" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Intent.NodeJS.NestJS.Controllers.ControllerBaseTemplate</name>
+      <display>Intent.NodeJS.NestJS.Controllers.ControllerBaseTemplate</display>
+      <externalReference>Intent.NodeJS.NestJS.Controllers</externalReference>
+      <isAbstract>false</isAbstract>
+      <order>0</order>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>371b44b6-9afb-4dcd-8f70-5bc0dec5329e</parentFolderId>
+      <packageId>ace2a404-f488-43ed-9558-7ab1488bbc1f</packageId>
+      <packageName>NewApplication</packageName>
+      <stereotypes />
+      <childElements />
+    </childElement>
+    <childElement id="166f32e1-9294-4e14-9165-d674fde2c297" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Intent.NodeJS.NestJS.Controllers.ControllerTemplate</name>
+      <display>Intent.NodeJS.NestJS.Controllers.ControllerTemplate</display>
+      <externalReference>Intent.NodeJS.NestJS.Controllers</externalReference>
+      <isAbstract>false</isAbstract>
+      <order>1</order>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>371b44b6-9afb-4dcd-8f70-5bc0dec5329e</parentFolderId>
+      <packageId>ace2a404-f488-43ed-9558-7ab1488bbc1f</packageId>
+      <packageName>NewApplication</packageName>
+      <stereotypes />
+      <childElements />
+    </childElement>
+    <childElement id="1c4ce487-f79f-4342-a33f-690385f67759" type="Role" typeId="8663c9f9-2852-45e7-aaa1-0883a2e6f1da">
+      <name>Controllers</name>
+      <display>Controllers</display>
+      <isAbstract>false</isAbstract>
+      <order>2</order>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>371b44b6-9afb-4dcd-8f70-5bc0dec5329e</parentFolderId>
+      <packageId>ace2a404-f488-43ed-9558-7ab1488bbc1f</packageId>
+      <packageName>NewApplication</packageName>
+      <stereotypes />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

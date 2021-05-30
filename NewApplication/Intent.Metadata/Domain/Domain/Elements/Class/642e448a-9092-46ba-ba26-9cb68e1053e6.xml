@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="642e448a-9092-46ba-ba26-9cb68e1053e6" type="Class" typeId="04e12b51-ed12-42a3-9667-a6aa81bb6d10">
+  <name>User</name>
+  <display>User</display>
+  <isAbstract>false</isAbstract>
+  <order>2</order>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>80a41450-b680-41b0-8916-76360f023d61</parentFolderId>
+  <packageId>80a41450-b680-41b0-8916-76360f023d61</packageId>
+  <packageName>Domain</packageName>
+  <stereotypes />
+  <childElements />
+</class>

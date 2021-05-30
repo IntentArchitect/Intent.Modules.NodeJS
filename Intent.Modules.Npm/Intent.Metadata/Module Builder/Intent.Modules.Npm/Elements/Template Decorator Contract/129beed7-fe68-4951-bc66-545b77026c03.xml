@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="129beed7-fe68-4951-bc66-545b77026c03" type="Template Decorator Contract" typeId="ac1da322-377e-45cf-a2d9-d147a4d91457">
+  <name>PackageJsonFileDecorator</name>
+  <display>PackageJsonFileDecorator</display>
+  <isAbstract>false</isAbstract>
+  <order>1</order>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>e7189d54-872e-4ff4-b449-323386caf588</parentFolderId>
+  <packageId>3a099241-6946-4914-b1b6-e25d168a36d1</packageId>
+  <packageName>Intent.Npm</packageName>
+  <stereotypes />
+  <childElements />
+</class>

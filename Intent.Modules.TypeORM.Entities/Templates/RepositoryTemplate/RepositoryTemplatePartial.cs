@@ -3,6 +3,7 @@ using Intent.Engine;
 using Intent.Modelers.Domain.Api;
 using Intent.Modules.Common.Templates;
 using Intent.Modules.Common.TypeScript.Templates;
+using Intent.Modules.NestJS.Core.Events;
 using Intent.RoslynWeaver.Attributes;
 using Intent.Templates;
 
@@ -20,6 +21,7 @@ namespace Intent.Modules.TypeORM.Entities.Templates.RepositoryTemplate
         [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
         public RepositoryTemplate(IOutputTarget outputTarget, Intent.Modelers.Domain.Api.ClassModel model) : base(TemplateId, outputTarget, model)
         {
+            AddDependency(new NpmPackageDependency("typeorm", "^0.2.32"));
         }
 
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]

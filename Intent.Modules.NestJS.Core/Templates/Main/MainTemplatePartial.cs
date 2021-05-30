@@ -16,7 +16,8 @@ namespace Intent.Modules.NestJS.Core.Templates.Main
         [IntentManaged(Mode.Fully)]
         public const string TemplateId = "Intent.NodeJS.NestJS.Core.Main";
 
-        public MainTemplate(IOutputTarget outputTarget, object model) : base(TemplateId, outputTarget, model)
+        [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
+        public MainTemplate(IOutputTarget outputTarget, object model = null) : base(TemplateId, outputTarget, model)
         {
         }
 

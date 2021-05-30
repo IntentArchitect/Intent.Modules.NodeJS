@@ -3,7 +3,7 @@
   <name>RepositoryTemplate</name>
   <display>RepositoryTemplate: File Per Model</display>
   <isAbstract>false</isAbstract>
-  <order>2</order>
+  <order>3</order>
   <genericTypes />
   <typeReference id="d477138f-7ef6-461b-bd06-01fca62a36ac">
     <typeId>99cb461f-ec82-4dde-a804-e3393a5e2a8d</typeId>

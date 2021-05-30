@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intent.Module.TypeScript.Do
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intent.Modules.NodeJS.Services.CRUD", "Intent.Modules.NodeJS.Services.CRUD\Intent.Modules.NodeJS.Services.CRUD.csproj", "{E68440B8-D33A-45D5-BE5A-5D0EC43621DD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intent.Modules.Npm", "Intent.Modules.Npm\Intent.Modules.Npm.csproj", "{47D80E8C-BDC2-431A-9D38-A9543B1FE821}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{E68440B8-D33A-45D5-BE5A-5D0EC43621DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E68440B8-D33A-45D5-BE5A-5D0EC43621DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E68440B8-D33A-45D5-BE5A-5D0EC43621DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47D80E8C-BDC2-431A-9D38-A9543B1FE821}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47D80E8C-BDC2-431A-9D38-A9543B1FE821}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47D80E8C-BDC2-431A-9D38-A9543B1FE821}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47D80E8C-BDC2-431A-9D38-A9543B1FE821}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

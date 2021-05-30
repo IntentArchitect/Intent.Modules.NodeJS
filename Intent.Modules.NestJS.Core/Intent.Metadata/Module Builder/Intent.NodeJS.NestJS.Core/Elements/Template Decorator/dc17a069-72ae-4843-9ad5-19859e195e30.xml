@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="dc17a069-72ae-4843-9ad5-19859e195e30" type="Template Decorator" typeId="f0f46278-29ea-42bd-9206-0e7034f623bc">
+  <name>PackageJsonFileNestJsDecorator</name>
+  <display>PackageJsonFileNestJsDecorator: PackageJsonFileDecorator</display>
+  <isAbstract>false</isAbstract>
+  <order>2</order>
+  <genericTypes />
+  <typeReference id="671774b4-77b6-44da-b8f8-739d5937ed95">
+    <typeId>129beed7-fe68-4951-bc66-545b77026c03</typeId>
+    <isNavigable>true</isNavigable>
+    <isNullable>false</isNullable>
+    <isCollection>false</isCollection>
+    <isRequired>true</isRequired>
+    <typePackageName>Intent.Npm</typePackageName>
+    <typePackageId>3a099241-6946-4914-b1b6-e25d168a36d1</typePackageId>
+    <stereotypes />
+    <genericTypeParameters />
+  </typeReference>
+  <isMapped>false</isMapped>
+  <parentFolderId>6c3e1e47-28cd-4769-8b10-4651497f1456</parentFolderId>
+  <packageId>6c3e1e47-28cd-4769-8b10-4651497f1456</packageId>
+  <packageName>Intent.NodeJS.NestJS.Core</packageName>
+  <stereotypes />
+  <childElements />
+</class>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="e06bc256-785f-41aa-89b2-9320cde7266b" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+  <name>dto</name>
+  <display>dto</display>
+  <isAbstract>false</isAbstract>
+  <order>0</order>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>ac222e29-37db-4cb2-88a6-4949f41e7953</parentFolderId>
+  <packageId>ace2a404-f488-43ed-9558-7ab1488bbc1f</packageId>
+  <packageName>NewApplication</packageName>
+  <stereotypes />
+  <childElements>
+    <childElement id="37698fc7-8d8b-4c6d-8514-af5cc7d91323" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Intent.NodeJS.NestJS.Controllers.DtoModel</name>
+      <display>Intent.NodeJS.NestJS.Controllers.DtoModel</display>
+      <externalReference>Intent.NodeJS.NestJS.Controllers</externalReference>
+      <isAbstract>false</isAbstract>
+      <order>0</order>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>e06bc256-785f-41aa-89b2-9320cde7266b</parentFolderId>
+      <packageId>ace2a404-f488-43ed-9558-7ab1488bbc1f</packageId>
+      <packageName>NewApplication</packageName>
+      <stereotypes />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

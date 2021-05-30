@@ -17,14 +17,32 @@ namespace Intent.Modules.NestJS.Core.Templates.AppModule
     {
         private readonly IList<string> _controllers = new List<string>();
         private readonly IList<string> _providers = new List<string>();
+        private readonly IList<string> _imports = new List<string>();
 
         [IntentManaged(Mode.Fully)]
         public const string TemplateId = "Intent.NodeJS.NestJS.Core.AppModule";
 
-        public AppModuleTemplate(IOutputTarget outputTarget, object model) : base(TemplateId, outputTarget, model)
+        [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
+        public AppModuleTemplate(IOutputTarget outputTarget, object model = null) : base(TemplateId, outputTarget, model)
         {
+            ExecutionContext.EventDispatcher.Subscribe<NestJsModuleImportRequest>(HandleEvent);
             ExecutionContext.EventDispatcher.Subscribe<NestJsControllerCreatedEvent>(HandleEvent);
             ExecutionContext.EventDispatcher.Subscribe<NestJsProviderCreatedEvent>(HandleEvent);
+        }
+
+        private void HandleEvent(NestJsModuleImportRequest @event)
+        {
+            foreach (var import in @event.Imports)
+            {
+                AddImport(import.Type, import.Location);
+            }
+
+            foreach (var dependency in @event.Dependencies)
+            {
+                AddTemplateDependency(dependency);
+            }
+
+            _imports.Add(@event.Statement);
         }
 
         private void HandleEvent(NestJsControllerCreatedEvent @event)
@@ -48,7 +66,10 @@ namespace Intent.Modules.NestJS.Core.Templates.AppModule
 
         private string GetModuleImports()
         {
-            return "";
+            return _imports.Any() ? @"
+    " + string.Join(@",
+    ", _imports) + @"
+  " : "";
         }
 
         private string GetControllers()

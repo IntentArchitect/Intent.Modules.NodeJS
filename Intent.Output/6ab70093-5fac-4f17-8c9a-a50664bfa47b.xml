@@ -34,6 +34,30 @@
     </FileLog>
     <FileLog>
       <ProjectId>c8df7c4a-ae2c-4ca5-a1c2-cfc8a8c6d91d</ProjectId>
+      <CorrelationId>ModuleBuilder.Typescript.Templates.TypescriptTemplate.PreProcessT437f0dc31-67fd-460b-80ee-2ab07f3aaf32</CorrelationId>
+      <SolutionRelativeFilePath>../Intent.Modules.TypeORM.Entities/Templates/OrmConfig/OrmConfigTemplate.cs</SolutionRelativeFilePath>
+      <ProjectRelativeFilePath>OrmConfig/OrmConfigTemplate.cs</ProjectRelativeFilePath>
+    </FileLog>
+    <FileLog>
+      <ProjectId>c8df7c4a-ae2c-4ca5-a1c2-cfc8a8c6d91d</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate37f0dc31-67fd-460b-80ee-2ab07f3aaf32</CorrelationId>
+      <SolutionRelativeFilePath>../Intent.Modules.TypeORM.Entities/Templates/OrmConfig/OrmConfigTemplate.tt</SolutionRelativeFilePath>
+      <ProjectRelativeFilePath>OrmConfig/OrmConfigTemplate.tt</ProjectRelativeFilePath>
+    </FileLog>
+    <FileLog>
+      <ProjectId>c8df7c4a-ae2c-4ca5-a1c2-cfc8a8c6d91d</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial37f0dc31-67fd-460b-80ee-2ab07f3aaf32</CorrelationId>
+      <SolutionRelativeFilePath>../Intent.Modules.TypeORM.Entities/Templates/OrmConfig/OrmConfigTemplatePartial.cs</SolutionRelativeFilePath>
+      <ProjectRelativeFilePath>OrmConfig/OrmConfigTemplatePartial.cs</ProjectRelativeFilePath>
+    </FileLog>
+    <FileLog>
+      <ProjectId>c8df7c4a-ae2c-4ca5-a1c2-cfc8a8c6d91d</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.TemplateRegistration.SingleFileListModel37f0dc31-67fd-460b-80ee-2ab07f3aaf32</CorrelationId>
+      <SolutionRelativeFilePath>../Intent.Modules.TypeORM.Entities/Templates/OrmConfig/OrmConfigTemplateRegistration.cs</SolutionRelativeFilePath>
+      <ProjectRelativeFilePath>OrmConfig/OrmConfigTemplateRegistration.cs</ProjectRelativeFilePath>
+    </FileLog>
+    <FileLog>
+      <ProjectId>c8df7c4a-ae2c-4ca5-a1c2-cfc8a8c6d91d</ProjectId>
       <CorrelationId>ModuleBuilder.Typescript.Templates.TypescriptTemplate.PreProcessT46460b69c-1989-48f2-97d8-46007f7a157e</CorrelationId>
       <SolutionRelativeFilePath>../Intent.Modules.TypeORM.Entities/Templates/RepositoryTemplate/RepositoryTemplate.cs</SolutionRelativeFilePath>
       <ProjectRelativeFilePath>RepositoryTemplate/RepositoryTemplate.cs</ProjectRelativeFilePath>

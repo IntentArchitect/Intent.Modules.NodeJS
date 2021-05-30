@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -9,6 +9,10 @@
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>RepositoryTemplate.cs</LastGenOutput>
     </None>
+    <None Update="Templates\OrmConfig\OrmConfigTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>OrmConfigTemplate.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
@@ -17,13 +21,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>RepositoryTemplate.tt</DependentUpon>
     </Compile>
+    <Compile Update="Templates\OrmConfig\OrmConfigTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>OrmConfigTemplate.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Intent.Modules.Common" Version="3.0.6" />
     <PackageReference Include="Intent.Modules.Common.TypeScript" Version="3.0.8" />
-    <PackageReference Include="Intent.Modules.Modelers.Domain" Version="3.0.4" />
     <PackageReference Include="Intent.Modules.Metadata.RDBMS" Version="3.0.3" />
+    <PackageReference Include="Intent.Modules.Modelers.Domain" Version="3.0.4" />
     <PackageReference Include="Intent.Packager" Version="3.0.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -34,6 +43,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Intent.Module.TypeScript.Domain\Intent.Module.TypeScript.Domain.csproj" />
+    <ProjectReference Include="..\Intent.Modules.NestJS.Core\Intent.Modules.NestJS.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>

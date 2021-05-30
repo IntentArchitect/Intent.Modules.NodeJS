@@ -1,8 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\nestjs-bootstrap.zip" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\nestjs-bootstrap.zip" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Update="Templates\Main\MainTemplate.tt">
@@ -29,15 +37,23 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Intent.Modules.Common" Version="3.0.*" />
-    <PackageReference Include="Intent.Modules.Common.Typescript" Version="3.0.*" />
+    <PackageReference Include="Intent.Modules.Common" Version="3.0.6" />
+    <PackageReference Include="Intent.Modules.Common.TypeScript" Version="3.0.8" />
     <PackageReference Include="Intent.Modules.TypeScript.Weaving.Decorators" Version="1.0.0" />
-    <PackageReference Include="Intent.Packager" Version="3.0.*">
+    <PackageReference Include="Intent.Packager" Version="3.0.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Intent.RoslynWeaver.Attributes" Version="1.0.0" />
     <PackageReference Include="Intent.SoftwareFactory.SDK" Version="3.0.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Intent.Modules.Npm\Intent.Modules.Npm.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\nestjs-bootstrap.zip" />
   </ItemGroup>
 
   <ItemGroup>
