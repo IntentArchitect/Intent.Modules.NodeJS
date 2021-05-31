@@ -20,7 +20,7 @@ namespace Intent.Modules.NodeJS.Services.CRUD.Decorators
     public class ServiceCrudImplementationDecorator : ServiceDecorator
     {
         [IntentManaged(Mode.Fully)]
-        public const string DecoratorId = "Intent.Modules.NodeJS.Services.CRUD.ServiceCrudImplementationDecorator";
+        public const string DecoratorId = "Intent.NodeJS.Services.CRUD.ServiceCrudImplementationDecorator";
 
         private readonly ServiceTemplate _template;
         private readonly IMetadataManager _metadataManager;

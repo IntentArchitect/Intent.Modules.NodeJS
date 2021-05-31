@@ -8,13 +8,12 @@
   <modulesCacheRelativePath>.intent/modules</modulesCacheRelativePath>
   <applications>
     <application id="f87dc841-bb66-490e-9de9-9b6d070554a7" name="Intent.Modules.NestJS.Controllers" relativePath="Intent.Modules.NestJS.Controllers/Intent.Modules.NestJS.Controllers.application.config" />
-    <application id="cff39af5-9f69-4fe4-9561-e879557f119c" name="TestApplication" relativePath="TestApplication/TestApplication.application.config" />
     <application id="6ab70093-5fac-4f17-8c9a-a50664bfa47b" name="Intent.TypeORM.Entities" relativePath="Intent.Modules.TypeORM.Entities\Intent.TypeORM.Entities.application.config" />
     <application id="7f96c1f3-13ba-4fb0-83bd-d383cb54fd85" name="Intent.NextJS.Core" relativePath="Intent.Modules.NestJS.Core\Intent.Modules.NestJS.Core.application.config" />
     <application id="58bac639-e7b8-4ebd-b160-923b1581aa4e" name="Intent.ApplicationTemplate.NodeJS" relativePath="Intent.ApplicationTemplate.NodeJS\Intent.ApplicationTemplate.NodeJS.application.config" />
     <application id="4be7ca06-8560-4ea2-8ff2-c3f1b75d4c65" name="Intent.Module.TypeScript.Domain" relativePath="Intent.Module.TypeScript.Domain/Intent.Module.TypeScript.Domain.application.config" />
     <application id="8f523d62-b84f-4618-9465-18cf0336dba7" name="Intent.Modules.NodeJS.Services.CRUD" relativePath="Intent.Modules.NodeJS.Services.CRUD/Intent.Modules.NodeJS.Services.CRUD.application.config" />
     <application id="785abbd0-bd89-4e1a-9eae-9fcb0ae189de" name="Intent.Modules.Npm" relativePath="Intent.Modules.Npm/Intent.Modules.Npm.application.config" />
-    <application id="16ae61f1-4581-408e-9ba1-4040eb59c548" name="NewApplication" relativePath="NewApplication/NewApplication.application.config" />
+    <application id="f5382a95-38f4-492a-82f9-2578f361fa90" name="NewApplication" relativePath="NewApplication/NewApplication.application.config" />
   </applications>
 </solution>

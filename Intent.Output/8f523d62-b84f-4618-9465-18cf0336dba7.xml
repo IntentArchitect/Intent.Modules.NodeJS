@@ -23,8 +23,8 @@
     <FileLog>
       <ProjectId>e68440b8-d33a-45d5-be5a-5d0ec43621dd</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.IModeSpecFile</CorrelationId>
-      <SolutionRelativeFilePath>../Intent.Modules.NodeJS.Services.CRUD/Intent.Modules.NodeJS.Services.CRUD.imodspec</SolutionRelativeFilePath>
-      <ProjectRelativeFilePath>Intent.Modules.NodeJS.Services.CRUD.imodspec</ProjectRelativeFilePath>
+      <SolutionRelativeFilePath>../Intent.Modules.NodeJS.Services.CRUD/Intent.NodeJS.Services.CRUD.imodspec</SolutionRelativeFilePath>
+      <ProjectRelativeFilePath>Intent.NodeJS.Services.CRUD.imodspec</ProjectRelativeFilePath>
     </FileLog>
     <FileLog>
       <ProjectId>e68440b8-d33a-45d5-be5a-5d0ec43621dd</ProjectId>

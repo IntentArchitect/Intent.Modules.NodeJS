@@ -58,6 +58,9 @@
             </element>
           </childElements>
         </element>
+        <element typeId="8663c9f9-2852-45e7-aaa1-0883a2e6f1da" type="Role">
+          <name>Root</name>
+        </element>
       </childElements>
     </package>
   </createPackages>

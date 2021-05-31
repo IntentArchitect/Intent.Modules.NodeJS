@@ -19,7 +19,7 @@
   <isMapped>false</isMapped>
   <parentFolderId>b2ab446c-e1c0-4c8b-aa61-1326fdc26dd4</parentFolderId>
   <packageId>b2ab446c-e1c0-4c8b-aa61-1326fdc26dd4</packageId>
-  <packageName>Intent.Modules.NodeJS.Services.CRUD</packageName>
+  <packageName>Intent.NodeJS.Services.CRUD</packageName>
   <stereotypes />
   <childElements />
 </class>
