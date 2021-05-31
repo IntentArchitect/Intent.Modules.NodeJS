@@ -36,11 +36,17 @@ namespace Intent.Modules.NodeJS.Services.CRUD.CrudStrategies
 
             var matches = new[]
             {
+                $"get",
                 $"get{targetEntity.Name.ToPluralName().ToLower()}",
+                $"getall",
                 $"getall{targetEntity.Name.ToPluralName().ToLower()}",
+                $"find",
                 $"find{targetEntity.Name.ToPluralName().ToLower()}",
+                $"findall",
                 $"findall{targetEntity.Name.ToPluralName().ToLower()}",
+                $"lookup",
                 $"lookup{targetEntity.Name.ToPluralName().ToLower()}",
+                $"lookupall",
                 $"lookupall{targetEntity.Name.ToPluralName().ToLower()}",
             }.Contains(operation.Name.ToLower());
 

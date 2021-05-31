@@ -34,9 +34,13 @@ namespace Intent.Modules.NodeJS.Services.CRUD.CrudStrategies
         {
             var matches = new[]
             {
+                $"add",
                 $"add{targetEntity.Name.ToLower()}",
+                $"addnew",
                 $"addnew{targetEntity.Name.ToLower()}",
+                $"create",
                 $"create{targetEntity.Name.ToLower()}",
+                $"createnew",
                 $"createnew{targetEntity.Name.ToLower()}",
             }.Contains(operation.Name.ToLower());
 

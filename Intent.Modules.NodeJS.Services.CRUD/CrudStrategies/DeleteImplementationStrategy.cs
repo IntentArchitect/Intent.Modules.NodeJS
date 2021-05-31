@@ -36,7 +36,9 @@ namespace Intent.Modules.NodeJS.Services.CRUD.CrudStrategies
 
             var matches = new[]
             {
+                $"delete",
                 $"delete{targetEntity.Name.ToLower()}",
+                $"remove",
                 $"remove{targetEntity.Name.ToLower()}",
             }.Contains(operation.Name.ToLower());
 

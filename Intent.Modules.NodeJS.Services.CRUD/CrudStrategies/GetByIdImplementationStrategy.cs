@@ -44,11 +44,17 @@ namespace Intent.Modules.NodeJS.Services.CRUD.CrudStrategies
 
             var matches = new[]
             {
+                $"get",
                 $"get{targetEntity.Name.ToLower()}",
+                $"getbyid",
                 $"get{targetEntity.Name.ToLower()}byid",
+                $"find",
                 $"find{targetEntity.Name.ToLower()}",
+                $"findbyid",
                 $"find{targetEntity.Name.ToLower()}byid",
+                $"lookup",
                 $"lookup{targetEntity.Name.ToLower()}",
+                $"lookupbyid",
                 $"lookup{targetEntity.Name.ToLower()}byid",
             }.Contains(operation.Name.ToLower().RemoveSuffix("query"));
 
