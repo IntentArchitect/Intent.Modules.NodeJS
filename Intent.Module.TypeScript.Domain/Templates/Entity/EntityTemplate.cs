@@ -17,6 +17,7 @@ namespace Intent.Module.TypeScript.Domain.Templates.Entity
     using Intent.Templates;
     using Intent.Metadata.Models;
     using Intent.Modelers.Domain.Api;
+    using Intent.Modules.TypeScript.Weaving.Decorators;
     using System;
     
     /// <summary>
@@ -33,6 +34,7 @@ namespace Intent.Module.TypeScript.Domain.Templates.Entity
         /// </summary>
         public override string TransformText()
         {
+            this.Write("\n");
             
             #line 11 "C:\Dev\Intent.Modules.NodeJS\Intent.Module.TypeScript.Domain\Templates\Entity\EntityTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(GetClassDecorators()));
@@ -139,7 +141,50 @@ namespace Intent.Module.TypeScript.Domain.Templates.Entity
             
             #line default
             #line hidden
-            this.Write("\r\n}");
+            this.Write("\r\n");
+            
+            #line 21 "C:\Dev\Intent.Modules.NodeJS\Intent.Module.TypeScript.Domain\Templates\Entity\EntityTemplate.tt"
+  foreach(var operation in Model.Operations) { 
+            
+            #line default
+            #line hidden
+            this.Write("\r\n  ");
+            
+            #line 23 "C:\Dev\Intent.Modules.NodeJS\Intent.Module.TypeScript.Domain\Templates\Entity\EntityTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(this.IntentIgnoreBodyDecorator()));
+            
+            #line default
+            #line hidden
+            this.Write("\r\n  ");
+            
+            #line 24 "C:\Dev\Intent.Modules.NodeJS\Intent.Module.TypeScript.Domain\Templates\Entity\EntityTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(operation.Name.ToCamelCase()));
+            
+            #line default
+            #line hidden
+            this.Write("(");
+            
+            #line 24 "C:\Dev\Intent.Modules.NodeJS\Intent.Module.TypeScript.Domain\Templates\Entity\EntityTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(this.GetMethodParameters(operation.Parameters)));
+            
+            #line default
+            #line hidden
+            this.Write("): ");
+            
+            #line 24 "C:\Dev\Intent.Modules.NodeJS\Intent.Module.TypeScript.Domain\Templates\Entity\EntityTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(operation.ReturnType != null ? GetTypeName(operation.ReturnType) : "void"));
+            
+            #line default
+            #line hidden
+            this.Write(" {\r\n    throw new Error(\"Write your implementation for this operation here...\");\r" +
+                    "\n  }\r\n");
+            
+            #line 27 "C:\Dev\Intent.Modules.NodeJS\Intent.Module.TypeScript.Domain\Templates\Entity\EntityTemplate.tt"
+  } 
+            
+            #line default
+            #line hidden
+            this.Write("}");
             return this.GenerationEnvironment.ToString();
         }
     }

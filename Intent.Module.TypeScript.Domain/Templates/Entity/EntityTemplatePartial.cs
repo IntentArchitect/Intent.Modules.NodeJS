@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using System.Linq;
 using Intent.Engine;
+using Intent.Metadata.Models;
 using Intent.Modelers.Domain.Api;
 using Intent.Modules.Common.Templates;
 using Intent.Modules.Common.TypeScript.Templates;
@@ -53,6 +55,27 @@ namespace Intent.Module.TypeScript.Domain.Templates.Entity
   ", x.GetFieldDecorators(associationEnd)));
             return string.IsNullOrWhiteSpace(decorators) ? "" : $@"
   {decorators}";
+        }
+    }
+
+    public static class TypeScriptCodeExtensions
+    {
+        public static string GetMethodParameters<TModel, TParameterModel>(this TypeScriptTemplateBase<TModel> template, IEnumerable<TParameterModel> parameters)
+            where TParameterModel : IHasName, IHasTypeReference
+        {
+            return string.Join(", ", parameters.Select(x => $"{x.Name.ToCamelCase()}{(x.TypeReference.IsNullable ? "?" : "")}: {template.GetTypeName(x)}"));
+        }
+
+        public static string GetParameters<TModel, TParameterModel>(this TypeScriptTemplateBase<TModel> template, IEnumerable<TParameterModel> parameters)
+            where TParameterModel : IHasName, IHasTypeReference
+        {
+            return string.Join(", ", parameters.Select(x => $"{x.Name.ToCamelCase()}{(x.TypeReference.IsNullable ? "?" : "")}: {template.GetTypeName(x)}"));
+        }
+
+        public static string GetArguments<TModel, TParameterModel>(this TypeScriptTemplateBase<TModel> template, IEnumerable<TParameterModel> parameters)
+            where TParameterModel : IHasName, IHasTypeReference
+        {
+            return string.Join(", ", parameters.Select(x => $"{x.Name}"));
         }
     }
 }

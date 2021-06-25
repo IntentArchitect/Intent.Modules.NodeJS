@@ -8,6 +8,7 @@
 <#@ import namespace="Intent.Templates" #>
 <#@ import namespace="Intent.Metadata.Models" #>
 <#@ import namespace="Intent.Modelers.Domain.Api" #>
+<#@ import namespace="Intent.Modules.TypeScript.Weaving.Decorators" #>
 <#= GetClassDecorators() #>
 export class <#= ClassName #> {
 <#= GetDecoratorsOutput(x => x.GetBeforeFields()) #><#  foreach(var attribute in Model.Attributes) { #>
@@ -18,4 +19,11 @@ export class <#= ClassName #> {
   <#= GetAssociationDecorators(associationEnd) #>
   <#= associationEnd.Name.ToCamelCase() #><#= associationEnd.IsNullable ? "?" : "" #>: <#= GetTypeName(associationEnd) #>;
 <#  } #><#= GetDecoratorsOutput(x => x.GetAfterFields()) #>
+<#  foreach(var operation in Model.Operations) { #>
+
+  <#= this.IntentIgnoreBodyDecorator() #>
+  <#= operation.Name.ToCamelCase() #>(<#= this.GetMethodParameters(operation.Parameters) #>): <#= operation.ReturnType != null ? GetTypeName(operation.ReturnType) : "void" #> {
+    throw new Error("Write your implementation for this operation here...");
+  }
+<#  } #>
 }
