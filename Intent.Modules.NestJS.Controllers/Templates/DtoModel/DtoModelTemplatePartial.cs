@@ -55,11 +55,11 @@ namespace Intent.Modules.NestJS.Controllers.Templates.DtoModel
                 }
                 else if (field.TypeReference.IsCollection)
                 {
-                    statements.Add($"dto.{field.Name.ToCamelCase()} = {entity.Name.ToCamelCase()}.{GetPath(field.Mapping.Path)}?.map(x => {GetTypeName(field.TypeReference.Element)}.from{new DTOModel((IElement)field.TypeReference.Element).Mapping.Element.Name}(x));");
+                    statements.Add($"dto.{field.Name.ToCamelCase()} = {entity.Name.ToCamelCase()}.{GetPath(field.Mapping.Path)}?.map(x => {GetTypeName(DtoModelTemplate.TemplateId, field.TypeReference.Element)}.from{new DTOModel((IElement)field.TypeReference.Element).Mapping.Element.Name}(x));");
                 }
                 else
                 {
-                    statements.Add($"dto.{field.Name.ToCamelCase()} = {GetTypeName(field.TypeReference.Element)}.from{new DTOModel((IElement)field.TypeReference.Element).Mapping.Element.Name}({entity.Name.ToCamelCase()}.{GetPath(field.Mapping.Path)});");
+                    statements.Add($"dto.{field.Name.ToCamelCase()} = {GetTypeName(DtoModelTemplate.TemplateId, field.TypeReference.Element)}.from{new DTOModel((IElement)field.TypeReference.Element).Mapping.Element.Name}({entity.Name.ToCamelCase()}.{GetPath(field.Mapping.Path)});");
                 }
             }
             return string.Join(@"

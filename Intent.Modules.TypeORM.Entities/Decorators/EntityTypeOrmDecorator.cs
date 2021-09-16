@@ -97,7 +97,7 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
             var sourceEnd = thatEnd.OtherEnd();
             if (!sourceEnd.IsCollection && !thatEnd.IsCollection) // one-to-one
             {
-                statements.Add($"@{_template.ImportType("OneToOne", "typeorm")}(() => {_template.GetTypeName(thatEnd.Element)}{(sourceEnd.IsNavigable ? $", {thatEnd.Name.ToCamelCase()} => {thatEnd.Name.ToCamelCase()}.{sourceEnd.Name.ToCamelCase()}" : "")})");
+                statements.Add($"@{_template.ImportType("OneToOne", "typeorm")}(() => {_template.GetTypeName(EntityTemplate.TemplateId, thatEnd.Element)}{(sourceEnd.IsNavigable ? $", {thatEnd.Name.ToCamelCase()} => {thatEnd.Name.ToCamelCase()}.{sourceEnd.Name.ToCamelCase()}" : "")})");
                 if (thatEnd.IsTargetEnd())
                 {
                     statements.Add($"@{_template.ImportType("JoinColumn", "typeorm")}()");
@@ -105,15 +105,15 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
             }
             else if (!sourceEnd.IsCollection && thatEnd.IsCollection) // one-to-many
             {
-                statements.Add($"@{_template.ImportType("OneToMany", "typeorm")}(() => {_template.GetTypeName(thatEnd.Element)}{(sourceEnd.IsNavigable ? $", {thatEnd.Name.ToCamelCase()} => {thatEnd.Name.ToCamelCase()}.{sourceEnd.Name.ToCamelCase()}" : "")})");
+                statements.Add($"@{_template.ImportType("OneToMany", "typeorm")}(() => {_template.GetTypeName(EntityTemplate.TemplateId, thatEnd.Element)}{(sourceEnd.IsNavigable ? $", {thatEnd.Name.ToCamelCase()} => {thatEnd.Name.ToCamelCase()}.{sourceEnd.Name.ToCamelCase()}" : "")})");
             }
             else if (sourceEnd.IsCollection && !thatEnd.IsCollection) // many-to-one
             {
-                statements.Add($"@{_template.ImportType("ManyToOne", "typeorm")}(() => {_template.GetTypeName(thatEnd.Element)}{(sourceEnd.IsNavigable ? $", {thatEnd.Name.ToCamelCase()} => {thatEnd.Name.ToCamelCase()}.{sourceEnd.Name.ToCamelCase()}" : "")})");
+                statements.Add($"@{_template.ImportType("ManyToOne", "typeorm")}(() => {_template.GetTypeName(EntityTemplate.TemplateId, thatEnd.Element)}{(sourceEnd.IsNavigable ? $", {thatEnd.Name.ToCamelCase()} => {thatEnd.Name.ToCamelCase()}.{sourceEnd.Name.ToCamelCase()}" : "")})");
             }
             else if (sourceEnd.IsCollection && thatEnd.IsCollection) // many-to-many
             {
-                statements.Add($"@{_template.ImportType("ManyToMany", "typeorm")}(() => {_template.GetTypeName(thatEnd.Element)}{(sourceEnd.IsNavigable ? $", {thatEnd.Name.ToCamelCase()} => {thatEnd.Name.ToCamelCase()}.{sourceEnd.Name.ToCamelCase()}" : "")})");
+                statements.Add($"@{_template.ImportType("ManyToMany", "typeorm")}(() => {_template.GetTypeName(EntityTemplate.TemplateId, thatEnd.Element)}{(sourceEnd.IsNavigable ? $", {thatEnd.Name.ToCamelCase()} => {thatEnd.Name.ToCamelCase()}.{sourceEnd.Name.ToCamelCase()}" : "")})");
                 if (thatEnd.IsTargetEnd())
                 {
                     statements.Add($"@{_template.ImportType("JoinTable", "typeorm")}()");

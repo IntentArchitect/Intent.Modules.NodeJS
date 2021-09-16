@@ -37,7 +37,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Intent.Modules.Common" Version="3.0.6" />
+    <PackageReference Include="Intent.Modules.Common" Version="3.0.7" />
     <PackageReference Include="Intent.Modules.Common.TypeScript" Version="3.0.8" />
     <PackageReference Include="Intent.Modules.TypeScript.Weaving.Decorators" Version="1.0.0" />
     <PackageReference Include="Intent.Packager" Version="3.0.1">
