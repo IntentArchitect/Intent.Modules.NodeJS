@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="feac3952-34f5-494b-85dd-a5cde2214e42" type="Folder" typeId="3407a825-1331-4f3f-89a4-901903ed97ce">
+  <name>Settings</name>
+  <display>Settings</display>
+  <isAbstract>false</isAbstract>
+  <order>0</order>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>96615273-0852-4d59-acfb-67f62095564b</parentFolderId>
+  <stereotypes />
+  <childElements>
+    <childElement id="f7f2fb9e-f69c-44d1-803a-66dc0717d5ea" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
+      <name>Intent.ModuleBuilder.Templates.Settings.ModuleSettingsExtensions</name>
+      <display>Intent.ModuleBuilder.Templates.Settings.ModuleSettingsExtensions</display>
+      <externalReference>Intent.ModuleBuilder</externalReference>
+      <isAbstract>false</isAbstract>
+      <order>0</order>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>feac3952-34f5-494b-85dd-a5cde2214e42</parentFolderId>
+      <stereotypes />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

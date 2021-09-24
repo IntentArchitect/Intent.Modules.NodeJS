@@ -34,9 +34,9 @@ namespace Intent.Modules.TypeORM.Entities.Templates.OrmConfig
             ExecutionContext.EventDispatcher.Publish(NestJsModuleImportRequest.Create(null, "TypeOrmModule.forRoot(ormconfig)")
                 .AddImport("TypeOrmModule", "@nestjs/typeorm")
                 .AddDependency(TemplateDependency.OnTemplate(this)));
-            
+
             var repositories = Model.Select(x => GetTemplate<RepositoryTemplate.RepositoryTemplate>(RepositoryTemplate.RepositoryTemplate.TemplateId, x, new TemplateDiscoveryOptions() { TrackDependency = false })).ToList();
-            
+
             ExecutionContext.EventDispatcher.Publish(NestJsModuleImportRequest.Create(null, $"TypeOrmModule.forFeature([{string.Join(", ", repositories.Select(x => x.ClassName))}])")
                 .AddImport("TypeOrmModule", "@nestjs/typeorm")
                 .AddDependencies(repositories.Select(TemplateDependency.OnTemplate).ToArray()));

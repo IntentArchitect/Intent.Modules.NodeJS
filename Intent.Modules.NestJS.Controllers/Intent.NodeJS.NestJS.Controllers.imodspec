@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package>
   <id>Intent.NodeJS.NestJS.Controllers</id>
-  <version>1.0.1</version>
-  <supportedClientVersions>[3.0.0,4.0.0)</supportedClientVersions>
+  <version>3.1.0</version>
+  <supportedClientVersions>[3.1.0-pre.0, 4.0.0)</supportedClientVersions>
   <summary>A custom module for Intent.Modules.NodeJS.</summary>
   <description>A custom module for Intent.Modules.NodeJS.</description>
   <authors>Intent.Modules.NodeJS</authors>
@@ -25,13 +25,13 @@
   <decorators></decorators>
   <factoryExtensions></factoryExtensions>
   <dependencies>
-    <dependency id="Intent.Common" version="3.0.7" />
-    <dependency id="Intent.Common.Types" version="3.0.5" />
-    <dependency id="Intent.Common.TypeScript" version="3.0.7" />
-    <dependency id="Intent.Modelers.Services" version="3.0.3" />
-    <dependency id="Intent.Metadata.WebApi" version="3.0.4" />
-    <dependency id="Intent.NodeJS.NestJS.Core" version="1.0.1" />
-    <dependency id="Intent.TypeScript.Weaving.Decorators" version="1.0.0" />
+    <dependency id="Intent.Common" version="3.1.0" />
+    <dependency id="Intent.Common.Types" version="3.1.0" />
+    <dependency id="Intent.Common.TypeScript" version="3.1.0" />
+    <dependency id="Intent.Modelers.Services" version="3.1.0" />
+    <dependency id="Intent.Metadata.WebApi" version="3.1.0" />
+    <dependency id="Intent.NodeJS.NestJS.Core" version="3.1.0" />
+    <dependency id="Intent.TypeScript.Weaving.Decorators" version="3.1.0" />
   </dependencies>
   <files>
     <file src="$outDir$/$id$.dll" />
@@ -40,4 +40,5 @@
   <metadata>
     <install target="Module Builder" src="Intent.Metadata/Module Builder/Intent.NodeJS.NestJS.Controllers/Intent.NodeJS.NestJS.Controllers.pkg.config" externalReference="1caaea83-9ac7-4c42-a3bd-b328cf3160fc" />
   </metadata>
+  <moduleSettings />
 </package>

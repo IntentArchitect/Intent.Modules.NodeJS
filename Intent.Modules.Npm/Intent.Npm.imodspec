@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package>
   <id>Intent.Npm</id>
-  <version>1.0.0</version>
-  <supportedClientVersions>[3.0.0,4.0.0)</supportedClientVersions>
+  <version>3.1.0</version>
+  <supportedClientVersions>[3.1.0-pre.0, 4.0.0)</supportedClientVersions>
   <summary>A custom module for Intent.Modules.NodeJS.</summary>
   <description>A custom module for Intent.Modules.NodeJS.</description>
   <authors>Intent.Modules.NodeJS</authors>
@@ -15,8 +15,8 @@
   <decorators></decorators>
   <factoryExtensions></factoryExtensions>
   <dependencies>
-    <dependency id="Intent.Common" version="3.0.7" />
-    <dependency id="Intent.Common.Types" version="3.0.5" />
+    <dependency id="Intent.Common" version="3.1.0" />
+    <dependency id="Intent.Common.Types" version="3.1.0" />
   </dependencies>
   <files>
     <file src="$outDir$/$id$.dll" />
@@ -25,4 +25,5 @@
   <metadata>
     <install target="Module Builder" src="Intent.Metadata/Module Builder/Intent.Modules.Npm/Intent.Modules.Npm.pkg.config" externalReference="3a099241-6946-4914-b1b6-e25d168a36d1" />
   </metadata>
+  <moduleSettings />
 </package>

@@ -192,5 +192,17 @@
       <stereotypes />
       <childElements />
     </childElement>
+    <childElement id="e521380b-b4a8-4600-bdd3-f607578cf512" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
+      <name>Intent.ModuleBuilder.Templates.TemplateExtensions</name>
+      <display>Intent.ModuleBuilder.Templates.TemplateExtensions</display>
+      <externalReference>Intent.ModuleBuilder</externalReference>
+      <isAbstract>false</isAbstract>
+      <order>0</order>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>c8df7c4a-ae2c-4ca5-a1c2-cfc8a8c6d91d</parentFolderId>
+      <stereotypes />
+      <childElements />
+    </childElement>
   </childElements>
 </class>
