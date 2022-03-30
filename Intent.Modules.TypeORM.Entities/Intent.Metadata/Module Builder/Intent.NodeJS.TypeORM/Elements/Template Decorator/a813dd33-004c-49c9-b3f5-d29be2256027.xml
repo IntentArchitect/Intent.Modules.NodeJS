@@ -3,7 +3,7 @@
   <name>EntityTypeOrmDecorator</name>
   <display>EntityTypeOrmDecorator: EntityDecorator</display>
   <isAbstract>false</isAbstract>
-  <order>1</order>
+  <order>3</order>
   <genericTypes />
   <typeReference id="bafbe21c-a35a-41fd-aeb3-99bc5efcbee3">
     <typeId>57ed37be-cc15-4775-9682-7e053ddaa927</typeId>
@@ -11,7 +11,7 @@
     <isNullable>false</isNullable>
     <isCollection>false</isCollection>
     <isRequired>true</isRequired>
-    <typePackageName>Intent.TypeScript.Domain</typePackageName>
+    <typePackageName>Intent.NodeJS.Domain</typePackageName>
     <typePackageId>6dfd9d00-52a1-4b85-ac68-f3a7179aa21a</typePackageId>
     <stereotypes />
     <genericTypeParameters />

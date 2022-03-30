@@ -3,7 +3,7 @@
   <name>PackageJsonFileNestJsDecorator</name>
   <display>PackageJsonFileNestJsDecorator: PackageJsonFileDecorator</display>
   <isAbstract>false</isAbstract>
-  <order>2</order>
+  <order>4</order>
   <genericTypes />
   <typeReference id="671774b4-77b6-44da-b8f8-739d5937ed95">
     <typeId>129beed7-fe68-4951-bc66-545b77026c03</typeId>

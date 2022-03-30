@@ -20,7 +20,9 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
         [IntentManaged(Mode.Fully)]
         public const string DecoratorId = "Intent.NodeJS.TypeORM.EntityTypeOrmDecorator";
 
+        [IntentManaged(Mode.Fully)]
         private readonly EntityTemplate _template;
+        [IntentManaged(Mode.Fully)]
         private readonly IApplication _application;
 
         [IntentManaged(Mode.Merge)]

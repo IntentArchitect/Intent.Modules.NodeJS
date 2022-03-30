@@ -3,7 +3,7 @@
   <name>Templates</name>
   <display>Templates</display>
   <isAbstract>false</isAbstract>
-  <order>4</order>
+  <order>5</order>
   <genericTypes />
   <isMapped>false</isMapped>
   <parentFolderId>96615273-0852-4d59-acfb-67f62095564b</parentFolderId>
@@ -125,12 +125,26 @@
       <stereotypes />
       <childElements />
     </childElement>
+    <childElement id="742a6b87-6374-4de0-a981-85693e6c2c06" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
+      <name>Intent.ModuleBuilder.Templates.TemplateExtensions</name>
+      <display>Intent.ModuleBuilder.Templates.TemplateExtensions</display>
+      <externalReference>Intent.ModuleBuilder</externalReference>
+      <isAbstract>false</isAbstract>
+      <order>8</order>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>b0d2955c-78d9-48d7-8e68-199ef7673464</parentFolderId>
+      <packageId>b3a947a8-f9b4-4d7a-9494-eea2b12b4e04</packageId>
+      <packageName>Intent.Modules.NodeJs</packageName>
+      <stereotypes />
+      <childElements />
+    </childElement>
     <childElement id="45b81d16-0e04-411e-bf7e-e30ecd5bc237" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
       <name>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate</name>
       <display>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate</display>
       <externalReference>Intent.ModuleBuilder.TypeScript</externalReference>
       <isAbstract>false</isAbstract>
-      <order>8</order>
+      <order>9</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>b0d2955c-78d9-48d7-8e68-199ef7673464</parentFolderId>
@@ -144,7 +158,7 @@
       <display>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial</display>
       <externalReference>Intent.ModuleBuilder.TypeScript</externalReference>
       <isAbstract>false</isAbstract>
-      <order>9</order>
+      <order>10</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>b0d2955c-78d9-48d7-8e68-199ef7673464</parentFolderId>
@@ -157,7 +171,7 @@
       <name>ModuleBuilder.TypeScript.Templates.TypescriptTemplate</name>
       <display>ModuleBuilder.TypeScript.Templates.TypescriptTemplate</display>
       <isAbstract>false</isAbstract>
-      <order>10</order>
+      <order>11</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>b0d2955c-78d9-48d7-8e68-199ef7673464</parentFolderId>
@@ -170,7 +184,7 @@
       <name>ModuleBuilder.Typescript.Templates.TypescriptTemplate.PreProcessT4</name>
       <display>ModuleBuilder.Typescript.Templates.TypescriptTemplate.PreProcessT4</display>
       <isAbstract>false</isAbstract>
-      <order>11</order>
+      <order>12</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>b0d2955c-78d9-48d7-8e68-199ef7673464</parentFolderId>
@@ -183,24 +197,12 @@
       <name>ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial</name>
       <display>ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial</display>
       <isAbstract>false</isAbstract>
-      <order>12</order>
+      <order>13</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>b0d2955c-78d9-48d7-8e68-199ef7673464</parentFolderId>
       <packageId>b3a947a8-f9b4-4d7a-9494-eea2b12b4e04</packageId>
       <packageName>Intent.Modules.NodeJs</packageName>
-      <stereotypes />
-      <childElements />
-    </childElement>
-    <childElement id="742a6b87-6374-4de0-a981-85693e6c2c06" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
-      <name>Intent.ModuleBuilder.Templates.TemplateExtensions</name>
-      <display>Intent.ModuleBuilder.Templates.TemplateExtensions</display>
-      <externalReference>Intent.ModuleBuilder</externalReference>
-      <isAbstract>false</isAbstract>
-      <order>0</order>
-      <genericTypes />
-      <isMapped>false</isMapped>
-      <parentFolderId>b0d2955c-78d9-48d7-8e68-199ef7673464</parentFolderId>
       <stereotypes />
       <childElements />
     </childElement>

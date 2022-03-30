@@ -3,6 +3,7 @@
   <ApplicationId>4be7ca06-8560-4ea2-8ff2-c3f1b75d4c65</ApplicationId>
   <FileLogs>
     <FileLog>
+      <CorrelationId>Intent.VisualStudio.Projects.VisualStudio2015Solution#af39730f-7c61-47d1-9fba-1a2933a6f0e5</CorrelationId>
       <ApplicationRelativeFilePath>../Intent.Modules.NodeJS.sln</ApplicationRelativeFilePath>
       <IsIgnored>false</IsIgnored>
     </FileLog>
@@ -15,7 +16,7 @@
     </FileLog>
     <FileLog>
       <ProjectId>cc9a4c9e-686e-403b-84d7-00b3f54236e8</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.IModeSpecFile</CorrelationId>
+      <CorrelationId>Intent.ModuleBuilder.IModSpecFile</CorrelationId>
       <ApplicationRelativeFilePath>Intent.NodeJS.Domain.imodspec</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Intent.NodeJS.Domain.imodspec</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>

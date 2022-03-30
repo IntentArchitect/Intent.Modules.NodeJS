@@ -3,6 +3,7 @@
   <ApplicationId>58bac639-e7b8-4ebd-b160-923b1581aa4e</ApplicationId>
   <FileLogs>
     <FileLog>
+      <CorrelationId>Intent.VisualStudio.Projects.VisualStudio2015Solution#c3d052fe-e0bf-49f7-8b24-209478602676</CorrelationId>
       <ApplicationRelativeFilePath>../Intent.Modules.NodeJS.sln</ApplicationRelativeFilePath>
       <IsIgnored>false</IsIgnored>
     </FileLog>

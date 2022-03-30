@@ -17,7 +17,9 @@ namespace Intent.Modules.NestJS.Core.Decorators
         [IntentManaged(Mode.Fully)]
         public const string DecoratorId = "Intent.NodeJS.NestJS.Core.PackageJsonFileNestJsDecorator";
 
+        [IntentManaged(Mode.Fully)]
         private readonly PackageJsonFileTemplate _template;
+        [IntentManaged(Mode.Fully)]
         private readonly IApplication _application;
 
         [IntentManaged(Mode.Merge)]

@@ -1,13 +1,13 @@
+using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Intent.Engine;
+using Intent.Metadata.Models;
+using Intent.Modules.Common;
 using Intent.Modules.Common.Templates;
 using Intent.RoslynWeaver.Attributes;
 using Intent.Templates;
-using Intent.Metadata.Models;
-using Intent.Modules.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 [assembly: DefaultIntentManaged(Mode.Merge)]
 [assembly: IntentTemplate("Intent.ModuleBuilder.ProjectItemTemplate.Partial", Version = "1.0")]

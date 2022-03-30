@@ -1,15 +1,15 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Intent.Engine;
-using Intent.Modules.NestJS.Core.Resources;
-using Intent.Registrations;
-using Intent.RoslynWeaver.Attributes;
 using Intent.Metadata.Models;
 using Intent.Modules.Common;
 using Intent.Modules.Common.Registrations;
+using Intent.Modules.NestJS.Core.Resources;
+using Intent.Registrations;
+using Intent.RoslynWeaver.Attributes;
 using Intent.Templates;
-using System;
 
 [assembly: DefaultIntentManaged(Mode.Merge)]
 [assembly: IntentTemplate("Intent.ModuleBuilder.TemplateRegistration.Custom", Version = "1.0")]

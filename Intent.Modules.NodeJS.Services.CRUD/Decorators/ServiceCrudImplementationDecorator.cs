@@ -22,8 +22,10 @@ namespace Intent.Modules.NodeJS.Services.CRUD.Decorators
         [IntentManaged(Mode.Fully)]
         public const string DecoratorId = "Intent.NodeJS.Services.CRUD.ServiceCrudImplementationDecorator";
 
+        [IntentManaged(Mode.Fully)]
         private readonly ServiceTemplate _template;
         private readonly IMetadataManager _metadataManager;
+        [IntentManaged(Mode.Fully)]
         private readonly IApplication _application;
         private readonly ICrudImplementationStrategy[] _strategies;
         private readonly ClassModel _targetEntity;

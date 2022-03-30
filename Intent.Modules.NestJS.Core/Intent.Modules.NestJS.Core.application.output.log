@@ -25,7 +25,7 @@
     </FileLog>
     <FileLog>
       <ProjectId>96615273-0852-4d59-acfb-67f62095564b</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.IModeSpecFile</CorrelationId>
+      <CorrelationId>Intent.ModuleBuilder.IModSpecFile</CorrelationId>
       <ApplicationRelativeFilePath>Intent.NodeJS.NestJS.Core.imodspec</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Intent.NodeJS.NestJS.Core.imodspec</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
