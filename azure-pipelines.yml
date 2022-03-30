@@ -1,0 +1,198 @@
+# We let the build continue on failure to try publish NuGet packages if possible because if one of
+# the projects depends on a NuGet package in the same solution, which hasn't yet been built and
+# published, then it can't do the restore, which means it can't build the package to publish it to
+# fix the build.
+trigger:
+  batch: true
+  branches:
+    include:
+    - '*'
+
+variables:
+  vstsFeed: '4bb4c1b9-5b56-4972-8bac-0ad3fa64204e/intentarchitect-feed'
+  targetsToBuild: '**/*.sln'
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+
+- checkout: 'self'
+  persistCredentials: true
+  fetchDepth: 1
+  submodules: 'recursive'
+
+# Because 2.1.x is now deprecated, `dotnet test` fails with the following error:
+# The framework 'Microsoft.NETCore.App', version '2.1.0' (x64) was not found.
+# So we install it and other frameworks we use.
+- task: UseDotNet@2
+  displayName: 'Use .NET Core sdk 2.1.x'
+  inputs:
+    version: 2.1.x
+    performMultiLevelLookup: true
+- task: UseDotNet@2
+  displayName: 'Use .NET Core sdk 3.x'
+  inputs:
+    version: 3.x
+    performMultiLevelLookup: true
+- task: UseDotNet@2
+  displayName: 'Use .NET Core sdk 5.x'
+  inputs:
+    version: 5.x
+    performMultiLevelLookup: true
+
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet restore'
+  env:
+    DOTNET_NOLOGO: '1'
+  inputs:
+    command: 'restore'
+    feedsToUse: 'select'
+    vstsFeed: $(vstsFeed)
+    projects: $(targetsToBuild)
+
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet build'
+  env:
+    DOTNET_NOLOGO: 1
+  inputs:
+    command: 'build'
+    projects: $(targetsToBuild)
+    arguments: '--no-restore'
+
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet test'
+  env:
+    DOTNET_NOLOGO: 1
+  inputs:
+    command: 'test'
+    projects: $(targetsToBuild)
+    arguments: '--no-build'
+
+# "dotnet pack" all projects for uploading to the internal NuGet repository. We want to dynamically
+# work out which projects to pack so that if new projects to pack are added to the repository, then
+# they will also be included automatically as opposed to us needing to update a list in this .yml
+# file.
+#
+# It seemed easiest to me to work out compilation order based on project dependencies using C# due
+# to my familiarity with it. We also already use .NET Core, so it's not needlessly adding a new
+# dependency anyway. The following guide was used to work out how to use C# from PowerShell:
+# https://blog.adamfurmanek.pl/2016/03/19/executing-c-code-using-powershell-script/
+#
+# Finally, we manually call "dotnet pack" in the correct order because DotNetCoreCLI@2 with
+# `command: 'pack'` unfortunately doesn't work for us because regardless of the order of the
+# .csproj files in `searchPatternPack`, it will always process the projects ordered by their full
+# path, but we need projects to be packed in the order of their dependencies.
+- task: PowerShell@2
+  displayName: 'dotnet pack'
+  condition: succeededOrFailed()
+  inputs:
+    targetType: 'inline'
+    pwsh: true
+    failOnStderr: true
+    ignoreLASTEXITCODE: true
+    script: |
+      $id = [System.Guid]::NewGuid().ToString("N")
+      $code = @"
+          using System;
+          using System.Collections.Generic;
+          using System.IO;
+          using System.Linq;
+          using System.Xml.Linq;
+          using System.Xml.XPath;
+          
+          namespace Intent$id
+          {
+              public class Program
+              {
+                  public static string[] Main()
+                  {
+                      var files = Directory.GetFiles(Directory.GetCurrentDirectory(), "*.csproj", SearchOption.AllDirectories);
+
+                      var projects = files
+                          .Select(GetDetail)
+                          .Where(x => x != null)
+                          .Select(x => x.Value)
+                          .ToArray();
+
+                      var stillToOrderForCompilation = projects
+                          .Select(item => (
+                              item.fullPath,
+                              item.packageId,
+                              referencedPackageNames: item.referencedPackageNames
+                                  .Where(packageName => projects.Any(project => project.packageId == packageName))
+                                  .ToArray())
+                          )
+                          .ToList();
+
+                      var orderedForCompilation = new List<(string fullPath, string packageId, IReadOnlyCollection<string> referencedPackageNames)>();
+                      var handledPackageIds = new HashSet<string>();
+
+                      while (stillToOrderForCompilation.Any())
+                      {
+                          var toUpdate = stillToOrderForCompilation
+                              .Where(item => item.referencedPackageNames.All(handledPackageIds.Contains))
+                              .OrderBy(x => x.packageId)
+                              .ToArray();
+
+                          if (!toUpdate.Any())
+                          {
+                              throw new Exception("");
+                          }
+
+                          foreach (var item in toUpdate)
+                          {
+                              Console.WriteLine($"Adding {item.packageId}");
+                              orderedForCompilation.Add(item);
+                              handledPackageIds.Add(item.packageId);
+                              stillToOrderForCompilation.Remove(item);
+                          }
+                      }
+
+                      return orderedForCompilation.Select(x => x.fullPath).ToArray();
+                  }
+
+                  private static (string fullPath, string packageId, IReadOnlyCollection<string> referencedPackageNames)? GetDetail(string path)
+                  {
+                      var xDocument = XDocument.Load(path);
+
+                      // If the project file doesn't contain a Version or PackageVersion element, then
+                      // we assume it's not intended to be packed.
+                      if (xDocument.XPathSelectElement(".//Version") == null &&
+                          xDocument.XPathSelectElement(".//PackageVersion") == null)
+                      {
+                          return null;
+                      }
+
+                      var packageId = xDocument.XPathSelectElement(".//PackageId")?.Value ??
+                                      Path.GetFileNameWithoutExtension(path);
+
+                      var dependencies = xDocument
+                          .XPathSelectElements(".//PackageReference")
+                          .Select(x => x.Attribute("Include")!.Value.ToLowerInvariant())
+                          .ToArray();
+
+                      return (path, packageId.ToLowerInvariant(), dependencies);
+                  }
+              }
+          }
+      "@
+      Add-Type -TypeDefinition $code -Language CSharp
+      iex "`$projects = [Intent$id.Program]::Main()"
+
+      foreach ($project in $projects) {
+          dotnet build $project --verbosity normal
+          dotnet pack $project --output $(Build.ArtifactStagingDirectory) --verbosity normal
+      }
+
+- task: NuGetCommand@2
+  displayName: 'nuget push'
+  condition: succeededOrFailed()
+  inputs:
+      command: 'push'
+      feedsToUse: 'select'
+      includeNuGetOrg: false
+      publishVstsFeed: $(vstsFeed)
+      allowPackageConflicts: true
+      packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
+      nuGetFeedType: 'internal'
