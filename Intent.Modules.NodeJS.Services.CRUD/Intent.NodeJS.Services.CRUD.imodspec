@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package>
   <id>Intent.NodeJS.Services.CRUD</id>
   <version>3.3.0</version>
@@ -18,11 +18,13 @@
     <dependency id="Intent.NodeJS.Domain" version="3.3.0" />
     <dependency id="Intent.NodeJS.NestJS.Controllers" version="3.3.0" />
     <dependency id="Intent.NodeJS.TypeORM" version="3.3.0" />
-  </dependencies>
+    <dependency id="Intent.Modelers.Services" version="3.3.0" />  </dependencies>
   <files>
     <file src="$outDir$/$id$.dll" />
     <file src="$outDir$/$id$.pdb" />
   </files>
-  <metadata />
+  <metadata>
+    <install target="Services" src="modelers/CRUD Enhancements.designer.settings" externalReference="e570b563-457b-47d4-ae9f-5c627d917a9a" />
+  </metadata>
   <moduleSettings />
 </package>

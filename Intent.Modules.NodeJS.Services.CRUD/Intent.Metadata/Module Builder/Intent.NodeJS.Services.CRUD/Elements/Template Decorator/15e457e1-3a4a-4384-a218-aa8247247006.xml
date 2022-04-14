@@ -3,7 +3,7 @@
   <name>ServiceCrudImplementationDecorator</name>
   <display>ServiceCrudImplementationDecorator: ServiceDecorator</display>
   <isAbstract>false</isAbstract>
-  <order>1</order>
+  <order>2</order>
   <genericTypes />
   <typeReference id="6d36730b-e88e-4118-b7b8-5ea045ba46d3">
     <typeId>756c3531-1c81-4b08-bb39-3d80b6d7fdf4</typeId>
@@ -21,5 +21,6 @@
   <packageId>b2ab446c-e1c0-4c8b-aa61-1326fdc26dd4</packageId>
   <packageName>Intent.NodeJS.Services.CRUD</packageName>
   <stereotypes />
+  <metadata />
   <childElements />
 </class>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="7ead0fef-fb99-464a-a190-d9da1b1b847b" type="Element Extension" typeId="e3c7b1ca-f080-45c1-b56f-8d44226c8e20">
+  <name>Service Extensions</name>
+  <display>Service Extensions: Service</display>
+  <isAbstract>false</isAbstract>
+  <order>0</order>
+  <genericTypes />
+  <typeReference id="126c003a-a13b-42e7-8d98-3fee3120a56c">
+    <typeId>b16578a5-27b1-4047-a8df-f0b783d706bd</typeId>
+    <isNavigable>true</isNavigable>
+    <isNullable>false</isNullable>
+    <isCollection>false</isCollection>
+    <isRequired>true</isRequired>
+    <typePackageName>Intent.Modelers.Services</typePackageName>
+    <typePackageId>4ba53041-59f9-4446-a207-6da4fbdf86fe</typePackageId>
+    <stereotypes />
+    <genericTypeParameters />
+  </typeReference>
+  <isMapped>false</isMapped>
+  <parentFolderId>e570b563-457b-47d4-ae9f-5c627d917a9a</parentFolderId>
+  <packageId>b2ab446c-e1c0-4c8b-aa61-1326fdc26dd4</packageId>
+  <packageName>Intent.NodeJS.Services.CRUD</packageName>
+  <stereotypes>
+    <stereotype stereotypeDefinitionId="159cbc8e-a910-40f7-8e45-3edadbb863c2" name="Type Reference Extension Settings">
+      <addedByDefault>true</addedByDefault>
+      <definitionPackageName>Intent.ModuleBuilder</definitionPackageName>
+      <definitionPackageId>9972b2a9-b749-4bba-b5c8-824bf694c6ef</definitionPackageId>
+      <properties>
+        <property name="35226a83-3965-4224-8aef-20c68a0c5180" display="Mode" value="Inherit" isActive="true" />
+        <property name="7d3859d4-084d-4ff0-8b31-850b4a8f8cd0" display="Display Name" isActive="false" />
+        <property name="17223dbd-8df0-4700-8b81-02274ca3ed7f" display="Hint" isActive="false" />
+        <property name="b2cef034-5706-45d2-8554-f4dc582a18ff" display="Target Types" isActive="false" />
+        <property name="93e4efa9-186d-4e88-ae0a-491bcd6e6f5e" display="Default Type Id" isActive="false" />
+        <property name="7a0c4185-1c08-4d3e-9185-14683d7a3bd0" display="Allow Collection" value="Inherit" isActive="false" />
+        <property name="e3dc90ec-4f5f-4f20-b271-e28a5094dc91" display="Allow Nullable" value="Inherit" isActive="false" />
+      </properties>
+    </stereotype>
+  </stereotypes>
+  <metadata />
+  <childElements>
+    <childElement id="b2a22499-6993-4124-9398-7387c57dc5cb" type="Context Menu" typeId="d45e383d-90ba-4b64-aca7-34ca100cea21">
+      <name>[context menu]</name>
+      <display>[context menu]</display>
+      <isAbstract>false</isAbstract>
+      <order>1</order>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>7ead0fef-fb99-464a-a190-d9da1b1b847b</parentFolderId>
+      <packageId>b2ab446c-e1c0-4c8b-aa61-1326fdc26dd4</packageId>
+      <packageName>Intent.NodeJS.Services.CRUD</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements>
+        <childElement id="2a73de98-cc87-4098-8dd7-d4f825515d8d" type="Run Script Option" typeId="345d46fb-c500-409a-88c7-26720572c9af">
+          <name>Create CRUD Operations</name>
+          <display>Create CRUD Operations: Script</display>
+          <isAbstract>false</isAbstract>
+          <order>0</order>
+          <genericTypes />
+          <typeReference id="268c32f0-d54a-4d6b-815c-f2160aed2c78">
+            <typeId>043eee26-1591-42ac-9f2c-fc911b070eb1</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.ModuleBuilder</typePackageName>
+            <typePackageId>9972b2a9-b749-4bba-b5c8-824bf694c6ef</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>false</isMapped>
+          <parentFolderId>b2a22499-6993-4124-9398-7387c57dc5cb</parentFolderId>
+          <packageId>b2ab446c-e1c0-4c8b-aa61-1326fdc26dd4</packageId>
+          <packageName>Intent.NodeJS.Services.CRUD</packageName>
+          <stereotypes>
+            <stereotype stereotypeDefinitionId="56bc0465-c1fe-4bca-9493-2a3ce88a4047" name="Script Settings">
+              <addedByDefault>true</addedByDefault>
+              <definitionPackageName>Intent.ModuleBuilder</definitionPackageName>
+              <definitionPackageId>9972b2a9-b749-4bba-b5c8-824bf694c6ef</definitionPackageId>
+              <properties>
+                <property name="73a4088f-626e-4d31-b0b2-113167f015b2" display="Script" value="let options = element.lookupTypesOf(&quot;Class&quot;);&#xD;&#xA;if (options.length == 0) {&#xD;&#xA;    dialogService.info(&quot;No Domain types could be found. Please ensure that you have a reference to the Domain package.&quot;);&#xD;&#xA;} else {&#xD;&#xA;    dialogService.lookupFromOptions(options).then(classId =&gt; {&#xD;&#xA;        let entity = element.lookup(classId);&#xD;&#xA;        if (entity != null) {&#xD;&#xA;            let entityName = entity.name;&#xD;&#xA;&#xD;&#xA;            // CREATE DTO:&#xD;&#xA;            let createDTO = createElement(&quot;DTO&quot;, `${entityName}CreateDTO`, context.getParent().id);&#xD;&#xA;            for(let attribute of entity.getChildren(&quot;Attribute&quot;)) {&#xD;&#xA;                let field = createElement(&quot;DTO-Field&quot;, attribute.name, createDTO.id);&#xD;&#xA;                field.typeReference.setType(attribute.typeReference.typeId);&#xD;&#xA;                field.typeReference.setIsNullable(attribute.typeReference.isNullable);&#xD;&#xA;                field.typeReference.setIsCollection(attribute.typeReference.isCollection);&#xD;&#xA;            }&#xD;&#xA;&#xD;&#xA;            // CREATE OPERATION:&#xD;&#xA;            let createOperation = createElement(&quot;Operation&quot;, &quot;Create&quot;, context.id);&#xD;&#xA;            let createOperationParam = createElement(&quot;Parameter&quot;, &quot;dto&quot;, createOperation.id);&#xD;&#xA;            createOperationParam.typeReference.setType(createDTO.id);&#xD;&#xA;            let stereotype = createOperation.getStereotype(&quot;Http Settings&quot;);&#xD;&#xA;            stereotype.getProperty(&quot;Verb&quot;).setValue(&quot;POST&quot;);&#xD;&#xA;            createOperation.collapse();&#xD;&#xA;&#xD;&#xA;            // FIND DTO:&#xD;&#xA;            let dto = createElement(&quot;DTO&quot;, `${entityName}DTO`, context.getParent().id);&#xD;&#xA;            dto.setMapping(entity.id);&#xD;&#xA;            let idField = createElement(&quot;DTO-Field&quot;, &quot;id&quot;, dto.id);&#xD;&#xA;            idField.typeReference.setType(&quot;6b649125-18ea-48fd-a6ba-0bfff0d8f488&quot;)&#xD;&#xA;&#xD;&#xA;            for(let attribute of entity.getChildren(&quot;Attribute&quot;)) {&#xD;&#xA;                let field = createElement(&quot;DTO-Field&quot;, attribute.name, dto.id);&#xD;&#xA;                field.typeReference.setType(attribute.typeReference.typeId);&#xD;&#xA;                field.typeReference.setIsNullable(attribute.typeReference.isNullable);&#xD;&#xA;                field.typeReference.setIsCollection(attribute.typeReference.isCollection);&#xD;&#xA;                field.setMapping(attribute.id);&#xD;&#xA;            }&#xD;&#xA;&#xD;&#xA;            // FIND-BY-ID&#xD;&#xA;            let findByIdOperation = createElement(&quot;Operation&quot;, &quot;FindById&quot;, context.id);&#xD;&#xA;            findByIdOperation.typeReference.setType(dto.id);&#xD;&#xA;            let findByIdOperationParam = createElement(&quot;Parameter&quot;, &quot;id&quot;, findByIdOperation.id);&#xD;&#xA;            findByIdOperationParam.typeReference.setType(&quot;6b649125-18ea-48fd-a6ba-0bfff0d8f488&quot;);&#xD;&#xA;            stereotype = findByIdOperation.getStereotype(&quot;Http Settings&quot;);&#xD;&#xA;            stereotype.getProperty(&quot;Verb&quot;).setValue(&quot;GET&quot;);&#xD;&#xA;            stereotype.getProperty(&quot;Route&quot;).setValue(&quot;{id}&quot;);&#xD;&#xA;            findByIdOperation.collapse();&#xD;&#xA;&#xD;&#xA;            // FIND-ALL:&#xD;&#xA;            let findByAllOperation = createElement(&quot;Operation&quot;, &quot;FindAll&quot;, context.id);&#xD;&#xA;            findByAllOperation.typeReference.setType(dto.id);&#xD;&#xA;            findByAllOperation.typeReference.setIsCollection(true);&#xD;&#xA;            stereotype = findByAllOperation.getStereotype(&quot;Http Settings&quot;);&#xD;&#xA;            stereotype.getProperty(&quot;Verb&quot;).setValue(&quot;GET&quot;);&#xD;&#xA;            findByAllOperation.collapse();&#xD;&#xA;&#xD;&#xA;            // UPDATE DTO:&#xD;&#xA;            let updateDTO = createElement(&quot;DTO&quot;, `${entityName}UpdateDTO`, context.getParent().id);&#xD;&#xA;            for(let attribute of entity.getChildren(&quot;Attribute&quot;)) {&#xD;&#xA;                let field = createElement(&quot;DTO-Field&quot;, attribute.name, updateDTO.id);&#xD;&#xA;                field.typeReference.setType(attribute.typeReference.typeId);&#xD;&#xA;                field.typeReference.setIsNullable(attribute.typeReference.isNullable);&#xD;&#xA;                field.typeReference.setIsCollection(attribute.typeReference.isCollection);&#xD;&#xA;            }&#xD;&#xA;            &#xD;&#xA;            // UDPATE OPERATION:&#xD;&#xA;            let updateOperation = createElement(&quot;Operation&quot;, &quot;Update&quot;, context.id);&#xD;&#xA;            let updateOperationIdParam = createElement(&quot;Parameter&quot;, &quot;id&quot;, updateOperation.id);&#xD;&#xA;            updateOperationIdParam.typeReference.setType(&quot;6b649125-18ea-48fd-a6ba-0bfff0d8f488&quot;);&#xD;&#xA;            let updateOperationDtoParam = createElement(&quot;Parameter&quot;, &quot;dto&quot;, updateOperation.id);&#xD;&#xA;            updateOperationDtoParam.typeReference.setType(updateDTO.id);&#xD;&#xA;            stereotype = updateOperation.getStereotype(&quot;Http Settings&quot;);&#xD;&#xA;            stereotype.getProperty(&quot;Verb&quot;).setValue(&quot;PUT&quot;);&#xD;&#xA;            stereotype.getProperty(&quot;Route&quot;).setValue(&quot;{id}&quot;);&#xD;&#xA;            updateOperation.collapse();&#xD;&#xA;&#xD;&#xA;            // DELETE:&#xD;&#xA;            let deleteOperation = createElement(&quot;Operation&quot;, &quot;Delete&quot;, context.id);&#xD;&#xA;            let deleteOperationIdParam = createElement(&quot;Parameter&quot;, &quot;id&quot;, deleteOperation.id);&#xD;&#xA;            deleteOperationIdParam.typeReference.setType(&quot;6b649125-18ea-48fd-a6ba-0bfff0d8f488&quot;);&#xD;&#xA;            stereotype = deleteOperation.getStereotype(&quot;Http Settings&quot;);&#xD;&#xA;            stereotype.getProperty(&quot;Verb&quot;).setValue(&quot;DELETE&quot;);&#xD;&#xA;            stereotype.getProperty(&quot;Route&quot;).setValue(&quot;{id}&quot;);&#xD;&#xA;            deleteOperation.collapse();&#xD;&#xA;        }&#xD;&#xA;        else {&#xD;&#xA;            dialogService.error(`Could not find an Entity with the name '${entityName}'. The name of your service must correlate to an Entity in the domain.`);&#xD;&#xA;        }&#xD;&#xA;    });&#xD;&#xA;}" isActive="true" />
+              </properties>
+            </stereotype>
+            <stereotype stereotypeDefinitionId="cbe77364-d1d0-400b-a8c4-646a4c869612" name="Option Settings">
+              <comment />
+              <addedByDefault>true</addedByDefault>
+              <definitionPackageName>Intent.ModuleBuilder</definitionPackageName>
+              <definitionPackageId>9972b2a9-b749-4bba-b5c8-824bf694c6ef</definitionPackageId>
+              <properties>
+                <property name="b2c3a117-23d3-47e5-8b83-5b902c55a226" display="Icon" isActive="true" />
+                <property name="0abff08a-3986-40b1-a28f-4cc03c4fc1ec" display="Shortcut" isActive="true" />
+                <property name="79f6973f-5e3a-4618-9d4c-d7cc604bffe0" display="Shortcut (macOS)" isActive="true" />
+                <property name="e034a0ca-0101-4594-8384-43048b714578" display="Type Order" isActive="true" />
+              </properties>
+            </stereotype>
+          </stereotypes>
+          <metadata />
+          <childElements />
+        </childElement>
+      </childElements>
+    </childElement>
+  </childElements>
+</class>
