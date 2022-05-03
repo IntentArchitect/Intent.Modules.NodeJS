@@ -10,6 +10,7 @@
   <packageId>4c7176c7-0764-4a59-9583-5465261386ec</packageId>
   <packageName>Intent.ApplicationTemplate.NestJS.Web</packageName>
   <stereotypes />
+  <metadata />
   <childElements>
     <childElement id="af8c45be-ecd2-47bf-8b07-6cb70e2d577e" type="Component" typeId="47064ef1-2295-4287-8301-c446910a1b1e">
       <name>TypeORM Entities</name>
@@ -33,6 +34,7 @@
           </properties>
         </stereotype>
       </stereotypes>
+      <metadata />
       <childElements>
         <childElement id="ce5afc5b-3c33-4348-8645-0d23d5aa98d7" type="Module" typeId="ef75f8f0-520c-4ab8-814f-5e75f4877dd7">
           <name>Intent.NodeJS.TypeORM</name>
@@ -54,6 +56,7 @@
               </properties>
             </stereotype>
           </stereotypes>
+          <metadata />
           <childElements />
         </childElement>
       </childElements>

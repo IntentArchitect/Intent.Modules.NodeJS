@@ -10,6 +10,7 @@
   <packageId>4c7176c7-0764-4a59-9583-5465261386ec</packageId>
   <packageName>Intent.ApplicationTemplate.NestJS.Web</packageName>
   <stereotypes />
+  <metadata />
   <childElements>
     <childElement id="ae247be2-41a0-4267-b51b-62a49ae95852" type="Component" typeId="47064ef1-2295-4287-8301-c446910a1b1e">
       <name>Domain Entities</name>
@@ -33,6 +34,7 @@
           </properties>
         </stereotype>
       </stereotypes>
+      <metadata />
       <childElements>
         <childElement id="770350ca-5ca8-4103-aa8d-a0f2a1e0af43" type="Module" typeId="ef75f8f0-520c-4ab8-814f-5e75f4877dd7">
           <name>Intent.NodeJS.Domain</name>
@@ -54,6 +56,7 @@
               </properties>
             </stereotype>
           </stereotypes>
+          <metadata />
           <childElements />
         </childElement>
       </childElements>

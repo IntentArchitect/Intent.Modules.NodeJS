@@ -10,6 +10,7 @@
   <packageId>4c7176c7-0764-4a59-9583-5465261386ec</packageId>
   <packageName>Intent.ApplicationTemplate.NestJS.Web</packageName>
   <stereotypes />
+  <metadata />
   <childElements>
     <childElement id="e4d92cb3-6212-406c-b01f-f761852c1fc8" type="Component" typeId="47064ef1-2295-4287-8301-c446910a1b1e">
       <name>Folder Structures</name>
@@ -33,6 +34,7 @@
           </properties>
         </stereotype>
       </stereotypes>
+      <metadata />
       <childElements>
         <childElement id="ad986d5f-da90-4d00-b45c-c67d94f86420" type="Module" typeId="ef75f8f0-520c-4ab8-814f-5e75f4877dd7">
           <name>Intent.OutputTargets.Folders</name>
@@ -54,6 +56,7 @@
               </properties>
             </stereotype>
           </stereotypes>
+          <metadata />
           <childElements />
         </childElement>
       </childElements>

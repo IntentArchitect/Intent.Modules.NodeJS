@@ -10,6 +10,7 @@
   <packageId>4c7176c7-0764-4a59-9583-5465261386ec</packageId>
   <packageName>Intent.ApplicationTemplate.NestJS.Web</packageName>
   <stereotypes />
+  <metadata />
   <childElements>
     <childElement id="bbf636a3-00ea-4d4a-b57c-5e9735eb30c0" type="Component" typeId="47064ef1-2295-4287-8301-c446910a1b1e">
       <name>CRUD Implementations</name>
@@ -33,6 +34,7 @@
           </properties>
         </stereotype>
       </stereotypes>
+      <metadata />
       <childElements>
         <childElement id="574b163b-6fb1-4383-9154-b98d369b83fa" type="Module" typeId="ef75f8f0-520c-4ab8-814f-5e75f4877dd7">
           <name>Intent.NodeJS.Services.CRUD</name>
@@ -54,6 +56,7 @@
               </properties>
             </stereotype>
           </stereotypes>
+          <metadata />
           <childElements />
         </childElement>
       </childElements>

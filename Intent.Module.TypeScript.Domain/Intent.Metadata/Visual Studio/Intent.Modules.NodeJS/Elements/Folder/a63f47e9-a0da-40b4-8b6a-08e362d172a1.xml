@@ -19,6 +19,7 @@
       </properties>
     </stereotype>
   </stereotypes>
+  <metadata />
   <childElements>
     <childElement id="9574b227-a793-464b-af5f-8e7f711e30d2" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
       <name>Intent.ModuleBuilder.DecoratorRegistration.Template</name>
@@ -32,6 +33,7 @@
       <packageId>af39730f-7c61-47d1-9fba-1a2933a6f0e5</packageId>
       <packageName>Intent.Modules.NodeJS</packageName>
       <stereotypes />
+      <metadata />
       <childElements />
     </childElement>
     <childElement id="76f14f98-f1f4-44b8-967c-c6da7fc9fd35" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
@@ -46,6 +48,7 @@
       <packageId>af39730f-7c61-47d1-9fba-1a2933a6f0e5</packageId>
       <packageName>Intent.Modules.NodeJS</packageName>
       <stereotypes />
+      <metadata />
       <childElements />
     </childElement>
     <childElement id="3c637cf0-dd91-4fa5-973b-b79b3b9818e0" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
@@ -60,6 +63,7 @@
       <packageId>af39730f-7c61-47d1-9fba-1a2933a6f0e5</packageId>
       <packageName>Intent.Modules.NodeJS</packageName>
       <stereotypes />
+      <metadata />
       <childElements />
     </childElement>
     <childElement id="49177af9-83c7-4867-8aad-370c155a524d" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
@@ -74,6 +78,7 @@
       <packageId>af39730f-7c61-47d1-9fba-1a2933a6f0e5</packageId>
       <packageName>Intent.Modules.NodeJS</packageName>
       <stereotypes />
+      <metadata />
       <childElements />
     </childElement>
   </childElements>

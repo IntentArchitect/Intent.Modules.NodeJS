@@ -19,6 +19,7 @@
       </properties>
     </stereotype>
   </stereotypes>
+  <metadata />
   <childElements>
     <childElement id="8ac9a7a2-71f5-4fb3-968c-714118028f9b" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
       <name>Intent.ModuleBuilder.Templates.Api.ApiAssociationModel</name>
@@ -32,6 +33,7 @@
       <packageId>af39730f-7c61-47d1-9fba-1a2933a6f0e5</packageId>
       <packageName>Intent.Modules.NodeJS</packageName>
       <stereotypes />
+      <metadata />
       <childElements />
     </childElement>
     <childElement id="821c651c-d06d-478e-b29c-ce368663e085" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
@@ -46,6 +48,7 @@
       <packageId>af39730f-7c61-47d1-9fba-1a2933a6f0e5</packageId>
       <packageName>Intent.Modules.NodeJS</packageName>
       <stereotypes />
+      <metadata />
       <childElements />
     </childElement>
     <childElement id="8a4706ca-ada0-4812-9205-e483a3277284" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
@@ -60,6 +63,7 @@
       <packageId>af39730f-7c61-47d1-9fba-1a2933a6f0e5</packageId>
       <packageName>Intent.Modules.NodeJS</packageName>
       <stereotypes />
+      <metadata />
       <childElements />
     </childElement>
     <childElement id="1cc1673a-802c-4853-be4f-6a5922c91434" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
@@ -74,6 +78,7 @@
       <packageId>af39730f-7c61-47d1-9fba-1a2933a6f0e5</packageId>
       <packageName>Intent.Modules.NodeJS</packageName>
       <stereotypes />
+      <metadata />
       <childElements />
     </childElement>
     <childElement id="4ec955c3-7003-4239-a215-4aa49e4c041e" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
@@ -88,6 +93,7 @@
       <packageId>af39730f-7c61-47d1-9fba-1a2933a6f0e5</packageId>
       <packageName>Intent.Modules.NodeJS</packageName>
       <stereotypes />
+      <metadata />
       <childElements />
     </childElement>
     <childElement id="e4b90e19-76a5-4554-b604-89d0842cfa0b" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
@@ -102,6 +108,7 @@
       <packageId>af39730f-7c61-47d1-9fba-1a2933a6f0e5</packageId>
       <packageName>Intent.Modules.NodeJS</packageName>
       <stereotypes />
+      <metadata />
       <childElements />
     </childElement>
     <childElement id="05343245-a91a-40ce-b384-8dd2023b780b" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
@@ -116,6 +123,7 @@
       <packageId>af39730f-7c61-47d1-9fba-1a2933a6f0e5</packageId>
       <packageName>Intent.Modules.NodeJS</packageName>
       <stereotypes />
+      <metadata />
       <childElements />
     </childElement>
     <childElement id="9815f1fd-0e9b-4181-b16a-4fe2ce68c1e0" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
@@ -130,6 +138,7 @@
       <packageId>af39730f-7c61-47d1-9fba-1a2933a6f0e5</packageId>
       <packageName>Intent.Modules.NodeJS</packageName>
       <stereotypes />
+      <metadata />
       <childElements />
     </childElement>
   </childElements>
