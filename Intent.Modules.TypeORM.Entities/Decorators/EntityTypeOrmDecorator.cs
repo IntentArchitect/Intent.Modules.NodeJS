@@ -78,14 +78,19 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
                 };
             }
 
-            var hasNonDefaultSettings = false;
             var settings = new List<string>();
             if (attribute.TypeReference.IsNullable)
             {
-                hasNonDefaultSettings = true;
                 settings.Add("isNullable: true");
             }
-            return new[] { $@"@{_template.ImportType("Column", "typeorm")}({(hasNonDefaultSettings ? $"{{ {string.Join(", ", settings)} }}" : "")})" };
+
+            var maxLength = attribute.GetTextConstraints()?.MaxLength();
+            if (maxLength.HasValue)
+            {
+                settings.Add($"length: {maxLength.Value:D}");
+            }
+
+            return new[] { $@"@{_template.ImportType("Column", "typeorm")}({(settings.Count > 0 ? $"{{ {string.Join(", ", settings)} }}" : "")})" };
         }
 
         public override IEnumerable<string> GetFieldDecorators(AssociationEndModel thatEnd)
