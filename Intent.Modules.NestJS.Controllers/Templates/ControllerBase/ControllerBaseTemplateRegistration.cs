@@ -11,7 +11,7 @@ using Intent.Templates;
 [assembly: DefaultIntentManaged(Mode.Merge)]
 [assembly: IntentTemplate("Intent.ModuleBuilder.TemplateRegistration.SingleFileNoModel", Version = "1.0")]
 
-namespace Intent.Modules.NestJS.Controllers.Templates.ControllerBaseTemplate
+namespace Intent.Modules.NestJS.Controllers.Templates.ControllerBase
 {
     [IntentManaged(Mode.Merge, Body = Mode.Merge, Signature = Mode.Fully)]
     public class ControllerBaseTemplateRegistration : SingleFileTemplateRegistration

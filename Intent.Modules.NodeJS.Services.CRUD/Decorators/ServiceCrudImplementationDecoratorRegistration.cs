@@ -1,7 +1,7 @@
 using System.ComponentModel;
 using Intent.Engine;
 using Intent.Modules.Common.Registrations;
-using Intent.Modules.NestJS.Controllers.Templates.ServiceTemplate;
+using Intent.Modules.NestJS.Controllers.Templates.Service;
 using Intent.RoslynWeaver.Attributes;
 
 [assembly: DefaultIntentManaged(Mode.Merge)]

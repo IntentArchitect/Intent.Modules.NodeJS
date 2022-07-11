@@ -12,16 +12,16 @@ using Intent.Templates;
 [assembly: DefaultIntentManaged(Mode.Merge)]
 [assembly: IntentTemplate("Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial", Version = "1.0")]
 
-namespace Intent.Modules.NestJS.Controllers.Templates.ServiceTemplate
+namespace Intent.Modules.NestJS.Controllers.Templates.Service
 {
     [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
-    partial class ServiceTemplate : TypeScriptTemplateBase<Intent.Modelers.Services.Api.ServiceModel, ServiceDecorator>
+    partial class ServiceTemplate : TypeScriptTemplateBase<ServiceModel, ServiceDecorator>
     {
         [IntentManaged(Mode.Fully)]
-        public const string TemplateId = "Intent.NodeJS.NestJS.Controllers.ServiceTemplate";
+        public const string TemplateId = "Intent.NodeJS.NestJS.Controllers.Service";
 
         [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
-        public ServiceTemplate(IOutputTarget outputTarget, Intent.Modelers.Services.Api.ServiceModel model) : base(TemplateId, outputTarget, model)
+        public ServiceTemplate(IOutputTarget outputTarget, ServiceModel model) : base(TemplateId, outputTarget, model)
         {
             AddTypeSource(DtoModelTemplate.TemplateId);
         }

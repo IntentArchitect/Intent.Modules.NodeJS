@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package>
   <id>Intent.NodeJS.Domain</id>
-  <version>3.3.0</version>
+  <version>3.3.1</version>
   <supportedClientVersions>[3.3.0-pre.0, 4.0.0)</supportedClientVersions>
   <summary>A custom module for Intent.Modules.NodeJS.</summary>
   <description>A custom module for Intent.Modules.NodeJS.</description>
@@ -16,10 +16,10 @@
   <decorators></decorators>
   <factoryExtensions></factoryExtensions>
   <dependencies>
-    <dependency id="Intent.Common" version="3.3.1" />
-    <dependency id="Intent.Common.Types" version="3.3.0" />
-    <dependency id="Intent.Common.TypeScript" version="3.3.0" />
-    <dependency id="Intent.Modelers.Domain" version="3.3.0" />
+    <dependency id="Intent.Common" version="3.3.6" />
+    <dependency id="Intent.Common.Types" version="3.3.1" />
+    <dependency id="Intent.Common.TypeScript" version="3.3.3" />
+    <dependency id="Intent.Modelers.Domain" version="3.3.4" />
     <dependency id="Intent.TypeScript.Weaving.Decorators" version="3.3.0" />
   </dependencies>
   <files>
@@ -30,4 +30,5 @@
     <install target="Module Builder" src="Intent.Metadata/Module Builder/Intent.NodeJS.Domain/Intent.NodeJS.Domain.pkg.config" externalReference="6dfd9d00-52a1-4b85-ac68-f3a7179aa21a" />
   </metadata>
   <moduleSettings />
+  <moduleSettingsExtensions />
 </package>

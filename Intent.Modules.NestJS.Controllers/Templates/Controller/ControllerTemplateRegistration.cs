@@ -12,23 +12,23 @@ using Intent.Templates;
 [assembly: DefaultIntentManaged(Mode.Merge)]
 [assembly: IntentTemplate("Intent.ModuleBuilder.TemplateRegistration.FilePerModel", Version = "1.0")]
 
-namespace Intent.Modules.NestJS.Controllers.Templates.ServiceTemplate
+namespace Intent.Modules.NestJS.Controllers.Templates.Controller
 {
     [IntentManaged(Mode.Merge, Body = Mode.Merge, Signature = Mode.Fully)]
-    public class ServiceTemplateRegistration : FilePerModelTemplateRegistration<ServiceModel>
+    public class ControllerTemplateRegistration : FilePerModelTemplateRegistration<ServiceModel>
     {
         private readonly IMetadataManager _metadataManager;
 
-        public ServiceTemplateRegistration(IMetadataManager metadataManager)
+        public ControllerTemplateRegistration(IMetadataManager metadataManager)
         {
             _metadataManager = metadataManager;
         }
 
-        public override string TemplateId => ServiceTemplate.TemplateId;
+        public override string TemplateId => ControllerTemplate.TemplateId;
 
         public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget, ServiceModel model)
         {
-            return new ServiceTemplate(outputTarget, model);
+            return new ControllerTemplate(outputTarget, model);
         }
 
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]

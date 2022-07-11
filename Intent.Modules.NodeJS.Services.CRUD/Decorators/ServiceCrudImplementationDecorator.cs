@@ -6,7 +6,7 @@ using Intent.Engine;
 using Intent.Modelers.Domain.Api;
 using Intent.Modelers.Services.Api;
 using Intent.Modules.Common.Templates;
-using Intent.Modules.NestJS.Controllers.Templates.ServiceTemplate;
+using Intent.Modules.NestJS.Controllers.Templates.Service;
 using Intent.Modules.NodeJS.Services.CRUD.CrudStrategies;
 using Intent.RoslynWeaver.Attributes;
 using OperationModel = Intent.Modelers.Services.Api.OperationModel;

@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package>
   <id>Intent.Npm</id>
-  <version>3.3.0</version>
+  <version>3.3.1</version>
   <supportedClientVersions>[3.3.0-pre.0, 4.0.0)</supportedClientVersions>
   <summary>A custom module for Intent.Modules.NodeJS.</summary>
   <description>A custom module for Intent.Modules.NodeJS.</description>
@@ -10,13 +10,14 @@
   <templates>
     <template id="Intent.Npm.PackageJsonFile" externalReference="e7189d54-872e-4ff4-b449-323386caf588">
       <role>Root</role>
+      <location></location>
     </template>
   </templates>
   <decorators></decorators>
   <factoryExtensions></factoryExtensions>
   <dependencies>
-    <dependency id="Intent.Common" version="3.3.1" />
-    <dependency id="Intent.Common.Types" version="3.3.0" />
+    <dependency id="Intent.Common" version="3.3.6" />
+    <dependency id="Intent.Common.Types" version="3.3.1" />
   </dependencies>
   <files>
     <file src="$outDir$/$id$.dll" />
@@ -26,4 +27,5 @@
     <install target="Module Builder" src="Intent.Metadata/Module Builder/Intent.Modules.Npm/Intent.Modules.Npm.pkg.config" externalReference="3a099241-6946-4914-b1b6-e25d168a36d1" />
   </metadata>
   <moduleSettings />
+  <moduleSettingsExtensions />
 </package>

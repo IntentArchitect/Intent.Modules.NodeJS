@@ -4,7 +4,7 @@ using System.Linq;
 using Intent.Engine;
 using Intent.Modelers.Domain.Api;
 using Intent.Modules.Common.Templates;
-using Intent.Modules.NestJS.Controllers.Templates.ServiceTemplate;
+using Intent.Modules.NestJS.Controllers.Templates.Service;
 using Intent.Modules.NodeJS.Services.CRUD.Decorators;
 using Intent.Modules.TypeORM.Entities.Templates.RepositoryTemplate;
 using OperationModel = Intent.Modelers.Services.Api.OperationModel;

@@ -16,18 +16,13 @@ using Intent.Utils;
 [assembly: DefaultIntentManaged(Mode.Merge)]
 [assembly: IntentTemplate("Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial", Version = "1.0")]
 
-namespace Intent.Modules.NestJS.Controllers.Templates.ControllerTemplate
+namespace Intent.Modules.NestJS.Controllers.Templates.Controller
 {
-    public interface IControllerTemplateDecorator
-    {
-
-    }
-
     [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
     partial class ControllerTemplate : TypeScriptTemplateBase<Intent.Modelers.Services.Api.ServiceModel>
     {
         [IntentManaged(Mode.Fully)]
-        public const string TemplateId = "Intent.NodeJS.NestJS.Controllers.ControllerTemplate";
+        public const string TemplateId = "Intent.NodeJS.NestJS.Controllers.Controller";
 
         [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
         public ControllerTemplate(IOutputTarget outputTarget, Intent.Modelers.Services.Api.ServiceModel model) : base(TemplateId, outputTarget, model)
@@ -35,7 +30,7 @@ namespace Intent.Modules.NestJS.Controllers.Templates.ControllerTemplate
             AddTypeSource(DtoModelTemplate.TemplateId);
         }
 
-        public string ServiceClassName => GetTypeName(ServiceTemplate.ServiceTemplate.TemplateId, Model);
+        public string ServiceClassName => GetTypeName(Service.ServiceTemplate.TemplateId, Model);
 
         public string GetReturnType(OperationModel operation)
         {
