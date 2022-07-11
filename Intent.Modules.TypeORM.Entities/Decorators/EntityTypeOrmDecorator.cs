@@ -81,7 +81,7 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
             var settings = new List<string>();
             if (attribute.TypeReference.IsNullable)
             {
-                settings.Add("isNullable: true");
+                settings.Add("nullable: true");
             }
 
             var maxLength = attribute.GetTextConstraints()?.MaxLength();

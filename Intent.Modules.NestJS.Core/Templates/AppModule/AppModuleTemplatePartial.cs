@@ -28,6 +28,14 @@ namespace Intent.Modules.NestJS.Core.Templates.AppModule
             ExecutionContext.EventDispatcher.Subscribe<NestJsModuleImportRequest>(HandleEvent);
             ExecutionContext.EventDispatcher.Subscribe<NestJsControllerCreatedEvent>(HandleEvent);
             ExecutionContext.EventDispatcher.Subscribe<NestJsProviderCreatedEvent>(HandleEvent);
+            ExecutionContext.EventDispatcher.Subscribe<NestJsProviderRequest>(HandleEvent);
+        }
+
+        private void HandleEvent(NestJsProviderRequest @event)
+        {
+            AddImport(@event.Type, @event.ImportFromLocation);
+
+            _providers.Add(@event.Type);
         }
 
         private void HandleEvent(NestJsModuleImportRequest @event)

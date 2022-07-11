@@ -11,7 +11,7 @@ import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 async function bootstrap() {
-  const app = await NestFactory.create(<#= AppModuleClass #>);
+  const app = await NestFactory.create(<#= AppModuleClass #><#= GetApplicationOptions() #>);
   
   const config = new DocumentBuilder()
     .setTitle('<#= OutputTarget.Application.Name #>')
