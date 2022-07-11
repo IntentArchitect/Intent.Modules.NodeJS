@@ -16,11 +16,11 @@ namespace Intent.Modules.NestJS.Core.Templates.Main
     [IntentManaged(Mode.Merge, Body = Mode.Merge, Signature = Mode.Fully)]
     public class MainTemplateRegistration : SingleFileTemplateRegistration
     {
-        public override string TemplateId => Main.MainTemplate.TemplateId;
+        public override string TemplateId => MainTemplate.TemplateId;
 
         public override ITemplate CreateTemplateInstance(IOutputTarget project)
         {
-            return new Main.MainTemplate(project, null);
+            return new MainTemplate(project, null);
         }
     }
 }

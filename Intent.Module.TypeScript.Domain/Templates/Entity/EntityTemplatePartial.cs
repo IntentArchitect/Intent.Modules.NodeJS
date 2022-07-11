@@ -41,7 +41,7 @@ namespace Intent.Module.TypeScript.Domain.Templates.Entity
 {decorators}";
         }
 
-        private object GetAttributeDecorators(AttributeModel attribute)
+        private string GetAttributeDecorators(AttributeModel attribute)
         {
             var decorators = GetDecoratorsOutput(x => string.Join(@"
   ", x.GetFieldDecorators(attribute)));
