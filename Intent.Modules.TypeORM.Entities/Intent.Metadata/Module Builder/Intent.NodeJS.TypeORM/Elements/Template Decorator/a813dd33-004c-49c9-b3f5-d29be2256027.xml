@@ -3,7 +3,7 @@
   <name>EntityTypeOrmDecorator</name>
   <display>EntityTypeOrmDecorator: EntityDecorator</display>
   <isAbstract>false</isAbstract>
-  <order>3</order>
+  <order>5</order>
   <genericTypes />
   <typeReference id="bafbe21c-a35a-41fd-aeb3-99bc5efcbee3">
     <typeId>57ed37be-cc15-4775-9682-7e053ddaa927</typeId>

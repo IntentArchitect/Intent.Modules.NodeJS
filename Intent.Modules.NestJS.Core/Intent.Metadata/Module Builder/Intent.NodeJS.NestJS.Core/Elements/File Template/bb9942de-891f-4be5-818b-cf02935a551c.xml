@@ -3,7 +3,7 @@
   <name>ZipFileContent</name>
   <display>ZipFileContent: Custom</display>
   <isAbstract>false</isAbstract>
-  <order>1</order>
+  <order>2</order>
   <genericTypes />
   <typeReference id="69e0b99f-60fa-4022-a3f9-48fa470e264e">
     <typeId>d2931361-7cf0-4c79-9847-621c60886ef9</typeId>

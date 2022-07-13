@@ -7,6 +7,7 @@ using Intent.Modelers.Domain.Api;
 using Intent.Module.TypeScript.Domain.Templates.Entity;
 using Intent.Modules.Common.Templates;
 using Intent.Modules.Common.TypeScript.Templates;
+using Intent.Modules.TypeORM.Entities.DatabaseProviders;
 using Intent.RoslynWeaver.Attributes;
 
 [assembly: DefaultIntentManaged(Mode.Merge)]
@@ -25,12 +26,15 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
         [IntentManaged(Mode.Fully)]
         private readonly IApplication _application;
 
+        private readonly IOrmDatabaseProviderStrategy _ormDatabaseProviderStrategy;
+
         [IntentManaged(Mode.Merge)]
         public EntityTypeOrmDecorator(EntityTemplate template, IApplication application)
         {
             _template = template;
             _application = application;
             _template.AddDependency(new NpmPackageDependency("typeorm", "^0.2.32"));
+            _ormDatabaseProviderStrategy = IOrmDatabaseProviderStrategy.Resolve(_template.OutputTarget);
         }
 
         public override string GetBeforeFields()
@@ -48,17 +52,27 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
 
         public override string GetAfterFields()
         {
+            var nullableTrueOption = new[] { "nullable: true" };
+
+            var (stringColumnType, stringColumnOptions) = _ormDatabaseProviderStrategy.TryGetColumnType("string", out var stringColumnTypeOutput)
+                ? ($"'{stringColumnTypeOutput.Type}', ", $"{string.Join(", ", nullableTrueOption.Concat(stringColumnTypeOutput.AdditionalOptions))}")
+                : (string.Empty, string.Join(", ", nullableTrueOption));
+
+            var (dateColumnType, dateColumnOptions) = _ormDatabaseProviderStrategy.TryGetColumnType("date", out var dateColumnTypeOutput)
+                ? ($"'{dateColumnTypeOutput.Type}', ", $"{string.Join(", ", nullableTrueOption.Concat(dateColumnTypeOutput.AdditionalOptions))}")
+                : (string.Empty, string.Join(", ", nullableTrueOption));
+
             return $@"
-  @{_template.ImportType("Column", "typeorm")}({{ nullable: true }})
+  @{_template.ImportType("Column", "typeorm")}({stringColumnType}{{ {stringColumnOptions} }})
   createdBy?: string;
 
-  @{_template.ImportType("Column", "typeorm")}({{ nullable: true }})
+  @{_template.ImportType("Column", "typeorm")}({dateColumnType}{{ {dateColumnOptions} }})
   createdDate?: Date;
 
-  @{_template.ImportType("Column", "typeorm")}({{ nullable: true }})
+  @{_template.ImportType("Column", "typeorm")}({stringColumnType}{{ {stringColumnOptions} }})
   lastModifiedBy?: string;
 
-  @{_template.ImportType("Column", "typeorm")}({{ nullable: true }})
+  @{_template.ImportType("Column", "typeorm")}({dateColumnType}{{ {dateColumnOptions} }})
   lastModifiedDate?: Date;";
         }
 
@@ -78,7 +92,9 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
                 };
             }
 
+            var parameters = new List<string>();
             var settings = new List<string>();
+
             if (attribute.TypeReference.IsNullable)
             {
                 settings.Add("nullable: true");
@@ -90,7 +106,19 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
                 settings.Add($"length: {maxLength.Value:D}");
             }
 
-            return new[] { $@"@{_template.ImportType("Column", "typeorm")}({(settings.Count > 0 ? $"{{ {string.Join(", ", settings)} }}" : "")})" };
+
+            if (_ormDatabaseProviderStrategy.TryGetColumnType(attribute, out var columnType))
+            {
+                settings.AddRange(columnType.AdditionalOptions);
+                parameters.Add($"'{columnType.Type}'");
+            }
+
+            if (settings.Count > 0)
+            {
+                parameters.Add($"{{ {string.Join(", ", settings)} }}");
+            }
+
+            return new[] { $"@{_template.ImportType("Column", "typeorm")}({string.Join(", ", parameters)})" };
         }
 
         public override IEnumerable<string> GetFieldDecorators(AssociationEndModel thatEnd)

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package>
   <id>Intent.NodeJS.NestJS.Core</id>
   <version>3.3.1</version>
@@ -10,12 +10,19 @@
   <templates>
     <template id="Intent.NodeJS.NestJS.Core.AppModule" externalReference="3617addd-e98a-4f2b-a9f2-c8cdce720f14">
       <role>Startup</role>
+      <location></location>
+    </template>
+    <template id="Intent.NodeJS.NestJS.Core.dotenv" externalReference="46191968-9f0c-4eb9-8c43-57ace93f9d2a">
+      <role>Root</role>
+      <location></location>
     </template>
     <template id="Intent.NodeJS.NestJS.Core.Main" externalReference="b0a8435b-723e-428e-a8ef-1be63dee5c46">
       <role>Startup</role>
+      <location></location>
     </template>
     <template id="Intent.NodeJS.NestJS.Core.ZipFileContent" externalReference="bb9942de-891f-4be5-818b-cf02935a551c">
       <role>Root</role>
+      <location></location>
     </template>
   </templates>
   <decorators>
@@ -24,9 +31,9 @@
   <factoryExtensions></factoryExtensions>
   <dependencies>
     <dependency id="Intent.Common" version="3.3.6" />
-    <dependency id="Intent.Common.Types" version="3.3.0" />
+    <dependency id="Intent.Common.Types" version="3.3.1" />
     <dependency id="Intent.Common.TypeScript" version="3.3.3" />
-    <dependency id="Intent.Npm" version="3.3.0" />
+    <dependency id="Intent.Npm" version="3.3.1" />
   </dependencies>
   <files>
     <file src="$outDir$/$id$.dll" />
@@ -34,4 +41,5 @@
   </files>
   <metadata />
   <moduleSettings />
+  <moduleSettingsExtensions />
 </package>

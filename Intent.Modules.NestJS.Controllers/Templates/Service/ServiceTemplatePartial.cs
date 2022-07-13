@@ -37,6 +37,7 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Service
 
         public override void BeforeTemplateExecution()
         {
+            base.BeforeTemplateExecution();
             ExecutionContext.EventDispatcher.Publish(new NestJsProviderCreatedEvent(null, TemplateId, Model.Id));
         }
 

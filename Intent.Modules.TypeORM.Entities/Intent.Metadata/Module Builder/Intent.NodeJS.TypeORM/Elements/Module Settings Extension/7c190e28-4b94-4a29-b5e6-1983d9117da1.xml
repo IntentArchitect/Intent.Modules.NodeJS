@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="7c190e28-4b94-4a29-b5e6-1983d9117da1" type="Module Settings Extension" typeId="72044cdf-1f96-4ad2-86be-8d5468725e67">
+  <name>Database Settings Extensions</name>
+  <display>Database Settings Extensions: Database Settings</display>
+  <isAbstract>false</isAbstract>
+  <order>1</order>
+  <genericTypes />
+  <typeReference id="93d2f9a6-f14b-43d8-a477-9578ede6a76f">
+    <typeId>ac0a788e-d8b3-4eea-b56d-538608f1ded9</typeId>
+    <isNavigable>true</isNavigable>
+    <isNullable>false</isNullable>
+    <isCollection>false</isCollection>
+    <isRequired>true</isRequired>
+    <typePackageName>Intent.Metadata.RDBMS</typePackageName>
+    <typePackageId>AF8F3810-745C-42A2-93C8-798860DC45B1</typePackageId>
+    <stereotypes />
+    <genericTypeParameters />
+  </typeReference>
+  <isMapped>false</isMapped>
+  <parentFolderId>62374542-4fb1-4bf1-a322-f45b423ab2a8</parentFolderId>
+  <packageId>62374542-4fb1-4bf1-a322-f45b423ab2a8</packageId>
+  <packageName>Intent.NodeJS.TypeORM</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="9bcab235-06d6-46dc-bc8d-b49483c6914d" type="Module Settings Field Configuration" typeId="88e29cab-1342-40c7-b052-5fcd68ffafec">
+      <name>Database Provider</name>
+      <display>Database Provider</display>
+      <isAbstract>false</isAbstract>
+      <order>1</order>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>7c190e28-4b94-4a29-b5e6-1983d9117da1</parentFolderId>
+      <packageId>62374542-4fb1-4bf1-a322-f45b423ab2a8</packageId>
+      <packageName>Intent.NodeJS.TypeORM</packageName>
+      <stereotypes>
+        <stereotype stereotypeDefinitionId="4805c791-5be3-4049-b929-6046d7be9944" name="Field Configuration">
+          <addedByDefault>true</addedByDefault>
+          <definitionPackageName>Intent.ModuleBuilder</definitionPackageName>
+          <definitionPackageId>9972b2a9-b749-4bba-b5c8-824bf694c6ef</definitionPackageId>
+          <properties>
+            <property name="e33ce4e3-a3c5-4a3c-a6b8-96418be03de0" display="Control Type" value="Select" isActive="true" />
+            <property name="7070a9ce-ff31-422e-9cff-d82876c5efdf" display="Is Required" value="false" isActive="true" />
+            <property name="01489021-8311-43d5-b41b-e7628a512c1d" display="Hint" value="Underlying database technology." isActive="true" />
+            <property name="653d889c-626f-45c5-a6e6-72b74a2f805c" display="Default Value" value="sqlite" isActive="true" />
+          </properties>
+        </stereotype>
+      </stereotypes>
+      <metadata />
+      <childElements>
+        <childElement id="db0c05db-42c0-4743-9ca4-17839bbea9b3" type="Module Settings Field Option" typeId="1592709a-89b1-4cb0-9801-ce9d3b94545a">
+          <name>MS SQL</name>
+          <display>MS SQL = mssql</display>
+          <isAbstract>false</isAbstract>
+          <value>mssql</value>
+          <order>0</order>
+          <genericTypes />
+          <isMapped>false</isMapped>
+          <parentFolderId>9bcab235-06d6-46dc-bc8d-b49483c6914d</parentFolderId>
+          <packageId>62374542-4fb1-4bf1-a322-f45b423ab2a8</packageId>
+          <packageName>Intent.NodeJS.TypeORM</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+        <childElement id="ba071065-9764-4268-b25d-9bcc1943e950" type="Module Settings Field Option" typeId="1592709a-89b1-4cb0-9801-ce9d3b94545a">
+          <name>SQLite</name>
+          <display>SQLite = sqlite</display>
+          <isAbstract>false</isAbstract>
+          <value>sqlite</value>
+          <order>1</order>
+          <genericTypes />
+          <isMapped>false</isMapped>
+          <parentFolderId>9bcab235-06d6-46dc-bc8d-b49483c6914d</parentFolderId>
+          <packageId>62374542-4fb1-4bf1-a322-f45b423ab2a8</packageId>
+          <packageName>Intent.NodeJS.TypeORM</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+      </childElements>
+    </childElement>
+  </childElements>
+</class>

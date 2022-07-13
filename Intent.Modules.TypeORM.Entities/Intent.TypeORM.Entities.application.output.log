@@ -3,6 +3,13 @@
   <ApplicationId>6ab70093-5fac-4f17-8c9a-a50664bfa47b</ApplicationId>
   <FileLogs>
     <FileLog>
+      <ProjectId>08b1c55f-28c5-432c-9ac5-5fe50ee63525</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.Templates.Api.ApiElementModelExtensions#0090fb93-483e-41af-a11d-5ad2dc796adf</CorrelationId>
+      <ApplicationRelativeFilePath>Api/Extensions/AttributeModelStereotypeExtensions.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>AttributeModelStereotypeExtensions.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
       <ProjectId>a569c934-af36-490e-983e-f0cc50a166cb</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.Templates.TemplateDecorator#a813dd33-004c-49c9-b3f5-d29be2256027</CorrelationId>
       <ApplicationRelativeFilePath>Decorators/EntityTypeOrmDecorator.cs</ApplicationRelativeFilePath>
@@ -38,6 +45,13 @@
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
+      <ProjectId>5fc8b2a7-9640-4c0f-ac9f-3767d004ffa7</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.Templates.Settings.ModuleSettingsExtensions#62374542-4fb1-4bf1-a322-f45b423ab2a8</CorrelationId>
+      <ApplicationRelativeFilePath>Settings/ModuleSettingsExtensions.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>ModuleSettingsExtensions.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
       <ProjectId>c8df7c4a-ae2c-4ca5-a1c2-cfc8a8c6d91d</ProjectId>
       <CorrelationId>ModuleBuilder.Typescript.Templates.TypescriptTemplate.PreProcessT4#37f0dc31-67fd-460b-80ee-2ab07f3aaf32</CorrelationId>
       <ApplicationRelativeFilePath>Templates/OrmConfig/OrmConfigTemplate.cs</ApplicationRelativeFilePath>
@@ -68,29 +82,29 @@
     <FileLog>
       <ProjectId>c8df7c4a-ae2c-4ca5-a1c2-cfc8a8c6d91d</ProjectId>
       <CorrelationId>ModuleBuilder.Typescript.Templates.TypescriptTemplate.PreProcessT4#6460b69c-1989-48f2-97d8-46007f7a157e</CorrelationId>
-      <ApplicationRelativeFilePath>Templates/RepositoryTemplate/RepositoryTemplate.cs</ApplicationRelativeFilePath>
-      <ProjectRelativeFilePath>RepositoryTemplate/RepositoryTemplate.cs</ProjectRelativeFilePath>
+      <ApplicationRelativeFilePath>Templates/Repository/RepositoryTemplate.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>Repository/RepositoryTemplate.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
       <ProjectId>c8df7c4a-ae2c-4ca5-a1c2-cfc8a8c6d91d</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#6460b69c-1989-48f2-97d8-46007f7a157e</CorrelationId>
-      <ApplicationRelativeFilePath>Templates/RepositoryTemplate/RepositoryTemplate.tt</ApplicationRelativeFilePath>
-      <ProjectRelativeFilePath>RepositoryTemplate/RepositoryTemplate.tt</ProjectRelativeFilePath>
+      <ApplicationRelativeFilePath>Templates/Repository/RepositoryTemplate.tt</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>Repository/RepositoryTemplate.tt</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
       <ProjectId>c8df7c4a-ae2c-4ca5-a1c2-cfc8a8c6d91d</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial#6460b69c-1989-48f2-97d8-46007f7a157e</CorrelationId>
-      <ApplicationRelativeFilePath>Templates/RepositoryTemplate/RepositoryTemplatePartial.cs</ApplicationRelativeFilePath>
-      <ProjectRelativeFilePath>RepositoryTemplate/RepositoryTemplatePartial.cs</ProjectRelativeFilePath>
+      <ApplicationRelativeFilePath>Templates/Repository/RepositoryTemplatePartial.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>Repository/RepositoryTemplatePartial.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
       <ProjectId>c8df7c4a-ae2c-4ca5-a1c2-cfc8a8c6d91d</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TemplateRegistration.FilePerModel#6460b69c-1989-48f2-97d8-46007f7a157e</CorrelationId>
-      <ApplicationRelativeFilePath>Templates/RepositoryTemplate/RepositoryTemplateRegistration.cs</ApplicationRelativeFilePath>
-      <ProjectRelativeFilePath>RepositoryTemplate/RepositoryTemplateRegistration.cs</ProjectRelativeFilePath>
+      <ApplicationRelativeFilePath>Templates/Repository/RepositoryTemplateRegistration.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>Repository/RepositoryTemplateRegistration.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
     </FileLog>
   </FileLogs>

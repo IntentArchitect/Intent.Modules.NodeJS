@@ -12,7 +12,7 @@ using Intent.Templates;
 [assembly: DefaultIntentManaged(Mode.Merge)]
 [assembly: IntentTemplate("Intent.ModuleBuilder.TemplateRegistration.FilePerModel", Version = "1.0")]
 
-namespace Intent.Modules.TypeORM.Entities.Templates.RepositoryTemplate
+namespace Intent.Modules.TypeORM.Entities.Templates.Repository
 {
     [IntentManaged(Mode.Merge, Body = Mode.Merge, Signature = Mode.Fully)]
     public class RepositoryTemplateRegistration : FilePerModelTemplateRegistration<ClassModel>

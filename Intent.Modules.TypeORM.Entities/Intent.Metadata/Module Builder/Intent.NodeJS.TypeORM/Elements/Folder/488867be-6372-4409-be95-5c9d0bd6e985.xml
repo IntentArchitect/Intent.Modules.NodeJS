@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="488867be-6372-4409-be95-5c9d0bd6e985" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+  <name>Stereotypes</name>
+  <display>Stereotypes</display>
+  <isAbstract>false</isAbstract>
+  <order>2</order>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>62374542-4fb1-4bf1-a322-f45b423ab2a8</parentFolderId>
+  <packageId>62374542-4fb1-4bf1-a322-f45b423ab2a8</packageId>
+  <packageName>Intent.NodeJS.TypeORM</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

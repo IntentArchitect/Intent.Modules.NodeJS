@@ -19,14 +19,14 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Service
     using Intent.Modelers.Services.Api;
     using Intent.Modules.TypeScript.Weaving.Decorators;
     using System;
-
+    
     /// <summary>
     /// Class to produce the template output
     /// </summary>
-
-#line 1 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Service\ServiceTemplate.tt"
+    
+    #line 1 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Service\ServiceTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "17.0.0.0")]
-    public partial class ServiceTemplate : TypeScriptTemplateBase<Intent.Modelers.Services.Api.ServiceModel, ServiceDecorator>
+    public partial class ServiceTemplate : TypeScriptTemplateBase<Intent.Modelers.Services.Api.ServiceModel, Intent.Modules.NestJS.Controllers.Templates.Service.ServiceDecorator>
     {
 #line hidden
         /// <summary>

@@ -21,12 +21,13 @@ namespace Intent.Modules.NestJS.Winston.Templates.WinstonOptions
         [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
         public WinstonOptionsTemplate(IOutputTarget outputTarget, object model = null) : base(TemplateId, outputTarget, model)
         {
-            AddDependency(new NpmPackageDependency("nest-winston", "1.6.x"));
-            AddDependency(new NpmPackageDependency("winston", "3.8.x"));
+            AddDependency(new NpmPackageDependency("nest-winston", "^1.7.0"));
+            AddDependency(new NpmPackageDependency("winston", "^3.8.1"));
         }
 
         public override void BeforeTemplateExecution()
         {
+            base.BeforeTemplateExecution();
             ExecutionContext.EventDispatcher.Publish(new NestApplicationOptionRequest(
                 name: "logger",
                 value: "WinstonModule.createLogger(WinstonOptions)",

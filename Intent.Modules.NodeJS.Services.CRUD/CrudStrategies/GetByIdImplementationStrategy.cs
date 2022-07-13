@@ -8,7 +8,7 @@ using Intent.Modules.Common.Templates;
 using Intent.Modules.NestJS.Controllers.Templates.DtoModel;
 using Intent.Modules.NestJS.Controllers.Templates.Service;
 using Intent.Modules.NodeJS.Services.CRUD.Decorators;
-using Intent.Modules.TypeORM.Entities.Templates.RepositoryTemplate;
+using Intent.Modules.TypeORM.Entities.Templates.Repository;
 using OperationModel = Intent.Modelers.Services.Api.OperationModel;
 using ParameterModel = Intent.Modelers.Services.Api.ParameterModel;
 

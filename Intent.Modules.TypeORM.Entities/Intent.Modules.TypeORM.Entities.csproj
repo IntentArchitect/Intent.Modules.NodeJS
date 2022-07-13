@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -13,6 +13,10 @@
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>OrmConfigTemplate.cs</LastGenOutput>
     </None>
+    <None Update="Templates\Repository\RepositoryTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>RepositoryTemplate.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
@@ -26,12 +30,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>OrmConfigTemplate.tt</DependentUpon>
     </Compile>
+    <Compile Update="Templates\Repository\RepositoryTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>RepositoryTemplate.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Intent.Modules.Common" Version="3.3.6" />
-    <PackageReference Include="Intent.Modules.Common.TypeScript" Version="3.3.3" />
-    <PackageReference Include="Intent.Modules.Metadata.RDBMS" Version="3.3.1" />
+    <PackageReference Include="Intent.Modules.Common.TypeScript" Version="3.3.4" />
+    <PackageReference Include="Intent.Modules.Metadata.RDBMS" Version="3.3.4" />
     <PackageReference Include="Intent.Modules.Modelers.Domain" Version="3.3.4" />
     <PackageReference Include="Intent.Packager" Version="3.3.0">
       <PrivateAssets>all</PrivateAssets>

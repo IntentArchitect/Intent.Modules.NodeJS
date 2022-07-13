@@ -10,13 +10,13 @@ using Intent.Templates;
 [assembly: DefaultIntentManaged(Mode.Merge)]
 [assembly: IntentTemplate("Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial", Version = "1.0")]
 
-namespace Intent.Modules.TypeORM.Entities.Templates.RepositoryTemplate
+namespace Intent.Modules.TypeORM.Entities.Templates.Repository
 {
     [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
     partial class RepositoryTemplate : TypeScriptTemplateBase<Intent.Modelers.Domain.Api.ClassModel>
     {
         [IntentManaged(Mode.Fully)]
-        public const string TemplateId = "Intent.NodeJS.TypeORM.RepositoryTemplate";
+        public const string TemplateId = "Intent.NodeJS.TypeORM.Repository";
 
         [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
         public RepositoryTemplate(IOutputTarget outputTarget, Intent.Modelers.Domain.Api.ClassModel model) : base(TemplateId, outputTarget, model)

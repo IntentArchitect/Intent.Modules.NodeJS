@@ -1,15 +1,13 @@
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Intent.Engine;
-using Intent.Metadata.Models;
-using Intent.Modules.Common;
 using Intent.Modules.Common.Templates;
 using Intent.Modules.Common.TypeScript.Templates;
 using Intent.RoslynWeaver.Attributes;
 using Intent.Templates;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 [assembly: DefaultIntentManaged(Mode.Merge)]
 [assembly: IntentTemplate("Intent.ModuleBuilder.ProjectItemTemplate.Partial", Version = "1.0")]
@@ -40,13 +38,15 @@ namespace Intent.Modules.Npm.Templates.PackageJsonFile
 
         public override string RunTemplate()
         {
-            var meta = GetMetadata();
-            var fullFileName = Path.Combine(meta.GetFullLocationPath(), meta.FileNameWithExtension());
+            var content = TryGetExistingFileContent(out var existingContent)
+                ? existingContent
+                : TransformText();
+            var jsonObject = JsonConvert.DeserializeObject<JObject>(content);
+            var jsonEditor = new JsonEditor(jsonObject);
 
-            var jsonObject = new JsonEditor(LoadOrCreate(fullFileName));
+            var dependencies = new JsonEditor(jsonEditor.GetProperty("dependencies"));
+            var devDependencies = new JsonEditor(jsonEditor.GetProperty("devDependencies"));
 
-            var dependencies = new JsonEditor(jsonObject.GetProperty("dependencies"));
-            var devDependencies = new JsonEditor(jsonObject.GetProperty("devDependencies"));
             foreach (var dependency in _dependencies)
             {
                 if (dependency.IsDevDependency)
@@ -58,22 +58,26 @@ namespace Intent.Modules.Npm.Templates.PackageJsonFile
                     dependencies.AddPropertyIfNotExists(dependency.Name, dependency.Version);
                 }
             }
+
             foreach (var decorator in GetDecorators())
             {
-                decorator.UpdateSettings(jsonObject);
+                decorator.UpdateSettings(jsonEditor);
             }
 
-            return JsonConvert.SerializeObject(jsonObject.Value, new JsonSerializerSettings()
+            SortPropertiesOf(jsonObject, "dependencies");
+            SortPropertiesOf(jsonObject, "devDependencies");
+
+            return JsonConvert.SerializeObject(jsonEditor.Value, new JsonSerializerSettings
             {
                 Formatting = Formatting.Indented,
             });
         }
 
-        private dynamic LoadOrCreate(string fullFileName)
+        private static void SortPropertiesOf(JObject jObject, string propertiesOf)
         {
-            return File.Exists(fullFileName)
-                ? JsonConvert.DeserializeObject(File.ReadAllText(fullFileName))
-                : JsonConvert.DeserializeObject(TransformText());
+            jObject![propertiesOf] = new JObject(jObject[propertiesOf].Children<JProperty>()!
+                .OrderBy(x => x.Name)
+                .Select(x => x));
         }
     }
 }

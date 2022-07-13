@@ -24,10 +24,10 @@ namespace Intent.Modules.NestJS.Core.Templates.Main
         [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
         public MainTemplate(IOutputTarget outputTarget, object model = null) : base(TemplateId, outputTarget, model)
         {
-            ExecutionContext.EventDispatcher.Subscribe<NestApplicationOptionRequest>(RegisterNestApplicationOption);
+            ExecutionContext.EventDispatcher.Subscribe<NestApplicationOptionRequest>(Handle);
         }
 
-        private void RegisterNestApplicationOption(NestApplicationOptionRequest @event)
+        private void Handle(NestApplicationOptionRequest @event)
         {
             if (_nestApplicationOptions.ContainsKey(@event.Name))
             {

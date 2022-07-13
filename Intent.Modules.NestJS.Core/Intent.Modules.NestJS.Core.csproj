@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -6,6 +6,10 @@
 
   <ItemGroup>
     <None Remove="Resources\nestjs-bootstrap.zip" />
+    <None Update="Templates\Dotenv\DotenvTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>DotenvTemplate.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
@@ -34,11 +38,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>AppModuleTemplate.tt</DependentUpon>
     </Compile>
+    <Compile Update="Templates\Dotenv\DotenvTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DotenvTemplate.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Intent.Modules.Common" Version="3.3.6" />
-    <PackageReference Include="Intent.Modules.Common.TypeScript" Version="3.3.3" />
+    <PackageReference Include="Intent.Modules.Common.TypeScript" Version="3.3.4" />
     <PackageReference Include="Intent.Modules.TypeScript.Weaving.Decorators" Version="3.3.0" />
     <PackageReference Include="Intent.Packager" Version="3.3.0">
       <PrivateAssets>all</PrivateAssets>

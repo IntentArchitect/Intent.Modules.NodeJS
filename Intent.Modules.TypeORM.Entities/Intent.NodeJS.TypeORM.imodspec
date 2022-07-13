@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package>
   <id>Intent.NodeJS.TypeORM</id>
   <version>3.3.2</version>
@@ -10,9 +10,11 @@
   <templates>
     <template id="Intent.NodeJS.TypeORM.OrmConfig" externalReference="37f0dc31-67fd-460b-80ee-2ab07f3aaf32">
       <role>Startup</role>
+      <location></location>
     </template>
-    <template id="Intent.NodeJS.TypeORM.RepositoryTemplate" externalReference="6460b69c-1989-48f2-97d8-46007f7a157e">
+    <template id="Intent.NodeJS.TypeORM.Repository" externalReference="6460b69c-1989-48f2-97d8-46007f7a157e">
       <role>Repositories</role>
+      <location></location>
     </template>
   </templates>
   <decorators>
@@ -21,16 +23,33 @@
   <factoryExtensions></factoryExtensions>
   <dependencies>
     <dependency id="Intent.Common" version="3.3.6" />
-    <dependency id="Intent.Common.Types" version="3.3.0" />
+    <dependency id="Intent.Common.Types" version="3.3.1" />
     <dependency id="Intent.Common.TypeScript" version="3.3.3" />
-    <dependency id="Intent.Metadata.RDBMS" version="3.3.1" />
+    <dependency id="Intent.Metadata.RDBMS" version="3.3.4" />
     <dependency id="Intent.Modelers.Domain" version="3.3.4" />
-    <dependency id="Intent.NodeJS.Domain" version="3.3.0" />
+    <dependency id="Intent.NodeJS.Domain" version="3.3.1" />
   </dependencies>
   <files>
     <file src="$outDir$/$id$.dll" />
     <file src="$outDir$/$id$.pdb" />
   </files>
-  <metadata />
+  <metadata>
+    <install target="Domain" src="Intent.Metadata/Module Builder/Intent.NodeJS.TypeORM/Intent.NodeJS.TypeORM.pkg.config" externalReference="62374542-4fb1-4bf1-a322-f45b423ab2a8" />
+  </metadata>
   <moduleSettings />
+  <moduleSettingsExtensions>
+    <groupExtension id="7c190e28-4b94-4a29-b5e6-1983d9117da1" groupId="ac0a788e-d8b3-4eea-b56d-538608f1ded9" externalReference="7c190e28-4b94-4a29-b5e6-1983d9117da1">
+      <settings>
+        <setting id="9bcab235-06d6-46dc-bc8d-b49483c6914d" title="Database Provider" type="select">
+          <isRequired>false</isRequired>
+          <hint>Underlying database technology.</hint>
+          <defaultValue>sqlite</defaultValue>
+          <options>
+            <option value="mssql" description="MS SQL" />
+            <option value="sqlite" description="SQLite" />
+          </options>
+        </setting>
+      </settings>
+    </groupExtension>
+  </moduleSettingsExtensions>
 </package>

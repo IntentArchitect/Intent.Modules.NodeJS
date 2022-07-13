@@ -60,6 +60,34 @@
     </FileLog>
     <FileLog>
       <ProjectId>b0d2955c-78d9-48d7-8e68-199ef7673464</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.ProjectItemTemplate.T4Template.PreProcessed#46191968-9f0c-4eb9-8c43-57ace93f9d2a</CorrelationId>
+      <ApplicationRelativeFilePath>Templates/Dotenv/DotenvTemplate.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>Dotenv/DotenvTemplate.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>b0d2955c-78d9-48d7-8e68-199ef7673464</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.ProjectItemTemplate.T4Template#46191968-9f0c-4eb9-8c43-57ace93f9d2a</CorrelationId>
+      <ApplicationRelativeFilePath>Templates/Dotenv/DotenvTemplate.tt</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>Dotenv/DotenvTemplate.tt</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>b0d2955c-78d9-48d7-8e68-199ef7673464</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.ProjectItemTemplate.Partial#46191968-9f0c-4eb9-8c43-57ace93f9d2a</CorrelationId>
+      <ApplicationRelativeFilePath>Templates/Dotenv/DotenvTemplatePartial.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>Dotenv/DotenvTemplatePartial.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>b0d2955c-78d9-48d7-8e68-199ef7673464</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.TemplateRegistration.SingleFileNoModel#46191968-9f0c-4eb9-8c43-57ace93f9d2a</CorrelationId>
+      <ApplicationRelativeFilePath>Templates/Dotenv/DotenvTemplateRegistration.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>Dotenv/DotenvTemplateRegistration.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>b0d2955c-78d9-48d7-8e68-199ef7673464</ProjectId>
       <CorrelationId>ModuleBuilder.Typescript.Templates.TypescriptTemplate.PreProcessT4#b0a8435b-723e-428e-a8ef-1be63dee5c46</CorrelationId>
       <ApplicationRelativeFilePath>Templates/Main/MainTemplate.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Main/MainTemplate.cs</ProjectRelativeFilePath>
