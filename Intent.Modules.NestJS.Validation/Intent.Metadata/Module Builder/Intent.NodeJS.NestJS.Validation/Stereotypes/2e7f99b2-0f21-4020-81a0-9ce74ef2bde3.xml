@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stereotypeDefinition id="2e7f99b2-0f21-4020-81a0-9ce74ef2bde3" version="3.1.0">
+  <hint>Applies [class-validator](https://github.com/typestack/class-validator#validation-decorators) annotations.</hint>
+  <name>Validations</name>
+  <targetMode>of-type</targetMode>
+  <targetTypes>
+    <type id="7baed1fd-469b-4980-8fd9-4cefb8331eb2">DTO-Field</type>
+  </targetTypes>
+  <targetReferenceTypes />
+  <applyMode>always</applyMode>
+  <icon type="UrlImagePath" source="data:image/png;base64,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" />
+  <displayIcon>false</displayIcon>
+  <displayFunction />
+  <displayAsAnnotation>false</displayAsAnnotation>
+  <displayAsText>true</displayAsText>
+  <autoAdd>false</autoAdd>
+  <allowMultipleApplies>false</allowMultipleApplies>
+  <parentFolderId>af72b6bd-876c-476a-94be-1ec850226251</parentFolderId>
+  <order>0</order>
+  <packageId>af72b6bd-876c-476a-94be-1ec850226251</packageId>
+  <packageName>Intent.NodeJS.NestJS.Validation</packageName>
+  <properties>
+    <property id="0daf520e-fe39-4e1f-864a-01a07e9725fe">
+      <hint>Checks if value equals ("===") comparison.</hint>
+      <name>Equals</name>
+      <type>string</type>
+      <controlType>text</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <valueOptions />
+      <lookupTypes />
+    </property>
+    <property id="dbc22063-d7f2-4f37-914d-57087f47b023">
+      <hint>Checks if value not equal ("!==") comparison.</hint>
+      <name>Not Equals</name>
+      <type>string</type>
+      <controlType>text</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <valueOptions />
+      <lookupTypes />
+    </property>
+    <property id="aa682825-407c-4c49-a1d6-ea3baa94dd29">
+      <hint>Checks if given value is empty (=== '', === null, === undefined).</hint>
+      <name>Is Empty</name>
+      <type>string</type>
+      <controlType>checkbox</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <defaultValue>false</defaultValue>
+      <valueOptions />
+      <lookupTypes />
+    </property>
+    <property id="fce9f2a6-f116-4525-bd0e-79939dc3cb85">
+      <hint>Checks if given value is not empty (!== '', !== null, !== undefined).</hint>
+      <name>Is Not Empty</name>
+      <type>string</type>
+      <controlType>checkbox</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <defaultValue>false</defaultValue>
+      <valueOptions />
+      <lookupTypes />
+    </property>
+    <property id="6194f0cd-dd52-4c6c-a79d-7b4a525b94b9">
+      <hint>Checks if value is in a array of allowed values.</hint>
+      <name>Is In</name>
+      <type>string</type>
+      <controlType>text</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <valueOptions />
+      <lookupTypes />
+    </property>
+    <property id="56524d51-a60e-43e8-803c-41dd2410d66c">
+      <hint>Checks if value is not in a array of disallowed values.</hint>
+      <name>Is Not In</name>
+      <type>string</type>
+      <controlType>text</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <valueOptions />
+      <lookupTypes />
+    </property>
+    <property id="759d6ce5-1974-478d-8a07-d01400fb2296">
+      <hint>Options to apply to the @IsNumber() decorator.</hint>
+      <name>Is Number Options</name>
+      <type>string</type>
+      <controlType>text</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <valueOptions />
+      <lookupTypes />
+      <isActiveFunction>let typeNames = ["byte", "decimal", "double", "float", "int", "long", "short"];
+return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName =&gt; typeName === element.typeReference.getType()?.getName()).length &gt;= 1;</isActiveFunction>
+    </property>
+    <property id="0b05495e-062f-4c87-b427-3c8471f15ea1">
+      <hint>Checks if the value is a number that's divisible by another.</hint>
+      <name>Is Divisible By</name>
+      <type>string</type>
+      <controlType>text</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <defaultValue />
+      <valueOptions />
+      <lookupTypes />
+      <isActiveFunction>let typeNames = ["byte", "decimal", "double", "float", "int", "long", "short"];
+return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName =&gt; typeName === element.typeReference.getType()?.getName()).length &gt;= 1;</isActiveFunction>
+    </property>
+    <property id="23c08e61-9451-4d52-ab39-417fae21176a">
+      <hint>Checks if the value is a number that's divisible by another.</hint>
+      <name>Is Positive</name>
+      <type>string</type>
+      <controlType>checkbox</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <defaultValue>false</defaultValue>
+      <valueOptions />
+      <lookupTypes />
+      <isActiveFunction>let typeNames = ["byte", "decimal", "double", "float", "int", "long", "short"];
+return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName =&gt; typeName === element.typeReference.getType()?.getName()).length &gt;= 1;</isActiveFunction>
+    </property>
+    <property id="32b7d62a-1bb2-476c-9a9b-dc4b2749d00e">
+      <hint>Checks if the value is a negative number smaller than zero.</hint>
+      <name>Is Negative</name>
+      <type>string</type>
+      <controlType>checkbox</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <defaultValue>false</defaultValue>
+      <valueOptions />
+      <lookupTypes />
+      <isActiveFunction>let typeNames = ["byte", "decimal", "double", "float", "int", "long", "short"];
+return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName =&gt; typeName === element.typeReference.getType()?.getName()).length &gt;= 1;</isActiveFunction>
+    </property>
+    <property id="241e9b0a-0409-4346-8f5d-07e5445559a0">
+      <hint>Checks if the given number is greater than or equal to given number.</hint>
+      <name>Min</name>
+      <type>string</type>
+      <controlType>number</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <valueOptions />
+      <lookupTypes />
+      <isActiveFunction>let typeNames = ["byte", "decimal", "double", "float", "int", "long", "short"];
+return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName =&gt; typeName === element.typeReference.getType()?.getName()).length &gt;= 1;</isActiveFunction>
+    </property>
+    <property id="e903d232-a2d8-4ba4-a24d-d4e493976489">
+      <hint>Checks if the given number is less than or equal to given number.</hint>
+      <name>Max</name>
+      <type>string</type>
+      <controlType>number</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <valueOptions />
+      <lookupTypes />
+      <isActiveFunction>let typeNames = ["byte", "decimal", "double", "float", "int", "long", "short"];
+return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName =&gt; typeName === element.typeReference.getType()?.getName()).length &gt;= 1;</isActiveFunction>
+    </property>
+    <property id="8a8dd0dc-b956-479d-a26f-7785d7c266d0">
+      <hint>Checks if the value is a date that's before the specified date.</hint>
+      <name>Max Date</name>
+      <type>string</type>
+      <controlType>text</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <valueOptions />
+      <lookupTypes />
+      <isActiveFunction>let typeNames = ["date", "datetime", "datetimeoffset"];
+return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName =&gt; typeName === element.typeReference.getType()?.getName()).length &gt;= 1;</isActiveFunction>
+    </property>
+    <property id="dcdb98a3-4ef5-4900-a2c9-af846a7a9e09">
+      <hint>Checks if the value is a date that's after the specified date.</hint>
+      <name>Min Date</name>
+      <type>string</type>
+      <controlType>text</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <valueOptions />
+      <lookupTypes />
+      <isActiveFunction>let typeNames = ["date", "datetime", "datetimeoffset"];
+return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName =&gt; typeName === element.typeReference.getType()?.getName()).length &gt;= 1;</isActiveFunction>
+    </property>
+    <property id="0a402b3a-5698-49e7-b797-4e1371d22d4f">
+      <hint>Checks if the string contains the seed.</hint>
+      <name>Contains</name>
+      <type>string</type>
+      <controlType>text</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <valueOptions />
+      <lookupTypes />
+      <isActiveFunction>return !element.typeReference.isCollection &amp;&amp; element.typeReference.getType()?.getName() === "string";</isActiveFunction>
+    </property>
+    <property id="cfc0cf7e-a063-4e14-a858-10979f94575b">
+      <hint>Checks if the string not contains the seed.</hint>
+      <name>Not Contains</name>
+      <type>string</type>
+      <controlType>text</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <valueOptions />
+      <lookupTypes />
+      <isActiveFunction>return !element.typeReference.isCollection &amp;&amp; element.typeReference.getType()?.getName() === "string";</isActiveFunction>
+    </property>
+    <property id="3409a731-aea5-4d87-95a6-546ab519965d">
+      <hint>Checks if the string contains only letters (a-zA-Z).</hint>
+      <name>Is Alpha</name>
+      <type>string</type>
+      <controlType>checkbox</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <defaultValue>false</defaultValue>
+      <valueOptions />
+      <lookupTypes />
+      <isActiveFunction>return !element.typeReference.isCollection &amp;&amp; element.typeReference.getType()?.getName() === "string";</isActiveFunction>
+    </property>
+    <property id="f6aef052-1a86-455c-ae28-609fb5a97c2c">
+      <hint>Checks if the string contains only letters and numbers.</hint>
+      <name>Is Alphanumeric</name>
+      <type>string</type>
+      <controlType>checkbox</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <defaultValue>false</defaultValue>
+      <valueOptions />
+      <lookupTypes />
+      <isActiveFunction>return !element.typeReference.isCollection &amp;&amp; element.typeReference.getType()?.getName() === "string";</isActiveFunction>
+    </property>
+    <property id="edeb80e9-f4c5-43af-924c-5fc09a2122be">
+      <hint>Checks if the string is an email.</hint>
+      <name>Is Email</name>
+      <type>string</type>
+      <controlType>checkbox</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <defaultValue>false</defaultValue>
+      <valueOptions />
+      <lookupTypes />
+      <isActiveFunction>return !element.typeReference.isCollection &amp;&amp; element.typeReference.getType()?.getName() === "string";</isActiveFunction>
+    </property>
+    <property id="9ff2b875-8b79-4a90-8c05-2593b5bf4672">
+      <name>Is Email Options</name>
+      <type>string</type>
+      <controlType>text</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <defaultValue />
+      <valueOptions />
+      <lookupTypes />
+      <isActiveFunction>return !element.typeReference.isCollection &amp;&amp; element.typeReference.getType()?.getName() === "string" &amp;&amp; IsEmail === true;</isActiveFunction>
+    </property>
+    <property id="6d37ce8c-2bfc-499b-be1f-7aafcf09470c">
+      <hint>Checks if the string is lowercase.</hint>
+      <name>Is Lowercase</name>
+      <type>string</type>
+      <controlType>checkbox</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <defaultValue>false</defaultValue>
+      <valueOptions />
+      <lookupTypes />
+      <isActiveFunction>return !element.typeReference.isCollection &amp;&amp; element.typeReference.getType()?.getName() === "string";</isActiveFunction>
+    </property>
+    <property id="3e5911b9-7998-48be-9e2b-bb9ed019ed37">
+      <hint>Checks if the string is uppercase.</hint>
+      <name>Is Uppercase</name>
+      <type>string</type>
+      <controlType>checkbox</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <defaultValue>false</defaultValue>
+      <valueOptions />
+      <lookupTypes />
+      <isActiveFunction>return !element.typeReference.isCollection &amp;&amp; element.typeReference.getType()?.getName() === "string";</isActiveFunction>
+    </property>
+    <property id="0ded5ee4-f4b5-455f-8c22-afb235fe67d5">
+      <hint>Checks if the string's length is not less than given number.</hint>
+      <name>Min Length</name>
+      <type>string</type>
+      <controlType>number</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <valueOptions />
+      <lookupTypes />
+      <isActiveFunction>return !element.typeReference.isCollection &amp;&amp; element.typeReference.getType()?.getName() === "string";</isActiveFunction>
+    </property>
+    <property id="f555b4f3-750a-486f-959f-c5d5c1bed67e">
+      <hint>Checks if the string's length is not more than given number.</hint>
+      <name>Max Length</name>
+      <type>string</type>
+      <controlType>number</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <valueOptions />
+      <lookupTypes />
+      <isActiveFunction>return !element.typeReference.isCollection &amp;&amp; element.typeReference.getType()?.getName() === "string";</isActiveFunction>
+    </property>
+    <property id="36f0e219-1a9a-4f40-84be-a0581329af97">
+      <hint>Checks if string matches the pattern. Either matches('foo', /foo/i) or matches('foo', 'foo', 'i').</hint>
+      <name>Matches</name>
+      <type>string</type>
+      <controlType>text</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <valueOptions />
+      <lookupTypes />
+      <isActiveFunction />
+    </property>
+    <property id="423867a7-2964-4c1b-9499-e6f0b2c611bc">
+      <hint>Checks if array contains all values from the given array of values.</hint>
+      <name>Array Contains</name>
+      <type>string</type>
+      <controlType>text</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <valueOptions />
+      <lookupTypes />
+      <isActiveFunction>return element.typeReference.isCollection;</isActiveFunction>
+    </property>
+    <property id="6ced941b-def5-4e03-a4f4-9545932391cc">
+      <hint>Checks if array does not contain any of the given values.</hint>
+      <name>Array Not Contains</name>
+      <type>string</type>
+      <controlType>text</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <valueOptions />
+      <lookupTypes />
+      <isActiveFunction>return element.typeReference.isCollection;</isActiveFunction>
+    </property>
+    <property id="ece9257c-9e30-46ad-96d9-76756ebc0d72">
+      <hint>Checks if given array is not empty.</hint>
+      <name>Array Not Empty</name>
+      <type>string</type>
+      <controlType>checkbox</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <defaultValue>false</defaultValue>
+      <valueOptions />
+      <lookupTypes />
+      <isActiveFunction>return element.typeReference.isCollection;</isActiveFunction>
+    </property>
+    <property id="921952c8-d528-4212-b174-98104d9f69ae">
+      <hint>Checks if the array's length is greater than or equal to the specified number.</hint>
+      <name>Array Min Size</name>
+      <type>string</type>
+      <controlType>number</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <valueOptions />
+      <lookupTypes />
+      <isActiveFunction>return element.typeReference.isCollection;</isActiveFunction>
+    </property>
+    <property id="1bc5d48a-3a99-4a62-aacd-c1f590bc04f1">
+      <hint>Checks if the array's length is less or equal to the specified number.</hint>
+      <name>Array Max Size</name>
+      <type>string</type>
+      <controlType>number</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <valueOptions />
+      <lookupTypes />
+      <isActiveFunction>return element.typeReference.isCollection;</isActiveFunction>
+    </property>
+    <property id="7c0c9119-48da-4751-9871-9ee1c17a68d2">
+      <hint>Checks if all array's values are unique. Comparison for objects is reference-based. Optional function can be speciefied which return value will be used for the comparsion.</hint>
+      <name>Array Unique</name>
+      <type>string</type>
+      <controlType>checkbox</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <defaultValue>false</defaultValue>
+      <valueOptions />
+      <lookupTypes />
+      <isActiveFunction>return element.typeReference.isCollection;</isActiveFunction>
+    </property>
+    <property id="9d373a09-01b6-4290-83d2-c901dfacaf0b">
+      <hint>Checks if the property is an instance of the passed value.</hint>
+      <name>Is Instance</name>
+      <type>string</type>
+      <controlType>text</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <valueOptions />
+      <lookupTypes />
+    </property>
+    <property id="915593d0-72f9-44c6-a87f-b4a58fea3c39">
+      <hint>Prevent stripping off the property when no other constraint is specified for it.</hint>
+      <name>Allow</name>
+      <type>string</type>
+      <controlType>checkbox</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <defaultValue>false</defaultValue>
+      <valueOptions />
+      <lookupTypes />
+    </property>
+  </properties>
+</stereotypeDefinition>

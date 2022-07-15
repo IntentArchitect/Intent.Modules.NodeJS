@@ -1,4 +1,4 @@
-<#@ template language="C#" inherits="TypeScriptTemplateBase<Intent.Modelers.Services.Api.DTOModel>" #>
+<#@ template language="C#" inherits="TypeScriptTemplateBase<Intent.Modelers.Services.Api.DTOModel, Intent.Modules.NestJS.Controllers.Templates.DtoModel.DtoModelDecorator>" #>
 <#@ assembly name="System.Core" #>
 <#@ import namespace="System.Collections.Generic" #>
 <#@ import namespace="System.Linq" #>
@@ -12,7 +12,9 @@
 export class <#= ClassName #>
 {<#  foreach(var field in Model.Fields) { #>
 
-  <#= GetFieldDecorators(field) #>
+<# foreach (var decorator in GetFieldDecorators(field)) { #>
+  <#= decorator #>
+<# } #>
   <#= field.Name.ToCamelCase() #><#= field.TypeReference.IsNullable ? "?" : "" #>: <#= GetTypeName(field.TypeReference) #>;
 <#  }
     if (Model.IsMapped) {#>

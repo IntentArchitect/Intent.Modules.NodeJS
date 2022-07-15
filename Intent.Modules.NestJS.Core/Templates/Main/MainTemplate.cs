@@ -47,7 +47,14 @@ namespace Intent.Modules.NestJS.Core.Templates.Main
             
             #line default
             #line hidden
-            this.Write(");\r\n  \r\n  const config = new DocumentBuilder()\r\n    .setTitle(\'");
+            this.Write(");");
+            
+            #line 14 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Core\Templates\Main\MainTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(GetGlobalPipes()));
+            
+            #line default
+            #line hidden
+            this.Write("\r\n\r\n  const config = new DocumentBuilder()\r\n    .setTitle(\'");
             
             #line 17 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Core\Templates\Main\MainTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(OutputTarget.Application.Name));

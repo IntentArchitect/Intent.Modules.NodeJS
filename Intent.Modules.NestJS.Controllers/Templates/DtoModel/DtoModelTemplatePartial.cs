@@ -17,15 +17,15 @@ using OperationModel = Intent.Modelers.Domain.Api.OperationModel;
 namespace Intent.Modules.NestJS.Controllers.Templates.DtoModel
 {
     [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
-    partial class DtoModelTemplate : TypeScriptTemplateBase<Intent.Modelers.Services.Api.DTOModel>
+    partial class DtoModelTemplate : TypeScriptTemplateBase<DTOModel, DtoModelDecorator>
     {
         [IntentManaged(Mode.Fully)]
         public const string TemplateId = "Intent.NodeJS.NestJS.Controllers.DtoModel";
 
         [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
-        public DtoModelTemplate(IOutputTarget outputTarget, Intent.Modelers.Services.Api.DTOModel model) : base(TemplateId, outputTarget, model)
+        public DtoModelTemplate(IOutputTarget outputTarget, DTOModel model) : base(TemplateId, outputTarget, model)
         {
-            AddTypeSource(DtoModelTemplate.TemplateId);
+            AddTypeSource(TemplateId);
             AddTypeSource(EntityTemplate.TemplateId);
         }
 
@@ -38,9 +38,24 @@ namespace Intent.Modules.NestJS.Controllers.Templates.DtoModel
             );
         }
 
-        private string GetFieldDecorators(DTOFieldModel field)
+        public override void BeforeTemplateExecution()
         {
-            return $"@{ImportType("ApiProperty", "@nestjs/swagger")}()";
+            base.BeforeTemplateExecution();
+
+            foreach (var decorator in GetDecorators())
+            {
+                decorator.BeforeTemplateExecution();
+            }
+        }
+
+        private IEnumerable<string> GetFieldDecorators(DTOFieldModel field)
+        {
+            foreach (var decorator in GetDecorators().SelectMany(x => x.GetDecorators(field)))
+            {
+                yield return decorator;
+            }
+
+            yield return $"@{ImportType("ApiProperty", "@nestjs/swagger")}()";
         }
 
         private string GetMappings()
@@ -55,18 +70,18 @@ namespace Intent.Modules.NestJS.Controllers.Templates.DtoModel
                 }
                 else if (field.TypeReference.IsCollection)
                 {
-                    statements.Add($"dto.{field.Name.ToCamelCase()} = {entity.Name.ToCamelCase()}.{GetPath(field.Mapping.Path)}?.map(x => {GetTypeName(DtoModelTemplate.TemplateId, field.TypeReference.Element)}.from{new DTOModel((IElement)field.TypeReference.Element).Mapping.Element.Name}(x));");
+                    statements.Add($"dto.{field.Name.ToCamelCase()} = {entity.Name.ToCamelCase()}.{GetPath(field.Mapping.Path)}?.map(x => {GetTypeName(TemplateId, field.TypeReference.Element)}.from{new DTOModel((IElement)field.TypeReference.Element).Mapping.Element.Name}(x));");
                 }
                 else
                 {
-                    statements.Add($"dto.{field.Name.ToCamelCase()} = {GetTypeName(DtoModelTemplate.TemplateId, field.TypeReference.Element)}.from{new DTOModel((IElement)field.TypeReference.Element).Mapping.Element.Name}({entity.Name.ToCamelCase()}.{GetPath(field.Mapping.Path)});");
+                    statements.Add($"dto.{field.Name.ToCamelCase()} = {GetTypeName(TemplateId, field.TypeReference.Element)}.from{new DTOModel((IElement)field.TypeReference.Element).Mapping.Element.Name}({entity.Name.ToCamelCase()}.{GetPath(field.Mapping.Path)});");
                 }
             }
             return string.Join(@"
     ", statements);
         }
 
-        private string GetPath(IEnumerable<IElementMappingPathTarget> path)
+        private static string GetPath(IEnumerable<IElementMappingPathTarget> path)
         {
             return string.Join("?.", path
                 .Where(x => x.Specialization != GeneralizationModel.SpecializationType)
@@ -86,7 +101,7 @@ namespace Intent.Modules.NestJS.Controllers.Templates.DtoModel
                     {
                         return new[] { relation };
                     }
-                    var dtoModelTemplate = GetTemplate<DtoModelTemplate>(DtoModelTemplate.TemplateId, f.TypeReference.Element)
+                    var dtoModelTemplate = GetTemplate<DtoModelTemplate>(TemplateId, f.TypeReference.Element)
                         .GetRequiredRelations()
                         .Select(x => $"{relation}.{x}");
                     return new[] { relation }.Concat(dtoModelTemplate);

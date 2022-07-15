@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="b3963156-4793-4193-b736-846f2a117c62" type="Template Decorator" typeId="f0f46278-29ea-42bd-9206-0e7034f623bc">
+  <name>DtoValidationDecorator</name>
+  <display>DtoValidationDecorator: DtoModelDecorator</display>
+  <isAbstract>false</isAbstract>
+  <order>1</order>
+  <genericTypes />
+  <typeReference id="476930ad-e78f-4942-9f3b-472eca33c5f0">
+    <typeId>11d70c63-41e3-41d6-a6d3-0f82bde3acb5</typeId>
+    <isNavigable>true</isNavigable>
+    <isNullable>false</isNullable>
+    <isCollection>false</isCollection>
+    <isRequired>true</isRequired>
+    <typePackageName>Intent.NodeJS.NestJS.Controllers</typePackageName>
+    <typePackageId>1caaea83-9ac7-4c42-a3bd-b328cf3160fc</typePackageId>
+    <stereotypes />
+    <genericTypeParameters />
+  </typeReference>
+  <isMapped>false</isMapped>
+  <parentFolderId>af72b6bd-876c-476a-94be-1ec850226251</parentFolderId>
+  <packageId>af72b6bd-876c-476a-94be-1ec850226251</packageId>
+  <packageName>Intent.NodeJS.NestJS.Validation</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

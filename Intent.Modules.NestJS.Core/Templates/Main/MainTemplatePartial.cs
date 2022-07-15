@@ -17,6 +17,7 @@ namespace Intent.Modules.NestJS.Core.Templates.Main
     partial class MainTemplate : TypeScriptTemplateBase<object>
     {
         private readonly Dictionary<string, string> _nestApplicationOptions = new();
+        private readonly HashSet<string> _globalPipes = new();
 
         [IntentManaged(Mode.Fully)]
         public const string TemplateId = "Intent.NodeJS.NestJS.Core.Main";
@@ -25,6 +26,7 @@ namespace Intent.Modules.NestJS.Core.Templates.Main
         public MainTemplate(IOutputTarget outputTarget, object model = null) : base(TemplateId, outputTarget, model)
         {
             ExecutionContext.EventDispatcher.Subscribe<NestApplicationOptionRequest>(Handle);
+            ExecutionContext.EventDispatcher.Subscribe<NestApplicationGlobalPipeRequest>(Handle);
         }
 
         private void Handle(NestApplicationOptionRequest @event)
@@ -40,6 +42,27 @@ namespace Intent.Modules.NestJS.Core.Templates.Main
             }
 
             _nestApplicationOptions[@event.Name] = @event.Value;
+        }
+
+        private void Handle(NestApplicationGlobalPipeRequest request)
+        {
+            foreach (var (type, location) in request.TypesToImport)
+            {
+                AddImport(type, location);
+            }
+
+            _globalPipes.Add(request.GlobalPipe);
+        }
+
+        private string GetGlobalPipes()
+        {
+            if (_globalPipes.Count == 0)
+            {
+                return string.Empty;
+            }
+
+            return $@"
+  app.useGlobalPipes({string.Join(", ", _globalPipes)});";
         }
 
         private string GetApplicationOptions()

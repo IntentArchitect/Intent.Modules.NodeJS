@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <class id="27c77612-3eb9-4b20-bba4-8faef34bfa4a" type="Typescript File Template" typeId="e6e41d88-2829-41b6-a791-065d2bb44eb3">
-  <name>ServiceTemplate</name>
-  <display>ServiceTemplate: File Per Model</display>
+  <name>Service</name>
+  <display>Service: File Per Model</display>
   <isAbstract>false</isAbstract>
   <order>4</order>
   <genericTypes />

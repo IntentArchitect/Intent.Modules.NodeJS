@@ -32,10 +32,6 @@
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>ControllerTemplate.cs</LastGenOutput>
     </None>
-    <None Update="Templates\ServiceTemplate\ServiceTemplate.tt">
-      <Generator>TextTemplatingFilePreprocessor</Generator>
-      <LastGenOutput>ServiceTemplate.cs</LastGenOutput>
-    </None>
     <None Update="Templates\ControllerBaseTemplate\ControllerBaseTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>ControllerBaseTemplate.cs</LastGenOutput>
@@ -64,11 +60,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>ControllerTemplate.tt</DependentUpon>
     </Compile>
-    <Compile Update="Templates\ServiceTemplate\ServiceTemplate.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>ServiceTemplate.tt</DependentUpon>
-    </Compile>
     <Compile Update="Templates\ControllerBaseTemplate\ControllerBaseTemplate.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -94,10 +85,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>ServiceTemplate.tt</DependentUpon>
     </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Templates\ServiceTemplate\" />
   </ItemGroup>
 
 </Project>
