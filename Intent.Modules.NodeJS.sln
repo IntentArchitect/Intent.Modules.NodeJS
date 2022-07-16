@@ -16,9 +16,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intent.Modules.NodeJS.Servi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intent.Modules.Npm", "Intent.Modules.Npm\Intent.Modules.Npm.csproj", "{47D80E8C-BDC2-431A-9D38-A9543B1FE821}"
 EndProject
-Project("{52B49DB5-3EA9-4095-B1A7-DF1AC22D7DAE}") = "Intent.Modules.NestJS.Winston", "Intent.Modules.NestJS.Winston\Intent.Modules.NestJS.Winston.csproj", "{00D9ADC0-F185-4287-9F1F-4EBC7EE0228C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intent.Modules.NestJS.Winston", "Intent.Modules.NestJS.Winston\Intent.Modules.NestJS.Winston.csproj", "{00D9ADC0-F185-4287-9F1F-4EBC7EE0228C}"
 EndProject
-Project("{52B49DB5-3EA9-4095-B1A7-DF1AC22D7DAE}") = "Intent.Modules.NestJS.Validation", "Intent.Modules.NestJS.Validation\Intent.Modules.NestJS.Validation.csproj", "{49722D16-76CB-4224-8AA3-C9E7DA883F15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intent.Modules.NestJS.Validation", "Intent.Modules.NestJS.Validation\Intent.Modules.NestJS.Validation.csproj", "{49722D16-76CB-4224-8AA3-C9E7DA883F15}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

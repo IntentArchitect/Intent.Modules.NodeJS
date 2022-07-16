@@ -74,7 +74,9 @@ namespace Intent.Modules.NodeJS.Services.CRUD.CrudStrategies
 
         public string GetImplementation(ClassModel targetEntity, OperationModel operation)
         {
-            return $@"var existing{targetEntity.Name} = await this.{_repository.ToCamelCase()}.findOne({_idParam.Name.ToCamelCase()});
+            return $@"var existing{targetEntity.Name} = await this.{_repository.ToCamelCase()}.findOneBy({{
+      id: {_idParam.Name.ToCamelCase()}
+    }});
     await this.{_repository.ToCamelCase()}.remove(existing{targetEntity.Name});";
         }
     }

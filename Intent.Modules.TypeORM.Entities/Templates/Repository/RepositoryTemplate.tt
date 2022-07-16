@@ -9,9 +9,9 @@
 <#@ import namespace="Intent.Metadata.Models" #>
 <#@ import namespace="Intent.Modelers.Domain.Api" #>
 <#@ import namespace="Intent.Module.TypeScript.Domain.Templates.Entity" #>
-import { EntityRepository, Repository } from "typeorm";
+import { Repository } from "typeorm";
 
-@EntityRepository(<#= GetTypeName(EntityTemplate.TemplateId, Model) #>)
+@<#= this.GetTypeOrmExDecoratorName() #>(<#= GetTypeName(EntityTemplate.TemplateId, Model) #>)
 export class <#= ClassName #> extends Repository<<#= GetTypeName(EntityTemplate.TemplateId, Model) #>>
 {
 

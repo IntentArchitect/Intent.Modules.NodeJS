@@ -28,18 +28,18 @@ namespace Intent.Modules.TypeORM.Entities.Settings
             {
                 return Value switch
                 {
-                    "mssql" => DatabaseProviderOptionsEnum.MSSQL,
-                    "sqlite" => DatabaseProviderOptionsEnum.SQLite,
+                    "mssql" => DatabaseProviderOptionsEnum.Mssql,
+                    "sqlite" => DatabaseProviderOptionsEnum.Sqlite,
                     _ => throw new ArgumentOutOfRangeException(nameof(Value), $"{Value} is out of range")
                 };
             }
 
-            public bool IsMSSQL()
+            public bool IsMssql()
             {
                 return Value == "mssql";
             }
 
-            public bool IsSQLite()
+            public bool IsSqlite()
             {
                 return Value == "sqlite";
             }
@@ -47,8 +47,8 @@ namespace Intent.Modules.TypeORM.Entities.Settings
 
         public enum DatabaseProviderOptionsEnum
         {
-            MSSQL,
-            SQLite,
+            Mssql,
+            Sqlite,
         }
     }
 }

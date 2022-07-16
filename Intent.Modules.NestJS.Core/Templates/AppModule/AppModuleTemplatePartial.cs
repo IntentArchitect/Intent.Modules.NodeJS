@@ -29,7 +29,7 @@ namespace Intent.Modules.NestJS.Core.Templates.AppModule
             ExecutionContext.EventDispatcher.Subscribe<NestJsControllerCreatedEvent>(HandleEvent);
             ExecutionContext.EventDispatcher.Subscribe<NestJsProviderCreatedEvent>(HandleEvent);
             ExecutionContext.EventDispatcher.Subscribe<NestJsProviderRequest>(HandleEvent);
-            AddDependency(NpmPackageDependencies.NestJsConfig);
+            AddDependency(NpmPackageDependencies.NestJs.Config);
             _imports.Add($"{ImportType("ConfigModule", "@nestjs/config")}.forRoot()");
         }
 

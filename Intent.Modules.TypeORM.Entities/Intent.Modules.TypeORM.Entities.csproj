@@ -17,6 +17,14 @@
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>RepositoryTemplate.cs</LastGenOutput>
     </None>
+    <None Update="Templates\TypeOrmExDecorator\TypeOrmExDecoratorTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>TypeOrmExDecoratorTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\TypeOrmExModule\TypeOrmExModuleTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>TypeOrmExModuleTemplate.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
@@ -34,6 +42,16 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>RepositoryTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\TypeOrmExDecorator\TypeOrmExDecoratorTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>TypeOrmExDecoratorTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\TypeOrmExModule\TypeOrmExModuleTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>TypeOrmExModuleTemplate.tt</DependentUpon>
     </Compile>
   </ItemGroup>
 

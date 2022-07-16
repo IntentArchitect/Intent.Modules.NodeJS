@@ -51,11 +51,11 @@ namespace Intent.Modules.Npm.Templates.PackageJsonFile
             {
                 if (dependency.IsDevDependency)
                 {
-                    devDependencies.AddPropertyIfNotExists(dependency.Name, dependency.Version);
+                    devDependencies.AddDependencyIfNotExists(dependency);
                 }
                 else
                 {
-                    dependencies.AddPropertyIfNotExists(dependency.Name, dependency.Version);
+                    dependencies.AddDependencyIfNotExists(dependency);
                 }
             }
 

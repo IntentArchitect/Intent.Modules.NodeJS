@@ -6,7 +6,6 @@ using Intent.Metadata.RDBMS.Api;
 using Intent.Modelers.Domain.Api;
 using Intent.Module.TypeScript.Domain.Templates.Entity;
 using Intent.Modules.Common.Templates;
-using Intent.Modules.Common.TypeScript.Templates;
 using Intent.Modules.TypeORM.Entities.DatabaseProviders;
 using Intent.RoslynWeaver.Attributes;
 
@@ -33,7 +32,7 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
         {
             _template = template;
             _application = application;
-            _template.AddDependency(new NpmPackageDependency("typeorm", "^0.2.32"));
+            _template.AddDependency(NpmPackageDependencies.TypeOrm);
             _ormDatabaseProviderStrategy = IOrmDatabaseProviderStrategy.Resolve(_template.OutputTarget);
         }
 

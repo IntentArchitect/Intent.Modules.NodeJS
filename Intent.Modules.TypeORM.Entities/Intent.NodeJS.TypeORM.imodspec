@@ -16,6 +16,14 @@
       <role>Repositories</role>
       <location></location>
     </template>
+    <template id="Intent.NodeJS.TypeORM.TypeOrmExDecorator" externalReference="cfd842e7-1b04-410b-8c29-e1a0f3374686">
+      <role>Startup</role>
+      <location>typeorm</location>
+    </template>
+    <template id="Intent.NodeJS.TypeORM.TypeOrmExModule" externalReference="752d2df5-8e7a-42c9-9090-a37ecf5a7fd5">
+      <role>Startup</role>
+      <location>typeorm</location>
+    </template>
   </templates>
   <decorators>
     <decorator id="Intent.NodeJS.TypeORM.EntityTypeOrmDecorator" externalReference="a813dd33-004c-49c9-b3f5-d29be2256027" />
@@ -23,7 +31,7 @@
   <factoryExtensions></factoryExtensions>
   <dependencies>
     <dependency id="Intent.Common" version="3.3.6" />
-    <dependency id="Intent.Common.Types" version="3.3.1" />
+    <dependency id="Intent.Common.Types" version="3.3.2" />
     <dependency id="Intent.Common.TypeScript" version="3.3.3" />
     <dependency id="Intent.Metadata.RDBMS" version="3.3.4" />
     <dependency id="Intent.Modelers.Domain" version="3.3.4" />

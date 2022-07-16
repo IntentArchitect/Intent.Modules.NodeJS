@@ -6,10 +6,10 @@
 <#@ import namespace="Intent.Modules.Common.Templates" #>
 <#@ import namespace="Intent.Metadata.Models" #>
 {
-  "name": "nestjs-petclinic-rest",
+  "name": "<#= OutputTarget.ApplicationName().ToKebabCase() #>",
   "private": true,
   "version": "1.0.0",
-  "description": "NestJS Pet Clinic rest services",
+  "description": "<#= OutputTarget.ExecutionContext.GetApplicationConfig().Description #>",
   "license": "MIT",
   "scripts": {
   },

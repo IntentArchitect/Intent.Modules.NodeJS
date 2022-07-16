@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using Intent.Modules.Common;
 using Intent.Modules.Common.TypeScript.Templates;
-using Intent.Templates;
 
 namespace Intent.Modules.NestJS.Core.Events
 {
@@ -38,7 +37,7 @@ namespace Intent.Modules.NestJS.Core.Events
 
         public string ModuleId { get; }
         public string Statement { get; }
-        public List<TypeScriptImport> Imports { get; } = new List<TypeScriptImport>();
-        public List<ITemplateDependency> Dependencies { get; } = new List<ITemplateDependency>();
+        public List<TypeScriptImport> Imports { get; } = new();
+        public List<ITemplateDependency> Dependencies { get; } = new();
     }
 }

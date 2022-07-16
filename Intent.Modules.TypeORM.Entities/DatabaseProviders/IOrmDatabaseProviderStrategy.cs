@@ -23,8 +23,8 @@ internal interface IOrmDatabaseProviderStrategy
 
         return databaseProvider switch
         {
-            DatabaseSettingsExtensions.DatabaseProviderOptionsEnum.MSSQL => new MsSqlDatabaseProviderStrategy(outputTarget),
-            DatabaseSettingsExtensions.DatabaseProviderOptionsEnum.SQLite => new SqLiteDatabaseProviderStrategy(outputTarget),
+            DatabaseSettingsExtensions.DatabaseProviderOptionsEnum.Mssql => new MsSqlDatabaseProviderStrategy(outputTarget),
+            DatabaseSettingsExtensions.DatabaseProviderOptionsEnum.Sqlite => new SqLiteDatabaseProviderStrategy(outputTarget),
             null => throw new Exception($"The database provider application setting is unset."),
             _ => throw new Exception($"No database provider strategy available for {databaseProvider}")
         };

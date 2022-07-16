@@ -29,7 +29,7 @@
   <factoryExtensions></factoryExtensions>
   <dependencies>
     <dependency id="Intent.Common" version="3.3.6" />
-    <dependency id="Intent.Common.Types" version="3.3.1" />
+    <dependency id="Intent.Common.Types" version="3.3.2" />
     <dependency id="Intent.Common.TypeScript" version="3.3.3" />
     <dependency id="Intent.Metadata.WebApi" version="3.3.0" />
     <dependency id="Intent.Modelers.Services" version="3.3.2" />

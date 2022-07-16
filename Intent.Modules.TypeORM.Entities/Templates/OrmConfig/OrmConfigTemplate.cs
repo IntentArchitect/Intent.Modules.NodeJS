@@ -32,22 +32,14 @@ namespace Intent.Modules.TypeORM.Entities.Templates.OrmConfig
         /// </summary>
         public override string TransformText()
         {
-            this.Write("import { TypeOrmModuleOptions } from \'@nestjs/typeorm\';\r\n\r\nfunction typeOrmConfig" +
-                    "Factory(configService: ");
-            
-            #line 12 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\OrmConfig\OrmConfigTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(ImportType("ConfigService", "@nestjs/config")));
-            
-            #line default
-            #line hidden
-            this.Write(@"): TypeOrmModuleOptions {
+            this.Write(@"import { TypeOrmModuleOptions } from '@nestjs/typeorm';
+import { ConfigService } from '@nestjs/config';
+
+function typeOrmConfigFactory(configService: ConfigService): TypeOrmModuleOptions {
   const commonConf = {
     SYNCRONIZE: false,
     ENTITIES: [__dirname + '/domain/entities/*.entity{.ts,.js}'],
     MIGRATIONS: [__dirname + '/migrations/**/*{.ts,.js}'],
-    CLI: {
-      migrationsDir: 'src/migrations'
-    },
     MIGRATIONS_RUN: true
   };
 
@@ -55,21 +47,21 @@ namespace Intent.Modules.TypeORM.Entities.Templates.OrmConfig
     name: 'default',
 ");
             
-            #line 25 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\OrmConfig\OrmConfigTemplate.tt"
+            #line 23 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\OrmConfig\OrmConfigTemplate.tt"
  foreach (var option in GetDatabaseProviderOptions()) { 
             
             #line default
             #line hidden
             this.Write("    ");
             
-            #line 26 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\OrmConfig\OrmConfigTemplate.tt"
+            #line 24 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\OrmConfig\OrmConfigTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(option));
             
             #line default
             #line hidden
             this.Write(",\r\n");
             
-            #line 27 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\OrmConfig\OrmConfigTemplate.tt"
+            #line 25 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\OrmConfig\OrmConfigTemplate.tt"
  } 
             
             #line default
@@ -78,7 +70,6 @@ namespace Intent.Modules.TypeORM.Entities.Templates.OrmConfig
     synchronize: true,
     entities: commonConf.ENTITIES,
     migrations: commonConf.MIGRATIONS,
-    cli: commonConf.CLI,
     migrationsRun: commonConf.MIGRATIONS_RUN
   };
 

@@ -30,9 +30,14 @@ namespace Intent.Modules.NestJS.Core.Templates.Dotenv
 
         private void Handle(EnvironmentVariableRequest request)
         {
-            if (_requests.ContainsKey(request.Name))
+            if (_requests.TryGetValue(request.Name, out var value))
             {
-                throw new Exception($"More than one attempt to add \"{request.Name}\" environment variable.");
+                if (value != request.Value)
+                {
+                    throw new Exception($"Environment variable request with name already \"{request.Name}\" exists with different value \"{value}\".");
+                }
+
+                return;
             }
 
             _requests.Add(request.Name, request.Value);

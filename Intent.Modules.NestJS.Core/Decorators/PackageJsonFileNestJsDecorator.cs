@@ -47,38 +47,37 @@ namespace Intent.Modules.NestJS.Core.Decorators
             scripts.AddPropertyIfNotExists("test:e2e", "jest --config ./test/jest-e2e.json");
 
             var dependencies = new JsonEditor(fileEditor.GetProperty("dependencies"));
-            dependencies.AddPropertyIfNotExists("@nestjs/common", "^7.6.15");
-            dependencies.AddPropertyIfNotExists("@nestjs/core", "^7.6.15");
-            dependencies.AddPropertyIfNotExists("@nestjs/platform-express", "^7.6.15");
-            dependencies.AddPropertyIfNotExists("@nestjs/swagger", "^4.8.0");
-            dependencies.AddPropertyIfNotExists("reflect-metadata", "^0.1.13");
-            dependencies.AddPropertyIfNotExists("rimraf", "^3.0.2");
-            dependencies.AddPropertyIfNotExists("rxjs", "^6.6.6");
-            dependencies.AddPropertyIfNotExists("sqlite3", "^5.0.2");
-            dependencies.AddPropertyIfNotExists("swagger-ui-express", "^4.1.6");
-            dependencies.AddPropertyIfNotExists("typeorm", "^0.2.32");
+            dependencies.AddDependencyIfNotExists(NpmPackageDependencies.NestJs.Swagger);
+            dependencies.AddDependencyIfNotExists(NpmPackageDependencies.NestJs.PlatformExpress);
+            dependencies.AddDependencyIfNotExists(NpmPackageDependencies.NestJs.Core);
+            dependencies.AddDependencyIfNotExists(NpmPackageDependencies.NestJs.Common);
+            dependencies.AddDependencyIfNotExists(NpmPackageDependencies.SwaggerUiExpress);
+            dependencies.AddDependencyIfNotExists(NpmPackageDependencies.Sqlite3);
+            dependencies.AddDependencyIfNotExists(NpmPackageDependencies.Rxjs);
+            dependencies.AddDependencyIfNotExists(NpmPackageDependencies.Rimraf);
+            dependencies.AddDependencyIfNotExists(NpmPackageDependencies.ReflectMetadata);
 
             var devDependencies = new JsonEditor(fileEditor.GetProperty("devDependencies"));
-            devDependencies.AddPropertyIfNotExists("@nestjs/cli", "^7.6.0");
-            devDependencies.AddPropertyIfNotExists("@nestjs/schematics", "^7.3.1");
-            devDependencies.AddPropertyIfNotExists("@nestjs/testing", "^7.6.15");
-            devDependencies.AddPropertyIfNotExists("@types/express", "^4.17.11");
-            devDependencies.AddPropertyIfNotExists("@types/jest", "^26.0.22");
-            devDependencies.AddPropertyIfNotExists("@types/node", "^14.14.36");
-            devDependencies.AddPropertyIfNotExists("@types/supertest", "^2.0.10");
-            devDependencies.AddPropertyIfNotExists("@typescript-eslint/eslint-plugin", "^4.19.0");
-            devDependencies.AddPropertyIfNotExists("@typescript-eslint/parser", "^4.19.0");
-            devDependencies.AddPropertyIfNotExists("eslint", "^7.22.0");
-            devDependencies.AddPropertyIfNotExists("eslint-config-prettier", "^8.1.0");
-            devDependencies.AddPropertyIfNotExists("eslint-plugin-prettier", "^3.3.1");
-            devDependencies.AddPropertyIfNotExists("jest", "^26.6.3");
-            devDependencies.AddPropertyIfNotExists("prettier", "^2.2.1");
-            devDependencies.AddPropertyIfNotExists("supertest", "^6.1.3");
-            devDependencies.AddPropertyIfNotExists("ts-jest", "^26.5.4");
-            devDependencies.AddPropertyIfNotExists("ts-loader", "^8.0.18");
-            devDependencies.AddPropertyIfNotExists("ts-node", "^9.1.1");
-            devDependencies.AddPropertyIfNotExists("tsconfig-paths", "^3.9.0");
-            devDependencies.AddPropertyIfNotExists("typescript", "^4.2.3");
+            devDependencies.AddDependencyIfNotExists(NpmPackageDependencies.NestJs.Cli);
+            devDependencies.AddDependencyIfNotExists(NpmPackageDependencies.NestJs.Schematics);
+            devDependencies.AddDependencyIfNotExists(NpmPackageDependencies.NestJs.Testing);
+            devDependencies.AddDependencyIfNotExists(NpmPackageDependencies.Types.Express);
+            devDependencies.AddDependencyIfNotExists(NpmPackageDependencies.Types.Jest);
+            devDependencies.AddDependencyIfNotExists(NpmPackageDependencies.Types.Node);
+            devDependencies.AddDependencyIfNotExists(NpmPackageDependencies.Types.Supertest);
+            devDependencies.AddDependencyIfNotExists(NpmPackageDependencies.TypescriptEslint.EslintPlugin);
+            devDependencies.AddDependencyIfNotExists(NpmPackageDependencies.TypescriptEslint.Parser);
+            devDependencies.AddDependencyIfNotExists(NpmPackageDependencies.Eslint);
+            devDependencies.AddDependencyIfNotExists(NpmPackageDependencies.EslintConfigPrettier);
+            devDependencies.AddDependencyIfNotExists(NpmPackageDependencies.EslintPluginPrettier);
+            devDependencies.AddDependencyIfNotExists(NpmPackageDependencies.Jest);
+            devDependencies.AddDependencyIfNotExists(NpmPackageDependencies.Prettier);
+            devDependencies.AddDependencyIfNotExists(NpmPackageDependencies.SuperTest);
+            devDependencies.AddDependencyIfNotExists(NpmPackageDependencies.TsconfigPaths);
+            devDependencies.AddDependencyIfNotExists(NpmPackageDependencies.TsJest);
+            devDependencies.AddDependencyIfNotExists(NpmPackageDependencies.TsLoader);
+            devDependencies.AddDependencyIfNotExists(NpmPackageDependencies.TsNode);
+            devDependencies.AddDependencyIfNotExists(NpmPackageDependencies.Typescript);
 
             fileEditor.AddPropertyIfNotExists("jest", JsonSerializer.Create().Deserialize(new JsonTextReader(
                 new StringReader(@"{

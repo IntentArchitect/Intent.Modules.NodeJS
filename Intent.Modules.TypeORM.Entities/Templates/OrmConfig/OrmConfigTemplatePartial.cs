@@ -7,8 +7,10 @@ using Intent.Modules.Common.TypeScript.Templates;
 using Intent.Modules.NestJS.Core.Events;
 using Intent.Modules.TypeORM.Entities.DatabaseProviders;
 using Intent.Modules.TypeORM.Entities.Templates.Repository;
+using Intent.Modules.TypeORM.Entities.Templates.TypeOrmExModule;
 using Intent.RoslynWeaver.Attributes;
 using Intent.Templates;
+using CoreNpmPackageDependencies = Intent.Modules.NestJS.Core.NpmPackageDependencies;
 
 [assembly: DefaultIntentManaged(Mode.Merge)]
 [assembly: IntentTemplate("Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial", Version = "1.0")]
@@ -16,7 +18,7 @@ using Intent.Templates;
 namespace Intent.Modules.TypeORM.Entities.Templates.OrmConfig
 {
     [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
-    partial class OrmConfigTemplate : TypeScriptTemplateBase<IList<ClassModel>>
+    partial class OrmConfigTemplate : TypeScriptTemplateBase<IList<Intent.Modelers.Domain.Api.ClassModel>>
     {
         private readonly IOrmDatabaseProviderStrategy _ormDatabaseProviderStrategy;
 
@@ -24,12 +26,13 @@ namespace Intent.Modules.TypeORM.Entities.Templates.OrmConfig
         public const string TemplateId = "Intent.NodeJS.TypeORM.OrmConfig";
 
         [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
-        public OrmConfigTemplate(IOutputTarget outputTarget, IList<ClassModel> model) : base(TemplateId, outputTarget, model)
+        public OrmConfigTemplate(IOutputTarget outputTarget, IList<Intent.Modelers.Domain.Api.ClassModel> model) : base(TemplateId, outputTarget, model)
         {
             _ormDatabaseProviderStrategy = IOrmDatabaseProviderStrategy.Resolve(outputTarget);
 
-            AddDependency(new NpmPackageDependency("typeorm", "^0.2.32"));
-            AddDependency(new NpmPackageDependency("@nestjs/typeorm", "^7.1.5"));
+            AddDependency(CoreNpmPackageDependencies.NestJs.Common);
+            AddDependency(NpmPackageDependencies.NestJs.TypeOrm);
+            AddDependency(NpmPackageDependencies.TypeOrm);
 
             foreach (var dependency in _ormDatabaseProviderStrategy.GetPackageDependencies())
             {
@@ -63,8 +66,8 @@ namespace Intent.Modules.TypeORM.Entities.Templates.OrmConfig
             ExecutionContext.EventDispatcher.Publish(NestJsModuleImportRequest
                 .Create(
                     moduleId: null,
-                    statement: $"TypeOrmModule.forFeature([{string.Join(", ", repositories.Select(x => x.ClassName))}])")
-                .AddImport("TypeOrmModule", "@nestjs/typeorm")
+                    statement: $"TypeOrmExModule.forCustomRepository([{string.Join(", ", repositories.Select(x => x.ClassName))}])")
+                .AddDependency(TemplateDependency.OnTemplate(TypeOrmExModuleTemplate.TemplateId))
                 .AddDependencies(repositories.Select(TemplateDependency.OnTemplate).ToArray()));
         }
 

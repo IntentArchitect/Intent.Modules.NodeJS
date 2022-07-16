@@ -34,7 +34,14 @@ namespace Intent.Modules.TypeORM.Entities.Templates.Repository
         /// </summary>
         public override string TransformText()
         {
-            this.Write("import { EntityRepository, Repository } from \"typeorm\";\r\n\r\n@EntityRepository(");
+            this.Write("import { Repository } from \"typeorm\";\r\n\r\n@");
+            
+            #line 14 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\Repository\RepositoryTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(this.GetTypeOrmExDecoratorName()));
+            
+            #line default
+            #line hidden
+            this.Write("(");
             
             #line 14 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\Repository\RepositoryTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(GetTypeName(EntityTemplate.TemplateId, Model)));

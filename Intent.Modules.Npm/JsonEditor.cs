@@ -1,3 +1,4 @@
+using Intent.Modules.Common.TypeScript.Templates;
 using Newtonsoft.Json.Linq;
 
 namespace Intent.Modules.Npm
@@ -34,6 +35,11 @@ namespace Intent.Modules.Npm
             }
 
             return Value[key]!.Value<T>();
+        }
+
+        public void AddDependencyIfNotExists(NpmPackageDependency dependency)
+        {
+            AddPropertyIfNotExists(dependency.Name, dependency.Version);
         }
 
         public void AddPropertyIfNotExists(string key, object value)
