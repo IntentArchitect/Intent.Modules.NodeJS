@@ -32,7 +32,7 @@ namespace Intent.Modules.NestJS.Validation.Decorators
         private static Dictionary<string, TypeScriptTemplateBase<EnumModel>> _enumTemplatesById;
         private static readonly object LockObject = new();
 
-        [IntentManaged(Mode.Fully, Body = Mode.Fully)]
+        [IntentManaged(Mode.Fully, Body = Mode.Ignore)]
         public DtoValidationDecorator(DtoModelTemplate template, IApplication application)
         {
             _template = template;

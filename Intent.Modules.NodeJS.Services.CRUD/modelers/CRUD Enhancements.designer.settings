@@ -1,4 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?><settings version="3.1.1"><id>e570b563-457b-47d4-ae9f-5c627d917a9a</id><name>CRUD Enhancements</name><designerReferences /><packageSettings /><packageExtensions /><elementSettings /><elementExtensions><elementExtension type="Service" typeId="b16578a5-27b1-4047-a8df-f0b783d706bd"><creationOptions /><scriptOptions><option><text>Create CRUD Operations</text><icon type="FontAwesome" source="code" /><script>let options = element.lookupTypesOf("Class");
+<?xml version="1.0" encoding="utf-8"?>
+<settings version="3.1.1">
+  <id>e570b563-457b-47d4-ae9f-5c627d917a9a</id>
+  <name>CRUD Enhancements</name>
+  <designerReferences />
+  <packageSettings />
+  <packageExtensions />
+  <elementSettings />
+  <elementExtensions>
+    <elementExtension type="Service" typeId="b16578a5-27b1-4047-a8df-f0b783d706bd">
+      <creationOptions />
+      <scriptOptions>
+        <option>
+          <text>Create CRUD Operations</text>
+          <icon type="FontAwesome" source="code" />
+          <script>let options = element.lookupTypesOf("Class");
 if (options.length == 0) {
     dialogService.info("No Domain types could be found. Please ensure that you have a reference to the Domain package.");
 } else {
@@ -89,4 +104,13 @@ if (options.length == 0) {
             dialogService.error(`Could not find an Entity with the name '${entityName}'. The name of your service must correlate to an Entity in the domain.`);
         }
     });
-}</script></option></scriptOptions><typeOrder /><mappingSettings /></elementExtension></elementExtensions><associationSettings /><associationExtensions /></settings>
+}</script>
+        </option>
+      </scriptOptions>
+      <typeOrder />
+      <mappingSettings />
+    </elementExtension>
+  </elementExtensions>
+  <associationSettings />
+  <associationExtensions />
+</settings>

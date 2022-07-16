@@ -17,13 +17,13 @@ using OperationModel = Intent.Modelers.Domain.Api.OperationModel;
 namespace Intent.Modules.NestJS.Controllers.Templates.DtoModel
 {
     [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
-    partial class DtoModelTemplate : TypeScriptTemplateBase<DTOModel, DtoModelDecorator>
+    partial class DtoModelTemplate : TypeScriptTemplateBase<Intent.Modelers.Services.Api.DTOModel, DtoModelDecorator>
     {
         [IntentManaged(Mode.Fully)]
         public const string TemplateId = "Intent.NodeJS.NestJS.Controllers.DtoModel";
 
         [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
-        public DtoModelTemplate(IOutputTarget outputTarget, DTOModel model) : base(TemplateId, outputTarget, model)
+        public DtoModelTemplate(IOutputTarget outputTarget, Intent.Modelers.Services.Api.DTOModel model) : base(TemplateId, outputTarget, model)
         {
             AddTypeSource(TemplateId);
             AddTypeSource(EntityTemplate.TemplateId);
