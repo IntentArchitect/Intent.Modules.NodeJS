@@ -7,7 +7,7 @@
 //     the code is regenerated.
 // </auto-generated>
 // ------------------------------------------------------------------------------
-namespace Intent.Modules.NestJS.Authentication.Templates.Auth.Guards.JwtAuthGuard
+namespace Intent.Modules.NestJS.Authorization.Templates.RoleEnum
 {
     using System.Collections.Generic;
     using System.Linq;
@@ -16,15 +16,16 @@ namespace Intent.Modules.NestJS.Authentication.Templates.Auth.Guards.JwtAuthGuar
     using Intent.Modules.Common.TypeScript.Templates;
     using Intent.Templates;
     using Intent.Metadata.Models;
+    using Intent.Modules.TypeScript.Weaving.Decorators;
     using System;
     
     /// <summary>
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Authentication\Templates\Auth.Guards\JwtAuthGuard\JwtAuthGuardTemplate.tt"
+    #line 1 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Authorization\Templates\RoleEnum\RoleEnumTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "17.0.0.0")]
-    public partial class JwtAuthGuardTemplate : TypeScriptTemplateBase<object>
+    public partial class RoleEnumTemplate : TypeScriptTemplateBase<object>
     {
 #line hidden
         /// <summary>
@@ -32,33 +33,15 @@ namespace Intent.Modules.NestJS.Authentication.Templates.Auth.Guards.JwtAuthGuar
         /// </summary>
         public override string TransformText()
         {
-            this.Write("import { ExecutionContext, Injectable } from \'@nestjs/common\';\r\nimport { Reflecto" +
-                    "r } from \'@nestjs/core\';\r\nimport { AuthGuard } from \'@nestjs/passport\';\r\nimport " +
-                    "{ IS_PUBLIC_KEY } from \'./public.decorator\';\r\n\r\n@Injectable()\r\nexport class ");
+            this.Write("\n");
+            this.Write("export enum ");
             
-            #line 16 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Authentication\Templates\Auth.Guards\JwtAuthGuard\JwtAuthGuardTemplate.tt"
+            #line 10 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Authorization\Templates\RoleEnum\RoleEnumTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ClassName));
             
             #line default
             #line hidden
-            this.Write(@" extends AuthGuard('jwt') {
-  constructor(protected reflector: Reflector) {
-    super();
-  }
-
-  async canActivate(context: ExecutionContext): Promise<boolean> {
-    const isPublic = this.reflector.getAllAndOverride<boolean>(IS_PUBLIC_KEY, [
-      context.getHandler(),
-      context.getClass(),
-    ]);
-
-    if (isPublic) {
-      return true;
-    }
-
-    return await (super.canActivate(context) as Promise<boolean>);
-  }
-}");
+            this.Write(" {\r\n\r\n}");
             return this.GenerationEnvironment.ToString();
         }
     }

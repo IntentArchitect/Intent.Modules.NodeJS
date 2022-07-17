@@ -20,12 +20,12 @@ import { PassportModule } from '@nestjs/passport';
       imports: [ConfigModule],
       useFactory: (config: ConfigService) => ({
         secret: config.get('<#= EnvironmentVariables.JwtKey #>'),
-        signOptions: { expiresIn: '60s' },
+        signOptions: { expiresIn: '1h' },
       }),
       inject: [ConfigService]
     }),
   ],
-  providers: [<#= this.GetAuthServiceName() #>, <#= this.GetLocalStrategyName() #>, <#= this.GetJwtStrategyName() #>],
+  providers: [<#= GetProviders() #>],
   exports: [<#= this.GetAuthServiceName() #>],
 })
 export class <#= ClassName #> { }

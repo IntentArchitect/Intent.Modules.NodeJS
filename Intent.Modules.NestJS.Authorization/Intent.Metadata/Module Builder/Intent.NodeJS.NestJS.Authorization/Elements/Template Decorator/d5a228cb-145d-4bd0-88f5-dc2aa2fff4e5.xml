@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="d5a228cb-145d-4bd0-88f5-dc2aa2fff4e5" type="Template Decorator" typeId="f0f46278-29ea-42bd-9206-0e7034f623bc">
+  <name>ControllerRolesDecorator</name>
+  <display>ControllerRolesDecorator: ControllerDecorator</display>
+  <isAbstract>false</isAbstract>
+  <order>4</order>
+  <genericTypes />
+  <typeReference id="1070f374-7301-4284-b3e4-3a5bfb2606bf">
+    <typeId>bad80a27-0b31-459f-bd77-f528aa9513e1</typeId>
+    <isNavigable>true</isNavigable>
+    <isNullable>false</isNullable>
+    <isCollection>false</isCollection>
+    <isRequired>true</isRequired>
+    <typePackageName>Intent.NodeJS.NestJS.Controllers</typePackageName>
+    <typePackageId>1caaea83-9ac7-4c42-a3bd-b328cf3160fc</typePackageId>
+    <stereotypes />
+    <genericTypeParameters />
+  </typeReference>
+  <isMapped>false</isMapped>
+  <parentFolderId>68913e13-86a4-4efb-9e26-430c887ee59e</parentFolderId>
+  <packageId>68913e13-86a4-4efb-9e26-430c887ee59e</packageId>
+  <packageName>Intent.NodeJS.NestJS.Authorization</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

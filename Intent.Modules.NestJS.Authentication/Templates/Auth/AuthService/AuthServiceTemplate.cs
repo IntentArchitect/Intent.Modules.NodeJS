@@ -64,9 +64,9 @@ namespace Intent.Modules.NestJS.Authentication.Templates.Auth.AuthService
             
             #line default
             #line hidden
-            this.Write("): Promise<{ access_token: string }> {\r\n    const payload = { username: user.user" +
-                    "name, sub: user.userId };\r\n    return {\r\n      access_token: this.jwtService.sig" +
-                    "n(payload),\r\n    };\r\n  }\r\n}");
+            this.Write("): Promise<{ access_token: string }> {\r\n    const payload = { sub: user.userId, ." +
+                    "..user };\r\n    return {\r\n      access_token: this.jwtService.sign(payload),\r\n   " +
+                    " };\r\n  }\r\n}");
             return this.GenerationEnvironment.ToString();
         }
     }

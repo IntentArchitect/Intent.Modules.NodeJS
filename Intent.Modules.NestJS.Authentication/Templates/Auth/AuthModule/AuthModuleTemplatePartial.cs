@@ -1,7 +1,10 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using Intent.Engine;
 using Intent.Modules.Common.Templates;
 using Intent.Modules.Common.TypeScript.Templates;
+using Intent.Modules.NestJS.Authentication.Events;
 using Intent.Modules.NestJS.Core.Events;
 using Intent.RoslynWeaver.Attributes;
 using Intent.Templates;
@@ -14,6 +17,8 @@ namespace Intent.Modules.NestJS.Authentication.Templates.Auth.AuthModule
     [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
     partial class AuthModuleTemplate : TypeScriptTemplateBase<object>
     {
+        private readonly HashSet<string> _providers = new();
+
         [IntentManaged(Mode.Fully)]
         public const string TemplateId = "Intent.NodeJS.NestJS.Authentication.Auth.AuthModule";
 
@@ -24,6 +29,12 @@ namespace Intent.Modules.NestJS.Authentication.Templates.Auth.AuthModule
             AddDependency(Core.NpmPackageDependencies.NestJs.Config);
             AddDependency(NpmPackageDependencies.NestJsJwt);
             AddDependency(NpmPackageDependencies.NestJsPassport);
+            ExecutionContext.EventDispatcher.Subscribe<NestAuthModuleProviderRequest>(Handle);
+        }
+
+        private void Handle(NestAuthModuleProviderRequest request)
+        {
+            _providers.Add(request.Resolve(this));
         }
 
         public override void BeforeTemplateExecution()
@@ -36,6 +47,18 @@ namespace Intent.Modules.NestJS.Authentication.Templates.Auth.AuthModule
                 .AddDependency(TemplateDependency.OnTemplate(this)));
         }
 
+        private string GetProviders()
+        {
+            var providers = Enumerable.Empty<string>()
+                .Append(this.GetAuthServiceName())
+                .Append(this.GetLocalStrategyName())
+                .Append(this.GetJwtStrategyName())
+                .Concat(_providers)
+                .Select(provider => $"{Environment.NewLine}    {provider}");
+
+            return string.Join(",", providers);
+        }
+
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
         public override ITemplateFileConfig GetTemplateFileConfig()
         {
@@ -44,6 +67,5 @@ namespace Intent.Modules.NestJS.Authentication.Templates.Auth.AuthModule
                 fileName: $"auth.module"
             );
         }
-
     }
 }

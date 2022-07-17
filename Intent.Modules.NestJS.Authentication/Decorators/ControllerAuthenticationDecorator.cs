@@ -74,7 +74,7 @@ namespace Intent.Modules.NestJS.Authentication.Decorators
         {
             base.BeforeTemplateExecution();
 
-            if (_template.Model.HasSecured() || _template.Model.Operations.Any(x => x.HasSecured()))
+            if (_template.Model.HasSecured() || _template.Model.Operations.Any(operation => operation.HasSecured()))
             {
                 _application.EventDispatcher.Publish(new NestSwaggerDocumentBuilderRequest(".addBearerAuth()"));
             }

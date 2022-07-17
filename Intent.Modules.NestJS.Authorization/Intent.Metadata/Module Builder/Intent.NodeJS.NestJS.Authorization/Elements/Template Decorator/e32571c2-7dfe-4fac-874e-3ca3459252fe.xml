@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="e32571c2-7dfe-4fac-874e-3ca3459252fe" type="Template Decorator" typeId="f0f46278-29ea-42bd-9206-0e7034f623bc">
+  <name>UserRolesDecorator</name>
+  <display>UserRolesDecorator: UserDecorator</display>
+  <isAbstract>false</isAbstract>
+  <order>5</order>
+  <genericTypes />
+  <typeReference id="2677df0d-dbb6-4a6d-8ea3-f3aafd7e1cd1">
+    <typeId>e7b3698f-8b88-41a7-a283-742721cb6712</typeId>
+    <isNavigable>true</isNavigable>
+    <isNullable>false</isNullable>
+    <isCollection>false</isCollection>
+    <isRequired>true</isRequired>
+    <typePackageName>Intent.NodeJS.NestJS.Authentication</typePackageName>
+    <typePackageId>aa8c4258-8d86-45a3-8ced-3565db1b15b8</typePackageId>
+    <stereotypes />
+    <genericTypeParameters />
+  </typeReference>
+  <isMapped>false</isMapped>
+  <parentFolderId>68913e13-86a4-4efb-9e26-430c887ee59e</parentFolderId>
+  <packageId>68913e13-86a4-4efb-9e26-430c887ee59e</packageId>
+  <packageName>Intent.NodeJS.NestJS.Authorization</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

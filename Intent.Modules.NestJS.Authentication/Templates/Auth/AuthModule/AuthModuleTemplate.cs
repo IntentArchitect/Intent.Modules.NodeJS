@@ -50,25 +50,11 @@ namespace Intent.Modules.NestJS.Authentication.Templates.Auth.AuthModule
             
             #line default
             #line hidden
-            this.Write("\'),\r\n        signOptions: { expiresIn: \'60s\' },\r\n      }),\r\n      inject: [Config" +
-                    "Service]\r\n    }),\r\n  ],\r\n  providers: [");
+            this.Write("\'),\r\n        signOptions: { expiresIn: \'1h\' },\r\n      }),\r\n      inject: [ConfigS" +
+                    "ervice]\r\n    }),\r\n  ],\r\n  providers: [");
             
             #line 28 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Authentication\Templates\Auth\AuthModule\AuthModuleTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(this.GetAuthServiceName()));
-            
-            #line default
-            #line hidden
-            this.Write(", ");
-            
-            #line 28 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Authentication\Templates\Auth\AuthModule\AuthModuleTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(this.GetLocalStrategyName()));
-            
-            #line default
-            #line hidden
-            this.Write(", ");
-            
-            #line 28 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Authentication\Templates\Auth\AuthModule\AuthModuleTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(this.GetJwtStrategyName()));
+            this.Write(this.ToStringHelper.ToStringWithCulture(GetProviders()));
             
             #line default
             #line hidden

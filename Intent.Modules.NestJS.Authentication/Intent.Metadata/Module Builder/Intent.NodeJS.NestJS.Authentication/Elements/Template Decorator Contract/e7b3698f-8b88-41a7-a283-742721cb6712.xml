@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="e7b3698f-8b88-41a7-a283-742721cb6712" type="Template Decorator Contract" typeId="ac1da322-377e-45cf-a2d9-d147a4d91457">
+  <name>UserDecorator</name>
+  <display>UserDecorator</display>
+  <isAbstract>false</isAbstract>
+  <order>1</order>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>4d73e119-cd31-4833-9d3b-3a67a3119b33</parentFolderId>
+  <packageId>aa8c4258-8d86-45a3-8ced-3565db1b15b8</packageId>
+  <packageName>Intent.NodeJS.NestJS.Authentication</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

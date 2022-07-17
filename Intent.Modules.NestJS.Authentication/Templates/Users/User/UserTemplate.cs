@@ -24,7 +24,7 @@ namespace Intent.Modules.NestJS.Authentication.Templates.Users.User
     
     #line 1 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Authentication\Templates\Users\User\UserTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "17.0.0.0")]
-    public partial class UserTemplate : TypeScriptTemplateBase<object>
+    public partial class UserTemplate : TypeScriptTemplateBase<object, Intent.Modules.NestJS.Authentication.Templates.Users.User.UserDecorator>
     {
 #line hidden
         /// <summary>
@@ -39,7 +39,28 @@ namespace Intent.Modules.NestJS.Authentication.Templates.Users.User
             
             #line default
             #line hidden
-            this.Write(" {\r\n  userId: number;\r\n  username: string;\r\n  password?: string;\r\n}");
+            this.Write(" {\r\n  userId: number;\r\n  username: string;\r\n  password?: string;\r\n");
+            
+            #line 14 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Authentication\Templates\Users\User\UserTemplate.tt"
+ foreach (var member in GetDecoratorMembers()) { 
+            
+            #line default
+            #line hidden
+            this.Write("  ");
+            
+            #line 15 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Authentication\Templates\Users\User\UserTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(member));
+            
+            #line default
+            #line hidden
+            this.Write(";\r\n");
+            
+            #line 16 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Authentication\Templates\Users\User\UserTemplate.tt"
+ } 
+            
+            #line default
+            #line hidden
+            this.Write("}");
             return this.GenerationEnvironment.ToString();
         }
     }

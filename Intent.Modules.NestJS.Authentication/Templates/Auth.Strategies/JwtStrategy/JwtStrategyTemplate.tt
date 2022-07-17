@@ -22,7 +22,11 @@ export class <#= ClassName #> extends PassportStrategy(Strategy) {
     });
   }
 
-  async validate(payload: any) {
-    return { userId: payload.sub, username: payload.username };
+  async validate(payload: any): Promise<User> {
+    return {
+      userId: payload.userId,
+      username: payload.username,
+      roles: payload.roles
+    };
   }
 }

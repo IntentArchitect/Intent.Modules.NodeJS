@@ -247,6 +247,13 @@
     </FileLog>
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.Templates.TemplateDecoratorContract#e7b3698f-8b88-41a7-a283-742721cb6712</CorrelationId>
+      <ApplicationRelativeFilePath>Templates/Users/User/UserDecorator.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>Users/User/UserDecorator.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>ModuleBuilder.Typescript.Templates.TypescriptTemplate.PreProcessT4#4d73e119-cd31-4833-9d3b-3a67a3119b33</CorrelationId>
       <ApplicationRelativeFilePath>Templates/Users/User/UserTemplate.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Users/User/UserTemplate.cs</ProjectRelativeFilePath>

@@ -50,8 +50,9 @@ namespace Intent.Modules.NestJS.Authentication.Templates.Auth.Strategies.JwtStra
             
             #line default
             #line hidden
-            this.Write("\'),\r\n    });\r\n  }\r\n\r\n  async validate(payload: any) {\r\n    return { userId: paylo" +
-                    "ad.sub, username: payload.username };\r\n  }\r\n}");
+            this.Write("\'),\r\n    });\r\n  }\r\n\r\n  async validate(payload: any): Promise<User> {\r\n    return " +
+                    "{\r\n      userId: payload.userId,\r\n      username: payload.username,\r\n      roles" +
+                    ": payload.roles\r\n    };\r\n  }\r\n}");
             return this.GenerationEnvironment.ToString();
         }
     }

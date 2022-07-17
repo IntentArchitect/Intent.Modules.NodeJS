@@ -7,27 +7,32 @@
 <#@ import namespace="Intent.Modules.Common.TypeScript.Templates" #>
 <#@ import namespace="Intent.Templates" #>
 <#@ import namespace="Intent.Metadata.Models" #>
-import { ExecutionContext, Injectable } from '@nestjs/common';
+<#@ import namespace="Intent.Modules.NestJS.Authentication.Templates" #>
+import { Injectable, CanActivate, ExecutionContext } from '@nestjs/common';
 import { Reflector } from '@nestjs/core';
-import { AuthGuard } from '@nestjs/passport';
-import { IS_PUBLIC_KEY } from './public.decorator';
+import { ROLES_KEY } from '../roles.decorator';
 
 @Injectable()
-export class <#= ClassName #> extends AuthGuard('jwt') {
-  constructor(protected reflector: Reflector) {
-    super();
+export class <#= ClassName #> extends <#= this.GetJwtAuthGuardName() #> {
+  constructor(reflector: Reflector) {
+    super(reflector);
   }
 
   async canActivate(context: ExecutionContext): Promise<boolean> {
-    const isPublic = this.reflector.getAllAndOverride<boolean>(IS_PUBLIC_KEY, [
+    const requiredRoles = this.reflector.getAllAndOverride<<#= this.GetRoleEnumName() #>[]>(ROLES_KEY, [
       context.getHandler(),
       context.getClass(),
     ]);
 
-    if (isPublic) {
+    if (!requiredRoles) {
       return true;
     }
 
-    return await (super.canActivate(context) as Promise<boolean>);
+    if (!(await super.canActivate(context))) {
+      return false;
+    }
+
+    const { user } = context.switchToHttp().getRequest();
+    return requiredRoles.some((role) => user.roles?.includes(role));
   }
 }

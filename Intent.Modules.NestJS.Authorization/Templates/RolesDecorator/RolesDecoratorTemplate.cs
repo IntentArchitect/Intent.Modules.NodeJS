@@ -7,7 +7,7 @@
 //     the code is regenerated.
 // </auto-generated>
 // ------------------------------------------------------------------------------
-namespace Intent.Modules.NestJS.Authentication.Templates.Auth.Guards.JwtAuthGuard
+namespace Intent.Modules.NestJS.Authorization.Templates.RolesDecorator
 {
     using System.Collections.Generic;
     using System.Linq;
@@ -22,9 +22,9 @@ namespace Intent.Modules.NestJS.Authentication.Templates.Auth.Guards.JwtAuthGuar
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Authentication\Templates\Auth.Guards\JwtAuthGuard\JwtAuthGuardTemplate.tt"
+    #line 1 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Authorization\Templates\RolesDecorator\RolesDecoratorTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "17.0.0.0")]
-    public partial class JwtAuthGuardTemplate : TypeScriptTemplateBase<object>
+    public partial class RolesDecoratorTemplate : TypeScriptTemplateBase<object>
     {
 #line hidden
         /// <summary>
@@ -32,33 +32,22 @@ namespace Intent.Modules.NestJS.Authentication.Templates.Auth.Guards.JwtAuthGuar
         /// </summary>
         public override string TransformText()
         {
-            this.Write("import { ExecutionContext, Injectable } from \'@nestjs/common\';\r\nimport { Reflecto" +
-                    "r } from \'@nestjs/core\';\r\nimport { AuthGuard } from \'@nestjs/passport\';\r\nimport " +
-                    "{ IS_PUBLIC_KEY } from \'./public.decorator\';\r\n\r\n@Injectable()\r\nexport class ");
+            this.Write("import { SetMetadata } from \'@nestjs/common\';\r\n\r\nexport const ROLES_KEY = \'roles\'" +
+                    ";\r\nexport const ");
             
-            #line 16 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Authentication\Templates\Auth.Guards\JwtAuthGuard\JwtAuthGuardTemplate.tt"
+            #line 13 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Authorization\Templates\RolesDecorator\RolesDecoratorTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ClassName));
             
             #line default
             #line hidden
-            this.Write(@" extends AuthGuard('jwt') {
-  constructor(protected reflector: Reflector) {
-    super();
-  }
-
-  async canActivate(context: ExecutionContext): Promise<boolean> {
-    const isPublic = this.reflector.getAllAndOverride<boolean>(IS_PUBLIC_KEY, [
-      context.getHandler(),
-      context.getClass(),
-    ]);
-
-    if (isPublic) {
-      return true;
-    }
-
-    return await (super.canActivate(context) as Promise<boolean>);
-  }
-}");
+            this.Write(" = (...roles: ");
+            
+            #line 13 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Authorization\Templates\RolesDecorator\RolesDecoratorTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(this.GetRoleEnumName()));
+            
+            #line default
+            #line hidden
+            this.Write("[]) => SetMetadata(ROLES_KEY, roles);");
             return this.GenerationEnvironment.ToString();
         }
     }

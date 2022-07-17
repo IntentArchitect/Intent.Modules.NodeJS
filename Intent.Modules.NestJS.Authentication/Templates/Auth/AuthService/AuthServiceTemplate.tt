@@ -27,7 +27,7 @@ export class <#= ClassName #> {
   }
 
   async login(user: <#= this.GetUserName() #>): Promise<{ access_token: string }> {
-    const payload = { username: user.username, sub: user.userId };
+    const payload = { sub: user.userId, ...user };
     return {
       access_token: this.jwtService.sign(payload),
     };

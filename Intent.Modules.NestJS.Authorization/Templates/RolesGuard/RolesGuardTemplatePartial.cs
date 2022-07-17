@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using Intent.Engine;
 using Intent.Modules.Common.Templates;
 using Intent.Modules.Common.TypeScript.Templates;
@@ -9,30 +8,27 @@ using Intent.Templates;
 [assembly: DefaultIntentManaged(Mode.Merge)]
 [assembly: IntentTemplate("Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial", Version = "1.0")]
 
-namespace Intent.Modules.NestJS.Authentication.Templates.Users.User
+namespace Intent.Modules.NestJS.Authorization.Templates.RolesGuard
 {
     [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
-    partial class UserTemplate : TypeScriptTemplateBase<object, UserDecorator>
+    partial class RolesGuardTemplate : TypeScriptTemplateBase<object>
     {
         [IntentManaged(Mode.Fully)]
-        public const string TemplateId = "Intent.NodeJS.NestJS.Authentication.Users.User";
+        public const string TemplateId = "Intent.NodeJS.NestJS.Authorization.RolesGuard";
 
         [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
-        public UserTemplate(IOutputTarget outputTarget, object model = null) : base(TemplateId, outputTarget, model)
+        public RolesGuardTemplate(IOutputTarget outputTarget, object model = null) : base(TemplateId, outputTarget, model)
         {
-        }
-
-        private IEnumerable<string> GetDecoratorMembers()
-        {
-            return GetDecorators().SelectMany(x => x.GetMembers());
+            AddDependency(Core.NpmPackageDependencies.NestJs.Common);
+            AddDependency(Core.NpmPackageDependencies.NestJs.Core);
         }
 
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
         public override ITemplateFileConfig GetTemplateFileConfig()
         {
             return new TypeScriptFileConfig(
-                className: $"User",
-                fileName: $"user"
+                className: $"RolesGuard",
+                fileName: $"roles.guard"
             );
         }
 
