@@ -18,6 +18,7 @@ namespace Intent.Modules.NestJS.Core.Templates.Main
     {
         private readonly Dictionary<string, string> _nestApplicationOptions = new();
         private readonly HashSet<string> _globalPipes = new();
+        private readonly HashSet<string> _swaggerDocumentBuilderOptions = new();
 
         [IntentManaged(Mode.Fully)]
         public const string TemplateId = "Intent.NodeJS.NestJS.Core.Main";
@@ -27,6 +28,12 @@ namespace Intent.Modules.NestJS.Core.Templates.Main
         {
             ExecutionContext.EventDispatcher.Subscribe<NestApplicationOptionRequest>(Handle);
             ExecutionContext.EventDispatcher.Subscribe<NestApplicationGlobalPipeRequest>(Handle);
+            ExecutionContext.EventDispatcher.Subscribe<NestSwaggerDocumentBuilderRequest>(Handle);
+        }
+
+        private void Handle(NestSwaggerDocumentBuilderRequest request)
+        {
+            _swaggerDocumentBuilderOptions.Add(request.Method);
         }
 
         private void Handle(NestApplicationOptionRequest @event)

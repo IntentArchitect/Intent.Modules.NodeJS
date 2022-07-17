@@ -19,7 +19,7 @@ using Intent.Utils;
 namespace Intent.Modules.NestJS.Controllers.Templates.Controller
 {
     [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
-    partial class ControllerTemplate : TypeScriptTemplateBase<Intent.Modelers.Services.Api.ServiceModel>
+    partial class ControllerTemplate : TypeScriptTemplateBase<Intent.Modelers.Services.Api.ServiceModel, ControllerDecorator>
     {
         [IntentManaged(Mode.Fully)]
         public const string TemplateId = "Intent.NodeJS.NestJS.Controllers.Controller";
@@ -44,8 +44,14 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Controller
 
         public override void BeforeTemplateExecution()
         {
-            base.BeforeTemplateExecution();
+            foreach (var decorator in GetDecorators())
+            {
+                decorator.BeforeTemplateExecution();
+            }
+
             ExecutionContext.EventDispatcher.Publish(new NestJsControllerCreatedEvent(null, TemplateId, Model.Id));
+
+            base.BeforeTemplateExecution();
         }
 
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
@@ -57,18 +63,24 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Controller
             );
         }
 
-
-        private string GetClassDecorators()
+        private IEnumerable<string> GetClassDecorators()
         {
-            return $@"@Controller('{Model.GetHttpServiceSettings().Route() ?? $"api/{Model.Name.RemoveSuffix("Service", "Controller").ToLower()}"}')";
+            foreach (var decorator in GetDecorators().SelectMany(x => x.GetClassDecorators()))
+            {
+                yield return decorator;
+            }
+
+            yield return $"@Controller('{Model.GetHttpServiceSettings().Route() ?? $"api/{Model.Name.RemoveSuffix("Service", "Controller").ToLower()}"}')";
         }
 
-        private string GetOperationAnnotations(OperationModel o)
+        private IEnumerable<string> GetOperationDecorators(OperationModel operation)
         {
-            var attributes = new List<string>();
-            attributes.Add(GetHttpVerbAndPath(o));
-            return string.Join(@"
-        ", attributes);
+            foreach (var decorator in GetDecorators().SelectMany(x => x.GetOperationDecorators(operation)))
+            {
+                yield return decorator;
+            }
+
+            yield return GetHttpVerbAndPath(operation);
         }
 
         private string GetOperationParameters(OperationModel operation)

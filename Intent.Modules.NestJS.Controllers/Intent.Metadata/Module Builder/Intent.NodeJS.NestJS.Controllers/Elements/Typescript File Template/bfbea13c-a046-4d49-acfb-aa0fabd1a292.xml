@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <class id="bfbea13c-a046-4d49-acfb-aa0fabd1a292" type="Typescript File Template" typeId="e6e41d88-2829-41b6-a791-065d2bb44eb3">
-  <name>ControllerBaseTemplate</name>
-  <display>ControllerBaseTemplate: Single File</display>
+  <name>ControllerBase</name>
+  <display>ControllerBase: Single File</display>
   <isAbstract>false</isAbstract>
-  <order>1</order>
+  <order>2</order>
   <genericTypes />
   <typeReference id="1141daba-e668-48a5-99e5-e03f2cb2fe7c">
     <typeId>f65d2904-88c9-4501-873a-a4eec8303b1d</typeId>

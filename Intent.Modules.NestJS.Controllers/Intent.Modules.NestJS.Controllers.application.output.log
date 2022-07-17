@@ -30,6 +30,13 @@
     </FileLog>
     <FileLog>
       <ProjectId>a4ce5c50-1a9e-4e01-bd6e-45b7aed04495</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.Templates.TemplateDecoratorContract#bad80a27-0b31-459f-bd77-f528aa9513e1</CorrelationId>
+      <ApplicationRelativeFilePath>Templates/Controller/ControllerDecorator.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>Controller/ControllerDecorator.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>a4ce5c50-1a9e-4e01-bd6e-45b7aed04495</ProjectId>
       <CorrelationId>ModuleBuilder.Typescript.Templates.TypescriptTemplate.PreProcessT4#6a139daa-2e95-4170-b396-95b9edef8685</CorrelationId>
       <ApplicationRelativeFilePath>Templates/Controller/ControllerTemplate.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Controller/ControllerTemplate.cs</ProjectRelativeFilePath>

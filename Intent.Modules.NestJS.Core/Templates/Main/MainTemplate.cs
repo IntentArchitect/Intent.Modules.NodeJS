@@ -68,9 +68,30 @@ namespace Intent.Modules.NestJS.Core.Templates.Main
             
             #line default
             #line hidden
-            this.Write("\')\r\n    .setVersion(\'1.0\')\r\n    .build();\r\n  const document = SwaggerModule.creat" +
-                    "eDocument(app, config);\r\n  SwaggerModule.setup(\'swagger\', app, document);\r\n\r\n  a" +
-                    "wait app.listen(3000);\r\n}\r\nbootstrap();");
+            this.Write("\')\r\n    .setVersion(\'1.0\')\r\n");
+            
+            #line 20 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Core\Templates\Main\MainTemplate.tt"
+ foreach (var option in _swaggerDocumentBuilderOptions) { 
+            
+            #line default
+            #line hidden
+            this.Write("    ");
+            
+            #line 21 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Core\Templates\Main\MainTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(option));
+            
+            #line default
+            #line hidden
+            this.Write("\r\n");
+            
+            #line 22 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Core\Templates\Main\MainTemplate.tt"
+ } 
+            
+            #line default
+            #line hidden
+            this.Write("    .build();\r\n  const document = SwaggerModule.createDocument(app, config);\r\n  S" +
+                    "waggerModule.setup(\'swagger\', app, document);\r\n\r\n  await app.listen(3000);\r\n}\r\nb" +
+                    "ootstrap();");
             return this.GenerationEnvironment.ToString();
         }
     }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="c1c1db72-5f42-4f2c-a077-f3ea0ed46e07" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+  <name>Decorators</name>
+  <display>Decorators</display>
+  <isAbstract>false</isAbstract>
+  <order>4</order>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>aa8c4258-8d86-45a3-8ced-3565db1b15b8</parentFolderId>
+  <packageId>aa8c4258-8d86-45a3-8ced-3565db1b15b8</packageId>
+  <packageName>Intent.NodeJS.NestJS.Authentication</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

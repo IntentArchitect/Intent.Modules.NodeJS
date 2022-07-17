@@ -20,6 +20,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intent.Modules.NestJS.Winst
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intent.Modules.NestJS.Validation", "Intent.Modules.NestJS.Validation\Intent.Modules.NestJS.Validation.csproj", "{49722D16-76CB-4224-8AA3-C9E7DA883F15}"
 EndProject
+Project("{52B49DB5-3EA9-4095-B1A7-DF1AC22D7DAE}") = "Intent.Modules.NestJS.Authentication", "Intent.Modules.NestJS.Authentication\Intent.Modules.NestJS.Authentication.csproj", "{E5EFADD1-5947-44ED-9885-77BE31E7C358}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -62,6 +64,10 @@ Global
 		{49722D16-76CB-4224-8AA3-C9E7DA883F15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49722D16-76CB-4224-8AA3-C9E7DA883F15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49722D16-76CB-4224-8AA3-C9E7DA883F15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5EFADD1-5947-44ED-9885-77BE31E7C358}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5EFADD1-5947-44ED-9885-77BE31E7C358}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5EFADD1-5947-44ED-9885-77BE31E7C358}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5EFADD1-5947-44ED-9885-77BE31E7C358}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

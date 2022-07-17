@@ -17,6 +17,9 @@ async function bootstrap() {
     .setTitle('<#= OutputTarget.Application.Name #>')
     .setDescription('<#= OutputTarget.Application.Description #>')
     .setVersion('1.0')
+<# foreach (var option in _swaggerDocumentBuilderOptions) { #>
+    <#= option #>
+<# } #>
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('swagger', app, document);

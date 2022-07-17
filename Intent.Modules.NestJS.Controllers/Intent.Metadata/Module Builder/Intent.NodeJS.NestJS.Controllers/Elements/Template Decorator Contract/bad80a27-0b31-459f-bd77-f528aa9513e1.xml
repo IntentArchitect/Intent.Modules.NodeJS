@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="bad80a27-0b31-459f-bd77-f528aa9513e1" type="Template Decorator Contract" typeId="ac1da322-377e-45cf-a2d9-d147a4d91457">
+  <name>ControllerDecorator</name>
+  <display>ControllerDecorator</display>
+  <isAbstract>false</isAbstract>
+  <order>1</order>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>6a139daa-2e95-4170-b396-95b9edef8685</parentFolderId>
+  <packageId>1caaea83-9ac7-4c42-a3bd-b328cf3160fc</packageId>
+  <packageName>Intent.NodeJS.NestJS.Controllers</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

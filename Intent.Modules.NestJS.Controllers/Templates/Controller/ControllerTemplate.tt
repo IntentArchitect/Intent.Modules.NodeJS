@@ -1,4 +1,4 @@
-<#@ template language="C#" inherits="TypeScriptTemplateBase<Intent.Modelers.Services.Api.ServiceModel>" #>
+<#@ template language="C#" inherits="TypeScriptTemplateBase<Intent.Modelers.Services.Api.ServiceModel, Intent.Modules.NestJS.Controllers.Templates.Controller.ControllerDecorator>" #>
 <#@ assembly name="System.Core" #>
 <#@ import namespace="System.Collections.Generic" #>
 <#@ import namespace="System.Linq" #>
@@ -10,15 +10,18 @@
 <#@ import namespace="Intent.Modelers.Services.Api" #>
 import { Controller, Logger } from '@nestjs/common';
 
-
-<#= GetClassDecorators() #>
+<# foreach (var decorator in GetClassDecorators()) { #>
+<#= decorator #>
+<# } #>
 export class <#= ClassName #> {
   logger = new Logger('<#= ClassName #>');
 
   constructor(private readonly <#= ServiceClassName.ToCamelCase() #>: <#= ServiceClassName #>) {}
-<#  foreach(var operation in Model.Operations) { #>
+<# foreach(var operation in Model.Operations) { #>
 
-  <#= GetOperationAnnotations(operation) #>
+<# foreach (var decorator in GetOperationDecorators(operation)) { #>
+  <#= decorator #>
+<# } #>
   async <#= operation.Name.ToCamelCase() #>(<#= GetOperationParameters(operation) #>): Promise<<#= GetReturnType(operation) #>> {
 <#      if (operation.ReturnType != null) { #>
     var result = await this.<#= ServiceClassName.ToCamelCase() #>.<#= operation.Name.ToCamelCase() #>(<#= GetParameters(operation) #>);

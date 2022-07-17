@@ -1,0 +1,205 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="Templates\AuthModule\AuthModuleTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>AuthModuleTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\AuthService\AuthServiceTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>AuthServiceTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\JwtAuthGuard\JwtAuthGuardTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>JwtAuthGuardTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\JwtStrategy\JwtStrategyTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>JwtStrategyTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\LocalAuthGuard\LocalAuthGuardTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>LocalAuthGuardTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\LocalStrategy\LocalStrategyTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>LocalStrategyTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\UsersModules\UsersModulesTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>UsersModulesTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\UsersService\UsersServiceTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>UsersServiceTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\UsersModule\UsersModuleTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>UsersModuleTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\Auth\AuthModule\AuthModuleTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>AuthModuleTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\Auth\AuthService\AuthServiceTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>AuthServiceTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\Auth.Guards\JwtAuthGuard\JwtAuthGuardTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>JwtAuthGuardTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\Auth.Strategies\JwtStrategy\JwtStrategyTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>JwtStrategyTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\Auth.Guards\LocalAuthGuard\LocalAuthGuardTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>LocalAuthGuardTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\Auth.Strategies\LocalStrategy\LocalStrategyTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>LocalStrategyTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\Users\UsersModule\UsersModuleTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>UsersModuleTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\Users\UsersService\UsersServiceTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>UsersServiceTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\Users\User\UserTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>UserTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\Auth.Guards\PublicDecorator\PublicDecoratorTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>PublicDecoratorTemplate.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Templates\Auth.Guards\JwtAuthGuard\JwtAuthGuardTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>JwtAuthGuardTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Auth.Guards\LocalAuthGuard\LocalAuthGuardTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LocalAuthGuardTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Auth.Strategies\JwtStrategy\JwtStrategyTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>JwtStrategyTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Auth.Strategies\LocalStrategy\LocalStrategyTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LocalStrategyTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\AuthModule\AuthModuleTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AuthModuleTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\AuthService\AuthServiceTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AuthServiceTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Auth\AuthModule\AuthModuleTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AuthModuleTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Auth\AuthService\AuthServiceTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AuthServiceTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\JwtAuthGuard\JwtAuthGuardTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>JwtAuthGuardTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\JwtStrategy\JwtStrategyTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>JwtStrategyTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\LocalAuthGuard\LocalAuthGuardTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LocalAuthGuardTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\LocalStrategy\LocalStrategyTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LocalStrategyTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\UsersModules\UsersModulesTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>UsersModulesTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\UsersService\UsersServiceTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>UsersServiceTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\UsersModule\UsersModuleTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>UsersModuleTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Users\UsersModule\UsersModuleTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>UsersModuleTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Users\UsersService\UsersServiceTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>UsersServiceTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Users\User\UserTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>UserTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Auth.Guards\PublicDecorator\PublicDecoratorTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>PublicDecoratorTemplate.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Intent.Modules.Common" Version="3.3.6" />
+    <PackageReference Include="Intent.Modules.Common.TypeScript" Version="3.3.4" />
+    <PackageReference Include="Intent.Modules.Modelers.Services" Version="3.3.2" />
+    <PackageReference Include="Intent.Packager" Version="3.3.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Intent.RoslynWeaver.Attributes" Version="1.1.3" />
+    <PackageReference Include="Intent.SoftwareFactory.SDK" Version="3.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Intent.Modules.NestJS.Controllers\Intent.Modules.NestJS.Controllers.csproj" />
+    <ProjectReference Include="..\Intent.Modules.NestJS.Core\Intent.Modules.NestJS.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+</Project>

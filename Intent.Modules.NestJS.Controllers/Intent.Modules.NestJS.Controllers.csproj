@@ -28,10 +28,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Templates\ControllerTemplate\ControllerTemplate.tt">
-      <Generator>TextTemplatingFilePreprocessor</Generator>
-      <LastGenOutput>ControllerTemplate.cs</LastGenOutput>
-    </None>
     <None Update="Templates\ControllerBaseTemplate\ControllerBaseTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>ControllerBaseTemplate.cs</LastGenOutput>
@@ -55,11 +51,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Templates\ControllerTemplate\ControllerTemplate.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>ControllerTemplate.tt</DependentUpon>
-    </Compile>
     <Compile Update="Templates\ControllerBaseTemplate\ControllerBaseTemplate.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

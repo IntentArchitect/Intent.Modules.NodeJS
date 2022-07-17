@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="4f0438e0-64b4-48c6-b27b-6d0646246491" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+  <name>Users</name>
+  <display>Users</display>
+  <isAbstract>false</isAbstract>
+  <order>5</order>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>aa8c4258-8d86-45a3-8ced-3565db1b15b8</parentFolderId>
+  <packageId>aa8c4258-8d86-45a3-8ced-3565db1b15b8</packageId>
+  <packageName>Intent.NodeJS.NestJS.Authentication</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="a0a9b541-eba0-4a5d-8b03-f07870c8820d" type="Template Decorator" typeId="f0f46278-29ea-42bd-9206-0e7034f623bc">
+  <name>ControllerAuthenticationDecorator</name>
+  <display>ControllerAuthenticationDecorator: ControllerDecorator</display>
+  <isAbstract>false</isAbstract>
+  <order>0</order>
+  <genericTypes />
+  <typeReference id="088e6a44-7478-43a1-8cb0-0926f291aa9c">
+    <typeId>bad80a27-0b31-459f-bd77-f528aa9513e1</typeId>
+    <isNavigable>true</isNavigable>
+    <isNullable>false</isNullable>
+    <isCollection>false</isCollection>
+    <isRequired>true</isRequired>
+    <typePackageName>Intent.NodeJS.NestJS.Controllers</typePackageName>
+    <typePackageId>1caaea83-9ac7-4c42-a3bd-b328cf3160fc</typePackageId>
+    <stereotypes />
+    <genericTypeParameters />
+  </typeReference>
+  <isMapped>false</isMapped>
+  <parentFolderId>c1c1db72-5f42-4f2c-a077-f3ea0ed46e07</parentFolderId>
+  <packageId>aa8c4258-8d86-45a3-8ced-3565db1b15b8</packageId>
+  <packageName>Intent.NodeJS.NestJS.Authentication</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

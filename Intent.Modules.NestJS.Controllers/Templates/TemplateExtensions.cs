@@ -14,19 +14,19 @@ namespace Intent.Modules.NestJS.Controllers.Templates
 {
     public static class TemplateExtensions
     {
-        public static string GetControllerBaseTemplateName<T>(this IntentTemplateBase<T> template)
-        {
-            return template.GetTypeName(ControllerBaseTemplate.TemplateId);
-        }
-
-        public static string GetControllerTemplateName<T>(this IntentTemplateBase<T> template) where T : Intent.Modelers.Services.Api.ServiceModel
+        public static string GetControllerName<T>(this IntentTemplateBase<T> template) where T : Intent.Modelers.Services.Api.ServiceModel
         {
             return template.GetTypeName(ControllerTemplate.TemplateId, template.Model);
         }
 
-        public static string GetControllerTemplateName(this IntentTemplateBase template, Intent.Modelers.Services.Api.ServiceModel model)
+        public static string GetControllerName(this IntentTemplateBase template, Intent.Modelers.Services.Api.ServiceModel model)
         {
             return template.GetTypeName(ControllerTemplate.TemplateId, model);
+        }
+
+        public static string GetControllerBaseName<T>(this IntentTemplateBase<T> template)
+        {
+            return template.GetTypeName(ControllerBaseTemplate.TemplateId);
         }
 
         public static string GetDtoModelName<T>(this IntentTemplateBase<T> template) where T : Intent.Modelers.Services.Api.DTOModel
