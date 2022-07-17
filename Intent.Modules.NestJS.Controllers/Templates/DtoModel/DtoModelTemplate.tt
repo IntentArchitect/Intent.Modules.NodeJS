@@ -10,7 +10,7 @@
 <#@ import namespace="Intent.Modelers.Services.Api" #>
 
 export class <#= ClassName #>
-{<#  foreach(var field in Model.Fields) { #>
+{<# foreach(var field in Model.Fields) { #>
 
 <# foreach (var decorator in GetFieldDecorators(field)) { #>
   <#= decorator #>

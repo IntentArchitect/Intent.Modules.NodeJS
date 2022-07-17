@@ -50,9 +50,15 @@ namespace Intent.Modules.NestJS.Authentication.Templates.Auth.Strategies.JwtStra
             
             #line default
             #line hidden
-            this.Write("\'),\r\n    });\r\n  }\r\n\r\n  async validate(payload: any): Promise<User> {\r\n    return " +
-                    "{\r\n      userId: payload.userId,\r\n      username: payload.username,\r\n      roles" +
-                    ": payload.roles\r\n    };\r\n  }\r\n}");
+            this.Write("\'),\r\n    });\r\n  }\r\n\r\n  async validate(payload: any): Promise<");
+            
+            #line 25 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Authentication\Templates\Auth.Strategies\JwtStrategy\JwtStrategyTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(this.GetUserName()));
+            
+            #line default
+            #line hidden
+            this.Write("> {\r\n    return {\r\n      userId: payload.userId,\r\n      username: payload.usernam" +
+                    "e,\r\n      roles: payload.roles\r\n    };\r\n  }\r\n}");
             return this.GenerationEnvironment.ToString();
         }
     }

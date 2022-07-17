@@ -27,6 +27,11 @@ namespace Intent.Modules.NestJS.Controllers.Templates.DtoModel
         {
             AddTypeSource(TemplateId);
             AddTypeSource(EntityTemplate.TemplateId);
+
+            if (Model.Fields.Any(IsDate))
+            {
+                AddDependency(NpmPackageDependencies.ClassTransformer);
+            }
         }
 
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
@@ -56,6 +61,11 @@ namespace Intent.Modules.NestJS.Controllers.Templates.DtoModel
             }
 
             yield return $"@{ImportType("ApiProperty", "@nestjs/swagger")}()";
+
+            if (IsDate(field))
+            {
+                yield return $"@{ImportType("Type", "class-transformer")}(() => Date)";
+            }
         }
 
         private string GetMappings()
@@ -109,6 +119,11 @@ namespace Intent.Modules.NestJS.Controllers.Templates.DtoModel
                 .Where(x => !string.IsNullOrWhiteSpace(x))
                 .Distinct();
             return relations;
+        }
+
+        private static bool IsDate(IHasTypeReference field)
+        {
+            return field.TypeReference.Element.Name is "date" or "datetime" or "datetimeoffset";
         }
     }
 }

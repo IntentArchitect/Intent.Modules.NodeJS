@@ -32,7 +32,7 @@
   <dependencies>
     <dependency id="Intent.Common" version="3.3.6" />
     <dependency id="Intent.Common.Types" version="3.3.2" />
-    <dependency id="Intent.Common.TypeScript" version="3.3.3" />
+    <dependency id="Intent.Common.TypeScript" version="3.3.4" />
     <dependency id="Intent.Npm" version="3.3.1" />
   </dependencies>
   <files>

@@ -43,7 +43,7 @@ namespace Intent.Modules.NestJS.Controllers.Templates.DtoModel
             this.Write("\r\n{");
             
             #line 13 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
-  foreach(var field in Model.Fields) { 
+ foreach(var field in Model.Fields) { 
             
             #line default
             #line hidden

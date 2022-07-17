@@ -22,7 +22,7 @@ export class <#= ClassName #> extends PassportStrategy(Strategy) {
     });
   }
 
-  async validate(payload: any): Promise<User> {
+  async validate(payload: any): Promise<<#= this.GetUserName() #>> {
     return {
       userId: payload.userId,
       username: payload.username,

@@ -38,7 +38,7 @@ namespace Intent.Modules.NestJS.Validation.Decorators
             _template = template;
             _application = application;
 
-            _template.AddDependency(NpmPackageDependencies.ClassTransformer);
+            _template.AddDependency(Controllers.NpmPackageDependencies.ClassTransformer);
             _template.AddDependency(NpmPackageDependencies.ClassValidator);
         }
 
