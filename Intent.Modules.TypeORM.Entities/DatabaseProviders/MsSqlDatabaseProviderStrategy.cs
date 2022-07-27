@@ -20,6 +20,7 @@ internal class MsSqlDatabaseProviderStrategy : OrmDatabaseProviderStrategyBase
         yield return "username: configService.get('DB_USERNAME')";
         yield return "password: configService.get('DB_PASSWORD')";
         yield return "database: configService.get('DB_NAME')";
+        yield return "extra: { trustServerCertificate: true }";
     }
 
     public override IEnumerable<EnvironmentVariableRequest> GetEnvironmentVariableRequests()
@@ -40,7 +41,7 @@ internal class MsSqlDatabaseProviderStrategy : OrmDatabaseProviderStrategyBase
         columnType = typeName switch
         {
             "binary" => ("varbinary", Enumerable.Empty<string>()),
-            "bool" => ("bool", Enumerable.Empty<string>()),
+            "bool" => ("bit", Enumerable.Empty<string>()),
             "byte" => ("tinyint", Enumerable.Empty<string>()),
             "char" => ("char", new[] { "length: 1" }),
             "date" => ("date", Enumerable.Empty<string>()),
