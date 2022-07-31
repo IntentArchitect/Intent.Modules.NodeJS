@@ -56,6 +56,15 @@ namespace Intent.Module.TypeScript.Domain.Templates.Entity
             return string.IsNullOrWhiteSpace(decorators) ? "" : $@"
   {decorators}";
         }
+
+        private IEnumerable<AssociationEndModel> GetAssociationsRequiringFields()
+        {
+            return Model.AssociatedClasses
+                .Where(associationEnd =>
+                    associationEnd.IsNavigable ||
+                    GetDecorators()
+                        .Any(decorator => decorator.RequiresAssociationFieldFor(associationEnd)));
+        }
     }
 
     public static class TypeScriptCodeExtensions

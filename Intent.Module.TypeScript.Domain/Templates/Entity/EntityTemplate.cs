@@ -96,34 +96,34 @@ namespace Intent.Module.TypeScript.Domain.Templates.Entity
             #line hidden
             
             #line 18 "C:\Dev\Intent.Modules.NodeJS\Intent.Module.TypeScript.Domain\Templates\Entity\EntityTemplate.tt"
-  foreach(var associationEnd in Model.AssociatedClasses.Where(x => x.IsNavigable)) { 
+  foreach(var association in GetAssociationsRequiringFields()) { 
             
             #line default
             #line hidden
             this.Write("  ");
             
             #line 19 "C:\Dev\Intent.Modules.NodeJS\Intent.Module.TypeScript.Domain\Templates\Entity\EntityTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(GetAssociationDecorators(associationEnd)));
+            this.Write(this.ToStringHelper.ToStringWithCulture(GetAssociationDecorators(association)));
             
             #line default
             #line hidden
             this.Write("\r\n  ");
             
             #line 20 "C:\Dev\Intent.Modules.NodeJS\Intent.Module.TypeScript.Domain\Templates\Entity\EntityTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(associationEnd.Name.ToCamelCase()));
+            this.Write(this.ToStringHelper.ToStringWithCulture(association.Name.ToCamelCase()));
             
             #line default
             #line hidden
             
             #line 20 "C:\Dev\Intent.Modules.NodeJS\Intent.Module.TypeScript.Domain\Templates\Entity\EntityTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(associationEnd.IsNullable ? "?" : ""));
+            this.Write(this.ToStringHelper.ToStringWithCulture(association.IsNullable ? "?" : ""));
             
             #line default
             #line hidden
             this.Write(": ");
             
             #line 20 "C:\Dev\Intent.Modules.NodeJS\Intent.Module.TypeScript.Domain\Templates\Entity\EntityTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(GetTypeName(associationEnd)));
+            this.Write(this.ToStringHelper.ToStringWithCulture(GetTypeName(association)));
             
             #line default
             #line hidden

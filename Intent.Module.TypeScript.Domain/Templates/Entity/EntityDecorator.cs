@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using Intent.Modelers.Domain.Api;
 using Intent.RoslynWeaver.Attributes;
 using Intent.Templates;
@@ -15,9 +17,9 @@ namespace Intent.Module.TypeScript.Domain.Templates.Entity
 
         public virtual string GetBeforeFields() => null;
         public virtual string GetAfterFields() => null;
-        public virtual IEnumerable<string> GetClassDecorators() => new string[0];
-        public virtual IEnumerable<string> GetFieldDecorators(AttributeModel attribute) => new string[0];
-        public virtual IEnumerable<string> GetFieldDecorators(AssociationEndModel associationEnd) => new string[0];
-
+        public virtual IEnumerable<string> GetClassDecorators() => Enumerable.Empty<string>();
+        public virtual IEnumerable<string> GetFieldDecorators(AttributeModel attribute) => Enumerable.Empty<string>();
+        public virtual IEnumerable<string> GetFieldDecorators(AssociationEndModel thatEnd) => Enumerable.Empty<string>();
+        public virtual bool RequiresAssociationFieldFor(AssociationEndModel thatEnd) => false;
     }
 }

@@ -15,9 +15,9 @@ export class <#= ClassName #> {
   <#= GetAttributeDecorators(attribute) #>
   <#= attribute.Name.ToCamelCase() #><#= attribute.TypeReference.IsNullable ? "?" : "" #>: <#= GetTypeName(attribute.TypeReference) #>;
 <#  } #>
-<#  foreach(var associationEnd in Model.AssociatedClasses.Where(x => x.IsNavigable)) { #>
-  <#= GetAssociationDecorators(associationEnd) #>
-  <#= associationEnd.Name.ToCamelCase() #><#= associationEnd.IsNullable ? "?" : "" #>: <#= GetTypeName(associationEnd) #>;
+<#  foreach(var association in GetAssociationsRequiringFields()) { #>
+  <#= GetAssociationDecorators(association) #>
+  <#= association.Name.ToCamelCase() #><#= association.IsNullable ? "?" : "" #>: <#= GetTypeName(association) #>;
 <#  } #><#= GetDecoratorsOutput(x => x.GetAfterFields()) #>
 <#  foreach(var operation in Model.Operations) { #>
 

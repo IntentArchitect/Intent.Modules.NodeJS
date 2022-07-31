@@ -122,32 +122,36 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
 
         public override IEnumerable<string> GetFieldDecorators(AssociationEndModel thatEnd)
         {
-            if (!thatEnd.IsNavigable)
-            {
-                throw new InvalidOperationException("Cannot call this method if associationEnd is not navigable.");
-            }
+            var isCompositeOwner = thatEnd.Equals(thatEnd.Association.TargetEnd) &&
+                                   thatEnd.Association.SourceEnd.Multiplicity == Multiplicity.One;
+
+            var options = isCompositeOwner
+                ? "{ cascade: true, onDelete: 'CASCADE' }"
+                : "{ cascade: ['insert', 'update'] }";
 
             var statements = new List<string>();
-            var sourceEnd = thatEnd.OtherEnd();
-            if (!sourceEnd.IsCollection && !thatEnd.IsCollection) // one-to-one
+            var thisEnd = thatEnd.OtherEnd();
+            if (!thisEnd.IsCollection && !thatEnd.IsCollection) // one-to-one
             {
-                statements.Add($"@{_template.ImportType("OneToOne", "typeorm")}(() => {_template.GetTypeName(EntityTemplate.TemplateId, thatEnd.Element)}{(sourceEnd.IsNavigable ? $", {thatEnd.Name.ToCamelCase()} => {thatEnd.Name.ToCamelCase()}.{sourceEnd.Name.ToCamelCase()}" : "")})");
+                statements.Add($"@{_template.ImportType("OneToOne", "typeorm")}(() => {_template.GetTypeName(EntityTemplate.TemplateId, thatEnd.Element)}{(thisEnd.IsNavigable ? $", {thatEnd.Name.ToCamelCase()} => {thatEnd.Name.ToCamelCase()}.{thisEnd.Name.ToCamelCase()}" : "")}, {options})");
                 if (thatEnd.IsTargetEnd())
                 {
                     statements.Add($"@{_template.ImportType("JoinColumn", "typeorm")}()");
                 }
             }
-            else if (!sourceEnd.IsCollection && thatEnd.IsCollection) // one-to-many
+            else if (!thisEnd.IsCollection && thatEnd.IsCollection) // one-to-many
             {
-                statements.Add($"@{_template.ImportType("OneToMany", "typeorm")}(() => {_template.GetTypeName(EntityTemplate.TemplateId, thatEnd.Element)}{(sourceEnd.IsNavigable ? $", {thatEnd.Name.ToCamelCase()} => {thatEnd.Name.ToCamelCase()}.{sourceEnd.Name.ToCamelCase()}" : "")})");
+                // TypeOrm does not support support unidirectional one-to-many and many-to-one relationships when using decorators:
+                // https://github.com/typeorm/typeorm/issues/3233
+                statements.Add($"@{_template.ImportType("OneToMany", "typeorm")}(() => {_template.GetTypeName(EntityTemplate.TemplateId, thatEnd.Element)}, {thatEnd.Name.ToCamelCase()} => {thatEnd.Name.ToCamelCase()}.{thisEnd.Name.ToCamelCase()}, {options})");
             }
-            else if (sourceEnd.IsCollection && !thatEnd.IsCollection) // many-to-one
+            else if (thisEnd.IsCollection && !thatEnd.IsCollection) // many-to-one
             {
-                statements.Add($"@{_template.ImportType("ManyToOne", "typeorm")}(() => {_template.GetTypeName(EntityTemplate.TemplateId, thatEnd.Element)}{(sourceEnd.IsNavigable ? $", {thatEnd.Name.ToCamelCase()} => {thatEnd.Name.ToCamelCase()}.{sourceEnd.Name.ToCamelCase()}" : "")})");
+                statements.Add($"@{_template.ImportType("ManyToOne", "typeorm")}(() => {_template.GetTypeName(EntityTemplate.TemplateId, thatEnd.Element)}{(thisEnd.IsNavigable ? $", {thatEnd.Name.ToCamelCase()} => {thatEnd.Name.ToCamelCase()}.{thisEnd.Name.ToCamelCase()}" : "")}, {options})");
             }
-            else if (sourceEnd.IsCollection && thatEnd.IsCollection) // many-to-many
+            else if (thisEnd.IsCollection && thatEnd.IsCollection) // many-to-many
             {
-                statements.Add($"@{_template.ImportType("ManyToMany", "typeorm")}(() => {_template.GetTypeName(EntityTemplate.TemplateId, thatEnd.Element)}{(sourceEnd.IsNavigable ? $", {thatEnd.Name.ToCamelCase()} => {thatEnd.Name.ToCamelCase()}.{sourceEnd.Name.ToCamelCase()}" : "")})");
+                statements.Add($"@{_template.ImportType("ManyToMany", "typeorm")}(() => {_template.GetTypeName(EntityTemplate.TemplateId, thatEnd.Element)}{(thisEnd.IsNavigable ? $", {thatEnd.Name.ToCamelCase()} => {thatEnd.Name.ToCamelCase()}.{thisEnd.Name.ToCamelCase()}" : "")}, {options})");
                 if (thatEnd.IsTargetEnd())
                 {
                     statements.Add($"@{_template.ImportType("JoinTable", "typeorm")}()");
@@ -155,6 +159,13 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
             }
 
             return statements;
+        }
+
+        public override bool RequiresAssociationFieldFor(AssociationEndModel thatEnd)
+        {
+            // TypeOrm does not support support unidirectional one-to-many relationships when using decorator approach:
+            // https://github.com/typeorm/typeorm/issues/3233
+            return !thatEnd.IsCollection && thatEnd.OtherEnd().IsCollection;
         }
     }
 }
