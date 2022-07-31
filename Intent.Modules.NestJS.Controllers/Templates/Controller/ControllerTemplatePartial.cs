@@ -90,6 +90,7 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Controller
             var verb = GetHttpVerb(operation);
             switch (verb)
             {
+                case HttpVerb.PATCH:
                 case HttpVerb.POST:
                 case HttpVerb.PUT:
                     parameters.AddRange(operation.Parameters.Select(x => $"{GetParameterBindingAttribute(operation, x)}{x.Name}: {GetTypeName(x.TypeReference)}"));
@@ -128,33 +129,34 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Controller
         {
             if (parameter.GetParameterSettings().Source().IsDefault())
             {
-                var typeInfo = GetTypeInfo(parameter.TypeReference);
                 if (parameter.TypeReference.Element.SpecializationTypeId == DTOModel.SpecializationTypeId)
                 {
                     return $"@{ImportType("Body", "@nestjs/common")}() ";
                 }
-                else if (operation.GetHttpSettings().Route().Contains($"{{{parameter.Name}}}") || operation.GetHttpSettings().Route().Contains($":{parameter.Name}"))
+
+                if (operation.GetHttpSettings().Route().Contains($"{{{parameter.Name}}}") || operation.GetHttpSettings().Route().Contains($":{parameter.Name}"))
                 {
                     return $"@{ImportType("Param", "@nestjs/common")}('{parameter.Name}') ";
                 }
-                else
-                {
-                    return $"@{ImportType("Query", "@nestjs/common")}('{parameter.Name}') ";
-                }
+
+                return $"@{ImportType("Query", "@nestjs/common")}('{parameter.Name}') ";
             }
 
             if (parameter.GetParameterSettings().Source().IsFromBody())
             {
                 return $"@{ImportType("Body", "@nestjs/common")}() ";
             }
+
             if (parameter.GetParameterSettings().Source().IsFromHeader())
             {
                 return $"@{ImportType("Headers", "@nestjs/common")}('{parameter.Name}') ";
             }
+
             if (parameter.GetParameterSettings().Source().IsFromQuery())
             {
                 return $"@{ImportType("Query", "@nestjs/common")}('{parameter.Name}') ";
             }
+
             if (parameter.GetParameterSettings().Source().IsFromRoute())
             {
                 return $"@{ImportType("Param", "@nestjs/common")}('{parameter.Name}') ";
@@ -171,10 +173,11 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Controller
 
         public enum HttpVerb
         {
+            DELETE,
             GET,
+            PATCH,
             POST,
-            PUT,
-            DELETE
+            PUT
         }
     }
 }
