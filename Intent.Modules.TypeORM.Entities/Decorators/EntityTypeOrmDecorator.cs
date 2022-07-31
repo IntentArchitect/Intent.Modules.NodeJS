@@ -38,10 +38,12 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
 
         public override string GetBeforeFields()
         {
-            if (_template.Model.Attributes.Any(x => x.HasPrimaryKey()))
+            if (_template.Model.ParentClass != null ||
+                _template.Model.Attributes.Any(x => x.HasPrimaryKey()))
             {
                 return base.GetBeforeFields();
             }
+
             return $@"
   @{_template.ImportType("ObjectIdColumn", "typeorm")}()
   @{_template.ImportType("PrimaryGeneratedColumn", "typeorm")}('uuid')
@@ -51,6 +53,11 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
 
         public override string GetAfterFields()
         {
+            if (_template.Model.ParentClass != null)
+            {
+                return string.Empty;
+            }
+
             var nullableTrueOption = new[] { "nullable: true" };
 
             var (stringColumnType, stringColumnOptions) = _ormDatabaseProviderStrategy.TryGetColumnType("string", out var stringColumnTypeOutput)

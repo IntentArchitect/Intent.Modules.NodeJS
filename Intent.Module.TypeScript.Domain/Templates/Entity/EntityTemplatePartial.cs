@@ -65,6 +65,16 @@ namespace Intent.Module.TypeScript.Domain.Templates.Entity
                     GetDecorators()
                         .Any(decorator => decorator.RequiresAssociationFieldFor(associationEnd)));
         }
+
+        private string GetDerivedFrom()
+        {
+            if (Model.ParentClass == null)
+            {
+                return string.Empty;
+            }
+
+            return $" extends {this.GetEntityName(Model.ParentClass)}";
+        }
     }
 
     public static class TypeScriptCodeExtensions

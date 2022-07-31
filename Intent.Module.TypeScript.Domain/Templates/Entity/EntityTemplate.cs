@@ -47,6 +47,12 @@ namespace Intent.Module.TypeScript.Domain.Templates.Entity
             
             #line default
             #line hidden
+            
+            #line 13 "C:\Dev\Intent.Modules.NodeJS\Intent.Module.TypeScript.Domain\Templates\Entity\EntityTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(GetDerivedFrom()));
+            
+            #line default
+            #line hidden
             this.Write(" {\r\n");
             
             #line 14 "C:\Dev\Intent.Modules.NodeJS\Intent.Module.TypeScript.Domain\Templates\Entity\EntityTemplate.tt"
