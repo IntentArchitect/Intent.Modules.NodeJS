@@ -129,15 +129,27 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
 
         public override IEnumerable<string> GetFieldDecorators(AssociationEndModel thatEnd)
         {
-            var isCompositeOwner = thatEnd.Equals(thatEnd.Association.TargetEnd) &&
-                                   thatEnd.Association.SourceEnd.Multiplicity == Multiplicity.One;
+            static bool IsCompositeOwner(AssociationEndModel associationEnd)
+            {
+                return associationEnd.Equals(associationEnd.Association.TargetEnd) &&
+                       associationEnd.Association.SourceEnd.Multiplicity == Multiplicity.One;
+            }
 
-            var options = isCompositeOwner
-                ? "{ cascade: true, onDelete: 'CASCADE' }"
-                : "{ cascade: ['insert', 'update'] }";
+            var thisEnd = thatEnd.OtherEnd();
+
+            var nullableOption = !thatEnd.IsNullable && !thatEnd.IsCollection
+                ? ", nullable: false"
+                : string.Empty;
+
+            var compositeOwnedOptions = IsCompositeOwner(thisEnd)
+                ? ", onDelete: 'CASCADE', orphanedRowAction: 'delete'"
+                : string.Empty;
+
+            var options = IsCompositeOwner(thatEnd)
+                ? $"{{ cascade: true{nullableOption} }}"
+                : $"{{ cascade: ['insert', 'update']{nullableOption}{compositeOwnedOptions} }}";
 
             var statements = new List<string>();
-            var thisEnd = thatEnd.OtherEnd();
             if (!thisEnd.IsCollection && !thatEnd.IsCollection) // one-to-one
             {
                 statements.Add($"@{_template.ImportType("OneToOne", "typeorm")}(() => {_template.GetTypeName(EntityTemplate.TemplateId, thatEnd.Element)}{(thisEnd.IsNavigable ? $", {thatEnd.Name.ToCamelCase()} => {thatEnd.Name.ToCamelCase()}.{thisEnd.Name.ToCamelCase()}" : "")}, {options})");
