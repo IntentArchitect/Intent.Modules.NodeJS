@@ -64,7 +64,7 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
                 ? ($"'{stringColumnTypeOutput.Type}', ", $"{string.Join(", ", nullableTrueOption.Concat(stringColumnTypeOutput.AdditionalOptions))}")
                 : (string.Empty, string.Join(", ", nullableTrueOption));
 
-            var (dateColumnType, dateColumnOptions) = _ormDatabaseProviderStrategy.TryGetColumnType("date", out var dateColumnTypeOutput)
+            var (dateColumnType, dateColumnOptions) = _ormDatabaseProviderStrategy.TryGetColumnType("datetime", out var dateColumnTypeOutput)
                 ? ($"'{dateColumnTypeOutput.Type}', ", $"{string.Join(", ", nullableTrueOption.Concat(dateColumnTypeOutput.AdditionalOptions))}")
                 : (string.Empty, string.Join(", ", nullableTrueOption));
 
