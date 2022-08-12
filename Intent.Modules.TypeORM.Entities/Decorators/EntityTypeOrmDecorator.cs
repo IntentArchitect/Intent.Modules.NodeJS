@@ -6,6 +6,7 @@ using Intent.Metadata.RDBMS.Api;
 using Intent.Modelers.Domain.Api;
 using Intent.Module.TypeScript.Domain.Templates.Entity;
 using Intent.Modules.Common.Templates;
+using Intent.Modules.Metadata.RDBMS.Settings;
 using Intent.Modules.TypeORM.Entities.DatabaseProviders;
 using Intent.RoslynWeaver.Attributes;
 
@@ -44,10 +45,22 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
                 return base.GetBeforeFields();
             }
 
+            var (typeName, defaultTypeScriptType, strategy) = _application.Settings.GetDatabaseSettings().KeyType().AsEnum() switch
+            {
+                DatabaseSettings.KeyTypeOptionsEnum.Guid => ("guid", "string", "'uuid'"),
+                DatabaseSettings.KeyTypeOptionsEnum.Long => ("long", "number", string.Empty),
+                DatabaseSettings.KeyTypeOptionsEnum.Int => ("int", "number", string.Empty),
+                _ => throw new ArgumentOutOfRangeException()
+            };
+
+            var resolvedType = _ormDatabaseProviderStrategy.TryGetColumnType(typeName, out var stringColumnTypeOutput)
+                ? stringColumnTypeOutput.Type
+                : defaultTypeScriptType;
+
             return $@"
   @{_template.ImportType("ObjectIdColumn", "typeorm")}()
-  @{_template.ImportType("PrimaryGeneratedColumn", "typeorm")}('uuid')
-  id?: string;
+  @{_template.ImportType("PrimaryGeneratedColumn", "typeorm")}({strategy})
+  id?: {resolvedType};
 ";
         }
 

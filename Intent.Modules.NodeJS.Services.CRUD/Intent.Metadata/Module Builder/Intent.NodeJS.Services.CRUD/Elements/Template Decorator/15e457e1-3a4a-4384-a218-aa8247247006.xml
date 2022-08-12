@@ -3,7 +3,6 @@
   <name>ServiceCrudImplementationDecorator</name>
   <display>ServiceCrudImplementationDecorator: ServiceDecorator</display>
   <isAbstract>false</isAbstract>
-  <order>2</order>
   <genericTypes />
   <typeReference id="6d36730b-e88e-4118-b7b8-5ea045ba46d3">
     <typeId>756c3531-1c81-4b08-bb39-3d80b6d7fdf4</typeId>
