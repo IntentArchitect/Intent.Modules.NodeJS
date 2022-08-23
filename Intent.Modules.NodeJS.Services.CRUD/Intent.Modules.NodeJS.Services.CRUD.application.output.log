@@ -4,19 +4,14 @@
   <FileLogs>
     <FileLog>
       <CorrelationId>Intent.VisualStudio.Projects.VisualStudio2015Solution#735acb15-e447-4859-ad7b-835ae4178a48</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>../Intent.Modules.NodeJS.sln</ApplicationRelativeFilePath>
-      <IsIgnored>false</IsIgnored>
-    </FileLog>
-    <FileLog>
-      <ProjectId>61d066e4-b3d3-48a9-83cf-9504c9067bed</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.Templates.Api.ApiElementExtensionModel#7ead0fef-fb99-464a-a190-d9da1b1b847b</CorrelationId>
-      <ApplicationRelativeFilePath>Api/ServiceExtensionsModel.cs</ApplicationRelativeFilePath>
-      <ProjectRelativeFilePath>ServiceExtensionsModel.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
       <ProjectId>c8b939e8-0eb9-4614-8071-757ea2fa3ddb</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.Templates.TemplateDecorator#15e457e1-3a4a-4384-a218-aa8247247006</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Decorators/ServiceCrudImplementationDecorator.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>ServiceCrudImplementationDecorator.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -24,6 +19,7 @@
     <FileLog>
       <ProjectId>c8b939e8-0eb9-4614-8071-757ea2fa3ddb</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.Templates.TemplateDecoratorRegistration#15e457e1-3a4a-4384-a218-aa8247247006</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Decorators/ServiceCrudImplementationDecoratorRegistration.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>ServiceCrudImplementationDecoratorRegistration.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -31,6 +27,7 @@
     <FileLog>
       <ProjectId>e68440b8-d33a-45d5-be5a-5d0ec43621dd</ProjectId>
       <CorrelationId>Intent.VisualStudio.Projects.CoreLibrary.CSProject#e68440b8-d33a-45d5-be5a-5d0ec43621dd</CorrelationId>
+      <OverwriteBehaviour>once-off</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Intent.Modules.NodeJS.Services.CRUD.csproj</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Intent.Modules.NodeJS.Services.CRUD.csproj</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -38,20 +35,15 @@
     <FileLog>
       <ProjectId>e68440b8-d33a-45d5-be5a-5d0ec43621dd</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.IModSpecFile</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Intent.NodeJS.Services.CRUD.imodspec</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Intent.NodeJS.Services.CRUD.imodspec</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
-      <ProjectId>cb1d727c-397f-4f93-a300-0009f2b5e8c1</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.DesignerSettings#e570b563-457b-47d4-ae9f-5c627d917a9a</CorrelationId>
-      <ApplicationRelativeFilePath>modelers/CRUD Enhancements.designer.settings</ApplicationRelativeFilePath>
-      <ProjectRelativeFilePath>CRUD Enhancements.designer.settings</ProjectRelativeFilePath>
-      <IsIgnored>false</IsIgnored>
-    </FileLog>
-    <FileLog>
       <ProjectId>e68440b8-d33a-45d5-be5a-5d0ec43621dd</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.ReadMe</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>README.txt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>README.txt</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>

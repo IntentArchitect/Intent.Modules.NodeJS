@@ -3,7 +3,6 @@
   <name>DtoValidationDecorator</name>
   <display>DtoValidationDecorator: DtoModelDecorator</display>
   <isAbstract>false</isAbstract>
-  <order>1</order>
   <genericTypes />
   <typeReference id="476930ad-e78f-4942-9f3b-472eca33c5f0">
     <typeId>11d70c63-41e3-41d6-a6d3-0f82bde3acb5</typeId>

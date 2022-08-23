@@ -4,12 +4,14 @@
   <FileLogs>
     <FileLog>
       <CorrelationId>Intent.VisualStudio.Projects.VisualStudio2015Solution#c325cdda-b300-4cfd-9ea7-54f9334b96cd</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>../Intent.Modules.NodeJS.sln</ApplicationRelativeFilePath>
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
       <ProjectId>c568f72d-3fb8-40c6-bb65-53b4ab58d16b</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.Templates.TemplateDecorator#a0a9b541-eba0-4a5d-8b03-f07870c8820d</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Decorators/ControllerAuthenticationDecorator.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>ControllerAuthenticationDecorator.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -17,6 +19,7 @@
     <FileLog>
       <ProjectId>c568f72d-3fb8-40c6-bb65-53b4ab58d16b</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.Templates.TemplateDecoratorRegistration#a0a9b541-eba0-4a5d-8b03-f07870c8820d</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Decorators/ControllerAuthenticationDecoratorRegistration.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>ControllerAuthenticationDecoratorRegistration.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -24,6 +27,7 @@
     <FileLog>
       <ProjectId>e5efadd1-5947-44ed-9885-77be31e7c358</ProjectId>
       <CorrelationId>Intent.VisualStudio.Projects.CoreLibrary.CSProject#e5efadd1-5947-44ed-9885-77be31e7c358</CorrelationId>
+      <OverwriteBehaviour>once-off</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Intent.Modules.NestJS.Authentication.csproj</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Intent.Modules.NestJS.Authentication.csproj</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -31,6 +35,7 @@
     <FileLog>
       <ProjectId>e5efadd1-5947-44ed-9885-77be31e7c358</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.IModSpecFile</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Intent.NodeJS.NestJS.Authentication.imodspec</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Intent.NodeJS.NestJS.Authentication.imodspec</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -38,6 +43,7 @@
     <FileLog>
       <ProjectId>e5efadd1-5947-44ed-9885-77be31e7c358</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.ReadMe</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>README.txt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>README.txt</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -45,6 +51,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>ModuleBuilder.Typescript.Templates.TypescriptTemplate.PreProcessT4#887eb043-58f8-44c5-bc4e-bd1ede40f4f1</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Auth.Guards/JwtAuthGuard/JwtAuthGuardTemplate.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Auth.Guards/JwtAuthGuard/JwtAuthGuardTemplate.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -52,6 +59,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#887eb043-58f8-44c5-bc4e-bd1ede40f4f1</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Auth.Guards/JwtAuthGuard/JwtAuthGuardTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Auth.Guards/JwtAuthGuard/JwtAuthGuardTemplate.tt</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -59,6 +67,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial#887eb043-58f8-44c5-bc4e-bd1ede40f4f1</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Auth.Guards/JwtAuthGuard/JwtAuthGuardTemplatePartial.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Auth.Guards/JwtAuthGuard/JwtAuthGuardTemplatePartial.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -66,6 +75,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TemplateRegistration.SingleFileNoModel#887eb043-58f8-44c5-bc4e-bd1ede40f4f1</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Auth.Guards/JwtAuthGuard/JwtAuthGuardTemplateRegistration.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Auth.Guards/JwtAuthGuard/JwtAuthGuardTemplateRegistration.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -73,6 +83,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>ModuleBuilder.Typescript.Templates.TypescriptTemplate.PreProcessT4#7618d88e-adee-4765-9766-a728de79d0a0</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Auth.Guards/LocalAuthGuard/LocalAuthGuardTemplate.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Auth.Guards/LocalAuthGuard/LocalAuthGuardTemplate.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -80,6 +91,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#7618d88e-adee-4765-9766-a728de79d0a0</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Auth.Guards/LocalAuthGuard/LocalAuthGuardTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Auth.Guards/LocalAuthGuard/LocalAuthGuardTemplate.tt</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -87,6 +99,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial#7618d88e-adee-4765-9766-a728de79d0a0</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Auth.Guards/LocalAuthGuard/LocalAuthGuardTemplatePartial.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Auth.Guards/LocalAuthGuard/LocalAuthGuardTemplatePartial.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -94,6 +107,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TemplateRegistration.SingleFileNoModel#7618d88e-adee-4765-9766-a728de79d0a0</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Auth.Guards/LocalAuthGuard/LocalAuthGuardTemplateRegistration.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Auth.Guards/LocalAuthGuard/LocalAuthGuardTemplateRegistration.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -101,6 +115,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>ModuleBuilder.Typescript.Templates.TypescriptTemplate.PreProcessT4#4395db9a-2dec-4a28-a154-9ac89eaaf74e</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Auth.Guards/PublicDecorator/PublicDecoratorTemplate.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Auth.Guards/PublicDecorator/PublicDecoratorTemplate.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -108,6 +123,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#4395db9a-2dec-4a28-a154-9ac89eaaf74e</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Auth.Guards/PublicDecorator/PublicDecoratorTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Auth.Guards/PublicDecorator/PublicDecoratorTemplate.tt</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -115,6 +131,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial#4395db9a-2dec-4a28-a154-9ac89eaaf74e</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Auth.Guards/PublicDecorator/PublicDecoratorTemplatePartial.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Auth.Guards/PublicDecorator/PublicDecoratorTemplatePartial.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -122,6 +139,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TemplateRegistration.SingleFileNoModel#4395db9a-2dec-4a28-a154-9ac89eaaf74e</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Auth.Guards/PublicDecorator/PublicDecoratorTemplateRegistration.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Auth.Guards/PublicDecorator/PublicDecoratorTemplateRegistration.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -129,6 +147,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>ModuleBuilder.Typescript.Templates.TypescriptTemplate.PreProcessT4#0f83fef0-b323-49fb-866f-7e5a7344cb70</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Auth.Strategies/JwtStrategy/JwtStrategyTemplate.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Auth.Strategies/JwtStrategy/JwtStrategyTemplate.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -136,6 +155,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#0f83fef0-b323-49fb-866f-7e5a7344cb70</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Auth.Strategies/JwtStrategy/JwtStrategyTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Auth.Strategies/JwtStrategy/JwtStrategyTemplate.tt</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -143,6 +163,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial#0f83fef0-b323-49fb-866f-7e5a7344cb70</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Auth.Strategies/JwtStrategy/JwtStrategyTemplatePartial.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Auth.Strategies/JwtStrategy/JwtStrategyTemplatePartial.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -150,6 +171,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TemplateRegistration.SingleFileNoModel#0f83fef0-b323-49fb-866f-7e5a7344cb70</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Auth.Strategies/JwtStrategy/JwtStrategyTemplateRegistration.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Auth.Strategies/JwtStrategy/JwtStrategyTemplateRegistration.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -157,6 +179,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>ModuleBuilder.Typescript.Templates.TypescriptTemplate.PreProcessT4#9c7b4967-1cf3-47cc-9da7-3ac289489609</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Auth.Strategies/LocalStrategy/LocalStrategyTemplate.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Auth.Strategies/LocalStrategy/LocalStrategyTemplate.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -164,6 +187,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#9c7b4967-1cf3-47cc-9da7-3ac289489609</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Auth.Strategies/LocalStrategy/LocalStrategyTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Auth.Strategies/LocalStrategy/LocalStrategyTemplate.tt</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -171,6 +195,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial#9c7b4967-1cf3-47cc-9da7-3ac289489609</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Auth.Strategies/LocalStrategy/LocalStrategyTemplatePartial.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Auth.Strategies/LocalStrategy/LocalStrategyTemplatePartial.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -178,6 +203,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TemplateRegistration.SingleFileNoModel#9c7b4967-1cf3-47cc-9da7-3ac289489609</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Auth.Strategies/LocalStrategy/LocalStrategyTemplateRegistration.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Auth.Strategies/LocalStrategy/LocalStrategyTemplateRegistration.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -185,6 +211,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>ModuleBuilder.Typescript.Templates.TypescriptTemplate.PreProcessT4#379e9023-0127-4787-b1ef-8b8089941c34</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Auth/AuthModule/AuthModuleTemplate.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Auth/AuthModule/AuthModuleTemplate.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -192,6 +219,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#379e9023-0127-4787-b1ef-8b8089941c34</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Auth/AuthModule/AuthModuleTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Auth/AuthModule/AuthModuleTemplate.tt</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -199,6 +227,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial#379e9023-0127-4787-b1ef-8b8089941c34</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Auth/AuthModule/AuthModuleTemplatePartial.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Auth/AuthModule/AuthModuleTemplatePartial.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -206,6 +235,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TemplateRegistration.SingleFileNoModel#379e9023-0127-4787-b1ef-8b8089941c34</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Auth/AuthModule/AuthModuleTemplateRegistration.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Auth/AuthModule/AuthModuleTemplateRegistration.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -213,6 +243,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>ModuleBuilder.Typescript.Templates.TypescriptTemplate.PreProcessT4#11771f4f-a7c5-46b3-90e9-2b235413f4e1</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Auth/AuthService/AuthServiceTemplate.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Auth/AuthService/AuthServiceTemplate.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -220,6 +251,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#11771f4f-a7c5-46b3-90e9-2b235413f4e1</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Auth/AuthService/AuthServiceTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Auth/AuthService/AuthServiceTemplate.tt</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -227,6 +259,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial#11771f4f-a7c5-46b3-90e9-2b235413f4e1</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Auth/AuthService/AuthServiceTemplatePartial.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Auth/AuthService/AuthServiceTemplatePartial.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -234,6 +267,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TemplateRegistration.SingleFileNoModel#11771f4f-a7c5-46b3-90e9-2b235413f4e1</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Auth/AuthService/AuthServiceTemplateRegistration.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Auth/AuthService/AuthServiceTemplateRegistration.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -241,6 +275,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.Templates.TemplateExtensions</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/TemplateExtensions.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>TemplateExtensions.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -248,6 +283,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.Templates.TemplateDecoratorContract#e7b3698f-8b88-41a7-a283-742721cb6712</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Users/User/UserDecorator.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Users/User/UserDecorator.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -255,6 +291,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>ModuleBuilder.Typescript.Templates.TypescriptTemplate.PreProcessT4#4d73e119-cd31-4833-9d3b-3a67a3119b33</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Users/User/UserTemplate.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Users/User/UserTemplate.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -262,6 +299,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#4d73e119-cd31-4833-9d3b-3a67a3119b33</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Users/User/UserTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Users/User/UserTemplate.tt</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -269,6 +307,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial#4d73e119-cd31-4833-9d3b-3a67a3119b33</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Users/User/UserTemplatePartial.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Users/User/UserTemplatePartial.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -276,6 +315,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TemplateRegistration.SingleFileNoModel#4d73e119-cd31-4833-9d3b-3a67a3119b33</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Users/User/UserTemplateRegistration.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Users/User/UserTemplateRegistration.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -283,6 +323,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>ModuleBuilder.Typescript.Templates.TypescriptTemplate.PreProcessT4#ec9d86e7-58e5-4e4e-965f-ef2bd9cd860e</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Users/UsersModule/UsersModuleTemplate.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Users/UsersModule/UsersModuleTemplate.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -290,6 +331,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#ec9d86e7-58e5-4e4e-965f-ef2bd9cd860e</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Users/UsersModule/UsersModuleTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Users/UsersModule/UsersModuleTemplate.tt</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -297,6 +339,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial#ec9d86e7-58e5-4e4e-965f-ef2bd9cd860e</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Users/UsersModule/UsersModuleTemplatePartial.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Users/UsersModule/UsersModuleTemplatePartial.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -304,6 +347,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TemplateRegistration.SingleFileNoModel#ec9d86e7-58e5-4e4e-965f-ef2bd9cd860e</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Users/UsersModule/UsersModuleTemplateRegistration.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Users/UsersModule/UsersModuleTemplateRegistration.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -311,6 +355,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>ModuleBuilder.Typescript.Templates.TypescriptTemplate.PreProcessT4#ee40085e-a999-4172-8c55-e3fcfda62d5f</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Users/UsersService/UsersServiceTemplate.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Users/UsersService/UsersServiceTemplate.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -318,6 +363,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#ee40085e-a999-4172-8c55-e3fcfda62d5f</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Users/UsersService/UsersServiceTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Users/UsersService/UsersServiceTemplate.tt</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -325,6 +371,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial#ee40085e-a999-4172-8c55-e3fcfda62d5f</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Users/UsersService/UsersServiceTemplatePartial.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Users/UsersService/UsersServiceTemplatePartial.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -332,6 +379,7 @@
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TemplateRegistration.SingleFileNoModel#ee40085e-a999-4172-8c55-e3fcfda62d5f</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Users/UsersService/UsersServiceTemplateRegistration.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Users/UsersService/UsersServiceTemplateRegistration.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>

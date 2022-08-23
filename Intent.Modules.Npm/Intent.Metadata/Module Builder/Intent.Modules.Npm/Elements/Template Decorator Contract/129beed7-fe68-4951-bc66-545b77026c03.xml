@@ -3,7 +3,6 @@
   <name>PackageJsonFileDecorator</name>
   <display>PackageJsonFileDecorator</display>
   <isAbstract>false</isAbstract>
-  <order>1</order>
   <genericTypes />
   <isMapped>false</isMapped>
   <parentFolderId>e7189d54-872e-4ff4-b449-323386caf588</parentFolderId>

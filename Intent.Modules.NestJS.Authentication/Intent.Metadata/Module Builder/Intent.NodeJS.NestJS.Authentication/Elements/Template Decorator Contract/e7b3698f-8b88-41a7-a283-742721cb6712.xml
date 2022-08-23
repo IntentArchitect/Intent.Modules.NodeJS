@@ -3,7 +3,6 @@
   <name>UserDecorator</name>
   <display>UserDecorator</display>
   <isAbstract>false</isAbstract>
-  <order>1</order>
   <genericTypes />
   <isMapped>false</isMapped>
   <parentFolderId>4d73e119-cd31-4833-9d3b-3a67a3119b33</parentFolderId>

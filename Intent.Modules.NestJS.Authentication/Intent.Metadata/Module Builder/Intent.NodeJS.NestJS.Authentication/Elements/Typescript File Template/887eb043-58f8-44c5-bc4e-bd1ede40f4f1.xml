@@ -3,7 +3,6 @@
   <name>JwtAuthGuard</name>
   <display>JwtAuthGuard: Single File</display>
   <isAbstract>false</isAbstract>
-  <order>0</order>
   <genericTypes />
   <typeReference id="a40f114d-25fa-450b-8f49-32c4e7422ee4">
     <typeId>f65d2904-88c9-4501-873a-a4eec8303b1d</typeId>

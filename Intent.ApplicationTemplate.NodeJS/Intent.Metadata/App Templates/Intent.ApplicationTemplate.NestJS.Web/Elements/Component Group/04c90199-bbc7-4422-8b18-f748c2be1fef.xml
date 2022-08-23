@@ -3,6 +3,7 @@
   <name>Tooling</name>
   <display>Tooling</display>
   <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-manually</sort-children>
   <order>6</order>
   <genericTypes />
   <isMapped>false</isMapped>
@@ -25,7 +26,7 @@
       <name>Folder Structures</name>
       <display>Folder Structures</display>
       <isAbstract>false</isAbstract>
-      <order>0</order>
+      <sort-children>by-type-then-manually</sort-children>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>04c90199-bbc7-4422-8b18-f748c2be1fef</parentFolderId>
@@ -51,7 +52,6 @@
           <name>Intent.OutputTargets.Folders</name>
           <display>Intent.OutputTargets.Folders</display>
           <isAbstract>false</isAbstract>
-          <order>0</order>
           <genericTypes />
           <isMapped>false</isMapped>
           <parentFolderId>e4d92cb3-6212-406c-b01f-f761852c1fc8</parentFolderId>
@@ -63,7 +63,7 @@
               <definitionPackageName>Intent.ApplicationTemplate.Builder</definitionPackageName>
               <definitionPackageId>002e9a7f-e5b7-4392-a60f-b60ae4e86262</definitionPackageId>
               <properties>
-                <property name="8235e942-6dec-4576-be44-3543b35ca44c" display="Version" value="3.3.0" isActive="true" />
+                <property name="8235e942-6dec-4576-be44-3543b35ca44c" display="Version" value="3.3.1" isActive="true" />
               </properties>
             </stereotype>
           </stereotypes>

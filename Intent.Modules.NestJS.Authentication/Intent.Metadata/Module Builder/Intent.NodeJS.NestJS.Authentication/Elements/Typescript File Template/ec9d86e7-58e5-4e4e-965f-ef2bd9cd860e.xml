@@ -3,7 +3,6 @@
   <name>UsersModule</name>
   <display>UsersModule: Single File</display>
   <isAbstract>false</isAbstract>
-  <order>1</order>
   <genericTypes />
   <typeReference id="31a20587-8915-4c54-b2dd-d4eff45a644e">
     <typeId>f65d2904-88c9-4501-873a-a4eec8303b1d</typeId>

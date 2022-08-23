@@ -3,7 +3,7 @@
   <name>Intent.Modules.NestJS.Controllers</name>
   <display>Intent.Modules.NestJS.Controllers</display>
   <isAbstract>false</isAbstract>
-  <order>1</order>
+  <sort-children>by-type-then-by-name</sort-children>
   <genericTypes />
   <isMapped>false</isMapped>
   <parentFolderId>9875856f-7427-4246-a8fa-ddd3a2917202</parentFolderId>
@@ -44,7 +44,6 @@
       <name>Intent.ModuleBuilder.IModeSpecFile</name>
       <display>Intent.ModuleBuilder.IModeSpecFile</display>
       <isAbstract>false</isAbstract>
-      <order>6</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>f147fd9a-501e-4202-80c5-fe7d2fb03a4f</parentFolderId>
@@ -59,7 +58,6 @@
       <display>Intent.ModuleBuilder.IModSpecFile</display>
       <externalReference>Intent.ModuleBuilder</externalReference>
       <isAbstract>false</isAbstract>
-      <order>7</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>f147fd9a-501e-4202-80c5-fe7d2fb03a4f</parentFolderId>
@@ -73,7 +71,6 @@
       <name>Intent.ModuleBuilder.ReadMe</name>
       <display>Intent.ModuleBuilder.ReadMe</display>
       <isAbstract>false</isAbstract>
-      <order>8</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>f147fd9a-501e-4202-80c5-fe7d2fb03a4f</parentFolderId>
@@ -88,7 +85,6 @@
       <display>Intent.ModuleBuilder.Templates.Api.ApiMetadataDesignerExtensions</display>
       <externalReference>Intent.ModuleBuilder</externalReference>
       <isAbstract>false</isAbstract>
-      <order>9</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>f147fd9a-501e-4202-80c5-fe7d2fb03a4f</parentFolderId>
@@ -103,7 +99,6 @@
       <display>Intent.ModuleBuilder.Templates.Api.ApiMetadataPackageExtensions</display>
       <externalReference>Intent.ModuleBuilder</externalReference>
       <isAbstract>false</isAbstract>
-      <order>10</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>f147fd9a-501e-4202-80c5-fe7d2fb03a4f</parentFolderId>
@@ -118,7 +113,6 @@
       <display>Intent.ModuleBuilder.Templates.Api.ApiMetadataProviderExtensions</display>
       <externalReference>Intent.ModuleBuilder</externalReference>
       <isAbstract>false</isAbstract>
-      <order>11</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>f147fd9a-501e-4202-80c5-fe7d2fb03a4f</parentFolderId>
@@ -133,7 +127,6 @@
       <display>Intent.ModuleBuilder.Templates.Api.ApiPackageExtensionModel</display>
       <externalReference>Intent.ModuleBuilder</externalReference>
       <isAbstract>false</isAbstract>
-      <order>12</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>f147fd9a-501e-4202-80c5-fe7d2fb03a4f</parentFolderId>
@@ -148,7 +141,6 @@
       <display>Intent.ModuleBuilder.Templates.StaticContentOutputReadme</display>
       <externalReference>Intent.ModuleBuilder</externalReference>
       <isAbstract>false</isAbstract>
-      <order>13</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>f147fd9a-501e-4202-80c5-fe7d2fb03a4f</parentFolderId>
@@ -164,7 +156,6 @@
       <name>Api</name>
       <display>Api</display>
       <isAbstract>false</isAbstract>
-      <order>14</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>f147fd9a-501e-4202-80c5-fe7d2fb03a4f</parentFolderId>
@@ -178,7 +169,6 @@
       <name>Decorators</name>
       <display>Decorators</display>
       <isAbstract>false</isAbstract>
-      <order>15</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>f147fd9a-501e-4202-80c5-fe7d2fb03a4f</parentFolderId>
@@ -192,7 +182,6 @@
       <name>DesignerConfig</name>
       <display>DesignerConfig</display>
       <isAbstract>false</isAbstract>
-      <order>16</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>f147fd9a-501e-4202-80c5-fe7d2fb03a4f</parentFolderId>
@@ -206,7 +195,6 @@
       <name>IModSpec</name>
       <display>IModSpec</display>
       <isAbstract>false</isAbstract>
-      <order>17</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>f147fd9a-501e-4202-80c5-fe7d2fb03a4f</parentFolderId>
@@ -220,7 +208,6 @@
       <name>Templates</name>
       <display>Templates</display>
       <isAbstract>false</isAbstract>
-      <order>18</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>f147fd9a-501e-4202-80c5-fe7d2fb03a4f</parentFolderId>

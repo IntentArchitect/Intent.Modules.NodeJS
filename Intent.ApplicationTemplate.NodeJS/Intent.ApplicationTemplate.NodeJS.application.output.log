@@ -4,12 +4,14 @@
   <FileLogs>
     <FileLog>
       <CorrelationId>Intent.VisualStudio.Projects.VisualStudio2015Solution#c3d052fe-e0bf-49f7-8b24-209478602676</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>../Intent.Modules.NodeJS.sln</ApplicationRelativeFilePath>
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
       <ProjectId>4a552a10-949b-45ce-8d6b-61f56798a2ca</ProjectId>
       <CorrelationId>Intent.ApplicationTemplate.Builder.Templates.IatSpecFile#4c7176c7-0764-4a59-9583-5465261386ec</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Intent.ApplicationTemplate.NestJS.Web/metadata.iatspec</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Intent.ApplicationTemplate.NestJS.Web/metadata.iatspec</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -17,6 +19,7 @@
     <FileLog>
       <ProjectId>4a552a10-949b-45ce-8d6b-61f56798a2ca</ProjectId>
       <CorrelationId>Intent.VisualStudio.Projects.CoreLibrary.CSProject#4a552a10-949b-45ce-8d6b-61f56798a2ca</CorrelationId>
+      <OverwriteBehaviour>once-off</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Intent.ApplicationTemplate.NodeJS.csproj</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Intent.ApplicationTemplate.NodeJS.csproj</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>

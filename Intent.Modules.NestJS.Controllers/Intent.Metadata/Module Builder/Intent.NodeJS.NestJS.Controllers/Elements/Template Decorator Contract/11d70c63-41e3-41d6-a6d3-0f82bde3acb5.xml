@@ -3,7 +3,6 @@
   <name>DtoModelDecorator</name>
   <display>DtoModelDecorator</display>
   <isAbstract>false</isAbstract>
-  <order>1</order>
   <genericTypes />
   <isMapped>false</isMapped>
   <parentFolderId>8bc432f0-7ba9-46c6-88ad-34807c726993</parentFolderId>

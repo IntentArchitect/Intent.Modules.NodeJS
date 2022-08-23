@@ -36,6 +36,7 @@ namespace Intent.Modules.NestJS.Core.Templates.ZipFileContent
             "wwwroot"
         };
 
+        [IntentManaged(Mode.Fully, Body = Mode.Ignore)]
         public void DoRegistration(ITemplateInstanceRegistry registry, IApplication applicationManager)
         {
             ResourceHelper.ReadQuickstartFileContents(archive =>

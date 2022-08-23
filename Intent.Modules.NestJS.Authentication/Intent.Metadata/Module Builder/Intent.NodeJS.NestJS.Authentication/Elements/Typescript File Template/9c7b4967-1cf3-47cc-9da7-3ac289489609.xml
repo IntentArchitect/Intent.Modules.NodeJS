@@ -3,7 +3,6 @@
   <name>LocalStrategy</name>
   <display>LocalStrategy: Single File</display>
   <isAbstract>false</isAbstract>
-  <order>1</order>
   <genericTypes />
   <typeReference id="2b81bfb5-6168-429b-9015-6825614ce480">
     <typeId>f65d2904-88c9-4501-873a-a4eec8303b1d</typeId>

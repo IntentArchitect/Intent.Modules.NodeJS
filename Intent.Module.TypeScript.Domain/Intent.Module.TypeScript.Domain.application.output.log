@@ -4,12 +4,14 @@
   <FileLogs>
     <FileLog>
       <CorrelationId>Intent.VisualStudio.Projects.VisualStudio2015Solution#af39730f-7c61-47d1-9fba-1a2933a6f0e5</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>../Intent.Modules.NodeJS.sln</ApplicationRelativeFilePath>
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
       <ProjectId>cc9a4c9e-686e-403b-84d7-00b3f54236e8</ProjectId>
       <CorrelationId>Intent.VisualStudio.Projects.CoreLibrary.CSProject#cc9a4c9e-686e-403b-84d7-00b3f54236e8</CorrelationId>
+      <OverwriteBehaviour>once-off</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Intent.Module.TypeScript.Domain.csproj</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Intent.Module.TypeScript.Domain.csproj</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -17,6 +19,7 @@
     <FileLog>
       <ProjectId>cc9a4c9e-686e-403b-84d7-00b3f54236e8</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.IModSpecFile</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Intent.NodeJS.Domain.imodspec</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Intent.NodeJS.Domain.imodspec</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -24,6 +27,7 @@
     <FileLog>
       <ProjectId>cc9a4c9e-686e-403b-84d7-00b3f54236e8</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.ReadMe</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>README.txt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>README.txt</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -31,6 +35,7 @@
     <FileLog>
       <ProjectId>1d070258-7362-4d6e-9eb2-15e73a7e2c04</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.Templates.TemplateDecoratorContract#57ed37be-cc15-4775-9682-7e053ddaa927</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Entity/EntityDecorator.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Entity/EntityDecorator.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -38,6 +43,7 @@
     <FileLog>
       <ProjectId>1d070258-7362-4d6e-9eb2-15e73a7e2c04</ProjectId>
       <CorrelationId>ModuleBuilder.Typescript.Templates.TypescriptTemplate.PreProcessT4#23688484-4023-4f11-83fe-6630d3074256</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Entity/EntityTemplate.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Entity/EntityTemplate.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -45,6 +51,7 @@
     <FileLog>
       <ProjectId>1d070258-7362-4d6e-9eb2-15e73a7e2c04</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#23688484-4023-4f11-83fe-6630d3074256</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Entity/EntityTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Entity/EntityTemplate.tt</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -52,6 +59,7 @@
     <FileLog>
       <ProjectId>1d070258-7362-4d6e-9eb2-15e73a7e2c04</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial#23688484-4023-4f11-83fe-6630d3074256</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Entity/EntityTemplatePartial.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Entity/EntityTemplatePartial.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -59,6 +67,7 @@
     <FileLog>
       <ProjectId>1d070258-7362-4d6e-9eb2-15e73a7e2c04</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TemplateRegistration.FilePerModel#23688484-4023-4f11-83fe-6630d3074256</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Entity/EntityTemplateRegistration.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Entity/EntityTemplateRegistration.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -66,6 +75,7 @@
     <FileLog>
       <ProjectId>1d070258-7362-4d6e-9eb2-15e73a7e2c04</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.Templates.TemplateExtensions</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/TemplateExtensions.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>TemplateExtensions.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>

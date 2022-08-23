@@ -3,7 +3,7 @@
   <name>PackageJsonFile</name>
   <display>PackageJsonFile: Single File</display>
   <isAbstract>false</isAbstract>
-  <order>1</order>
+  <sort-children>by-type-then-by-name</sort-children>
   <genericTypes />
   <typeReference id="2f18ff2b-2043-4ba1-8ae0-1fee2f645c00">
     <typeId>f65d2904-88c9-4501-873a-a4eec8303b1d</typeId>

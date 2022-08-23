@@ -13,21 +13,19 @@
   </decorators>
   <factoryExtensions></factoryExtensions>
   <dependencies>
-    <dependency id="Intent.Common" version="3.3.6" />
-    <dependency id="Intent.Common.Types" version="3.3.1" />
-    <dependency id="Intent.Modelers.Services" version="3.3.2" />
-    <dependency id="Intent.Modelers.Services.CRUD.ServiceDispatch" version="3.3.4"/>
-    <dependency id="Intent.NodeJS.Domain" version="3.3.0" />
-    <dependency id="Intent.NodeJS.NestJS.Controllers" version="3.3.1" />
-    <dependency id="Intent.NodeJS.TypeORM" version="3.3.1" />
+    <dependency id="Intent.Common" version="3.3.10" />
+    <dependency id="Intent.Common.Types" version="3.3.4" />
+    <dependency id="Intent.Modelers.Services" version="3.3.3" />
+    <dependency id="Intent.Modelers.Services.CRUD.ServiceDispatch" version="3.3.4" />
+    <dependency id="Intent.NodeJS.Domain" version="3.3.2" />
+    <dependency id="Intent.NodeJS.NestJS.Controllers" version="3.3.2" />
+    <dependency id="Intent.NodeJS.TypeORM" version="3.3.6" />
   </dependencies>
   <files>
     <file src="$outDir$/$id$.dll" />
     <file src="$outDir$/$id$.pdb" />
   </files>
-  <metadata>
-    <install target="Services" src="modelers/CRUD Enhancements.designer.settings" externalReference="e570b563-457b-47d4-ae9f-5c627d917a9a" />
-  </metadata>
+  <metadata />
   <moduleSettings />
   <moduleSettingsExtensions />
 </package>

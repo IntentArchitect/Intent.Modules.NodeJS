@@ -3,6 +3,7 @@
   <name>Logging</name>
   <display>Logging</display>
   <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-manually</sort-children>
   <order>5</order>
   <genericTypes />
   <isMapped>false</isMapped>
@@ -25,7 +26,7 @@
       <name>Winston</name>
       <display>Winston</display>
       <isAbstract>false</isAbstract>
-      <order>0</order>
+      <sort-children>by-type-then-manually</sort-children>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>ab1de433-dfdb-4b58-aa81-407746ec11f5</parentFolderId>
@@ -51,7 +52,6 @@
           <name>Intent.NestJS.Winston</name>
           <display>Intent.NestJS.Winston</display>
           <isAbstract>false</isAbstract>
-          <order>0</order>
           <genericTypes />
           <isMapped>false</isMapped>
           <parentFolderId>e07c3720-52bc-4dfd-897f-b298d1800e24</parentFolderId>

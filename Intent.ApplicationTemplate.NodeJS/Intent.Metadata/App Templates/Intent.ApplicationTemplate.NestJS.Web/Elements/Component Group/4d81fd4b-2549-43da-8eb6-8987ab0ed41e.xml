@@ -3,6 +3,7 @@
   <name>Api</name>
   <display>Api</display>
   <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-manually</sort-children>
   <order>1</order>
   <genericTypes />
   <isMapped>false</isMapped>
@@ -25,7 +26,7 @@
       <name>NestJS RESTful Services</name>
       <display>NestJS RESTful Services</display>
       <isAbstract>false</isAbstract>
-      <order>0</order>
+      <sort-children>by-type-then-manually</sort-children>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>4d81fd4b-2549-43da-8eb6-8987ab0ed41e</parentFolderId>
@@ -51,7 +52,6 @@
           <name>Intent.NodeJS.NestJS.Core</name>
           <display>Intent.NodeJS.NestJS.Core</display>
           <isAbstract>false</isAbstract>
-          <order>0</order>
           <genericTypes />
           <isMapped>false</isMapped>
           <parentFolderId>915497fb-6e4e-48e6-a57b-eda17b13c827</parentFolderId>
@@ -63,7 +63,7 @@
               <definitionPackageName>Intent.ApplicationTemplate.Builder</definitionPackageName>
               <definitionPackageId>002e9a7f-e5b7-4392-a60f-b60ae4e86262</definitionPackageId>
               <properties>
-                <property name="8235e942-6dec-4576-be44-3543b35ca44c" display="Version" value="3.3.0" isActive="true" />
+                <property name="8235e942-6dec-4576-be44-3543b35ca44c" display="Version" value="3.3.1" isActive="true" />
               </properties>
             </stereotype>
           </stereotypes>
@@ -74,7 +74,6 @@
           <name>Intent.NodeJS.NestJS.Controllers</name>
           <display>Intent.NodeJS.NestJS.Controllers</display>
           <isAbstract>false</isAbstract>
-          <order>1</order>
           <genericTypes />
           <isMapped>false</isMapped>
           <parentFolderId>915497fb-6e4e-48e6-a57b-eda17b13c827</parentFolderId>
@@ -86,7 +85,7 @@
               <definitionPackageName>Intent.ApplicationTemplate.Builder</definitionPackageName>
               <definitionPackageId>002e9a7f-e5b7-4392-a60f-b60ae4e86262</definitionPackageId>
               <properties>
-                <property name="8235e942-6dec-4576-be44-3543b35ca44c" display="Version" value="3.3.0" isActive="true" />
+                <property name="8235e942-6dec-4576-be44-3543b35ca44c" display="Version" value="3.3.2" isActive="true" />
               </properties>
             </stereotype>
           </stereotypes>
@@ -99,7 +98,7 @@
       <name>Api Authentication and Authorization</name>
       <display>Api Authentication and Authorization</display>
       <isAbstract>false</isAbstract>
-      <order>1</order>
+      <sort-children>by-type-then-manually</sort-children>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>4d81fd4b-2549-43da-8eb6-8987ab0ed41e</parentFolderId>
@@ -125,7 +124,6 @@
           <name>Intent.NodeJS.NestJS.Authentication</name>
           <display>Intent.NodeJS.NestJS.Authentication</display>
           <isAbstract>false</isAbstract>
-          <order>0</order>
           <genericTypes />
           <isMapped>false</isMapped>
           <parentFolderId>9b9d5981-1b43-4115-976a-dd9d1b8f69ec</parentFolderId>
@@ -148,7 +146,6 @@
           <name>Intent.NodeJS.NestJS.Authorization</name>
           <display>Intent.NodeJS.NestJS.Authorization</display>
           <isAbstract>false</isAbstract>
-          <order>1</order>
           <genericTypes />
           <isMapped>false</isMapped>
           <parentFolderId>9b9d5981-1b43-4115-976a-dd9d1b8f69ec</parentFolderId>
@@ -173,7 +170,7 @@
       <name>NestJS Validation</name>
       <display>NestJS Validation</display>
       <isAbstract>false</isAbstract>
-      <order>2</order>
+      <sort-children>by-type-then-manually</sort-children>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>4d81fd4b-2549-43da-8eb6-8987ab0ed41e</parentFolderId>
@@ -199,7 +196,6 @@
           <name>Intent.NodeJS.NestJS.Validation</name>
           <display>Intent.NodeJS.NestJS.Validation</display>
           <isAbstract>false</isAbstract>
-          <order>0</order>
           <genericTypes />
           <isMapped>false</isMapped>
           <parentFolderId>d06825ce-9e20-49fb-bd62-35dc623e2b21</parentFolderId>

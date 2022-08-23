@@ -3,7 +3,6 @@
   <name>LocalAuthGuard</name>
   <display>LocalAuthGuard: Single File</display>
   <isAbstract>false</isAbstract>
-  <order>1</order>
   <genericTypes />
   <typeReference id="f667c261-e57a-4270-a1c3-06f65ddd348e">
     <typeId>f65d2904-88c9-4501-873a-a4eec8303b1d</typeId>

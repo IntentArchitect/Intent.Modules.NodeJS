@@ -3,7 +3,6 @@
   <name>JwtStrategy</name>
   <display>JwtStrategy: Single File</display>
   <isAbstract>false</isAbstract>
-  <order>0</order>
   <genericTypes />
   <typeReference id="e53a9213-5c62-4d27-a466-1da637581274">
     <typeId>f65d2904-88c9-4501-873a-a4eec8303b1d</typeId>

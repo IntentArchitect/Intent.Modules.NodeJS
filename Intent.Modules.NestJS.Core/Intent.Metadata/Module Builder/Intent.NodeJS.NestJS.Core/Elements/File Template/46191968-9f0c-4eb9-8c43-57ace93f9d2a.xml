@@ -3,7 +3,6 @@
   <name>dotenv</name>
   <display>dotenv: Single File</display>
   <isAbstract>false</isAbstract>
-  <order>1</order>
   <genericTypes />
   <typeReference id="88f36cc3-df23-4557-8b0c-0699083b6395">
     <typeId>f65d2904-88c9-4501-873a-a4eec8303b1d</typeId>

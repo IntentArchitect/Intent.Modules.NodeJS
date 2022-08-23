@@ -3,7 +3,6 @@
   <name>UserRolesDecorator</name>
   <display>UserRolesDecorator: UserDecorator</display>
   <isAbstract>false</isAbstract>
-  <order>5</order>
   <genericTypes />
   <typeReference id="2677df0d-dbb6-4a6d-8ea3-f3aafd7e1cd1">
     <typeId>e7b3698f-8b88-41a7-a283-742721cb6712</typeId>

@@ -3,7 +3,6 @@
   <name>ControllerRolesDecorator</name>
   <display>ControllerRolesDecorator: ControllerDecorator</display>
   <isAbstract>false</isAbstract>
-  <order>4</order>
   <genericTypes />
   <typeReference id="1070f374-7301-4284-b3e4-3a5bfb2606bf">
     <typeId>bad80a27-0b31-459f-bd77-f528aa9513e1</typeId>

@@ -3,7 +3,6 @@
   <name>TypeOrmExModule</name>
   <display>TypeOrmExModule: Single File</display>
   <isAbstract>false</isAbstract>
-  <order>6</order>
   <genericTypes />
   <typeReference id="37f3e02a-8046-41c9-9138-c7d1273b2c9f">
     <typeId>f65d2904-88c9-4501-873a-a4eec8303b1d</typeId>

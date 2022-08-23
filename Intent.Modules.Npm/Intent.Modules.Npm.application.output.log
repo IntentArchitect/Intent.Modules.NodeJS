@@ -4,12 +4,14 @@
   <FileLogs>
     <FileLog>
       <CorrelationId>Intent.VisualStudio.Projects.VisualStudio2015Solution#d4d80206-501b-4546-b81f-b7fc2444e431</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>../Intent.Modules.NodeJS.sln</ApplicationRelativeFilePath>
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
       <ProjectId>47d80e8c-bdc2-431a-9d38-a9543b1fe821</ProjectId>
       <CorrelationId>Intent.VisualStudio.Projects.CoreLibrary.CSProject#47d80e8c-bdc2-431a-9d38-a9543b1fe821</CorrelationId>
+      <OverwriteBehaviour>once-off</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Intent.Modules.Npm.csproj</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Intent.Modules.Npm.csproj</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -17,6 +19,7 @@
     <FileLog>
       <ProjectId>47d80e8c-bdc2-431a-9d38-a9543b1fe821</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.IModSpecFile</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Intent.Npm.imodspec</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Intent.Npm.imodspec</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -24,6 +27,7 @@
     <FileLog>
       <ProjectId>47d80e8c-bdc2-431a-9d38-a9543b1fe821</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.ReadMe</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>README.txt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>README.txt</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -31,6 +35,7 @@
     <FileLog>
       <ProjectId>665a75b1-eea8-4be7-ae1c-e49741b11712</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.Templates.TemplateDecoratorContract#129beed7-fe68-4951-bc66-545b77026c03</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/PackageJsonFile/PackageJsonFileDecorator.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>PackageJsonFile/PackageJsonFileDecorator.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -38,6 +43,7 @@
     <FileLog>
       <ProjectId>665a75b1-eea8-4be7-ae1c-e49741b11712</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.ProjectItemTemplate.T4Template.PreProcessed#e7189d54-872e-4ff4-b449-323386caf588</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/PackageJsonFile/PackageJsonFileTemplate.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>PackageJsonFile/PackageJsonFileTemplate.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -45,6 +51,7 @@
     <FileLog>
       <ProjectId>665a75b1-eea8-4be7-ae1c-e49741b11712</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.ProjectItemTemplate.T4Template#e7189d54-872e-4ff4-b449-323386caf588</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/PackageJsonFile/PackageJsonFileTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>PackageJsonFile/PackageJsonFileTemplate.tt</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -52,6 +59,7 @@
     <FileLog>
       <ProjectId>665a75b1-eea8-4be7-ae1c-e49741b11712</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.ProjectItemTemplate.Partial#e7189d54-872e-4ff4-b449-323386caf588</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/PackageJsonFile/PackageJsonFileTemplatePartial.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>PackageJsonFile/PackageJsonFileTemplatePartial.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -59,6 +67,7 @@
     <FileLog>
       <ProjectId>665a75b1-eea8-4be7-ae1c-e49741b11712</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TemplateRegistration.SingleFileNoModel#e7189d54-872e-4ff4-b449-323386caf588</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/PackageJsonFile/PackageJsonFileTemplateRegistration.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>PackageJsonFile/PackageJsonFileTemplateRegistration.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>

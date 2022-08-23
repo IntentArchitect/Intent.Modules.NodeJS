@@ -4,7 +4,7 @@
   <display>Intent.Modules.NestJS.Winston</display>
   <externalReference>b1437dfb-0730-4215-a6db-ee1e77cf2e72</externalReference>
   <isAbstract>false</isAbstract>
-  <order>1</order>
+  <sort-children>by-type-then-by-name</sort-children>
   <genericTypes />
   <isMapped>false</isMapped>
   <parentFolderId>2419696a-cfc4-4326-85fd-66426628847c</parentFolderId>
@@ -46,7 +46,6 @@
       <display>Intent.ModuleBuilder.IModSpecFile</display>
       <externalReference>Intent.ModuleBuilder</externalReference>
       <isAbstract>false</isAbstract>
-      <order>6</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>00d9adc0-f185-4287-9f1f-4ebc7ee0228c</parentFolderId>
@@ -63,7 +62,6 @@
       <display>Intent.ModuleBuilder.ReadMe</display>
       <externalReference>Intent.ModuleBuilder</externalReference>
       <isAbstract>false</isAbstract>
-      <order>7</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>00d9adc0-f185-4287-9f1f-4ebc7ee0228c</parentFolderId>
@@ -80,7 +78,6 @@
       <display>Intent.ModuleBuilder.Templates.Api.ApiMetadataDesignerExtensions</display>
       <externalReference>Intent.ModuleBuilder</externalReference>
       <isAbstract>false</isAbstract>
-      <order>8</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>00d9adc0-f185-4287-9f1f-4ebc7ee0228c</parentFolderId>
@@ -97,7 +94,6 @@
       <display>Intent.ModuleBuilder.Templates.Api.ApiMetadataPackageExtensions</display>
       <externalReference>Intent.ModuleBuilder</externalReference>
       <isAbstract>false</isAbstract>
-      <order>9</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>00d9adc0-f185-4287-9f1f-4ebc7ee0228c</parentFolderId>
@@ -114,7 +110,6 @@
       <display>Intent.ModuleBuilder.Templates.Api.ApiMetadataProviderExtensions</display>
       <externalReference>Intent.ModuleBuilder</externalReference>
       <isAbstract>false</isAbstract>
-      <order>10</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>00d9adc0-f185-4287-9f1f-4ebc7ee0228c</parentFolderId>
@@ -131,7 +126,6 @@
       <display>Intent.ModuleBuilder.Templates.StaticContentOutputReadme</display>
       <externalReference>Intent.ModuleBuilder</externalReference>
       <isAbstract>false</isAbstract>
-      <order>11</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>00d9adc0-f185-4287-9f1f-4ebc7ee0228c</parentFolderId>
@@ -148,7 +142,6 @@
       <display>Api</display>
       <externalReference>5db7fdaf-f264-4513-9e7d-daa3c5a6d0cb</externalReference>
       <isAbstract>false</isAbstract>
-      <order>12</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>00d9adc0-f185-4287-9f1f-4ebc7ee0228c</parentFolderId>
@@ -163,7 +156,6 @@
       <display>Decorators</display>
       <externalReference>40cc9431-b446-4168-af80-2f3747b6f063</externalReference>
       <isAbstract>false</isAbstract>
-      <order>13</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>00d9adc0-f185-4287-9f1f-4ebc7ee0228c</parentFolderId>
@@ -178,7 +170,6 @@
       <display>DesignerConfig</display>
       <externalReference>8ace95f8-22fe-4922-9ca0-12d7820cb8bb</externalReference>
       <isAbstract>false</isAbstract>
-      <order>14</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>00d9adc0-f185-4287-9f1f-4ebc7ee0228c</parentFolderId>
@@ -193,7 +184,6 @@
       <display>IModSpec</display>
       <externalReference>cf6e41be-aa79-4d0b-85d5-2908102fb131</externalReference>
       <isAbstract>false</isAbstract>
-      <order>15</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>00d9adc0-f185-4287-9f1f-4ebc7ee0228c</parentFolderId>
@@ -208,7 +198,6 @@
       <display>Templates</display>
       <externalReference>21bb58b7-6c18-4926-980f-35ea567706e6</externalReference>
       <isAbstract>false</isAbstract>
-      <order>16</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>00d9adc0-f185-4287-9f1f-4ebc7ee0228c</parentFolderId>

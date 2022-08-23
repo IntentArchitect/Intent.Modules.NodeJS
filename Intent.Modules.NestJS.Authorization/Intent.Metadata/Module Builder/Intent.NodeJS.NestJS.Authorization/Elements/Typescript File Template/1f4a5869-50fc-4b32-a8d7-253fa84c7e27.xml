@@ -3,7 +3,6 @@
   <name>RoleEnum</name>
   <display>RoleEnum: Single File</display>
   <isAbstract>false</isAbstract>
-  <order>1</order>
   <genericTypes />
   <typeReference id="7ddd476e-862e-4cb1-b5c3-1dfcf9356e3c">
     <typeId>f65d2904-88c9-4501-873a-a4eec8303b1d</typeId>

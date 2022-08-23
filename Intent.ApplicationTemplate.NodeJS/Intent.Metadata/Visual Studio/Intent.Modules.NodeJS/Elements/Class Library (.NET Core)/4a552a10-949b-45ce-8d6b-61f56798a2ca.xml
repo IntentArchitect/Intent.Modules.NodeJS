@@ -3,7 +3,7 @@
   <name>Intent.ApplicationTemplate.NodeJS</name>
   <display>Intent.ApplicationTemplate.NodeJS</display>
   <isAbstract>false</isAbstract>
-  <order>1</order>
+  <sort-children>by-type-then-by-name</sort-children>
   <genericTypes />
   <isMapped>false</isMapped>
   <parentFolderId>c3d052fe-e0bf-49f7-8b24-209478602676</parentFolderId>
@@ -44,7 +44,6 @@
       <name>ApplicationTemplate.Builder.Templates.IatSpecFile</name>
       <display>ApplicationTemplate.Builder.Templates.IatSpecFile</display>
       <isAbstract>false</isAbstract>
-      <order>0</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>4a552a10-949b-45ce-8d6b-61f56798a2ca</parentFolderId>
@@ -58,7 +57,6 @@
       <name>ApplicationTemplate.Builder.Templates.InstallationSettingsFile</name>
       <display>ApplicationTemplate.Builder.Templates.InstallationSettingsFile</display>
       <isAbstract>false</isAbstract>
-      <order>1</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>4a552a10-949b-45ce-8d6b-61f56798a2ca</parentFolderId>
@@ -73,7 +71,6 @@
       <display>Intent.ApplicationTemplate.Builder.Templates.IatSpecFile</display>
       <externalReference>Intent.ApplicationTemplate.Builder</externalReference>
       <isAbstract>false</isAbstract>
-      <order>2</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>4a552a10-949b-45ce-8d6b-61f56798a2ca</parentFolderId>
@@ -88,7 +85,6 @@
       <display>Intent.ApplicationTemplate.Builder.Templates.InstallationSettingsFile</display>
       <externalReference>Intent.ApplicationTemplate.Builder</externalReference>
       <isAbstract>false</isAbstract>
-      <order>3</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>4a552a10-949b-45ce-8d6b-61f56798a2ca</parentFolderId>
@@ -102,7 +98,6 @@
       <name>ApplicationTemplates</name>
       <display>ApplicationTemplates</display>
       <isAbstract>false</isAbstract>
-      <order>4</order>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>4a552a10-949b-45ce-8d6b-61f56798a2ca</parentFolderId>
