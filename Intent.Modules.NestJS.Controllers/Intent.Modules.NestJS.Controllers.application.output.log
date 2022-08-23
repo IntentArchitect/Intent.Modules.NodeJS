@@ -50,7 +50,7 @@
     </FileLog>
     <FileLog>
       <ProjectId>a4ce5c50-1a9e-4e01-bd6e-45b7aed04495</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#6a139daa-2e95-4170-b396-95b9edef8685</CorrelationId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateT4#6a139daa-2e95-4170-b396-95b9edef8685</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Controller/ControllerTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Controller/ControllerTemplate.tt</ProjectRelativeFilePath>
@@ -82,7 +82,7 @@
     </FileLog>
     <FileLog>
       <ProjectId>a4ce5c50-1a9e-4e01-bd6e-45b7aed04495</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#bfbea13c-a046-4d49-acfb-aa0fabd1a292</CorrelationId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateT4#bfbea13c-a046-4d49-acfb-aa0fabd1a292</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/ControllerBase/ControllerBaseTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>ControllerBase/ControllerBaseTemplate.tt</ProjectRelativeFilePath>
@@ -122,7 +122,7 @@
     </FileLog>
     <FileLog>
       <ProjectId>a4ce5c50-1a9e-4e01-bd6e-45b7aed04495</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#8bc432f0-7ba9-46c6-88ad-34807c726993</CorrelationId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateT4#8bc432f0-7ba9-46c6-88ad-34807c726993</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/DtoModel/DtoModelTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>DtoModel/DtoModelTemplate.tt</ProjectRelativeFilePath>
@@ -162,7 +162,7 @@
     </FileLog>
     <FileLog>
       <ProjectId>a4ce5c50-1a9e-4e01-bd6e-45b7aed04495</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#27c77612-3eb9-4b20-bba4-8faef34bfa4a</CorrelationId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateT4#27c77612-3eb9-4b20-bba4-8faef34bfa4a</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Service/ServiceTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Service/ServiceTemplate.tt</ProjectRelativeFilePath>

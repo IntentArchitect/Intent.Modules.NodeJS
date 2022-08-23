@@ -74,7 +74,7 @@
     </FileLog>
     <FileLog>
       <ProjectId>0523cdd9-de40-499d-b313-479430ac29c7</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#1f4a5869-50fc-4b32-a8d7-253fa84c7e27</CorrelationId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateT4#1f4a5869-50fc-4b32-a8d7-253fa84c7e27</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/RoleEnum/RoleEnumTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>RoleEnum/RoleEnumTemplate.tt</ProjectRelativeFilePath>
@@ -106,7 +106,7 @@
     </FileLog>
     <FileLog>
       <ProjectId>0523cdd9-de40-499d-b313-479430ac29c7</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#37eb5ae7-e413-4a25-ae90-ef9df196eecb</CorrelationId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateT4#37eb5ae7-e413-4a25-ae90-ef9df196eecb</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/RolesDecorator/RolesDecoratorTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>RolesDecorator/RolesDecoratorTemplate.tt</ProjectRelativeFilePath>
@@ -138,7 +138,7 @@
     </FileLog>
     <FileLog>
       <ProjectId>0523cdd9-de40-499d-b313-479430ac29c7</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#fb41d536-d0d3-4519-ad85-18ee8889cbb3</CorrelationId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateT4#fb41d536-d0d3-4519-ad85-18ee8889cbb3</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/RolesGuard/RolesGuardTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>RolesGuard/RolesGuardTemplate.tt</ProjectRelativeFilePath>

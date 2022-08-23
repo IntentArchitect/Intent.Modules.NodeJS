@@ -44,7 +44,7 @@
     </FileLog>
     <FileLog>
       <ProjectId>b0d2955c-78d9-48d7-8e68-199ef7673464</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#3617addd-e98a-4f2b-a9f2-c8cdce720f14</CorrelationId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateT4#3617addd-e98a-4f2b-a9f2-c8cdce720f14</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/AppModule/AppModuleTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>AppModule/AppModuleTemplate.tt</ProjectRelativeFilePath>
@@ -108,7 +108,7 @@
     </FileLog>
     <FileLog>
       <ProjectId>b0d2955c-78d9-48d7-8e68-199ef7673464</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#b0a8435b-723e-428e-a8ef-1be63dee5c46</CorrelationId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateT4#b0a8435b-723e-428e-a8ef-1be63dee5c46</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Main/MainTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Main/MainTemplate.tt</ProjectRelativeFilePath>

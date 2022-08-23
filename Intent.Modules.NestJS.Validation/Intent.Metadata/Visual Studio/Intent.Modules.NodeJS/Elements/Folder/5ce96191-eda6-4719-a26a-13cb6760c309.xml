@@ -181,9 +181,9 @@
       </metadata>
       <childElements />
     </childElement>
-    <childElement id="5c4245c3-2320-492b-a5a5-54522fdbc9c6" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
-      <name>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate</name>
-      <display>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate</display>
+    <childElement id="e7d1d2c9-2d45-44cd-a102-5828ca50e39d" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
+      <name>Intent.ModuleBuilder.TypeScript.Templates.TypescriptPartialTemplate</name>
+      <display>Intent.ModuleBuilder.TypeScript.Templates.TypescriptPartialTemplate</display>
       <externalReference>Intent.ModuleBuilder.TypeScript</externalReference>
       <isAbstract>false</isAbstract>
       <genericTypes />
@@ -197,9 +197,9 @@
       </metadata>
       <childElements />
     </childElement>
-    <childElement id="63b87874-81f1-4b79-b913-68cd79426946" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
-      <name>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial</name>
-      <display>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial</display>
+    <childElement id="0a305662-2235-430d-b894-06ab1b17bad5" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
+      <name>Intent.ModuleBuilder.TypeScript.Templates.TypescriptT4Template</name>
+      <display>Intent.ModuleBuilder.TypeScript.Templates.TypescriptT4Template</display>
       <externalReference>Intent.ModuleBuilder.TypeScript</externalReference>
       <isAbstract>false</isAbstract>
       <genericTypes />

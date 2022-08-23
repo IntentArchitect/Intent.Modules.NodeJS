@@ -50,7 +50,7 @@
     </FileLog>
     <FileLog>
       <ProjectId>1d070258-7362-4d6e-9eb2-15e73a7e2c04</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#23688484-4023-4f11-83fe-6630d3074256</CorrelationId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateT4#23688484-4023-4f11-83fe-6630d3074256</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Entity/EntityTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Entity/EntityTemplate.tt</ProjectRelativeFilePath>

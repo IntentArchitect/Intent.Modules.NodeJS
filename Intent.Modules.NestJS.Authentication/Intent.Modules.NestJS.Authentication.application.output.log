@@ -58,7 +58,7 @@
     </FileLog>
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#887eb043-58f8-44c5-bc4e-bd1ede40f4f1</CorrelationId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateT4#887eb043-58f8-44c5-bc4e-bd1ede40f4f1</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Auth.Guards/JwtAuthGuard/JwtAuthGuardTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Auth.Guards/JwtAuthGuard/JwtAuthGuardTemplate.tt</ProjectRelativeFilePath>
@@ -90,7 +90,7 @@
     </FileLog>
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#7618d88e-adee-4765-9766-a728de79d0a0</CorrelationId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateT4#7618d88e-adee-4765-9766-a728de79d0a0</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Auth.Guards/LocalAuthGuard/LocalAuthGuardTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Auth.Guards/LocalAuthGuard/LocalAuthGuardTemplate.tt</ProjectRelativeFilePath>
@@ -122,7 +122,7 @@
     </FileLog>
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#4395db9a-2dec-4a28-a154-9ac89eaaf74e</CorrelationId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateT4#4395db9a-2dec-4a28-a154-9ac89eaaf74e</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Auth.Guards/PublicDecorator/PublicDecoratorTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Auth.Guards/PublicDecorator/PublicDecoratorTemplate.tt</ProjectRelativeFilePath>
@@ -154,7 +154,7 @@
     </FileLog>
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#0f83fef0-b323-49fb-866f-7e5a7344cb70</CorrelationId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateT4#0f83fef0-b323-49fb-866f-7e5a7344cb70</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Auth.Strategies/JwtStrategy/JwtStrategyTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Auth.Strategies/JwtStrategy/JwtStrategyTemplate.tt</ProjectRelativeFilePath>
@@ -186,7 +186,7 @@
     </FileLog>
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#9c7b4967-1cf3-47cc-9da7-3ac289489609</CorrelationId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateT4#9c7b4967-1cf3-47cc-9da7-3ac289489609</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Auth.Strategies/LocalStrategy/LocalStrategyTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Auth.Strategies/LocalStrategy/LocalStrategyTemplate.tt</ProjectRelativeFilePath>
@@ -218,7 +218,7 @@
     </FileLog>
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#379e9023-0127-4787-b1ef-8b8089941c34</CorrelationId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateT4#379e9023-0127-4787-b1ef-8b8089941c34</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Auth/AuthModule/AuthModuleTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Auth/AuthModule/AuthModuleTemplate.tt</ProjectRelativeFilePath>
@@ -250,7 +250,7 @@
     </FileLog>
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#11771f4f-a7c5-46b3-90e9-2b235413f4e1</CorrelationId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateT4#11771f4f-a7c5-46b3-90e9-2b235413f4e1</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Auth/AuthService/AuthServiceTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Auth/AuthService/AuthServiceTemplate.tt</ProjectRelativeFilePath>
@@ -298,7 +298,7 @@
     </FileLog>
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#4d73e119-cd31-4833-9d3b-3a67a3119b33</CorrelationId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateT4#4d73e119-cd31-4833-9d3b-3a67a3119b33</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Users/User/UserTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Users/User/UserTemplate.tt</ProjectRelativeFilePath>
@@ -330,7 +330,7 @@
     </FileLog>
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#ec9d86e7-58e5-4e4e-965f-ef2bd9cd860e</CorrelationId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateT4#ec9d86e7-58e5-4e4e-965f-ef2bd9cd860e</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Users/UsersModule/UsersModuleTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Users/UsersModule/UsersModuleTemplate.tt</ProjectRelativeFilePath>
@@ -362,7 +362,7 @@
     </FileLog>
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#ee40085e-a999-4172-8c55-e3fcfda62d5f</CorrelationId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateT4#ee40085e-a999-4172-8c55-e3fcfda62d5f</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Users/UsersService/UsersServiceTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Users/UsersService/UsersServiceTemplate.tt</ProjectRelativeFilePath>

@@ -50,7 +50,7 @@
     </FileLog>
     <FileLog>
       <ProjectId>71237c3c-9d64-4cd3-a7c3-8336af76b840</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#e75e632e-59b8-44ac-921a-80c31204052a</CorrelationId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateT4#e75e632e-59b8-44ac-921a-80c31204052a</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/WinstonOptions/WinstonOptionsTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>WinstonOptions/WinstonOptionsTemplate.tt</ProjectRelativeFilePath>

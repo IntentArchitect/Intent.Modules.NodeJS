@@ -68,7 +68,7 @@
     </FileLog>
     <FileLog>
       <ProjectId>c8df7c4a-ae2c-4ca5-a1c2-cfc8a8c6d91d</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#37f0dc31-67fd-460b-80ee-2ab07f3aaf32</CorrelationId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateT4#37f0dc31-67fd-460b-80ee-2ab07f3aaf32</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/OrmConfig/OrmConfigTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>OrmConfig/OrmConfigTemplate.tt</ProjectRelativeFilePath>
@@ -100,7 +100,7 @@
     </FileLog>
     <FileLog>
       <ProjectId>c8df7c4a-ae2c-4ca5-a1c2-cfc8a8c6d91d</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#6460b69c-1989-48f2-97d8-46007f7a157e</CorrelationId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateT4#6460b69c-1989-48f2-97d8-46007f7a157e</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Repository/RepositoryTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Repository/RepositoryTemplate.tt</ProjectRelativeFilePath>
@@ -140,7 +140,7 @@
     </FileLog>
     <FileLog>
       <ProjectId>c8df7c4a-ae2c-4ca5-a1c2-cfc8a8c6d91d</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#cfd842e7-1b04-410b-8c29-e1a0f3374686</CorrelationId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateT4#cfd842e7-1b04-410b-8c29-e1a0f3374686</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/TypeOrmExDecorator/TypeOrmExDecoratorTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>TypeOrmExDecorator/TypeOrmExDecoratorTemplate.tt</ProjectRelativeFilePath>
@@ -172,7 +172,7 @@
     </FileLog>
     <FileLog>
       <ProjectId>c8df7c4a-ae2c-4ca5-a1c2-cfc8a8c6d91d</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate#752d2df5-8e7a-42c9-9090-a37ecf5a7fd5</CorrelationId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateT4#752d2df5-8e7a-42c9-9090-a37ecf5a7fd5</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/TypeOrmExModule/TypeOrmExModuleTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>TypeOrmExModule/TypeOrmExModuleTemplate.tt</ProjectRelativeFilePath>

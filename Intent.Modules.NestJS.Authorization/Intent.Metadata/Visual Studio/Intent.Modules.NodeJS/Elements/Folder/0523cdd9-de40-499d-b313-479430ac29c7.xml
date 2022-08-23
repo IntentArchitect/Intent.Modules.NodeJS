@@ -181,9 +181,9 @@
       </metadata>
       <childElements />
     </childElement>
-    <childElement id="57365519-f46f-48a9-ade2-e020a8967774" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
-      <name>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate</name>
-      <display>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplate</display>
+    <childElement id="166ef349-aeef-49cf-8692-906bab3b61ea" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
+      <name>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial</name>
+      <display>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial</display>
       <externalReference>Intent.ModuleBuilder.TypeScript</externalReference>
       <isAbstract>false</isAbstract>
       <genericTypes />
@@ -197,9 +197,25 @@
       </metadata>
       <childElements />
     </childElement>
-    <childElement id="77a19f2e-b510-40ed-af93-f04e8b7f0200" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
-      <name>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial</name>
-      <display>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial</display>
+    <childElement id="ee52798e-8e32-4809-a34a-e2e81b6e3a65" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
+      <name>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateStringInterpolation</name>
+      <display>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateStringInterpolation</display>
+      <externalReference>Intent.ModuleBuilder.TypeScript</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>0523cdd9-de40-499d-b313-479430ac29c7</parentFolderId>
+      <packageId>795216c4-134f-4a70-adce-d76193718bd7</packageId>
+      <packageName>Intent.Modules.NodeJS</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="5aaa7019-3782-4161-a540-e1b6d7cc18e7" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
+      <name>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateT4</name>
+      <display>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateT4</display>
       <externalReference>Intent.ModuleBuilder.TypeScript</externalReference>
       <isAbstract>false</isAbstract>
       <genericTypes />
