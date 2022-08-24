@@ -33,58 +33,68 @@ namespace Intent.Modules.TypeORM.Entities.Templates.OrmConfig
         public override string TransformText()
         {
             this.Write(@"import { TypeOrmModuleOptions } from '@nestjs/typeorm';
-import { ConfigService } from '@nestjs/config';
+import { get } from 'env-var';
+import { config } from 'dotenv';
+config();
 
-function typeOrmConfigFactory(configService: ConfigService): TypeOrmModuleOptions {
-  const commonConf = {
-    SYNCRONIZE: false,
-    ENTITIES: [__dirname + '/domain/entities/*.entity{.ts,.js}'],
-    MIGRATIONS: [__dirname + '/migrations/**/*{.ts,.js}'],
-    MIGRATIONS_RUN: true
-  };
+const commonConf = {
+  ENTITIES: [__dirname + '/domain/entities/*.entity{.ts,.js}'],
+  MIGRATIONS: [__dirname + '/migrations/**/*{.ts,.js}'],
+  MIGRATIONS_RUN: get('DB_MIGRATIONS_RUN').asBool(),
+  SYNCHRONIZE: get('DB_SYNCHRONIZE').asBool()
+};
 
-  const config: TypeOrmModuleOptions = {
-    name: 'default',
-");
+const ");
             
-            #line 23 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\OrmConfig\OrmConfigTemplate.tt"
+            #line 22 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\OrmConfig\OrmConfigTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(ClassName));
+            
+            #line default
+            #line hidden
+            this.Write(": TypeOrmModuleOptions = {\r\n  name: \'default\',\r\n");
+            
+            #line 24 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\OrmConfig\OrmConfigTemplate.tt"
  foreach (var option in GetDatabaseProviderOptions()) { 
             
             #line default
             #line hidden
-            this.Write("    ");
+            this.Write("  ");
             
-            #line 24 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\OrmConfig\OrmConfigTemplate.tt"
+            #line 25 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\OrmConfig\OrmConfigTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(option));
             
             #line default
             #line hidden
             this.Write(",\r\n");
             
-            #line 25 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\OrmConfig\OrmConfigTemplate.tt"
+            #line 26 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\OrmConfig\OrmConfigTemplate.tt"
  } 
             
             #line default
             #line hidden
-            this.Write(@"    logging: true,
-    synchronize: true,
-    entities: commonConf.ENTITIES,
-    migrations: commonConf.MIGRATIONS,
-    migrationsRun: commonConf.MIGRATIONS_RUN
-  };
+            this.Write(@"  logging: true,
+  entities: commonConf.ENTITIES,
+  migrations: commonConf.MIGRATIONS,
+  migrationsRun: commonConf.MIGRATIONS_RUN,
+  synchronize: commonConf.SYNCHRONIZE
+};
 
-  if (process.env.NODE_ENV === 'prod') {
-    // your production options here
-  }
-
-  if (process.env.NODE_ENV === 'test') {
-    // your test options here
-  }
-
-  return config;
+if (process.env.NODE_ENV === 'prod') {
+  // your production options here
 }
 
-export { typeOrmConfigFactory };");
+if (process.env.NODE_ENV === 'test') {
+  // your test options here
+}
+
+export { ");
+            
+            #line 42 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\OrmConfig\OrmConfigTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(ClassName));
+            
+            #line default
+            #line hidden
+            this.Write(" };");
             return this.GenerationEnvironment.ToString();
         }
     }

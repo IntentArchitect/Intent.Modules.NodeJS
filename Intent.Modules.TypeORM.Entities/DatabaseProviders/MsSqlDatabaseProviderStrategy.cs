@@ -16,10 +16,10 @@ internal class MsSqlDatabaseProviderStrategy : OrmDatabaseProviderStrategyBase
     public override IEnumerable<string> GetConfigurationOptions()
     {
         yield return "type: 'mssql'";
-        yield return "host: configService.get('DB_HOST')";
-        yield return "username: configService.get('DB_USERNAME')";
-        yield return "password: configService.get('DB_PASSWORD')";
-        yield return "database: configService.get('DB_NAME')";
+        yield return "host: get('DB_HOST').asString()";
+        yield return "username: get('DB_USERNAME').asString()";
+        yield return "password: get('DB_PASSWORD').asString()";
+        yield return "database: get('DB_NAME').asString()";
         yield return "extra: { trustServerCertificate: true }";
     }
 

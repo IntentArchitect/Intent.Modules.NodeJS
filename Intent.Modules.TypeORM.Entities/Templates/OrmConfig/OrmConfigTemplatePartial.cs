@@ -38,11 +38,6 @@ namespace Intent.Modules.TypeORM.Entities.Templates.OrmConfig
             {
                 AddDependency(dependency);
             }
-
-            foreach (var request in _ormDatabaseProviderStrategy.GetEnvironmentVariableRequests())
-            {
-                ExecutionContext.EventDispatcher.Publish(request);
-            }
         }
 
         public override void BeforeTemplateExecution()
@@ -51,13 +46,7 @@ namespace Intent.Modules.TypeORM.Entities.Templates.OrmConfig
             ExecutionContext.EventDispatcher.Publish(NestJsModuleImportRequest
                 .Create(
                     moduleId: null,
-                    statement: @$"TypeOrmModule.forRootAsync({{
-      imports: [ConfigModule],
-      useFactory: {ClassName},
-      inject: [ConfigService]
-    }})")
-                .AddImport("ConfigModule", "@nestjs/config")
-                .AddImport("ConfigService", "@nestjs/config")
+                    statement: @$"TypeOrmModule.forRoot({ClassName})")
                 .AddImport("TypeOrmModule", "@nestjs/typeorm")
                 .AddDependency(TemplateDependency.OnTemplate(this)));
 
@@ -69,6 +58,14 @@ namespace Intent.Modules.TypeORM.Entities.Templates.OrmConfig
                     statement: $"TypeOrmExModule.forCustomRepository([{string.Join(", ", repositories.Select(x => x.ClassName))}])")
                 .AddDependency(TemplateDependency.OnTemplate(TypeOrmExModuleTemplate.TemplateId))
                 .AddDependencies(repositories.Select(TemplateDependency.OnTemplate).ToArray()));
+
+            ExecutionContext.EventDispatcher.Publish(new EnvironmentVariableRequest("DB_MIGRATIONS_RUN", "false"));
+            ExecutionContext.EventDispatcher.Publish(new EnvironmentVariableRequest("DB_SYNCHRONIZE", "true"));
+
+            foreach (var request in _ormDatabaseProviderStrategy.GetEnvironmentVariableRequests())
+            {
+                ExecutionContext.EventDispatcher.Publish(request);
+            }
         }
 
         private IEnumerable<string> GetDatabaseProviderOptions()
@@ -80,7 +77,7 @@ namespace Intent.Modules.TypeORM.Entities.Templates.OrmConfig
         public override ITemplateFileConfig GetTemplateFileConfig()
         {
             return new TypeScriptFileConfig(
-                className: $"typeOrmConfigFactory",
+                className: $"typeOrmConfig",
                 fileName: $"orm.config"
             );
         }

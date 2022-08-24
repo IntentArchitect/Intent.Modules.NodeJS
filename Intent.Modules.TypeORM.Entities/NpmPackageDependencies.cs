@@ -10,4 +10,5 @@ public static class NpmPackageDependencies
     }
 
     public static NpmPackageDependency TypeOrm = new("typeorm", "^0.3.7");
+    public static NpmPackageDependency EnvVar = new("env-var", "^7.1.1");
 }

@@ -45,7 +45,7 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
                 return base.GetBeforeFields();
             }
 
-            var (typeName, defaultTypeScriptType, strategy) = _application.Settings.GetDatabaseSettings().KeyType().AsEnum() switch
+            var (typeName, typeScriptType, strategy) = _application.Settings.GetDatabaseSettings().KeyType().AsEnum() switch
             {
                 DatabaseSettings.KeyTypeOptionsEnum.Guid => ("guid", "string", "'uuid'"),
                 DatabaseSettings.KeyTypeOptionsEnum.Long => ("long", "number", string.Empty),
@@ -53,14 +53,15 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
                 _ => throw new ArgumentOutOfRangeException()
             };
 
-            var resolvedType = _ormDatabaseProviderStrategy.TryGetColumnType(typeName, out var stringColumnTypeOutput)
+            var columnType = _ormDatabaseProviderStrategy.TryGetColumnType(typeName, out var stringColumnTypeOutput)
                 ? stringColumnTypeOutput.Type
-                : defaultTypeScriptType;
+                : typeScriptType;
 
             return $@"
+  @{_template.ImportType("Column", "typeorm")}('{columnType}')
   @{_template.ImportType("ObjectIdColumn", "typeorm")}()
   @{_template.ImportType("PrimaryGeneratedColumn", "typeorm")}({strategy})
-  id?: {resolvedType};
+  id?: {typeScriptType};
 ";
         }
 

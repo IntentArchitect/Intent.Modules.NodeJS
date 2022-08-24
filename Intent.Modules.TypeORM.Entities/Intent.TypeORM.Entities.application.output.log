@@ -27,6 +27,22 @@
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
+      <ProjectId>a569c934-af36-490e-983e-f0cc50a166cb</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.Templates.TemplateDecorator#d7bba3f0-baf5-4ba8-ac98-688fd74f8c8c</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Decorators/TypeOrmPackageJsonFileDecorator.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>TypeOrmPackageJsonFileDecorator.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>a569c934-af36-490e-983e-f0cc50a166cb</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.Templates.TemplateDecoratorRegistration#d7bba3f0-baf5-4ba8-ac98-688fd74f8c8c</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Decorators/TypeOrmPackageJsonFileDecoratorRegistration.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>TypeOrmPackageJsonFileDecoratorRegistration.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
       <ProjectId>9d34d137-f8cd-4985-8989-1b4a83d47a22</ProjectId>
       <CorrelationId>Intent.VisualStudio.Projects.CoreLibrary.CSProject#9d34d137-f8cd-4985-8989-1b4a83d47a22</CorrelationId>
       <OverwriteBehaviour>once-off</OverwriteBehaviour>
@@ -56,6 +72,30 @@
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Settings/ModuleSettingsExtensions.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>ModuleSettingsExtensions.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>c8df7c4a-ae2c-4ca5-a1c2-cfc8a8c6d91d</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateStringInterpolation#6cec7b44-13fc-45a8-90c0-4ad97b59385b</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Templates/Datasource/DatasourceTemplate.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>Datasource/DatasourceTemplate.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>c8df7c4a-ae2c-4ca5-a1c2-cfc8a8c6d91d</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial#6cec7b44-13fc-45a8-90c0-4ad97b59385b</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Templates/Datasource/DatasourceTemplatePartial.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>Datasource/DatasourceTemplatePartial.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>c8df7c4a-ae2c-4ca5-a1c2-cfc8a8c6d91d</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.TemplateRegistration.SingleFileNoModel#6cec7b44-13fc-45a8-90c0-4ad97b59385b</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Templates/Datasource/DatasourceTemplateRegistration.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>Datasource/DatasourceTemplateRegistration.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>

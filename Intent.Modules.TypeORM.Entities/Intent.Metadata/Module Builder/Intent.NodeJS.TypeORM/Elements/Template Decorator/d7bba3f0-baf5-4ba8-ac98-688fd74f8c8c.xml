@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="d7bba3f0-baf5-4ba8-ac98-688fd74f8c8c" type="Template Decorator" typeId="f0f46278-29ea-42bd-9206-0e7034f623bc">
+  <name>TypeOrmPackageJsonFileDecorator</name>
+  <display>TypeOrmPackageJsonFileDecorator: PackageJsonFileDecorator</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <typeReference id="8fa43887-c567-4109-955a-bf4c29af46ff">
+    <typeId>129beed7-fe68-4951-bc66-545b77026c03</typeId>
+    <isNavigable>true</isNavigable>
+    <isNullable>false</isNullable>
+    <isCollection>false</isCollection>
+    <isRequired>true</isRequired>
+    <typePackageName>Intent.Npm</typePackageName>
+    <typePackageId>3a099241-6946-4914-b1b6-e25d168a36d1</typePackageId>
+    <stereotypes />
+    <genericTypeParameters />
+  </typeReference>
+  <isMapped>false</isMapped>
+  <parentFolderId>62374542-4fb1-4bf1-a322-f45b423ab2a8</parentFolderId>
+  <packageId>62374542-4fb1-4bf1-a322-f45b423ab2a8</packageId>
+  <packageName>Intent.NodeJS.TypeORM</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>
