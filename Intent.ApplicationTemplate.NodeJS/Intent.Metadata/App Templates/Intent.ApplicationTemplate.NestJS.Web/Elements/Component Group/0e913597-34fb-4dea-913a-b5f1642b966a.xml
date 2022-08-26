@@ -4,7 +4,7 @@
   <display>Application</display>
   <isAbstract>false</isAbstract>
   <sort-children>by-type-then-manually</sort-children>
-  <order>2</order>
+  <order>3</order>
   <genericTypes />
   <isMapped>false</isMapped>
   <parentFolderId>4c7176c7-0764-4a59-9583-5465261386ec</parentFolderId>
