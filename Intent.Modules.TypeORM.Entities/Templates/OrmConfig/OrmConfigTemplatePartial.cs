@@ -33,6 +33,7 @@ namespace Intent.Modules.TypeORM.Entities.Templates.OrmConfig
             AddDependency(CoreNpmPackageDependencies.NestJs.Common);
             AddDependency(NpmPackageDependencies.NestJs.TypeOrm);
             AddDependency(NpmPackageDependencies.TypeOrm);
+            AddDependency(NpmPackageDependencies.EnvVar);
 
             foreach (var dependency in _ormDatabaseProviderStrategy.GetPackageDependencies())
             {
