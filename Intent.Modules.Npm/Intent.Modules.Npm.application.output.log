@@ -50,7 +50,7 @@
     </FileLog>
     <FileLog>
       <ProjectId>665a75b1-eea8-4be7-ae1c-e49741b11712</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.ProjectItemTemplate.T4Template#e7189d54-872e-4ff4-b449-323386caf588</CorrelationId>
+      <CorrelationId>Intent.ModuleBuilder.Templates.FileTemplateT4#e7189d54-872e-4ff4-b449-323386caf588</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/PackageJsonFile/PackageJsonFileTemplate.tt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>PackageJsonFile/PackageJsonFileTemplate.tt</ProjectRelativeFilePath>
