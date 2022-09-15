@@ -151,22 +151,33 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
 
             var thisEnd = thatEnd.OtherEnd();
 
-            var nullableOption = !thatEnd.IsNullable && !thatEnd.IsCollection
-                ? ", nullable: false"
-                : string.Empty;
+            var options = new List<string>();
 
-            var compositeOwnedOptions = IsCompositeOwner(thisEnd)
-                ? ", onDelete: 'CASCADE', orphanedRowAction: 'delete'"
-                : string.Empty;
+            if (IsCompositeOwner(thatEnd))
+            {
+                options.Add("cascade: true");
+                options.Add("eager: true");
+            }
+            else
+            {
+                options.Add("cascade: ['insert', 'update']");
+            }
 
-            var options = IsCompositeOwner(thatEnd)
-                ? $"{{ cascade: true{nullableOption} }}"
-                : $"{{ cascade: ['insert', 'update']{nullableOption}{compositeOwnedOptions} }}";
+            if (!thatEnd.IsNullable && !thatEnd.IsCollection)
+            {
+                options.Add("nullable: false");
+            }
+
+            if (!IsCompositeOwner(thatEnd) &&
+                IsCompositeOwner(thisEnd))
+            {
+                options.Add("onDelete: 'CASCADE', orphanedRowAction: 'delete'");
+            }
 
             var statements = new List<string>();
             if (!thisEnd.IsCollection && !thatEnd.IsCollection) // one-to-one
             {
-                statements.Add($"@{_template.ImportType("OneToOne", "typeorm")}(() => {_template.GetTypeName(EntityTemplate.TemplateId, thatEnd.Element)}{(thisEnd.IsNavigable ? $", {thatEnd.Name.ToCamelCase()} => {thatEnd.Name.ToCamelCase()}.{thisEnd.Name.ToCamelCase()}" : "")}, {options})");
+                statements.Add($"@{_template.ImportType("OneToOne", "typeorm")}(() => {_template.GetTypeName(EntityTemplate.TemplateId, thatEnd.Element)}{(thisEnd.IsNavigable ? $", {thatEnd.Name.ToCamelCase()} => {thatEnd.Name.ToCamelCase()}.{thisEnd.Name.ToCamelCase()}" : "")}, {{ {string.Join(", ", options)} }})");
                 if (thatEnd.IsTargetEnd())
                 {
                     statements.Add($"@{_template.ImportType("JoinColumn", "typeorm")}()");
@@ -176,15 +187,15 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
             {
                 // TypeOrm does not support support unidirectional one-to-many and many-to-one relationships when using decorators:
                 // https://github.com/typeorm/typeorm/issues/3233
-                statements.Add($"@{_template.ImportType("OneToMany", "typeorm")}(() => {_template.GetTypeName(EntityTemplate.TemplateId, thatEnd.Element)}, {thatEnd.Name.ToCamelCase()} => {thatEnd.Name.ToCamelCase()}.{thisEnd.Name.ToCamelCase()}, {options})");
+                statements.Add(@$"@{_template.ImportType("OneToMany", "typeorm")}(() => {_template.GetTypeName(EntityTemplate.TemplateId, thatEnd.Element)}, {thatEnd.Name.ToCamelCase()} => {thatEnd.Name.ToCamelCase()}.{thisEnd.Name.ToCamelCase()}, {{ {string.Join(", ", options)} }})");
             }
             else if (thisEnd.IsCollection && !thatEnd.IsCollection) // many-to-one
             {
-                statements.Add($"@{_template.ImportType("ManyToOne", "typeorm")}(() => {_template.GetTypeName(EntityTemplate.TemplateId, thatEnd.Element)}{(thisEnd.IsNavigable ? $", {thatEnd.Name.ToCamelCase()} => {thatEnd.Name.ToCamelCase()}.{thisEnd.Name.ToCamelCase()}" : "")}, {options})");
+                statements.Add($"@{_template.ImportType("ManyToOne", "typeorm")}(() => {_template.GetTypeName(EntityTemplate.TemplateId, thatEnd.Element)}{(thisEnd.IsNavigable ? $", {thatEnd.Name.ToCamelCase()} => {thatEnd.Name.ToCamelCase()}.{thisEnd.Name.ToCamelCase()}" : "")}, {{ {string.Join(", ", options)} }})");
             }
             else if (thisEnd.IsCollection && thatEnd.IsCollection) // many-to-many
             {
-                statements.Add($"@{_template.ImportType("ManyToMany", "typeorm")}(() => {_template.GetTypeName(EntityTemplate.TemplateId, thatEnd.Element)}{(thisEnd.IsNavigable ? $", {thatEnd.Name.ToCamelCase()} => {thatEnd.Name.ToCamelCase()}.{thisEnd.Name.ToCamelCase()}" : "")}, {options})");
+                statements.Add($"@{_template.ImportType("ManyToMany", "typeorm")}(() => {_template.GetTypeName(EntityTemplate.TemplateId, thatEnd.Element)}{(thisEnd.IsNavigable ? $", {thatEnd.Name.ToCamelCase()} => {thatEnd.Name.ToCamelCase()}.{thisEnd.Name.ToCamelCase()}" : "")}, {{ {string.Join(", ", options)} }})");
                 if (thatEnd.IsTargetEnd())
                 {
                     statements.Add($"@{_template.ImportType("JoinTable", "typeorm")}()");
