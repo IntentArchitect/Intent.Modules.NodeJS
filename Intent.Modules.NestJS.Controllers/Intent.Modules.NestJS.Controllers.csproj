@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -7,8 +7,9 @@
   <ItemGroup>
     <PackageReference Include="Intent.Modules.Common" Version="3.3.11" />
     <PackageReference Include="Intent.Modules.Common.TypeScript" Version="3.3.6" />
-    <PackageReference Include="Intent.Modules.Metadata.WebApi" Version="3.3.6" />
-    <PackageReference Include="Intent.Modules.Modelers.Services" Version="3.3.4" />
+    <PackageReference Include="Intent.Modules.Common.Types" Version="3.3.6"/>
+    <PackageReference Include="Intent.Modules.Metadata.WebApi" Version="3.3.8-pre.0" />
+    <PackageReference Include="Intent.Modules.Modelers.Services" Version="3.3.5" />
     <PackageReference Include="Intent.Modules.TypeScript.Weaving.Decorators" Version="3.3.2" />
     <PackageReference Include="Intent.Packager" Version="3.3.2">
       <PrivateAssets>all</PrivateAssets>
@@ -48,6 +49,10 @@
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>ServiceTemplate.cs</LastGenOutput>
     </None>
+    <None Update="Templates\JsonResponse\JsonResponseTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>JsonResponseTemplate.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
@@ -75,6 +80,11 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>ServiceTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\JsonResponse\JsonResponseTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>JsonResponseTemplate.tt</DependentUpon>
     </Compile>
   </ItemGroup>
 

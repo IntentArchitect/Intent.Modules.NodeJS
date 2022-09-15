@@ -4,6 +4,7 @@ using System.Linq;
 using Intent.Engine;
 using Intent.Metadata.WebApi.Api;
 using Intent.Modelers.Services.Api;
+using Intent.Modules.Common;
 using Intent.Modules.Common.Templates;
 using Intent.Modules.Common.Types.Api;
 using Intent.Modules.Common.TypeScript.Templates;
@@ -21,8 +22,7 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Controller
     [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
     partial class ControllerTemplate : TypeScriptTemplateBase<Intent.Modelers.Services.Api.ServiceModel, ControllerDecorator>
     {
-        [IntentManaged(Mode.Fully)]
-        public const string TemplateId = "Intent.NodeJS.NestJS.Controllers.Controller";
+        [IntentManaged(Mode.Fully)] public const string TemplateId = "Intent.NodeJS.NestJS.Controllers.Controller";
 
         [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
         public ControllerTemplate(IOutputTarget outputTarget, Intent.Modelers.Services.Api.ServiceModel model) : base(TemplateId, outputTarget, model)
@@ -34,7 +34,29 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Controller
 
         public string GetReturnType(OperationModel operation)
         {
-            return operation.ReturnType != null ? GetTypeName(operation.ReturnType) : "void";
+            if (operation.ReturnType == null)
+            {
+                return "void";
+            }
+
+            if (operation.GetHttpSettings().ReturnTypeMediatype().IsApplicationJson()
+                && (GetTypeInfo(operation.ReturnType).IsPrimitive || operation.ReturnType.HasStringType()))
+            {
+                return $"{this.GetJsonResponseName()}<{GetTypeName(operation.TypeReference)}>";
+            }
+
+            return GetTypeName(operation.ReturnType);
+        }
+
+        private string GetResultValue(OperationModel operation)
+        {
+            if (operation.GetHttpSettings().ReturnTypeMediatype().IsApplicationJson()
+                && (GetTypeInfo(operation.ReturnType).IsPrimitive || operation.ReturnType.HasStringType()))
+            {
+                return $"new {this.GetJsonResponseName()}<{GetTypeName(operation.TypeReference)}>(result)";
+            }
+            
+            return "result";
         }
 
         public string GetParameters(OperationModel operation)
@@ -100,10 +122,12 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Controller
                     if (operation.Parameters.Any(x => x.TypeReference.Element.SpecializationTypeId != TypeDefinitionModel.SpecializationTypeId &&
                                                       x.GetParameterSettings().Source().IsDefault()))
                     {
-                        Logging.Log.Warning($@"Intent.NestJS.Controllers: [{Model.Name}.{operation.Name}] Passing objects into HTTP {GetHttpVerb(operation)} operations is not well supported by this module.
+                        Logging.Log.Warning(
+                            $@"Intent.NestJS.Controllers: [{Model.Name}.{operation.Name}] Passing objects into HTTP {GetHttpVerb(operation)} operations is not well supported by this module.
     We recommend using a POST or PUT verb");
                         // Log warning
                     }
+
                     parameters.AddRange(operation.Parameters.Select(x => $"{GetParameterBindingAttribute(operation, x)}{x.Name}: {GetTypeName(x.TypeReference)}"));
                     break;
                 default:

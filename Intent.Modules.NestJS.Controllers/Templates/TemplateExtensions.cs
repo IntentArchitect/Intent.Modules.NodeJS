@@ -3,6 +3,7 @@ using Intent.Modules.Common.Templates;
 using Intent.Modules.NestJS.Controllers.Templates.Controller;
 using Intent.Modules.NestJS.Controllers.Templates.ControllerBase;
 using Intent.Modules.NestJS.Controllers.Templates.DtoModel;
+using Intent.Modules.NestJS.Controllers.Templates.JsonResponse;
 using Intent.Modules.NestJS.Controllers.Templates.Service;
 using Intent.RoslynWeaver.Attributes;
 
@@ -37,6 +38,11 @@ namespace Intent.Modules.NestJS.Controllers.Templates
         public static string GetDtoModelName(this IntentTemplateBase template, Intent.Modelers.Services.Api.DTOModel model)
         {
             return template.GetTypeName(DtoModelTemplate.TemplateId, model);
+        }
+
+        public static string GetJsonResponseName<T>(this IntentTemplateBase<T> template)
+        {
+            return template.GetTypeName(JsonResponseTemplate.TemplateId);
         }
 
         public static string GetServiceName<T>(this IntentTemplateBase<T> template) where T : Intent.Modelers.Services.Api.ServiceModel
