@@ -10,6 +10,7 @@ using Intent.Modules.Common.Templates;
 using Intent.Modules.Common.TypeScript.Templates;
 using Intent.RoslynWeaver.Attributes;
 using Intent.Templates;
+using Intent.Utils;
 using OperationModel = Intent.Modelers.Domain.Api.OperationModel;
 
 [assembly: DefaultIntentManaged(Mode.Merge)]
@@ -101,16 +102,10 @@ namespace Intent.Modules.NestJS.Controllers.Templates.DtoModel
 
         public IEnumerable<string> GetRequiredRelations()
         {
-            return GetInnerRequiredRelations(new HashSet<ICanBeReferencedType>(), 0);
+            return GetInnerRequiredRelations(new HashSet<ICanBeReferencedType>(), this.Model);
         }
 
-        // As I was going through the Pet Clinic sample and there were missing Types in the Services designer. I accidentally
-        // specified the type for the PetDTO's Visits to be VisitDTO instead of PetVisitDTO. This caused an infinite recursion
-        // because it would try to navigate between OwnerDTO to PetDTO and from PetDTO to OwnerDTO.
-        // I thought it was a bug. So I think I solved the circular reference check using this algorithm and also then
-        // picked up what the correct DTO was supposed to be. I'm keeping this code since users could have a case where
-        // DTOs map in a circular way and this will resolve safely and only go 1 level deep.
-        private IEnumerable<string> GetInnerRequiredRelations(ISet<ICanBeReferencedType> haveBeenVisited, int curLevel)
+        private IEnumerable<string> GetInnerRequiredRelations(ISet<ICanBeReferencedType> haveBeenVisited, DTOModel rootDto)
         {
             var relations = Model.Fields
                 .Where(f => f.InternalElement.IsMapped)
@@ -120,20 +115,22 @@ namespace Intent.Modules.NestJS.Controllers.Templates.DtoModel
                         .Where(p => p.Specialization == AssociationModel.SpecializationType)
                         .Select(p => p.Name.ToCamelCase()));
                     
-                    if (f.TypeReference.Element.SpecializationTypeId != DTOModel.SpecializationTypeId
-                        || haveBeenVisited.Contains(f.TypeReference.Element))
+                    if (f.TypeReference.Element.SpecializationTypeId != DTOModel.SpecializationTypeId)
                     {
                         haveBeenVisited.Add(f.TypeReference.Element);
                         return new[] { relation };
                     }
 
-                    if (curLevel > 1)
+                    if (haveBeenVisited.Contains(f.TypeReference.Element))
                     {
-                        return Array.Empty<string>();
+                        Logging.Log.Warning($"Required relations for {rootDto.Name} detected a circular reference.");
+                        haveBeenVisited.Add(f.TypeReference.Element);
+                        return new[] { relation };
                     }
                     
+                    // This is the reason why this method is not a local function
                     var dtoModelTemplate = GetTemplate<DtoModelTemplate>(TemplateId, f.TypeReference.Element)
-                        .GetInnerRequiredRelations(haveBeenVisited, curLevel + 1)
+                        .GetInnerRequiredRelations(haveBeenVisited, rootDto)
                         .Select(x => $"{relation}.{x}");
                     
                     haveBeenVisited.Add(f.TypeReference.Element);
