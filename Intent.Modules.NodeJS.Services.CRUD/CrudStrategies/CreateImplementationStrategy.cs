@@ -77,7 +77,7 @@ namespace Intent.Modules.NodeJS.Services.CRUD.CrudStrategies
             if (operation.TypeReference.Element != null)
             {
                 impl += $@"
-    return new{targetEntity.Name}.Id;";
+    return new{targetEntity.Name}.id;";
             }
 
             return impl;
