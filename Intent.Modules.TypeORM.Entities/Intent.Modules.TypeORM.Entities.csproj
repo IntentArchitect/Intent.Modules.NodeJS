@@ -5,6 +5,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Intent.Modules.Common" Version="3.3.11" />
+    <PackageReference Include="Intent.Modules.Common.TypeScript" Version="3.3.6" />
+    <PackageReference Include="Intent.Modules.Metadata.RDBMS" Version="3.3.9" />
+    <PackageReference Include="Intent.Modules.Modelers.Domain" Version="3.3.7" />
+    <PackageReference Include="Intent.Packager" Version="3.3.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Intent.RoslynWeaver.Attributes" Version="2.0.1" />
+    <PackageReference Include="Intent.SoftwareFactory.SDK" Version="3.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Intent.Module.TypeScript.Domain\Intent.Module.TypeScript.Domain.csproj" />
+    <ProjectReference Include="..\Intent.Modules.NestJS.Core\Intent.Modules.NestJS.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="Templates\RepositoryTemplate\RepositoryTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>RepositoryTemplate.cs</LastGenOutput>
@@ -53,24 +71,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>TypeOrmExModuleTemplate.tt</DependentUpon>
     </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Intent.Modules.Common" Version="3.3.11" />
-    <PackageReference Include="Intent.Modules.Common.TypeScript" Version="3.3.6" />
-    <PackageReference Include="Intent.Modules.Metadata.RDBMS" Version="3.3.7" />
-    <PackageReference Include="Intent.Modules.Modelers.Domain" Version="3.3.6" />
-    <PackageReference Include="Intent.Packager" Version="3.3.2">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Intent.RoslynWeaver.Attributes" Version="2.0.1" />
-    <PackageReference Include="Intent.SoftwareFactory.SDK" Version="3.3.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Intent.Module.TypeScript.Domain\Intent.Module.TypeScript.Domain.csproj" />
-    <ProjectReference Include="..\Intent.Modules.NestJS.Core\Intent.Modules.NestJS.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>

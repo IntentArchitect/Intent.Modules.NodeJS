@@ -1,3 +1,7 @@
+### Version 3.3.8
+
+- Changed entity loading behaviour of compositional relationships to be eager by default.
+
 ### Version 3.3.7
 
 - Better support for migrations, see the `Using Migrations` section below for more information.
