@@ -8,6 +8,7 @@
 <#@ import namespace="Intent.Templates" #>
 <#@ import namespace="Intent.Metadata.Models" #>
 <#@ import namespace="Intent.Modelers.Services.Api" #>
+<#@ import namespace="Intent.Metadata.WebApi.Api" #>
 import { Controller, Logger } from '@nestjs/common';
 
 <# foreach (var decorator in GetClassDecorators()) { #>
@@ -17,7 +18,7 @@ export class <#= ClassName #> {
   logger = new Logger('<#= ClassName #>');
 
   constructor(private readonly <#= ServiceClassName.ToCamelCase() #>: <#= ServiceClassName #>) {}
-<# foreach(var operation in Model.Operations) { #>
+<# foreach(var operation in Model.Operations.Where(p => p.HasHttpSettings())) { #>
 
 <# foreach (var decorator in GetOperationDecorators(operation)) { #>
   <#= decorator #>

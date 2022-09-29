@@ -114,7 +114,7 @@ namespace Intent.Modules.NestJS.Controllers.Templates.DtoModel
                     var relation = string.Join(".", f.Mapping.Path
                         .Where(p => p.Specialization == AssociationModel.SpecializationType)
                         .Select(p => p.Name.ToCamelCase()));
-                    
+
                     if (f.TypeReference.Element.SpecializationTypeId != DTOModel.SpecializationTypeId)
                     {
                         haveBeenVisited.Add(f.TypeReference.Element);
@@ -127,12 +127,12 @@ namespace Intent.Modules.NestJS.Controllers.Templates.DtoModel
                         haveBeenVisited.Add(f.TypeReference.Element);
                         return new[] { relation };
                     }
-                    
+
                     // This is the reason why this method is not a local function
                     var dtoModelTemplate = GetTemplate<DtoModelTemplate>(TemplateId, f.TypeReference.Element)
                         .GetInnerRequiredRelations(haveBeenVisited, rootDto)
                         .Select(x => $"{relation}.{x}");
-                    
+
                     haveBeenVisited.Add(f.TypeReference.Element);
                     return new[] { relation }.Concat(dtoModelTemplate);
                 })

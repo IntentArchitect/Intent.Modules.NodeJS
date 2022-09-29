@@ -17,6 +17,7 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Controller
     using Intent.Templates;
     using Intent.Metadata.Models;
     using Intent.Modelers.Services.Api;
+    using Intent.Metadata.WebApi.Api;
     using System;
     
     /// <summary>
@@ -35,174 +36,174 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Controller
         {
             this.Write("import { Controller, Logger } from '@nestjs/common';\r\n\r\n");
             
-            #line 13 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
+            #line 14 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
  foreach (var decorator in GetClassDecorators()) { 
             
             #line default
             #line hidden
             
-            #line 14 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
+            #line 15 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(decorator));
             
             #line default
             #line hidden
             this.Write("\r\n");
             
-            #line 15 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
+            #line 16 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
  } 
             
             #line default
             #line hidden
             this.Write("export class ");
             
-            #line 16 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
+            #line 17 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ClassName));
             
             #line default
             #line hidden
             this.Write(" {\r\n  logger = new Logger('");
             
-            #line 17 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
+            #line 18 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ClassName));
             
             #line default
             #line hidden
             this.Write("');\r\n\r\n  constructor(private readonly ");
             
-            #line 19 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
+            #line 20 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ServiceClassName.ToCamelCase()));
             
             #line default
             #line hidden
             this.Write(": ");
             
-            #line 19 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
+            #line 20 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ServiceClassName));
             
             #line default
             #line hidden
             this.Write(") {}\r\n");
             
-            #line 20 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
- foreach(var operation in Model.Operations) { 
+            #line 21 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
+ foreach(var operation in Model.Operations.Where(p => p.HasHttpSettings())) { 
             
             #line default
             #line hidden
             this.Write("\r\n");
             
-            #line 22 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
+            #line 23 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
  foreach (var decorator in GetOperationDecorators(operation)) { 
             
             #line default
             #line hidden
             this.Write("  ");
             
-            #line 23 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
+            #line 24 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(decorator));
             
             #line default
             #line hidden
             this.Write("\r\n");
             
-            #line 24 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
+            #line 25 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
  } 
             
             #line default
             #line hidden
             this.Write("  async ");
             
-            #line 25 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
+            #line 26 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(operation.Name.ToCamelCase()));
             
             #line default
             #line hidden
             this.Write("(");
             
-            #line 25 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
+            #line 26 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(GetOperationParameters(operation)));
             
             #line default
             #line hidden
             this.Write("): Promise<");
             
-            #line 25 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
+            #line 26 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(GetReturnType(operation)));
             
             #line default
             #line hidden
             this.Write("> {\r\n");
             
-            #line 26 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
+            #line 27 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
       if (operation.ReturnType != null) { 
             
             #line default
             #line hidden
             this.Write("    var result = await this.");
             
-            #line 27 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
+            #line 28 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ServiceClassName.ToCamelCase()));
             
             #line default
             #line hidden
             this.Write(".");
             
-            #line 27 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
+            #line 28 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(operation.Name.ToCamelCase()));
             
             #line default
             #line hidden
             this.Write("(");
             
-            #line 27 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
+            #line 28 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(GetParameters(operation)));
             
             #line default
             #line hidden
             this.Write(");\r\n    return ");
             
-            #line 28 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
+            #line 29 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(GetResultValue(operation)));
             
             #line default
             #line hidden
             this.Write(";\r\n");
             
-            #line 29 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
+            #line 30 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
       } else { 
             
             #line default
             #line hidden
             this.Write("    return await this.");
             
-            #line 30 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
+            #line 31 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ServiceClassName.ToCamelCase()));
             
             #line default
             #line hidden
             this.Write(".");
             
-            #line 30 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
+            #line 31 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(operation.Name.ToCamelCase()));
             
             #line default
             #line hidden
             this.Write("(");
             
-            #line 30 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
+            #line 31 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(GetParameters(operation)));
             
             #line default
             #line hidden
             this.Write(");\r\n");
             
-            #line 31 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
+            #line 32 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
       } 
             
             #line default
             #line hidden
             this.Write("  }\r\n");
             
-            #line 33 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
+            #line 34 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\Controller\ControllerTemplate.tt"
   } 
             
             #line default

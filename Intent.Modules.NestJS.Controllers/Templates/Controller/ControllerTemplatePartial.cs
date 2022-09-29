@@ -55,7 +55,7 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Controller
             {
                 return $"new {this.GetJsonResponseName()}<{GetTypeName(operation.TypeReference)}>(result)";
             }
-            
+
             return "result";
         }
 
