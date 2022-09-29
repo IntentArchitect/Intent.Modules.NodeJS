@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="912c66b3-0dfa-4b6f-8165-343b9e922337" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+  <name>Intent.NodeJS.NestJS.Controllers.JsonResponse</name>
+  <display>Intent.NodeJS.NestJS.Controllers.JsonResponse</display>
+  <externalReference>Intent.NodeJS.NestJS.Controllers</externalReference>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>b71097f2-2ffb-460e-8c01-6a3237ac89a1</parentFolderId>
+  <stereotypes />
+  <metadata>
+    <entry key="status" value="unassigned" />
+  </metadata>
+  <childElements />
+</class>

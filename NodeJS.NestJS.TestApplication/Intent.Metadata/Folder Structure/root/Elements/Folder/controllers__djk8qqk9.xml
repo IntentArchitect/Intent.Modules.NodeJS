@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="4a9e5bb5-a8be-4570-907f-1742be8f5e1e" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+  <name>controllers</name>
+  <display>controllers</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-by-name</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>d970aeef-9632-4d01-86d2-b7a6536c68a5</parentFolderId>
+  <packageId>b71097f2-2ffb-460e-8c01-6a3237ac89a1</packageId>
+  <packageName>root</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

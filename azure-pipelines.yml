@@ -12,6 +12,12 @@ variables:
 - name: 'targetsToBuild'
   value: '**/*.sln'
 - group: 'Intent Architect Credentials'
+- name: 'intent-solution'
+  value: 'Intent.Modules.NodeJS.Tests.isln'
+- name: 'warning-logging-command'
+  value: '##vso[task.logissue type=warning;]{@m} {@x}\n'
+- name: 'error-logging-command'
+  value: '##vso[task.logissue type=error;]{@m} {@x}\n'
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -77,6 +83,36 @@ steps:
     command: 'test'
     projects: $(targetsToBuild)
     arguments: '--no-build'
+
+- task: PowerShell@2
+  displayName: 'Install Intent CLI'
+  inputs:
+    targetType: 'inline'
+    pwsh: true
+    script: dotnet tool install Intent.SoftwareFactory.CLI --global
+
+- task: PowerShell@2
+  displayName: 'Template Testing'
+  inputs:
+    targetType: 'inline'
+    pwsh: true
+    script: |
+      ./prepare-intent-testing.ps1
+      $testSln = [xml] (Get-Content './$(intent-solution)' -Encoding UTF8)
+      $testsFailed = $false
+      $testSln.solution.applications.application | % {
+        $appId = $_.id
+        Write-Host ==================================================
+        Write-Host Application = $_.name
+        Write-Host ==================================================
+        intent-cli "$(intent-architect-user)" "$(intent-architect-password)" "$(intent-solution)" "$($appId)" "--warning-logging-command" "$(warning-logging-command)" "--error-logging-command" "$(error-logging-command)"
+        if ($LASTEXITCODE -ne 0) {
+            $testsFailed = $true
+        }
+      }
+      if ($testsFailed -eq $true) {
+        throw "Template Testing failed. Please review [error] tags."
+      }
 
 - task: PowerShell@2
   displayName: 'Install Intent.IArchitect.Packager.CommandLine'

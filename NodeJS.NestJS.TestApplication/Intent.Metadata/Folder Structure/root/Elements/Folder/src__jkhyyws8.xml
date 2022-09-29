@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="d970aeef-9632-4d01-86d2-b7a6536c68a5" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+  <name>src</name>
+  <display>src</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-by-name</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>b71097f2-2ffb-460e-8c01-6a3237ac89a1</parentFolderId>
+  <packageId>b71097f2-2ffb-460e-8c01-6a3237ac89a1</packageId>
+  <packageName>root</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="a04b5547-9ab6-470a-b8e5-24372994731a" type="Role" typeId="8663c9f9-2852-45e7-aaa1-0883a2e6f1da">
+      <name>Root</name>
+      <display>Root</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>d970aeef-9632-4d01-86d2-b7a6536c68a5</parentFolderId>
+      <packageId>b71097f2-2ffb-460e-8c01-6a3237ac89a1</packageId>
+      <packageName>root</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="e1a3e861-9c21-4753-9fbb-d83f2a9629ff" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Intent.Npm.PackageJsonFile</name>
+      <display>Intent.Npm.PackageJsonFile</display>
+      <externalReference>Intent.Npm</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>d970aeef-9632-4d01-86d2-b7a6536c68a5</parentFolderId>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="a16d79c8-1233-40b4-9b2e-4f14011f98c5" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Intent.NodeJS.NestJS.Core.dotenv</name>
+      <display>Intent.NodeJS.NestJS.Core.dotenv</display>
+      <externalReference>Intent.NodeJS.NestJS.Core</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>d970aeef-9632-4d01-86d2-b7a6536c68a5</parentFolderId>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="92d5f228-c506-4121-8de1-bdcefc5ce752" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Intent.NodeJS.NestJS.Core.ZipFileContent</name>
+      <display>Intent.NodeJS.NestJS.Core.ZipFileContent</display>
+      <externalReference>Intent.NodeJS.NestJS.Core</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>d970aeef-9632-4d01-86d2-b7a6536c68a5</parentFolderId>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="476eefa3-51a6-4cd7-822d-207a25e224f0" type="Service" typeId="b16578a5-27b1-4047-a8df-f0b783d706bd">
+  <name>NonHttpServiceAppliedService</name>
+  <display>NonHttpServiceAppliedService</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-manually</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>a29cce6f-ade0-4da3-af3f-82a40c081cc5</parentFolderId>
+  <packageId>a29cce6f-ade0-4da3-af3f-82a40c081cc5</packageId>
+  <packageName>Services</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="e8b99911-e5ec-44e0-acd7-8e76e9fae937" type="Operation" typeId="e030c97a-e066-40a7-8188-808c275df3cb">
+      <name>Operation1</name>
+      <display>Operation1(): void</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="a912df24-cc4b-4ad7-998e-5f8a9d709262">
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>476eefa3-51a6-4cd7-822d-207a25e224f0</parentFolderId>
+      <packageId>a29cce6f-ade0-4da3-af3f-82a40c081cc5</packageId>
+      <packageName>Services</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

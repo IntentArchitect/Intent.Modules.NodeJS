@@ -20,12 +20,14 @@ using Intent.Utils;
 namespace Intent.Modules.NestJS.Controllers.Templates.Controller
 {
     [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
-    partial class ControllerTemplate : TypeScriptTemplateBase<Intent.Modelers.Services.Api.ServiceModel, ControllerDecorator>
+    partial class
+        ControllerTemplate : TypeScriptTemplateBase<Intent.Modelers.Services.Api.ServiceModel, ControllerDecorator>
     {
         [IntentManaged(Mode.Fully)] public const string TemplateId = "Intent.NodeJS.NestJS.Controllers.Controller";
 
         [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
-        public ControllerTemplate(IOutputTarget outputTarget, Intent.Modelers.Services.Api.ServiceModel model) : base(TemplateId, outputTarget, model)
+        public ControllerTemplate(IOutputTarget outputTarget, Intent.Modelers.Services.Api.ServiceModel model) : base(
+            TemplateId, outputTarget, model)
         {
             AddTypeSource(DtoModelTemplate.TemplateId);
         }
@@ -92,7 +94,8 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Controller
                 yield return decorator;
             }
 
-            yield return $"@Controller('{Model.GetHttpServiceSettings().Route() ?? $"api/{Model.Name.RemoveSuffix("Service", "Controller").ToLower()}"}')";
+            yield return
+                $"@Controller('{Model.GetHttpServiceSettings().Route() ?? $"api/{Model.Name.RemoveSuffix("Service", "Controller").ToLower()}"}')";
         }
 
         private IEnumerable<string> GetOperationDecorators(OperationModel operation)
@@ -115,12 +118,14 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Controller
                 case HttpVerb.PATCH:
                 case HttpVerb.POST:
                 case HttpVerb.PUT:
-                    parameters.AddRange(operation.Parameters.Select(x => $"{GetParameterBindingAttribute(operation, x)}{x.Name}: {GetTypeName(x.TypeReference)}"));
+                    parameters.AddRange(operation.Parameters.Select(x =>
+                        $"{GetParameterBindingAttribute(operation, x)}{x.Name}: {GetTypeName(x.TypeReference)}"));
                     break;
                 case HttpVerb.GET:
                 case HttpVerb.DELETE:
-                    if (operation.Parameters.Any(x => x.TypeReference.Element.SpecializationTypeId != TypeDefinitionModel.SpecializationTypeId &&
-                                                      x.GetParameterSettings().Source().IsDefault()))
+                    if (operation.Parameters.Any(x =>
+                            x.TypeReference.Element.SpecializationTypeId != TypeDefinitionModel.SpecializationTypeId &&
+                            x.GetParameterSettings().Source().IsDefault()))
                     {
                         Logging.Log.Warning(
                             $@"Intent.NestJS.Controllers: [{Model.Name}.{operation.Name}] Passing objects into HTTP {GetHttpVerb(operation)} operations is not well supported by this module.
@@ -128,7 +133,8 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Controller
                         // Log warning
                     }
 
-                    parameters.AddRange(operation.Parameters.Select(x => $"{GetParameterBindingAttribute(operation, x)}{x.Name}: {GetTypeName(x.TypeReference)}"));
+                    parameters.AddRange(operation.Parameters.Select(x =>
+                        $"{GetParameterBindingAttribute(operation, x)}{x.Name}: {GetTypeName(x.TypeReference)}"));
                     break;
                 default:
                     throw new NotSupportedException($"{verb} not supported");
@@ -151,6 +157,11 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Controller
 
         private string GetParameterBindingAttribute(OperationModel operation, ParameterModel parameter)
         {
+            if (!parameter.HasParameterSettings())
+            {
+                return string.Empty;
+            }
+
             if (parameter.GetParameterSettings().Source().IsDefault())
             {
                 if (parameter.TypeReference.Element.SpecializationTypeId == DTOModel.SpecializationTypeId)
@@ -158,7 +169,9 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Controller
                     return $"@{ImportType("Body", "@nestjs/common")}() ";
                 }
 
-                if (operation.GetHttpSettings().Route().Contains($"{{{parameter.Name}}}") || operation.GetHttpSettings().Route().Contains($":{parameter.Name}"))
+                if (operation.GetHttpSettings()?.Route() != null &&
+                    (operation.GetHttpSettings().Route().Contains($"{{{parameter.Name}}}") ||
+                     operation.GetHttpSettings().Route().Contains($":{parameter.Name}")))
                 {
                     return $"@{ImportType("Param", "@nestjs/common")}('{parameter.Name}') ";
                 }
@@ -186,7 +199,7 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Controller
                 return $"@{ImportType("Param", "@nestjs/common")}('{parameter.Name}') ";
             }
 
-            return "";
+            return string.Empty;
         }
 
         private HttpVerb GetHttpVerb(OperationModel operation)
