@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="67b0254e-5654-4962-aa56-4ceead2022f2" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+  <name>web</name>
+  <display>web</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-by-name</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>d358c34f-76b0-41a9-8827-a53a27a486c9</parentFolderId>
+  <packageId>b76db81e-481b-4710-a452-bf7ffe3049b7</packageId>
+  <packageName>${application.name}</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

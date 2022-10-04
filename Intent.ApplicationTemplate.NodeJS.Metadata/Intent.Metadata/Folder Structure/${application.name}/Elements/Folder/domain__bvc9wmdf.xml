@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="0d4eff9c-99a6-4e8e-8987-cca341b9d476" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+  <name>domain</name>
+  <display>domain</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-by-name</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>d358c34f-76b0-41a9-8827-a53a27a486c9</parentFolderId>
+  <packageId>b76db81e-481b-4710-a452-bf7ffe3049b7</packageId>
+  <packageName>${application.name}</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="7c03c1f1-8ee1-419d-9089-23b70fdb2096" type="Role" typeId="8663c9f9-2852-45e7-aaa1-0883a2e6f1da">
+      <name>Domain</name>
+      <display>Domain</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>0d4eff9c-99a6-4e8e-8987-cca341b9d476</parentFolderId>
+      <packageId>b76db81e-481b-4710-a452-bf7ffe3049b7</packageId>
+      <packageName>${application.name}</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>
