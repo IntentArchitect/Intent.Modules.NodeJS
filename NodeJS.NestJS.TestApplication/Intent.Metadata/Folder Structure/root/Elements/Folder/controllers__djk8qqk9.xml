@@ -11,5 +11,70 @@
   <packageName>root</packageName>
   <stereotypes />
   <metadata />
-  <childElements />
+  <childElements>
+    <childElement id="0cad328b-3024-4c17-b411-b9f04a1d87f4" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Intent.NodeJS.NestJS.Controllers.Controller</name>
+      <display>Intent.NodeJS.NestJS.Controllers.Controller</display>
+      <externalReference>Intent.NodeJS.NestJS.Controllers</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>4a9e5bb5-a8be-4570-907f-1742be8f5e1e</parentFolderId>
+      <packageId>b71097f2-2ffb-460e-8c01-6a3237ac89a1</packageId>
+      <packageName>root</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="unassigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="6221e9c5-968c-4de7-b91b-026cd010701e" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Intent.NodeJS.NestJS.Controllers.ControllerBase</name>
+      <display>Intent.NodeJS.NestJS.Controllers.ControllerBase</display>
+      <externalReference>Intent.NodeJS.NestJS.Controllers</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>4a9e5bb5-a8be-4570-907f-1742be8f5e1e</parentFolderId>
+      <packageId>b71097f2-2ffb-460e-8c01-6a3237ac89a1</packageId>
+      <packageName>root</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="unassigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="912c66b3-0dfa-4b6f-8165-343b9e922337" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Intent.NodeJS.NestJS.Controllers.JsonResponse</name>
+      <display>Intent.NodeJS.NestJS.Controllers.JsonResponse</display>
+      <externalReference>Intent.NodeJS.NestJS.Controllers</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>4a9e5bb5-a8be-4570-907f-1742be8f5e1e</parentFolderId>
+      <packageId>b71097f2-2ffb-460e-8c01-6a3237ac89a1</packageId>
+      <packageName>root</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="unassigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="bfe837c3-b397-4dd7-955d-617d9714faa9" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Intent.NodeJS.NestJS.Controllers.Service</name>
+      <display>Intent.NodeJS.NestJS.Controllers.Service</display>
+      <externalReference>Intent.NodeJS.NestJS.Controllers</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>4a9e5bb5-a8be-4570-907f-1742be8f5e1e</parentFolderId>
+      <packageId>b71097f2-2ffb-460e-8c01-6a3237ac89a1</packageId>
+      <packageName>root</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="unassigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+  </childElements>
 </class>

@@ -12,7 +12,7 @@
   <stereotypes />
   <metadata />
   <childElements>
-    <childElement id="5e4afb42-36e9-4981-8942-c6a47eadf1df" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+    <childElement id="9d69ae76-f413-492a-8d85-a350573fba6d" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
       <name>Intent.TypeScript.Weaving.Decorators.IntentDecorators</name>
       <display>Intent.TypeScript.Weaving.Decorators.IntentDecorators</display>
       <externalReference>Intent.TypeScript.Weaving.Decorators</externalReference>

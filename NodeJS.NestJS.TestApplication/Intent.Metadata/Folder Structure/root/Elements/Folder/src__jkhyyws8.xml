@@ -12,9 +12,10 @@
   <stereotypes />
   <metadata />
   <childElements>
-    <childElement id="a04b5547-9ab6-470a-b8e5-24372994731a" type="Role" typeId="8663c9f9-2852-45e7-aaa1-0883a2e6f1da">
-      <name>Root</name>
-      <display>Root</display>
+    <childElement id="da95e0cc-358d-4e1e-a5aa-d658cb0105f6" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Intent.NodeJS.NestJS.Core.AppModule</name>
+      <display>Intent.NodeJS.NestJS.Core.AppModule</display>
+      <externalReference>Intent.NodeJS.NestJS.Core</externalReference>
       <isAbstract>false</isAbstract>
       <genericTypes />
       <isMapped>false</isMapped>
@@ -22,20 +23,8 @@
       <packageId>b71097f2-2ffb-460e-8c01-6a3237ac89a1</packageId>
       <packageName>root</packageName>
       <stereotypes />
-      <metadata />
-      <childElements />
-    </childElement>
-    <childElement id="e1a3e861-9c21-4753-9fbb-d83f2a9629ff" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
-      <name>Intent.Npm.PackageJsonFile</name>
-      <display>Intent.Npm.PackageJsonFile</display>
-      <externalReference>Intent.Npm</externalReference>
-      <isAbstract>false</isAbstract>
-      <genericTypes />
-      <isMapped>false</isMapped>
-      <parentFolderId>d970aeef-9632-4d01-86d2-b7a6536c68a5</parentFolderId>
-      <stereotypes />
       <metadata>
-        <entry key="status" value="assigned" />
+        <entry key="status" value="unassigned" />
       </metadata>
       <childElements />
     </childElement>
@@ -47,9 +36,27 @@
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>d970aeef-9632-4d01-86d2-b7a6536c68a5</parentFolderId>
+      <packageId>b71097f2-2ffb-460e-8c01-6a3237ac89a1</packageId>
+      <packageName>root</packageName>
       <stereotypes />
       <metadata>
         <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="5746cce6-c5b9-4e64-8e94-6b0a087d973d" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Intent.NodeJS.NestJS.Core.Main</name>
+      <display>Intent.NodeJS.NestJS.Core.Main</display>
+      <externalReference>Intent.NodeJS.NestJS.Core</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>d970aeef-9632-4d01-86d2-b7a6536c68a5</parentFolderId>
+      <packageId>b71097f2-2ffb-460e-8c01-6a3237ac89a1</packageId>
+      <packageName>root</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="unassigned" />
       </metadata>
       <childElements />
     </childElement>
@@ -61,10 +68,41 @@
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>d970aeef-9632-4d01-86d2-b7a6536c68a5</parentFolderId>
+      <packageId>b71097f2-2ffb-460e-8c01-6a3237ac89a1</packageId>
+      <packageName>root</packageName>
       <stereotypes />
       <metadata>
         <entry key="status" value="assigned" />
       </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="e1a3e861-9c21-4753-9fbb-d83f2a9629ff" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Intent.Npm.PackageJsonFile</name>
+      <display>Intent.Npm.PackageJsonFile</display>
+      <externalReference>Intent.Npm</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>d970aeef-9632-4d01-86d2-b7a6536c68a5</parentFolderId>
+      <packageId>b71097f2-2ffb-460e-8c01-6a3237ac89a1</packageId>
+      <packageName>root</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="a04b5547-9ab6-470a-b8e5-24372994731a" type="Role" typeId="8663c9f9-2852-45e7-aaa1-0883a2e6f1da">
+      <name>Root</name>
+      <display>Root</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>d970aeef-9632-4d01-86d2-b7a6536c68a5</parentFolderId>
+      <packageId>b71097f2-2ffb-460e-8c01-6a3237ac89a1</packageId>
+      <packageName>root</packageName>
+      <stereotypes />
+      <metadata />
       <childElements />
     </childElement>
   </childElements>

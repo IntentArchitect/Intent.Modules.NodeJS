@@ -11,5 +11,22 @@
   <packageName>root</packageName>
   <stereotypes />
   <metadata />
-  <childElements />
+  <childElements>
+    <childElement id="863d4f0e-5f94-4016-a735-f24abeceed65" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Intent.NodeJS.NestJS.Controllers.DtoModel</name>
+      <display>Intent.NodeJS.NestJS.Controllers.DtoModel</display>
+      <externalReference>Intent.NodeJS.NestJS.Controllers</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>0a9ffc7d-6391-4c60-8d67-ac008340cf52</parentFolderId>
+      <packageId>b71097f2-2ffb-460e-8c01-6a3237ac89a1</packageId>
+      <packageName>root</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="unassigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+  </childElements>
 </class>
