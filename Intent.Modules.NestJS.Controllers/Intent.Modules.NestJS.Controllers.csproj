@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -8,7 +8,7 @@
     <PackageReference Include="Intent.Modules.Common" Version="3.3.11" />
     <PackageReference Include="Intent.Modules.Common.Types" Version="3.3.6" />
     <PackageReference Include="Intent.Modules.Common.TypeScript" Version="3.3.6" />
-    <PackageReference Include="Intent.Modules.Metadata.WebApi" Version="3.3.9-pre.0" />
+    <PackageReference Include="Intent.Modules.Metadata.WebApi" Version="3.3.9" />
     <PackageReference Include="Intent.Modules.Modelers.Services" Version="3.3.5" />
     <PackageReference Include="Intent.Modules.TypeScript.Weaving.Decorators" Version="3.3.2" />
     <PackageReference Include="Intent.Packager" Version="3.3.2">
