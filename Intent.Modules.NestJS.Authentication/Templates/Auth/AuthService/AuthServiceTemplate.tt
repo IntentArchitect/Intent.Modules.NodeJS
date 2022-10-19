@@ -14,8 +14,8 @@ import { JwtService } from '@nestjs/jwt';
 export class <#= ClassName #> {
   constructor(
     private readonly usersService: <#= this.GetUsersServiceName() #>,
-    private readonly jwtService: JwtService,
-  ) { }
+    private readonly jwtService: JwtService
+  ) {}
 
   async validateUser(username: string, pass: string): Promise<<#= this.GetUserName() #>> {
     const user = await this.usersService.findOne(username);

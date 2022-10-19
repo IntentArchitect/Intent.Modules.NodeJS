@@ -9,10 +9,10 @@
 <#@ import namespace="Intent.Metadata.Models" #>
 <#@ import namespace="Intent.Modelers.Domain.Api" #>
 <#@ import namespace="Intent.Module.TypeScript.Domain.Templates.Entity" #>
-import { Repository } from "typeorm";
+<#@ import namespace="Intent.Modules.TypeScript.Weaving.Decorators" #>
+import { Repository } from 'typeorm';
 
+<#= this.IntentMergeDecorator() #>
 @<#= this.GetTypeOrmExDecoratorName() #>(<#= GetTypeName(EntityTemplate.TemplateId, Model) #>)
-export class <#= ClassName #> extends Repository<<#= GetTypeName(EntityTemplate.TemplateId, Model) #>>
-{
-
+export class <#= ClassName #> extends Repository<<#= GetTypeName(EntityTemplate.TemplateId, Model) #>> {
 }

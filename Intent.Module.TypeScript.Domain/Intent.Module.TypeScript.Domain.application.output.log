@@ -74,6 +74,38 @@
     </FileLog>
     <FileLog>
       <ProjectId>1d070258-7362-4d6e-9eb2-15e73a7e2c04</ProjectId>
+      <CorrelationId>ModuleBuilder.Typescript.Templates.TypescriptTemplate.PreProcessT4#fc400007-1dc1-4d73-a8fa-3d1d5056f148</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Templates/Enum/EnumTemplate.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>Enum/EnumTemplate.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>1d070258-7362-4d6e-9eb2-15e73a7e2c04</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateT4#fc400007-1dc1-4d73-a8fa-3d1d5056f148</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Templates/Enum/EnumTemplate.tt</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>Enum/EnumTemplate.tt</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>1d070258-7362-4d6e-9eb2-15e73a7e2c04</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial#fc400007-1dc1-4d73-a8fa-3d1d5056f148</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Templates/Enum/EnumTemplatePartial.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>Enum/EnumTemplatePartial.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>1d070258-7362-4d6e-9eb2-15e73a7e2c04</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.TemplateRegistration.FilePerModel#fc400007-1dc1-4d73-a8fa-3d1d5056f148</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Templates/Enum/EnumTemplateRegistration.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>Enum/EnumTemplateRegistration.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>1d070258-7362-4d6e-9eb2-15e73a7e2c04</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.Templates.TemplateExtensions</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/TemplateExtensions.cs</ApplicationRelativeFilePath>

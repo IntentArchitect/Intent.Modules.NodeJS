@@ -47,8 +47,8 @@ namespace Intent.Modules.NestJS.Authentication.Templates.Auth.AuthService
             
             #line default
             #line hidden
-            this.Write(",\r\n    private readonly jwtService: JwtService,\r\n  ) { }\r\n\r\n  async validateUser(" +
-                    "username: string, pass: string): Promise<");
+            this.Write(",\r\n    private readonly jwtService: JwtService\r\n  ) {}\r\n\r\n  async validateUser(us" +
+                    "ername: string, pass: string): Promise<");
             
             #line 20 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Authentication\Templates\Auth\AuthService\AuthServiceTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(this.GetUserName()));

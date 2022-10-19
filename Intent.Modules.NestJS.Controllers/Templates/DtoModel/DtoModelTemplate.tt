@@ -9,8 +9,7 @@
 <#@ import namespace="Intent.Metadata.Models" #>
 <#@ import namespace="Intent.Modelers.Services.Api" #>
 
-export class <#= ClassName #>
-{<# foreach(var field in Model.Fields) { #>
+export class <#= ClassName #> {<# foreach(var field in Model.Fields) { #>
 
 <# foreach (var decorator in GetFieldDecorators(field)) { #>
   <#= decorator #>
@@ -21,7 +20,7 @@ export class <#= ClassName #>
 
   static from<#= GetTypeName(Model.Mapping) #>(<#= Model.Mapping.Element.Name.ToCamelCase() #>: <#= GetTypeName(Model.Mapping) #>) {
     if (<#= Model.Mapping.Element.Name.ToCamelCase() #> == null) {
-        return null;
+      return null;
     }
     const dto = new <#= ClassName #>();
     <#= GetMappings() #>

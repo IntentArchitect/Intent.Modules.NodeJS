@@ -62,7 +62,12 @@ namespace Intent.Modules.NestJS.Controllers.Templates.DtoModel
                 yield return decorator;
             }
 
-            yield return $"@{ImportType("ApiProperty", "@nestjs/swagger")}()";
+            var apiPropertyOptions = new List<string>();
+            if (!string.IsNullOrWhiteSpace(field.Comment))
+            {
+                apiPropertyOptions.Add($"description: \"{field.Comment}\"");
+            }
+            yield return $"@{ImportType("ApiProperty", "@nestjs/swagger")}({(apiPropertyOptions.Any() ? $"{{ {string.Join(", ", apiPropertyOptions)} }}" : "")})";
 
             if (IsDate(field))
             {

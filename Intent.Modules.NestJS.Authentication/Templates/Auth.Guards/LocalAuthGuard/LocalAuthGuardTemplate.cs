@@ -40,7 +40,7 @@ namespace Intent.Modules.NestJS.Authentication.Templates.Auth.Guards.LocalAuthGu
             
             #line default
             #line hidden
-            this.Write(" extends AuthGuard(\'local\') { }\r\n");
+            this.Write(" extends AuthGuard(\'local\') {}\r\n");
             return this.GenerationEnvironment.ToString();
         }
     }

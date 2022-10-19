@@ -3,6 +3,7 @@ using System.Linq;
 using Intent.Engine;
 using Intent.Metadata.Models;
 using Intent.Modelers.Domain.Api;
+using Intent.Module.TypeScript.Domain.Templates.Enum;
 using Intent.Modules.Common.Templates;
 using Intent.Modules.Common.TypeScript.Templates;
 using Intent.RoslynWeaver.Attributes;
@@ -23,6 +24,7 @@ namespace Intent.Module.TypeScript.Domain.Templates.Entity
         public EntityTemplate(IOutputTarget outputTarget, Intent.Modelers.Domain.Api.ClassModel model) : base(TemplateId, outputTarget, model)
         {
             AddTypeSource(EntityTemplate.TemplateId);
+            AddTypeSource(EnumTemplate.TemplateId);
         }
 
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
@@ -45,16 +47,16 @@ namespace Intent.Module.TypeScript.Domain.Templates.Entity
         {
             var decorators = GetDecoratorsOutput(x => string.Join(@"
   ", x.GetFieldDecorators(attribute)));
-            return string.IsNullOrWhiteSpace(decorators) ? "" : $@"
-  {decorators}";
+            return string.IsNullOrWhiteSpace(decorators) ? "" : $@"{decorators}
+  ";
         }
 
         private string GetAssociationDecorators(AssociationEndModel associationEnd)
         {
             var decorators = GetDecoratorsOutput(x => string.Join(@"
   ", x.GetFieldDecorators(associationEnd)));
-            return string.IsNullOrWhiteSpace(decorators) ? "" : $@"
-  {decorators}";
+            return string.IsNullOrWhiteSpace(decorators) ? "" : $@"{decorators}
+  ";
         }
 
         private IEnumerable<AssociationEndModel> GetAssociationsRequiringFields()

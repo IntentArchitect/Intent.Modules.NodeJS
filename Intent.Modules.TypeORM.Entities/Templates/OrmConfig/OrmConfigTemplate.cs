@@ -41,7 +41,7 @@ const commonConf = {
   ENTITIES: [__dirname + '/domain/entities/*.entity{.ts,.js}'],
   MIGRATIONS: [__dirname + '/migrations/**/*{.ts,.js}'],
   MIGRATIONS_RUN: get('DB_MIGRATIONS_RUN').asBool(),
-  SYNCHRONIZE: get('DB_SYNCHRONIZE').asBool()
+  SYNCHRONIZE: get('DB_SYNCHRONIZE').asBool(),
 };
 
 const ");
@@ -76,7 +76,7 @@ const ");
   entities: commonConf.ENTITIES,
   migrations: commonConf.MIGRATIONS,
   migrationsRun: commonConf.MIGRATIONS_RUN,
-  synchronize: commonConf.SYNCHRONIZE
+  synchronize: commonConf.SYNCHRONIZE,
 };
 
 if (process.env.NODE_ENV === 'prod') {

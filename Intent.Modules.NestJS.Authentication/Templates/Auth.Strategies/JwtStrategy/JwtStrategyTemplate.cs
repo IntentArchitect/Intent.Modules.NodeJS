@@ -58,7 +58,7 @@ namespace Intent.Modules.NestJS.Authentication.Templates.Auth.Strategies.JwtStra
             #line default
             #line hidden
             this.Write("> {\r\n    return {\r\n      userId: payload.userId,\r\n      username: payload.usernam" +
-                    "e,\r\n      roles: payload.roles\r\n    };\r\n  }\r\n}");
+                    "e,\r\n      roles: payload.roles,\r\n    };\r\n  }\r\n}");
             return this.GenerationEnvironment.ToString();
         }
     }

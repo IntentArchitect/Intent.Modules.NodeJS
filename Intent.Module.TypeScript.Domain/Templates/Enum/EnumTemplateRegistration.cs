@@ -6,35 +6,36 @@ using Intent.Metadata.Models;
 using Intent.Modelers.Domain.Api;
 using Intent.Modules.Common;
 using Intent.Modules.Common.Registrations;
+using Intent.Modules.Common.Types.Api;
 using Intent.RoslynWeaver.Attributes;
 using Intent.Templates;
 
-[assembly: DefaultIntentManaged(Mode.Merge)]
+[assembly: DefaultIntentManaged(Mode.Fully)]
 [assembly: IntentTemplate("Intent.ModuleBuilder.TemplateRegistration.FilePerModel", Version = "1.0")]
 
-namespace Intent.Modules.TypeORM.Entities.Templates.Repository
+namespace Intent.Module.TypeScript.Domain.Templates.Enum
 {
     [IntentManaged(Mode.Merge, Body = Mode.Merge, Signature = Mode.Fully)]
-    public class RepositoryTemplateRegistration : FilePerModelTemplateRegistration<ClassModel>
+    public class EnumTemplateRegistration : FilePerModelTemplateRegistration<EnumModel>
     {
         private readonly IMetadataManager _metadataManager;
 
-        public RepositoryTemplateRegistration(IMetadataManager metadataManager)
+        public EnumTemplateRegistration(IMetadataManager metadataManager)
         {
             _metadataManager = metadataManager;
         }
 
-        public override string TemplateId => RepositoryTemplate.TemplateId;
+        public override string TemplateId => EnumTemplate.TemplateId;
 
-        public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget, ClassModel model)
+        public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget, EnumModel model)
         {
-            return new RepositoryTemplate(outputTarget, model);
+            return new EnumTemplate(outputTarget, model);
         }
 
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
-        public override IEnumerable<ClassModel> GetModels(IApplication application)
+        public override IEnumerable<EnumModel> GetModels(IApplication application)
         {
-            return _metadataManager.Domain(application).GetClassModels().Where(x => x.IsAggregateRoot());
+            return _metadataManager.Domain(application).GetEnumModels();
         }
     }
 }

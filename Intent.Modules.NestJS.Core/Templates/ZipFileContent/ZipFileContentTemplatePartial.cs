@@ -42,7 +42,8 @@ namespace Intent.Modules.NestJS.Core.Templates.ZipFileContent
             }
             return new TemplateFileConfig(
                 fileName: filename,
-                fileExtension: extension.Replace(".", string.Empty)
+                fileExtension: extension.Replace(".", string.Empty),
+                overwriteBehaviour: OverwriteBehaviour.Always
             );
         }
 

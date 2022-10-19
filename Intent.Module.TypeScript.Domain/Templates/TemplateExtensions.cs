@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Intent.Module.TypeScript.Domain.Templates.Entity;
+using Intent.Module.TypeScript.Domain.Templates.Enum;
 using Intent.Modules.Common.Templates;
 using Intent.RoslynWeaver.Attributes;
 
@@ -19,6 +20,16 @@ namespace Intent.Module.TypeScript.Domain.Templates
         public static string GetEntityName(this IntentTemplateBase template, Intent.Modelers.Domain.Api.ClassModel model)
         {
             return template.GetTypeName(EntityTemplate.TemplateId, model);
+        }
+
+        public static string GetEnumName<T>(this IntentTemplateBase<T> template) where T : Intent.Modules.Common.Types.Api.EnumModel
+        {
+            return template.GetTypeName(EnumTemplate.TemplateId, template.Model);
+        }
+
+        public static string GetEnumName(this IntentTemplateBase template, Intent.Modules.Common.Types.Api.EnumModel model)
+        {
+            return template.GetTypeName(EnumTemplate.TemplateId, model);
         }
 
     }

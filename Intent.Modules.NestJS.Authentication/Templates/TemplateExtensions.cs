@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Intent.Modules.Common.Templates;
+using Intent.Modules.NestJS.Authentication.Templates.Auth.AuthController;
 using Intent.Modules.NestJS.Authentication.Templates.Auth.AuthModule;
 using Intent.Modules.NestJS.Authentication.Templates.Auth.AuthService;
 using Intent.Modules.NestJS.Authentication.Templates.Auth.Guards.JwtAuthGuard;
@@ -20,6 +21,10 @@ namespace Intent.Modules.NestJS.Authentication.Templates
 {
     public static class TemplateExtensions
     {
+        public static string GetAuthControllerName<T>(this IntentTemplateBase<T> template)
+        {
+            return template.GetTypeName(AuthControllerTemplate.TemplateId);
+        }
         public static string GetAuthModuleName<T>(this IntentTemplateBase<T> template)
         {
             return template.GetTypeName(AuthModuleTemplate.TemplateId);

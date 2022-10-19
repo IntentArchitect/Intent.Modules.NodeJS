@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Intent.Engine;
+using Intent.Metadata.Models;
 using Intent.Metadata.WebApi.Api;
 using Intent.Modelers.Services.Api;
 using Intent.Modules.Common;
@@ -94,8 +95,8 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Controller
                 yield return decorator;
             }
 
-            yield return
-                $"@Controller('{Model.GetHttpServiceSettings().Route() ?? $"api/{Model.Name.RemoveSuffix("Service", "Controller").ToLower()}"}')";
+            yield return $"@{ImportType("ApiTags", "@nestjs/swagger")}('{Model.Name.RemoveSuffix("Service", "Controller")}')";
+            yield return $"@Controller('{Model.GetHttpServiceSettings().Route() ?? $"api/{Model.Name.RemoveSuffix("Service", "Controller").ToLower()}"}')";
         }
 
         private IEnumerable<string> GetOperationDecorators(OperationModel operation)
@@ -106,6 +107,61 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Controller
             }
 
             yield return GetHttpVerbAndPath(operation);
+
+            var apiResponse = operation.ReturnType != null ? $"{GetTypeName((IElement)operation.TypeReference.Element)}" : null;
+            if (operation.ReturnType != null && GetTypeInfo(operation.ReturnType).IsPrimitive || operation.ReturnType.HasStringType())
+            {
+                apiResponse = $"'{GetTypeName((IElement)operation.TypeReference.Element)}'";
+            }
+            switch (GetHttpVerb(operation))
+            {
+                case HttpVerb.GET:
+                    yield return $@"@{ImportType("ApiOkResponse", "@nestjs/swagger")}({{
+    description: 'Returns the specified {apiResponse}.',
+    type: {apiResponse},{(operation.ReturnType?.IsCollection == true ? $@"
+    isArray: true," : "")}
+  }})";
+                    break;
+                case HttpVerb.POST:
+                    yield return $@"@{ImportType("ApiCreatedResponse", "@nestjs/swagger")}({{
+    description: 'The record has been successfully created.',{(apiResponse != null ? $@"
+    type: {apiResponse}," : "")}{(operation.ReturnType?.IsCollection == true ? $@"
+    isArray: true," : "")}
+  }})";
+                    break;
+                case HttpVerb.PUT:
+                case HttpVerb.PATCH:
+                    yield return $@"@{(operation.ReturnType != null ? ImportType("ApiOkResponse", "@nestjs/swagger") : ImportType("ApiNoContentResponse", "@nestjs/swagger"))}({{
+    description: 'Successfully updated.',{(apiResponse != null ? $@"
+    type: {apiResponse}," : "")}{(operation.ReturnType?.IsCollection == true ? $@"
+    isArray: true," : "")}
+  }})";
+                    break;
+                case HttpVerb.DELETE:
+                    yield return $@"@{ImportType("ApiOkResponse", "@nestjs/swagger")}({{
+    description: 'Successfully deleted.',{(apiResponse != null ? $@"
+    type: {apiResponse}," : "")}{(operation.ReturnType?.IsCollection == true ? $@"
+    isArray: true," : "")}
+  }})";
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+
+            if (operation.Parameters.Any())
+            {
+                yield return $"@{ImportType("ApiBadRequestResponse", "@nestjs/swagger")}({{ description: 'Bad request.' }})";
+            }
+            if (IsOperationSecured(operation))
+            {
+                yield return $"@{ImportType("ApiUnauthorizedResponse", "@nestjs/swagger")}({{ description: 'Unauthorized request.' }})";
+                yield return $"@{ImportType("ApiForbiddenResponse", "@nestjs/swagger")}({{ description: 'Forbidden request.' }})";
+            }
+            if (GetHttpVerb(operation) == HttpVerb.GET && operation.ReturnType?.IsCollection == false)
+            {
+                yield return $"@{ImportType("ApiNotFoundResponse", "@nestjs/swagger")}({{ description: 'Response not found.' }})";
+            }
+            //yield return @"[ProducesResponseType(StatusCodes.Status500InternalServerError)]";
         }
 
         private string GetOperationParameters(OperationModel operation)
@@ -146,7 +202,7 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Controller
         private string GetHttpVerbAndPath(OperationModel o)
         {
             var decoratorName = GetHttpVerb(o).ToString().ToLower().ToPascalCase();
-            return $"@{ImportType(decoratorName, "@nestjs/common")}(\"{GetPath(o) ?? ""}\")";
+            return $"@{ImportType(decoratorName, "@nestjs/common")}('{GetPath(o) ?? ""}')";
         }
 
         private string GetPath(OperationModel operation)
@@ -200,6 +256,15 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Controller
             }
 
             return string.Empty;
+        }
+        private bool IsControllerSecured()
+        {
+            return Model.HasSecured();// || ExecutionContext.Settings.GetAPISettings().DefaultAPISecurity().IsSecured();
+        }
+
+        private bool IsOperationSecured(OperationModel operation)
+        {
+            return (IsControllerSecured() || operation.HasSecured()) && !operation.HasUnsecured();
         }
 
         private HttpVerb GetHttpVerb(OperationModel operation)

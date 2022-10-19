@@ -22,10 +22,13 @@ import { PassportModule } from '@nestjs/passport';
         secret: config.get('<#= EnvironmentVariables.JwtKey #>'),
         signOptions: { expiresIn: '1h' },
       }),
-      inject: [ConfigService]
+      inject: [ConfigService],
     }),
+  ],
+  controllers: [
+    <#= this.GetAuthControllerName() #>
   ],
   providers: [<#= GetProviders() #>],
   exports: [<#= this.GetAuthServiceName() #>],
 })
-export class <#= ClassName #> { }
+export class <#= ClassName #> {}

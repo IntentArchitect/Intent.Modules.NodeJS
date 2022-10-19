@@ -51,15 +51,20 @@ namespace Intent.Modules.TypeORM.Entities.Templates.OrmConfig
                 .AddImport("TypeOrmModule", "@nestjs/typeorm")
                 .AddDependency(TemplateDependency.OnTemplate(this)));
 
-            var repositories = Model.Select(x => GetTemplate<RepositoryTemplate>(RepositoryTemplate.TemplateId, x, new TemplateDiscoveryOptions() { TrackDependency = false })).ToList();
+            var repositories = Model.Where(x => x.IsAggregateRoot()).Select(x => GetTemplate<RepositoryTemplate>(RepositoryTemplate.TemplateId, x, new TemplateDiscoveryOptions() { TrackDependency = false })).ToList();
 
-            ExecutionContext.EventDispatcher.Publish(NestJsModuleImportRequest
-                .Create(
-                    moduleId: null,
-                    statement: $"TypeOrmExModule.forCustomRepository([{string.Join(", ", repositories.Select(x => x.ClassName))}])")
-                .AddDependency(TemplateDependency.OnTemplate(TypeOrmExModuleTemplate.TemplateId))
-                .AddDependencies(repositories.Select(TemplateDependency.OnTemplate).ToArray()));
-
+            if (repositories.Any())
+            {
+                ExecutionContext.EventDispatcher.Publish(NestJsModuleImportRequest
+                    .Create(
+                        moduleId: null,
+                        statement: $@"TypeOrmExModule.forCustomRepository([
+      {string.Join(@"
+      ", repositories.Select(x => $"{x.ClassName},"))}
+    ])")
+                    .AddDependency(TemplateDependency.OnTemplate(TypeOrmExModuleTemplate.TemplateId))
+                    .AddDependencies(repositories.Select(TemplateDependency.OnTemplate).ToArray()));
+            }
             ExecutionContext.EventDispatcher.Publish(new EnvironmentVariableRequest("DB_MIGRATIONS_RUN", "false"));
             ExecutionContext.EventDispatcher.Publish(new EnvironmentVariableRequest("DB_SYNCHRONIZE", "true"));
 

@@ -32,14 +32,14 @@ namespace Intent.Modules.NestJS.Controllers.Templates.ControllerBase
         /// </summary>
         public override string TransformText()
         {
-            this.Write("\r\n\r\nexport class ");
+            this.Write("export class ");
             
-            #line 12 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\ControllerBase\ControllerBaseTemplate.tt"
+            #line 10 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\ControllerBase\ControllerBaseTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ClassName));
             
             #line default
             #line hidden
-            this.Write("\r\n{\r\n\r\n}");
+            this.Write(" {}");
             return this.GenerationEnvironment.ToString();
         }
     }

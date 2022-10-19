@@ -25,7 +25,7 @@ export class <#= ClassName #> {
 <# } #>
   async <#= operation.Name.ToCamelCase() #>(<#= GetOperationParameters(operation) #>): Promise<<#= GetReturnType(operation) #>> {
 <#      if (operation.ReturnType != null) { #>
-    var result = await this.<#= ServiceClassName.ToCamelCase() #>.<#= operation.Name.ToCamelCase() #>(<#= GetParameters(operation) #>);
+    const result = await this.<#= ServiceClassName.ToCamelCase() #>.<#= operation.Name.ToCamelCase() #>(<#= GetParameters(operation) #>);
     return <#= GetResultValue(operation) #>;
 <#      } else { #>
     return await this.<#= ServiceClassName.ToCamelCase() #>.<#= operation.Name.ToCamelCase() #>(<#= GetParameters(operation) #>);

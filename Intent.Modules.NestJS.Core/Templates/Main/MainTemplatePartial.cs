@@ -82,7 +82,7 @@ namespace Intent.Modules.NestJS.Core.Templates.Main
             var options = _nestApplicationOptions.Select(item => $"{item.Key}: {item.Value}");
 
             return $@", {{
-    {string.Join($",{Environment.NewLine}    ", options)}
+    {string.Join($"{Environment.NewLine}    ", options.Select(x => $"{x},"))}
   }}";
         }
 

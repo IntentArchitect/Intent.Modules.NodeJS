@@ -66,14 +66,20 @@ namespace Intent.Module.TypeScript.Domain.Templates.Entity
             
             #line default
             #line hidden
-            this.Write("  ");
             
             #line 15 "C:\Dev\Intent.Modules.NodeJS\Intent.Module.TypeScript.Domain\Templates\Entity\EntityTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture((Model.Attributes.IndexOf(attribute) == 0 ? "" : @"
+")));
+            
+            #line default
+            #line hidden
+            this.Write("  ");
+            
+            #line 16 "C:\Dev\Intent.Modules.NodeJS\Intent.Module.TypeScript.Domain\Templates\Entity\EntityTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(GetAttributeDecorators(attribute)));
             
             #line default
             #line hidden
-            this.Write("\r\n  ");
             
             #line 16 "C:\Dev\Intent.Modules.NodeJS\Intent.Module.TypeScript.Domain\Templates\Entity\EntityTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(attribute.Name.ToCamelCase()));
@@ -106,14 +112,13 @@ namespace Intent.Module.TypeScript.Domain.Templates.Entity
             
             #line default
             #line hidden
-            this.Write("  ");
+            this.Write("\r\n  ");
             
-            #line 19 "C:\Dev\Intent.Modules.NodeJS\Intent.Module.TypeScript.Domain\Templates\Entity\EntityTemplate.tt"
+            #line 20 "C:\Dev\Intent.Modules.NodeJS\Intent.Module.TypeScript.Domain\Templates\Entity\EntityTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(GetAssociationDecorators(association)));
             
             #line default
             #line hidden
-            this.Write("\r\n  ");
             
             #line 20 "C:\Dev\Intent.Modules.NodeJS\Intent.Module.TypeScript.Domain\Templates\Entity\EntityTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(association.Name.ToCamelCase()));

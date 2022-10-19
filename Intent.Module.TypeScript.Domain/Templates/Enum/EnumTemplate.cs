@@ -7,7 +7,7 @@
 //     the code is regenerated.
 // </auto-generated>
 // ------------------------------------------------------------------------------
-namespace Intent.Modules.TypeORM.Entities.Templates.TypeOrmExDecorator
+namespace Intent.Module.TypeScript.Domain.Templates.Enum
 {
     using System.Collections.Generic;
     using System.Linq;
@@ -16,15 +16,16 @@ namespace Intent.Modules.TypeORM.Entities.Templates.TypeOrmExDecorator
     using Intent.Modules.Common.TypeScript.Templates;
     using Intent.Templates;
     using Intent.Metadata.Models;
+    using Intent.Modules.Common.Types.Api;
     using System;
     
     /// <summary>
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\TypeOrmExDecorator\TypeOrmExDecoratorTemplate.tt"
+    #line 1 "C:\Dev\Intent.Modules.NodeJS\Intent.Module.TypeScript.Domain\Templates\Enum\EnumTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "17.0.0.0")]
-    public partial class TypeOrmExDecoratorTemplate : TypeScriptTemplateBase<object>
+    public partial class EnumTemplate : TypeScriptTemplateBase<Intent.Modules.Common.Types.Api.EnumModel>
     {
 #line hidden
         /// <summary>
@@ -32,16 +33,21 @@ namespace Intent.Modules.TypeORM.Entities.Templates.TypeOrmExDecorator
         /// </summary>
         public override string TransformText()
         {
-            this.Write("import { SetMetadata } from \'@nestjs/common\';\r\n\r\nexport const TYPEORM_EX_CUSTOM_R" +
-                    "EPOSITORY = \'TYPEORM_EX_CUSTOM_REPOSITORY\';\r\n\r\nexport function ");
+            this.Write("\r\nexport enum ");
             
-            #line 14 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\TypeOrmExDecorator\TypeOrmExDecoratorTemplate.tt"
+            #line 12 "C:\Dev\Intent.Modules.NodeJS\Intent.Module.TypeScript.Domain\Templates\Enum\EnumTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ClassName));
             
             #line default
             #line hidden
-            this.Write("(entity: Function): ClassDecorator {\r\n  return SetMetadata(TYPEORM_EX_CUSTOM_REPO" +
-                    "SITORY, entity);\r\n}");
+            this.Write(" {\r\n  ");
+            
+            #line 13 "C:\Dev\Intent.Modules.NodeJS\Intent.Module.TypeScript.Domain\Templates\Enum\EnumTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(GetEnumLiterals(Model.Literals)));
+            
+            #line default
+            #line hidden
+            this.Write("\r\n}");
             return this.GenerationEnvironment.ToString();
         }
     }

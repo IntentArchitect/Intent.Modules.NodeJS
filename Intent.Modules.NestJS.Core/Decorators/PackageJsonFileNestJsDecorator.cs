@@ -39,7 +39,8 @@ namespace Intent.Modules.NestJS.Core.Decorators
             scripts.AddPropertyIfNotExists("start:dev", "nest start --watch");
             scripts.AddPropertyIfNotExists("start:debug", "nest start --debug --watch");
             scripts.AddPropertyIfNotExists("start:prod", "node dist/main");
-            scripts.AddPropertyIfNotExists("lint", "eslint \"{src,apps,libs,test}/**/*.ts\" --fix");
+            scripts.AddPropertyIfNotExists("lint", "eslint \"{src,apps,libs,test}/**/*.ts\"");
+            scripts.AddPropertyIfNotExists("lint:fix", "eslint \"{src,apps,libs,test}/**/*.ts\" --fix");
             scripts.AddPropertyIfNotExists("test", "jest");
             scripts.AddPropertyIfNotExists("test:watch", "jest --watch");
             scripts.AddPropertyIfNotExists("test:cov", "jest --coverage");

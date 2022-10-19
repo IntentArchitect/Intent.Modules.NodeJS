@@ -26,7 +26,7 @@ export class <#= ClassName #> extends PassportStrategy(Strategy) {
     return {
       userId: payload.userId,
       username: payload.username,
-      roles: payload.roles
+      roles: payload.roles,
     };
   }
 }

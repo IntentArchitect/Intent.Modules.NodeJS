@@ -51,28 +51,35 @@ namespace Intent.Modules.NestJS.Authentication.Templates.Auth.AuthModule
             #line default
             #line hidden
             this.Write("\'),\r\n        signOptions: { expiresIn: \'1h\' },\r\n      }),\r\n      inject: [ConfigS" +
-                    "ervice]\r\n    }),\r\n  ],\r\n  providers: [");
+                    "ervice],\r\n    }),\r\n  ],\r\n  controllers: [\r\n    ");
             
-            #line 28 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Authentication\Templates\Auth\AuthModule\AuthModuleTemplate.tt"
+            #line 29 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Authentication\Templates\Auth\AuthModule\AuthModuleTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(this.GetAuthControllerName()));
+            
+            #line default
+            #line hidden
+            this.Write("\r\n  ],\r\n  providers: [");
+            
+            #line 31 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Authentication\Templates\Auth\AuthModule\AuthModuleTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(GetProviders()));
             
             #line default
             #line hidden
             this.Write("],\r\n  exports: [");
             
-            #line 29 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Authentication\Templates\Auth\AuthModule\AuthModuleTemplate.tt"
+            #line 32 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Authentication\Templates\Auth\AuthModule\AuthModuleTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(this.GetAuthServiceName()));
             
             #line default
             #line hidden
             this.Write("],\r\n})\r\nexport class ");
             
-            #line 31 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Authentication\Templates\Auth\AuthModule\AuthModuleTemplate.tt"
+            #line 34 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Authentication\Templates\Auth\AuthModule\AuthModuleTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ClassName));
             
             #line default
             #line hidden
-            this.Write(" { }");
+            this.Write(" {}");
             return this.GenerationEnvironment.ToString();
         }
     }

@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -80,6 +80,10 @@
     <None Update="Templates\Auth.Guards\PublicDecorator\PublicDecoratorTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>PublicDecoratorTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\Auth\AuthController\AuthControllerTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>AuthControllerTemplate.cs</LastGenOutput>
     </None>
   </ItemGroup>
 
@@ -178,6 +182,11 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>PublicDecoratorTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Auth\AuthController\AuthControllerTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AuthControllerTemplate.tt</DependentUpon>
     </Compile>
   </ItemGroup>
 

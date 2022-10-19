@@ -40,57 +40,57 @@ namespace Intent.Modules.NestJS.Controllers.Templates.DtoModel
             
             #line default
             #line hidden
-            this.Write("\r\n{");
+            this.Write(" {");
             
-            #line 13 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
+            #line 12 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
  foreach(var field in Model.Fields) { 
             
             #line default
             #line hidden
             this.Write("\r\n");
             
-            #line 15 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
+            #line 14 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
  foreach (var decorator in GetFieldDecorators(field)) { 
             
             #line default
             #line hidden
             this.Write("  ");
             
-            #line 16 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
+            #line 15 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(decorator));
             
             #line default
             #line hidden
             this.Write("\r\n");
             
-            #line 17 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
+            #line 16 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
  } 
             
             #line default
             #line hidden
             this.Write("  ");
             
-            #line 18 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
+            #line 17 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(field.Name.ToCamelCase()));
             
             #line default
             #line hidden
             
-            #line 18 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
+            #line 17 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(field.TypeReference.IsNullable ? "?" : ""));
             
             #line default
             #line hidden
             this.Write(": ");
             
-            #line 18 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
+            #line 17 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(GetTypeName(field.TypeReference)));
             
             #line default
             #line hidden
             this.Write(";\r\n");
             
-            #line 19 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
+            #line 18 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
   }
     if (Model.IsMapped) {
             
@@ -98,56 +98,56 @@ namespace Intent.Modules.NestJS.Controllers.Templates.DtoModel
             #line hidden
             this.Write("\r\n  static from");
             
-            #line 22 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
+            #line 21 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(GetTypeName(Model.Mapping)));
             
             #line default
             #line hidden
             this.Write("(");
             
-            #line 22 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
+            #line 21 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Model.Mapping.Element.Name.ToCamelCase()));
             
             #line default
             #line hidden
             this.Write(": ");
             
-            #line 22 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
+            #line 21 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(GetTypeName(Model.Mapping)));
             
             #line default
             #line hidden
             this.Write(") {\r\n    if (");
             
-            #line 23 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
+            #line 22 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Model.Mapping.Element.Name.ToCamelCase()));
             
             #line default
             #line hidden
-            this.Write(" == null) {\r\n        return null;\r\n    }\r\n    const dto = new ");
+            this.Write(" == null) {\r\n      return null;\r\n    }\r\n    const dto = new ");
             
-            #line 26 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
+            #line 25 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ClassName));
             
             #line default
             #line hidden
             this.Write("();\r\n    ");
             
-            #line 27 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
+            #line 26 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(GetMappings()));
             
             #line default
             #line hidden
             this.Write("\r\n    return dto;\r\n  }\r\n\r\n  static requiredRelations: string[] = [");
             
-            #line 31 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
+            #line 30 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(string.Join(", ", GetRequiredRelations().Select(x => "\"" + x + "\""))));
             
             #line default
             #line hidden
             this.Write("];\r\n");
             
-            #line 32 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
+            #line 31 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
   } 
             
             #line default

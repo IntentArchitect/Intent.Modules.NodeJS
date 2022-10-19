@@ -12,12 +12,12 @@
 <#= GetClassDecorators() #>
 export class <#= ClassName #><#= GetDerivedFrom() #> {
 <#= GetDecoratorsOutput(x => x.GetBeforeFields()) #><#  foreach(var attribute in Model.Attributes) { #>
-  <#= GetAttributeDecorators(attribute) #>
-  <#= attribute.Name.ToCamelCase() #><#= attribute.TypeReference.IsNullable ? "?" : "" #>: <#= GetTypeName(attribute.TypeReference) #>;
+<#= (Model.Attributes.IndexOf(attribute) == 0 ? "" : @"
+") #>  <#= GetAttributeDecorators(attribute) #><#= attribute.Name.ToCamelCase() #><#= attribute.TypeReference.IsNullable ? "?" : "" #>: <#= GetTypeName(attribute.TypeReference) #>;
 <#  } #>
 <#  foreach(var association in GetAssociationsRequiringFields()) { #>
-  <#= GetAssociationDecorators(association) #>
-  <#= association.Name.ToCamelCase() #><#= association.IsNullable ? "?" : "" #>: <#= GetTypeName(association) #>;
+
+  <#= GetAssociationDecorators(association) #><#= association.Name.ToCamelCase() #><#= association.IsNullable ? "?" : "" #>: <#= GetTypeName(association) #>;
 <#  } #><#= GetDecoratorsOutput(x => x.GetAfterFields()) #>
 <#  foreach(var operation in Model.Operations) { #>
 

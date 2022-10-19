@@ -1,0 +1,41 @@
+<#@ template language="C#" inherits="TypeScriptTemplateBase<object>" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="Intent.Modules.Common" #>
+<#@ import namespace="Intent.Modules.Common.Templates" #>
+<#@ import namespace="Intent.Modules.Common.TypeScript.Templates" #>
+<#@ import namespace="Intent.Templates" #>
+<#@ import namespace="Intent.Metadata.Models" #>
+import { Controller, Get, Request, Post, UseGuards } from '@nestjs/common';
+import { ApiBearerAuth, ApiBody, ApiProperty, ApiTags } from '@nestjs/swagger';
+
+class UserCredentials {
+  @ApiProperty({ example: 'john' })
+  username: string;
+  @ApiProperty({ example: 'changeme' })
+  password: string;
+}
+
+@ApiTags('Auth')
+@Controller()
+export class <#= ClassName #> {
+  constructor(private authService: <#= this.GetAuthServiceName() #>) {}
+
+  @UseGuards(<#= this.GetLocalAuthGuardName() #>)
+  @Post('auth/login')
+  @ApiBody({
+    description: 'User credentials',
+    type: UserCredentials,
+  })
+  async login(@Request() req) {
+    return this.authService.login(req.user);
+  }
+
+  @ApiBearerAuth()
+  @UseGuards(<#= this.GetJwtAuthGuardName() #>)
+  @Get('profile')
+  getProfile(@Request() req) {
+    return req.user;
+  }
+}

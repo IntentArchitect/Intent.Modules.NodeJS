@@ -32,9 +32,9 @@ namespace Intent.Modules.TypeORM.Entities.Templates.TypeOrmExModule
         /// </summary>
         public override string TransformText()
         {
-            this.Write("import { DynamicModule, Provider } from \"@nestjs/common\";\r\nimport { getDataSource" +
-                    "Token } from \"@nestjs/typeorm\";\r\nimport { DataSource } from \"typeorm\";\r\nimport {" +
-                    " TYPEORM_EX_CUSTOM_REPOSITORY } from \"./typeorm-ex.decorator\";\r\n\r\nexport class ");
+            this.Write("import { DynamicModule, Provider } from \'@nestjs/common\';\r\nimport { getDataSource" +
+                    "Token } from \'@nestjs/typeorm\';\r\nimport { DataSource } from \'typeorm\';\r\nimport {" +
+                    " TYPEORM_EX_CUSTOM_REPOSITORY } from \'./typeorm-ex.decorator\';\r\n\r\nexport class ");
             
             #line 15 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\TypeOrmExModule\TypeOrmExModuleTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ClassName));
@@ -42,11 +42,16 @@ namespace Intent.Modules.TypeORM.Entities.Templates.TypeOrmExModule
             #line default
             #line hidden
             this.Write(@" {
-  public static forCustomRepository<T extends new (...args: any[]) => any>(repositories: T[]): DynamicModule {
+  public static forCustomRepository<T extends new (...args: any[]) => any>(
+    repositories: T[]
+  ): DynamicModule {
     const providers: Provider[] = [];
 
     for (const repository of repositories) {
-      const entity = Reflect.getMetadata(TYPEORM_EX_CUSTOM_REPOSITORY, repository);
+      const entity = Reflect.getMetadata(
+        TYPEORM_EX_CUSTOM_REPOSITORY,
+        repository
+      );
 
       if (!entity) {
         continue;
@@ -57,7 +62,11 @@ namespace Intent.Modules.TypeORM.Entities.Templates.TypeOrmExModule
         provide: repository,
         useFactory: (dataSource: DataSource): typeof repository => {
           const baseRepository = dataSource.getRepository<any>(entity);
-          return new repository(baseRepository.target, baseRepository.manager, baseRepository.queryRunner);
+          return new repository(
+            baseRepository.target,
+            baseRepository.manager,
+            baseRepository.queryRunner
+          );
         },
       });
     }
@@ -66,7 +75,7 @@ namespace Intent.Modules.TypeORM.Entities.Templates.TypeOrmExModule
       exports: providers,
       module: ");
             
-            #line 38 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\TypeOrmExModule\TypeOrmExModuleTemplate.tt"
+            #line 47 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\TypeOrmExModule\TypeOrmExModuleTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ClassName));
             
             #line default

@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package>
   <id>Intent.NodeJS.Domain</id>
-  <version>3.3.3</version>
+  <version>3.3.4-pre.0</version>
   <supportedClientVersions>[3.3.0-pre.0, 4.0.0)</supportedClientVersions>
   <summary>A custom module for Intent.Modules.NodeJS.</summary>
   <description>A custom module for Intent.Modules.NodeJS.</description>
@@ -11,6 +11,10 @@
     <template id="Intent.NodeJS.Domain.Entity" externalReference="23688484-4023-4f11-83fe-6630d3074256">
       <role>Domain</role>
       <location>entities</location>
+    </template>
+    <template id="Intent.NodeJS.Domain.Enum" externalReference="fc400007-1dc1-4d73-a8fa-3d1d5056f148">
+      <role>Domain</role>
+      <location>enums</location>
     </template>
   </templates>
   <decorators></decorators>

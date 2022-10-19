@@ -53,7 +53,7 @@ namespace Intent.Modules.NestJS.Authentication.Templates.Users.UsersModule
             
             #line default
             #line hidden
-            this.Write(" { }");
+            this.Write(" {}");
             return this.GenerationEnvironment.ToString();
         }
     }
