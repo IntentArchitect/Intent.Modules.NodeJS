@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="a6a17de3-4e60-490d-ae91-55b803ea5e84" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+  <name>entities</name>
+  <display>entities</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-by-name</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>a86400ce-db25-485c-a325-93cf43e81b6e</parentFolderId>
+  <packageId>8ca8dbb2-db0e-4241-936f-e3bbdfffd30c</packageId>
+  <packageName>NodeJS.NestJS.TestApplication</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="5a1687e9-9527-4b02-86a2-afdfc9a00337" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Intent.NodeJS.Domain.Entity</name>
+      <display>Intent.NodeJS.Domain.Entity</display>
+      <externalReference>Intent.NodeJS.Domain</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>a6a17de3-4e60-490d-ae91-55b803ea5e84</parentFolderId>
+      <packageId>8ca8dbb2-db0e-4241-936f-e3bbdfffd30c</packageId>
+      <packageName>NodeJS.NestJS.TestApplication</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="f5773aa8-e805-4393-8465-75867f35ea10" type="Service" typeId="b16578a5-27b1-4047-a8df-f0b783d706bd">
+  <name>NonHttpServiceAppliedService</name>
+  <display>NonHttpServiceAppliedService</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-manually</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>5ee5788e-af11-4179-9323-869b68565609</parentFolderId>
+  <packageId>5ee5788e-af11-4179-9323-869b68565609</packageId>
+  <packageName>NodeJS.NestJS.TestApplication.Services</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="3e2aeed2-d81c-4acc-a512-143434fdbdd7" type="Operation" typeId="e030c97a-e066-40a7-8188-808c275df3cb">
+      <name>Operation1</name>
+      <display>Operation1(): void</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="50786d49-ee24-4ca1-9074-b538db31892a">
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>f5773aa8-e805-4393-8465-75867f35ea10</parentFolderId>
+      <packageId>5ee5788e-af11-4179-9323-869b68565609</packageId>
+      <packageName>NodeJS.NestJS.TestApplication.Services</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

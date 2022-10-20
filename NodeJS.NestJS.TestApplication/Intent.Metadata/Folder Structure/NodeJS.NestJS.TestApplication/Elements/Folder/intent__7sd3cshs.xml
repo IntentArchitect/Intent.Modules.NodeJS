@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="7d12ab70-32eb-4c99-8424-001d515808bf" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+  <name>intent</name>
+  <display>intent</display>
+  <externalReference>af7a9adb-05d0-43af-9b01-540942489054</externalReference>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-by-name</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>7cb673d4-52d0-4086-a639-a5c11ceb3e3d</parentFolderId>
+  <packageId>8ca8dbb2-db0e-4241-936f-e3bbdfffd30c</packageId>
+  <packageName>NodeJS.NestJS.TestApplication</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="38d1d730-f1d0-488c-9eb8-d6de9c51a2c7" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Intent.TypeScript.Weaving.Decorators.IntentDecorators</name>
+      <display>Intent.TypeScript.Weaving.Decorators.IntentDecorators</display>
+      <externalReference>Intent.TypeScript.Weaving.Decorators</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>7d12ab70-32eb-4c99-8424-001d515808bf</parentFolderId>
+      <packageId>8ca8dbb2-db0e-4241-936f-e3bbdfffd30c</packageId>
+      <packageName>NodeJS.NestJS.TestApplication</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="3d67bc57-add7-4de9-ba01-c536c0e4acdd" type="Role" typeId="8663c9f9-2852-45e7-aaa1-0883a2e6f1da">
+      <name>Intent</name>
+      <display>Intent</display>
+      <externalReference>ac90ab08-bbb3-40dc-860b-88602c1b8dbd</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>7d12ab70-32eb-4c99-8424-001d515808bf</parentFolderId>
+      <packageId>8ca8dbb2-db0e-4241-936f-e3bbdfffd30c</packageId>
+      <packageName>NodeJS.NestJS.TestApplication</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

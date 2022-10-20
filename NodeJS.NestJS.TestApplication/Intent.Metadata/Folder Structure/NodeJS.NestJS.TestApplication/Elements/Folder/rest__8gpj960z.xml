@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="08999c7a-8127-4fe5-8f15-47dbb463f0d4" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+  <name>rest</name>
+  <display>rest</display>
+  <externalReference>2ed882f0-3d4e-4c7c-b135-45be6eefc649</externalReference>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-by-name</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>de140c09-54d0-4265-927c-92f44fdda755</parentFolderId>
+  <packageId>8ca8dbb2-db0e-4241-936f-e3bbdfffd30c</packageId>
+  <packageName>NodeJS.NestJS.TestApplication</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="82323437-17a9-4e58-b686-236aeaced0d7" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Intent.NodeJS.NestJS.Controllers.Controller</name>
+      <display>Intent.NodeJS.NestJS.Controllers.Controller</display>
+      <externalReference>Intent.NodeJS.NestJS.Controllers</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>08999c7a-8127-4fe5-8f15-47dbb463f0d4</parentFolderId>
+      <packageId>8ca8dbb2-db0e-4241-936f-e3bbdfffd30c</packageId>
+      <packageName>NodeJS.NestJS.TestApplication</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="08a799f5-4104-41f4-af83-9b891d278d6d" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Intent.NodeJS.NestJS.Controllers.ControllerBase</name>
+      <display>Intent.NodeJS.NestJS.Controllers.ControllerBase</display>
+      <externalReference>Intent.NodeJS.NestJS.Controllers</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>08999c7a-8127-4fe5-8f15-47dbb463f0d4</parentFolderId>
+      <packageId>8ca8dbb2-db0e-4241-936f-e3bbdfffd30c</packageId>
+      <packageName>NodeJS.NestJS.TestApplication</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="fc1cc692-fece-4c63-acad-3b5c56292a93" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Intent.NodeJS.NestJS.Controllers.JsonResponse</name>
+      <display>Intent.NodeJS.NestJS.Controllers.JsonResponse</display>
+      <externalReference>Intent.NodeJS.NestJS.Controllers</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>08999c7a-8127-4fe5-8f15-47dbb463f0d4</parentFolderId>
+      <packageId>8ca8dbb2-db0e-4241-936f-e3bbdfffd30c</packageId>
+      <packageName>NodeJS.NestJS.TestApplication</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="941ccf08-dad1-4a87-8c3d-41b89c47f55d" type="Role" typeId="8663c9f9-2852-45e7-aaa1-0883a2e6f1da">
+      <name>Controllers</name>
+      <display>Controllers</display>
+      <externalReference>bf4a24da-201e-400c-91d8-432d6df300ac</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>08999c7a-8127-4fe5-8f15-47dbb463f0d4</parentFolderId>
+      <packageId>8ca8dbb2-db0e-4241-936f-e3bbdfffd30c</packageId>
+      <packageName>NodeJS.NestJS.TestApplication</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

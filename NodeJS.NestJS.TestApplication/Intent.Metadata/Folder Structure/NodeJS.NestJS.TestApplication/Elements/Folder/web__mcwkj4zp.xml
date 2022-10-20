@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="de140c09-54d0-4265-927c-92f44fdda755" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+  <name>web</name>
+  <display>web</display>
+  <externalReference>67b0254e-5654-4962-aa56-4ceead2022f2</externalReference>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-by-name</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>7cb673d4-52d0-4086-a639-a5c11ceb3e3d</parentFolderId>
+  <packageId>8ca8dbb2-db0e-4241-936f-e3bbdfffd30c</packageId>
+  <packageName>NodeJS.NestJS.TestApplication</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="63104336-8277-4ab5-8dc4-ef57e2c741c6" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+  <name>enums</name>
+  <display>enums</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>a86400ce-db25-485c-a325-93cf43e81b6e</parentFolderId>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

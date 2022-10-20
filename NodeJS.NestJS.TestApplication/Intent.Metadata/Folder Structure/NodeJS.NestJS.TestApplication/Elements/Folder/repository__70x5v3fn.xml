@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="a25bb565-0d8e-4b8c-8c28-aaa8256f7f30" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+  <name>repository</name>
+  <display>repository</display>
+  <externalReference>5f02b6a0-b35e-4541-b6fd-95e1dd1d6f18</externalReference>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-by-name</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>7cb673d4-52d0-4086-a639-a5c11ceb3e3d</parentFolderId>
+  <packageId>8ca8dbb2-db0e-4241-936f-e3bbdfffd30c</packageId>
+  <packageName>NodeJS.NestJS.TestApplication</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="1369ea28-cdaf-496b-a91a-156cc90160ad" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Intent.NodeJS.TypeORM.Repository</name>
+      <display>Intent.NodeJS.TypeORM.Repository</display>
+      <externalReference>Intent.NodeJS.TypeORM</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>a25bb565-0d8e-4b8c-8c28-aaa8256f7f30</parentFolderId>
+      <packageId>8ca8dbb2-db0e-4241-936f-e3bbdfffd30c</packageId>
+      <packageName>NodeJS.NestJS.TestApplication</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="d3d7c153-4a7d-4beb-906d-fdb05417f31f" type="Role" typeId="8663c9f9-2852-45e7-aaa1-0883a2e6f1da">
+      <name>Repositories</name>
+      <display>Repositories</display>
+      <externalReference>05510aca-afa9-4e87-80ef-41b634819bd6</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>a25bb565-0d8e-4b8c-8c28-aaa8256f7f30</parentFolderId>
+      <packageId>8ca8dbb2-db0e-4241-936f-e3bbdfffd30c</packageId>
+      <packageName>NodeJS.NestJS.TestApplication</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>
