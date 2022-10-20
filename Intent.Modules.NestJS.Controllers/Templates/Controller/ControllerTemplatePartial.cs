@@ -27,8 +27,7 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Controller
         [IntentManaged(Mode.Fully)] public const string TemplateId = "Intent.NodeJS.NestJS.Controllers.Controller";
 
         [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
-        public ControllerTemplate(IOutputTarget outputTarget, Intent.Modelers.Services.Api.ServiceModel model) : base(
-            TemplateId, outputTarget, model)
+        public ControllerTemplate(IOutputTarget outputTarget, Intent.Modelers.Services.Api.ServiceModel model) : base(TemplateId, outputTarget, model)
         {
             AddTypeSource(DtoModelTemplate.TemplateId);
         }
