@@ -13,6 +13,7 @@ internal interface IOrmDatabaseProviderStrategy
 {
     bool TryGetColumnType(AttributeModel attribute, out (string Type, IEnumerable<string> AdditionalOptions) columnType);
     bool TryGetColumnType(string typeName, out (string Type, IEnumerable<string> AdditionalOptions) columnType);
+    bool TryGetColumnLength(AttributeModel attribute, out string lengthOptionValue);
     IEnumerable<EnvironmentVariableRequest> GetEnvironmentVariableRequests();
     IEnumerable<string> GetConfigurationOptions();
     IEnumerable<NpmPackageDependency> GetPackageDependencies();
@@ -25,7 +26,7 @@ internal interface IOrmDatabaseProviderStrategy
         {
             DatabaseSettingsExtensions.DatabaseProviderOptionsEnum.Mssql => new MsSqlDatabaseProviderStrategy(outputTarget),
             DatabaseSettingsExtensions.DatabaseProviderOptionsEnum.Sqlite => new SqLiteDatabaseProviderStrategy(outputTarget),
-            null => throw new Exception($"The database provider application setting is unset."),
+            null => throw new Exception("The database provider application setting is unset."),
             _ => throw new Exception($"No database provider strategy available for {databaseProvider}")
         };
     }

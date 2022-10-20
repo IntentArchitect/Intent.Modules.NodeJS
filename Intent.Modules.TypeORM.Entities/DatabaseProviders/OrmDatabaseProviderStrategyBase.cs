@@ -45,6 +45,7 @@ namespace Intent.Modules.TypeORM.Entities.DatabaseProviders
             return TryGetColumnType(typeName, out columnType);
         }
 
+        public abstract bool TryGetColumnLength(AttributeModel attribute, out string lengthOptionValue);
         public abstract IEnumerable<EnvironmentVariableRequest> GetEnvironmentVariableRequests();
         public abstract IEnumerable<string> GetConfigurationOptions();
         public abstract IEnumerable<NpmPackageDependency> GetPackageDependencies();

@@ -129,12 +129,10 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
                 settings.Add("nullable: true");
             }
 
-            var maxLength = attribute.GetTextConstraints()?.MaxLength();
-            if (maxLength.HasValue)
+            if (_ormDatabaseProviderStrategy.TryGetColumnLength(attribute, out var lengthOptionValue))
             {
-                settings.Add($"length: {maxLength.Value:D}");
+                settings.Add($"length: {lengthOptionValue}");
             }
-
 
             if (_ormDatabaseProviderStrategy.TryGetColumnType(attribute, out var columnType))
             {

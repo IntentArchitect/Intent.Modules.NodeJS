@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using Intent.Engine;
+using Intent.Metadata.RDBMS.Api;
+using Intent.Modelers.Domain.Api;
 using Intent.Modules.Common.TypeScript.Templates;
 using Intent.Modules.NestJS.Core.Events;
 
@@ -15,6 +17,19 @@ internal class SqLiteDatabaseProviderStrategy : OrmDatabaseProviderStrategyBase
     {
         yield return "type: 'sqlite'";
         yield return "database: './target/sqlite-dev-db.sql'";
+    }
+
+    public override bool TryGetColumnLength(AttributeModel attribute, out string lengthOptionValue)
+    {
+        var maxLength = attribute.GetTextConstraints()?.MaxLength();
+        if (maxLength.HasValue)
+        {
+            lengthOptionValue = maxLength.Value.ToString("D");
+            return true;
+        }
+
+        lengthOptionValue = default;
+        return false;
     }
 
     public override IEnumerable<EnvironmentVariableRequest> GetEnvironmentVariableRequests()

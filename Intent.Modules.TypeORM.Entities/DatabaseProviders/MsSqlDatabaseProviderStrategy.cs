@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Intent.Engine;
+using Intent.Metadata.RDBMS.Api;
+using Intent.Modelers.Domain.Api;
 using Intent.Modules.Common;
 using Intent.Modules.Common.TypeScript.Templates;
 using Intent.Modules.NestJS.Core.Events;
@@ -21,6 +23,17 @@ internal class MsSqlDatabaseProviderStrategy : OrmDatabaseProviderStrategyBase
         yield return "password: get('DB_PASSWORD').asString()";
         yield return "database: get('DB_NAME').asString()";
         yield return "extra: { trustServerCertificate: true }";
+    }
+
+    public override bool TryGetColumnLength(AttributeModel attribute, out string lengthOptionValue)
+    {
+        // If length is unspecified, TypeORM regards it as 255.
+        var maxLength = attribute.GetTextConstraints()?.MaxLength();
+        lengthOptionValue = maxLength.HasValue
+            ? maxLength.Value.ToString("D")
+            : "'max'";
+        return true;
+
     }
 
     public override IEnumerable<EnvironmentVariableRequest> GetEnvironmentVariableRequests()
