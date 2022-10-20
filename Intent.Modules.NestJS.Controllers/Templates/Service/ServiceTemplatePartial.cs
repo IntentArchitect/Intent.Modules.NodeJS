@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Intent.Engine;
 using Intent.Modelers.Services.Api;
+using Intent.Modules.Common;
 using Intent.Modules.Common.Templates;
 using Intent.Modules.Common.TypeScript.Templates;
 using Intent.Modules.NestJS.Controllers.Templates.DtoModel;
@@ -31,8 +32,8 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Service
         {
             return new TypeScriptFileConfig(
                 className: $"{Model.Name.RemoveSuffix("Service", "Controller")}Service",
-                fileName: $"{Model.Name.RemoveSuffix("Service", "Controller").ToKebabCase()}.service"
-            );
+                fileName: $"{Model.Name.RemoveSuffix("Service", "Controller").ToKebabCase()}.service",
+                relativeLocation: this.GetFolderPath());
         }
 
         public override void BeforeTemplateExecution()

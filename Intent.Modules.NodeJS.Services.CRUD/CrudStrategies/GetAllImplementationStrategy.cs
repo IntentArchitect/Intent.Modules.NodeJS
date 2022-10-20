@@ -80,10 +80,10 @@ namespace Intent.Modules.NodeJS.Services.CRUD.CrudStrategies
         public string GetImplementation(ClassModel targetEntity, OperationModel operation)
         {
             var dto = _template.GetTypeName(DtoModelTemplate.TemplateId, _dtoToReturn);
-            return $@"var {targetEntity.Name.ToCamelCase().ToPluralName()} = await this.{_repository.ToCamelCase()}.find({{
-      relations: {dto}.requiredRelations
+            return $@"const {targetEntity.Name.ToCamelCase().ToPluralName()} = await this.{_repository.ToCamelCase()}.find({{
+      relations: {dto}.requiredRelations,
     }});
-    return {targetEntity.Name.ToCamelCase().ToPluralName()}.map(x => {dto}.from{targetEntity.Name.ToPascalCase()}(x));";
+    return {targetEntity.Name.ToCamelCase().ToPluralName()}.map((x) => {dto}.from{targetEntity.Name.ToPascalCase()}(x));";
         }
     }
 }

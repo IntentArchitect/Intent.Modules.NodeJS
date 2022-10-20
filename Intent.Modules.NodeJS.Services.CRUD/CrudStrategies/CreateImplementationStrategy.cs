@@ -68,11 +68,11 @@ namespace Intent.Modules.NodeJS.Services.CRUD.CrudStrategies
         public string GetImplementation(ClassModel targetEntity, OperationModel operation)
         {
             var entityName = _template.TryGetTypeName(EntityTemplate.TemplateId, targetEntity);
-            var impl = $@"var new{targetEntity.Name} = {{
+            var impl = $@"const new{targetEntity.Name} = {{
       {GetPropertyAssignments(targetEntity, operation.Parameters.Single())}
     }} as {entityName ?? targetEntity.Name};
-      
-    await this.{_repository.ToCamelCase()}.save(new{targetEntity.Name});";
+
+    await this.{_repository.ToCamelCase()}.insert(new{targetEntity.Name});";
 
             if (operation.TypeReference.Element != null)
             {

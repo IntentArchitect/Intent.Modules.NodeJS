@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Intent.Engine;
+using Intent.Modules.Common;
 using Intent.Modules.Common.Templates;
 using Intent.Modules.Common.Types.Api;
 using Intent.Modules.Common.TypeScript.Templates;
@@ -28,8 +29,8 @@ namespace Intent.Module.TypeScript.Domain.Templates.Enum
         {
             return new TypeScriptFileConfig(
                 className: $"{Model.Name}",
-                fileName: $"{Model.Name.ToKebabCase()}.enum"
-            );
+                fileName: $"{Model.Name.ToKebabCase()}.enum",
+                relativeLocation: this.GetFolderPath());
         }
         private static string GetEnumLiterals(IEnumerable<EnumLiteralModel> literals)
         {

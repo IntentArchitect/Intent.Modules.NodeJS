@@ -96,11 +96,11 @@ namespace Intent.Modules.NodeJS.Services.CRUD.CrudStrategies
         public string GetImplementation(ClassModel targetEntity, OperationModel operation)
         {
             var dto = _template.GetTypeName(DtoModelTemplate.TemplateId, _dtoToReturn);
-            return $@"var {targetEntity.Name.ToCamelCase()} = await this.{_repository.ToCamelCase()}.findOne({{
+            return $@"const {targetEntity.Name.ToCamelCase()} = await this.{_repository.ToCamelCase()}.findOne({{
       where: {{
         id: {_idProperty.Name.ToCamelCase()}
       }},
-      relations: {dto}.requiredRelations
+      relations: {dto}.requiredRelations,
     }});
     return {dto}.from{targetEntity.Name.ToPascalCase()}({targetEntity.Name.ToCamelCase()});";
         }

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Intent.Engine;
+using Intent.Modules.Common;
 using Intent.Modules.Common.Templates;
 using Intent.Modules.Common.TypeScript.Templates;
 using Intent.RoslynWeaver.Attributes;
@@ -26,8 +27,8 @@ namespace Intent.Modules.NestJS.Controllers.Templates.ControllerBase
         {
             return new TypeScriptFileConfig(
                 className: $"ControllerBase",
-                fileName: $"controller.base"
-            );
+                fileName: $"controller.base",
+                relativeLocation: this.GetFolderPath());
         }
 
     }

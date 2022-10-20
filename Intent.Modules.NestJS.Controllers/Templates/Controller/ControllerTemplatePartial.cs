@@ -84,8 +84,8 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Controller
         {
             return new TypeScriptFileConfig(
                 className: $"{Model.Name.RemoveSuffix("Service", "Controller")}Controller",
-                fileName: $"{Model.Name.RemoveSuffix("Service", "Controller").ToKebabCase()}.controller"
-            );
+                fileName: $"{Model.Name.RemoveSuffix("Service", "Controller").ToKebabCase()}.controller",
+                relativeLocation: this.GetFolderPath());
         }
 
         private IEnumerable<string> GetClassDecorators()

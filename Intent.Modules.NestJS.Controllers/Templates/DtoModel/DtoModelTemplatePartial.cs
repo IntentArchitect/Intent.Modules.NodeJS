@@ -6,6 +6,7 @@ using Intent.Metadata.Models;
 using Intent.Modelers.Domain.Api;
 using Intent.Modelers.Services.Api;
 using Intent.Module.TypeScript.Domain.Templates.Entity;
+using Intent.Modules.Common;
 using Intent.Modules.Common.Templates;
 using Intent.Modules.Common.TypeScript.Templates;
 using Intent.RoslynWeaver.Attributes;
@@ -41,8 +42,8 @@ namespace Intent.Modules.NestJS.Controllers.Templates.DtoModel
         {
             return new TypeScriptFileConfig(
                 className: $"{Model.Name}",
-                fileName: $"{Model.Name.RemoveSuffix("DTO", "Dto").ToKebabCase()}.dto"
-            );
+                fileName: $"{Model.Name.RemoveSuffix("DTO", "Dto").ToKebabCase()}.dto",
+                relativeLocation: this.GetFolderPath());
         }
 
         public override void BeforeTemplateExecution()

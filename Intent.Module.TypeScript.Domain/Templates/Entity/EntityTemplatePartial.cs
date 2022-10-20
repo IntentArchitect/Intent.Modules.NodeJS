@@ -4,6 +4,7 @@ using Intent.Engine;
 using Intent.Metadata.Models;
 using Intent.Modelers.Domain.Api;
 using Intent.Module.TypeScript.Domain.Templates.Enum;
+using Intent.Modules.Common;
 using Intent.Modules.Common.Templates;
 using Intent.Modules.Common.TypeScript.Templates;
 using Intent.RoslynWeaver.Attributes;
@@ -32,7 +33,8 @@ namespace Intent.Module.TypeScript.Domain.Templates.Entity
         {
             return new TypeScriptFileConfig(
                 className: $"{Model.Name}",
-                fileName: $"{Model.Name.ToKebabCase()}.entity");
+                fileName: $"{Model.Name.ToKebabCase()}.entity",
+                relativeLocation: this.GetFolderPath());
         }
 
         private string GetClassDecorators()
