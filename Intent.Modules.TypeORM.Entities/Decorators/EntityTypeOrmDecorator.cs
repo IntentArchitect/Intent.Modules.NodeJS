@@ -105,11 +105,20 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
         {
             if (attribute.HasPrimaryKey())
             {
-                return new[]
+                if (_template.Model.GetExplicitPrimaryKey().Count > 1 ||
+                    attribute.TypeReference.Element.Name == "string")
                 {
-                    $"@{_template.ImportType("ObjectIdColumn", "typeorm")}()",
-                    $"@{_template.ImportType("PrimaryGeneratedColumn", "typeorm")}({(attribute.TypeReference.Element.Name == "guid" ? "'uuid'" : "")})"
-                };
+                    yield return $"@{_template.ImportType("PrimaryColumn", "typeorm")}()";
+                }
+                else
+                {
+                    // ObjectIdColumn should only be used when we have MongoDD database:
+                    // Special type of column that is available only for MongoDB database. Marks your entity's column to be an object id.
+                    //yield return $"@{_template.ImportType("ObjectIdColumn", "typeorm")}()";
+
+                    yield return $"@{_template.ImportType("PrimaryGeneratedColumn", "typeorm")}({(attribute.TypeReference.Element.Name == "guid" ? "'uuid'" : "")})";
+                }
+                yield break;
             }
 
             var parameters = new List<string>();
@@ -138,7 +147,7 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
                 parameters.Add($"{{ {string.Join(", ", settings)} }}");
             }
 
-            return new[] { $"@{_template.ImportType("Column", "typeorm")}({string.Join(", ", parameters)})" };
+            yield return $"@{_template.ImportType("Column", "typeorm")}({string.Join(", ", parameters)})";
         }
 
         public override IEnumerable<string> GetFieldDecorators(AssociationEndModel thatEnd)
