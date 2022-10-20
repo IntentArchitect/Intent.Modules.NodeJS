@@ -116,7 +116,7 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Controller
             {
                 case HttpVerb.GET:
                     yield return $@"@{ImportType("ApiOkResponse", "@nestjs/swagger")}({{
-    description: 'Returns the specified {apiResponse}.',
+    description: 'Result retrieved successfully.',
     type: {apiResponse},{(operation.ReturnType?.IsCollection == true ? $@"
     isArray: true," : "")}
   }})";
