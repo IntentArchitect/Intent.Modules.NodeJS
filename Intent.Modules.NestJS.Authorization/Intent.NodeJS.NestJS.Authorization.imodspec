@@ -30,7 +30,7 @@
   <dependencies>
     <dependency id="Intent.Common" version="3.3.11" />
     <dependency id="Intent.Common.Types" version="3.3.5" />
-    <dependency id="Intent.Common.TypeScript" version="3.3.6" />
+    <dependency id="Intent.Common.TypeScript" version="3.3.8" />
     <dependency id="Intent.NodeJS.NestJS.Authentication" version="3.3.3" />
     <dependency id="Intent.NodeJS.NestJS.Controllers" version="3.3.3" />
   </dependencies>

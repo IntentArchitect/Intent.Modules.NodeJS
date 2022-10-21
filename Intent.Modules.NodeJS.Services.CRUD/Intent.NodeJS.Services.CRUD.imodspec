@@ -16,7 +16,7 @@
     <dependency id="Intent.Common" version="3.3.11" />
     <dependency id="Intent.Common.Types" version="3.3.5" />
     <dependency id="Intent.Modelers.Services" version="3.3.4" />
-    <dependency id="Intent.Modelers.Services.CRUD.ServiceDispatch" version="3.3.5" />
+    <dependency id="Intent.Modelers.Services.CRUD.ServiceDispatch" version="3.3.8" />
     <dependency id="Intent.NodeJS.Domain" version="3.3.3" />
     <dependency id="Intent.NodeJS.NestJS.Controllers" version="3.3.3" />
     <dependency id="Intent.NodeJS.TypeORM" version="3.3.7" />
