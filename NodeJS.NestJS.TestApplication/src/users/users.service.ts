@@ -1,6 +1,6 @@
 import { Injectable, Logger } from '@nestjs/common';
-import { IntentIgnore } from './../intent/intent.decorators';
 import { User } from './user';
+import { IntentIgnore } from './../intent/intent.decorators';
 
 @Injectable()
 @IntentIgnore()

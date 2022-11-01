@@ -4,11 +4,10 @@ import { HttpServiceAppliedController } from './web/rest/http-service-applied.co
 import { HttpServiceAppliedService } from './services/http-service-applied.service';
 import { NonHttpServiceAppliedService } from './services/non-http-service-applied.service';
 import { typeOrmConfig } from './orm.config';
-import { TypeOrmExModule } from './typeorm/typeorm-ex.module';
 import { UsersModules } from './users/users.modules';
-import { IntentIgnore, IntentMerge } from './intent/intent.decorators';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { IntentMerge } from './intent/intent.decorators';
 
 @IntentMerge()
 @Module({
@@ -16,7 +15,6 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     ConfigModule.forRoot({ isGlobal: true }),
     AuthModule,
     TypeOrmModule.forRoot(typeOrmConfig),
-    TypeOrmExModule.forCustomRepository([]),
     UsersModules
   ],
   controllers: [

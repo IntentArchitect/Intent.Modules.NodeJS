@@ -1,5 +1,5 @@
 {
-  "name": "node-js.-nest-js.-test-application",
+  "name": "node-js.nest-js.test-application",
   "private": true,
   "version": "1.0.0",
   "description": "",
@@ -12,7 +12,8 @@
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
-    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\"",
+    "lint:fix": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
@@ -22,8 +23,7 @@
     "typeorm:run-migrations": "npm run typeorm migration:run -- -d ./src/datasource.ts",
     "typeorm:generate-migration": "npm run typeorm -- -d ./src/datasource.ts migration:generate ./src/migrations/%npm_config_name%",
     "typeorm:create-migration": "npm run typeorm -- migration:create ./src/migrations/%npm_config_name%",
-    "typeorm:revert-migration": "npm run typeorm -- -d ./src/datasource.ts migration:revert",
-    "lint:fix": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
+    "typeorm:revert-migration": "npm run typeorm -- -d ./src/datasource.ts migration:revert"
   },
   "dependencies": {
     "@nestjs/common": "^9.0.1",

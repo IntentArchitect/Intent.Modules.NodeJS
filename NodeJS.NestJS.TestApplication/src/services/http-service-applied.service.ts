@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { IntentIgnoreBody, IntentIgnore } from './../intent/intent.decorators';
+import { IntentIgnoreBody } from './../intent/intent.decorators';
 
 @Injectable()
 export class HttpServiceAppliedService {

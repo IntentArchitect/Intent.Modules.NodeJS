@@ -120,7 +120,7 @@
     <FileLog>
       <ProjectId>9130e2d5-13a5-4789-94dd-9e4f2cc7bcb7</ProjectId>
       <CorrelationId>Intent.NodeJS.NestJS.Authorization.RoleEnum</CorrelationId>
-      <OverwriteBehaviour>once-off</OverwriteBehaviour>
+      <OverwriteBehaviour>overwrite-disabled</OverwriteBehaviour>
       <ApplicationRelativeFilePath>src/auth/role.enum.ts</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>role.enum.ts</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -256,7 +256,7 @@
     <FileLog>
       <ProjectId>7cb673d4-52d0-4086-a639-a5c11ceb3e3d</ProjectId>
       <CorrelationId>Intent.NestJS.Winston.WinstonOptions</CorrelationId>
-      <OverwriteBehaviour>once-off</OverwriteBehaviour>
+      <OverwriteBehaviour>overwrite-disabled</OverwriteBehaviour>
       <ApplicationRelativeFilePath>src/winston.config.ts</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>winston.config.ts</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
