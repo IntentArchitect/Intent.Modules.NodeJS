@@ -2,7 +2,7 @@
 <package>
   <id>Intent.Npm</id>
   <version>3.3.3</version>
-  <supportedClientVersions>[3.3.0-pre.0, 4.0.0)</supportedClientVersions>
+  <supportedClientVersions>[3.3.16, 4.0.0)</supportedClientVersions>
   <summary>Generates the npm package file</summary>
   <description>Generates the npm package file</description>
   <authors>Intent.Modules.NodeJS</authors>

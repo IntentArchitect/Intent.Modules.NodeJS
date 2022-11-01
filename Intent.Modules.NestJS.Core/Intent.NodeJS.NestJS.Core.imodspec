@@ -2,7 +2,7 @@
 <package>
   <id>Intent.NodeJS.NestJS.Core</id>
   <version>3.3.3</version>
-  <supportedClientVersions>[3.3.0-pre.0, 4.0.0)</supportedClientVersions>
+  <supportedClientVersions>[3.3.16, 4.0.0)</supportedClientVersions>
   <summary>Provides Application host bootstrap files</summary>
   <description>Provides Application host bootstrap files</description>
   <authors>Intent.Modules.NodeJS</authors>

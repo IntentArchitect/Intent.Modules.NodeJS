@@ -2,7 +2,7 @@
 <package>
   <id>Intent.NodeJS.NestJS.Authorization</id>
   <version>3.3.2</version>
-  <supportedClientVersions>[3.2.0,4.0.0)</supportedClientVersions>
+  <supportedClientVersions>[3.3.16, 4.0.0)</supportedClientVersions>
   <summary>Introduces Role based authorization security</summary>
   <description>Introduces Role based authorization security</description>
   <authors>Intent.Modules.NodeJS</authors>

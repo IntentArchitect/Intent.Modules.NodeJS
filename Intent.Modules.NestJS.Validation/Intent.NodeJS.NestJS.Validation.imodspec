@@ -2,7 +2,7 @@
 <package>
   <id>Intent.NodeJS.NestJS.Validation</id>
   <version>3.3.2</version>
-  <supportedClientVersions>[3.2.0,4.0.0)</supportedClientVersions>
+  <supportedClientVersions>[3.3.16, 4.0.0)</supportedClientVersions>
   <summary>A custom module for Intent.Modules.NodeJS.</summary>
   <description>A custom module for Intent.Modules.NodeJS.</description>
   <authors>Intent.Modules.NodeJS</authors>

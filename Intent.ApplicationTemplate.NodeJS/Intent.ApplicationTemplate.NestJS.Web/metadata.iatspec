@@ -2,7 +2,7 @@
 <applicationTemplate>
   <id>Intent.ApplicationTemplate.NestJS.Web</id>
   <version>3.3.6</version>
-  <supportedClientVersions>[3.3.0-pre.0, 4.0.0)</supportedClientVersions>
+  <supportedClientVersions>[3.3.16, 4.0.0)</supportedClientVersions>
   <displayName>NestJS Web Application</displayName>
   <shortDescription>A Node.js web application server using NestJS and TypeORM.</shortDescription>
   <authors>Intent Architect</authors>

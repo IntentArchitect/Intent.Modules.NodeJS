@@ -2,7 +2,7 @@
 <package>
   <id>Intent.NodeJS.NestJS.Controllers</id>
   <version>3.3.6</version>
-  <supportedClientVersions>[3.3.0-pre.0, 4.0.0)</supportedClientVersions>
+  <supportedClientVersions>[3.3.16, 4.0.0)</supportedClientVersions>
   <summary>Generates Application Contracts and Service Implementation code</summary>
   <description>Generates Application Contracts and Service Implementation code</description>
   <authors>Intent.Modules.NodeJS</authors>
