@@ -27,8 +27,14 @@ internal class MsSqlDatabaseProviderStrategy : OrmDatabaseProviderStrategyBase
 
     public override bool TryGetColumnLength(AttributeModel attribute, out string lengthOptionValue)
     {
+        if (!attribute.HasTextConstraints())
+        {
+            lengthOptionValue = default;
+            return false;
+        }
+
         // If length is unspecified, TypeORM regards it as 255.
-        var maxLength = attribute.GetTextConstraints()?.MaxLength();
+        var maxLength = attribute.GetTextConstraints().MaxLength();
         lengthOptionValue = maxLength.HasValue
             ? maxLength.Value.ToString("D")
             : "'max'";
