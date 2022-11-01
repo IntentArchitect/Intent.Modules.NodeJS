@@ -4,10 +4,12 @@
   <display>Default Diagram</display>
   <externalReference>9adaaba2-3f70-4a37-ba4b-b5909386cf0e</externalReference>
   <isAbstract>false</isAbstract>
-  <order>1</order>
   <genericTypes />
   <isMapped>false</isMapped>
   <parentFolderId>a3ece1cf-257d-4cac-b10e-587f0f8532cf</parentFolderId>
+  <packageId>a3ece1cf-257d-4cac-b10e-587f0f8532cf</packageId>
+  <packageName>NodeJS.NestJS.TestApplication.Domain</packageName>
+  <diagram />
   <stereotypes />
   <metadata />
   <childElements />

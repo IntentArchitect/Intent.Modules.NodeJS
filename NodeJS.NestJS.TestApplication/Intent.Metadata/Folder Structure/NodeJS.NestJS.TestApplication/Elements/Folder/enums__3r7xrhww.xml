@@ -3,10 +3,30 @@
   <name>enums</name>
   <display>enums</display>
   <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-by-name</sort-children>
   <genericTypes />
   <isMapped>false</isMapped>
   <parentFolderId>a86400ce-db25-485c-a325-93cf43e81b6e</parentFolderId>
+  <packageId>8ca8dbb2-db0e-4241-936f-e3bbdfffd30c</packageId>
+  <packageName>NodeJS.NestJS.TestApplication</packageName>
   <stereotypes />
   <metadata />
-  <childElements />
+  <childElements>
+    <childElement id="9e05d44d-64c6-4d18-858d-935de194d5cc" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Intent.NodeJS.Domain.Enum</name>
+      <display>Intent.NodeJS.Domain.Enum</display>
+      <externalReference>Intent.NodeJS.Domain</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>63104336-8277-4ab5-8dc4-ef57e2c741c6</parentFolderId>
+      <packageId>8ca8dbb2-db0e-4241-936f-e3bbdfffd30c</packageId>
+      <packageName>NodeJS.NestJS.TestApplication</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+  </childElements>
 </class>
