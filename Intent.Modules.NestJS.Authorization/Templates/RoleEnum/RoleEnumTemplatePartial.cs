@@ -27,7 +27,7 @@ namespace Intent.Modules.NestJS.Authorization.Templates.RoleEnum
             return new TypeScriptFileConfig(
                 className: $"Role",
                 fileName: $"role.enum",
-                overwriteBehaviour: OverwriteBehaviour.OnceOff);
+                overwriteBehaviour: OverwriteBehaviour.OverwriteDisabled);
         }
 
     }

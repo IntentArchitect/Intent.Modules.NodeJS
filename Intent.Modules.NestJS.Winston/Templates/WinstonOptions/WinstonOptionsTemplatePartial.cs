@@ -48,7 +48,7 @@ namespace Intent.Modules.NestJS.Winston.Templates.WinstonOptions
             return new TypeScriptFileConfig(
                 className: $"WinstonOptions",
                 fileName: $"winston.config",
-                overwriteBehaviour: OverwriteBehaviour.OnceOff
+                overwriteBehaviour: OverwriteBehaviour.OverwriteDisabled
             );
         }
 
