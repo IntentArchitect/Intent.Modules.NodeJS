@@ -50,7 +50,7 @@ namespace Intent.Modules.NestJS.Authentication.Templates.Users.UsersService
             this.Write(" {\r\n  private readonly users: ");
             
             #line 16 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Authentication\Templates\Users\UsersService\UsersServiceTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(this.GetUserName()));
+            this.Write(this.ToStringHelper.ToStringWithCulture(this.GetUserContextName()));
             
             #line default
             #line hidden
@@ -82,7 +82,7 @@ namespace Intent.Modules.NestJS.Authentication.Templates.Users.UsersService
   async findOne(username: string): Promise<");
             
             #line 41 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Authentication\Templates\Users\UsersService\UsersServiceTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(this.GetUserName()));
+            this.Write(this.ToStringHelper.ToStringWithCulture(this.GetUserContextName()));
             
             #line default
             #line hidden

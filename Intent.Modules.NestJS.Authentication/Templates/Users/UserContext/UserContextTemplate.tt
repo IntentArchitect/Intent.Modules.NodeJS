@@ -1,4 +1,4 @@
-<#@ template language="C#" inherits="TypeScriptTemplateBase<object, Intent.Modules.NestJS.Authentication.Templates.Users.User.UserDecorator>" #>
+<#@ template language="C#" inherits="TypeScriptTemplateBase<object, Intent.Modules.NestJS.Authentication.Templates.Users.UserContext.UserContextDecorator>" #>
 <#@ assembly name="System.Core" #>
 <#@ import namespace="System.Collections.Generic" #>
 <#@ import namespace="System.Linq" #>

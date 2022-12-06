@@ -28,16 +28,16 @@
       <ProjectId>16f85321-108c-43dd-97c1-6fdda7e6097a</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.Templates.TemplateDecorator#e32571c2-7dfe-4fac-874e-3ca3459252fe</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
-      <ApplicationRelativeFilePath>Decorators/UserRolesDecorator.cs</ApplicationRelativeFilePath>
-      <ProjectRelativeFilePath>UserRolesDecorator.cs</ProjectRelativeFilePath>
+      <ApplicationRelativeFilePath>Decorators/UserContextRolesDecorator.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>UserContextRolesDecorator.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
       <ProjectId>16f85321-108c-43dd-97c1-6fdda7e6097a</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.Templates.TemplateDecoratorRegistration#e32571c2-7dfe-4fac-874e-3ca3459252fe</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
-      <ApplicationRelativeFilePath>Decorators/UserRolesDecoratorRegistration.cs</ApplicationRelativeFilePath>
-      <ProjectRelativeFilePath>UserRolesDecoratorRegistration.cs</ProjectRelativeFilePath>
+      <ApplicationRelativeFilePath>Decorators/UserContextRolesDecoratorRegistration.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>UserContextRolesDecoratorRegistration.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>

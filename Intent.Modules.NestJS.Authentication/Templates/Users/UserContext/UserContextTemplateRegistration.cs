@@ -11,16 +11,16 @@ using Intent.Templates;
 [assembly: DefaultIntentManaged(Mode.Fully)]
 [assembly: IntentTemplate("Intent.ModuleBuilder.TemplateRegistration.SingleFileNoModel", Version = "1.0")]
 
-namespace Intent.Modules.NestJS.Authentication.Templates.Users.User
+namespace Intent.Modules.NestJS.Authentication.Templates.Users.UserContext
 {
     [IntentManaged(Mode.Merge, Body = Mode.Merge, Signature = Mode.Fully)]
-    public class UserTemplateRegistration : SingleFileTemplateRegistration
+    public class UserContextTemplateRegistration : SingleFileTemplateRegistration
     {
-        public override string TemplateId => UserTemplate.TemplateId;
+        public override string TemplateId => UserContextTemplate.TemplateId;
 
         public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget)
         {
-            return new UserTemplate(outputTarget);
+            return new UserContextTemplate(outputTarget);
         }
     }
 }

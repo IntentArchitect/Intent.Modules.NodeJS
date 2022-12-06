@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using Intent.Engine;
-using Intent.Modules.NestJS.Authentication.Templates.Users.User;
+using Intent.Modules.NestJS.Authentication.Templates.Users.UserContext;
 using Intent.Modules.NestJS.Authorization.Templates;
 using Intent.RoslynWeaver.Attributes;
 
@@ -10,18 +10,18 @@ using Intent.RoslynWeaver.Attributes;
 namespace Intent.Modules.NestJS.Authorization.Decorators
 {
     [IntentManaged(Mode.Merge)]
-    public class UserRolesDecorator : UserDecorator
+    public class UserContextRolesDecorator : UserContextDecorator
     {
         [IntentManaged(Mode.Fully)]
-        public const string DecoratorId = "Intent.NodeJS.NestJS.Authorization.UserRolesDecorator";
+        public const string DecoratorId = "Intent.NodeJS.NestJS.Authorization.UserContextRolesDecorator";
 
         [IntentManaged(Mode.Fully)]
-        private readonly UserTemplate _template;
+        private readonly UserContextTemplate _template;
         [IntentManaged(Mode.Fully)]
         private readonly IApplication _application;
 
         [IntentManaged(Mode.Fully, Body = Mode.Fully)]
-        public UserRolesDecorator(UserTemplate template, IApplication application)
+        public UserContextRolesDecorator(UserContextTemplate template, IApplication application)
         {
             _template = template;
             _application = application;

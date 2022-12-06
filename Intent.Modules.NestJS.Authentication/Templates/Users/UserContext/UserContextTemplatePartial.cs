@@ -9,16 +9,16 @@ using Intent.Templates;
 [assembly: DefaultIntentManaged(Mode.Merge)]
 [assembly: IntentTemplate("Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial", Version = "1.0")]
 
-namespace Intent.Modules.NestJS.Authentication.Templates.Users.User
+namespace Intent.Modules.NestJS.Authentication.Templates.Users.UserContext
 {
     [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
-    partial class UserTemplate : TypeScriptTemplateBase<object, UserDecorator>
+    partial class UserContextTemplate : TypeScriptTemplateBase<object, UserContextDecorator>
     {
         [IntentManaged(Mode.Fully)]
-        public const string TemplateId = "Intent.NodeJS.NestJS.Authentication.Users.User";
+        public const string TemplateId = "Intent.NodeJS.NestJS.Authentication.Users.UserContext";
 
         [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
-        public UserTemplate(IOutputTarget outputTarget, object model = null) : base(TemplateId, outputTarget, model)
+        public UserContextTemplate(IOutputTarget outputTarget, object model = null) : base(TemplateId, outputTarget, model)
         {
         }
 
@@ -31,8 +31,8 @@ namespace Intent.Modules.NestJS.Authentication.Templates.Users.User
         public override ITemplateFileConfig GetTemplateFileConfig()
         {
             return new TypeScriptFileConfig(
-                className: $"User",
-                fileName: $"user"
+                className: $"UserContext",
+                fileName: $"user-context"
             );
         }
 

@@ -8,7 +8,7 @@ using Intent.Modules.NestJS.Authentication.Templates.Auth.Guards.LocalAuthGuard;
 using Intent.Modules.NestJS.Authentication.Templates.Auth.Guards.PublicDecorator;
 using Intent.Modules.NestJS.Authentication.Templates.Auth.Strategies.JwtStrategy;
 using Intent.Modules.NestJS.Authentication.Templates.Auth.Strategies.LocalStrategy;
-using Intent.Modules.NestJS.Authentication.Templates.Users.User;
+using Intent.Modules.NestJS.Authentication.Templates.Users.UserContext;
 using Intent.Modules.NestJS.Authentication.Templates.Users.UsersModule;
 using Intent.Modules.NestJS.Authentication.Templates.Users.UsersService;
 using Intent.RoslynWeaver.Attributes;
@@ -60,9 +60,9 @@ namespace Intent.Modules.NestJS.Authentication.Templates
             return template.GetTypeName(PublicDecoratorTemplate.TemplateId);
         }
 
-        public static string GetUserName<T>(this IntentTemplateBase<T> template)
+        public static string GetUserContextName<T>(this IntentTemplateBase<T> template)
         {
-            return template.GetTypeName(UserTemplate.TemplateId);
+            return template.GetTypeName(UserContextTemplate.TemplateId);
         }
 
         public static string GetUsersModuleName<T>(this IntentTemplateBase<T> template)

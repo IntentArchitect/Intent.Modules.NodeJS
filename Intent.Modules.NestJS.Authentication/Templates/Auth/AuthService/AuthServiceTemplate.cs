@@ -51,7 +51,7 @@ namespace Intent.Modules.NestJS.Authentication.Templates.Auth.AuthService
                     "ername: string, pass: string): Promise<");
             
             #line 20 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Authentication\Templates\Auth\AuthService\AuthServiceTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(this.GetUserName()));
+            this.Write(this.ToStringHelper.ToStringWithCulture(this.GetUserContextName()));
             
             #line default
             #line hidden
@@ -60,7 +60,7 @@ namespace Intent.Modules.NestJS.Authentication.Templates.Auth.AuthService
                     "eturn result;\r\n    }\r\n    return null;\r\n  }\r\n\r\n  async login(user: ");
             
             #line 29 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Authentication\Templates\Auth\AuthService\AuthServiceTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(this.GetUserName()));
+            this.Write(this.ToStringHelper.ToStringWithCulture(this.GetUserContextName()));
             
             #line default
             #line hidden

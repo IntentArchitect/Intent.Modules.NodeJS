@@ -85,6 +85,10 @@
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>AuthControllerTemplate.cs</LastGenOutput>
     </None>
+    <None Update="Templates\Users\UserContext\UserContextTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>UserContextTemplate.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
@@ -187,6 +191,11 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>AuthControllerTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Users\UserContext\UserContextTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>UserContextTemplate.tt</DependentUpon>
     </Compile>
   </ItemGroup>
 

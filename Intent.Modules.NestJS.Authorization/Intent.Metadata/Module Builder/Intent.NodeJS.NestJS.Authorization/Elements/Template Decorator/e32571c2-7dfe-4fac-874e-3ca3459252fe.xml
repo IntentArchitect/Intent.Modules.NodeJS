@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <class id="e32571c2-7dfe-4fac-874e-3ca3459252fe" type="Template Decorator" typeId="f0f46278-29ea-42bd-9206-0e7034f623bc">
-  <name>UserRolesDecorator</name>
-  <display>UserRolesDecorator: UserDecorator</display>
+  <name>UserContextRolesDecorator</name>
+  <display>UserContextRolesDecorator: UserContextDecorator</display>
   <isAbstract>false</isAbstract>
   <genericTypes />
   <typeReference id="2677df0d-dbb6-4a6d-8ea3-f3aafd7e1cd1">

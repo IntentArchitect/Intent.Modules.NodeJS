@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package>
   <id>Intent.NodeJS.NestJS.Authorization</id>
-  <version>3.3.3</version>
+  <version>3.3.4-pre.0</version>
   <supportedClientVersions>[3.3.16, 4.0.0)</supportedClientVersions>
   <summary>Introduces Role based authorization security</summary>
   <description>Introduces Role based authorization security</description>
@@ -24,7 +24,7 @@
   </templates>
   <decorators>
     <decorator id="Intent.NodeJS.NestJS.Authorization.ControllerRolesDecorator" externalReference="d5a228cb-145d-4bd0-88f5-dc2aa2fff4e5" />
-    <decorator id="Intent.NodeJS.NestJS.Authorization.UserRolesDecorator" externalReference="e32571c2-7dfe-4fac-874e-3ca3459252fe" />
+    <decorator id="Intent.NodeJS.NestJS.Authorization.UserContextRolesDecorator" externalReference="e32571c2-7dfe-4fac-874e-3ca3459252fe" />
   </decorators>
   <factoryExtensions></factoryExtensions>
   <moduleSettings></moduleSettings>
@@ -32,7 +32,7 @@
     <dependency id="Intent.Common" version="3.3.11" />
     <dependency id="Intent.Common.Types" version="3.3.5" />
     <dependency id="Intent.Common.TypeScript" version="3.3.8" />
-    <dependency id="Intent.NodeJS.NestJS.Authentication" version="3.3.3" />
+    <dependency id="Intent.NodeJS.NestJS.Authentication" version="3.3.4-pre.0" />
     <dependency id="Intent.NodeJS.NestJS.Controllers" version="3.3.3" />
   </dependencies>
   <files>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <class id="4d73e119-cd31-4833-9d3b-3a67a3119b33" type="Typescript File Template" typeId="e6e41d88-2829-41b6-a791-065d2bb44eb3">
-  <name>User</name>
-  <display>User: Single File</display>
+  <name>UserContext</name>
+  <display>UserContext: Single File</display>
   <isAbstract>false</isAbstract>
   <sort-children>by-type-then-by-name</sort-children>
   <genericTypes />

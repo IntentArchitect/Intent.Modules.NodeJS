@@ -17,7 +17,7 @@ export class <#= ClassName #> {
     private readonly jwtService: JwtService
   ) {}
 
-  async validateUser(username: string, pass: string): Promise<<#= this.GetUserName() #>> {
+  async validateUser(username: string, pass: string): Promise<<#= this.GetUserContextName() #>> {
     const user = await this.usersService.findOne(username);
     if (user && user.password === pass) {
       const { password, ...result } = user;
@@ -26,7 +26,7 @@ export class <#= ClassName #> {
     return null;
   }
 
-  async login(user: <#= this.GetUserName() #>): Promise<{ access_token: string }> {
+  async login(user: <#= this.GetUserContextName() #>): Promise<{ access_token: string }> {
     const payload = { sub: user.userId, ...user };
     return {
       access_token: this.jwtService.sign(payload),

@@ -316,40 +316,40 @@
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.Templates.TemplateDecoratorContract#e7b3698f-8b88-41a7-a283-742721cb6712</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
-      <ApplicationRelativeFilePath>Templates/Users/User/UserDecorator.cs</ApplicationRelativeFilePath>
-      <ProjectRelativeFilePath>Users/User/UserDecorator.cs</ProjectRelativeFilePath>
+      <ApplicationRelativeFilePath>Templates/Users/UserContext/UserContextDecorator.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>Users/UserContext/UserContextDecorator.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>ModuleBuilder.Typescript.Templates.TypescriptTemplate.PreProcessT4#4d73e119-cd31-4833-9d3b-3a67a3119b33</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
-      <ApplicationRelativeFilePath>Templates/Users/User/UserTemplate.cs</ApplicationRelativeFilePath>
-      <ProjectRelativeFilePath>Users/User/UserTemplate.cs</ProjectRelativeFilePath>
+      <ApplicationRelativeFilePath>Templates/Users/UserContext/UserContextTemplate.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>Users/UserContext/UserContextTemplate.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateT4#4d73e119-cd31-4833-9d3b-3a67a3119b33</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
-      <ApplicationRelativeFilePath>Templates/Users/User/UserTemplate.tt</ApplicationRelativeFilePath>
-      <ProjectRelativeFilePath>Users/User/UserTemplate.tt</ProjectRelativeFilePath>
+      <ApplicationRelativeFilePath>Templates/Users/UserContext/UserContextTemplate.tt</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>Users/UserContext/UserContextTemplate.tt</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial#4d73e119-cd31-4833-9d3b-3a67a3119b33</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
-      <ApplicationRelativeFilePath>Templates/Users/User/UserTemplatePartial.cs</ApplicationRelativeFilePath>
-      <ProjectRelativeFilePath>Users/User/UserTemplatePartial.cs</ProjectRelativeFilePath>
+      <ApplicationRelativeFilePath>Templates/Users/UserContext/UserContextTemplatePartial.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>Users/UserContext/UserContextTemplatePartial.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
       <ProjectId>6ae96fff-f8fa-48d5-bfd1-a8292b3b109e</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TemplateRegistration.SingleFileNoModel#4d73e119-cd31-4833-9d3b-3a67a3119b33</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
-      <ApplicationRelativeFilePath>Templates/Users/User/UserTemplateRegistration.cs</ApplicationRelativeFilePath>
-      <ProjectRelativeFilePath>Users/User/UserTemplateRegistration.cs</ProjectRelativeFilePath>
+      <ApplicationRelativeFilePath>Templates/Users/UserContext/UserContextTemplateRegistration.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>Users/UserContext/UserContextTemplateRegistration.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>

@@ -53,7 +53,7 @@ namespace Intent.Modules.NestJS.Authentication.Templates.Auth.Strategies.JwtStra
             this.Write("\'),\r\n    });\r\n  }\r\n\r\n  async validate(payload: any): Promise<");
             
             #line 25 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Authentication\Templates\Auth.Strategies\JwtStrategy\JwtStrategyTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(this.GetUserName()));
+            this.Write(this.ToStringHelper.ToStringWithCulture(this.GetUserContextName()));
             
             #line default
             #line hidden
