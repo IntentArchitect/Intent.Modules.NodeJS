@@ -40,7 +40,7 @@ namespace Intent.Module.TypeScript.Domain.Templates.Entity
         private string GetClassDecorators()
         {
             var decorators = GetDecoratorsOutput(x => string.Join(@"
-  ", x.GetClassDecorators()));
+", x.GetClassDecorators()));
             return string.IsNullOrWhiteSpace(decorators) ? "" : $@"
 {decorators}";
         }

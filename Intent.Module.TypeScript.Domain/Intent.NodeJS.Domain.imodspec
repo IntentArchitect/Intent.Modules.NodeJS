@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package>
   <id>Intent.NodeJS.Domain</id>
-  <version>3.3.4</version>
+  <version>3.3.5-pre.0</version>
   <supportedClientVersions>[3.3.16, 4.0.0)</supportedClientVersions>
   <summary>Generates the Domain Entities from the Domain designer</summary>
   <description>Generates the Domain Entities from the Domain designer</description>

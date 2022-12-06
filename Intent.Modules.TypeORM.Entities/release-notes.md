@@ -1,3 +1,7 @@
+### Version 3.3.10
+
+- Add support for indices.
+
 ### Version 3.3.9
 
 - Fixed: Setting the Text Constraint length to blank didn't set the column type to `varchar(MAX)` for MS SQL.

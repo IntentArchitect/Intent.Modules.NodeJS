@@ -6,9 +6,11 @@ using Intent.Metadata.RDBMS.Api;
 using Intent.Modelers.Domain.Api;
 using Intent.Module.TypeScript.Domain.Templates.Entity;
 using Intent.Modules.Common.Templates;
+using Intent.Modules.Metadata.RDBMS.Api.Indexes;
 using Intent.Modules.Metadata.RDBMS.Settings;
 using Intent.Modules.TypeORM.Entities.DatabaseProviders;
 using Intent.RoslynWeaver.Attributes;
+using Index = Intent.Modules.Metadata.RDBMS.Api.Indexes.Index;
 
 [assembly: DefaultIntentManaged(Mode.Merge)]
 [assembly: IntentTemplate("Intent.ModuleBuilder.Templates.TemplateDecorator", Version = "1.0")]
@@ -98,7 +100,12 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
 
         public override IEnumerable<string> GetClassDecorators()
         {
-            return new[] { $"@{_template.ImportType("Entity", "typeorm")}('{_template.ClassName.ToSnakeCase()}')" };
+            yield return $"@{_template.ImportType("Entity", "typeorm")}('{_template.ClassName.ToSnakeCase()}')";
+
+            foreach (var index in _template.Model.GetIndexes().Where(x => x.KeyColumns.Length > 1))
+            {
+                yield return GetIndexAnnotation(index);
+            }
         }
 
         public override IEnumerable<string> GetFieldDecorators(AttributeModel attribute)
@@ -146,6 +153,13 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
             }
 
             yield return $"@{_template.ImportType("Column", "typeorm")}({string.Join(", ", parameters)})";
+
+            foreach (var index in _template.Model.GetIndexes()
+                         .Where(x => x.KeyColumns.Length == 1 &&
+                                     attribute.Equals(x.KeyColumns[0].SourceType.AsAttributeModel())))
+            {
+                yield return GetIndexAnnotation(index);
+            }
         }
 
         public override IEnumerable<string> GetFieldDecorators(AssociationEndModel thatEnd)
@@ -217,6 +231,41 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
             // TypeOrm does not support support unidirectional one-to-many relationships when using decorator approach:
             // https://github.com/typeorm/typeorm/issues/3233
             return !thatEnd.IsCollection && thatEnd.OtherEnd().IsCollection;
+        }
+
+        private string GetIndexAnnotation(Index index)
+        {
+            var arguments = new List<string>(3);
+            if (!index.UseDefaultName &&
+                !string.IsNullOrWhiteSpace(index.Name))
+            {
+                arguments.Add($"'{index.Name}'");
+            }
+
+            if (index.KeyColumns.Length > 1)
+            {
+                var columns = index.KeyColumns.Select(x => $"'{x.Name.ToCamelCase()}'");
+                arguments.Add($"[{string.Join(", ", columns)}]");
+            }
+
+            var options = new List<string>(2);
+            if (index.IsUnique)
+            {
+                options.Add("unique: true");
+            }
+
+            if (index.FilterOption == FilterOption.Custom &&
+                !string.IsNullOrWhiteSpace(index.Filter))
+            {
+                options.Add($"where: '{index.Filter.Replace("\'", "\\'")}'");
+            }
+
+            if (options.Count > 0)
+            {
+                arguments.Add($"{{ {string.Join(", ", options)} }}");
+            }
+
+            return $"@{_template.ImportType("Index", "typeorm")}({string.Join(", ", arguments)})";
         }
     }
 }
