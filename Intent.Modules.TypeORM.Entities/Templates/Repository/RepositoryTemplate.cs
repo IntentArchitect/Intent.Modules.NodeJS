@@ -35,38 +35,37 @@ namespace Intent.Modules.TypeORM.Entities.Templates.Repository
         /// </summary>
         public override string TransformText()
         {
-            this.Write("\n");
             this.Write("import { Repository } from \'typeorm\';\r\n\r\n");
             
-            #line 14 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\Repository\RepositoryTemplate.tt"
+            #line 15 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\Repository\RepositoryTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(this.IntentMergeDecorator()));
             
             #line default
             #line hidden
             this.Write("\r\n@");
             
-            #line 15 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\Repository\RepositoryTemplate.tt"
+            #line 16 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\Repository\RepositoryTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(this.GetTypeOrmExDecoratorName()));
             
             #line default
             #line hidden
             this.Write("(");
             
-            #line 15 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\Repository\RepositoryTemplate.tt"
+            #line 16 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\Repository\RepositoryTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(GetTypeName(EntityTemplate.TemplateId, Model)));
             
             #line default
             #line hidden
             this.Write(")\r\nexport class ");
             
-            #line 16 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\Repository\RepositoryTemplate.tt"
+            #line 17 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\Repository\RepositoryTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ClassName));
             
             #line default
             #line hidden
             this.Write(" extends Repository<");
             
-            #line 16 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\Repository\RepositoryTemplate.tt"
+            #line 17 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\Repository\RepositoryTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(GetTypeName(EntityTemplate.TemplateId, Model)));
             
             #line default
