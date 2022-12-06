@@ -10,6 +10,7 @@ using Intent.Module.TypeScript.Domain.Templates.Entity;
 using Intent.Modules.Common.Templates;
 using Intent.Modules.NestJS.Controllers.Templates.Service;
 using Intent.Modules.NodeJS.Services.CRUD.Decorators;
+using Intent.Modules.TypeORM.Entities;
 using Intent.Modules.TypeORM.Entities.Templates.Repository;
 using OperationModel = Intent.Modelers.Services.Api.OperationModel;
 using ParameterModel = Intent.Modelers.Services.Api.ParameterModel;
@@ -44,17 +45,24 @@ namespace Intent.Modules.NodeJS.Services.CRUD.CrudStrategies
                 $"createnew{targetEntity.Name.ToLower()}",
             }.Contains(operation.Name.ToLower());
 
-            if (matches)
+            if (!matches)
             {
-                _repository = _template.GetTypeName(RepositoryTemplate.TemplateId, targetEntity, new TemplateDiscoveryOptions() { ThrowIfNotFound = false });
-                if (_repository == null)
-                {
-                    return false;
-                }
-                return true;
+                return false;
             }
 
-            return false;
+            if (_template.TryGetTypeName(RepositoryTemplate.TemplateId, targetEntity, out _repository))
+            {
+                return false;
+            }
+
+            // Support for composite primary keys not implemented:
+            if (targetEntity.GetPrimaryKeys().PrimaryKeys.Count > 1)
+            {
+                return false;
+            }
+
+            return true;
+
         }
 
         public IEnumerable<string> GetRequiredServices()

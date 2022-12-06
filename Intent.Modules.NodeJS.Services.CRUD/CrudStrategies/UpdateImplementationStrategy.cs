@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using Intent.Engine;
 using Intent.Metadata.Models;
+using Intent.Metadata.RDBMS.Api;
 using Intent.Modelers.Domain.Api;
 using Intent.Modelers.Services.Api;
 using Intent.Modules.Common.Templates;
 using Intent.Modules.NestJS.Controllers.Templates.Service;
 using Intent.Modules.NodeJS.Services.CRUD.Decorators;
+using Intent.Modules.TypeORM.Entities;
 using Intent.Modules.TypeORM.Entities.Templates.Repository;
 using OperationModel = Intent.Modelers.Services.Api.OperationModel;
 using ParameterModel = Intent.Modelers.Services.Api.ParameterModel;
@@ -57,13 +59,23 @@ namespace Intent.Modules.NodeJS.Services.CRUD.CrudStrategies
                 return false;
             }
 
-            _repository = _template.TryGetTypeName(RepositoryTemplate.TemplateId, targetEntity);
-            if (_repository == null)
+            if (!_template.TryGetTypeName(RepositoryTemplate.TemplateId, targetEntity, out _repository))
             {
                 return false;
             }
-            return true;
 
+            if (operation.Parameters.Count != 2)
+            {
+                return false;
+            }
+
+            // Support for composite primary keys not implemented:
+            if (targetEntity.GetPrimaryKeys().PrimaryKeys.Count > 1)
+            {
+                return false;
+            }
+
+            return true;
         }
 
         public IEnumerable<string> GetRequiredServices()

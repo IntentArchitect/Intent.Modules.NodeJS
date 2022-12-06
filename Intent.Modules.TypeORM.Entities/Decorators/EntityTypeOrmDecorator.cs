@@ -47,22 +47,16 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
                 return base.GetBeforeFields();
             }
 
-            var (typeName, typeScriptType, strategy) = _application.Settings.GetDatabaseSettings().KeyType().AsEnum() switch
+            var (typeName, typeScriptType) = _application.Settings.GetDatabaseSettings().KeyType().AsEnum() switch
             {
-                DatabaseSettings.KeyTypeOptionsEnum.Guid => ("guid", "string", "'uuid'"),
-                DatabaseSettings.KeyTypeOptionsEnum.Long => ("long", "number", string.Empty),
-                DatabaseSettings.KeyTypeOptionsEnum.Int => ("int", "number", string.Empty),
+                DatabaseSettings.KeyTypeOptionsEnum.Guid => ("guid", "string"),
+                DatabaseSettings.KeyTypeOptionsEnum.Long => ("long", "number"),
+                DatabaseSettings.KeyTypeOptionsEnum.Int => ("int", "number"),
                 _ => throw new ArgumentOutOfRangeException()
             };
 
-            var columnType = _ormDatabaseProviderStrategy.TryGetColumnType(typeName, out var stringColumnTypeOutput)
-                ? stringColumnTypeOutput.Type
-                : typeScriptType;
-
             return $@"
-  @{_template.ImportType("Column", "typeorm")}('{columnType}')
-  @{_template.ImportType("ObjectIdColumn", "typeorm")}()
-  @{_template.ImportType("PrimaryGeneratedColumn", "typeorm")}({strategy})
+  {GetPrimaryKeyAnnotation(typeName)}
   id?: {typeScriptType};
 ";
         }
@@ -112,19 +106,7 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
         {
             if (attribute.HasPrimaryKey())
             {
-                if (_template.Model.GetExplicitPrimaryKey().Count > 1 ||
-                    attribute.TypeReference.Element.Name == "string")
-                {
-                    yield return $"@{_template.ImportType("PrimaryColumn", "typeorm")}()";
-                }
-                else
-                {
-                    // ObjectIdColumn should only be used when we have MongoDD database:
-                    // Special type of column that is available only for MongoDB database. Marks your entity's column to be an object id.
-                    //yield return $"@{_template.ImportType("ObjectIdColumn", "typeorm")}()";
-
-                    yield return $"@{_template.ImportType("PrimaryGeneratedColumn", "typeorm")}({(attribute.TypeReference.Element.Name == "guid" ? "'uuid'" : "")})";
-                }
+                yield return GetPrimaryKeyAnnotation(attribute.TypeReference.Element.Name);
                 yield break;
             }
 
@@ -266,6 +248,28 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
             }
 
             return $"@{_template.ImportType("Index", "typeorm")}({string.Join(", ", arguments)})";
+        }
+
+        private string GetPrimaryKeyAnnotation(string typeName)
+        {
+            switch (typeName)
+            {
+                case "guid":
+                {
+                    return $"@{_template.ImportType("PrimaryGeneratedColumn", "typeorm")}('uuid')";
+                }
+                case "int" or "long":
+                {
+                    var options = _ormDatabaseProviderStrategy.TryGetColumnType(typeName, out var stringColumnTypeOutput)
+                        ? $"{{ type: '{stringColumnTypeOutput.Type}' }}"
+                        : string.Empty;
+                    return $"@{_template.ImportType("PrimaryGeneratedColumn", "typeorm")}({options})";
+                }
+                default:
+                {
+                    throw new ArgumentOutOfRangeException();
+                }
+            }
         }
     }
 }

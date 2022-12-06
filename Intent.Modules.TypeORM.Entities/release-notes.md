@@ -1,6 +1,7 @@
 ### Version 3.3.10
 
 - Add support for indices.
+- Fixed: Composite primary keys would sometimes not work.
 
 ### Version 3.3.9
 

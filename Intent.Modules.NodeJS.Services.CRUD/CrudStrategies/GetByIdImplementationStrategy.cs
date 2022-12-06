@@ -8,6 +8,7 @@ using Intent.Modules.Common.Templates;
 using Intent.Modules.NestJS.Controllers.Templates.DtoModel;
 using Intent.Modules.NestJS.Controllers.Templates.Service;
 using Intent.Modules.NodeJS.Services.CRUD.Decorators;
+using Intent.Modules.TypeORM.Entities;
 using Intent.Modules.TypeORM.Entities.Templates.Repository;
 using OperationModel = Intent.Modelers.Services.Api.OperationModel;
 using ParameterModel = Intent.Modelers.Services.Api.ParameterModel;
@@ -77,11 +78,17 @@ namespace Intent.Modules.NodeJS.Services.CRUD.CrudStrategies
                 return false;
             }
 
-            _repository = _template.TryGetTypeName(RepositoryTemplate.TemplateId, targetEntity);
-            if (_repository == null)
+            if (_template.TryGetTypeName(RepositoryTemplate.TemplateId, targetEntity, out _repository))
             {
                 return false;
             }
+
+            // Support for composite primary keys not implemented:
+            if (targetEntity.GetPrimaryKeys().PrimaryKeys.Count > 1)
+            {
+                return false;
+            }
+
             return true;
         }
 
