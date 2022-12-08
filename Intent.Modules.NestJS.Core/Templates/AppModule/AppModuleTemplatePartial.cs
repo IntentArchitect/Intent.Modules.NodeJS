@@ -62,7 +62,9 @@ namespace Intent.Modules.NestJS.Core.Templates.AppModule
 
         private void HandleEvent(NestJsProviderCreatedEvent @event)
         {
-            _providers.Add(GetTypeName(@event.TemplateId, @event.ModelId));
+            _providers.Add(@event.ModelId != null 
+                ? GetTypeName(@event.TemplateId, @event.ModelId)
+                : GetTypeName(@event.TemplateId));
         }
 
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]

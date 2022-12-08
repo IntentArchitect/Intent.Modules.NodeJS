@@ -11,4 +11,5 @@ public static class NpmPackageDependencies
 
     public static NpmPackageDependency TypeOrm = new("typeorm", "^0.3.7");
     public static NpmPackageDependency EnvVar = new("env-var", "^7.1.1");
+    public static NpmPackageDependency NestJsCls = new("nestjs-cls","^3.0.4");
 }

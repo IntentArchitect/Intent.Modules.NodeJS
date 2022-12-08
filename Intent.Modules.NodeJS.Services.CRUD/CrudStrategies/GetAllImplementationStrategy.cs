@@ -62,7 +62,7 @@ namespace Intent.Modules.NodeJS.Services.CRUD.CrudStrategies
                 return false;
             }
 
-            if (_template.TryGetTypeName(RepositoryTemplate.TemplateId, targetEntity, out _repository))
+            if (!_template.TryGetTypeName(RepositoryTemplate.TemplateId, targetEntity, out _repository))
             {
                 return false;
             }

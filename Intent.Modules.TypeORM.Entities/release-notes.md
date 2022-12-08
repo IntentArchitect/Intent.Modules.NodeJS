@@ -2,6 +2,7 @@
 
 - Add support for indices.
 - Fixed: Composite primary keys would sometimes not work.
+- Added basic auditing to entities (`createdBy`, `createdDate`, `lastModifiedBy` and `lastModified`).
 
 ### Version 3.3.9
 

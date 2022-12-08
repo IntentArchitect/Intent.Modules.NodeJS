@@ -76,6 +76,30 @@
     </FileLog>
     <FileLog>
       <ProjectId>c8df7c4a-ae2c-4ca5-a1c2-cfc8a8c6d91d</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateStringInterpolation#4068bcdd-098b-4e63-a3f9-6f73b494c461</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Templates/BasicAuditingSubscriber/BasicAuditingSubscriberTemplate.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>BasicAuditingSubscriber/BasicAuditingSubscriberTemplate.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>c8df7c4a-ae2c-4ca5-a1c2-cfc8a8c6d91d</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial#4068bcdd-098b-4e63-a3f9-6f73b494c461</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Templates/BasicAuditingSubscriber/BasicAuditingSubscriberTemplatePartial.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>BasicAuditingSubscriber/BasicAuditingSubscriberTemplatePartial.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>c8df7c4a-ae2c-4ca5-a1c2-cfc8a8c6d91d</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.TemplateRegistration.SingleFileNoModel#4068bcdd-098b-4e63-a3f9-6f73b494c461</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Templates/BasicAuditingSubscriber/BasicAuditingSubscriberTemplateRegistration.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>BasicAuditingSubscriber/BasicAuditingSubscriberTemplateRegistration.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>c8df7c4a-ae2c-4ca5-a1c2-cfc8a8c6d91d</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateStringInterpolation#6cec7b44-13fc-45a8-90c0-4ad97b59385b</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Datasource/DatasourceTemplate.cs</ApplicationRelativeFilePath>

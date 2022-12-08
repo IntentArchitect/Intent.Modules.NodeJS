@@ -255,20 +255,20 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
             switch (typeName)
             {
                 case "guid":
-                {
-                    return $"@{_template.ImportType("PrimaryGeneratedColumn", "typeorm")}('uuid')";
-                }
+                    {
+                        return $"@{_template.ImportType("PrimaryGeneratedColumn", "typeorm")}('uuid')";
+                    }
                 case "int" or "long":
-                {
-                    var options = _ormDatabaseProviderStrategy.TryGetColumnType(typeName, out var stringColumnTypeOutput)
-                        ? $"{{ type: '{stringColumnTypeOutput.Type}' }}"
-                        : string.Empty;
-                    return $"@{_template.ImportType("PrimaryGeneratedColumn", "typeorm")}({options})";
-                }
+                    {
+                        var options = _ormDatabaseProviderStrategy.TryGetColumnType(typeName, out var stringColumnTypeOutput)
+                            ? $"{{ type: '{stringColumnTypeOutput.Type}' }}"
+                            : string.Empty;
+                        return $"@{_template.ImportType("PrimaryGeneratedColumn", "typeorm")}({options})";
+                    }
                 default:
-                {
-                    throw new ArgumentOutOfRangeException();
-                }
+                    {
+                        throw new ArgumentOutOfRangeException();
+                    }
             }
         }
     }
