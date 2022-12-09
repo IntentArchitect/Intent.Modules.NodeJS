@@ -12,6 +12,7 @@ using Intent.Modules.Common.TypeScript.Templates;
 using Intent.RoslynWeaver.Attributes;
 using Intent.Templates;
 using Intent.Utils;
+using GeneralizationModel = Intent.Modelers.Domain.Api.GeneralizationModel;
 using OperationModel = Intent.Modelers.Domain.Api.OperationModel;
 
 [assembly: DefaultIntentManaged(Mode.Merge)]
@@ -150,6 +151,24 @@ namespace Intent.Modules.NestJS.Controllers.Templates.DtoModel
         private static bool IsDate(IHasTypeReference field)
         {
             return field.TypeReference.Element.Name is "date" or "datetime" or "datetimeoffset";
+        }
+
+        private string GetAbstractDefinition() => Model.IsAbstract
+            ? " abstract"
+            : string.Empty;
+
+        public string GetBaseType() => Model.ParentDtoTypeReference != null
+            ? $" extends {GetTypeName(Model.ParentDtoTypeReference)}"
+            : string.Empty;
+
+        private string GetGenericTypeParameters()
+        {
+            if (!Model.GenericTypes.Any())
+            {
+                return string.Empty;
+            }
+
+            return $"<{string.Join(',', Model.GenericTypes)}>";
         }
     }
 }

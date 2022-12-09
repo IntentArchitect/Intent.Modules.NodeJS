@@ -9,14 +9,14 @@
 <#@ import namespace="Intent.Metadata.Models" #>
 <#@ import namespace="Intent.Modelers.Services.Api" #>
 
-export class <#= ClassName #> {<# foreach(var field in Model.Fields) { #>
+export<#= GetAbstractDefinition() #> class <#= ClassName #><#= GetGenericTypeParameters() #><#= GetBaseType() #> {<# foreach(var field in Model.Fields) { #>
 
 <# foreach (var decorator in GetFieldDecorators(field)) { #>
   <#= decorator #>
 <# } #>
   <#= field.Name.ToCamelCase() #><#= field.TypeReference.IsNullable ? "?" : "" #>: <#= GetTypeName(field.TypeReference) #>;
 <#  }
-    if (Model.IsMapped) {#>
+    if (Model.IsMapped && !Model.IsAbstract) {#>
 
   static from<#= GetTypeName(Model.Mapping) #>(<#= Model.Mapping.Element.Name.ToCamelCase() #>: <#= GetTypeName(Model.Mapping) #>) {
     if (<#= Model.Mapping.Element.Name.ToCamelCase() #> == null) {

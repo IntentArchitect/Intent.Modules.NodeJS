@@ -33,10 +33,29 @@ namespace Intent.Modules.NestJS.Controllers.Templates.DtoModel
         /// </summary>
         public override string TransformText()
         {
-            this.Write("\r\nexport class ");
+            this.Write("\r\nexport");
+            
+            #line 12 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(GetAbstractDefinition()));
+            
+            #line default
+            #line hidden
+            this.Write(" class ");
             
             #line 12 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ClassName));
+            
+            #line default
+            #line hidden
+            
+            #line 12 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(GetGenericTypeParameters()));
+            
+            #line default
+            #line hidden
+            
+            #line 12 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(GetBaseType()));
             
             #line default
             #line hidden
@@ -92,7 +111,7 @@ namespace Intent.Modules.NestJS.Controllers.Templates.DtoModel
             
             #line 18 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
   }
-    if (Model.IsMapped) {
+    if (Model.IsMapped && !Model.IsAbstract) {
             
             #line default
             #line hidden

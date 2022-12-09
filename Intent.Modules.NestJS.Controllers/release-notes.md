@@ -1,3 +1,8 @@
+### Version 3.3.6
+
+- It's now possible to have DTOs inherit from other DTOs.
+- It's now possible to apply `Is Abstract` to DTOs.
+
 ### Version 3.3.5
 
 - Update: Updated Intent.Metadata.WebApi that will no longer automatically apply HttpSettings stereotypes but will auto add them using event scripts.
