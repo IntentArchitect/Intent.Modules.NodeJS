@@ -40,7 +40,14 @@ namespace Intent.Module.TypeScript.Domain.Templates.Entity
             
             #line default
             #line hidden
-            this.Write("\r\nexport class ");
+            this.Write("\r\nexport");
+            
+            #line 13 "C:\Dev\Intent.Modules.NodeJS\Intent.Module.TypeScript.Domain\Templates\Entity\EntityTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(GetAbstractDefinition()));
+            
+            #line default
+            #line hidden
+            this.Write(" class ");
             
             #line 13 "C:\Dev\Intent.Modules.NodeJS\Intent.Module.TypeScript.Domain\Templates\Entity\EntityTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ClassName));
@@ -49,7 +56,13 @@ namespace Intent.Module.TypeScript.Domain.Templates.Entity
             #line hidden
             
             #line 13 "C:\Dev\Intent.Modules.NodeJS\Intent.Module.TypeScript.Domain\Templates\Entity\EntityTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(GetDerivedFrom()));
+            this.Write(this.ToStringHelper.ToStringWithCulture(GetGenericTypeParameters()));
+            
+            #line default
+            #line hidden
+            
+            #line 13 "C:\Dev\Intent.Modules.NodeJS\Intent.Module.TypeScript.Domain\Templates\Entity\EntityTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(GetBaseType()));
             
             #line default
             #line hidden

@@ -10,7 +10,7 @@
 <#@ import namespace="Intent.Modelers.Domain.Api" #>
 <#@ import namespace="Intent.Modules.TypeScript.Weaving.Decorators" #>
 <#= GetClassDecorators() #>
-export class <#= ClassName #><#= GetDerivedFrom() #> {
+export<#= GetAbstractDefinition() #> class <#= ClassName #><#= GetGenericTypeParameters()#><#= GetBaseType() #> {
 <#= GetDecoratorsOutput(x => x.GetBeforeFields()) #><#  foreach(var attribute in Model.Attributes) { #>
 <#= (Model.Attributes.IndexOf(attribute) == 0 ? "" : @"
 ") #>  <#= GetAttributeDecorators(attribute) #><#= attribute.Name.ToCamelCase() #><#= attribute.TypeReference.IsNullable ? "?" : "" #>: <#= GetTypeName(attribute.TypeReference) #>;

@@ -70,14 +70,22 @@ namespace Intent.Module.TypeScript.Domain.Templates.Entity
                         .Any(decorator => decorator.RequiresAssociationFieldFor(associationEnd)));
         }
 
-        private string GetDerivedFrom()
+        private string GetAbstractDefinition() => Model.IsAbstract
+            ? " abstract"
+            : string.Empty;
+
+        public string GetBaseType() => Model.ParentClassTypeReference != null
+            ? $" extends {GetTypeName(Model.ParentClassTypeReference)}"
+            : string.Empty;
+
+        private string GetGenericTypeParameters()
         {
-            if (Model.ParentClass == null)
+            if (!Model.GenericTypes.Any())
             {
                 return string.Empty;
             }
 
-            return $" extends {this.GetEntityName(Model.ParentClass)}";
+            return $"<{string.Join(',', Model.GenericTypes)}>";
         }
     }
 
