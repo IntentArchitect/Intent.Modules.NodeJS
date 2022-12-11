@@ -1,8 +1,9 @@
 ### Version 3.3.10
 
 - Add support for indices.
-- Fixed: Composite primary keys would sometimes not work.
 - Added basic auditing to entities (`createdBy`, `createdDate`, `lastModifiedBy` and `lastModified`).
+- Fixed: Composite primary keys would sometimes not work.
+- Fixed: Repositories would not generate generic type parameters.
 
 ### Version 3.3.9
 

@@ -14,5 +14,5 @@ import { Repository } from 'typeorm';
 
 <#= this.IntentMergeDecorator() #>
 @<#= this.GetTypeOrmExDecoratorName() #>(<#= GetTypeName(EntityTemplate.TemplateId, Model) #>)
-export class <#= ClassName #> extends Repository<<#= GetTypeName(EntityTemplate.TemplateId, Model) #>> {
+export class <#= ClassName #><#= GetGenericTypeParameters() #> extends Repository<<#= GetTypeName(EntityTemplate.TemplateId, Model) #><#= GetGenericTypeParameters() #>> {
 }

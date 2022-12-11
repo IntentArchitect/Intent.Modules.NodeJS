@@ -49,7 +49,7 @@ namespace Intent.Modules.NestJS.Controllers.Templates.DtoModel
             #line hidden
             
             #line 12 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(GetGenericTypeParameters()));
+            this.Write(this.ToStringHelper.ToStringWithCulture(GetGenericTypeParameters(Model.GenericTypes)));
             
             #line default
             #line hidden
@@ -122,10 +122,16 @@ namespace Intent.Modules.NestJS.Controllers.Templates.DtoModel
             
             #line default
             #line hidden
+            
+            #line 21 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(GetGenericTypeParameters(Model.GenericTypes.Concat(MappedModel.GenericTypes))));
+            
+            #line default
+            #line hidden
             this.Write("(");
             
             #line 21 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(Model.Mapping.Element.Name.ToCamelCase()));
+            this.Write(this.ToStringHelper.ToStringWithCulture(MappedModel.Name.ToCamelCase()));
             
             #line default
             #line hidden
@@ -136,7 +142,26 @@ namespace Intent.Modules.NestJS.Controllers.Templates.DtoModel
             
             #line default
             #line hidden
-            this.Write(") {\r\n    if (");
+            
+            #line 21 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(GetGenericTypeParameters(MappedModel.GenericTypes)));
+            
+            #line default
+            #line hidden
+            this.Write("): ");
+            
+            #line 21 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(ClassName));
+            
+            #line default
+            #line hidden
+            
+            #line 21 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(GetGenericTypeParameters(Model.GenericTypes)));
+            
+            #line default
+            #line hidden
+            this.Write(" {\r\n    if (");
             
             #line 22 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Model.Mapping.Element.Name.ToCamelCase()));
@@ -147,6 +172,12 @@ namespace Intent.Modules.NestJS.Controllers.Templates.DtoModel
             
             #line 25 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ClassName));
+            
+            #line default
+            #line hidden
+            
+            #line 25 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.NestJS.Controllers\Templates\DtoModel\DtoModelTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(GetGenericTypeParameters(Model.GenericTypes)));
             
             #line default
             #line hidden

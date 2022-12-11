@@ -63,10 +63,22 @@ namespace Intent.Modules.TypeORM.Entities.Templates.Repository
             
             #line default
             #line hidden
+            
+            #line 17 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\Repository\RepositoryTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(GetGenericTypeParameters()));
+            
+            #line default
+            #line hidden
             this.Write(" extends Repository<");
             
             #line 17 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\Repository\RepositoryTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(GetTypeName(EntityTemplate.TemplateId, Model)));
+            
+            #line default
+            #line hidden
+            
+            #line 17 "C:\Dev\Intent.Modules.NodeJS\Intent.Modules.TypeORM.Entities\Templates\Repository\RepositoryTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(GetGenericTypeParameters()));
             
             #line default
             #line hidden

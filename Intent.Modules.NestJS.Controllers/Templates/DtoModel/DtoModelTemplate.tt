@@ -9,7 +9,7 @@
 <#@ import namespace="Intent.Metadata.Models" #>
 <#@ import namespace="Intent.Modelers.Services.Api" #>
 
-export<#= GetAbstractDefinition() #> class <#= ClassName #><#= GetGenericTypeParameters() #><#= GetBaseType() #> {<# foreach(var field in Model.Fields) { #>
+export<#= GetAbstractDefinition() #> class <#= ClassName #><#= GetGenericTypeParameters(Model.GenericTypes) #><#= GetBaseType() #> {<# foreach(var field in Model.Fields) { #>
 
 <# foreach (var decorator in GetFieldDecorators(field)) { #>
   <#= decorator #>
@@ -18,11 +18,11 @@ export<#= GetAbstractDefinition() #> class <#= ClassName #><#= GetGenericTypePar
 <#  }
     if (Model.IsMapped && !Model.IsAbstract) {#>
 
-  static from<#= GetTypeName(Model.Mapping) #>(<#= Model.Mapping.Element.Name.ToCamelCase() #>: <#= GetTypeName(Model.Mapping) #>) {
+  static from<#= GetTypeName(Model.Mapping) #><#= GetGenericTypeParameters(Model.GenericTypes.Concat(MappedModel.GenericTypes)) #>(<#= MappedModel.Name.ToCamelCase() #>: <#= GetTypeName(Model.Mapping) #><#= GetGenericTypeParameters(MappedModel.GenericTypes)#>): <#= ClassName #><#= GetGenericTypeParameters(Model.GenericTypes) #> {
     if (<#= Model.Mapping.Element.Name.ToCamelCase() #> == null) {
       return null;
     }
-    const dto = new <#= ClassName #>();
+    const dto = new <#= ClassName #><#= GetGenericTypeParameters(Model.GenericTypes) #>();
     <#= GetMappings() #>
     return dto;
   }

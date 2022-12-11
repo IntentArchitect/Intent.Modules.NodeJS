@@ -2,6 +2,7 @@
 
 - It's now possible to have DTOs inherit from other DTOs.
 - It's now possible to apply `Is Abstract` to DTOs.
+- Fixed: Generic type parameters would not be generated for DTOs.
 
 ### Version 3.3.5
 

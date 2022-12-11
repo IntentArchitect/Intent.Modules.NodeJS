@@ -26,6 +26,8 @@ namespace Intent.Modules.NestJS.Controllers.Templates.DtoModel
         [IntentManaged(Mode.Fully)]
         public const string TemplateId = "Intent.NodeJS.NestJS.Controllers.DtoModel";
 
+        private readonly ClassModel MappedModel;
+
         [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
         public DtoModelTemplate(IOutputTarget outputTarget, Intent.Modelers.Services.Api.DTOModel model) : base(TemplateId, outputTarget, model)
         {
@@ -35,6 +37,11 @@ namespace Intent.Modules.NestJS.Controllers.Templates.DtoModel
             if (Model.Fields.Any(IsDate))
             {
                 AddDependency(NpmPackageDependencies.ClassTransformer);
+            }
+
+            if (Model.IsMapped)
+            {
+                MappedModel = Model.Mapping.Element.AsClassModel();
             }
         }
 
@@ -157,18 +164,24 @@ namespace Intent.Modules.NestJS.Controllers.Templates.DtoModel
             ? " abstract"
             : string.Empty;
 
-        public string GetBaseType() => Model.ParentDtoTypeReference != null
-            ? $" extends {GetTypeName(Model.ParentDtoTypeReference)}"
-            : string.Empty;
-
-        private string GetGenericTypeParameters()
+        public string GetBaseType()
         {
-            if (!Model.GenericTypes.Any())
+            var typeReference = Model.ParentDtoTypeReference;
+
+            return typeReference != null
+                ? $" extends {GetTypeName(typeReference)}"
+                : string.Empty;
+        }
+
+        private static string GetGenericTypeParameters(IEnumerable<string> genericTypes)
+        {
+            var distinctGenericTypes = genericTypes.Distinct().ToArray();
+            if (distinctGenericTypes.Length == 0)
             {
                 return string.Empty;
             }
 
-            return $"<{string.Join(',', Model.GenericTypes)}>";
+            return $"<{string.Join(", ", distinctGenericTypes)}>";
         }
     }
 }

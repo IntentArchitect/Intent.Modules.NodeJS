@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Intent.Engine;
 using Intent.Modelers.Domain.Api;
 using Intent.Modules.Common.Templates;
@@ -32,5 +33,14 @@ namespace Intent.Modules.TypeORM.Entities.Templates.Repository
             );
         }
 
+        private string GetGenericTypeParameters()
+        {
+            if (!Model.GenericTypes.Any())
+            {
+                return string.Empty;
+            }
+
+            return $"<{string.Join(", ", Model.GenericTypes)}>";
+        }
     }
 }
