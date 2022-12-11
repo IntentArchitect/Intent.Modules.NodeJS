@@ -44,6 +44,7 @@ namespace Intent.Modules.TypeORM.Entities.Templates.OrmConfig
         public override void BeforeTemplateExecution()
         {
             base.BeforeTemplateExecution();
+
             ExecutionContext.EventDispatcher.Publish(NestJsModuleImportRequest
                 .Create(
                     moduleId: null,

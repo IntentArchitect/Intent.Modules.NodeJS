@@ -68,14 +68,14 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Controller
 
         public override void BeforeTemplateExecution()
         {
+            base.BeforeTemplateExecution();
+
             foreach (var decorator in GetDecorators())
             {
                 decorator.BeforeTemplateExecution();
             }
 
             ExecutionContext.EventDispatcher.Publish(new NestJsControllerCreatedEvent(null, TemplateId, Model.Id));
-
-            base.BeforeTemplateExecution();
         }
 
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]

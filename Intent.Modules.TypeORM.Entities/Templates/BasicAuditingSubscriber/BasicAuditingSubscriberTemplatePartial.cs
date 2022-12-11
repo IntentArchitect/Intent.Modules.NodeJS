@@ -25,6 +25,8 @@ namespace Intent.Modules.TypeORM.Entities.Templates.BasicAuditingSubscriber
 
         public override void BeforeTemplateExecution()
         {
+            base.BeforeTemplateExecution();
+
             ExecutionContext.EventDispatcher.Publish(NestJsModuleImportRequest.Create(null, @"ClsModule.forRoot({
       global: true,
       middleware: { mount: true },

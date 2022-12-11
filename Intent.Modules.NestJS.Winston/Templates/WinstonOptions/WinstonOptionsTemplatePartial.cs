@@ -28,6 +28,7 @@ namespace Intent.Modules.NestJS.Winston.Templates.WinstonOptions
         public override void BeforeTemplateExecution()
         {
             base.BeforeTemplateExecution();
+
             ExecutionContext.EventDispatcher.Publish(new NestApplicationOptionRequest(
                 name: "logger",
                 value: "WinstonModule.createLogger(WinstonOptions)",
