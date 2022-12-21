@@ -11,6 +11,14 @@
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
+      <ProjectId>08b1c55f-28c5-432c-9ac5-5fe50ee63525</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.Templates.Api.ApiElementModelExtensions#04e12b51-ed12-42a3-9667-a6aa81bb6d10</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Api/Extensions/ClassModelStereotypeExtensions.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>ClassModelStereotypeExtensions.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
       <ProjectId>a569c934-af36-490e-983e-f0cc50a166cb</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.Templates.TemplateDecorator#a813dd33-004c-49c9-b3f5-d29be2256027</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>

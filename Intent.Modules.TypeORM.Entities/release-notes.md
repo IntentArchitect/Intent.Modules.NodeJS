@@ -1,7 +1,11 @@
+### Version 3.3.11
+
+- New: Added Repository Stereotype to explicitly generate Repositories for Entities that are not Aggregate Roots.
+
 ### Version 3.3.10
 
-- Add support for indices.
-- Added basic auditing to entities (`createdBy`, `createdDate`, `lastModifiedBy` and `lastModified`).
+- New: Add support for indices.
+- New: Added basic auditing to entities (`createdBy`, `createdDate`, `lastModifiedBy` and `lastModified`).
 - Fixed: Composite primary keys would sometimes not work.
 - Fixed: Repositories would not generate generic type parameters.
 
