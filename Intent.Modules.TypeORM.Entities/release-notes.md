@@ -1,5 +1,6 @@
 ### Version 3.3.11
 
+- Fixed: In the generated content for `basic-auditing-subscriber.ts`, `Request` was not being imported.
 - New: Added Repository Stereotype to explicitly generate Repositories for Entities that are not Aggregate Roots.
 
 ### Version 3.3.10

@@ -14,8 +14,9 @@ namespace Intent.Modules.TypeORM.Entities.Templates.BasicAuditingSubscriber
         public override string TransformText()
         {
             return $@"import {{ Inject }} from '@nestjs/common';
-import {{ DataSource, EntitySubscriberInterface, EventSubscriber, InsertEvent, UpdateEvent }} from 'typeorm';
+import {{ Request }} from 'express';
 import {{ CLS_REQ }} from 'nestjs-cls'
+import {{ DataSource, EntitySubscriberInterface, EventSubscriber, InsertEvent, UpdateEvent }} from 'typeorm';
 
 @EventSubscriber()
 export class {ClassName} implements EntitySubscriberInterface {{
