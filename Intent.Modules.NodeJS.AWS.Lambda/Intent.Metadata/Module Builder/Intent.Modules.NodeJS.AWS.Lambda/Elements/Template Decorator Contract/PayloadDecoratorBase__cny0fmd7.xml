@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="09b0eea8-0595-4693-a4a9-8a267409aa5c" type="Template Decorator Contract" typeId="ac1da322-377e-45cf-a2d9-d147a4d91457">
+  <name>PayloadDecoratorBase</name>
+  <display>PayloadDecoratorBase</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>267097b7-6850-475c-9003-35211ad69ba7</parentFolderId>
+  <packageId>c3fc714b-92b8-40b1-9f58-9b5fc586aac2</packageId>
+  <packageName>Intent.Modules.NodeJS.AWS.Lambda</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="16893050-95dd-4515-b084-3013adf0cb02" type="Template Decorator Contract" typeId="ac1da322-377e-45cf-a2d9-d147a4d91457">
+  <name>MiddyfyDecoratorBase</name>
+  <display>MiddyfyDecoratorBase</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>4d342baf-78f0-4708-9b4a-d5405323b506</parentFolderId>
+  <packageId>c3fc714b-92b8-40b1-9f58-9b5fc586aac2</packageId>
+  <packageName>Intent.Modules.NodeJS.AWS.Lambda</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

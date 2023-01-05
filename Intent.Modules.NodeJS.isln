@@ -6,7 +6,7 @@
   <iconType>UrlImagePath</iconType>
   <metadataRelativePath>Intent.Metadata</metadataRelativePath>
   <modulesCacheRelativePath>.intent/modules</modulesCacheRelativePath>
-  <lastUsedApplicationTemplate id="Intent.ApplicationTemplate.ModuleBuilder" version="3.3.1" />
+  <lastUsedApplicationTemplate id="Intent.ApplicationTemplate.ModuleBuilder" version="3.3.7" />
   <applications>
     <application id="f87dc841-bb66-490e-9de9-9b6d070554a7" name="Intent.Modules.NestJS.Controllers" relativePath="Intent.Modules.NestJS.Controllers/Intent.Modules.NestJS.Controllers.application.config" />
     <application id="6ab70093-5fac-4f17-8c9a-a50664bfa47b" name="Intent.TypeORM.Entities" relativePath="Intent.Modules.TypeORM.Entities\Intent.TypeORM.Entities.application.config" />
@@ -20,5 +20,6 @@
     <application id="5ffb0fb3-f91e-4f5c-979c-5a9031f6506a" name="Intent.Modules.NestJS.Authentication" relativePath="Intent.Modules.NestJS.Authentication/Intent.Modules.NestJS.Authentication.application.config" />
     <application id="60592d70-c560-475e-afd8-594086c245fd" name="Intent.Modules.NestJS.Authorization" relativePath="Intent.Modules.NestJS.Authorization/Intent.Modules.NestJS.Authorization.application.config" />
     <application id="a27a6e86-b086-4126-8daf-bf2829e0f158" name="Intent.ApplicationTemplate.NodeJS.Metadata" relativePath="Intent.ApplicationTemplate.NodeJS.Metadata/Intent.ApplicationTemplate.NodeJS.Metadata.application.config" />
+    <application id="36a773ae-06d3-4b89-8b7a-64f8d1abf3c8" name="Intent.Modules.NodeJS.AWS.Lambda" relativePath="Intent.Modules.NodeJS.AWS.Lambda/Intent.Modules.NodeJS.AWS.Lambda.application.config" />
   </applications>
 </solution>
