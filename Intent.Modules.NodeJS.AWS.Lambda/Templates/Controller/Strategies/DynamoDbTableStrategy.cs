@@ -29,7 +29,7 @@ internal class DynamoDbTableStrategy : IControllerDependencyResolver
             return;
         }
 
-        _template.TryGetTemplate("Infrastructure.Repository", _dynamoDbElement.Id, out _repositoryTemplate);
+        _template.TryGetTemplate(References.Roles.DynamoDbRepositories, _dynamoDbElement.Id, out _repositoryTemplate);
     }
 
     public bool IsApplicable() =>

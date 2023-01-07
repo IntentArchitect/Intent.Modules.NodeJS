@@ -4,7 +4,7 @@ using Intent.Engine;
 using Intent.Modelers.AWS.Lambda.Api;
 using Intent.Modules.Common.Templates;
 using Intent.Modules.Common.TypeScript.Templates;
-using Intent.Modules.NodeJS.AWS.Lambda.Templates.Payload;
+using Intent.Modules.NodeJS.AWS.Lambda.Templates.Dto;
 using Intent.RoslynWeaver.Attributes;
 using Intent.Templates;
 
@@ -19,12 +19,12 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Controller
         private IReadOnlyCollection<IControllerDependencyResolver> _dependencyResolvers;
 
         [IntentManaged(Mode.Fully)]
-        public const string TemplateId = "Intent.Modules.NodeJS.AWS.Lambda.Controller";
+        public const string TemplateId = "Intent.NodeJS.AWS.Lambda.Controller";
 
         [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
         public ControllerTemplate(IOutputTarget outputTarget, Intent.Modelers.AWS.Lambda.Api.LambdaFunctionModel model) : base(TemplateId, outputTarget, model)
         {
-            AddTypeSource(PayloadTemplate.TemplateId);
+            AddTypeSource(DtoTemplate.TemplateId);
             _dependencyResolvers = IControllerDependencyResolver.ResolveFor(this);
         }
 

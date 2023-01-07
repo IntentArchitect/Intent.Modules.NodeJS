@@ -29,7 +29,7 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Controller
         private string GetConstructor()
         {
             var parameters = _dependencyResolvers
-                .SelectMany(x => x.GetConstructorParameters(), (_, x) => $"private readonly {x}")
+                .SelectMany(x => x.GetConstructorParameters(), (_, x) => $"{Environment.NewLine}        private readonly {x},")
                 .ToArray();
             if (parameters.Length == 0)
             {
@@ -37,7 +37,7 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Controller
             }
 
             return @$"
-    constructor({string.Join($"{Environment.NewLine}        ", parameters)}
+    constructor({string.Concat(parameters)}
     ) {{ }}
 ";
         }

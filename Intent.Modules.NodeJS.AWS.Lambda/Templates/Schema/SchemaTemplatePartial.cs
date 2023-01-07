@@ -15,7 +15,7 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Schema
     partial class SchemaTemplate : TypeScriptTemplateBase<Intent.Modelers.AWS.Api.DTOModel>
     {
         [IntentManaged(Mode.Fully)]
-        public const string TemplateId = "Intent.Modules.NodeJS.AWS.Lambda.Schema";
+        public const string TemplateId = "Intent.NodeJS.AWS.Lambda.Schema";
 
         [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
         public SchemaTemplate(IOutputTarget outputTarget, Intent.Modelers.AWS.Api.DTOModel model) : base(TemplateId, outputTarget, model)
@@ -25,9 +25,11 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Schema
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
         public override ITemplateFileConfig GetTemplateFileConfig()
         {
+            var className = $"{Model.Name.ToCamelCase()}Schema";
+
             return new TypeScriptFileConfig(
-                className: $"{Model.Name.ToCamelCase()}Schema",
-                fileName: $"{Model.Name.ToKebabCase()}-schema"
+                className: className.ToPascalCase(),
+                fileName: className.Replace("DTO", "Dto").ToKebabCase()
             );
         }
 

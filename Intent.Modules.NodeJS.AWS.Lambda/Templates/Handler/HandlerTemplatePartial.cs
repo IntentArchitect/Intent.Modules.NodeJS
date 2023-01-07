@@ -21,7 +21,7 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Handler
         private IReadOnlyCollection<IControllerDependencyResolver> _dependencyResolvers;
 
         [IntentManaged(Mode.Fully)]
-        public const string TemplateId = "Intent.Modules.NodeJS.AWS.Lambda.Handler";
+        public const string TemplateId = "Intent.NodeJS.AWS.Lambda.Handler";
 
         [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
         public HandlerTemplate(IOutputTarget outputTarget, Intent.Modelers.AWS.Lambda.Api.LambdaFunctionModel model) : base(TemplateId, outputTarget, model)

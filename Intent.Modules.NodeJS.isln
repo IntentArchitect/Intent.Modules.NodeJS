@@ -21,5 +21,6 @@
     <application id="60592d70-c560-475e-afd8-594086c245fd" name="Intent.Modules.NestJS.Authorization" relativePath="Intent.Modules.NestJS.Authorization/Intent.Modules.NestJS.Authorization.application.config" />
     <application id="a27a6e86-b086-4126-8daf-bf2829e0f158" name="Intent.ApplicationTemplate.NodeJS.Metadata" relativePath="Intent.ApplicationTemplate.NodeJS.Metadata/Intent.ApplicationTemplate.NodeJS.Metadata.application.config" />
     <application id="36a773ae-06d3-4b89-8b7a-64f8d1abf3c8" name="Intent.Modules.NodeJS.AWS.Lambda" relativePath="Intent.Modules.NodeJS.AWS.Lambda/Intent.Modules.NodeJS.AWS.Lambda.application.config" />
+    <application id="bba23718-f829-4812-b9f9-d3e5df76e6ad" name="Intent.Modules.NodeJS.AWS.DynamoDB" relativePath="Intent.Modules.NodeJS.AWS.DynamoDB/Intent.Modules.NodeJS.AWS.DynamoDB.application.config" />
   </applications>
 </solution>

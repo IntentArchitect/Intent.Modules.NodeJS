@@ -14,7 +14,7 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Middyfy
     partial class MiddyfyTemplate : TypeScriptTemplateBase<object, MiddyfyDecoratorBase>
     {
         [IntentManaged(Mode.Fully)]
-        public const string TemplateId = "Intent.Modules.NodeJS.AWS.Lambda.Middyfy";
+        public const string TemplateId = "Intent.NodeJS.AWS.Lambda.Middyfy";
 
         [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
         public MiddyfyTemplate(IOutputTarget outputTarget, object model = null) : base(TemplateId, outputTarget, model)
@@ -26,9 +26,11 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Middyfy
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
         public override ITemplateFileConfig GetTemplateFileConfig()
         {
+            var className = "middyfy";
+
             return new TypeScriptFileConfig(
-                className: $"middyfy",
-                fileName: $"middyfy"
+                className: className,
+                fileName: className
             );
         }
 

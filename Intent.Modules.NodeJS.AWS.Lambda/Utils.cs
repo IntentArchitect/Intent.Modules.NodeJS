@@ -6,11 +6,11 @@ internal static class Utils
 {
     public static bool IsApiGateway(this ICanBeReferencedType canBeReferencedType)
     {
-        return canBeReferencedType is IElement { SpecializationType: "API Gateway Endpoint" };
+        return canBeReferencedType is IElement { SpecializationType: References.Elements.ApiGatewayEndpoint };
     }
 
     public static bool IsDynamoDb(this ICanBeReferencedType canBeReferencedType)
     {
-        return canBeReferencedType is IElement { SpecializationType: "DynamoDB Table" };
+        return canBeReferencedType is IElement { SpecializationType: References.Elements.DynamoDbTable };
     }
 }
