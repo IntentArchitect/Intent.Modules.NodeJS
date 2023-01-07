@@ -33,7 +33,7 @@ namespace Intent.Modules.NodeJS.AWS.DynamoDB.Templates.TableItemRepositories
             {
                 yield return $@"
 
-    static get {item.Name.ToCamelCase()}() : {Repository(item)} {{
+    get {item.Name.ToCamelCase()}() : {Repository(item)} {{
         if ({ClassName}._{Name(item)} == null) {{
             {ClassName}._{Name(item)} = new {Repository(item)}({this.GetDocumentClientProviderName()}.get(), {ClassName}.tableName);
         }}

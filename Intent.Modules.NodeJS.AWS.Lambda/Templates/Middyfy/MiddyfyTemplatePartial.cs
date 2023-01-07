@@ -19,8 +19,9 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Middyfy
         [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
         public MiddyfyTemplate(IOutputTarget outputTarget, object model = null) : base(TemplateId, outputTarget, model)
         {
-            AddDependency(NpmPackageDependencies.MiddyPackages.Core);
-            AddDependency(NpmPackageDependencies.MiddyPackages.HttpJsonBodyParser);
+            AddDependency(NpmPackageDependencies.Middy.Core);
+            AddDependency(NpmPackageDependencies.Middy.HttpJsonBodyParser);
+            AddDependency(NpmPackageDependencies.TypeFest);
         }
 
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]

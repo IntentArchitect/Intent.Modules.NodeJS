@@ -45,8 +45,8 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Controller
         public override ITemplateFileConfig GetTemplateFileConfig()
         {
             return new TypeScriptFileConfig(
-                className: "controller",
-                fileName: "controller",
+                className: $"{Model.Name.ToPascalCase()}Controller",
+                fileName: $"{Model.Name.ToKebabCase()}-controller",
                 relativeLocation: Model.Name.ToKebabCase()
             );
         }

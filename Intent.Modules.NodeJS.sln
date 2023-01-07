@@ -28,6 +28,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intent.Modules.NodeJS.AWS.L
 EndProject
 Project("{52B49DB5-3EA9-4095-B1A7-DF1AC22D7DAE}") = "Intent.Modules.NodeJS.AWS.DynamoDB", "Intent.Modules.NodeJS.AWS.DynamoDB\Intent.Modules.NodeJS.AWS.DynamoDB.csproj", "{2A3A9A98-B0D1-4C6A-A5E3-5ADF071FBB73}"
 EndProject
+Project("{52B49DB5-3EA9-4095-B1A7-DF1AC22D7DAE}") = "Intent.Modules.NodeJS.AWS.CDK", "Intent.Modules.NodeJS.AWS.CDK\Intent.Modules.NodeJS.AWS.CDK.csproj", "{6E2BE566-FCC7-4713-BA76-5D53DD0AA258}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -86,6 +88,10 @@ Global
 		{2A3A9A98-B0D1-4C6A-A5E3-5ADF071FBB73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A3A9A98-B0D1-4C6A-A5E3-5ADF071FBB73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A3A9A98-B0D1-4C6A-A5E3-5ADF071FBB73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E2BE566-FCC7-4713-BA76-5D53DD0AA258}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E2BE566-FCC7-4713-BA76-5D53DD0AA258}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E2BE566-FCC7-4713-BA76-5D53DD0AA258}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E2BE566-FCC7-4713-BA76-5D53DD0AA258}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

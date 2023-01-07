@@ -18,7 +18,7 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Middyfy
 import middy from '@middy/core'
 import middyJsonBodyParser from '@middy/http-json-body-parser'
 
-export const {ClassName} middyfy = (handler: any{GetParameters()}) => {{
+export const {ClassName} = (handler: any{GetParameters()}) => {{
     const newHandler = middy(handler).use(middyJsonBodyParser());{GetStatements()}
 
     return newHandler;

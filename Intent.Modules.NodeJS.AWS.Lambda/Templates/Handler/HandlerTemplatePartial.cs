@@ -31,7 +31,6 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Handler
 
             AddTypeSource(SchemaTemplate.TemplateId);
             AddDependency(NpmPackageDependencies.AwsLambda);
-            AddDependency(NpmPackageDependencies.JsonSchemaToTs);
             AddDependency(NpmPackageDependencies.Types.AwsLambda);
         }
 
