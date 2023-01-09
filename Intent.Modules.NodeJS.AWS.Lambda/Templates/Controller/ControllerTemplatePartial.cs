@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Intent.Engine;
 using Intent.Modelers.AWS.Lambda.Api;
+using Intent.Modules.Common;
 using Intent.Modules.Common.Templates;
 using Intent.Modules.Common.TypeScript.Templates;
 using Intent.Modules.NodeJS.AWS.Lambda.Templates.Dto;
@@ -25,20 +26,7 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Controller
         public ControllerTemplate(IOutputTarget outputTarget, Intent.Modelers.AWS.Lambda.Api.LambdaFunctionModel model) : base(TemplateId, outputTarget, model)
         {
             AddTypeSource(DtoTemplate.TemplateId);
-            _dependencyResolvers = IControllerDependencyResolver.ResolveFor(this);
-        }
-
-        public override void BeforeTemplateExecution()
-        {
-            base.BeforeTemplateExecution();
-            foreach (var dependencyResolver in _dependencyResolvers)
-            {
-                dependencyResolver.BeforeTemplateExecution();
-            }
-
-            _dependencyResolvers = _dependencyResolvers
-                .Where(x => x.IsApplicable())
-                .ToArray();
+            _dependencyResolvers = IControllerDependencyResolver.GetFor(this);
         }
 
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
@@ -47,7 +35,7 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Controller
             return new TypeScriptFileConfig(
                 className: $"{Model.Name.ToPascalCase()}Controller",
                 fileName: $"{Model.Name.ToKebabCase()}-controller",
-                relativeLocation: Model.Name.ToKebabCase()
+                relativeLocation: this.GetFolderPath("functions", Model.Name.ToKebabCase())
             );
         }
     }

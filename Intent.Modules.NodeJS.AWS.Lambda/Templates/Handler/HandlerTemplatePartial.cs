@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Intent.Engine;
 using Intent.Modelers.AWS.Lambda.Api;
+using Intent.Modules.Common;
 using Intent.Modules.Common.Templates;
 using Intent.Modules.Common.TypeScript.Templates;
 using Intent.Modules.NodeJS.AWS.Lambda.Templates.Controller;
@@ -27,7 +28,7 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Handler
         public HandlerTemplate(IOutputTarget outputTarget, Intent.Modelers.AWS.Lambda.Api.LambdaFunctionModel model) : base(TemplateId, outputTarget, model)
         {
             _handlerStrategy = IHandlerStrategy.ResolveFor(this);
-            _dependencyResolvers = IControllerDependencyResolver.ResolveFor(this);
+            _dependencyResolvers = IControllerDependencyResolver.GetFor(this);
 
             AddTypeSource(SchemaTemplate.TemplateId);
             AddDependency(NpmPackageDependencies.AwsLambda);
@@ -53,7 +54,7 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Handler
             return new TypeScriptFileConfig(
                 className: "handler",
                 fileName: "handler",
-                relativeLocation: Model.Name.ToKebabCase()
+                relativeLocation: this.GetFolderPath("functions", Model.Name.ToKebabCase())
             );
         }
     }
