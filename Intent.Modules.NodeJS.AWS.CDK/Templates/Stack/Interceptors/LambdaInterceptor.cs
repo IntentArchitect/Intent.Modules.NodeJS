@@ -1,4 +1,8 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Intent.Metadata.Models;
+using Intent.Modelers.AWS.Api;
 using Intent.Modules.Common.Templates;
 using Intent.Modules.Common.TypeScript.Builder;
 using Intent.Modules.Common.TypeScript.Templates;
@@ -22,6 +26,7 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
 
             if (lambdaFunctions.Length > 0)
             {
+                constructor.Class.File.AddImport("aws_iam", "aws-cdk-lib");
                 constructor.Class.File.AddImport("*", "lambda", "aws-cdk-lib/aws-lambda");
                 constructor.Class.File.AddImport("NodejsFunction", "aws-cdk-lib/aws-lambda-nodejs");
                 constructor.Class.File.AddImport("join", "path");
@@ -33,11 +38,11 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
                 {
                     TrackDependency = false
                 });
-                var variableName = lambdaFunction.Name.ToCamelCase();
+                var variableName = $"{lambdaFunction.Name.ToCamelCase()}Function";
                 var relativePath = _stackTemplate.GetRelativePath(handlerTemplate);
                 var exportedTypeName = handlerTemplate.ClassName;
 
-                constructor.AddStatement(@$"const {variableName}Function = new NodejsFunction(this, '{lambdaFunction.Name.ToPascalCase()}Handler', {{
+                constructor.AddStatement(@$"const {variableName} = new NodejsFunction(this, '{lambdaFunction.Name.ToPascalCase()}Handler', {{
             entry: join(__dirname, '{relativePath}'),
             handler: '{exportedTypeName}'
         }});", statement => statement
@@ -45,6 +50,36 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
                     .AddMetadata("SourceElement", lambdaFunction)
                     .AddMetadata("VariableName", variableName)
                 );
+                foreach (var statement in GetAddToRolePolicyStatements(lambdaFunction, variableName))
+                {
+                    constructor.AddStatement(statement);
+                }
+            }
+        }
+
+        private IEnumerable<string> GetAddToRolePolicyStatements(IElement element, string variableName)
+        {
+            var policies = element
+                .OwnedAssociations.SelectMany(x => x.TargetEnd.ChildElements)
+                .Where(x => x.IsIAMPolicyStatementModel())
+                .Select(x => x.AsIAMPolicyStatementModel())
+                .ToList();
+
+            foreach (var policy in policies)
+            {
+                yield return @$"{variableName}.addToRolePolicy(new aws_iam.PolicyStatement({{
+            actions: [{string.Concat(policy.Actions.Select(x => GetQuotedName(x.Name)))}
+            ],
+            resources: [{string.Concat(policy.Resources.Select(x => GetQuotedName(x.Name)))}
+            ],
+        }}));";
+            }
+
+            static string GetQuotedName(string name)
+            {
+                return name[0] is '\'' or '"' or '`'
+                    ? $"{Environment.NewLine}                {name},"
+                    : $"{Environment.NewLine}                '{name}',";
             }
         }
     }

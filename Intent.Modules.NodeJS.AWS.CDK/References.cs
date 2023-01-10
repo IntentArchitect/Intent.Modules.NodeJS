@@ -6,6 +6,7 @@ internal static class References
     {
         public const string ApiGatewayEndpoint = "API Gateway Endpoint";
         public const string DynamoDbTable = "DynamoDB Table";
+        public const string IamPolicyStatement = "IAM Policy Statement";
         public const string LambdaFunction = "Lambda Function";
     }
 
