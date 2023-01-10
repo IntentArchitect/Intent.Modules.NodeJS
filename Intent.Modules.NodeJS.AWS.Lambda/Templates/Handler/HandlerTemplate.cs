@@ -19,10 +19,10 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Handler
         {
             return $@"import {{ Context }} from 'aws-lambda';
 
-const {ClassName} = async (event: {_handlerStrategy.GetEventType()}, context: Context): Promise<{_handlerStrategy.GetReturnType()}> => {{
+const handler = async (event: {_handlerStrategy.GetEventType()}, context: Context): Promise<{_handlerStrategy.GetReturnType()}> => {{
 {GetBody()}}};
 
-export const main = {this.GetMiddyfyName()}({ClassName}{GetAdditionalMiddlewareParameters()});
+export const {ClassName} = {this.GetMiddyfyName()}(handler{GetAdditionalMiddlewareParameters()});
 ";
         }
 

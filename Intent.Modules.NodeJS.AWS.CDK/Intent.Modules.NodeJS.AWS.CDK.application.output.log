@@ -82,6 +82,30 @@
     </FileLog>
     <FileLog>
       <ProjectId>477bb461-710e-4400-aa09-ff52c67e8b78</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.Templates.FileTemplateStringInterpolation#3fd0e072-a08c-4561-93dd-490da6d6a6cb</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Templates/CdkDotJson/CdkDotJsonTemplate.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>CdkDotJson/CdkDotJsonTemplate.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>477bb461-710e-4400-aa09-ff52c67e8b78</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.ProjectItemTemplate.Partial#3fd0e072-a08c-4561-93dd-490da6d6a6cb</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Templates/CdkDotJson/CdkDotJsonTemplatePartial.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>CdkDotJson/CdkDotJsonTemplatePartial.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>477bb461-710e-4400-aa09-ff52c67e8b78</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.TemplateRegistration.SingleFileNoModel#3fd0e072-a08c-4561-93dd-490da6d6a6cb</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Templates/CdkDotJson/CdkDotJsonTemplateRegistration.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>CdkDotJson/CdkDotJsonTemplateRegistration.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>477bb461-710e-4400-aa09-ff52c67e8b78</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateStringInterpolation#55ea5114-2d83-4280-af50-893ddca30a3f</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/EntryPoint/EntryPointTemplate.cs</ApplicationRelativeFilePath>

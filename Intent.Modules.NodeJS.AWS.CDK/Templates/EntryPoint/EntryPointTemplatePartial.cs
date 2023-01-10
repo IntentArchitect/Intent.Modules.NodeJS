@@ -24,9 +24,11 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.EntryPoint
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
         public override ITemplateFileConfig GetTemplateFileConfig()
         {
+            var appName = ExecutionContext.GetApplicationConfig().Name;
+
             return new TypeScriptFileConfig(
-                className: $"EntryPoint",
-                fileName: $"entry-point"
+                className: $"{appName.ToPascalCase()}",
+                fileName: $"{appName.ToKebabCase()}"
             );
         }
 

@@ -44,7 +44,8 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
 
                 constructor.AddStatement(@$"const {variableName} = new NodejsFunction(this, '{lambdaFunction.Name.ToPascalCase()}Handler', {{
             entry: join(__dirname, '{relativePath}'),
-            handler: '{exportedTypeName}'
+            handler: '{exportedTypeName}',
+            runtime: lambda.Runtime.NODEJS_16_X
         }});", statement => statement
                     .SeparatedFromPrevious()
                     .AddMetadata("SourceElement", lambdaFunction)

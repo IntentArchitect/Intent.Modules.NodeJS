@@ -35,24 +35,11 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Handler
             AddDependency(NpmPackageDependencies.Types.AwsLambda);
         }
 
-        public override void BeforeTemplateExecution()
-        {
-            base.BeforeTemplateExecution();
-            foreach (var dependencyResolver in _dependencyResolvers)
-            {
-                dependencyResolver.BeforeTemplateExecution();
-            }
-
-            _dependencyResolvers = _dependencyResolvers
-                .Where(x => x.IsApplicable())
-                .ToArray();
-        }
-
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
         public override ITemplateFileConfig GetTemplateFileConfig()
         {
             return new TypeScriptFileConfig(
-                className: "handler",
+                className: "main",
                 fileName: "handler",
                 relativeLocation: this.GetFolderPath("functions", Model.Name.ToKebabCase())
             );

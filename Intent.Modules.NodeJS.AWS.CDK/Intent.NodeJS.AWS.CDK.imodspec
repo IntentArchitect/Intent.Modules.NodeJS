@@ -16,6 +16,10 @@
       <role>CDK.Lib</role>
       <location></location>
     </template>
+    <template id="Intent.NodeJS.AWS.CDK.CdkDotJson" externalReference="3fd0e072-a08c-4561-93dd-490da6d6a6cb">
+      <role>Root</role>
+      <location></location>
+    </template>
     <template id="Intent.NodeJS.AWS.CDK.EntryPoint" externalReference="55ea5114-2d83-4280-af50-893ddca30a3f">
       <role>CDK.Bin</role>
       <location></location>
