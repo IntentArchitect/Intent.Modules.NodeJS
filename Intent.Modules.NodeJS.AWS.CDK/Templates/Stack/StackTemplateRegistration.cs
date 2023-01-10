@@ -4,7 +4,7 @@ using System.Linq;
 using Intent.Engine;
 using Intent.Metadata.Models;
 using Intent.Modelers.Application.Api;
-using Intent.Modelers.AWS.CDK.Api;
+using Intent.Modelers.AWS.Api;
 using Intent.Modules.Common;
 using Intent.Modules.Common.Registrations;
 using Intent.RoslynWeaver.Attributes;
@@ -16,7 +16,7 @@ using Intent.Templates;
 namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack
 {
     [IntentManaged(Mode.Merge, Body = Mode.Merge, Signature = Mode.Fully)]
-    public class StackTemplateRegistration : FilePerModelTemplateRegistration<StackModel>
+    public class StackTemplateRegistration : FilePerModelTemplateRegistration<AWSPackageModel>
     {
         private readonly IMetadataManager _metadataManager;
 
@@ -26,15 +26,15 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack
         }
         public override string TemplateId => StackTemplate.TemplateId;
 
-        public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget, StackModel model)
+        public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget, AWSPackageModel model)
         {
             return new StackTemplate(outputTarget, model);
         }
 
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
-        public override IEnumerable<StackModel> GetModels(IApplication application)
+        public override IEnumerable<AWSPackageModel> GetModels(IApplication application)
         {
-            return _metadataManager.Application(application).GetStackModels();
+            return _metadataManager.Application(application).GetAWSPackageModels();
         }
     }
 }

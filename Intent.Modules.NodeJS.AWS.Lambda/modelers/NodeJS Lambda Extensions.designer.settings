@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings version="3.1.1">
+  <id>702a2718-6678-421d-b892-cb3724a17bbc</id>
+  <name>NodeJS Lambda Extensions</name>
+  <designerReferences />
+  <packageSettings />
+  <packageExtensions />
+  <elementSettings />
+  <elementExtensions>
+    <elementExtension type="Lambda Function" typeId="de02db8b-e18f-423c-b4da-5f717a04075e">
+      <mappingSettings />
+      <macros>
+        <macro trigger="on-created">
+          <script>const runtimeElement = "08cb9e9f-7640-4cf4-9c94-04c9c13c3614";
+const property = element.getStereotype("Lambda Settings").getProperty("Runtime");
+
+if ((property.getValue() ?? "").trim() === "") {
+    property.setValue(runtimeElement);
+}
+</script>
+        </macro>
+      </macros>
+    </elementExtension>
+  </elementExtensions>
+  <associationSettings />
+  <associationExtensions />
+</settings>

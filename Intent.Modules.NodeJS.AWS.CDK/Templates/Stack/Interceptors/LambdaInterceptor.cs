@@ -20,7 +20,7 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
 
         public void Apply(TypescriptConstructor constructor)
         {
-            var lambdaFunctions = _stackTemplate.Model.InternalElement.GetSelfAndChildElementsOfType(References.Elements.LambdaFunction)
+            var lambdaFunctions = _stackTemplate.Model.UnderlyingPackage.GetChildElementsOfType(References.Elements.LambdaFunction)
                 .OrderBy(x => x.Name)
                 .ToArray();
 
@@ -62,21 +62,21 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
         {
             var policies = element
                 .OwnedAssociations.SelectMany(x => x.TargetEnd.ChildElements)
-                .Where(x => x.IsIAMPolicyStatementModel())
-                .Select(x => x.AsIAMPolicyStatementModel())
+                .Where(x => x.IsIAMPolicyStatementReferenceModel())
+                .Select(x => x.AsIAMPolicyStatementReferenceModel().TypeReference.Element?.AsIAMPolicyStatementModel())
                 .ToList();
 
             foreach (var policy in policies)
             {
                 yield return @$"{variableName}.addToRolePolicy(new aws_iam.PolicyStatement({{
-            actions: [{string.Concat(policy.Actions.Select(x => GetQuotedName(x.Name)))}
+            actions: [{string.Concat(policy.Actions.Select(x => QuotedName(x.Name)))}
             ],
-            resources: [{string.Concat(policy.Resources.Select(x => GetQuotedName(x.Name)))}
+            resources: [{string.Concat(policy.Resources.Select(x => QuotedName(x.Name)))}
             ],
         }}));";
             }
 
-            static string GetQuotedName(string name)
+            static string QuotedName(string name)
             {
                 return name[0] is '\'' or '"' or '`'
                     ? $"{Environment.NewLine}                {name},"

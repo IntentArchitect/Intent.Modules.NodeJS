@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Intent.Modelers.Application.Api;
-using Intent.Modelers.AWS.CDK.Api;
+using Intent.Modelers.AWS.Api;
 using Intent.RoslynWeaver.Attributes;
 
 [assembly: DefaultIntentManaged(Mode.Fully)]
@@ -23,7 +23,7 @@ const app = new cdk.App();{string.Concat(GetStacks())}";
 
         private IEnumerable<string> GetStacks()
         {
-            foreach (var stack in ExecutionContext.MetadataManager.Application(ExecutionContext.GetApplicationConfig().Id).GetStackModels())
+            foreach (var stack in ExecutionContext.MetadataManager.Application(ExecutionContext.GetApplicationConfig().Id).GetAWSPackageModels())
             {
                 var stackName = this.GetStackName(stack);
                 yield return $"{Environment.NewLine}new {stackName}(app, '{stackName}');";

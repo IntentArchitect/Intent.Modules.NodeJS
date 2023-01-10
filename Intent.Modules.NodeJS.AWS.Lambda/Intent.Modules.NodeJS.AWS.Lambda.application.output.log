@@ -9,6 +9,14 @@
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
+      <ProjectId>c8bc5d86-e525-4fa2-8cb6-08dc977d5d4e</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.Templates.Api.ApiElementExtensionModel#e8c6c214-2491-422d-8499-512baf9a7842</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Api/NodeJSLambdaExtensionsModel.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>NodeJSLambdaExtensionsModel.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
       <ProjectId>bdb62872-0ea1-4c15-829b-2d123847d35b</ProjectId>
       <CorrelationId>Intent.VisualStudio.Projects.CoreLibrary.CSProject#bdb62872-0ea1-4c15-829b-2d123847d35b</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
@@ -22,6 +30,14 @@
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Intent.NodeJS.AWS.Lambda.imodspec</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Intent.NodeJS.AWS.Lambda.imodspec</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>cc856731-e882-43be-b1ee-0f36f34aeadb</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.DesignerSettings#702a2718-6678-421d-b892-cb3724a17bbc</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>modelers/NodeJS Lambda Extensions.designer.settings</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>NodeJS Lambda Extensions.designer.settings</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>

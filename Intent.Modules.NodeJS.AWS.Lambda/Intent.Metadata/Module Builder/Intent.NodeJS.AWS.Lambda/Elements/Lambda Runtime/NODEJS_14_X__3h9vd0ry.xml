@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="c0948e32-2c44-404e-a519-3548ea5f48ea" type="Lambda Runtime" typeId="a3555d86-f00e-451f-b9b6-2f0c06b2c79f">
+  <name>NODEJS_14_X</name>
+  <display>NODEJS_14_X</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>f83f53bf-564b-4602-a6d8-5074a147287f</parentFolderId>
+  <packageId>c3fc714b-92b8-40b1-9f58-9b5fc586aac2</packageId>
+  <packageName>Intent.NodeJS.AWS.Lambda</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

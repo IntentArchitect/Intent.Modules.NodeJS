@@ -46,5 +46,8 @@
     <file src="$outDir$/$id$.pdb" />
   </files>
   <moduleSettingsExtensions />
-  <metadata />
+  <metadata>
+    <install target="Application" src="modelers/NodeJS Lambda Extensions.designer.settings" externalReference="702a2718-6678-421d-b892-cb3724a17bbc" />
+    <install target="Application" src="Intent.Metadata/Module Builder/Intent.NodeJS.AWS.Lambda/Intent.NodeJS.AWS.Lambda.pkg.config" externalReference="c3fc714b-92b8-40b1-9f58-9b5fc586aac2" />
+  </metadata>
 </package>

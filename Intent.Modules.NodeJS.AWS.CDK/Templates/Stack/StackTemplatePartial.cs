@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using Intent.Engine;
-using Intent.Modelers.AWS.CDK.Api;
+using Intent.Modelers.AWS.Api;
 using Intent.Modules.Common;
 using Intent.Modules.Common.Templates;
 using Intent.Modules.Common.TypeScript.Builder;
@@ -14,7 +14,7 @@ using Intent.Templates;
 namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack
 {
     [IntentManaged(Mode.Merge, Signature = Mode.Merge)]
-    partial class StackTemplate : TypeScriptTemplateBase<Intent.Modelers.AWS.CDK.Api.StackModel>, ITypescriptFileBuilderTemplate
+    partial class StackTemplate : TypeScriptTemplateBase<AWSPackageModel>, ITypescriptFileBuilderTemplate
     {
         private readonly IReadOnlyCollection<IStackTemplateInterceptor> _interceptors;
 
@@ -22,7 +22,7 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack
         public const string TemplateId = "Intent.NodeJS.AWS.CDK.Stack";
 
         [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
-        public StackTemplate(IOutputTarget outputTarget, Intent.Modelers.AWS.CDK.Api.StackModel model) : base(TemplateId, outputTarget, model)
+        public StackTemplate(IOutputTarget outputTarget, Intent.Modelers.AWS.Api.AWSPackageModel model) : base(TemplateId, outputTarget, model)
         {
             ExecutionContext.EventDispatcher.Publish(NpmPackageDependencies.AwsCdkLib);
             _interceptors = IStackTemplateInterceptor.GetFor(this);

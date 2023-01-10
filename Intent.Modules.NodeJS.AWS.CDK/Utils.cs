@@ -10,6 +10,11 @@ namespace Intent.Modules.NodeJS.AWS.CDK
 {
     internal static class Utils
     {
+        public static IEnumerable<IElement> GetChildElementsOfType(this IPackage package, string type)
+        {
+            return package.ChildElements.SelectMany(x => x.GetSelfAndChildElementsOfType(type));
+        }
+
         public static IEnumerable<IElement> GetSelfAndChildElementsOfType(this IElement element, string type)
         {
             if (element.SpecializationType == type)

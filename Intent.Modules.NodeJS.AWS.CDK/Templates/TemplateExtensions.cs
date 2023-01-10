@@ -28,12 +28,12 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates
             return template.GetTypeName(EntryPointTemplate.TemplateId);
         }
         public static string GetStackName<T>(this IntentTemplateBase<T> template)
-where T : Intent.Modelers.AWS.CDK.Api.StackModel
+where T : Intent.Modelers.AWS.Api.AWSPackageModel
         {
             return template.GetTypeName(StackTemplate.TemplateId, template.Model);
         }
 
-        public static string GetStackName(this IntentTemplateBase template, Intent.Modelers.AWS.CDK.Api.StackModel model)
+        public static string GetStackName(this IntentTemplateBase template, Intent.Modelers.AWS.Api.AWSPackageModel model)
         {
             return template.GetTypeName(StackTemplate.TemplateId, model);
         }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="f83f53bf-564b-4602-a6d8-5074a147287f" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+  <name>Runtimes</name>
+  <display>Runtimes</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-by-name</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>c3fc714b-92b8-40b1-9f58-9b5fc586aac2</parentFolderId>
+  <packageId>c3fc714b-92b8-40b1-9f58-9b5fc586aac2</packageId>
+  <packageName>Intent.NodeJS.AWS.Lambda</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

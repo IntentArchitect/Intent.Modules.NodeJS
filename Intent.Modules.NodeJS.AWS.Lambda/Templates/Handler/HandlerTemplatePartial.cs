@@ -19,7 +19,7 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Handler
     partial class HandlerTemplate : TypeScriptTemplateBase<Intent.Modelers.AWS.Lambda.Api.LambdaFunctionModel, HandlerDecoratorBase>
     {
         private readonly IHandlerStrategy _handlerStrategy;
-        private IReadOnlyCollection<IControllerDependencyResolver> _dependencyResolvers;
+        private readonly IReadOnlyCollection<IControllerDependencyResolver> _dependencyResolvers;
 
         [IntentManaged(Mode.Fully)]
         public const string TemplateId = "Intent.NodeJS.AWS.Lambda.Handler";
