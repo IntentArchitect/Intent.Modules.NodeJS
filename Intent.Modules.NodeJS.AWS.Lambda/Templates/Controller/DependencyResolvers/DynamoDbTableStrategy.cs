@@ -5,6 +5,7 @@ using Intent.Metadata.Models;
 using Intent.Modelers.AWS.Lambda.Api;
 using Intent.Modules.Common.Templates;
 using Intent.Modules.Common.TypeScript.Templates;
+using Intent.Modules.NodeJS.AWS.CDK;
 
 namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Controller.DependencyResolvers;
 
@@ -21,7 +22,7 @@ internal class DynamoDbTableStrategy : IControllerDependencyResolver
             .Select(x => x.Association.TargetEnd.TypeReference.Element)
             .FirstOrDefault(x => x.IsDynamoDb()) as IElement;
         _repositoryTemplate = new Lazy<IClassProvider>(() => _template.TryGetTemplate<IClassProvider>(
-            References.Roles.DynamoDbRepositories, _dynamoDbElement.Id,
+            Constants.Role.DynamoDbRepositories, _dynamoDbElement.Id,
             out var repositoryTemplate)
             ? repositoryTemplate
             : null);
@@ -34,7 +35,7 @@ internal class DynamoDbTableStrategy : IControllerDependencyResolver
             return;
         }
 
-        _template.TryGetTemplate(References.Roles.DynamoDbRepositories, _dynamoDbElement.Id, out _repositoryTemplate);
+        _template.TryGetTemplate(Constants.Role.DynamoDbRepositories, _dynamoDbElement.Id, out _repositoryTemplate);
     }
 
     private bool IsApplicable()

@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using Intent.Modelers.AWS.DynamoDB.Api;
 using Intent.Modules.Common.Templates;
+using Intent.Modules.Common.TypeScript.Templates;
+using Intent.Modules.NodeJS.AWS.CDK;
 using Intent.RoslynWeaver.Attributes;
 
 [assembly: DefaultIntentManaged(Mode.Fully)]
@@ -16,7 +18,7 @@ namespace Intent.Modules.NodeJS.AWS.DynamoDB.Templates.TableItemRepositories
         public override string TransformText()
         {
             return $@"export class {ClassName} {{
-    private static readonly tableName = ""{Model.Name}"";{string.Concat(GetMembers())}
+    private static readonly tableName = {GetTableName()};{string.Concat(GetMembers())}
 }}
 ";
         }
@@ -51,6 +53,18 @@ namespace Intent.Modules.NodeJS.AWS.DynamoDB.Templates.TableItemRepositories
             {
                 return this.GetTableItemRepositoryName(item);
             }
+        }
+
+        private string GetTableName()
+        {
+            if (!TryGetTemplate<ITypescriptFileBuilderTemplate>(Model.InternalElement.Package.Id, out var template) ||
+                !template.TypescriptFile.Classes[0].Constructors[0]
+                    .TryGetMetadata(Constants.MetadataKey.DynamoDbTableName, out var dynamoDbTableName))
+            {
+                return $"'{Model.Name}'";
+            }
+
+            return $"process.env.{dynamoDbTableName}";
         }
     }
 }

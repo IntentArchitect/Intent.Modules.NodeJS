@@ -5,7 +5,6 @@ using Intent.Metadata.Models;
 using Intent.Modelers.AWS.Api;
 using Intent.Modules.Common.Templates;
 using Intent.Modules.Common.TypeScript.Builder;
-using Intent.Modules.Common.TypeScript.Templates;
 
 namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
 {
@@ -18,13 +17,13 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
             _stackTemplate = stackTemplate;
         }
 
-        public void Apply(TypescriptConstructor constructor)
+        public void ApplyInitial(TypescriptConstructor constructor)
         {
-            var lambdaFunctions = _stackTemplate.Model.UnderlyingPackage.GetChildElementsOfType(References.Elements.LambdaFunction)
+            var resources = _stackTemplate.Model.UnderlyingPackage.GetChildElementsOfType(Constants.ElementName.LambdaFunction)
                 .OrderBy(x => x.Name)
                 .ToArray();
 
-            if (lambdaFunctions.Length > 0)
+            if (resources.Length > 0)
             {
                 constructor.Class.File.AddImport("aws_iam", "aws-cdk-lib");
                 constructor.Class.File.AddImport("*", "lambda", "aws-cdk-lib/aws-lambda");
@@ -32,33 +31,71 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
                 constructor.Class.File.AddImport("join", "path");
             }
 
-            foreach (var lambdaFunction in lambdaFunctions)
+            foreach (var resource in resources)
             {
-                var handlerTemplate = _stackTemplate.GetTemplate<IClassProvider>("Distribution.Functions.Handler", lambdaFunction, new TemplateDiscoveryOptions
+                var handlerTemplate = _stackTemplate.GetTemplate<IClassProvider>("Distribution.Functions.Handler", resource, new TemplateDiscoveryOptions
                 {
                     TrackDependency = false
                 });
-                var variableName = $"{lambdaFunction.Name.ToCamelCase()}Function";
+                var variableName = $"{resource.Name.ToCamelCase()}Function";
                 var relativePath = _stackTemplate.GetRelativePath(handlerTemplate);
                 var exportedTypeName = handlerTemplate.ClassName;
 
-                constructor.AddStatement(@$"const {variableName} = new NodejsFunction(this, '{lambdaFunction.Name.ToPascalCase()}Handler', {{
+                constructor.AddStatement(@$"const {variableName} = new NodejsFunction(this, '{resource.Name.ToPascalCase()}Handler', {{
             entry: join(__dirname, '{relativePath}'),
             handler: '{exportedTypeName}',
             runtime: lambda.Runtime.NODEJS_16_X
         }});", statement => statement
                     .SeparatedFromPrevious()
-                    .AddMetadata("SourceElement", lambdaFunction)
-                    .AddMetadata("VariableName", variableName)
+                    .AddMetadata(Constants.MetadataKey.SourceElement, resource)
+                    .AddMetadata(Constants.MetadataKey.VariableName, variableName)
                 );
-                foreach (var statement in GetAddToRolePolicyStatements(lambdaFunction, variableName))
+                foreach (var statement in GetAddToRolePolicyStatements(resource, variableName))
                 {
                     constructor.AddStatement(statement);
                 }
             }
         }
 
-        private IEnumerable<string> GetAddToRolePolicyStatements(IElement element, string variableName)
+        public void ApplyPost(TypescriptConstructor constructor)
+        {
+            var lambdaFunctions = _stackTemplate.Model.UnderlyingPackage.GetChildElementsOfType(Constants.ElementName.LambdaFunction)
+                .OrderBy(x => x.Name)
+                .ToArray();
+
+            var statementsByElement = constructor.Statements
+                .Where(x => x.HasMetadata(Constants.MetadataKey.SourceElement))
+                .ToDictionary(
+                    x => x.GetMetadata(Constants.MetadataKey.SourceElement),
+                    x => new
+                    {
+                        VariableName = x.GetMetadata(Constants.MetadataKey.VariableName) as string,
+                        EnvironmentVariables = x.Metadata.TryGetValue(Constants.MetadataKey.EnvironmentVariables, out var value)
+                            ? (Dictionary<string, string>)value
+                            : null
+
+                    });
+
+            foreach (var lambdaFunction in lambdaFunctions)
+            {
+                var lambdaVariable = statementsByElement[lambdaFunction].VariableName;
+                var dependencies = lambdaFunction
+                    .OwnedAssociations.Select(x => (IElement)x.TargetEnd.TypeReference.Element);
+                foreach (var dependency in dependencies)
+                {
+                    if (statementsByElement.TryGetValue(dependency, out var resource) &&
+                        resource.EnvironmentVariables != null)
+                    {
+                        foreach (var (variable, value) in resource.EnvironmentVariables)
+                        {
+                            constructor.AddStatement($"{lambdaVariable}.addEnvironment('{variable}', {value});");
+                        }
+                    }
+                }
+            }
+        }
+
+        private static IEnumerable<string> GetAddToRolePolicyStatements(IElement element, string variableName)
         {
             var policies = element
                 .OwnedAssociations.SelectMany(x => x.TargetEnd.ChildElements)

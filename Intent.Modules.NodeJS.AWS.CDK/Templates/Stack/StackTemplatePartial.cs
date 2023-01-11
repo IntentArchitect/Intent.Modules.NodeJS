@@ -41,11 +41,6 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack
                         .ExtendsClass(this.GetApplicationStackName())
                         .AddConstructor(constructor =>
                         {
-                            foreach (var interceptor in _interceptors)
-                            {
-                                interceptor.Apply(constructor);
-                            }
-
                             constructor
                                 .AddParameter("scope", "Construct")
                                 .AddParameter("id", "string")
@@ -56,6 +51,16 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack
                                     .AddArguments("scope", "id", "props")
                                 )
                                 ;
+
+                            foreach (var interceptor in _interceptors)
+                            {
+                                interceptor.ApplyInitial(constructor);
+                            }
+
+                            foreach (var interceptor in _interceptors)
+                            {
+                                interceptor.ApplyPost(constructor);
+                            }
                         })
                     )
                 ;
