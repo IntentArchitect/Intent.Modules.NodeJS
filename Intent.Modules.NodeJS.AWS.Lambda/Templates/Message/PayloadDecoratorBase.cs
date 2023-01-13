@@ -6,7 +6,7 @@ using Intent.Templates;
 [assembly: DefaultIntentManaged(Mode.Fully)]
 [assembly: IntentTemplate("Intent.ModuleBuilder.Templates.TemplateDecoratorContract", Version = "1.0")]
 
-namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Dto
+namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Message
 {
     [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
     public abstract class PayloadDecoratorBase : ITemplateDecorator

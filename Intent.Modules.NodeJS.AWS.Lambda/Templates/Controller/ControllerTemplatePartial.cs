@@ -5,7 +5,7 @@ using Intent.Modelers.AWS.Lambda.Api;
 using Intent.Modules.Common;
 using Intent.Modules.Common.Templates;
 using Intent.Modules.Common.TypeScript.Templates;
-using Intent.Modules.NodeJS.AWS.Lambda.Templates.Dto;
+using Intent.Modules.NodeJS.AWS.Lambda.Templates.Message;
 using Intent.RoslynWeaver.Attributes;
 using Intent.Templates;
 
@@ -17,7 +17,7 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Controller
     [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
     partial class ControllerTemplate : TypeScriptTemplateBase<Intent.Modelers.AWS.Lambda.Api.LambdaFunctionModel, ControllerDecoratorBase>
     {
-        private IReadOnlyCollection<IControllerDependencyResolver> _dependencyResolvers;
+        private IReadOnlyCollection<IControllerDependencyProvider> _dependencyResolvers;
 
         [IntentManaged(Mode.Fully)]
         public const string TemplateId = "Intent.NodeJS.AWS.Lambda.Controller";
@@ -25,8 +25,8 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Controller
         [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
         public ControllerTemplate(IOutputTarget outputTarget, Intent.Modelers.AWS.Lambda.Api.LambdaFunctionModel model) : base(TemplateId, outputTarget, model)
         {
-            AddTypeSource(DtoTemplate.TemplateId);
-            _dependencyResolvers = IControllerDependencyResolver.GetFor(this);
+            AddTypeSource(MessageTemplate.TemplateId);
+            _dependencyResolvers = IControllerDependencyProvider.GetFor(this);
         }
 
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]

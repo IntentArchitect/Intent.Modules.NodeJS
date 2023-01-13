@@ -16,7 +16,7 @@ using Intent.Templates;
 namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Schema
 {
     [IntentManaged(Mode.Merge, Body = Mode.Merge, Signature = Mode.Fully)]
-    public class SchemaTemplateRegistration : FilePerModelTemplateRegistration<DTOModel>
+    public class SchemaTemplateRegistration : FilePerModelTemplateRegistration<MessageModel>
     {
         private readonly IMetadataManager _metadataManager;
 
@@ -27,15 +27,15 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Schema
 
         public override string TemplateId => SchemaTemplate.TemplateId;
 
-        public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget, DTOModel model)
+        public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget, MessageModel model)
         {
             return new SchemaTemplate(outputTarget, model);
         }
 
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
-        public override IEnumerable<DTOModel> GetModels(IApplication application)
+        public override IEnumerable<MessageModel> GetModels(IApplication application)
         {
-            return _metadataManager.Application(application).GetDTOModels();
+            return _metadataManager.Application(application).GetMessageModels();
         }
     }
 }

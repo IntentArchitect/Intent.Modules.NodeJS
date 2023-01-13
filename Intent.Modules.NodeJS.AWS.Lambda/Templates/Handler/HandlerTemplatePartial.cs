@@ -19,7 +19,7 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Handler
     partial class HandlerTemplate : TypeScriptTemplateBase<Intent.Modelers.AWS.Lambda.Api.LambdaFunctionModel, HandlerDecoratorBase>
     {
         private readonly IHandlerStrategy _handlerStrategy;
-        private readonly IReadOnlyCollection<IControllerDependencyResolver> _dependencyResolvers;
+        private readonly IReadOnlyCollection<IControllerDependencyProvider> _dependencyResolvers;
 
         [IntentManaged(Mode.Fully)]
         public const string TemplateId = "Intent.NodeJS.AWS.Lambda.Handler";
@@ -28,7 +28,7 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Handler
         public HandlerTemplate(IOutputTarget outputTarget, Intent.Modelers.AWS.Lambda.Api.LambdaFunctionModel model) : base(TemplateId, outputTarget, model)
         {
             _handlerStrategy = IHandlerStrategy.ResolveFor(this);
-            _dependencyResolvers = IControllerDependencyResolver.GetFor(this);
+            _dependencyResolvers = IControllerDependencyProvider.GetFor(this);
 
             AddTypeSource(SchemaTemplate.TemplateId);
             AddDependency(NpmPackageDependencies.AwsLambda);

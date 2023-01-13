@@ -79,17 +79,41 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
             foreach (var lambdaFunction in lambdaFunctions)
             {
                 var lambdaVariable = statementsByElement[lambdaFunction].VariableName;
-                var dependencies = lambdaFunction
-                    .OwnedAssociations.Select(x => (IElement)x.TargetEnd.TypeReference.Element);
-                foreach (var dependency in dependencies)
+                var associationTargets = lambdaFunction.AssociatedElements
+                    .Where(x => x.IsTargetEnd())
+                    .Select(x => (IElement)x.Association.TargetEnd.TypeReference.Element);
+
+                var associationSources = lambdaFunction.AssociatedElements
+                    .Where(x => x.IsSourceEnd())
+                    .Select(x => (IElement)x.Association.SourceEnd.TypeReference.Element);
+
+                foreach (var resource in associationTargets)
                 {
-                    if (statementsByElement.TryGetValue(dependency, out var resource) &&
-                        resource.EnvironmentVariables != null)
+                    if (!statementsByElement.TryGetValue(resource, out var resourceStatement))
                     {
-                        foreach (var (variable, value) in resource.EnvironmentVariables)
+                        continue;
+                    }
+
+                    if (resourceStatement.EnvironmentVariables != null)
+                    {
+                        foreach (var (variable, value) in resourceStatement.EnvironmentVariables)
                         {
                             constructor.AddStatement($"{lambdaVariable}.addEnvironment('{variable}', {value});");
                         }
+                    }
+                }
+
+                foreach (var resource in associationSources)
+                {
+                    if (!statementsByElement.TryGetValue(resource, out var resourceStatement))
+                    {
+                        continue;
+                    }
+
+                    if (resource.SpecializationType == Constants.ElementName.SqsQueue)
+                    {
+                        constructor.Class.File.AddImport("SqsEventSource", "aws-cdk-lib/aws-lambda-event-sources");
+                        constructor.AddStatement($"{lambdaVariable}.addEventSource(new SqsEventSource({resourceStatement.VariableName}));");
                     }
                 }
             }

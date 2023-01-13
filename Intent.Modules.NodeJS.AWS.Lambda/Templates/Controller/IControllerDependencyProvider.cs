@@ -6,17 +6,16 @@ using Intent.Modules.NodeJS.AWS.Lambda.Templates.Controller.DependencyResolvers;
 
 namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Controller;
 
-internal interface IControllerDependencyResolver
+internal interface IControllerDependencyProvider
 {
     IEnumerable<string> GetConstructorArguments();
     IEnumerable<string> GetConstructorParameters();
-    void BeforeTemplateExecution();
 
-    static IReadOnlyCollection<IControllerDependencyResolver> GetFor(TypeScriptTemplateBase<LambdaFunctionModel> template)
+    static IReadOnlyCollection<IControllerDependencyProvider> GetFor(TypeScriptTemplateBase<LambdaFunctionModel> template)
     {
-        return new IControllerDependencyResolver[]
+        return new IControllerDependencyProvider[]
         {
-            new DynamoDbTableStrategy(template)
+            new DynamoDbTableProvider(template)
         }
         .ToArray();
     }

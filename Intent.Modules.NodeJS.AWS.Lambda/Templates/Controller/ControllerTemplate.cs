@@ -31,13 +31,10 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Controller
             var parameters = _dependencyResolvers
                 .SelectMany(x => x.GetConstructorParameters(), (_, x) => $"{Environment.NewLine}        private readonly {x},")
                 .ToArray();
-            if (parameters.Length == 0)
-            {
-                return string.Empty;
-            }
 
             return @$"
-    constructor({string.Concat(parameters)}
+    constructor(
+        private readonly rawEvent: any,{string.Concat(parameters)}
     ) {{ }}
 ";
         }

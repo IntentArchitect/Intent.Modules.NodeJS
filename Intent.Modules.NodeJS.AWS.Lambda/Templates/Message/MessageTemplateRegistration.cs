@@ -13,29 +13,29 @@ using Intent.Templates;
 [assembly: DefaultIntentManaged(Mode.Fully)]
 [assembly: IntentTemplate("Intent.ModuleBuilder.TemplateRegistration.FilePerModel", Version = "1.0")]
 
-namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Dto
+namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Message
 {
     [IntentManaged(Mode.Merge, Body = Mode.Merge, Signature = Mode.Fully)]
-    public class DtoTemplateRegistration : FilePerModelTemplateRegistration<DTOModel>
+    public class MessageTemplateRegistration : FilePerModelTemplateRegistration<MessageModel>
     {
         private readonly IMetadataManager _metadataManager;
 
-        public DtoTemplateRegistration(IMetadataManager metadataManager)
+        public MessageTemplateRegistration(IMetadataManager metadataManager)
         {
             _metadataManager = metadataManager;
         }
 
-        public override string TemplateId => DtoTemplate.TemplateId;
+        public override string TemplateId => MessageTemplate.TemplateId;
 
-        public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget, DTOModel model)
+        public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget, MessageModel model)
         {
-            return new DtoTemplate(outputTarget, model);
+            return new MessageTemplate(outputTarget, model);
         }
 
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
-        public override IEnumerable<DTOModel> GetModels(IApplication application)
+        public override IEnumerable<MessageModel> GetModels(IApplication application)
         {
-            return _metadataManager.Application(application).GetDTOModels();
+            return _metadataManager.Application(application).GetMessageModels();
         }
     }
 }

@@ -12,12 +12,12 @@
       <role>Distribution.Functions.Controller</role>
       <location></location>
     </template>
-    <template id="Intent.NodeJS.AWS.Lambda.Dto" externalReference="267097b7-6850-475c-9003-35211ad69ba7">
-      <role>Contracts.Dto</role>
-      <location></location>
-    </template>
     <template id="Intent.NodeJS.AWS.Lambda.Handler" externalReference="543a77b6-61ef-4ef3-937d-c502f2043eea">
       <role>Distribution.Functions.Handler</role>
+      <location></location>
+    </template>
+    <template id="Intent.NodeJS.AWS.Lambda.Message" externalReference="267097b7-6850-475c-9003-35211ad69ba7">
+      <role>Contracts.Dto</role>
       <location></location>
     </template>
     <template id="Intent.NodeJS.AWS.Lambda.Middyfy" externalReference="4d342baf-78f0-4708-9b4a-d5405323b506">

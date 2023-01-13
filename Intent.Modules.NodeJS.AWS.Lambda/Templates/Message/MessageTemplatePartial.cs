@@ -9,16 +9,16 @@ using Intent.Templates;
 [assembly: DefaultIntentManaged(Mode.Merge)]
 [assembly: IntentTemplate("Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial", Version = "1.0")]
 
-namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Dto
+namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Message
 {
     [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
-    partial class DtoTemplate : TypeScriptTemplateBase<Intent.Modelers.AWS.Api.DTOModel, PayloadDecoratorBase>
+    partial class MessageTemplate : TypeScriptTemplateBase<Intent.Modelers.AWS.Api.MessageModel, PayloadDecoratorBase>
     {
         [IntentManaged(Mode.Fully)]
-        public const string TemplateId = "Intent.NodeJS.AWS.Lambda.Dto";
+        public const string TemplateId = "Intent.NodeJS.AWS.Lambda.Message";
 
         [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
-        public DtoTemplate(IOutputTarget outputTarget, Intent.Modelers.AWS.Api.DTOModel model) : base(TemplateId, outputTarget, model)
+        public MessageTemplate(IOutputTarget outputTarget, Intent.Modelers.AWS.Api.MessageModel model) : base(TemplateId, outputTarget, model)
         {
             AddTypeSource(TemplateId);
         }

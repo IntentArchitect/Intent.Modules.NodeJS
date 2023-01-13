@@ -40,11 +40,14 @@ export const {ClassName} = {this.GetMiddyfyName()}(handler{GetAdditionalMiddlewa
                 stringBuilder.AppendLine();
             }
 
-            stringBuilder.AppendLine($"    const controller = new {this.GetControllerName()}({string.Join(", ", _dependencyResolvers.SelectMany(x => x.GetConstructorArguments()))});");
+            var constructionArguments = Enumerable.Empty<string>()
+                .Append("event")
+                .Concat(_dependencyResolvers.SelectMany(x => x.GetConstructorArguments()));
+            stringBuilder.AppendLine($"    const controller = new {this.GetControllerName()}({string.Join(", ", constructionArguments)});");
             var resultAssignment = Model.TypeReference.Element != null
                 ? "const result = "
                 : string.Empty;
-            stringBuilder.AppendLine($"    {resultAssignment}await controller.handle({string.Join(", ", _handlerStrategy.GetControllerHandleArguments())});");
+            _handlerStrategy.ApplyControllerCall(stringBuilder, resultAssignment);
 
             var returnValue = _handlerStrategy.GetReturnValue(Model.TypeReference.Element != null ? "result" : null);
             if (string.IsNullOrWhiteSpace(returnValue) &&

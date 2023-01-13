@@ -9,33 +9,23 @@ using Intent.Modules.NodeJS.AWS.CDK;
 
 namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Controller.DependencyResolvers;
 
-internal class DynamoDbTableStrategy : IControllerDependencyResolver
+internal class DynamoDbTableProvider : IControllerDependencyProvider
 {
     private readonly TypeScriptTemplateBase<LambdaFunctionModel> _template;
     private readonly IElement _dynamoDbElement;
-    private Lazy<IClassProvider> _repositoryTemplate;
+    private readonly Lazy<IClassProvider> _repositoryTemplate;
 
-    public DynamoDbTableStrategy(TypeScriptTemplateBase<LambdaFunctionModel> template)
+    public DynamoDbTableProvider(TypeScriptTemplateBase<LambdaFunctionModel> template)
     {
         _template = template;
         _dynamoDbElement = _template.Model.InternalElement.AssociatedElements
-            .Select(x => x.Association.TargetEnd.TypeReference.Element)
-            .FirstOrDefault(x => x.IsDynamoDb()) as IElement;
+            .Select(x => x.Association.TargetEnd.TypeReference.Element as IElement)
+            .FirstOrDefault(x => x?.SpecializationType == Constants.ElementName.DynamoDbTable);
         _repositoryTemplate = new Lazy<IClassProvider>(() => _template.TryGetTemplate<IClassProvider>(
             Constants.Role.DynamoDbRepositories, _dynamoDbElement.Id,
             out var repositoryTemplate)
             ? repositoryTemplate
             : null);
-    }
-
-    public void BeforeTemplateExecution()
-    {
-        if (_dynamoDbElement == null)
-        {
-            return;
-        }
-
-        _template.TryGetTemplate(Constants.Role.DynamoDbRepositories, _dynamoDbElement.Id, out _repositoryTemplate);
     }
 
     private bool IsApplicable()

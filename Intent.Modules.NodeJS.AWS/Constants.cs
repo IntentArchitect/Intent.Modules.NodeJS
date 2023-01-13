@@ -14,6 +14,20 @@ internal static class Constants
         public const string PartitionKey = "Dynamo DB Table Hash Key"; // TODO JL: Need to update element type name in modeler
         public const string SortKey = "Dynamo DB Table Range Key"; // TODO JL: Need to update element type name in modeler
         public const string SqsQueue = "SQS Queue";
+        public const string Message = "Message";
+    }
+
+    public static class Stereotype
+    {
+        public static class DynamoDbTableSettings
+        {
+            public const string Name = "DynamoDB Table Settings";
+
+            public static class Property
+            {
+                public const string RemovalPolicy = "Removal Policy";
+            }
+        }
     }
 
     public static class Role

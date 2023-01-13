@@ -82,38 +82,6 @@
     </FileLog>
     <FileLog>
       <ProjectId>53954a51-7969-4590-9b30-cf156fe812c4</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateStringInterpolation#267097b7-6850-475c-9003-35211ad69ba7</CorrelationId>
-      <OverwriteBehaviour>always</OverwriteBehaviour>
-      <ApplicationRelativeFilePath>Templates/Dto/DtoTemplate.cs</ApplicationRelativeFilePath>
-      <ProjectRelativeFilePath>Dto/DtoTemplate.cs</ProjectRelativeFilePath>
-      <IsIgnored>false</IsIgnored>
-    </FileLog>
-    <FileLog>
-      <ProjectId>53954a51-7969-4590-9b30-cf156fe812c4</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial#267097b7-6850-475c-9003-35211ad69ba7</CorrelationId>
-      <OverwriteBehaviour>always</OverwriteBehaviour>
-      <ApplicationRelativeFilePath>Templates/Dto/DtoTemplatePartial.cs</ApplicationRelativeFilePath>
-      <ProjectRelativeFilePath>Dto/DtoTemplatePartial.cs</ProjectRelativeFilePath>
-      <IsIgnored>false</IsIgnored>
-    </FileLog>
-    <FileLog>
-      <ProjectId>53954a51-7969-4590-9b30-cf156fe812c4</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.TemplateRegistration.FilePerModel#267097b7-6850-475c-9003-35211ad69ba7</CorrelationId>
-      <OverwriteBehaviour>always</OverwriteBehaviour>
-      <ApplicationRelativeFilePath>Templates/Dto/DtoTemplateRegistration.cs</ApplicationRelativeFilePath>
-      <ProjectRelativeFilePath>Dto/DtoTemplateRegistration.cs</ProjectRelativeFilePath>
-      <IsIgnored>false</IsIgnored>
-    </FileLog>
-    <FileLog>
-      <ProjectId>53954a51-7969-4590-9b30-cf156fe812c4</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.Templates.TemplateDecoratorContract#09b0eea8-0595-4693-a4a9-8a267409aa5c</CorrelationId>
-      <OverwriteBehaviour>always</OverwriteBehaviour>
-      <ApplicationRelativeFilePath>Templates/Dto/PayloadDecoratorBase.cs</ApplicationRelativeFilePath>
-      <ProjectRelativeFilePath>Dto/PayloadDecoratorBase.cs</ProjectRelativeFilePath>
-      <IsIgnored>false</IsIgnored>
-    </FileLog>
-    <FileLog>
-      <ProjectId>53954a51-7969-4590-9b30-cf156fe812c4</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.Templates.TemplateDecoratorContract#692bd843-0863-477a-aa23-0dc8e5c2ad36</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Handler/HandlerDecoratorBase.cs</ApplicationRelativeFilePath>
@@ -142,6 +110,38 @@
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Handler/HandlerTemplateRegistration.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Handler/HandlerTemplateRegistration.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>53954a51-7969-4590-9b30-cf156fe812c4</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateStringInterpolation#267097b7-6850-475c-9003-35211ad69ba7</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Templates/Message/MessageTemplate.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>Message/MessageTemplate.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>53954a51-7969-4590-9b30-cf156fe812c4</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial#267097b7-6850-475c-9003-35211ad69ba7</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Templates/Message/MessageTemplatePartial.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>Message/MessageTemplatePartial.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>53954a51-7969-4590-9b30-cf156fe812c4</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.TemplateRegistration.FilePerModel#267097b7-6850-475c-9003-35211ad69ba7</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Templates/Message/MessageTemplateRegistration.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>Message/MessageTemplateRegistration.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>53954a51-7969-4590-9b30-cf156fe812c4</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.Templates.TemplateDecoratorContract#09b0eea8-0595-4693-a4a9-8a267409aa5c</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Templates/Message/PayloadDecoratorBase.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>Message/PayloadDecoratorBase.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>

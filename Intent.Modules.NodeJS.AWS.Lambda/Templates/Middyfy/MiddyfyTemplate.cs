@@ -19,7 +19,16 @@ import middy from '@middy/core'
 import middyJsonBodyParser from '@middy/http-json-body-parser'
 
 export const {ClassName} = (handler: any{GetParameters()}) => {{
-    const newHandler = middy(handler).use(middyJsonBodyParser());{GetStatements()}
+    let newHandler = middy(handler);
+
+    // Conditionally use middyJsonBodyParser if the event has headers
+    newHandler = newHandler.use({{
+        before: async (request: any) => {{
+            if (request.event.headers != null) {{
+                return await (middyJsonBodyParser() as any).before(request);
+            }}
+        }}
+    }});{GetStatements()}
 
     return newHandler;
 }}

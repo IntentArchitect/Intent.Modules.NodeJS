@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using Intent.Modules.Common.Templates;
 using Intent.Modules.NodeJS.AWS.Lambda.Templates.Controller;
-using Intent.Modules.NodeJS.AWS.Lambda.Templates.Dto;
 using Intent.Modules.NodeJS.AWS.Lambda.Templates.Handler;
+using Intent.Modules.NodeJS.AWS.Lambda.Templates.Message;
 using Intent.Modules.NodeJS.AWS.Lambda.Templates.Middyfy;
 using Intent.Modules.NodeJS.AWS.Lambda.Templates.Schema;
 using Intent.RoslynWeaver.Attributes;
@@ -25,16 +25,6 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates
             return template.GetTypeName(ControllerTemplate.TemplateId, model);
         }
 
-        public static string GetDtoName<T>(this IntentTemplateBase<T> template) where T : Intent.Modelers.AWS.Api.DTOModel
-        {
-            return template.GetTypeName(DtoTemplate.TemplateId, template.Model);
-        }
-
-        public static string GetDtoName(this IntentTemplateBase template, Intent.Modelers.AWS.Api.DTOModel model)
-        {
-            return template.GetTypeName(DtoTemplate.TemplateId, model);
-        }
-
         public static string GetHandlerName<T>(this IntentTemplateBase<T> template) where T : Intent.Modelers.AWS.Lambda.Api.LambdaFunctionModel
         {
             return template.GetTypeName(HandlerTemplate.TemplateId, template.Model);
@@ -45,17 +35,27 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates
             return template.GetTypeName(HandlerTemplate.TemplateId, model);
         }
 
+        public static string GetMessageName<T>(this IntentTemplateBase<T> template) where T : Intent.Modelers.AWS.Api.MessageModel
+        {
+            return template.GetTypeName(MessageTemplate.TemplateId, template.Model);
+        }
+
+        public static string GetMessageName(this IntentTemplateBase template, Intent.Modelers.AWS.Api.MessageModel model)
+        {
+            return template.GetTypeName(MessageTemplate.TemplateId, model);
+        }
+
         public static string GetMiddyfyName<T>(this IntentTemplateBase<T> template)
         {
             return template.GetTypeName(MiddyfyTemplate.TemplateId);
         }
 
-        public static string GetSchemaName<T>(this IntentTemplateBase<T> template) where T : Intent.Modelers.AWS.Api.DTOModel
+        public static string GetSchemaName<T>(this IntentTemplateBase<T> template) where T : Intent.Modelers.AWS.Api.MessageModel
         {
             return template.GetTypeName(SchemaTemplate.TemplateId, template.Model);
         }
 
-        public static string GetSchemaName(this IntentTemplateBase template, Intent.Modelers.AWS.Api.DTOModel model)
+        public static string GetSchemaName(this IntentTemplateBase template, Intent.Modelers.AWS.Api.MessageModel model)
         {
             return template.GetTypeName(SchemaTemplate.TemplateId, model);
         }

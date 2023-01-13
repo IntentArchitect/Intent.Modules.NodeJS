@@ -12,13 +12,13 @@ using Intent.Templates;
 namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Schema
 {
     [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
-    partial class SchemaTemplate : TypeScriptTemplateBase<Intent.Modelers.AWS.Api.DTOModel>
+    partial class SchemaTemplate : TypeScriptTemplateBase<Intent.Modelers.AWS.Api.MessageModel>
     {
         [IntentManaged(Mode.Fully)]
         public const string TemplateId = "Intent.NodeJS.AWS.Lambda.Schema";
 
         [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
-        public SchemaTemplate(IOutputTarget outputTarget, Intent.Modelers.AWS.Api.DTOModel model) : base(TemplateId, outputTarget, model)
+        public SchemaTemplate(IOutputTarget outputTarget, Intent.Modelers.AWS.Api.MessageModel model) : base(TemplateId, outputTarget, model)
         {
         }
 

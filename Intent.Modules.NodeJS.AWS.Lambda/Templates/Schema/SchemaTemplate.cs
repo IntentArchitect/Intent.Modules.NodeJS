@@ -36,9 +36,9 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Schema
 
         private string GetProperty(IHasTypeReference field)
         {
-            if (field.TypeReference.Element.IsDTOModel())
+            if (field.TypeReference.Element.IsMessageModel())
             {
-                var schemaName = this.GetSchemaName(new DTOModel((IElement)field.TypeReference.Element));
+                var schemaName = this.GetSchemaName(new MessageModel((IElement)field.TypeReference.Element));
 
                 return !field.TypeReference.IsCollection
                     ? schemaName

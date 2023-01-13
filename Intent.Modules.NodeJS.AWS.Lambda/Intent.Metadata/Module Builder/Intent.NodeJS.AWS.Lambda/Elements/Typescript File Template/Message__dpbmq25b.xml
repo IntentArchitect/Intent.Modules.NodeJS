@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <class id="267097b7-6850-475c-9003-35211ad69ba7" type="Typescript File Template" typeId="e6e41d88-2829-41b6-a791-065d2bb44eb3">
-  <name>Dto</name>
-  <display>Dto: File Per Model</display>
+  <name>Message</name>
+  <display>Message: File Per Model</display>
   <isAbstract>false</isAbstract>
   <sort-children>by-type-then-by-name</sort-children>
   <genericTypes />

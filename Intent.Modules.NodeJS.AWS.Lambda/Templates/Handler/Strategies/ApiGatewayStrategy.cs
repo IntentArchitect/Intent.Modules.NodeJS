@@ -1,11 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
 using Intent.Metadata.Models;
 using Intent.Modelers.AWS.Lambda.Api;
 using Intent.Modules.Common;
 using Intent.Modules.Common.TypeScript.Templates;
+using Intent.Modules.NodeJS.AWS.CDK;
 
 namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Handler.Strategies;
 
@@ -15,17 +17,17 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Handler.Strategies;
 internal class ApiGatewayStrategy : IHandlerStrategy
 {
     private readonly TypeScriptTemplateBase<LambdaFunctionModel> _template;
-    private readonly IElement _apiGatewayElement;
+    private readonly IElement _associationSourceElement;
 
     public ApiGatewayStrategy(TypeScriptTemplateBase<LambdaFunctionModel> template)
     {
         _template = template;
-        _apiGatewayElement = _template.Model.InternalElement.AssociatedElements
-            .Select(x => x.Association.SourceEnd.TypeReference.Element)
-            .FirstOrDefault(x => x.IsApiGateway()) as IElement;
+        _associationSourceElement = _template.Model.InternalElement.AssociatedElements
+            .Select(x => x.Association.SourceEnd.TypeReference.Element as IElement)
+            .FirstOrDefault(x => x?.SpecializationType == Constants.ElementName.ApiGatewayEndpoint);
     }
 
-    public bool IsApplicable() => _apiGatewayElement != null;
+    public bool IsApplicable() => _associationSourceElement != null;
 
     public string GetEventType() => _template.ImportType("APIGatewayEvent", "aws-lambda");
 
@@ -44,11 +46,15 @@ internal class ApiGatewayStrategy : IHandlerStrategy
     }
 
     public IEnumerable<string> GetBeforeControllerHandleStatements() => Enumerable.Empty<string>();
+    public void ApplyControllerCall(StringBuilder stringBuilder, string resultAssignment)
+    {
+        IHandlerStrategy.DefaultApplyControllerCall(stringBuilder, resultAssignment, GetArguments());
+    }
 
-    public IEnumerable<string> GetControllerHandleArguments()
+    private IEnumerable<string> GetArguments()
     {
         var bodyParameterProcessed = false;
-        var path = _apiGatewayElement.GetStereotypeProperty<string>("API Gateway Endpoint Settings", "Path") ?? string.Empty;
+        var path = _associationSourceElement.GetStereotypeProperty<string>("API Gateway Endpoint Settings", "Path") ?? string.Empty;
         var pathItems = Regex.Matches(path, "{(.*?)}")
             .Select(x => x.Value[1..^1])
             .ToHashSet();
@@ -67,7 +73,7 @@ internal class ApiGatewayStrategy : IHandlerStrategy
                 continue;
             }
 
-            var resolvedType = _template.GetTypeName(_apiGatewayElement);
+            var resolvedType = _template.GetTypeName(_associationSourceElement);
             var sourceField = pathItems.Contains(parameter.Name)
                 ? "pathParameters"
                 : "queryStringParameters";

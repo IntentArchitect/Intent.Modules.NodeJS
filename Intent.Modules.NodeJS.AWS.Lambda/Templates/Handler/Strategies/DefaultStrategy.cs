@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using Intent.Modelers.AWS.Lambda.Api;
 using Intent.Modules.Common.TypeScript.Templates;
 
@@ -36,11 +37,13 @@ internal class DefaultStrategy : IHandlerStrategy
 
     public IEnumerable<string> GetBeforeControllerHandleStatements() => Enumerable.Empty<string>();
 
-    public IEnumerable<string> GetControllerHandleArguments()
+    public void ApplyControllerCall(StringBuilder stringBuilder, string resultAssignment)
     {
-        if (_parameter != null)
-        {
-            yield return $"event as {_template.GetTypeName(_parameter)}";
-        }
+        IHandlerStrategy.DefaultApplyControllerCall(
+            stringBuilder: stringBuilder,
+            resultAssignment: resultAssignment,
+            arguments: _parameter != null
+                ? $"event as {_template.GetTypeName(_parameter)}"
+                : string.Empty);
     }
 }
