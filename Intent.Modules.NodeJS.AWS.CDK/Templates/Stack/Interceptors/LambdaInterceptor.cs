@@ -82,7 +82,6 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
                 var associationTargets = lambdaFunction.AssociatedElements
                     .Where(x => x.IsTargetEnd())
                     .Select(x => (IElement)x.Association.TargetEnd.TypeReference.Element);
-
                 var associationSources = lambdaFunction.AssociatedElements
                     .Where(x => x.IsSourceEnd())
                     .Select(x => (IElement)x.Association.SourceEnd.TypeReference.Element);
