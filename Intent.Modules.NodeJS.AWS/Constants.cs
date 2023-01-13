@@ -15,6 +15,7 @@ internal static class Constants
         public const string SortKey = "Dynamo DB Table Range Key"; // TODO JL: Need to update element type name in modeler
         public const string SqsQueue = "SQS Queue";
         public const string Message = "Message";
+        public const string Parameter = "Parameter";
     }
 
     public static class Stereotype
@@ -34,6 +35,7 @@ internal static class Constants
     {
         public const string DynamoDbRepositories = "Infrastructure.Persistence.Repositories";
         public const string SqsSender = "Lib.SQS.Sender";
+        public const string Stacks = "CDK.Stacks";
     }
 
     public static class MetadataKey

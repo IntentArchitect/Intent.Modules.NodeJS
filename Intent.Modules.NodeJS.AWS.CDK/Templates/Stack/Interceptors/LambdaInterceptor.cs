@@ -73,7 +73,6 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
                         EnvironmentVariables = x.Metadata.TryGetValue(Constants.MetadataKey.EnvironmentVariables, out var value)
                             ? (Dictionary<string, string>)value
                             : null
-
                     });
 
             foreach (var lambdaFunction in lambdaFunctions)

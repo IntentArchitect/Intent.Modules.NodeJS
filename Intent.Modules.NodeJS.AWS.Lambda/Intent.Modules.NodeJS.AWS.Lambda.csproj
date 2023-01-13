@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="Intent.Modules.Common" Version="3.3.17" />
-    <PackageReference Include="Intent.Modules.Common.TypeScript" Version="3.3.9" />
+    <PackageReference Include="Intent.Modules.Common.TypeScript" Version="3.4.0-pre.0" />
     <PackageReference Include="Intent.Modules.Modelers.AWS" Version="1.0.0-pre.1" />
     <PackageReference Include="Intent.Modules.Modelers.AWS.Lambda" Version="1.0.0-pre.0" />
     <PackageReference Include="Intent.Modules.TypeScript.Weaving.Decorators" Version="3.3.4" />

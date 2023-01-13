@@ -7,7 +7,7 @@ using Intent.Modules.Common.Templates;
 using Intent.Modules.Common.TypeScript.Templates;
 using Intent.Modules.NodeJS.AWS.CDK;
 
-namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Controller.DependencyResolvers;
+namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Controller.DependencyProviders;
 
 internal class DynamoDbTableProvider : IControllerDependencyProvider
 {

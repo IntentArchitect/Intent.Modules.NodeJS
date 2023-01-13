@@ -4,10 +4,12 @@
   <display>Intent.Modules.NodeJS.AWS.SQS</display>
   <externalReference>b1437dfb-0730-4215-a6db-ee1e77cf2e72</externalReference>
   <isAbstract>false</isAbstract>
-  <order>1</order>
+  <sort-children>by-type-then-by-name</sort-children>
   <genericTypes />
   <isMapped>false</isMapped>
   <parentFolderId>d12e5036-1295-4209-abdb-9840c6595348</parentFolderId>
+  <packageId>d12e5036-1295-4209-abdb-9840c6595348</packageId>
+  <packageName>Intent.Modules.NodeJS</packageName>
   <stereotypes>
     <stereotype stereotypeDefinitionId="5d85edfb-490c-42c2-81ef-c57c0300eb5a" name=".NET Core Settings">
       <addedByDefault>true</addedByDefault>
@@ -23,6 +25,7 @@
         <property name="f2956d24-b6da-427b-8728-c4f44714ce69" display="User Secrets Id" isActive="true" />
         <property name="42cdb74e-d5fd-4969-94ca-585d0527b862" display="Generate Runtime Configuration Files" isActive="true" />
         <property name="6111c054-9a40-4f92-9f7c-3a8372af14b8" display="Generate Documentation File" isActive="true" />
+        <property name="f236ad27-a4ab-490a-92d4-b6faf2d1e033" display="Assembly Name" isActive="true" />
       </properties>
     </stereotype>
     <stereotype stereotypeDefinitionId="d9b43864-0370-401b-9e71-b1d286919500" name="C# Project Options">
@@ -32,77 +35,13 @@
       <properties>
         <property name="cb56677d-e132-4397-b2ec-3f47e950a111" display="Language Version" value="default" isActive="true" />
         <property name="5c953a82-78c4-4986-b204-df9fcbea5242" display="Relative Location" isActive="true" />
-        <property name="415a5406-0517-4c0e-ab60-bc809a23c308" display="Nullable Enabled" value="false" isActive="true" />
+        <property name="415a5406-0517-4c0e-ab60-bc809a23c308" display="Nullable Enabled" value="false" isActive="false" />
+        <property name="68a31b13-148b-45da-a6ea-5a6883f86438" display="Nullable" isActive="true" />
       </properties>
     </stereotype>
   </stereotypes>
   <metadata />
   <childElements>
-    <childElement id="a2209866-98f6-405d-b1b0-038a44e48d9e" type="Role" typeId="025e933b-b602-4b6d-95ab-0ec36ae940da">
-      <name>Api</name>
-      <display>Api</display>
-      <externalReference>5db7fdaf-f264-4513-9e7d-daa3c5a6d0cb</externalReference>
-      <isAbstract>false</isAbstract>
-      <order>1</order>
-      <genericTypes />
-      <isMapped>false</isMapped>
-      <parentFolderId>90c56d6f-e7a5-4153-9415-525d499b4cf3</parentFolderId>
-      <stereotypes />
-      <metadata />
-      <childElements />
-    </childElement>
-    <childElement id="ccdb549e-44fb-4bbf-b958-29defde298b1" type="Role" typeId="025e933b-b602-4b6d-95ab-0ec36ae940da">
-      <name>Decorators</name>
-      <display>Decorators</display>
-      <externalReference>40cc9431-b446-4168-af80-2f3747b6f063</externalReference>
-      <isAbstract>false</isAbstract>
-      <order>2</order>
-      <genericTypes />
-      <isMapped>false</isMapped>
-      <parentFolderId>90c56d6f-e7a5-4153-9415-525d499b4cf3</parentFolderId>
-      <stereotypes />
-      <metadata />
-      <childElements />
-    </childElement>
-    <childElement id="f936b4ee-6f77-4cfa-968a-9de630dbfd69" type="Role" typeId="025e933b-b602-4b6d-95ab-0ec36ae940da">
-      <name>DesignerConfig</name>
-      <display>DesignerConfig</display>
-      <externalReference>8ace95f8-22fe-4922-9ca0-12d7820cb8bb</externalReference>
-      <isAbstract>false</isAbstract>
-      <order>3</order>
-      <genericTypes />
-      <isMapped>false</isMapped>
-      <parentFolderId>90c56d6f-e7a5-4153-9415-525d499b4cf3</parentFolderId>
-      <stereotypes />
-      <metadata />
-      <childElements />
-    </childElement>
-    <childElement id="6cab4600-65b9-4067-839a-a13fff715aa3" type="Role" typeId="025e933b-b602-4b6d-95ab-0ec36ae940da">
-      <name>IModSpec</name>
-      <display>IModSpec</display>
-      <externalReference>cf6e41be-aa79-4d0b-85d5-2908102fb131</externalReference>
-      <isAbstract>false</isAbstract>
-      <order>4</order>
-      <genericTypes />
-      <isMapped>false</isMapped>
-      <parentFolderId>90c56d6f-e7a5-4153-9415-525d499b4cf3</parentFolderId>
-      <stereotypes />
-      <metadata />
-      <childElements />
-    </childElement>
-    <childElement id="718f0ea0-73ab-46fb-bc14-432231aa7374" type="Role" typeId="025e933b-b602-4b6d-95ab-0ec36ae940da">
-      <name>Templates</name>
-      <display>Templates</display>
-      <externalReference>21bb58b7-6c18-4926-980f-35ea567706e6</externalReference>
-      <isAbstract>false</isAbstract>
-      <order>5</order>
-      <genericTypes />
-      <isMapped>false</isMapped>
-      <parentFolderId>90c56d6f-e7a5-4153-9415-525d499b4cf3</parentFolderId>
-      <stereotypes />
-      <metadata />
-      <childElements />
-    </childElement>
     <childElement id="2267a991-cda1-402f-a171-f1051cd17f45" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
       <name>Intent.ModuleBuilder.IModSpecFile</name>
       <display>Intent.ModuleBuilder.IModSpecFile</display>
@@ -111,6 +50,8 @@
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>90c56d6f-e7a5-4153-9415-525d499b4cf3</parentFolderId>
+      <packageId>d12e5036-1295-4209-abdb-9840c6595348</packageId>
+      <packageName>Intent.Modules.NodeJS</packageName>
       <stereotypes />
       <metadata>
         <entry key="status" value="assigned" />
@@ -125,6 +66,8 @@
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>90c56d6f-e7a5-4153-9415-525d499b4cf3</parentFolderId>
+      <packageId>d12e5036-1295-4209-abdb-9840c6595348</packageId>
+      <packageName>Intent.Modules.NodeJS</packageName>
       <stereotypes />
       <metadata>
         <entry key="status" value="assigned" />
@@ -139,6 +82,8 @@
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>90c56d6f-e7a5-4153-9415-525d499b4cf3</parentFolderId>
+      <packageId>d12e5036-1295-4209-abdb-9840c6595348</packageId>
+      <packageName>Intent.Modules.NodeJS</packageName>
       <stereotypes />
       <metadata>
         <entry key="status" value="assigned" />
@@ -153,6 +98,8 @@
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>90c56d6f-e7a5-4153-9415-525d499b4cf3</parentFolderId>
+      <packageId>d12e5036-1295-4209-abdb-9840c6595348</packageId>
+      <packageName>Intent.Modules.NodeJS</packageName>
       <stereotypes />
       <metadata>
         <entry key="status" value="assigned" />
@@ -167,6 +114,8 @@
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>90c56d6f-e7a5-4153-9415-525d499b4cf3</parentFolderId>
+      <packageId>d12e5036-1295-4209-abdb-9840c6595348</packageId>
+      <packageName>Intent.Modules.NodeJS</packageName>
       <stereotypes />
       <metadata>
         <entry key="status" value="assigned" />
@@ -181,10 +130,82 @@
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>90c56d6f-e7a5-4153-9415-525d499b4cf3</parentFolderId>
+      <packageId>d12e5036-1295-4209-abdb-9840c6595348</packageId>
+      <packageName>Intent.Modules.NodeJS</packageName>
       <stereotypes />
       <metadata>
         <entry key="status" value="assigned" />
       </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="a2209866-98f6-405d-b1b0-038a44e48d9e" type="Role" typeId="025e933b-b602-4b6d-95ab-0ec36ae940da">
+      <name>Api</name>
+      <display>Api</display>
+      <externalReference>5db7fdaf-f264-4513-9e7d-daa3c5a6d0cb</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>90c56d6f-e7a5-4153-9415-525d499b4cf3</parentFolderId>
+      <packageId>d12e5036-1295-4209-abdb-9840c6595348</packageId>
+      <packageName>Intent.Modules.NodeJS</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="ccdb549e-44fb-4bbf-b958-29defde298b1" type="Role" typeId="025e933b-b602-4b6d-95ab-0ec36ae940da">
+      <name>Decorators</name>
+      <display>Decorators</display>
+      <externalReference>40cc9431-b446-4168-af80-2f3747b6f063</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>90c56d6f-e7a5-4153-9415-525d499b4cf3</parentFolderId>
+      <packageId>d12e5036-1295-4209-abdb-9840c6595348</packageId>
+      <packageName>Intent.Modules.NodeJS</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="f936b4ee-6f77-4cfa-968a-9de630dbfd69" type="Role" typeId="025e933b-b602-4b6d-95ab-0ec36ae940da">
+      <name>DesignerConfig</name>
+      <display>DesignerConfig</display>
+      <externalReference>8ace95f8-22fe-4922-9ca0-12d7820cb8bb</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>90c56d6f-e7a5-4153-9415-525d499b4cf3</parentFolderId>
+      <packageId>d12e5036-1295-4209-abdb-9840c6595348</packageId>
+      <packageName>Intent.Modules.NodeJS</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="6cab4600-65b9-4067-839a-a13fff715aa3" type="Role" typeId="025e933b-b602-4b6d-95ab-0ec36ae940da">
+      <name>IModSpec</name>
+      <display>IModSpec</display>
+      <externalReference>cf6e41be-aa79-4d0b-85d5-2908102fb131</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>90c56d6f-e7a5-4153-9415-525d499b4cf3</parentFolderId>
+      <packageId>d12e5036-1295-4209-abdb-9840c6595348</packageId>
+      <packageName>Intent.Modules.NodeJS</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="718f0ea0-73ab-46fb-bc14-432231aa7374" type="Role" typeId="025e933b-b602-4b6d-95ab-0ec36ae940da">
+      <name>Templates</name>
+      <display>Templates</display>
+      <externalReference>21bb58b7-6c18-4926-980f-35ea567706e6</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>90c56d6f-e7a5-4153-9415-525d499b4cf3</parentFolderId>
+      <packageId>d12e5036-1295-4209-abdb-9840c6595348</packageId>
+      <packageName>Intent.Modules.NodeJS</packageName>
+      <stereotypes />
+      <metadata />
       <childElements />
     </childElement>
   </childElements>

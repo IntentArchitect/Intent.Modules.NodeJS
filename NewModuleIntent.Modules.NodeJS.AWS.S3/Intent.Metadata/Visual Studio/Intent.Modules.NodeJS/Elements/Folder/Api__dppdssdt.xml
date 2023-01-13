@@ -1,148 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<class id="59062747-e656-4402-b85e-95d9bbd33939" type="Folder" typeId="3407a825-1331-4f3f-89a4-901903ed97ce">
+<class id="2ffac0b7-cdad-47b4-b461-06b786dfde55" type="Folder" typeId="3407a825-1331-4f3f-89a4-901903ed97ce">
   <name>Api</name>
   <display>Api</display>
   <isAbstract>false</isAbstract>
-  <sort-children>by-type-then-by-name</sort-children>
   <genericTypes />
   <isMapped>false</isMapped>
-  <parentFolderId>90c56d6f-e7a5-4153-9415-525d499b4cf3</parentFolderId>
-  <packageId>d12e5036-1295-4209-abdb-9840c6595348</packageId>
-  <packageName>Intent.Modules.NodeJS</packageName>
-  <stereotypes>
-    <stereotype stereotypeDefinitionId="61132551-825d-4c6e-b9f1-0f95249d08d4" name="Folder Options">
-      <addedByDefault>true</addedByDefault>
-      <definitionPackageName>Intent.VisualStudio.Projects</definitionPackageName>
-      <definitionPackageId>a0636ab7-d3a1-430b-9609-11a18aa3cc7f</definitionPackageId>
-      <properties>
-        <property name="4bfbefd0-d22e-4ca0-9723-92ae273feca4" display="Namespace Provider" value="true" isActive="true" />
-      </properties>
-    </stereotype>
-  </stereotypes>
+  <parentFolderId>bec24e8f-f307-4949-ba62-e451e13dfded</parentFolderId>
+  <stereotypes />
   <metadata />
   <childElements>
-    <childElement id="d68fa5f0-0793-4557-9349-2bd8d48300b0" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
+    <childElement id="0ad90eb5-d9a8-4b5b-b231-178f1a3c438c" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
       <name>Intent.ModuleBuilder.Templates.Api.ApiAssociationModel</name>
       <display>Intent.ModuleBuilder.Templates.Api.ApiAssociationModel</display>
       <externalReference>Intent.ModuleBuilder</externalReference>
       <isAbstract>false</isAbstract>
       <genericTypes />
       <isMapped>false</isMapped>
-      <parentFolderId>59062747-e656-4402-b85e-95d9bbd33939</parentFolderId>
-      <packageId>d12e5036-1295-4209-abdb-9840c6595348</packageId>
-      <packageName>Intent.Modules.NodeJS</packageName>
+      <parentFolderId>2ffac0b7-cdad-47b4-b461-06b786dfde55</parentFolderId>
       <stereotypes />
       <metadata>
         <entry key="status" value="assigned" />
       </metadata>
       <childElements />
     </childElement>
-    <childElement id="702dc5af-2f90-4cc5-abc2-1eb7fb4ed778" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
+    <childElement id="9f22551e-f8d2-4f47-a5fa-ca38ef96093d" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
       <name>Intent.ModuleBuilder.Templates.Api.ApiAssociationModelExtensions</name>
       <display>Intent.ModuleBuilder.Templates.Api.ApiAssociationModelExtensions</display>
       <externalReference>Intent.ModuleBuilder</externalReference>
       <isAbstract>false</isAbstract>
       <genericTypes />
       <isMapped>false</isMapped>
-      <parentFolderId>59062747-e656-4402-b85e-95d9bbd33939</parentFolderId>
-      <packageId>d12e5036-1295-4209-abdb-9840c6595348</packageId>
-      <packageName>Intent.Modules.NodeJS</packageName>
+      <parentFolderId>2ffac0b7-cdad-47b4-b461-06b786dfde55</parentFolderId>
       <stereotypes />
       <metadata>
         <entry key="status" value="assigned" />
       </metadata>
       <childElements />
     </childElement>
-    <childElement id="ac2ae29a-4ab6-4d18-a18d-ae3babc7da75" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
+    <childElement id="5081167a-4e8a-4022-a9ee-bc9f2baa5355" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
       <name>Intent.ModuleBuilder.Templates.Api.ApiElementExtensionModel</name>
       <display>Intent.ModuleBuilder.Templates.Api.ApiElementExtensionModel</display>
       <externalReference>Intent.ModuleBuilder</externalReference>
       <isAbstract>false</isAbstract>
       <genericTypes />
       <isMapped>false</isMapped>
-      <parentFolderId>59062747-e656-4402-b85e-95d9bbd33939</parentFolderId>
-      <packageId>d12e5036-1295-4209-abdb-9840c6595348</packageId>
-      <packageName>Intent.Modules.NodeJS</packageName>
+      <parentFolderId>2ffac0b7-cdad-47b4-b461-06b786dfde55</parentFolderId>
       <stereotypes />
       <metadata>
         <entry key="status" value="assigned" />
       </metadata>
       <childElements />
     </childElement>
-    <childElement id="e64d0a20-04f0-4bfc-ae26-cda5ca62af22" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
+    <childElement id="b7344ca0-6bde-4c71-bd0f-03bf4e5cc053" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
       <name>Intent.ModuleBuilder.Templates.Api.ApiElementModel</name>
       <display>Intent.ModuleBuilder.Templates.Api.ApiElementModel</display>
       <externalReference>Intent.ModuleBuilder</externalReference>
       <isAbstract>false</isAbstract>
       <genericTypes />
       <isMapped>false</isMapped>
-      <parentFolderId>59062747-e656-4402-b85e-95d9bbd33939</parentFolderId>
-      <packageId>d12e5036-1295-4209-abdb-9840c6595348</packageId>
-      <packageName>Intent.Modules.NodeJS</packageName>
+      <parentFolderId>2ffac0b7-cdad-47b4-b461-06b786dfde55</parentFolderId>
       <stereotypes />
       <metadata>
         <entry key="status" value="assigned" />
       </metadata>
       <childElements />
     </childElement>
-    <childElement id="6f6df872-7367-412b-805f-4e58f9fdd3f1" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
+    <childElement id="8cedeed2-ff4f-4a5e-be29-a85296987418" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
       <name>Intent.ModuleBuilder.Templates.Api.ApiElementModelExtensions</name>
       <display>Intent.ModuleBuilder.Templates.Api.ApiElementModelExtensions</display>
       <externalReference>Intent.ModuleBuilder</externalReference>
       <isAbstract>false</isAbstract>
       <genericTypes />
       <isMapped>false</isMapped>
-      <parentFolderId>59062747-e656-4402-b85e-95d9bbd33939</parentFolderId>
-      <packageId>d12e5036-1295-4209-abdb-9840c6595348</packageId>
-      <packageName>Intent.Modules.NodeJS</packageName>
+      <parentFolderId>2ffac0b7-cdad-47b4-b461-06b786dfde55</parentFolderId>
       <stereotypes />
       <metadata>
         <entry key="status" value="assigned" />
       </metadata>
       <childElements />
     </childElement>
-    <childElement id="7b4a2b6c-6b00-447e-a119-5c9d46129b34" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
+    <childElement id="00838564-4259-4372-8469-c980bcacf357" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
       <name>Intent.ModuleBuilder.Templates.Api.ApiElementModelPartial</name>
       <display>Intent.ModuleBuilder.Templates.Api.ApiElementModelPartial</display>
       <externalReference>Intent.ModuleBuilder</externalReference>
       <isAbstract>false</isAbstract>
       <genericTypes />
       <isMapped>false</isMapped>
-      <parentFolderId>59062747-e656-4402-b85e-95d9bbd33939</parentFolderId>
-      <packageId>d12e5036-1295-4209-abdb-9840c6595348</packageId>
-      <packageName>Intent.Modules.NodeJS</packageName>
+      <parentFolderId>2ffac0b7-cdad-47b4-b461-06b786dfde55</parentFolderId>
       <stereotypes />
       <metadata>
         <entry key="status" value="assigned" />
       </metadata>
       <childElements />
     </childElement>
-    <childElement id="9f85c5de-21c7-4155-95ad-afa5b774ecc6" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
+    <childElement id="bcbe717c-1c19-40cc-afbc-de402907cebf" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
       <name>Intent.ModuleBuilder.Templates.Api.ApiPackageExtensionModel</name>
       <display>Intent.ModuleBuilder.Templates.Api.ApiPackageExtensionModel</display>
       <externalReference>Intent.ModuleBuilder</externalReference>
       <isAbstract>false</isAbstract>
       <genericTypes />
       <isMapped>false</isMapped>
-      <parentFolderId>59062747-e656-4402-b85e-95d9bbd33939</parentFolderId>
-      <packageId>d12e5036-1295-4209-abdb-9840c6595348</packageId>
-      <packageName>Intent.Modules.NodeJS</packageName>
+      <parentFolderId>2ffac0b7-cdad-47b4-b461-06b786dfde55</parentFolderId>
       <stereotypes />
       <metadata>
         <entry key="status" value="assigned" />
       </metadata>
       <childElements />
     </childElement>
-    <childElement id="3edb4d00-30e6-4082-8d63-8ae6326d0721" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
+    <childElement id="af302ec7-2ee5-496a-868e-c74102ed9451" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
       <name>Intent.ModuleBuilder.Templates.Api.ApiPackageModel</name>
       <display>Intent.ModuleBuilder.Templates.Api.ApiPackageModel</display>
       <externalReference>Intent.ModuleBuilder</externalReference>
       <isAbstract>false</isAbstract>
       <genericTypes />
       <isMapped>false</isMapped>
-      <parentFolderId>59062747-e656-4402-b85e-95d9bbd33939</parentFolderId>
-      <packageId>d12e5036-1295-4209-abdb-9840c6595348</packageId>
-      <packageName>Intent.Modules.NodeJS</packageName>
+      <parentFolderId>2ffac0b7-cdad-47b4-b461-06b786dfde55</parentFolderId>
       <stereotypes />
       <metadata>
         <entry key="status" value="assigned" />
