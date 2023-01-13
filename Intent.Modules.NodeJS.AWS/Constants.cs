@@ -33,6 +33,7 @@ internal static class Constants
     public static class Role
     {
         public const string DynamoDbRepositories = "Infrastructure.Persistence.Repositories";
+        public const string SqsSender = "Lib.SQS.Sender";
     }
 
     public static class MetadataKey

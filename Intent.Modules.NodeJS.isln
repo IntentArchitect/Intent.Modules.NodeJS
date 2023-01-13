@@ -23,5 +23,6 @@
     <application id="36a773ae-06d3-4b89-8b7a-64f8d1abf3c8" name="Intent.Modules.NodeJS.AWS.Lambda" relativePath="Intent.Modules.NodeJS.AWS.Lambda/Intent.Modules.NodeJS.AWS.Lambda.application.config" />
     <application id="bba23718-f829-4812-b9f9-d3e5df76e6ad" name="Intent.Modules.NodeJS.AWS.DynamoDB" relativePath="Intent.Modules.NodeJS.AWS.DynamoDB/Intent.Modules.NodeJS.AWS.DynamoDB.application.config" />
     <application id="0ac6173c-974c-4e84-96c5-e91083a67f7e" name="Intent.Modules.NodeJS.AWS.CDK" relativePath="Intent.Modules.NodeJS.AWS.CDK/Intent.Modules.NodeJS.AWS.CDK.application.config" />
+    <application id="72fbbb6f-04b1-4d7f-8bd6-c22a6eec94e9" name="Intent.Modules.NodeJS.AWS.SQS" relativePath="Intent.Modules.NodeJS.AWS.SQS/Intent.Modules.NodeJS.AWS.SQS.application.config" />
   </applications>
 </solution>
