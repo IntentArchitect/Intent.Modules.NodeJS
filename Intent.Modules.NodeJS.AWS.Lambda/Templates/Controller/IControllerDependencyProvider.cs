@@ -16,7 +16,8 @@ internal interface IControllerDependencyProvider
         return new IControllerDependencyProvider[]
         {
             new DynamoDbTableProvider(template),
-            new SqsQueueProvider(template)
+            new SqsQueueProvider(template),
+            new S3BucketProvider(template)
         }
         .ToArray();
     }

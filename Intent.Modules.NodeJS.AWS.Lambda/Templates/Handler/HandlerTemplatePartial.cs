@@ -6,6 +6,7 @@ using Intent.Modules.Common;
 using Intent.Modules.Common.Templates;
 using Intent.Modules.Common.TypeScript.Templates;
 using Intent.Modules.NodeJS.AWS.Lambda.Templates.Controller;
+using Intent.Modules.NodeJS.AWS.Lambda.Templates.Message;
 using Intent.Modules.NodeJS.AWS.Lambda.Templates.Schema;
 using Intent.RoslynWeaver.Attributes;
 using Intent.Templates;
@@ -30,7 +31,7 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Handler
             _handlerStrategy = IHandlerStrategy.ResolveFor(this);
             _dependencyResolvers = IControllerDependencyProvider.GetFor(this);
 
-            AddTypeSource(SchemaTemplate.TemplateId);
+            AddTypeSource(MessageTemplate.TemplateId);
             AddDependency(NpmPackageDependencies.AwsLambda);
             AddDependency(NpmPackageDependencies.Types.AwsLambda);
         }

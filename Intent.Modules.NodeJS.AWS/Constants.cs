@@ -16,6 +16,7 @@ internal static class Constants
         public const string SqsQueue = "SQS Queue";
         public const string Message = "Message";
         public const string Parameter = "Parameter";
+        public const string S3Bucket = "S3 Bucket";
     }
 
     public static class Stereotype
@@ -29,6 +30,17 @@ internal static class Constants
                 public const string RemovalPolicy = "Removal Policy";
             }
         }
+
+        public static class S3BucketSettings
+        {
+            public const string Name = "S3 Bucket Settings";
+
+            public static class Property
+            {
+                public const string RemovalPolicy = "Removal Policy";
+                public const string Versioned = "Versioned";
+            }
+        }
     }
 
     public static class Role
@@ -36,6 +48,7 @@ internal static class Constants
         public const string DynamoDbRepositories = "Infrastructure.Persistence.Repositories";
         public const string SqsSender = "Lib.SQS.Sender";
         public const string Stacks = "CDK.Stacks";
+        public const string S3BucketClient = "Lib.S3.BucketClient";
     }
 
     public static class MetadataKey
@@ -59,6 +72,13 @@ internal static class Constants
         /// Contains the name of the environment variable which holds the queue URL expression.
         /// </summary>
         public const string SqsQueueUrl = "SqsQueueUrl";
+
+        /// <summary>
+        /// Cast to a <see cref="string"/>.
+        ///
+        /// Contains the name of the environment variable which holds the bucket name expression.
+        /// </summary>
+        public const string S3BucketName = "S3BucketName";
 
         /// <summary>
         /// Cast to a <see cref="string"/>.

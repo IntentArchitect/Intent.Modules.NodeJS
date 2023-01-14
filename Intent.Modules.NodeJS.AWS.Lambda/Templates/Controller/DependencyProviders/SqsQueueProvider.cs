@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using Intent.Metadata.Models;
 using Intent.Modelers.AWS.Api;
 using Intent.Modelers.AWS.Lambda.Api;
@@ -31,13 +30,20 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Controller.DependencyProvid
 
         private IEnumerable<Queue> GetQueues()
         {
-            if (!_template.TryGetTemplate<ITypescriptFileBuilderTemplate>(Constants.Role.Stacks, _template.Model.InternalElement.Package, out var stackTemplate) ||
-                !_template.TryGetTemplate<ITemplate>(Constants.Role.SqsSender, out var sqsSenderTemplate))
+            if (!_template.TryGetTemplate(
+                    templateId: Constants.Role.Stacks, 
+                    model: _template.Model.InternalElement.Package, 
+                    template: out ITypescriptFileBuilderTemplate stackTemplate,
+                    trackDependencies: false) ||
+                !_template.TryGetTemplate(
+                    templateId: Constants.Role.SqsSender, 
+                    template: out ITemplate sqsSenderTemplate,
+                    trackDependencies: false))
             {
                 yield break;
             }
 
-            var sqsSenderTypeName = _template.GetTypeName(sqsSenderTemplate);
+            var sqsSenderTypeName = new Lazy<string>(() => _template.GetTypeName(sqsSenderTemplate));
             var statementsByElement = stackTemplate.TypescriptFile.Classes[0].Constructors[0].Statements
                 .Where(x => x.HasMetadata(Constants.MetadataKey.SourceElement))
                 .ToDictionary(
@@ -81,7 +87,7 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Controller.DependencyProvid
                 yield return new Queue
                 {
                     ParameterName = $"{queue.Name.ToCamelCase()}Sender",
-                    TypeName = $"{sqsSenderTypeName}<{messageTypes}>",
+                    TypeName = $"{sqsSenderTypeName.Value}<{messageTypes}>",
                     UrlEnvironmentVariable = urlEnvVarName
                 };
             }
