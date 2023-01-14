@@ -11,16 +11,16 @@ using Intent.Templates;
 [assembly: DefaultIntentManaged(Mode.Fully)]
 [assembly: IntentTemplate("Intent.ModuleBuilder.TemplateRegistration.SingleFileNoModel", Version = "1.0")]
 
-namespace Intent.Modules.NodeJS.AWS.DynamoDB.Templates.TableItemRepositoryBase
+namespace Intent.Modules.NodeJS.AWS.DynamoDB.Templates.EntityRepositoryBase
 {
     [IntentManaged(Mode.Merge, Body = Mode.Merge, Signature = Mode.Fully)]
-    public class TableItemRepositoryBaseTemplateRegistration : SingleFileTemplateRegistration
+    public class EntityRepositoryBaseTemplateRegistration : SingleFileTemplateRegistration
     {
-        public override string TemplateId => TableItemRepositoryBaseTemplate.TemplateId;
+        public override string TemplateId => EntityRepositoryBaseTemplate.TemplateId;
 
         public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget)
         {
-            return new TableItemRepositoryBaseTemplate(outputTarget);
+            return new EntityRepositoryBaseTemplate(outputTarget);
         }
     }
 }

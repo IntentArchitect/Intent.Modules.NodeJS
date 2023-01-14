@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using Intent.Engine;
-using Intent.Modelers.AWS.DynamoDB.Api;
 using Intent.Modules.Common.Templates;
 using Intent.Modules.Common.TypeScript.Templates;
 using Intent.RoslynWeaver.Attributes;
@@ -9,29 +8,28 @@ using Intent.Templates;
 [assembly: DefaultIntentManaged(Mode.Merge)]
 [assembly: IntentTemplate("Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial", Version = "1.0")]
 
-namespace Intent.Modules.NodeJS.AWS.DynamoDB.Templates.TableItemMapAttribute
+namespace Intent.Modules.NodeJS.AWS.DynamoDB.Templates.EntityRepositoryBase
 {
     [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
-    partial class TableItemMapAttributeTemplate : TypeScriptTemplateBase<Intent.Modelers.AWS.DynamoDB.Api.MapAttributeModel>
+    partial class EntityRepositoryBaseTemplate : TypeScriptTemplateBase<object>
     {
         [IntentManaged(Mode.Fully)]
-        public const string TemplateId = "Intent.NodeJS.AWS.DynamoDB.TableItemMapAttribute";
+        public const string TemplateId = "Intent.NodeJS.AWS.DynamoDB.EntityRepositoryBase";
 
         [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
-        public TableItemMapAttributeTemplate(IOutputTarget outputTarget, Intent.Modelers.AWS.DynamoDB.Api.MapAttributeModel model) : base(TemplateId, outputTarget, model)
+        public EntityRepositoryBaseTemplate(IOutputTarget outputTarget, object model = null) : base(TemplateId, outputTarget, model)
         {
-            AddTypeSource(TemplateId);
+            AddDependency(NpmPackageDependencies.AwsSdk.LibDynamodb);
         }
 
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
         public override ITemplateFileConfig GetTemplateFileConfig()
         {
-            var className = $"{Model.Name.RemoveSuffix("Map").RemoveSuffix("MapItem")}MapItem";
+            var className = "EntityRepositoryBase";
 
             return new TypeScriptFileConfig(
                 className: className,
-                fileName: className.ToKebabCase(),
-                relativeLocation: Model.GetTable().Name.ToKebabCase()
+                fileName: className.ToKebabCase()
             );
         }
 

@@ -5,32 +5,32 @@ using Intent.RoslynWeaver.Attributes;
 [assembly: DefaultIntentManaged(Mode.Fully)]
 [assembly: IntentTemplate("Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateStringInterpolation", Version = "1.0")]
 
-namespace Intent.Modules.NodeJS.AWS.DynamoDB.Templates.TableItemRepositoryBase
+namespace Intent.Modules.NodeJS.AWS.DynamoDB.Templates.EntityRepositoryBase
 {
     [IntentManaged(Mode.Fully, Body = Mode.Merge)]
-    public partial class TableItemRepositoryBaseTemplate
+    public partial class EntityRepositoryBaseTemplate
     {
         [IntentManaged(Mode.Fully, Body = Mode.Ignore)]
         public override string TransformText()
         {
             return $@"import {{ DynamoDBDocumentClient, PutCommand, GetCommand, ScanCommand, DeleteCommand }} from ""@aws-sdk/lib-dynamodb"";
 
-export abstract class {ClassName}<TItem, TKey> {{
+export abstract class {ClassName}<TEntity, TKey> {{
     constructor(
         protected client: DynamoDBDocumentClient,
         protected tableName: string
     ) {{ }}
 
-    async put(item: TItem): Promise<void> {{
+    async put(entity: TEntity): Promise<void> {{
         const command = new PutCommand({{
-            Item: item as any,
+            Item: entity as any,
             TableName: this.tableName
         }});
 
         await this.client.send(command);
     }}
 
-    async get(key: TKey): Promise<TItem> {{
+    async get(key: TKey): Promise<TEntity> {{
         const command = new GetCommand({{
             Key: key as any,
             TableName: this.tableName
@@ -41,7 +41,7 @@ export abstract class {ClassName}<TItem, TKey> {{
         return response.Item as any;
     }}
 
-    async scan(): Promise<TItem[]> {{
+    async scan(): Promise<TEntity[]> {{
         const command = new ScanCommand({{
             TableName: this.tableName
         }});

@@ -18,16 +18,16 @@ namespace Intent.Modules.NodeJS.AWS.DynamoDB
 
         public static IEnumerable<(string Name, string AttributeType, string KeyType, string TypeScriptType)> GetKeys(this DynamoDBTableModel model)
         {
-            var hashKey = model.HashKey;
-            if (hashKey != null)
+            var partitionKey = model.PartitionKey;
+            if (partitionKey != null)
             {
-                yield return (hashKey.Name.ToCamelCase(), AttributeValueType(hashKey.TypeReference), "HASH", TypeScriptType(hashKey.TypeReference));
+                yield return (partitionKey.Name.ToCamelCase(), AttributeValueType(partitionKey.TypeReference), "HASH", TypeScriptType(partitionKey.TypeReference));
             }
 
-            var rangeKey = model.RangeKey;
-            if (rangeKey != null)
+            var sortKey = model.SortKey;
+            if (sortKey != null)
             {
-                yield return (rangeKey.Name.ToCamelCase(), AttributeValueType(rangeKey.TypeReference), "RANGE", TypeScriptType(rangeKey.TypeReference));
+                yield return (sortKey.Name.ToCamelCase(), AttributeValueType(sortKey.TypeReference), "RANGE", TypeScriptType(sortKey.TypeReference));
             }
 
             static string TypeScriptType(ITypeReference typeReference)
@@ -65,8 +65,8 @@ namespace Intent.Modules.NodeJS.AWS.DynamoDB
             }
         }
 
-        public static DynamoDBTableModel GetTable(this DynamoDBItemModel model) => new(model.InternalElement.ParentElement);
-        public static DynamoDBTableModel GetTable(this MapAttributeModel model)
+        public static DynamoDBTableModel GetTable(this EntityModel model) => new(model.InternalElement.ParentElement);
+        public static DynamoDBTableModel GetTable(this AttributeModel model)
         {
             var element = model.InternalElement.ParentElement;
             while (element != null)

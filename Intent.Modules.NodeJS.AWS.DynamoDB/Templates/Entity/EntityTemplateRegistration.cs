@@ -13,29 +13,29 @@ using Intent.Templates;
 [assembly: DefaultIntentManaged(Mode.Fully)]
 [assembly: IntentTemplate("Intent.ModuleBuilder.TemplateRegistration.FilePerModel", Version = "1.0")]
 
-namespace Intent.Modules.NodeJS.AWS.DynamoDB.Templates.TableItemMapAttribute
+namespace Intent.Modules.NodeJS.AWS.DynamoDB.Templates.Entity
 {
     [IntentManaged(Mode.Merge, Body = Mode.Merge, Signature = Mode.Fully)]
-    public class TableItemMapAttributeTemplateRegistration : FilePerModelTemplateRegistration<MapAttributeModel>
+    public class EntityTemplateRegistration : FilePerModelTemplateRegistration<EntityModel>
     {
         private readonly IMetadataManager _metadataManager;
 
-        public TableItemMapAttributeTemplateRegistration(IMetadataManager metadataManager)
+        public EntityTemplateRegistration(IMetadataManager metadataManager)
         {
             _metadataManager = metadataManager;
         }
 
-        public override string TemplateId => TableItemMapAttributeTemplate.TemplateId;
+        public override string TemplateId => EntityTemplate.TemplateId;
 
-        public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget, MapAttributeModel model)
+        public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget, EntityModel model)
         {
-            return new TableItemMapAttributeTemplate(outputTarget, model);
+            return new EntityTemplate(outputTarget, model);
         }
 
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
-        public override IEnumerable<MapAttributeModel> GetModels(IApplication application)
+        public override IEnumerable<EntityModel> GetModels(IApplication application)
         {
-            return _metadataManager.Application(application).GetDynamoDBTableModels().SelectMany(x => x.MapAttributes);
+            return _metadataManager.Application(application).GetDynamoDBTableModels().SelectMany(x => x.Entities);
         }
     }
 }

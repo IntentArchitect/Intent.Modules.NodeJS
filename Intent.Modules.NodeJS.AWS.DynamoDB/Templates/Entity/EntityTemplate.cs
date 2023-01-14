@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Intent.Metadata.Models;
 using Intent.Modelers.AWS.DynamoDB.Api;
 using Intent.Modules.Common.Templates;
 using Intent.RoslynWeaver.Attributes;
@@ -7,10 +8,10 @@ using Intent.RoslynWeaver.Attributes;
 [assembly: DefaultIntentManaged(Mode.Fully)]
 [assembly: IntentTemplate("Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateStringInterpolation", Version = "1.0")]
 
-namespace Intent.Modules.NodeJS.AWS.DynamoDB.Templates.TableItemMapAttribute
+namespace Intent.Modules.NodeJS.AWS.DynamoDB.Templates.Entity
 {
     [IntentManaged(Mode.Fully, Body = Mode.Merge)]
-    public partial class TableItemMapAttributeTemplate
+    public partial class EntityTemplate
     {
         [IntentManaged(Mode.Fully, Body = Mode.Ignore)]
         public override string TransformText()
@@ -22,17 +23,19 @@ namespace Intent.Modules.NodeJS.AWS.DynamoDB.Templates.TableItemMapAttribute
 
         private IEnumerable<string> GetMembers()
         {
-            foreach (var model in Model.ScalarAttributes)
+            foreach (var model in Model.Attributes)
             {
                 yield return @$"
-    {model.Name.ToCamelCase()}: {GetTypeName(model.TypeReference)}";
+    {model.Name.ToCamelCase()}{Optionality(model.TypeReference)}: {GetTypeName(model.TypeReference)}";
             }
 
-            foreach (var model in Model.DynamoDbItemAssociationTargetEnd())
+            foreach (var model in Model.AssociatedToClasses())
             {
                 yield return @$"
-    {model.Name}: {GetTypeName(model.TypeReference)}";
+    {model.Name.ToCamelCase()}{Optionality(model.TypeReference)}: {GetTypeName(model.TypeReference)}";
             }
+
+            static string Optionality(ITypeReference x) => x.IsNullable ? "?" : string.Empty;
         }
     }
 }

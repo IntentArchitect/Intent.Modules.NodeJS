@@ -1,11 +1,10 @@
 using System.Collections.Generic;
 using Intent.Modules.Common.Templates;
 using Intent.Modules.NodeJS.AWS.DynamoDB.Templates.DocumentClientProvider;
-using Intent.Modules.NodeJS.AWS.DynamoDB.Templates.TableItem;
-using Intent.Modules.NodeJS.AWS.DynamoDB.Templates.TableItemMapAttribute;
-using Intent.Modules.NodeJS.AWS.DynamoDB.Templates.TableItemRepositories;
-using Intent.Modules.NodeJS.AWS.DynamoDB.Templates.TableItemRepository;
-using Intent.Modules.NodeJS.AWS.DynamoDB.Templates.TableItemRepositoryBase;
+using Intent.Modules.NodeJS.AWS.DynamoDB.Templates.Entity;
+using Intent.Modules.NodeJS.AWS.DynamoDB.Templates.EntityRepositories;
+using Intent.Modules.NodeJS.AWS.DynamoDB.Templates.EntityRepository;
+using Intent.Modules.NodeJS.AWS.DynamoDB.Templates.EntityRepositoryBase;
 using Intent.RoslynWeaver.Attributes;
 
 [assembly: DefaultIntentManaged(Mode.Fully)]
@@ -21,49 +20,39 @@ namespace Intent.Modules.NodeJS.AWS.DynamoDB.Templates
             return template.GetTypeName(DocumentClientProviderTemplate.TemplateId);
         }
 
-        public static string GetTableItemName<T>(this IntentTemplateBase<T> template) where T : Intent.Modelers.AWS.DynamoDB.Api.DynamoDBItemModel
+        public static string GetEntityName<T>(this IntentTemplateBase<T> template) where T : Intent.Modelers.AWS.DynamoDB.Api.EntityModel
         {
-            return template.GetTypeName(TableItemTemplate.TemplateId, template.Model);
+            return template.GetTypeName(EntityTemplate.TemplateId, template.Model);
         }
 
-        public static string GetTableItemName(this IntentTemplateBase template, Intent.Modelers.AWS.DynamoDB.Api.DynamoDBItemModel model)
+        public static string GetEntityName(this IntentTemplateBase template, Intent.Modelers.AWS.DynamoDB.Api.EntityModel model)
         {
-            return template.GetTypeName(TableItemTemplate.TemplateId, model);
+            return template.GetTypeName(EntityTemplate.TemplateId, model);
         }
 
-        public static string GetTableItemMapAttributeName<T>(this IntentTemplateBase<T> template) where T : Intent.Modelers.AWS.DynamoDB.Api.MapAttributeModel
+        public static string GetEntityRepositoriesName<T>(this IntentTemplateBase<T> template) where T : Intent.Modelers.AWS.DynamoDB.Api.DynamoDBTableModel
         {
-            return template.GetTypeName(TableItemMapAttributeTemplate.TemplateId, template.Model);
+            return template.GetTypeName(EntityRepositoriesTemplate.TemplateId, template.Model);
         }
 
-        public static string GetTableItemMapAttributeName(this IntentTemplateBase template, Intent.Modelers.AWS.DynamoDB.Api.MapAttributeModel model)
+        public static string GetEntityRepositoriesName(this IntentTemplateBase template, Intent.Modelers.AWS.DynamoDB.Api.DynamoDBTableModel model)
         {
-            return template.GetTypeName(TableItemMapAttributeTemplate.TemplateId, model);
+            return template.GetTypeName(EntityRepositoriesTemplate.TemplateId, model);
         }
 
-        public static string GetTableItemRepositoriesName<T>(this IntentTemplateBase<T> template) where T : Intent.Modelers.AWS.DynamoDB.Api.DynamoDBTableModel
+        public static string GetEntityRepositoryName<T>(this IntentTemplateBase<T> template) where T : Intent.Modelers.AWS.DynamoDB.Api.EntityModel
         {
-            return template.GetTypeName(TableItemRepositoriesTemplate.TemplateId, template.Model);
+            return template.GetTypeName(EntityRepositoryTemplate.TemplateId, template.Model);
         }
 
-        public static string GetTableItemRepositoriesName(this IntentTemplateBase template, Intent.Modelers.AWS.DynamoDB.Api.DynamoDBTableModel model)
+        public static string GetEntityRepositoryName(this IntentTemplateBase template, Intent.Modelers.AWS.DynamoDB.Api.EntityModel model)
         {
-            return template.GetTypeName(TableItemRepositoriesTemplate.TemplateId, model);
+            return template.GetTypeName(EntityRepositoryTemplate.TemplateId, model);
         }
 
-        public static string GetTableItemRepositoryName<T>(this IntentTemplateBase<T> template) where T : Intent.Modelers.AWS.DynamoDB.Api.DynamoDBItemModel
+        public static string GetEntityRepositoryBaseName<T>(this IntentTemplateBase<T> template)
         {
-            return template.GetTypeName(TableItemRepositoryTemplate.TemplateId, template.Model);
-        }
-
-        public static string GetTableItemRepositoryName(this IntentTemplateBase template, Intent.Modelers.AWS.DynamoDB.Api.DynamoDBItemModel model)
-        {
-            return template.GetTypeName(TableItemRepositoryTemplate.TemplateId, model);
-        }
-
-        public static string GetTableItemRepositoryBaseName<T>(this IntentTemplateBase<T> template)
-        {
-            return template.GetTypeName(TableItemRepositoryBaseTemplate.TemplateId);
+            return template.GetTypeName(EntityRepositoryBaseTemplate.TemplateId);
         }
 
     }

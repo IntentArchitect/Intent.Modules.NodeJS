@@ -12,23 +12,19 @@
       <role>Infrastructure.Persistence.DocumentClient</role>
       <location></location>
     </template>
-    <template id="Intent.NodeJS.AWS.DynamoDB.TableItem" externalReference="801140fc-ea22-4d70-b7bd-70107bbcd91d">
+    <template id="Intent.NodeJS.AWS.DynamoDB.Entity" externalReference="801140fc-ea22-4d70-b7bd-70107bbcd91d">
       <role>Infrastructure.Persistence.Schema.DynamoDB</role>
       <location></location>
     </template>
-    <template id="Intent.NodeJS.AWS.DynamoDB.TableItemMapAttribute" externalReference="b5a9c8c2-426d-4ceb-9ee4-40d5a9fd58c2">
-      <role>Infrastructure.Persistence.Schema.DynamoDB</role>
-      <location></location>
-    </template>
-    <template id="Intent.NodeJS.AWS.DynamoDB.TableItemRepositories" externalReference="c2d36e42-3852-4922-ab2d-ff787a358fac">
+    <template id="Intent.NodeJS.AWS.DynamoDB.EntityRepositories" externalReference="c2d36e42-3852-4922-ab2d-ff787a358fac">
       <role>Infrastructure.Persistence.Repositories</role>
       <location></location>
     </template>
-    <template id="Intent.NodeJS.AWS.DynamoDB.TableItemRepository" externalReference="5bf6be53-4d5d-4ee3-8583-20597dae534c">
+    <template id="Intent.NodeJS.AWS.DynamoDB.EntityRepository" externalReference="5bf6be53-4d5d-4ee3-8583-20597dae534c">
       <role>Infrastructure.Persistence.Repositories.Repository</role>
       <location></location>
     </template>
-    <template id="Intent.NodeJS.AWS.DynamoDB.TableItemRepositoryBase" externalReference="7e5067e5-fb13-4cf6-820c-a36a48585bc1">
+    <template id="Intent.NodeJS.AWS.DynamoDB.EntityRepositoryBase" externalReference="7e5067e5-fb13-4cf6-820c-a36a48585bc1">
       <role>Infrastructure.Persistence.Repositories.RepositoryBase</role>
       <location></location>
     </template>
@@ -42,7 +38,7 @@
     <dependency id="Intent.Common.TypeScript" version="3.3.2" />
     <dependency id="Intent.Modelers.Application" version="1.0.0-pre.0" />
     <dependency id="Intent.Modelers.AWS" version="1.0.0-pre.1" />
-    <dependency id="Intent.Modelers.AWS.DynamoDB" version="1.0.0-pre.1" />
+    <dependency id="Intent.Modelers.AWS.DynamoDB" version="1.0.0-pre.2" />
   </dependencies>
   <files>
     <file src="$outDir$/$id$.dll" />

@@ -13,23 +13,23 @@ using Intent.Templates;
 [assembly: DefaultIntentManaged(Mode.Fully)]
 [assembly: IntentTemplate("Intent.ModuleBuilder.TemplateRegistration.FilePerModel", Version = "1.0")]
 
-namespace Intent.Modules.NodeJS.AWS.DynamoDB.Templates.TableItemRepositories
+namespace Intent.Modules.NodeJS.AWS.DynamoDB.Templates.EntityRepositories
 {
     [IntentManaged(Mode.Merge, Body = Mode.Merge, Signature = Mode.Fully)]
-    public class TableItemRepositoriesTemplateRegistration : FilePerModelTemplateRegistration<DynamoDBTableModel>
+    public class EntityRepositoriesTemplateRegistration : FilePerModelTemplateRegistration<DynamoDBTableModel>
     {
         private readonly IMetadataManager _metadataManager;
 
-        public TableItemRepositoriesTemplateRegistration(IMetadataManager metadataManager)
+        public EntityRepositoriesTemplateRegistration(IMetadataManager metadataManager)
         {
             _metadataManager = metadataManager;
         }
 
-        public override string TemplateId => TableItemRepositoriesTemplate.TemplateId;
+        public override string TemplateId => EntityRepositoriesTemplate.TemplateId;
 
         public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget, DynamoDBTableModel model)
         {
-            return new TableItemRepositoriesTemplate(outputTarget, model);
+            return new EntityRepositoriesTemplate(outputTarget, model);
         }
 
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]

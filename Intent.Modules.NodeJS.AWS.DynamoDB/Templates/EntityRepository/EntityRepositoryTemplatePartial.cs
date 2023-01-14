@@ -9,23 +9,23 @@ using Intent.Templates;
 [assembly: DefaultIntentManaged(Mode.Merge)]
 [assembly: IntentTemplate("Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial", Version = "1.0")]
 
-namespace Intent.Modules.NodeJS.AWS.DynamoDB.Templates.TableItemRepository
+namespace Intent.Modules.NodeJS.AWS.DynamoDB.Templates.EntityRepository
 {
     [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
-    partial class TableItemRepositoryTemplate : TypeScriptTemplateBase<Intent.Modelers.AWS.DynamoDB.Api.DynamoDBItemModel>
+    partial class EntityRepositoryTemplate : TypeScriptTemplateBase<Intent.Modelers.AWS.DynamoDB.Api.EntityModel>
     {
         [IntentManaged(Mode.Fully)]
-        public const string TemplateId = "Intent.NodeJS.AWS.DynamoDB.TableItemRepository";
+        public const string TemplateId = "Intent.NodeJS.AWS.DynamoDB.EntityRepository";
 
         [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
-        public TableItemRepositoryTemplate(IOutputTarget outputTarget, Intent.Modelers.AWS.DynamoDB.Api.DynamoDBItemModel model) : base(TemplateId, outputTarget, model)
+        public EntityRepositoryTemplate(IOutputTarget outputTarget, Intent.Modelers.AWS.DynamoDB.Api.EntityModel model) : base(TemplateId, outputTarget, model)
         {
         }
 
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
         public override ITemplateFileConfig GetTemplateFileConfig()
         {
-            var className = Model.Name.RemoveSuffix("Item").EnsureSuffixedWith("ItemRepository");
+            var className = Model.Name;
 
             return new TypeScriptFileConfig(
                 className: className,
