@@ -7,6 +7,7 @@ using Intent.Modelers.Application.Api;
 using Intent.Modelers.AWS.DynamoDB.Api;
 using Intent.Modules.Common;
 using Intent.Modules.Common.Registrations;
+using Intent.Modules.Modelers.AWS.DynamoDB.Api;
 using Intent.RoslynWeaver.Attributes;
 using Intent.Templates;
 
@@ -35,7 +36,9 @@ namespace Intent.Modules.NodeJS.AWS.DynamoDB.Templates.EntityRepository
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
         public override IEnumerable<EntityModel> GetModels(IApplication application)
         {
-            return _metadataManager.Application(application).GetDynamoDBTableModels().SelectMany(x => x.Entities);
+            return _metadataManager.Application(application).GetDynamoDBTableModels()
+                .SelectMany(x => x.Entities)
+                .Where(x => x.IsAggregateRoot());
         }
     }
 }

@@ -25,11 +25,9 @@ namespace Intent.Modules.NodeJS.AWS.DynamoDB.Templates.EntityRepository
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
         public override ITemplateFileConfig GetTemplateFileConfig()
         {
-            var className = Model.Name;
-
             return new TypeScriptFileConfig(
-                className: className,
-                fileName: className.ToKebabCase(),
+                className: $"{Model.Name.ToPascalCase()}Repository",
+                fileName: $"{Model.Name.ToKebabCase()}-repository",
                 relativeLocation: Model.GetTable().Name.ToKebabCase()
             );
         }

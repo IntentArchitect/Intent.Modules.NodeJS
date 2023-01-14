@@ -1,8 +1,11 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
 using Intent.Modelers.AWS.DynamoDB.Api;
 using Intent.Modules.Common.Templates;
 using Intent.Modules.Common.TypeScript.Templates;
+using Intent.Modules.Modelers.AWS.DynamoDB.Api;
 using Intent.Modules.NodeJS.AWS.CDK;
 using Intent.RoslynWeaver.Attributes;
 
@@ -25,13 +28,17 @@ namespace Intent.Modules.NodeJS.AWS.DynamoDB.Templates.EntityRepositories
 
         private IEnumerable<string> GetMembers()
         {
-            foreach (var entity in Model.Entities)
+            var aggregateRoots = Model.Entities
+                .Where(x => x.IsAggregateRoot())
+                .ToArray();
+
+            foreach (var entity in aggregateRoots)
             {
                 yield return @$"
     private static _{Name(entity)}: {Repository(entity)};";
             }
 
-            foreach (var entity in Model.Entities)
+            foreach (var entity in aggregateRoots)
             {
                 yield return $@"
 
@@ -51,13 +58,16 @@ namespace Intent.Modules.NodeJS.AWS.DynamoDB.Templates.EntityRepositories
         private string GetTableName()
         {
             if (!TryGetTemplate<ITypescriptFileBuilderTemplate>(Constants.Role.Stacks, Model.InternalElement.Package.Id, out var template) ||
-                !template.TypescriptFile.Classes[0].Constructors[0]
-                    .TryGetMetadata(Constants.MetadataKey.DynamoDbTableName, out var dynamoDbTableName))
+                template.TypescriptFile.Classes[0].Constructors[0].Statements
+                    .FirstOrDefault(x =>
+                        x.TryGetMetadata(Constants.MetadataKey.SourceElement, out var sourceElement) &&
+                        Equals(sourceElement, Model.InternalElement))?
+                    .TryGetMetadata(Constants.MetadataKey.DynamoDbTableName, out var dynamoDbTableName) != true)
             {
                 return $"'{Model.Name}'";
             }
 
-            return $"process.env.{dynamoDbTableName}";
+            return $"process.env.{dynamoDbTableName} as string";
         }
     }
 }

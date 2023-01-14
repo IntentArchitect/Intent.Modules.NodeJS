@@ -26,13 +26,13 @@ namespace Intent.Modules.NodeJS.AWS.DynamoDB.Templates.Entity
             foreach (var model in Model.Attributes)
             {
                 yield return @$"
-    {model.Name.ToCamelCase()}{Optionality(model.TypeReference)}: {GetTypeName(model.TypeReference)}";
+    {model.Name.ToCamelCase()}{Optionality(model.TypeReference)}: {GetTypeName(model.TypeReference)};";
             }
 
             foreach (var model in Model.AssociatedToClasses())
             {
                 yield return @$"
-    {model.Name.ToCamelCase()}{Optionality(model.TypeReference)}: {GetTypeName(model.TypeReference)}";
+    {model.Name.ToCamelCase()}{Optionality(model.TypeReference)}: {GetTypeName(model.TypeReference)};";
             }
 
             static string Optionality(ITypeReference x) => x.IsNullable ? "?" : string.Empty;
