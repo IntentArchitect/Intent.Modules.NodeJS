@@ -30,6 +30,7 @@ internal interface IHandlerStrategy
         {
             yield return new ApiGatewayStrategy(template);
             yield return new SqsStrategy(template);
+            yield return new AppSyncStrategy(template);
             yield return new DefaultStrategy(template); // This should always be last, it is the default if none of the other strategies are applicable
         }
 

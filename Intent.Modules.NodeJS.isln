@@ -26,5 +26,6 @@
     <application id="72fbbb6f-04b1-4d7f-8bd6-c22a6eec94e9" name="Intent.Modules.NodeJS.AWS.SQS" relativePath="Intent.Modules.NodeJS.AWS.SQS/Intent.Modules.NodeJS.AWS.SQS.application.config" />
     <application id="391e7f01-99a4-4bc4-8867-f428c652cd37" name="NewModuleIntent.Modules.NodeJS.AWS.S3" relativePath="NewModuleIntent.Modules.NodeJS.AWS.S3/NewModuleIntent.Modules.NodeJS.AWS.S3.application.config" />
     <application id="31f29dd9-67f7-43ca-955b-2b6fbe4de863" name="Intent.Modules.NodeJS.AWS.S3" relativePath="Intent.Modules.NodeJS.AWS.S3/Intent.Modules.NodeJS.AWS.S3.application.config" />
+    <application id="76f6f81e-316a-4eba-aad9-62a71989685c" name="Intent.Modules.NodeJS.AWS.AppSync" relativePath="Intent.Modules.NodeJS.AWS.AppSync/Intent.Modules.NodeJS.AWS.AppSync.application.config" />
   </applications>
 </solution>

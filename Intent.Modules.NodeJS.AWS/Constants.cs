@@ -17,6 +17,8 @@ internal static class Constants
         public const string Message = "Message";
         public const string Parameter = "Parameter";
         public const string S3Bucket = "S3 Bucket";
+        public const string GraphQLSchemaType = "GraphQL Schema Type";
+        public const string GraphQLMutation = "GraphQL Mutation";
     }
 
     public static class Stereotype

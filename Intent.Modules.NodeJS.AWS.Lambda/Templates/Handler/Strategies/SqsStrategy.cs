@@ -21,15 +21,9 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Handler.Strategies
         public bool IsApplicable() => _template.Model.InternalElement.AssociatedElements
             .Any(x => x.Association.SourceEnd.TypeReference.Element is IElement { SpecializationType: Constants.ElementName.SqsQueue });
 
-        public string GetEventType()
-        {
-            return "any";
-        }
+        public string GetEventType() => "any";
 
-        public string GetReturnType()
-        {
-            return "Promise<void>";
-        }
+        public string GetReturnType() => "Promise<void>";
 
         public string GetReturnValue(string resultVariableName) => null;
 

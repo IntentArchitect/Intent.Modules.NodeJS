@@ -34,6 +34,8 @@ Project("{52B49DB5-3EA9-4095-B1A7-DF1AC22D7DAE}") = "Intent.Modules.NodeJS.AWS.S
 EndProject
 Project("{52B49DB5-3EA9-4095-B1A7-DF1AC22D7DAE}") = "Intent.Modules.NodeJS.AWS.S3", "Intent.Modules.NodeJS.AWS.S3\Intent.Modules.NodeJS.AWS.S3.csproj", "{2108976C-BB76-47EF-AD66-7DDE504A5FC4}"
 EndProject
+Project("{52B49DB5-3EA9-4095-B1A7-DF1AC22D7DAE}") = "Intent.Modules.NodeJS.AWS.AppSync", "Intent.Modules.NodeJS.AWS.AppSync\Intent.Modules.NodeJS.AWS.AppSync.csproj", "{982E6E6E-B214-475B-B7C6-C4A80C6FFD39}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -104,6 +106,10 @@ Global
 		{2108976C-BB76-47EF-AD66-7DDE504A5FC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2108976C-BB76-47EF-AD66-7DDE504A5FC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2108976C-BB76-47EF-AD66-7DDE504A5FC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{982E6E6E-B214-475B-B7C6-C4A80C6FFD39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{982E6E6E-B214-475B-B7C6-C4A80C6FFD39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{982E6E6E-B214-475B-B7C6-C4A80C6FFD39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{982E6E6E-B214-475B-B7C6-C4A80C6FFD39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
