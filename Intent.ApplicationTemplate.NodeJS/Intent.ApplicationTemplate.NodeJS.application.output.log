@@ -18,6 +18,14 @@
     </FileLog>
     <FileLog>
       <ProjectId>4a552a10-949b-45ce-8d6b-61f56798a2ca</ProjectId>
+      <CorrelationId>Intent.ApplicationTemplate.Builder.Templates.IatSpecFile#d057ada9-58b9-4977-a8b6-caba7f93617b</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Intent.ApplicationTemplate.NodeJs.AWS.CDK/metadata.iatspec</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>Intent.ApplicationTemplate.NodeJs.AWS.CDK/metadata.iatspec</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>4a552a10-949b-45ce-8d6b-61f56798a2ca</ProjectId>
       <CorrelationId>Intent.VisualStudio.Projects.CoreLibrary.CSProject#4a552a10-949b-45ce-8d6b-61f56798a2ca</CorrelationId>
       <OverwriteBehaviour>once-off</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Intent.ApplicationTemplate.NodeJS.csproj</ApplicationRelativeFilePath>

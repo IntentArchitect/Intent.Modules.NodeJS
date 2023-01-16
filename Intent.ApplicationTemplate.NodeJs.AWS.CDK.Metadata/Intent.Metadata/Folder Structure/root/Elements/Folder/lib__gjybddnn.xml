@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="e8477ad2-7c64-4fe7-99df-0c9356a26ea3" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+  <name>lib</name>
+  <display>lib</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-by-name</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>6d827787-acd8-4885-8710-18a8102f864a</parentFolderId>
+  <packageId>6d827787-acd8-4885-8710-18a8102f864a</packageId>
+  <packageName>root</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="659f2e04-98ca-4c7e-b097-ef27a43bf4f7" type="Role" typeId="8663c9f9-2852-45e7-aaa1-0883a2e6f1da">
+      <name>Lib</name>
+      <display>Lib</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>e8477ad2-7c64-4fe7-99df-0c9356a26ea3</parentFolderId>
+      <packageId>6d827787-acd8-4885-8710-18a8102f864a</packageId>
+      <packageName>root</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

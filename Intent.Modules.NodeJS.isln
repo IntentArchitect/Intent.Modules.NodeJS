@@ -24,8 +24,8 @@
     <application id="bba23718-f829-4812-b9f9-d3e5df76e6ad" name="Intent.Modules.NodeJS.AWS.DynamoDB" relativePath="Intent.Modules.NodeJS.AWS.DynamoDB/Intent.Modules.NodeJS.AWS.DynamoDB.application.config" />
     <application id="0ac6173c-974c-4e84-96c5-e91083a67f7e" name="Intent.Modules.NodeJS.AWS.CDK" relativePath="Intent.Modules.NodeJS.AWS.CDK/Intent.Modules.NodeJS.AWS.CDK.application.config" />
     <application id="72fbbb6f-04b1-4d7f-8bd6-c22a6eec94e9" name="Intent.Modules.NodeJS.AWS.SQS" relativePath="Intent.Modules.NodeJS.AWS.SQS/Intent.Modules.NodeJS.AWS.SQS.application.config" />
-    <application id="391e7f01-99a4-4bc4-8867-f428c652cd37" name="NewModuleIntent.Modules.NodeJS.AWS.S3" relativePath="NewModuleIntent.Modules.NodeJS.AWS.S3/NewModuleIntent.Modules.NodeJS.AWS.S3.application.config" />
     <application id="31f29dd9-67f7-43ca-955b-2b6fbe4de863" name="Intent.Modules.NodeJS.AWS.S3" relativePath="Intent.Modules.NodeJS.AWS.S3/Intent.Modules.NodeJS.AWS.S3.application.config" />
     <application id="76f6f81e-316a-4eba-aad9-62a71989685c" name="Intent.Modules.NodeJS.AWS.AppSync" relativePath="Intent.Modules.NodeJS.AWS.AppSync/Intent.Modules.NodeJS.AWS.AppSync.application.config" />
+    <application id="72a6b652-fbca-4ddc-9f94-66ae12d87a28" name="Intent.ApplicationTemplate.NodeJs.AWS.CDK.Metadata" relativePath="Intent.ApplicationTemplate.NodeJs.AWS.CDK.Metadata/Intent.ApplicationTemplate.NodeJs.AWS.CDK.Metadata.application.config" />
   </applications>
 </solution>

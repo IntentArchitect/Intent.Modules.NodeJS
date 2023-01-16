@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="33994445-1e51-424f-8424-3591d887e049" type="Role" typeId="8663c9f9-2852-45e7-aaa1-0883a2e6f1da">
+  <name>Intent</name>
+  <display>Intent</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>6d827787-acd8-4885-8710-18a8102f864a</parentFolderId>
+  <packageId>6d827787-acd8-4885-8710-18a8102f864a</packageId>
+  <packageName>root</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

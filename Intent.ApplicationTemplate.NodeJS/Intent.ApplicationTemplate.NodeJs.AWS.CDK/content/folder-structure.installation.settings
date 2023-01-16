@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<settings>
+  <targetDesignerId>27916ede-58c6-4356-87b1-0b0628d1e2a7</targetDesignerId>
+  <createPackages>
+    <package id="6d827787-acd8-4885-8710-18a8102f864a" typeId="fbca4a65-b376-482c-a23d-32da9908cac9" type="Root Location Package">
+      <name>root</name>
+      <stereotypes />
+      <childElements>
+        <element id="e8477ad2-7c64-4fe7-99df-0c9356a26ea3" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f" type="Folder">
+          <name>lib</name>
+          <genericTypes />
+          <metadata />
+          <stereotypes />
+          <childElements>
+            <element id="659f2e04-98ca-4c7e-b097-ef27a43bf4f7" typeId="8663c9f9-2852-45e7-aaa1-0883a2e6f1da" type="Role">
+              <name>Lib</name>
+              <genericTypes />
+              <metadata />
+              <stereotypes />
+              <childElements />
+              <isMapped>false</isMapped>
+              <isAbstract>false</isAbstract>
+              <display>Lib</display>
+            </element>
+          </childElements>
+          <isMapped>false</isMapped>
+          <isAbstract>false</isAbstract>
+          <display>lib</display>
+        </element>
+        <element id="6a76070e-7cc4-4e78-b1c7-a4aa248d98b5" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f" type="Folder">
+          <name>services</name>
+          <genericTypes />
+          <metadata />
+          <stereotypes />
+          <childElements>
+            <element id="9dd14dba-6f27-4442-8aac-8af292db554d" typeId="8663c9f9-2852-45e7-aaa1-0883a2e6f1da" type="Role">
+              <name>Services</name>
+              <genericTypes />
+              <metadata />
+              <stereotypes />
+              <childElements />
+              <isMapped>false</isMapped>
+              <isAbstract>false</isAbstract>
+              <display>Services</display>
+            </element>
+          </childElements>
+          <isMapped>false</isMapped>
+          <isAbstract>false</isAbstract>
+          <display>services</display>
+        </element>
+        <element id="33994445-1e51-424f-8424-3591d887e049" typeId="8663c9f9-2852-45e7-aaa1-0883a2e6f1da" type="Role">
+          <name>Intent</name>
+          <genericTypes />
+          <metadata />
+          <stereotypes />
+          <childElements />
+          <isMapped>false</isMapped>
+          <isAbstract>false</isAbstract>
+          <display>Intent</display>
+        </element>
+        <element id="2bd90a9e-93fe-42c3-950f-ce81c33bfae8" typeId="8663c9f9-2852-45e7-aaa1-0883a2e6f1da" type="Role">
+          <name>Root</name>
+          <genericTypes />
+          <metadata />
+          <stereotypes />
+          <childElements />
+          <isMapped>false</isMapped>
+          <isAbstract>false</isAbstract>
+          <display>Root</display>
+        </element>
+      </childElements>
+      <associations />
+      <references />
+    </package>
+  </createPackages>
+</settings>
