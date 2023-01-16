@@ -8,16 +8,16 @@ using Intent.Templates;
 [assembly: DefaultIntentManaged(Mode.Merge)]
 [assembly: IntentTemplate("Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial", Version = "1.0")]
 
-namespace Intent.Modules.NodeJS.AWS.CDK.Templates.ApplicationStackProps
+namespace Intent.Modules.NodeJS.AWS.CDK.Templates.StackBaseProps
 {
     [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
-    partial class ApplicationStackPropsTemplate : TypeScriptTemplateBase<object>
+    partial class StackBasePropsTemplate : TypeScriptTemplateBase<object>
     {
         [IntentManaged(Mode.Fully)]
-        public const string TemplateId = "Intent.NodeJS.AWS.CDK.ApplicationStackProps";
+        public const string TemplateId = "Intent.NodeJS.AWS.CDK.StackBaseProps";
 
         [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
-        public ApplicationStackPropsTemplate(IOutputTarget outputTarget, object model = null) : base(TemplateId, outputTarget, model)
+        public StackBasePropsTemplate(IOutputTarget outputTarget, object model = null) : base(TemplateId, outputTarget, model)
         {
             AddDependency(NpmPackageDependencies.AwsCdkLib);
         }

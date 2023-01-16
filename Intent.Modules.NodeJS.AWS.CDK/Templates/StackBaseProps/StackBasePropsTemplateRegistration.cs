@@ -11,16 +11,16 @@ using Intent.Templates;
 [assembly: DefaultIntentManaged(Mode.Fully)]
 [assembly: IntentTemplate("Intent.ModuleBuilder.TemplateRegistration.SingleFileNoModel", Version = "1.0")]
 
-namespace Intent.Modules.NodeJS.AWS.CDK.Templates.ApplicationStack
+namespace Intent.Modules.NodeJS.AWS.CDK.Templates.StackBaseProps
 {
     [IntentManaged(Mode.Merge, Body = Mode.Merge, Signature = Mode.Fully)]
-    public class ApplicationStackTemplateRegistration : SingleFileTemplateRegistration
+    public class StackBasePropsTemplateRegistration : SingleFileTemplateRegistration
     {
-        public override string TemplateId => ApplicationStackTemplate.TemplateId;
+        public override string TemplateId => StackBasePropsTemplate.TemplateId;
 
         public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget)
         {
-            return new ApplicationStackTemplate(outputTarget);
+            return new StackBasePropsTemplate(outputTarget);
         }
     }
 }

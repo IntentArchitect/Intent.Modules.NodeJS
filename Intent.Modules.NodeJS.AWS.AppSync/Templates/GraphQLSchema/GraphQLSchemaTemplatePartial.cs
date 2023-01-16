@@ -30,7 +30,8 @@ namespace Intent.Modules.NodeJS.AWS.AppSync.Templates.GraphQLSchema
         {
             return new TemplateFileConfig(
                 fileName: $"{Model.Name.ToCamelCase()}",
-                fileExtension: "graphql"
+                fileExtension: "graphql",
+                relativeLocation: this.GetSubstitutedRelativePath(Model.InternalElement.Package)
             );
         }
 

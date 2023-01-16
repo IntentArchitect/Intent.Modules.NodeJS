@@ -53,7 +53,7 @@ internal static class Constants
     {
         public const string DynamoDbRepositories = "Infrastructure.Persistence.Repositories";
         public const string SqsSender = "Lib.SQS.Sender";
-        public const string Stacks = "CDK.Stacks";
+        public const string Stacks = "Services.Stack";
         public const string S3BucketClient = "Lib.S3.BucketClient";
     }
 

@@ -31,7 +31,7 @@ namespace Intent.Modules.NodeJS.AWS.DynamoDB.Templates.Entity
             return new TypeScriptFileConfig(
                 className: className,
                 fileName: className.ToKebabCase(),
-                relativeLocation: Model.GetTable().Name.ToKebabCase()
+                relativeLocation: this.GetSubstitutedRelativePath(Model.InternalElement.Package, Model.GetTable().Name.ToKebabCase())
             );
         }
 

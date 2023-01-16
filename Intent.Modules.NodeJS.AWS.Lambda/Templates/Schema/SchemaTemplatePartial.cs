@@ -29,7 +29,8 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Schema
 
             return new TypeScriptFileConfig(
                 className: className.ToPascalCase(),
-                fileName: className.Replace("DTO", "Dto").ToKebabCase()
+                fileName: className.Replace("DTO", "Dto").ToKebabCase(),
+                relativeLocation: this.GetSubstitutedRelativePath(Model.InternalElement.Package)
             );
         }
 

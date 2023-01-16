@@ -7,10 +7,10 @@ using Intent.RoslynWeaver.Attributes;
 [assembly: DefaultIntentManaged(Mode.Fully)]
 [assembly: IntentTemplate("Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateStringInterpolation", Version = "1.0")]
 
-namespace Intent.Modules.NodeJS.AWS.CDK.Templates.ApplicationStackProps
+namespace Intent.Modules.NodeJS.AWS.CDK.Templates.StackBaseProps
 {
     [IntentManaged(Mode.Fully, Body = Mode.Merge)]
-    public partial class ApplicationStackPropsTemplate
+    public partial class StackBasePropsTemplate
     {
         [IntentManaged(Mode.Fully, Body = Mode.Ignore)]
         public override string TransformText()

@@ -26,7 +26,7 @@ namespace Intent.Modules.NodeJS.AWS.DynamoDB.Templates.DocumentClientProvider
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
         public override ITemplateFileConfig GetTemplateFileConfig()
         {
-            var className = "DocumentClientProvider";
+            const string className = "DocumentClientProvider";
 
             return new TypeScriptFileConfig(
                 className: className,

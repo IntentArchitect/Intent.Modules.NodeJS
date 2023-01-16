@@ -34,54 +34,6 @@
     </FileLog>
     <FileLog>
       <ProjectId>477bb461-710e-4400-aa09-ff52c67e8b78</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateStringInterpolation#aed41ce0-f855-4834-a616-1c4e8dd9c7bb</CorrelationId>
-      <OverwriteBehaviour>always</OverwriteBehaviour>
-      <ApplicationRelativeFilePath>Templates/ApplicationStack/ApplicationStackTemplate.cs</ApplicationRelativeFilePath>
-      <ProjectRelativeFilePath>ApplicationStack/ApplicationStackTemplate.cs</ProjectRelativeFilePath>
-      <IsIgnored>false</IsIgnored>
-    </FileLog>
-    <FileLog>
-      <ProjectId>477bb461-710e-4400-aa09-ff52c67e8b78</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial#aed41ce0-f855-4834-a616-1c4e8dd9c7bb</CorrelationId>
-      <OverwriteBehaviour>always</OverwriteBehaviour>
-      <ApplicationRelativeFilePath>Templates/ApplicationStack/ApplicationStackTemplatePartial.cs</ApplicationRelativeFilePath>
-      <ProjectRelativeFilePath>ApplicationStack/ApplicationStackTemplatePartial.cs</ProjectRelativeFilePath>
-      <IsIgnored>false</IsIgnored>
-    </FileLog>
-    <FileLog>
-      <ProjectId>477bb461-710e-4400-aa09-ff52c67e8b78</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.TemplateRegistration.SingleFileNoModel#aed41ce0-f855-4834-a616-1c4e8dd9c7bb</CorrelationId>
-      <OverwriteBehaviour>always</OverwriteBehaviour>
-      <ApplicationRelativeFilePath>Templates/ApplicationStack/ApplicationStackTemplateRegistration.cs</ApplicationRelativeFilePath>
-      <ProjectRelativeFilePath>ApplicationStack/ApplicationStackTemplateRegistration.cs</ProjectRelativeFilePath>
-      <IsIgnored>false</IsIgnored>
-    </FileLog>
-    <FileLog>
-      <ProjectId>477bb461-710e-4400-aa09-ff52c67e8b78</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateStringInterpolation#e5b29fda-9e0a-4b1e-b798-de1077f179e9</CorrelationId>
-      <OverwriteBehaviour>always</OverwriteBehaviour>
-      <ApplicationRelativeFilePath>Templates/ApplicationStackProps/ApplicationStackPropsTemplate.cs</ApplicationRelativeFilePath>
-      <ProjectRelativeFilePath>ApplicationStackProps/ApplicationStackPropsTemplate.cs</ProjectRelativeFilePath>
-      <IsIgnored>false</IsIgnored>
-    </FileLog>
-    <FileLog>
-      <ProjectId>477bb461-710e-4400-aa09-ff52c67e8b78</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial#e5b29fda-9e0a-4b1e-b798-de1077f179e9</CorrelationId>
-      <OverwriteBehaviour>always</OverwriteBehaviour>
-      <ApplicationRelativeFilePath>Templates/ApplicationStackProps/ApplicationStackPropsTemplatePartial.cs</ApplicationRelativeFilePath>
-      <ProjectRelativeFilePath>ApplicationStackProps/ApplicationStackPropsTemplatePartial.cs</ProjectRelativeFilePath>
-      <IsIgnored>false</IsIgnored>
-    </FileLog>
-    <FileLog>
-      <ProjectId>477bb461-710e-4400-aa09-ff52c67e8b78</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.TemplateRegistration.SingleFileNoModel#e5b29fda-9e0a-4b1e-b798-de1077f179e9</CorrelationId>
-      <OverwriteBehaviour>always</OverwriteBehaviour>
-      <ApplicationRelativeFilePath>Templates/ApplicationStackProps/ApplicationStackPropsTemplateRegistration.cs</ApplicationRelativeFilePath>
-      <ProjectRelativeFilePath>ApplicationStackProps/ApplicationStackPropsTemplateRegistration.cs</ProjectRelativeFilePath>
-      <IsIgnored>false</IsIgnored>
-    </FileLog>
-    <FileLog>
-      <ProjectId>477bb461-710e-4400-aa09-ff52c67e8b78</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.Templates.FileTemplateStringInterpolation#3fd0e072-a08c-4561-93dd-490da6d6a6cb</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/CdkDotJson/CdkDotJsonTemplate.cs</ApplicationRelativeFilePath>
@@ -130,6 +82,54 @@
     </FileLog>
     <FileLog>
       <ProjectId>477bb461-710e-4400-aa09-ff52c67e8b78</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.Templates.FileTemplateStringInterpolation#16d014c7-9b2f-4890-9c25-86b1a9d68629</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Templates/GitIgnore/GitIgnoreTemplate.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>GitIgnore/GitIgnoreTemplate.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>477bb461-710e-4400-aa09-ff52c67e8b78</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.ProjectItemTemplate.Partial#16d014c7-9b2f-4890-9c25-86b1a9d68629</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Templates/GitIgnore/GitIgnoreTemplatePartial.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>GitIgnore/GitIgnoreTemplatePartial.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>477bb461-710e-4400-aa09-ff52c67e8b78</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.TemplateRegistration.SingleFileNoModel#16d014c7-9b2f-4890-9c25-86b1a9d68629</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Templates/GitIgnore/GitIgnoreTemplateRegistration.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>GitIgnore/GitIgnoreTemplateRegistration.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>477bb461-710e-4400-aa09-ff52c67e8b78</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.Templates.FileTemplateStringInterpolation#3165307f-7163-4b78-a3ef-7b5a8c1476f1</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Templates/NpmIgnore/NpmIgnoreTemplate.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>NpmIgnore/NpmIgnoreTemplate.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>477bb461-710e-4400-aa09-ff52c67e8b78</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.ProjectItemTemplate.Partial#3165307f-7163-4b78-a3ef-7b5a8c1476f1</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Templates/NpmIgnore/NpmIgnoreTemplatePartial.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>NpmIgnore/NpmIgnoreTemplatePartial.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>477bb461-710e-4400-aa09-ff52c67e8b78</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.TemplateRegistration.SingleFileNoModel#3165307f-7163-4b78-a3ef-7b5a8c1476f1</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Templates/NpmIgnore/NpmIgnoreTemplateRegistration.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>NpmIgnore/NpmIgnoreTemplateRegistration.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>477bb461-710e-4400-aa09-ff52c67e8b78</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateStringInterpolation#4cc53d00-8349-40b6-a8c6-3b629e3175a3</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Stack/StackTemplate.cs</ApplicationRelativeFilePath>
@@ -150,6 +150,54 @@
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/Stack/StackTemplateRegistration.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Stack/StackTemplateRegistration.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>477bb461-710e-4400-aa09-ff52c67e8b78</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateStringInterpolation#aed41ce0-f855-4834-a616-1c4e8dd9c7bb</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Templates/StackBase/StackBaseTemplate.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>StackBase/StackBaseTemplate.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>477bb461-710e-4400-aa09-ff52c67e8b78</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial#aed41ce0-f855-4834-a616-1c4e8dd9c7bb</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Templates/StackBase/StackBaseTemplatePartial.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>StackBase/StackBaseTemplatePartial.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>477bb461-710e-4400-aa09-ff52c67e8b78</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.TemplateRegistration.SingleFileNoModel#aed41ce0-f855-4834-a616-1c4e8dd9c7bb</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Templates/StackBase/StackBaseTemplateRegistration.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>StackBase/StackBaseTemplateRegistration.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>477bb461-710e-4400-aa09-ff52c67e8b78</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateStringInterpolation#e5b29fda-9e0a-4b1e-b798-de1077f179e9</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Templates/StackBaseProps/StackBasePropsTemplate.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>StackBaseProps/StackBasePropsTemplate.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>477bb461-710e-4400-aa09-ff52c67e8b78</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial#e5b29fda-9e0a-4b1e-b798-de1077f179e9</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Templates/StackBaseProps/StackBasePropsTemplatePartial.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>StackBaseProps/StackBasePropsTemplatePartial.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>477bb461-710e-4400-aa09-ff52c67e8b78</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.TemplateRegistration.SingleFileNoModel#e5b29fda-9e0a-4b1e-b798-de1077f179e9</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Templates/StackBaseProps/StackBasePropsTemplateRegistration.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>StackBaseProps/StackBasePropsTemplateRegistration.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
@@ -182,6 +230,30 @@
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/TsConfig/TsConfigTemplateRegistration.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>TsConfig/TsConfigTemplateRegistration.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>477bb461-710e-4400-aa09-ff52c67e8b78</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.Templates.FileTemplateStringInterpolation#955e97f7-980e-4ea8-ae72-1ef6afb81c1d</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Templates/VsCodeSettings/VsCodeSettingsTemplate.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>VsCodeSettings/VsCodeSettingsTemplate.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>477bb461-710e-4400-aa09-ff52c67e8b78</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.ProjectItemTemplate.Partial#955e97f7-980e-4ea8-ae72-1ef6afb81c1d</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Templates/VsCodeSettings/VsCodeSettingsTemplatePartial.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>VsCodeSettings/VsCodeSettingsTemplatePartial.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>477bb461-710e-4400-aa09-ff52c67e8b78</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.TemplateRegistration.SingleFileNoModel#955e97f7-980e-4ea8-ae72-1ef6afb81c1d</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Templates/VsCodeSettings/VsCodeSettingsTemplateRegistration.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>VsCodeSettings/VsCodeSettingsTemplateRegistration.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
     </FileLog>
   </FileLogs>

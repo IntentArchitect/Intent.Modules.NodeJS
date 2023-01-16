@@ -30,7 +30,8 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Message
 
             return new TypeScriptFileConfig(
                 className: className.ToPascalCase(),
-                fileName: className.ToKebabCase()
+                fileName: className.ToKebabCase(),
+                relativeLocation: this.GetSubstitutedRelativePath(Model.InternalElement.Package)
             );
         }
 

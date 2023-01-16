@@ -17,7 +17,7 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Controller
     [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
     partial class ControllerTemplate : TypeScriptTemplateBase<Intent.Modelers.AWS.Lambda.Api.LambdaFunctionModel, ControllerDecoratorBase>
     {
-        private IReadOnlyCollection<IControllerDependencyProvider> _dependencyResolvers;
+        private readonly IReadOnlyCollection<IControllerDependencyProvider> _dependencyResolvers;
 
         [IntentManaged(Mode.Fully)]
         public const string TemplateId = "Intent.NodeJS.AWS.Lambda.Controller";
@@ -35,7 +35,7 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Controller
             return new TypeScriptFileConfig(
                 className: $"{Model.Name.ToPascalCase()}Controller",
                 fileName: $"{Model.Name.ToKebabCase()}-controller",
-                relativeLocation: this.GetFolderPath("functions", Model.Name.ToKebabCase())
+                relativeLocation: this.GetSubstitutedRelativePath(Model.InternalElement.Package, Model.Name.ToKebabCase())
             );
         }
     }

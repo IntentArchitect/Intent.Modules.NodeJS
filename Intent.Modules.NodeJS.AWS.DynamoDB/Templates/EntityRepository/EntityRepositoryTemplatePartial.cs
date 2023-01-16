@@ -28,7 +28,7 @@ namespace Intent.Modules.NodeJS.AWS.DynamoDB.Templates.EntityRepository
             return new TypeScriptFileConfig(
                 className: $"{Model.Name.ToPascalCase()}Repository",
                 fileName: $"{Model.Name.ToKebabCase()}-repository",
-                relativeLocation: Model.GetTable().Name.ToKebabCase()
+                relativeLocation: this.GetSubstitutedRelativePath(Model.InternalElement.Package, Model.GetTable().Name.ToKebabCase())
             );
         }
 

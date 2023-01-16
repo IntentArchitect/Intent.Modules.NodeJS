@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using Intent.Modules.Common.Templates;
-using Intent.Modules.NodeJS.AWS.CDK.Templates.ApplicationStack;
-using Intent.Modules.NodeJS.AWS.CDK.Templates.ApplicationStackProps;
 using Intent.Modules.NodeJS.AWS.CDK.Templates.EntryPoint;
 using Intent.Modules.NodeJS.AWS.CDK.Templates.Stack;
+using Intent.Modules.NodeJS.AWS.CDK.Templates.StackBase;
+using Intent.Modules.NodeJS.AWS.CDK.Templates.StackBaseProps;
 using Intent.RoslynWeaver.Attributes;
 
 [assembly: DefaultIntentManaged(Mode.Fully)]
@@ -14,15 +14,6 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates
 {
     public static class TemplateExtensions
     {
-        public static string GetApplicationStackName<T>(this IntentTemplateBase<T> template)
-        {
-            return template.GetTypeName(ApplicationStackTemplate.TemplateId);
-        }
-
-        public static string GetApplicationStackPropsName<T>(this IntentTemplateBase<T> template)
-        {
-            return template.GetTypeName(ApplicationStackPropsTemplate.TemplateId);
-        }
         public static string GetEntryPointName<T>(this IntentTemplateBase<T> template)
         {
             return template.GetTypeName(EntryPointTemplate.TemplateId);
@@ -36,6 +27,16 @@ where T : Intent.Modelers.AWS.Api.AWSPackageModel
         public static string GetStackName(this IntentTemplateBase template, Intent.Modelers.AWS.Api.AWSPackageModel model)
         {
             return template.GetTypeName(StackTemplate.TemplateId, model);
+        }
+
+        public static string GetStackBaseName<T>(this IntentTemplateBase<T> template)
+        {
+            return template.GetTypeName(StackBaseTemplate.TemplateId);
+        }
+
+        public static string GetStackBasePropsName<T>(this IntentTemplateBase<T> template)
+        {
+            return template.GetTypeName(StackBasePropsTemplate.TemplateId);
         }
 
     }

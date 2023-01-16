@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <class id="aed41ce0-f855-4834-a616-1c4e8dd9c7bb" type="Typescript File Template" typeId="e6e41d88-2829-41b6-a791-065d2bb44eb3">
-  <name>ApplicationStack</name>
-  <display>ApplicationStack: Single File</display>
+  <name>StackBase</name>
+  <display>StackBase: Single File</display>
   <isAbstract>false</isAbstract>
   <genericTypes />
   <typeReference id="8ce2afe0-78bb-49bc-800a-092109a4d10a">
@@ -37,8 +37,8 @@
         <property name="00d3537c-f71f-4450-8cc8-d9e87c12baee" display="Designer" isActive="true" />
         <property name="75b89367-1808-43f8-9f18-785915ec1630" display="Model Type" value="" isActive="true" />
         <property name="d1e89313-0647-48bd-81da-b04b644db475" display="Model Name" value="object" isActive="false" />
-        <property name="f1d88e59-1ca6-426e-b52d-42f3467e6bd5" display="Role" value="CDK.Lib" isActive="true" />
-        <property name="1ac0fa39-ecea-48f8-92e4-41616a639586" display="Default Location" isActive="true" />
+        <property name="f1d88e59-1ca6-426e-b52d-42f3467e6bd5" display="Role" value="Lib.Stack" isActive="true" />
+        <property name="1ac0fa39-ecea-48f8-92e4-41616a639586" display="Default Location" value="stack" isActive="true" />
       </properties>
     </stereotype>
   </stereotypes>

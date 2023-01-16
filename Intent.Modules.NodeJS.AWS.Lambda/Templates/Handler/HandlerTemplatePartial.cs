@@ -42,7 +42,7 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Handler
             return new TypeScriptFileConfig(
                 className: "main",
                 fileName: "handler",
-                relativeLocation: this.GetFolderPath("functions", Model.Name.ToKebabCase())
+                relativeLocation: this.GetSubstitutedRelativePath(Model.InternalElement.Package, Model.Name.ToKebabCase())
             );
         }
     }

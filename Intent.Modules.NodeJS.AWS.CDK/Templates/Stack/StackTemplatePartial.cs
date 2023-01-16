@@ -38,13 +38,13 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack
                     .AddImport("Construct", "constructs")
                     .AddClass(ClassName, @class => @class
                         .Export()
-                        .ExtendsClass(this.GetApplicationStackName())
+                        .ExtendsClass(this.GetStackBaseName())
                         .AddConstructor(constructor =>
                         {
                             constructor
                                 .AddParameter("scope", "Construct")
                                 .AddParameter("id", "string")
-                                .AddParameter("props", this.GetApplicationStackPropsName(), param => param
+                                .AddParameter("props", this.GetStackBasePropsName(), param => param
                                     .Optional()
                                 )
                                 .CallsSuper(super => super
@@ -73,7 +73,8 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack
 
             return new TypeScriptFileConfig(
                 className: $"{className.ToPascalCase()}Stack",
-                fileName: $"{className.ToSnakeCase()}-stack"
+                fileName: $"{className.ToSnakeCase()}-stack",
+                relativeLocation: this.GetSubstitutedRelativePath(Model.UnderlyingPackage)
             );
         }
     }

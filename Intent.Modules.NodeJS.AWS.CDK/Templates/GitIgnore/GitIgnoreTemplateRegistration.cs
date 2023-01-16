@@ -11,16 +11,16 @@ using Intent.Templates;
 [assembly: DefaultIntentManaged(Mode.Fully)]
 [assembly: IntentTemplate("Intent.ModuleBuilder.TemplateRegistration.SingleFileNoModel", Version = "1.0")]
 
-namespace Intent.Modules.NodeJS.AWS.CDK.Templates.ApplicationStackProps
+namespace Intent.Modules.NodeJS.AWS.CDK.Templates.GitIgnore
 {
     [IntentManaged(Mode.Merge, Body = Mode.Merge, Signature = Mode.Fully)]
-    public class ApplicationStackPropsTemplateRegistration : SingleFileTemplateRegistration
+    public class GitIgnoreTemplateRegistration : SingleFileTemplateRegistration
     {
-        public override string TemplateId => ApplicationStackPropsTemplate.TemplateId;
+        public override string TemplateId => GitIgnoreTemplate.TemplateId;
 
         public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget)
         {
-            return new ApplicationStackPropsTemplate(outputTarget);
+            return new GitIgnoreTemplate(outputTarget);
         }
     }
 }
