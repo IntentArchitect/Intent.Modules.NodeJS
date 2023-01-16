@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="de52ded5-f432-4931-8d5e-b079f32e9ddb" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+  <name>${stackName}</name>
+  <display>${stackName}</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-by-name</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>6a76070e-7cc4-4e78-b1c7-a4aa248d98b5</parentFolderId>
+  <packageId>6d827787-acd8-4885-8710-18a8102f864a</packageId>
+  <packageName>root</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="9dd14dba-6f27-4442-8aac-8af292db554d" type="Role" typeId="8663c9f9-2852-45e7-aaa1-0883a2e6f1da">
+      <name>Services</name>
+      <display>Services</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>de52ded5-f432-4931-8d5e-b079f32e9ddb</parentFolderId>
+      <packageId>6d827787-acd8-4885-8710-18a8102f864a</packageId>
+      <packageName>root</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

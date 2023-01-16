@@ -42,6 +42,7 @@ internal class ApiGatewayStrategy : IHandlerStrategy
     }}"
             : @"{
         statusCode: 200,
+        body: '',
     }";
     }
 
@@ -61,7 +62,7 @@ internal class ApiGatewayStrategy : IHandlerStrategy
 
         foreach (var parameter in _template.Model.Parameters)
         {
-            if (parameter.TypeReference.Element?.SpecializationType == "DTO")
+            if (parameter.TypeReference.Element?.SpecializationType == Constants.ElementName.Message)
             {
                 if (bodyParameterProcessed)
                 {
@@ -69,11 +70,11 @@ internal class ApiGatewayStrategy : IHandlerStrategy
                 }
 
                 bodyParameterProcessed = true;
-                yield return $"event.body as {_template.GetTypeName(parameter)}";
+                yield return "event.body as any";
                 continue;
             }
 
-            var resolvedType = _template.GetTypeName(_associationSourceElement);
+            var resolvedType = _template.GetTypeName(parameter);
             var sourceField = pathItems.Contains(parameter.Name)
                 ? "pathParameters"
                 : "queryStringParameters";
@@ -83,10 +84,10 @@ internal class ApiGatewayStrategy : IHandlerStrategy
                 "number" => "Number",
                 "boolean" => "Boolean",
                 "string" => "String",
-                _ => throw new NotSupportedException($"\"{parameter.Name}\" of resolved type \"{resolvedType}\" is not a supported type. Only DTOs, numbers, booleans and strings are supported.")
+                _ => throw new NotSupportedException($"\"{parameter.Name}\" of resolved type \"{resolvedType}\" is not a supported type. Only Messages, numbers, booleans and strings are supported.")
             };
 
-            yield return $"{converter}(event.{sourceField}[\"{parameter.Name}\"])";
+            yield return $"{converter}(event.{sourceField}?.['{parameter.Name}'])";
         }
     }
 }

@@ -51,10 +51,12 @@ internal static class Constants
 
     public static class Role
     {
-        public const string DynamoDbRepositories = "Infrastructure.Persistence.Repositories";
+        public const string DynamoDbRepositories = "Services.Repositories";
         public const string SqsSender = "Lib.SQS.Sender";
         public const string Stacks = "Services.Stack";
         public const string S3BucketClient = "Lib.S3.BucketClient";
+        public const string LambdaHandler = "Services.Functions.Handler";
+        public const string GraphQlSchema = "Services.AppSync.GraphQlSchema";
     }
 
     public static class MetadataKey

@@ -44,9 +44,10 @@ namespace Intent.Modules.NodeJS.AWS.CDK
             IPackage package,
             params string[] additionalFolders)
         {
+            var packageName = package.Name.ToKebabCase();
             var outputTargetFolders = template.OutputTarget.GetTargetPath()
                 .SkipWhile(x => !"${stackName}".Contains(x.Name, StringComparison.OrdinalIgnoreCase))
-                .Select(x => x.Name.Replace("${stackName}", package.Name, StringComparison.OrdinalIgnoreCase))
+                .Select(x => x.Name.Replace("${stackName}", packageName, StringComparison.OrdinalIgnoreCase))
                 .ToArray();
             var parentFolders = Enumerable.Range(0, outputTargetFolders.Length).Select(_ => "..");
 
@@ -56,9 +57,9 @@ namespace Intent.Modules.NodeJS.AWS.CDK
 
             var allPathParts = parentFolders
                 .Concat(outputTargetFolders)
-                .Concat(allAdditionalFolders);
+                .Concat(allAdditionalFolders.Select(x => x.ToKebabCase()));
 
-            return string.Join('/', allPathParts).Replace("${stackName}", package.Name, StringComparison.OrdinalIgnoreCase);
+            return string.Join('/', allPathParts).Replace("${stackName}", packageName, StringComparison.OrdinalIgnoreCase);
         }
     }
 }

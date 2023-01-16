@@ -90,7 +90,12 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
 
             foreach (var bucket in buckets)
             {
-                var queueVariable = statementsByElement[bucket].VariableName;
+                if (!statementsByElement.TryGetValue(bucket, out var statements))
+                {
+                    return;
+                }
+
+                var queueVariable = statements.VariableName;
                 var associationSources = bucket.AssociatedElements
                     .Where(x => x.IsSourceEnd())
                     .Select(x => (IElement)x.Association.SourceEnd.TypeReference.Element)

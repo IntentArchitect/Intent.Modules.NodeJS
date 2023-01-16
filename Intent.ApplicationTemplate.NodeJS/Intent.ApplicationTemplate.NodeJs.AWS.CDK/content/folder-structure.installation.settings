@@ -33,15 +33,26 @@
           <metadata />
           <stereotypes />
           <childElements>
-            <element id="9dd14dba-6f27-4442-8aac-8af292db554d" typeId="8663c9f9-2852-45e7-aaa1-0883a2e6f1da" type="Role">
-              <name>Services</name>
+            <element id="de52ded5-f432-4931-8d5e-b079f32e9ddb" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f" type="Folder">
+              <name>${stackName}</name>
               <genericTypes />
               <metadata />
               <stereotypes />
-              <childElements />
+              <childElements>
+                <element id="9dd14dba-6f27-4442-8aac-8af292db554d" typeId="8663c9f9-2852-45e7-aaa1-0883a2e6f1da" type="Role">
+                  <name>Services</name>
+                  <genericTypes />
+                  <metadata />
+                  <stereotypes />
+                  <childElements />
+                  <isMapped>false</isMapped>
+                  <isAbstract>false</isAbstract>
+                  <display>Services</display>
+                </element>
+              </childElements>
               <isMapped>false</isMapped>
               <isAbstract>false</isAbstract>
-              <display>Services</display>
+              <display>${stackName}</display>
             </element>
           </childElements>
           <isMapped>false</isMapped>

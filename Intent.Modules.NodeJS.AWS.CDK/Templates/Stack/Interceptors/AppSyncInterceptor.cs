@@ -33,7 +33,7 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
 
             foreach (var resource in resources)
             {
-                var template = _template.GetTemplate<ITemplate>("Lib.GraphQL.Schema", resource, new TemplateDiscoveryOptions
+                var template = _template.GetTemplate<ITemplate>(Constants.Role.GraphQlSchema, resource, new TemplateDiscoveryOptions
                 {
                     TrackDependency = false,
                     ThrowIfNotFound = false
@@ -87,7 +87,12 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
 
             foreach (var graphQl in graphQls)
             {
-                var appsyncVarName = statementsByElement[graphQl].VariableName;
+                if (!statementsByElement.TryGetValue(graphQl, out var statement))
+                {
+                    return;
+                }
+
+                var appsyncVarName = statement.VariableName;
 
                 var elementsMappedToLambdas = graphQl.ChildElements
                     .SelectMany(x => x.ChildElements)

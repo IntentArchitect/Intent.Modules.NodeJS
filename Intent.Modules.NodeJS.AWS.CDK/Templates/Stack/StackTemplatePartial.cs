@@ -73,7 +73,7 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack
 
             return new TypeScriptFileConfig(
                 className: $"{className.ToPascalCase()}Stack",
-                fileName: $"{className.ToSnakeCase()}-stack",
+                fileName: $"{className.ToKebabCase()}-stack",
                 relativeLocation: this.GetSubstitutedRelativePath(Model.UnderlyingPackage)
             );
         }

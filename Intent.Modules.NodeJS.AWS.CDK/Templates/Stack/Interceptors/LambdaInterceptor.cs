@@ -33,7 +33,7 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
 
             foreach (var resource in resources)
             {
-                var template = _stackTemplate.GetTemplate<IClassProvider>("Distribution.Functions.Handler", resource, new TemplateDiscoveryOptions
+                var template = _stackTemplate.GetTemplate<IClassProvider>(Constants.Role.LambdaHandler, resource, new TemplateDiscoveryOptions
                 {
                     TrackDependency = false,
                     ThrowIfNotFound = false
@@ -84,7 +84,12 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
 
             foreach (var lambdaFunction in lambdaFunctions)
             {
-                var lambdaVariable = statementsByElement[lambdaFunction].VariableName;
+                if (!statementsByElement.TryGetValue(lambdaFunction, out var statement))
+                {
+                    continue;
+                }
+
+                var lambdaVariable = statement.VariableName;
                 var associationTargets = lambdaFunction.AssociatedElements
                     .Where(x => x.IsTargetEnd())
                     .Select(x => (IElement)x.Association.TargetEnd.TypeReference.Element);
