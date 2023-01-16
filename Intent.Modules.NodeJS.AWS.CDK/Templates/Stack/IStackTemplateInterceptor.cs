@@ -17,7 +17,8 @@ internal interface IStackTemplateInterceptor
                 new LambdaInterceptor(template),
                 new DynamoDbInterceptor(template),
                 new SqsInterceptor(template),
-                new S3Interceptor(template)
+                new S3Interceptor(template),
+                new AppSyncInterceptor(template)
             }
             .ToArray();
     }

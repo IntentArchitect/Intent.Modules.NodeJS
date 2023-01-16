@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Intent.Metadata.Models;
 using Intent.Modelers.AWS.AppSync.Api;
+using Intent.Modules.Common.Templates;
 using Intent.RoslynWeaver.Attributes;
 
 [assembly: DefaultIntentManaged(Mode.Fully)]
@@ -46,7 +47,7 @@ namespace Intent.Modules.NodeJS.AWS.AppSync.Templates.GraphQLSchema
 
                 foreach (var field in fragment.Fields)
                 {
-                    sb.Append($"    {field.Name}: {field.Type}");
+                    sb.Append($"    {field.Name.ToCamelCase()}: {field.Type}");
                     foreach (var directive in field.Directives)
                     {
                         sb.Append(' ');

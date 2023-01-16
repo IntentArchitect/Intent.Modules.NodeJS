@@ -25,17 +25,6 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.TsConfig
         {
         }
 
-        public override void BeforeTemplateExecution()
-        {
-            base.BeforeTemplateExecution();
-            ExecutionContext.EventDispatcher.Publish(NpmPackageDependencies.Types.Node);
-            ExecutionContext.EventDispatcher.Publish(NpmPackageDependencies.AwsCdk);
-            ExecutionContext.EventDispatcher.Publish(NpmPackageDependencies.AwsCdkLib);
-            ExecutionContext.EventDispatcher.Publish(NpmPackageDependencies.Esbuild); // Removes need for Docker to be running
-            ExecutionContext.EventDispatcher.Publish(NpmPackageDependencies.TsNode);
-            ExecutionContext.EventDispatcher.Publish(NpmPackageDependencies.Typescript);
-        }
-
         public override ITemplateFileConfig GetTemplateFileConfig()
         {
             return new TemplateFileConfig(

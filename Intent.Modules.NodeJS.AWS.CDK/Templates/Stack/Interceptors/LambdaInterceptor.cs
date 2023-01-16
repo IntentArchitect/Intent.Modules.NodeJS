@@ -33,13 +33,20 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
 
             foreach (var resource in resources)
             {
-                var handlerTemplate = _stackTemplate.GetTemplate<IClassProvider>("Distribution.Functions.Handler", resource, new TemplateDiscoveryOptions
+                var template = _stackTemplate.GetTemplate<IClassProvider>("Distribution.Functions.Handler", resource, new TemplateDiscoveryOptions
                 {
-                    TrackDependency = false
+                    TrackDependency = false,
+                    ThrowIfNotFound = false
                 });
+
+                if (template == null)
+                {
+                    continue;
+                }
+
                 var variableName = $"{resource.Name.ToCamelCase()}Function";
-                var relativePath = _stackTemplate.GetRelativePath(handlerTemplate);
-                var exportedTypeName = handlerTemplate.ClassName;
+                var relativePath = _stackTemplate.GetRelativePath(template);
+                var exportedTypeName = template.ClassName;
 
                 constructor.AddStatement(@$"const {variableName} = new NodejsFunction(this, '{resource.Name.ToPascalCase()}Handler', {{
             entry: join(__dirname, '{relativePath}'),

@@ -19,7 +19,12 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.ApplicationStack
         [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
         public ApplicationStackTemplate(IOutputTarget outputTarget, object model = null) : base(TemplateId, outputTarget, model)
         {
+            AddDependency(NpmPackageDependencies.Types.Node);
+            AddDependency(NpmPackageDependencies.AwsCdk);
             AddDependency(NpmPackageDependencies.AwsCdkLib);
+            AddDependency(NpmPackageDependencies.Esbuild); // Removes need for Docker to be running
+            AddDependency(NpmPackageDependencies.TsNode);
+            AddDependency(NpmPackageDependencies.Typescript);
         }
 
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
