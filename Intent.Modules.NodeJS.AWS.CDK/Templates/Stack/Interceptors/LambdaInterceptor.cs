@@ -10,16 +10,16 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
 {
     internal class LambdaInterceptor : IStackTemplateInterceptor
     {
-        private readonly StackTemplate _stackTemplate;
+        private readonly StackTemplate _template;
 
-        public LambdaInterceptor(StackTemplate stackTemplate)
+        public LambdaInterceptor(StackTemplate template)
         {
-            _stackTemplate = stackTemplate;
+            _template = template;
         }
 
         public void ApplyInitial(TypescriptConstructor constructor)
         {
-            var resources = _stackTemplate.Model.UnderlyingPackage.GetChildElementsOfType(Constants.ElementName.LambdaFunction)
+            var resources = _template.Model.UnderlyingPackage.GetChildElementsOfType(Constants.ElementName.LambdaFunction)
                 .OrderBy(x => x.Name)
                 .ToArray();
 
@@ -33,7 +33,7 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
 
             foreach (var resource in resources)
             {
-                var template = _stackTemplate.GetTemplate<IClassProvider>(Constants.Role.LambdaHandler, resource, new TemplateDiscoveryOptions
+                var template = _template.GetTemplate<IClassProvider>(Constants.Role.LambdaHandler, resource, new TemplateDiscoveryOptions
                 {
                     TrackDependency = false,
                     ThrowIfNotFound = false
@@ -45,7 +45,7 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
                 }
 
                 var variableName = $"{resource.Name.ToCamelCase()}Function";
-                var relativePath = _stackTemplate.GetRelativePath(template);
+                var relativePath = _template.GetRelativePath(template);
                 var exportedTypeName = template.ClassName;
 
                 constructor.AddStatement(@$"const {variableName} = new NodejsFunction(this, '{resource.Name.ToPascalCase()}Handler', {{
@@ -66,7 +66,7 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
 
         public void ApplyPost(TypescriptConstructor constructor)
         {
-            var lambdaFunctions = _stackTemplate.Model.UnderlyingPackage.GetChildElementsOfType(Constants.ElementName.LambdaFunction)
+            var lambdaFunctions = _template.Model.UnderlyingPackage.GetChildElementsOfType(Constants.ElementName.LambdaFunction)
                 .OrderBy(x => x.Name)
                 .ToArray();
 

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using Intent.Metadata.Models;
@@ -24,7 +25,7 @@ internal class ApiGatewayStrategy : IHandlerStrategy
         _template = template;
         _associationSourceElement = _template.Model.InternalElement.AssociatedElements
             .Select(x => x.Association.SourceEnd.TypeReference.Element as IElement)
-            .FirstOrDefault(x => x?.SpecializationType == Constants.ElementName.ApiGatewayEndpoint);
+            .FirstOrDefault(x => x?.SpecializationType == Constants.ElementName.ApiMethod);
     }
 
     public bool IsApplicable() => _associationSourceElement != null;
@@ -55,9 +56,10 @@ internal class ApiGatewayStrategy : IHandlerStrategy
     private IEnumerable<string> GetArguments()
     {
         var bodyParameterProcessed = false;
-        var path = _associationSourceElement.GetStereotypeProperty<string>("API Gateway Endpoint Settings", "Path") ?? string.Empty;
-        var pathItems = Regex.Matches(path, "{(.*?)}")
-            .Select(x => x.Value[1..^1])
+        var pathItems = PathParts(_associationSourceElement.ParentElement)
+            .SelectMany(
+                part => Regex.Matches(part, "{(.*?)}"),
+                (_, match) => match.Value[1..^1])
             .ToHashSet();
 
         foreach (var parameter in _template.Model.Parameters)
@@ -88,6 +90,15 @@ internal class ApiGatewayStrategy : IHandlerStrategy
             };
 
             yield return $"{converter}(event.{sourceField}?.['{parameter.Name}'])";
+        }
+
+        static IEnumerable<string> PathParts(IElement element)
+        {
+            while (element.SpecializationType == Constants.ElementName.ApiResource)
+            {
+                yield return element.Name;
+                element = element.ParentElement;
+            }
         }
     }
 }

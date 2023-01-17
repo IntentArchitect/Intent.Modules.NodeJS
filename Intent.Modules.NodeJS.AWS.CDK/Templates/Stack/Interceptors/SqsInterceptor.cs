@@ -9,16 +9,16 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
 {
     internal class SqsInterceptor : IStackTemplateInterceptor
     {
-        private readonly StackTemplate _stackTemplate;
+        private readonly StackTemplate _template;
 
-        public SqsInterceptor(StackTemplate stackTemplate)
+        public SqsInterceptor(StackTemplate template)
         {
-            _stackTemplate = stackTemplate;
+            _template = template;
         }
 
         public void ApplyInitial(TypescriptConstructor constructor)
         {
-            var resources = _stackTemplate.Model.UnderlyingPackage.GetChildElementsOfType(Constants.ElementName.SqsQueue)
+            var resources = _template.Model.UnderlyingPackage.GetChildElementsOfType(Constants.ElementName.SqsQueue)
                 .OrderBy(x => x.Name)
                 .ToArray();
 
@@ -49,7 +49,7 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
 
         public void ApplyPost(TypescriptConstructor constructor)
         {
-            var queues = _stackTemplate.Model.UnderlyingPackage.GetChildElementsOfType(Constants.ElementName.SqsQueue)
+            var queues = _template.Model.UnderlyingPackage.GetChildElementsOfType(Constants.ElementName.SqsQueue)
                 .OrderBy(x => x.Name)
                 .ToArray();
 

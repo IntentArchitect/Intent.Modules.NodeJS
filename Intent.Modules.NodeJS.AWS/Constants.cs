@@ -7,7 +7,6 @@ internal static class Constants
 {
     public static class ElementName
     {
-        public const string ApiGatewayEndpoint = "API Gateway Endpoint";
         public const string DynamoDbTable = "DynamoDB Table";
         public const string IamPolicyStatement = "IAM Policy Statement";
         public const string LambdaFunction = "Lambda Function";
@@ -23,6 +22,9 @@ internal static class Constants
         public const string GraphQLSchemaField = "GraphQL Schema Field";
         public const string GraphQLParameter = "GraphQL Parameter";
         public const string Entity = "Entity";
+        public const string ApiGateway = "API Gateway";
+        public const string ApiMethod = "API Method";
+        public const string ApiResource = "API Resource";
     }
 
     public static class Stereotype

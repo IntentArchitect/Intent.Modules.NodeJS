@@ -10,16 +10,16 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
 {
     internal class DynamoDbInterceptor : IStackTemplateInterceptor
     {
-        private readonly StackTemplate _stackTemplate;
+        private readonly StackTemplate _template;
 
-        public DynamoDbInterceptor(StackTemplate stackTemplate)
+        public DynamoDbInterceptor(StackTemplate template)
         {
-            _stackTemplate = stackTemplate;
+            _template = template;
         }
 
         public void ApplyInitial(TypescriptConstructor constructor)
         {
-            var resources = _stackTemplate.Model.UnderlyingPackage.GetChildElementsOfType(Constants.ElementName.DynamoDbTable)
+            var resources = _template.Model.UnderlyingPackage.GetChildElementsOfType(Constants.ElementName.DynamoDbTable)
                 .OrderBy(x => x.Name)
                 .ToArray();
 
@@ -102,6 +102,49 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
 
         public void ApplyPost(TypescriptConstructor constructor)
         {
+            var tables = _template.Model.UnderlyingPackage.GetChildElementsOfType(Constants.ElementName.DynamoDbTable)
+                .OrderBy(x => x.Name)
+                .ToArray();
+
+            var statementsByElement = constructor.Statements
+                .Where(x => x.HasMetadata(Constants.MetadataKey.SourceElement))
+                .ToDictionary(
+                    x => x.GetMetadata(Constants.MetadataKey.SourceElement),
+                    x => new
+                    {
+                        VariableName = x.GetMetadata(Constants.MetadataKey.VariableName) as string,
+                        EnvironmentVariables = x.Metadata.TryGetValue(Constants.MetadataKey.EnvironmentVariables, out var value)
+                            ? (Dictionary<string, string>)value
+                            : null
+
+                    });
+
+            foreach (var table in tables)
+            {
+                if (!statementsByElement.TryGetValue(table, out var statements))
+                {
+                    return;
+                }
+
+                var queueVariable = statements.VariableName;
+                var associationSources = table.AssociatedElements
+                    .Where(x => x.IsSourceEnd())
+                    .Select(x => (IElement)x.Association.SourceEnd.TypeReference.Element)
+                    .ToArray();
+
+                foreach (var resource in associationSources)
+                {
+                    if (!statementsByElement.TryGetValue(resource, out var resourceStatement))
+                    {
+                        continue;
+                    }
+
+                    if (resource.SpecializationType == Constants.ElementName.LambdaFunction)
+                    {
+                        constructor.AddStatement($"{queueVariable}.grantReadWriteData({resourceStatement.VariableName});");
+                    }
+                }
+            }
         }
     }
 }

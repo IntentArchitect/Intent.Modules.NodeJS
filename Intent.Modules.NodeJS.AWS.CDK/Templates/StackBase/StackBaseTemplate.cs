@@ -16,11 +16,32 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.StackBase
         {
             return $@"import {{ Stack }} from 'aws-cdk-lib'
 import {{ Construct }} from 'constructs'
+import * as apigateway from 'aws-cdk-lib/aws-apigateway';
+import * as lambda from 'aws-cdk-lib/aws-lambda';
+
+type ResourceApi = {{
+    name: string;
+    methods: {{
+        verb: string,
+        lambda: lambda.IFunction,
+    }}[];
+    resources: ResourceApi[]
+}}
 
 export class {ClassName} extends Stack {{
     // {this.IntentIgnoreBodyDecorator()}
     constructor (scope: Construct, id: string, props?: {this.GetStackBasePropsName()}) {{
         super(scope, id, props);
+    }}
+
+    protected applyApi(target: apigateway.IResource, source: ResourceApi): void {{
+        for (const sourceMethod of source.methods) {{
+            target.addMethod(sourceMethod.verb, new apigateway.LambdaIntegration(sourceMethod.lambda));
+        }}
+    
+        for (const sourceResource of source.resources) {{
+            this.applyApi(target.addResource(sourceResource.name), sourceResource);
+        }}
     }}
 }}
 ";

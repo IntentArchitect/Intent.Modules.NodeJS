@@ -12,16 +12,16 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
 {
     internal class S3Interceptor : IStackTemplateInterceptor
     {
-        private readonly StackTemplate _stackTemplate;
+        private readonly StackTemplate _template;
 
-        public S3Interceptor(StackTemplate stackTemplate)
+        public S3Interceptor(StackTemplate template)
         {
-            _stackTemplate = stackTemplate;
+            _template = template;
         }
 
         public void ApplyInitial(TypescriptConstructor constructor)
         {
-            var resources = _stackTemplate.Model.UnderlyingPackage.GetChildElementsOfType(Constants.ElementName.S3Bucket)
+            var resources = _template.Model.UnderlyingPackage.GetChildElementsOfType(Constants.ElementName.S3Bucket)
                 .OrderBy(x => x.Name)
                 .ToArray();
 
@@ -71,7 +71,7 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
 
         public void ApplyPost(TypescriptConstructor constructor)
         {
-            var buckets = _stackTemplate.Model.UnderlyingPackage.GetChildElementsOfType(Constants.ElementName.S3Bucket)
+            var buckets = _template.Model.UnderlyingPackage.GetChildElementsOfType(Constants.ElementName.S3Bucket)
                 .OrderBy(x => x.Name)
                 .ToArray();
 
