@@ -34,7 +34,7 @@
           <stereotypes />
           <childElements>
             <element id="de52ded5-f432-4931-8d5e-b079f32e9ddb" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f" type="Folder">
-              <name>StackName</name>
+              <name>${stackName}</name>
               <genericTypes />
               <metadata />
               <stereotypes />
@@ -52,7 +52,7 @@
               </childElements>
               <isMapped>false</isMapped>
               <isAbstract>false</isAbstract>
-              <display>StackName</display>
+              <display>${stackName}</display>
             </element>
           </childElements>
           <isMapped>false</isMapped>
