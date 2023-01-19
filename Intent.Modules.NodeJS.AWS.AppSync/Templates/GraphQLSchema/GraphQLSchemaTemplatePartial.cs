@@ -70,26 +70,21 @@ namespace Intent.Modules.NodeJS.AWS.AppSync.Templates.GraphQLSchema
                 directives: Enumerable.Empty<Directive>(),
                 type: type,
                 name: name,
-                fields: schemaType.Fields.Select(x => new Field(x.Name, GetSchemaTypeName(x))));
+                fields: schemaType.Fields.Select(x => new Field(x.Name, GetSchemaTypeName(x, isInput))));
         }
 
         private IEnumerable<Fragment> SchemaFieldFragments()
         {
-            if (Model.QueryType?.Queries.Count > 0)
-            {
-                var fields = Model.QueryType.Queries
-                    .Select(q => new Field($"{q.Name}{Parameters(q.Parameters.Select(p => p.InternalElement))}", GetSchemaTypeName(q)));
+            var queryFields = Model.QueryType.Queries
+                .Select(q => new Field($"{q.Name}{Parameters(q.Parameters.Select(p => p.InternalElement))}",
+                    GetSchemaTypeName(q)));
+            yield return new Fragment(Enumerable.Empty<Directive>(), "type", "Query", queryFields);
 
-                yield return new Fragment(Enumerable.Empty<Directive>(), "type", "Query", fields);
-            }
-
-            if (Model.MutationType?.Mutations.Count > 0)
-            {
-                var fields = Model.MutationType.Mutations
-                    .Select(m => new Field($"{m.Name}{Parameters(m.Parameters.Select(p => p.InternalElement), isForInput: true)}", GetSchemaTypeName(m)));
-
-                yield return new Fragment(Enumerable.Empty<Directive>(), "type", "Mutation", fields);
-            }
+            var mutationFields = Model.MutationType.Mutations
+                .Select(m =>
+                    new Field($"{m.Name}{Parameters(m.Parameters.Select(p => p.InternalElement), isForInput: true)}",
+                        GetSchemaTypeName(m)));
+            yield return new Fragment(Enumerable.Empty<Directive>(), "type", "Mutation", mutationFields);
 
             static string Parameters(IEnumerable<IElement> elements, bool isForInput = false)
             {
@@ -106,7 +101,8 @@ namespace Intent.Modules.NodeJS.AWS.AppSync.Templates.GraphQLSchema
             return Enumerable.Empty<GraphQLParameterModel>()
                 .Concat(Model.QueryType.Queries.SelectMany(x => x.Parameters))
                 .Concat(Model.MutationType.Mutations.SelectMany(x => x.Parameters))
-                .SelectMany(x => Inputs(x.TypeReference.Element));
+                .SelectMany(x => Inputs(x.TypeReference.Element))
+                .Distinct();
 
             static IEnumerable<GraphQLSchemaTypeModel> Inputs(ICanBeReferencedType canBeReferencedType)
             {
