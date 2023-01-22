@@ -67,9 +67,6 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
 
         public void ApplyPost(TypescriptConstructor constructor)
         {
-            // Reference: https://docs.aws.amazon.com/appsync/latest/devguide/resolver-reference-js-version.html
-            // Blog: https://aws.amazon.com/blogs/mobile/getting-started-with-javascript-resolvers-in-aws-appsync-graphql-apis/
-
             var graphQls = _template.Model.UnderlyingPackage.GetChildElementsOfType(Constants.ElementName.GraphQLEndpoint)
                 .OrderBy(x => x.Name)
                 .ToArray();
@@ -118,21 +115,30 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
 
                 foreach (var (element, mappedElement) in mappedElements)
                 {
+                    static string TypeName(IElement element) =>
+                        element.ParentElement.SpecializationType switch
+                        {
+                            Constants.ElementName.GraphQLMutationType or Constants.ElementName.GraphQLQueryType => element.ParentElement.Name,
+                            _ => element.ParentElement.Name.EnsureSuffixedWith("Type")
+                        };
+
                     // To Lambdas
                     if (mappedElement.SpecializationType == Constants.ElementName.LambdaFunction)
                     {
                         var lambdaVarName = statementsByElement[(IElement)element.MappedElement.Element].VariableName;
+                        var namePrefix = $"{element.ParentElement.Name.ToCamelCase()}{element.Name.ToPascalCase().RemoveSuffix("Lambda")}";
 
                         constructor.AddStatement($@"{appsyncVarName}
-            .addLambdaDataSource('{element.Name.RemoveSuffix("Lambda")}LambdaDataSource', {lambdaVarName})
-            .createResolver('{element.Name}Resolver', {{
-                typeName: '{element.ParentElement.Name}',
-                fieldName: '{element.Name}',
+            .addLambdaDataSource('{namePrefix}LambdaDataSource', {lambdaVarName})
+            .createResolver('{namePrefix}Resolver', {{
+                typeName: '{TypeName(element)}',
+                fieldName: '{element.Name.ToCamelCase()}',
                 requestMappingTemplate: appsync.MappingTemplate.lambdaRequest(),
                 responseMappingTemplate: appsync.MappingTemplate.lambdaResult()
             }});");
                     }
 
+                    // To DynamoDb
                     if (mappedElement.SpecializationType == Constants.ElementName.Entity)
                     {
                         if (!TryGetConvention(element, mappedElement, out var convention))
@@ -180,7 +186,7 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
                         };
 
                         constructor.AddStatement(@$"{dataSourceVarName}.createResolver('{fieldName}{typeName.ToPascalCase()}Resolver', {{
-            typeName: '{typeName}',
+            typeName: '{TypeName(element)}',
             fieldName: '{fieldName}',
             requestMappingTemplate: {requestMappingTemplate},
             responseMappingTemplate: {responseMappingTemplate},

@@ -18,6 +18,8 @@ internal static class Constants
         public const string S3Bucket = "S3 Bucket";
         public const string GraphQLSchemaType = "GraphQL Schema Type";
         public const string GraphQLMutation = "GraphQL Mutation";
+        public const string GraphQLMutationType = "GraphQL Mutation Type";
+        public const string GraphQLQueryType = "GraphQL Query Type";
         public const string GraphQLEndpoint = "GraphQL Endpoint";
         public const string GraphQLSchemaField = "GraphQL Schema Field";
         public const string GraphQLParameter = "GraphQL Parameter";

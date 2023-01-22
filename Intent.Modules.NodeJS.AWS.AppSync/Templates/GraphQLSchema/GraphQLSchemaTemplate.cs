@@ -47,7 +47,18 @@ namespace Intent.Modules.NodeJS.AWS.AppSync.Templates.GraphQLSchema
 
                 foreach (var field in fragment.Fields)
                 {
-                    sb.Append($"    {field.Name.ToCamelCase()}: {field.Type}");
+                    sb.Append($"    {field.Name.ToCamelCase()}");
+
+                    var parameters = string.Join(
+                        separator: ", ",
+                        values: field.Parameters.Select(x => $"{x.Name}: {x.Type}"));
+
+                    if (parameters.Length > 0)
+                    {
+                        sb.Append($"({parameters})");
+                    }
+
+                    sb.Append($": {field.Type}");
                     foreach (var directive in field.Directives)
                     {
                         sb.Append(' ');

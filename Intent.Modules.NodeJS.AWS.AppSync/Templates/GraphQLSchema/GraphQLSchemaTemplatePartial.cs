@@ -37,21 +37,41 @@ namespace Intent.Modules.NodeJS.AWS.AppSync.Templates.GraphQLSchema
 
         private IEnumerable<Fragment> GetFragments()
         {
-            var schemaFieldFragments = SchemaFieldFragments().ToArray();
-
-            yield return new Fragment(
-                name: "schema",
-                type: null,
-                fields: schemaFieldFragments
-                    .Select(x => new Field(x.Name.ToLowerInvariant(), x.Name)),
-                directives: Array.Empty<Directive>());
-
-            foreach (var schemaFieldFragment in schemaFieldFragments)
+            var rootFragmentItems = new List<(Field Field, Fragment ReferencedType)>(2)
             {
-                yield return schemaFieldFragment;
+                Model.QueryType != null
+                    ? (
+                        new Field("query", Model.QueryType.Name),
+                        GetFragment(Model.QueryType.InternalElement, isInput: false))
+                    // Fabricate an empty entry so as not to prevent `cdk synth` from failing with an error
+                    : (
+                        new Field("query", "Query"),
+                        new Fragment(
+                            directives: Enumerable.Empty<Directive>(),
+                            type: "type",
+                            name: "Query",
+                            fields: Enumerable.Empty<Field>()))
+            };
+
+            if (Model.MutationType != null)
+            {
+                rootFragmentItems.Add((
+                    new Field("mutation", Model.MutationType.Name),
+                    GetFragment(Model.MutationType.InternalElement, isInput: false)));
             }
 
-            foreach (var type in Model.Types)
+            yield return new Fragment(
+                directives: Array.Empty<Directive>(),
+                type: null,
+                name: "schema",
+                fields: rootFragmentItems.Select(x => x.Field));
+
+            foreach (var (_, type) in rootFragmentItems)
+            {
+                yield return type;
+            }
+
+            foreach (var type in Model.Types.Select(x => x.InternalElement))
             {
                 yield return GetFragment(type, isInput: false);
             }
@@ -62,49 +82,40 @@ namespace Intent.Modules.NodeJS.AWS.AppSync.Templates.GraphQLSchema
             }
         }
 
-        private static Fragment GetFragment(GraphQLSchemaTypeModel schemaType, bool isInput)
+        private static Fragment GetFragment(IElement element, bool isInput)
         {
-            var (type, name) = GetTypeAndName(schemaType.Name, isInput);
+            var (type, name) = GetTypeAndName(element, isInput);
 
             return new Fragment(
                 directives: Enumerable.Empty<Directive>(),
                 type: type,
                 name: name,
-                fields: schemaType.Fields.Select(x => new Field(x.Name, GetSchemaTypeName(x, isInput))));
+                fields: GetFields(element, isInput));
         }
 
-        private IEnumerable<Fragment> SchemaFieldFragments()
+        private static IEnumerable<Field> GetFields(IElement element, bool isInput)
         {
-            var queryFields = Model.QueryType.Queries
-                .Select(q => new Field($"{q.Name}{Parameters(q.Parameters.Select(p => p.InternalElement))}",
-                    GetSchemaTypeName(q)));
-            yield return new Fragment(Enumerable.Empty<Directive>(), "type", "Query", queryFields);
-
-            var mutationFields = Model.MutationType.Mutations
-                .Select(m =>
-                    new Field($"{m.Name}{Parameters(m.Parameters.Select(p => p.InternalElement), isForInput: true)}",
-                        GetSchemaTypeName(m)));
-            yield return new Fragment(Enumerable.Empty<Directive>(), "type", "Mutation", mutationFields);
-
-            static string Parameters(IEnumerable<IElement> elements, bool isForInput = false)
-            {
-                var parameters = string.Join(", ", elements.Select(x => $"{x.Name}: {GetSchemaTypeName(x.TypeReference, isForInput)}"));
-
-                return parameters.Length > 0
-                    ? $"({parameters})"
-                    : string.Empty;
-            }
+            return element.ChildElements
+                .Where(field => field.SpecializationType is GraphQLSchemaFieldModel.SpecializationType or GraphQLMutationModel.SpecializationType)
+                .Select(field => new Field(
+                    name: field.Name,
+                    type: GetSchemaType(field.TypeReference, isInput),
+                    parameters: field.ChildElements
+                        .Where(parameter => parameter.SpecializationType == GraphQLParameterModel.SpecializationType)
+                        .Select(parameter => new Parameter(
+                            name: parameter.Name,
+                            type: GetSchemaType(parameter.TypeReference, isForInput: true)))));
         }
 
-        private IEnumerable<GraphQLSchemaTypeModel> GetInputTypes()
+        private IEnumerable<IElement> GetInputTypes()
         {
             return Enumerable.Empty<GraphQLParameterModel>()
-                .Concat(Model.QueryType.Queries.SelectMany(x => x.Parameters))
-                .Concat(Model.MutationType.Mutations.SelectMany(x => x.Parameters))
+                .Concat(Model.QueryType?.Queries.SelectMany(x => x.Parameters) ?? Enumerable.Empty<GraphQLParameterModel>())
+                .Concat(Model.MutationType?.Mutations.SelectMany(x => x.Parameters) ?? Enumerable.Empty<GraphQLParameterModel>())
                 .SelectMany(x => Inputs(x.TypeReference.Element))
                 .Distinct();
 
-            static IEnumerable<GraphQLSchemaTypeModel> Inputs(ICanBeReferencedType canBeReferencedType)
+            static IEnumerable<IElement> Inputs(ICanBeReferencedType canBeReferencedType)
             {
                 if (canBeReferencedType is not IElement element ||
                     !element.IsGraphQLSchemaTypeModel())
@@ -112,30 +123,33 @@ namespace Intent.Modules.NodeJS.AWS.AppSync.Templates.GraphQLSchema
                     yield break;
                 }
 
-                var schemaTypeModel = element.AsGraphQLSchemaTypeModel();
+                yield return element;
 
-                yield return schemaTypeModel;
-
-                foreach (var fieldSchemaTypeModel in schemaTypeModel.Fields.SelectMany(x => Inputs(x.TypeReference.Element)))
+                foreach (var fieldSchemaTypeModel in element.ChildElements
+                             .Where(x => x.SpecializationType == GraphQLSchemaFieldModel.SpecializationType)
+                             .SelectMany(x => Inputs(x.TypeReference.Element)))
                 {
                     yield return fieldSchemaTypeModel;
                 }
             }
         }
 
-        private static (string Type, string Name) GetTypeAndName(string typeName, bool isInput)
+        private static (string Type, string Name) GetTypeAndName(IElement element, bool isInput)
         {
-            var strippedName = typeName.RemoveSuffix("Input", "Type");
+            if (element.SpecializationType is GraphQLMutationTypeModel.SpecializationType
+                or GraphQLQueryTypeModel.SpecializationType)
+            {
+                return ("type", element.Name);
+            }
+
+            var strippedName = element.Name.RemoveSuffix("Input", "Type");
 
             return isInput
                 ? (Type: "input", Name: $"{strippedName}Input")
                 : (Type: "type", Name: $"{strippedName}Type");
         }
 
-        private static string GetSchemaTypeName(IHasTypeReference hasTypeReference, bool isForInput = false)
-            => GetSchemaTypeName(hasTypeReference.TypeReference, isForInput);
-
-        private static string GetSchemaTypeName(ITypeReference typeReference, bool isForInput = false)
+        private static string GetSchemaType(ITypeReference typeReference, bool isForInput = false)
         {
             const string unknown = "UNKNOWN";
 
@@ -143,6 +157,8 @@ namespace Intent.Modules.NodeJS.AWS.AppSync.Templates.GraphQLSchema
             var typeName = element?.SpecializationType switch
             {
                 GraphQLSchemaTypeModel.SpecializationType => $"{element.Name.RemoveSuffix("Input", "Type")}{(isForInput ? "Input" : "Type")}",
+                GraphQLQueryTypeModel.SpecializationType => element.Name,
+                GraphQLMutationTypeModel.SpecializationType => element.Name,
                 TypeDefinitionModel.SpecializationType => element.Name switch
                 {
                     "binary" => "String",
@@ -196,7 +212,27 @@ namespace Intent.Modules.NodeJS.AWS.AppSync.Templates.GraphQLSchema
 
         private class Field
         {
-            public Field(string name, string type, IEnumerable<Directive> directives = null)
+            public Field(
+                string name,
+                string type,
+                IEnumerable<Parameter> parameters = null,
+                IEnumerable<Directive> directives = null)
+            {
+                Name = name;
+                Type = type;
+                Parameters = parameters ?? Enumerable.Empty<Parameter>();
+                Directives = directives ?? Enumerable.Empty<Directive>();
+            }
+
+            public string Name { get; }
+            public string Type { get; }
+            public IEnumerable<Directive> Directives { get; }
+            public IEnumerable<Parameter> Parameters { get; }
+        }
+
+        private class Parameter
+        {
+            public Parameter(string name, string type, IEnumerable<Directive> directives = null)
             {
                 Name = name;
                 Type = type;
