@@ -13,7 +13,7 @@ namespace Intent.Modules.NodeJS.AWS.DynamoDB.Templates.EntityRepositoryBase
         [IntentManaged(Mode.Fully, Body = Mode.Ignore)]
         public override string TransformText()
         {
-            return $@"import {{ DynamoDBDocumentClient, PutCommand, GetCommand, ScanCommand, DeleteCommand }} from ""@aws-sdk/lib-dynamodb"";
+            return $@"import {{ DeleteCommand, DynamoDBDocumentClient, GetCommand, PutCommand, QueryCommand, QueryCommandInput, ScanCommand }} from ""@aws-sdk/lib-dynamodb"";
 
 export abstract class {ClassName}<TEntity, TKey> {{
     constructor(
@@ -47,6 +47,15 @@ export abstract class {ClassName}<TEntity, TKey> {{
         }});
 
         var response = await this.client.send(command);
+
+        return response.Items as any;
+    }}
+
+    async query(commandInput: Omit<QueryCommandInput, 'TableName'>): Promise<TEntity[]> {{
+        var response = await this.client.send(new QueryCommand({{
+            TableName: this.tableName,
+            ...commandInput
+        }}));
 
         return response.Items as any;
     }}
