@@ -12,22 +12,6 @@
   <stereotypes />
   <metadata />
   <childElements>
-    <childElement id="d416f527-6fc3-49aa-b3ef-16cd78781783" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
-      <name>Intent.NodeJS.NestJS.Authentication.Users.User</name>
-      <display>Intent.NodeJS.NestJS.Authentication.Users.User</display>
-      <externalReference>Intent.NodeJS.NestJS.Authentication</externalReference>
-      <isAbstract>false</isAbstract>
-      <genericTypes />
-      <isMapped>false</isMapped>
-      <parentFolderId>4733a203-d5be-4aee-98ef-8774c387ed4a</parentFolderId>
-      <packageId>8ca8dbb2-db0e-4241-936f-e3bbdfffd30c</packageId>
-      <packageName>NodeJS.NestJS.TestApplication</packageName>
-      <stereotypes />
-      <metadata>
-        <entry key="status" value="assigned" />
-      </metadata>
-      <childElements />
-    </childElement>
     <childElement id="bf04d204-0b3c-4a91-8ecb-d4a667ca0e24" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
       <name>Intent.NodeJS.NestJS.Authentication.Users.UsersModule</name>
       <display>Intent.NodeJS.NestJS.Authentication.Users.UsersModule</display>
@@ -54,6 +38,20 @@
       <parentFolderId>4733a203-d5be-4aee-98ef-8774c387ed4a</parentFolderId>
       <packageId>8ca8dbb2-db0e-4241-936f-e3bbdfffd30c</packageId>
       <packageName>NodeJS.NestJS.TestApplication</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="3d2f5751-d7bd-42cb-a9f9-06e180c0f890" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Intent.NodeJS.NestJS.Authentication.Users.UserContext</name>
+      <display>Intent.NodeJS.NestJS.Authentication.Users.UserContext</display>
+      <externalReference>Intent.NodeJS.NestJS.Authentication</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>4733a203-d5be-4aee-98ef-8774c387ed4a</parentFolderId>
       <stereotypes />
       <metadata>
         <entry key="status" value="assigned" />

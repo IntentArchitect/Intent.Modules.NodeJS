@@ -199,6 +199,14 @@
     </FileLog>
     <FileLog>
       <ProjectId>859f92c6-7e30-49b7-a629-5bde8b2a2719</ProjectId>
+      <CorrelationId>Intent.NodeJS.TypeORM.BasicAuditingSubscriber</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>src/typeorm/basic-auditing-subscriber.ts</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>basic-auditing-subscriber.ts</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>859f92c6-7e30-49b7-a629-5bde8b2a2719</ProjectId>
       <CorrelationId>Intent.NodeJS.TypeORM.TypeOrmExDecorator</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>src/typeorm/typeorm-ex.decorator.ts</ApplicationRelativeFilePath>
@@ -215,10 +223,10 @@
     </FileLog>
     <FileLog>
       <ProjectId>4733a203-d5be-4aee-98ef-8774c387ed4a</ProjectId>
-      <CorrelationId>Intent.NodeJS.NestJS.Authentication.Users.User</CorrelationId>
+      <CorrelationId>Intent.NodeJS.NestJS.Authentication.Users.UserContext</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
-      <ApplicationRelativeFilePath>src/users/user.ts</ApplicationRelativeFilePath>
-      <ProjectRelativeFilePath>user.ts</ProjectRelativeFilePath>
+      <ApplicationRelativeFilePath>src/users/user-context.ts</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>user-context.ts</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>

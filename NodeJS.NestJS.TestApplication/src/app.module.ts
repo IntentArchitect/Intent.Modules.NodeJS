@@ -4,9 +4,11 @@ import { HttpServiceAppliedController } from './web/rest/http-service-applied.co
 import { HttpServiceAppliedService } from './services/http-service-applied.service';
 import { NonHttpServiceAppliedService } from './services/non-http-service-applied.service';
 import { typeOrmConfig } from './orm.config';
+import { BasicAuditingSubscriber } from './typeorm/basic-auditing-subscriber';
 import { UsersModules } from './users/users.modules';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { ClsModule } from 'nestjs-cls';
 import { IntentMerge } from './intent/intent.decorators';
 
 @IntentMerge()
@@ -15,6 +17,10 @@ import { IntentMerge } from './intent/intent.decorators';
     ConfigModule.forRoot({ isGlobal: true }),
     AuthModule,
     TypeOrmModule.forRoot(typeOrmConfig),
+    ClsModule.forRoot({
+      global: true,
+      middleware: { mount: true },
+    }),
     UsersModules
   ],
   controllers: [
@@ -23,7 +29,8 @@ import { IntentMerge } from './intent/intent.decorators';
   providers: [
     HttpServiceAppliedService,
     NonHttpServiceAppliedService,
-    Logger
+    Logger,
+    BasicAuditingSubscriber
   ]
 })
 export class AppModule { }

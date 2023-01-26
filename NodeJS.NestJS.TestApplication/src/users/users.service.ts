@@ -1,11 +1,11 @@
 import { Injectable, Logger } from '@nestjs/common';
-import { User } from './user';
+import { UserContext } from './user-context';
 import { IntentIgnore } from './../intent/intent.decorators';
 
 @Injectable()
 @IntentIgnore()
 export class UsersService {
-  private readonly users: User[];
+  private readonly users: UserContext[];
   private readonly logger = new Logger(UsersService.name);
 
   constructor() {
@@ -30,7 +30,7 @@ export class UsersService {
     ];
   }
 
-  async findOne(username: string): Promise<User | undefined> {
+  async findOne(username: string): Promise<UserContext | undefined> {
     return this.users.find(user => user.username === username);
   }
 }

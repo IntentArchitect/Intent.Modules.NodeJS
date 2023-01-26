@@ -1,5 +1,5 @@
 import { Role } from './../auth/role.enum';
-export class User {
+export class UserContext {
   userId: number;
   username: string;
   password?: string;

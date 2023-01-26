@@ -44,5 +44,19 @@
       </metadata>
       <childElements />
     </childElement>
+    <childElement id="1fd8f512-f0d4-4f2c-84ec-51dad795d8fa" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Intent.NodeJS.TypeORM.BasicAuditingSubscriber</name>
+      <display>Intent.NodeJS.TypeORM.BasicAuditingSubscriber</display>
+      <externalReference>Intent.NodeJS.TypeORM</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>859f92c6-7e30-49b7-a629-5bde8b2a2719</parentFolderId>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
   </childElements>
 </class>
