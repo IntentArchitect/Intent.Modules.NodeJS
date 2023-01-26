@@ -32,7 +32,8 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
                 var variableName = $"{resource.Name.ToCamelCase().RemoveSuffix("Sqs", "Queue")}SqsQueue";
                 var environmentVariableName = $"{variableName}Url".ToSnakeCase().ToUpperInvariant();
 
-                constructor.AddStatement($@"const {variableName} = new sqs.Queue(this, '{resource.Name}');", statement =>
+                constructor.Class.AddField(variableName, "sqs.Queue", field => field.PrivateReadOnly());
+                constructor.AddStatement($@"this.{variableName} = new sqs.Queue(this, '{resource.Name}');", statement =>
                 {
                     statement
                         .SeparatedFromPrevious()
@@ -41,7 +42,7 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
                         .AddMetadata(Constants.MetadataKey.SqsQueueUrl, environmentVariableName)
                         .AddMetadata(Constants.MetadataKey.EnvironmentVariables, new Dictionary<string, string>
                         {
-                            [environmentVariableName] = $"{variableName}.queueUrl"
+                            [environmentVariableName] = $"this.{variableName}.queueUrl"
                         });
                 });
             }
@@ -88,7 +89,7 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
 
                     if (resource.SpecializationType == Constants.ElementName.LambdaFunction)
                     {
-                        constructor.AddStatement($"{queueVariable}.grantSendMessages({resourceStatement.VariableName});");
+                        constructor.AddStatement($"{queueVariable}.grantSendMessages(this.{resourceStatement.VariableName});");
                     }
                 }
             }

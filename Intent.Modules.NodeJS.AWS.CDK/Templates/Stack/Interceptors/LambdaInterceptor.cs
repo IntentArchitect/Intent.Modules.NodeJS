@@ -48,7 +48,8 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
                 var relativePath = _template.GetRelativePath(template);
                 var exportedTypeName = template.ClassName;
 
-                constructor.AddStatement(@$"const {variableName} = new NodejsFunction(this, '{resource.Name.ToPascalCase()}Handler', {{
+                constructor.Class.AddField(variableName, "NodejsFunction", field => field.PrivateReadOnly());
+                constructor.AddStatement(@$"this.{variableName} = new NodejsFunction(this, '{resource.Name.ToPascalCase()}Handler', {{
             entry: join(__dirname, '{relativePath}'),
             handler: '{exportedTypeName}',
             runtime: lambda.Runtime.NODEJS_16_X
@@ -123,7 +124,7 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
                     if (resource.SpecializationType == Constants.ElementName.SqsQueue)
                     {
                         constructor.Class.File.AddImport("SqsEventSource", "aws-cdk-lib/aws-lambda-event-sources");
-                        constructor.AddStatement($"{lambdaVariable}.addEventSource(new SqsEventSource({resourceStatement.VariableName}));");
+                        constructor.AddStatement($"{lambdaVariable}.addEventSource(new SqsEventSource(this.{resourceStatement.VariableName}));");
                     }
                 }
             }
@@ -139,7 +140,7 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
 
             foreach (var policy in policies)
             {
-                yield return @$"{variableName}.addToRolePolicy(new aws_iam.PolicyStatement({{
+                yield return @$"this.{variableName}.addToRolePolicy(new aws_iam.PolicyStatement({{
             actions: [{string.Concat(policy.Actions.Select(x => QuotedName(x.Name)))}
             ],
             resources: [{string.Concat(policy.Resources.Select(x => QuotedName(x.Name)))}

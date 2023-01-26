@@ -34,7 +34,8 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
                 var environmentVariableName = variableName.ToSnakeCase().ToUpperInvariant();
                 var options = string.Concat(Options(resource).Select(x => $"{Environment.NewLine}            {x},"));
 
-                constructor.AddStatement($@"const {variableName} = new dynamodb.Table(this, '{resource.Name}', {{{options}
+                constructor.Class.AddField(variableName, "dynamodb.Table", field => field.PrivateReadOnly());
+                constructor.AddStatement($@"this.{variableName} = new dynamodb.Table(this, '{resource.Name}', {{{options}
         }});", statement =>
                 {
                     statement
@@ -44,7 +45,7 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
                         .AddMetadata(Constants.MetadataKey.DynamoDbTableName, environmentVariableName)
                         .AddMetadata(Constants.MetadataKey.EnvironmentVariables, new Dictionary<string, string>
                         {
-                            [environmentVariableName] = $"{variableName}.tableName"
+                            [environmentVariableName] = $"this.{variableName}.tableName"
                         });
                 });
             }
@@ -141,7 +142,7 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
 
                     if (resource.SpecializationType == Constants.ElementName.LambdaFunction)
                     {
-                        constructor.AddStatement($"{queueVariable}.grantReadWriteData({resourceStatement.VariableName});");
+                        constructor.AddStatement($"{queueVariable}.grantReadWriteData(this.{resourceStatement.VariableName});");
                     }
                 }
             }

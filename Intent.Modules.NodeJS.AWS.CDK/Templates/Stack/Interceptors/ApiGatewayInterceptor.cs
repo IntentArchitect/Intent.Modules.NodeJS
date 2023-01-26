@@ -34,7 +34,8 @@ internal class ApiGatewayInterceptor : IStackTemplateInterceptor
         {
             var variableName = resource.Name.ToCamelCase().EnsureSuffixedWith("ApiGateway", "Api", "Gateway");
 
-            constructor.AddStatement($@"const {variableName} = new apigateway.RestApi(this, '{resource.Name}', {{
+            constructor.Class.AddField(variableName, "apigateway.RestApi", field => field.PrivateReadOnly());
+            constructor.AddStatement($@"this.{variableName} = new apigateway.RestApi(this, '{resource.Name}', {{
             deployOptions: {{
                 dataTraceEnabled: true,
                 tracingEnabled: true,
@@ -80,7 +81,7 @@ internal class ApiGatewayInterceptor : IStackTemplateInterceptor
             var variableName = statements.VariableName;
             var generatedApi = new StringBuilder();
             GenerateApi(generatedApi, api, variableNamesByElement, "        ");
-            constructor.AddStatement($"this.applyApi({variableName}.root, {generatedApi});");
+            constructor.AddStatement($"this.applyApi(this.{variableName}.root, {generatedApi});");
         }
     }
 
@@ -118,7 +119,7 @@ internal class ApiGatewayInterceptor : IStackTemplateInterceptor
                     variableName = "UNKNOWN";
                 }
 
-                stringBuilder.Append($"{Environment.NewLine}{indentation}{{ verb: '{verb}', lambda: {variableName} }},");
+                stringBuilder.Append($"{Environment.NewLine}{indentation}{{ verb: '{verb}', lambda: this.{variableName} }},");
             }
 
             indentation = indentation[..^tab.Length];

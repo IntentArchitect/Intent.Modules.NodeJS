@@ -46,7 +46,8 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
                 var variableName = $"{resource.Name.ToCamelCase().RemoveSuffix("GraphQL", "Endpoint")}GraphQL";
                 var relativePath = _template.GetRelativePath(template);
 
-                constructor.AddStatement($@"const {variableName} = new appsync.GraphqlApi(this, '{resource.Name}', {{
+                constructor.Class.AddField(variableName, "appsync.GraphqlApi", field => field.PrivateReadOnly());
+                constructor.AddStatement($@"this.{variableName} = new appsync.GraphqlApi(this, '{resource.Name}', {{
             name: '{resource.Name}',
             schema: appsync.SchemaFile.fromAsset(join(__dirname, '{relativePath}')),
             authorizationConfig: {{
@@ -110,7 +111,7 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
                 {
                     var dataSourceVarName = DataSourceVarName(entityElement);
                     var tableVarName = statementsByElement[entityElement.ParentElement].VariableName;
-                    constructor.AddStatement($"const {dataSourceVarName} = {appsyncVarName}.addDynamoDbDataSource('{dataSourceVarName}', {tableVarName});");
+                    constructor.AddStatement($"const {dataSourceVarName} = {appsyncVarName}.addDynamoDbDataSource('{dataSourceVarName}', this.{tableVarName});");
                 }
 
                 foreach (var (element, mappedElement) in mappedElements)

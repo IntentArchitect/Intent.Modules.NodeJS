@@ -34,7 +34,8 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
                 var environmentVariableName = $"{variableName.ToSnakeCase().ToUpperInvariant()}_NAME";
                 var options = string.Concat(Options(resource).Select(x => $"{Environment.NewLine}            {x},"));
 
-                constructor.AddStatement($@"const {variableName} = new s3.Bucket(this, '{resource.Name}', {{{options}
+                constructor.Class.AddField(variableName, "s3.Bucket", field => field.PrivateReadOnly());
+                constructor.AddStatement($@"this.{variableName} = new s3.Bucket(this, '{resource.Name}', {{{options}
         }});", statement =>
                 {
                     statement
@@ -44,7 +45,7 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
                         .AddMetadata(Constants.MetadataKey.S3BucketName, environmentVariableName)
                         .AddMetadata(Constants.MetadataKey.EnvironmentVariables, new Dictionary<string, string>
                         {
-                            [environmentVariableName] = $"{variableName}.bucketName"
+                            [environmentVariableName] = $"this.{variableName}.bucketName"
                         });
                 });
             }
@@ -108,9 +109,9 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
 
                     if (resource.SpecializationType == Constants.ElementName.LambdaFunction)
                     {
-                        constructor.AddStatement($"{queueVariable}.grantDelete({resourceStatement.VariableName});");
-                        constructor.AddStatement($"{queueVariable}.grantPut({resourceStatement.VariableName});");
-                        constructor.AddStatement($"{queueVariable}.grantReadWrite({resourceStatement.VariableName});");
+                        constructor.AddStatement($"{queueVariable}.grantDelete(this.{resourceStatement.VariableName});");
+                        constructor.AddStatement($"{queueVariable}.grantPut(this.{resourceStatement.VariableName});");
+                        constructor.AddStatement($"{queueVariable}.grantReadWrite(this.{resourceStatement.VariableName});");
                     }
                 }
             }
