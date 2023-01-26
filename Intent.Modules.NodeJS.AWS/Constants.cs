@@ -27,6 +27,23 @@ internal static class Constants
         public const string ApiGateway = "API Gateway";
         public const string ApiMethod = "API Method";
         public const string ApiResource = "API Resource";
+        public const string StateMachine = "State Machine";
+        public const string StateMachineChoice = "Choice";
+        public const string StateMachineParallel = "Parallel";
+        public const string StateMachineWait = "Wait";
+        public const string StateMachineSuccess = "Success";
+        public const string StateMachineFail = "Fail";
+        public const string StateMachineStart = "Start";
+        public const string StateMachineEnd = "End";
+        public const string StateMachinePass = "Pass";
+        public const string StateMachineLambdaInvoke = "Lambda Invoke";
+        public const string StateMachineSqsSendMessage = "SQS Send Message";
+    }
+
+    public static class AssociationName
+    {
+        public const string StateTransition = "State Transition";
+        public const string ChoiceTransition = "Choice Transition";
     }
 
     public static class Stereotype

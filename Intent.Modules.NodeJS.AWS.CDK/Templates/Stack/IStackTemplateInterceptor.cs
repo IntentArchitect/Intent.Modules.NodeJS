@@ -19,7 +19,8 @@ internal interface IStackTemplateInterceptor
                 new SqsInterceptor(template),
                 new S3Interceptor(template),
                 new AppSyncInterceptor(template),
-                new ApiGatewayInterceptor(template)
+                new ApiGatewayInterceptor(template),
+                new StepFunctionsInterceptor(template)
             }
             .ToArray();
     }
