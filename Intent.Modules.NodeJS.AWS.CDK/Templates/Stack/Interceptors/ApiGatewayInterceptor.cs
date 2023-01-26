@@ -5,7 +5,6 @@ using System.Text;
 using Intent.Metadata.Models;
 using Intent.Modules.Common.Templates;
 using Intent.Modules.Common.TypeScript.Builder;
-using Intent.Templates;
 
 namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors;
 
@@ -118,7 +117,7 @@ internal class ApiGatewayInterceptor : IStackTemplateInterceptor
                 {
                     variableName = "UNKNOWN";
                 }
-                
+
                 stringBuilder.Append($"{Environment.NewLine}{indentation}{{ verb: '{verb}', lambda: {variableName} }},");
             }
 
