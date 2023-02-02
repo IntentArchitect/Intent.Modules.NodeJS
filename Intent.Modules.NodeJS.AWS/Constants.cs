@@ -38,12 +38,15 @@ internal static class Constants
         public const string StateMachinePass = "Pass";
         public const string StateMachineLambdaInvoke = "Lambda Invoke";
         public const string StateMachineSqsSendMessage = "SQS Send Message";
+        public const string SqsSendMessageRetry = "SQS Send Message Retry";
+        public const string SqsSendMessageError = "SQS Send Message Error";
+        public const string SqsSendMessageCatch = "SQS Send Message Catch";
     }
 
     public static class AssociationName
     {
         public const string StateTransition = "State Transition";
-        public const string ChoiceTransition = "Choice Transition";
+        public const string RuleTransition = "Rule Transition";
     }
 
     public static class Stereotype
@@ -66,6 +69,66 @@ internal static class Constants
             {
                 public const string RemovalPolicy = "Removal Policy";
                 public const string Versioned = "Versioned";
+            }
+        }
+
+        public static class ConditionalStatementSettings
+        {
+            public const string Name = "Conditional Statement Settings";
+
+            public static class Property
+            {
+                public const string Not = "NOT";
+                public const string Variable = "Variable";
+                public const string Operator = "Operator";
+                public const string Type = "Type";
+                public const string ValueType = "Value Type";
+                public const string Value = "Value";
+                public const string BooleanValue = "Boolean Value";
+            }
+        }
+
+        public static class WaitSettings
+        {
+            public const string Name = "Wait Settings";
+
+            public static class Property
+            {
+                public const string DurationType = "Duration Type";
+                public const string DurationAmount = "Duration Amount";
+            }
+        }
+
+        public static class LambdaInvokeSettings
+        {
+            public const string Name = "Lambda Invoke Settings";
+
+            public static class Property
+            {
+                public const string OutputPath = "Output Path";
+            }
+        }
+
+        public static class RetrySettings
+        {
+            public const string Name = "Retry Settings";
+
+            public static class Property
+            {
+                public const string MaxAttempts = "Max Attempts";
+                public const string BackoffRate = "Backoff Rate";
+                public const string IntervalType = "Interval Type";
+                public const string IntervalAmount = "Interval Amount";
+            }
+        }
+
+        public static class SqsSendMessageCatchSettings
+        {
+            public const string Name = "SQS Send Message Catch Settings";
+
+            public static class Property
+            {
+                public const string ResultPath = "Result Path";
             }
         }
     }
