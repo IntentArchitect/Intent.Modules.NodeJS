@@ -131,6 +131,17 @@ internal static class Constants
                 public const string ResultPath = "Result Path";
             }
         }
+
+        public static class SqsSendMessageSettings
+        {
+            public const string Name = "SQS Send Message Settings";
+
+            public static class Property
+            {
+                public const string Message = "Message";
+                public const string MessageContent = "Message Content";
+            }
+        }
     }
 
     public static class Role

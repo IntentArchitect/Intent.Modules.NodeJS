@@ -38,15 +38,15 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
 
             foreach (var resource in resources)
             {
-                var variableName = $"{resource.Name.RemoveSuffix("State", "Machine").ToCamelCase()}StateMachine";
                 var getDefinitionMethodName = $"get{resource.Name.ToPascalCase()}Definition";
                 _stateMachineMethodNamesByResource.Add(resource, getDefinitionMethodName);
 
-                //if (resource.ParentElement.SpecializationType == Constants.ElementName.StateMachine)
-                //{
-                //    continue;
-                //}
+                if (IsNestedStateMachine(resource))
+                {
+                    continue;
+                }
 
+                var variableName = $"{resource.Name.RemoveSuffix("State", "Machine").ToCamelCase()}StateMachine";
                 constructor.Class.AddField(variableName, "StateMachine", field => field.PrivateReadOnly());
                 constructor.AddStatement($@"this.{variableName} = new StateMachine(this, '{resource.Name}', {{
             stateMachineName: '{variableName}',
@@ -57,6 +57,21 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
                     .AddMetadata(Constants.MetadataKey.SourceElement, resource)
                     .AddMetadata(Constants.MetadataKey.VariableName, variableName)
                 );
+            }
+
+            static bool IsNestedStateMachine(IElement element)
+            {
+                while (element != null)
+                {
+                    if (element.ParentElement?.SpecializationType == Constants.ElementName.StateMachine)
+                    {
+                        return true;
+                    }
+
+                    element = element.ParentElement;
+                }
+
+                return false;
             }
         }
 
@@ -158,9 +173,19 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
                 throw new Exception($"Could not resolve variable name for \"{element.Name}\"");
             }
 
+            var stereotype = element.GetStereotype(Constants.Stereotype.SqsSendMessageSettings.Name);
+            var message = stereotype.GetProperty<string>(Constants.Stereotype.SqsSendMessageSettings.Property.Message);
+            var messageContent = stereotype.GetProperty<string>(Constants.Stereotype.SqsSendMessageSettings.Property.MessageContent);
+            var taskInputMethod = message switch
+                {
+                    "Use state input as message" => "fromJsonPathAt('$')",
+                    "Enter message" => $"fromObject({messageContent})",
+                    _ => throw new InvalidOperationException($"Unknown value: {message}")
+                };
+
             sb.AppendLine($"{indentation}.perform(new {_template.ImportType("aws_stepfunctions_tasks", "aws-cdk-lib")}.SqsSendMessage(this, '{element.Name}', {{");
             sb.AppendLine($"{indentation}{Tab}{Tab}queue: this.{variableName},");
-            sb.AppendLine($"{indentation}{Tab}{Tab}messageBody: {_template.ImportType("TaskInput", "aws-cdk-lib/aws-stepfunctions")}.fromText(''),");
+            sb.AppendLine($"{indentation}{Tab}{Tab}messageBody: {_template.ImportType("TaskInput", "aws-cdk-lib/aws-stepfunctions")}.{taskInputMethod},");
             sb.AppendLine($"{indentation}{Tab}}})");
 
             var retryElement = element.ChildElements.SingleOrDefault(x => x.SpecializationType == Constants.ElementName.SqsSendMessageRetry);
