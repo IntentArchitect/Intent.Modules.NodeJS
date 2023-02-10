@@ -13,7 +13,7 @@ variables:
   value: '**/*.sln'
 - group: 'Intent Architect Credentials'
 - name: 'intent-solution'
-  value: 'Intent.Modules.NodeJS.Tests.isln'
+  value: 'Tests/Intent.Modules.NodeJS.Tests.isln'
 - name: 'warning-logging-command'
   value: '##vso[task.logissue type=warning;]{@m} {@x}\n'
 - name: 'error-logging-command'
