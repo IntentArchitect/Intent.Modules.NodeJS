@@ -33,8 +33,8 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.StackBase
             var appName = ExecutionContext.GetApplicationConfig().Name;
 
             return new TypeScriptFileConfig(
-                className: $"{appName.ToPascalCase()}Stack",
-                fileName: $"{appName.ToKebabCase()}-stack"
+                className: $"{appName.ToPascalCase()}StackBase",
+                fileName: $"{appName.ToKebabCase()}-stack-base"
             );
         }
 
