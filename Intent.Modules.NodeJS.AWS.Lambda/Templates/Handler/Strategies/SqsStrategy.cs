@@ -47,9 +47,11 @@ namespace Intent.Modules.NodeJS.AWS.Lambda.Templates.Handler.Strategies
                 return;
             }
 
-            stringBuilder.AppendLine(@$"    for (let record of event.Records) {{
-        controller.handle({recordBody});
-    }}");
+            stringBuilder.AppendLine($@"    await Promise.all(
+        event.Records.map(async (record: any) => {{
+            await controller.handle({recordBody});
+        }})
+    );");
         }
     }
 }
