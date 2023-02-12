@@ -46,12 +46,10 @@ export class ClassASService {
     throw new Error("Write your implementation for this service here...");
   }
 
-  @IntentIgnoreBody()
   async delete(id: string): Promise<ClassADto> {
     const existingClassA = await this.classARepository.findOneBy({
       id: id,
     });
     await this.classARepository.remove(existingClassA);
-    return existingClassA;
   }
 }
