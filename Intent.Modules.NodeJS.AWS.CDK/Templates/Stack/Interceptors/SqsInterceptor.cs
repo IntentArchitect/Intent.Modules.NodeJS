@@ -89,36 +89,10 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
 
                     if (resource.SpecializationType == Constants.ElementName.LambdaFunction)
                     {
-                        constructor.AddStatement($"{queueVariable}.grantSendMessages(this.{resourceStatement.VariableName});");
+                        constructor.AddStatement($"this.{queueVariable}.grantSendMessages(this.{resourceStatement.VariableName});");
                     }
                 }
             }
-        }
-
-        private static string GetAttribute(IElement element)
-        {
-            var attributeType = element.TypeReference.Element?.Name switch
-            {
-                "binary" => "BINARY",
-                "byte" => "NUMBER",
-                "char" => "STRING",
-                "date" => "STRING",
-                "datetime" => "STRING",
-                "datetimeoffset" => "STRING",
-                "decimal" => "NUMBER",
-                "double" => "NUMBER",
-                "float" => "NUMBER",
-                "guid" => "STRING",
-                "int" => "NUMBER",
-                "long" => "NUMBER",
-                "short" => "NUMBER",
-                "string" => "STRING",
-                _ => throw new ArgumentOutOfRangeException(nameof(element.TypeReference), element.TypeReference.Element?.Name, null)
-            };
-
-            var name = element.Name.ToCamelCase();
-
-            return $"{{ name: '{name}', type: dynamodb.AttributeType.{attributeType} }}";
         }
     }
 }

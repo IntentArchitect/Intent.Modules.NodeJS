@@ -109,7 +109,7 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
                     {
                         foreach (var (variable, value) in resourceStatement.EnvironmentVariables)
                         {
-                            constructor.AddStatement($"{lambdaVariable}.addEnvironment('{variable}', {value});");
+                            constructor.AddStatement($"this.{lambdaVariable}.addEnvironment('{variable}', {value});");
                         }
                     }
                 }
@@ -124,7 +124,7 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
                     if (resource.SpecializationType == Constants.ElementName.SqsQueue)
                     {
                         constructor.Class.File.AddImport("SqsEventSource", "aws-cdk-lib/aws-lambda-event-sources");
-                        constructor.AddStatement($"{lambdaVariable}.addEventSource(new SqsEventSource(this.{resourceStatement.VariableName}));");
+                        constructor.AddStatement($"this.{lambdaVariable}.addEventSource(new SqsEventSource(this.{resourceStatement.VariableName}));");
                     }
                 }
             }

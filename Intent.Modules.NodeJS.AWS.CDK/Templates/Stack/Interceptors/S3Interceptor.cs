@@ -109,9 +109,9 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
 
                     if (resource.SpecializationType == Constants.ElementName.LambdaFunction)
                     {
-                        constructor.AddStatement($"{queueVariable}.grantDelete(this.{resourceStatement.VariableName});");
-                        constructor.AddStatement($"{queueVariable}.grantPut(this.{resourceStatement.VariableName});");
-                        constructor.AddStatement($"{queueVariable}.grantReadWrite(this.{resourceStatement.VariableName});");
+                        constructor.AddStatement($"this.{queueVariable}.grantDelete(this.{resourceStatement.VariableName});");
+                        constructor.AddStatement($"this.{queueVariable}.grantPut(this.{resourceStatement.VariableName});");
+                        constructor.AddStatement($"this.{queueVariable}.grantReadWrite(this.{resourceStatement.VariableName});");
                     }
                 }
             }

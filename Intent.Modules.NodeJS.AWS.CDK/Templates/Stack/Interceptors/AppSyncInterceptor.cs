@@ -111,7 +111,7 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
                 {
                     var dataSourceVarName = DataSourceVarName(entityElement);
                     var tableVarName = statementsByElement[entityElement.ParentElement].VariableName;
-                    constructor.AddStatement($"const {dataSourceVarName} = {appsyncVarName}.addDynamoDbDataSource('{dataSourceVarName}', this.{tableVarName});");
+                    constructor.AddStatement($"const {dataSourceVarName} = this.{appsyncVarName}.addDynamoDbDataSource('{dataSourceVarName}', this.{tableVarName});");
                 }
 
                 foreach (var (element, mappedElement) in mappedElements)
@@ -129,7 +129,7 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
                         var lambdaVarName = statementsByElement[(IElement)element.MappedElement.Element].VariableName;
                         var namePrefix = $"{element.ParentElement.Name.ToCamelCase()}{element.Name.ToPascalCase().RemoveSuffix("Lambda")}";
 
-                        constructor.AddStatement($@"{appsyncVarName}
+                        constructor.AddStatement($@"this.{appsyncVarName}
             .addLambdaDataSource('{namePrefix}LambdaDataSource', {lambdaVarName})
             .createResolver('{namePrefix}Resolver', {{
                 typeName: '{TypeName(element)}',
@@ -224,7 +224,7 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
             }
 
             // TODO: Also check mapped to of return type and parameter type aligns and return type is collection
-            if ((graphQlName.Contains("list") || graphQlName.Contains("getall")))
+            if (graphQlName.Contains("list") || graphQlName.Contains("getall"))
             {
                 convention = Convention.List;
                 return true;

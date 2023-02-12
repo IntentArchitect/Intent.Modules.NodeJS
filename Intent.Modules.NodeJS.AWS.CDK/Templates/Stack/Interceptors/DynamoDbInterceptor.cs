@@ -142,7 +142,7 @@ namespace Intent.Modules.NodeJS.AWS.CDK.Templates.Stack.Interceptors
 
                     if (resource.SpecializationType == Constants.ElementName.LambdaFunction)
                     {
-                        constructor.AddStatement($"{queueVariable}.grantReadWriteData(this.{resourceStatement.VariableName});");
+                        constructor.AddStatement($"this.{queueVariable}.grantReadWriteData(this.{resourceStatement.VariableName});");
                     }
                 }
             }
