@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="43f811cc-ed2b-49f8-8a31-a94344fcb4f6" type="Diagram" typeId="4d66fecd-e9b8-436f-aa50-c59040ad0879">
+  <name>Polymorphic</name>
+  <display>Polymorphic</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>5ee57c7d-576f-404c-9f61-1d4af23bbbf7</parentFolderId>
+  <packageId>264605e5-49c3-4144-92c7-d48d328fe6ee</packageId>
+  <packageName>TypeOrm.SqlServer.TestApplication.Domain</packageName>
+  <diagram>
+    <targetPackageId>264605e5-49c3-4144-92c7-d48d328fe6ee</targetPackageId>
+  </diagram>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

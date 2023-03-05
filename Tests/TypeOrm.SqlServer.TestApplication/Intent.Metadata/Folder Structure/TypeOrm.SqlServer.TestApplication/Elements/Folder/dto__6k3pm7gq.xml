@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="ab23ce5e-8d6a-45c1-bd77-4bc49138e4d6" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+  <name>dto</name>
+  <display>dto</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>915b7583-8805-411f-a765-5e1cd95e3748</parentFolderId>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="5529f1f8-1932-4996-8b4f-ae360c2eec6a" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Intent.NodeJS.NestJS.Controllers.DtoModel</name>
+      <display>Intent.NodeJS.NestJS.Controllers.DtoModel</display>
+      <externalReference>Intent.NodeJS.NestJS.Controllers</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>ab23ce5e-8d6a-45c1-bd77-4bc49138e4d6</parentFolderId>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

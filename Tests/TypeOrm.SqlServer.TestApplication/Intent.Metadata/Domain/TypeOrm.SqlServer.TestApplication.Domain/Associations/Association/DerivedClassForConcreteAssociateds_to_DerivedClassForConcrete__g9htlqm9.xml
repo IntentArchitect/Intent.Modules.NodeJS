@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="a7cc01cf-7e81-4b40-8998-4eb02af6468a">
+  <sourceEnd id="bc6c55ff-5bd1-44bb-974c-9f09c26a0d63" type="Association Source End" typeId="8d9d2e5b-bd55-4f36-9ae4-2b9e84fd4e58">
+    <name>DerivedClassForConcreteAssociateds</name>
+    <display>DerivedClassForConcreteAssociateds: DerivedClassForConcreteAssociated[*]</display>
+    <order>0</order>
+    <typeReference id="16b8a8f6-68d0-463a-9a2c-1d405f2dd9aa">
+      <typeId>ece8609d-d398-4c97-8814-59973ccfff7f</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>true</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>TypeOrm.SqlServer.TestApplication.Domain</typePackageName>
+      <typePackageId>264605e5-49c3-4144-92c7-d48d328fe6ee</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes>
+      <stereotype stereotypeDefinitionId="49de8cd7-872f-4b37-b9a2-2056304434dd" name="Association JPA Settings">
+        <addedByDefault>true</addedByDefault>
+        <definitionPackageName>Intent.Java.Persistence.JPA</definitionPackageName>
+        <definitionPackageId>2e4398f1-893d-432e-badb-ab0c4ea3280e</definitionPackageId>
+        <properties>
+          <property name="abe22345-1d55-483e-b1f4-54c60cb53539" display="Fetch Type" isActive="true" />
+        </properties>
+      </stereotype>
+    </stereotypes>
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="a7cc01cf-7e81-4b40-8998-4eb02af6468a" type="Association Target End" typeId="0a66489f-30aa-417b-a75d-b945863366fd">
+    <name>DerivedClassForConcrete</name>
+    <display>DerivedClassForConcrete: DerivedClassForConcrete</display>
+    <order>1</order>
+    <typeReference id="e04da7ce-7690-4b38-bae2-854e0228edbf">
+      <typeId>7596fb59-a5b4-46d2-bba9-b930f7b37183</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>TypeOrm.SqlServer.TestApplication.Domain</typePackageName>
+      <typePackageId>264605e5-49c3-4144-92c7-d48d328fe6ee</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Association</associationType>
+  <associationTypeId>eaf9ed4e-0b61-4ac1-ba88-09f912c12087</associationTypeId>
+  <stereotypes />
+</association>

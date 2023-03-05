@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="44f1c809-51f8-44d7-8264-8bf60f263b0d">
+  <sourceEnd id="d1cca94c-c93f-492c-8fa8-fe6e3be48342" type="Association Source End" typeId="8d9d2e5b-bd55-4f36-9ae4-2b9e84fd4e58">
+    <name>G_RequiredCompositeNav</name>
+    <display>G_RequiredCompositeNav: G_RequiredCompositeNav</display>
+    <order>1</order>
+    <typeReference id="d76e8133-39a8-4673-9e32-f03ea5e16f4e">
+      <typeId>d0f3bd25-743b-48fc-a1f0-02de100bbc38</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>TypeOrm.SqlServer.TestApplication.Domain</typePackageName>
+      <typePackageId>264605e5-49c3-4144-92c7-d48d328fe6ee</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="44f1c809-51f8-44d7-8264-8bf60f263b0d" type="Association Target End" typeId="0a66489f-30aa-417b-a75d-b945863366fd">
+    <name>G_MultipleDependents</name>
+    <display>G_MultipleDependents: G_MultipleDependent[*]</display>
+    <order>1</order>
+    <typeReference id="95d193dd-6069-4287-ac78-0ed4edbb0097">
+      <typeId>784606ca-8321-4e67-8636-198159c427fa</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>true</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>TypeOrm.SqlServer.TestApplication.Domain</typePackageName>
+      <typePackageId>264605e5-49c3-4144-92c7-d48d328fe6ee</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Association</associationType>
+  <associationTypeId>eaf9ed4e-0b61-4ac1-ba88-09f912c12087</associationTypeId>
+  <stereotypes />
+</association>

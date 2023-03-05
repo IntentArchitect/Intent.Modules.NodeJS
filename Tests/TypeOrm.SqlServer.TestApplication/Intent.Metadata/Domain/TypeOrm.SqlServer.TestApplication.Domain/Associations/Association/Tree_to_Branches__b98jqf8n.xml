@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="544f0595-33ab-4a25-9768-e3a1a7d79518">
+  <sourceEnd id="b507cbea-2742-490f-998a-777cbac13d2f" type="Association Source End" typeId="8d9d2e5b-bd55-4f36-9ae4-2b9e84fd4e58">
+    <name>Tree</name>
+    <display>Tree: Tree</display>
+    <order>5</order>
+    <typeReference id="db4cc6c2-5649-4f5c-9f9e-6945ce9b1182">
+      <typeId>b71f56d3-d3c1-4f13-9266-441fb8d6bde8</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>TypeOrm.SqlServer.TestApplication.Domain</typePackageName>
+      <typePackageId>264605e5-49c3-4144-92c7-d48d328fe6ee</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="544f0595-33ab-4a25-9768-e3a1a7d79518" type="Association Target End" typeId="0a66489f-30aa-417b-a75d-b945863366fd">
+    <name>Branches</name>
+    <display>Branches: Branch[*]</display>
+    <order>1</order>
+    <typeReference id="ebb6128c-9238-4080-b88d-ec39ac4ab111">
+      <typeId>885bb9ff-de09-42f8-a942-36366a2faccf</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>true</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>TypeOrm.SqlServer.TestApplication.Domain</typePackageName>
+      <typePackageId>264605e5-49c3-4144-92c7-d48d328fe6ee</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Association</associationType>
+  <associationTypeId>eaf9ed4e-0b61-4ac1-ba88-09f912c12087</associationTypeId>
+  <stereotypes />
+</association>

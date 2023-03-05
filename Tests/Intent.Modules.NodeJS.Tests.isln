@@ -7,8 +7,9 @@
   <iconType>FontAwesome</iconType>
   <metadataRelativePath>Intent.Metadata</metadataRelativePath>
   <modulesCacheRelativePath>.intent/modules</modulesCacheRelativePath>
-  <lastUsedApplicationTemplate id="Intent.ApplicationTemplate.NestJS.Web" version="3.3.5" />
+  <lastUsedApplicationTemplate id="Intent.ApplicationTemplate.NestJS.Web" version="3.3.8" />
   <applications>
     <application id="49cda678-c4fb-4fbc-aa27-85f75981dc3c" name="NodeJS.NestJS.TestApplication" relativePath="NodeJS.NestJS.TestApplication/NodeJS.NestJS.TestApplication.application.config" />
+    <application id="a7958c29-e47f-42ff-9a91-240ad9305b76" name="TypeOrm.SqlServer.TestApplication" relativePath="TypeOrm.SqlServer.TestApplication/TypeOrm.SqlServer.TestApplication.application.config" />
   </applications>
 </solution>

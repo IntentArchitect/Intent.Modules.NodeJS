@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="549a78f3-4e31-4916-a049-2d91b40741f2" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+  <name>users</name>
+  <display>users</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>01d18d77-a5f7-4dd0-aa9f-a1ce89d7f186</parentFolderId>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="bc7b4b0a-5546-4af3-ad1b-27aa8b4abe5b" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Intent.NodeJS.NestJS.Authentication.Users.UserContext</name>
+      <display>Intent.NodeJS.NestJS.Authentication.Users.UserContext</display>
+      <externalReference>Intent.NodeJS.NestJS.Authentication</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>549a78f3-4e31-4916-a049-2d91b40741f2</parentFolderId>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="1f68430b-becd-4cc8-95a9-b12db94dd893" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Intent.NodeJS.NestJS.Authentication.Users.UsersModule</name>
+      <display>Intent.NodeJS.NestJS.Authentication.Users.UsersModule</display>
+      <externalReference>Intent.NodeJS.NestJS.Authentication</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>549a78f3-4e31-4916-a049-2d91b40741f2</parentFolderId>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="958e9b8e-3400-4c15-8bfc-b91b3b22efa9" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Intent.NodeJS.NestJS.Authentication.Users.UsersService</name>
+      <display>Intent.NodeJS.NestJS.Authentication.Users.UsersService</display>
+      <externalReference>Intent.NodeJS.NestJS.Authentication</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>549a78f3-4e31-4916-a049-2d91b40741f2</parentFolderId>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="a8591bd7-a20b-4eab-bc5a-83226df5cca9">
+  <sourceEnd id="bcce24a7-32c8-4cb4-967a-5a4dced17038" type="Generalization Source End" typeId="8190bf43-222c-4b53-8a44-14626efe3574">
+    <name>FkDerivedClass</name>
+    <display>FkDerivedClass: FkDerivedClass</display>
+    <order>0</order>
+    <typeReference id="5de8ae0c-6d18-426d-86c9-e344b72bebb3">
+      <typeId>d04351c6-a055-4643-9be1-f3415c9e0a38</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>TypeOrm.SqlServer.TestApplication.Domain</typePackageName>
+      <typePackageId>264605e5-49c3-4144-92c7-d48d328fe6ee</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="a8591bd7-a20b-4eab-bc5a-83226df5cca9" type="Generalization Target End" typeId="4686cc1d-b4d8-4b99-b45b-f77bd5496946">
+    <name>FkBaseClass</name>
+    <display>FkBaseClass: FkBaseClass</display>
+    <order>1</order>
+    <typeReference id="f23d26a2-bcdc-4676-b1d8-75d68651273b">
+      <typeId>afbd9d2a-518b-436a-9f12-85cabf79c5eb</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>TypeOrm.SqlServer.TestApplication.Domain</typePackageName>
+      <typePackageId>264605e5-49c3-4144-92c7-d48d328fe6ee</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Generalization</associationType>
+  <associationTypeId>5de35973-3ac7-4e65-b48c-385605aec561</associationTypeId>
+  <stereotypes />
+</association>

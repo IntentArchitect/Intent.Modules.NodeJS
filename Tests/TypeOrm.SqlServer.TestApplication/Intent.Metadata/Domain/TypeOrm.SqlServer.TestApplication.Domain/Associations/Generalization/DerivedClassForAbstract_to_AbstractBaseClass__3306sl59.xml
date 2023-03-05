@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="fc9bcf2c-6129-42ed-8c90-64912af01434">
+  <sourceEnd id="9ca09717-1ad6-4260-948c-be2c6b677281" type="Generalization Source End" typeId="8190bf43-222c-4b53-8a44-14626efe3574">
+    <name>DerivedClassForAbstract</name>
+    <display>DerivedClassForAbstract: DerivedClassForAbstract</display>
+    <order>0</order>
+    <typeReference id="3ef32612-b6e3-4871-95a5-a02a5f0d2a69">
+      <typeId>0b48a1d1-05b9-4b55-ac7a-ae8add39d1bb</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>TypeOrm.SqlServer.TestApplication.Domain</typePackageName>
+      <typePackageId>264605e5-49c3-4144-92c7-d48d328fe6ee</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="fc9bcf2c-6129-42ed-8c90-64912af01434" type="Generalization Target End" typeId="4686cc1d-b4d8-4b99-b45b-f77bd5496946">
+    <name>AbstractBaseClass</name>
+    <display>AbstractBaseClass: AbstractBaseClass</display>
+    <order>1</order>
+    <typeReference id="84ebbfce-1de9-424a-88a7-f1a07361d5ff">
+      <typeId>69c81e56-965d-4107-bea4-9afdc43d1297</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>TypeOrm.SqlServer.TestApplication.Domain</typePackageName>
+      <typePackageId>264605e5-49c3-4144-92c7-d48d328fe6ee</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Generalization</associationType>
+  <associationTypeId>5de35973-3ac7-4e65-b48c-385605aec561</associationTypeId>
+  <stereotypes />
+</association>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<associationVisual id="9e041336-caf9-4861-bdf0-81b2efe5436d" zIndex="10">
+  <sourceId>885bb9ff-de09-42f8-a942-36366a2faccf</sourceId>
+  <targetId>57736153-0502-43e3-b56e-de90b3a8117d</targetId>
+  <targetPrefPoint x="20" y="100" />
+  <fixedPoints>
+    <point x="600" y="620" />
+  </fixedPoints>
+</associationVisual>

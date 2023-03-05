@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="f1971663-47e1-428e-8be7-f2e0d2bbcb71">
+  <sourceEnd id="2d6f916e-5e79-4b40-9dd4-0b015b3bed4f" type="Association Source End" typeId="8d9d2e5b-bd55-4f36-9ae4-2b9e84fd4e58">
+    <name>H_OptionalAggregateNav</name>
+    <display>H_OptionalAggregateNav: H_OptionalAggregateNav?</display>
+    <order>1</order>
+    <typeReference id="f635c0c4-0a43-42d2-9f55-6013c27d7977">
+      <typeId>e79b47b8-f1b6-4953-9822-acde8769da98</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>true</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>TypeOrm.SqlServer.TestApplication.Domain</typePackageName>
+      <typePackageId>264605e5-49c3-4144-92c7-d48d328fe6ee</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="f1971663-47e1-428e-8be7-f2e0d2bbcb71" type="Association Target End" typeId="0a66489f-30aa-417b-a75d-b945863366fd">
+    <name>H_MultipleDependents</name>
+    <display>H_MultipleDependents: H_MultipleDependent[*]</display>
+    <order>1</order>
+    <typeReference id="9c0ea4b5-b11d-4424-a9c0-cc970187f4c4">
+      <typeId>0dec5a21-815c-420c-abd0-b369aca4728a</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>true</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>TypeOrm.SqlServer.TestApplication.Domain</typePackageName>
+      <typePackageId>264605e5-49c3-4144-92c7-d48d328fe6ee</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Association</associationType>
+  <associationTypeId>eaf9ed4e-0b61-4ac1-ba88-09f912c12087</associationTypeId>
+  <stereotypes />
+</association>

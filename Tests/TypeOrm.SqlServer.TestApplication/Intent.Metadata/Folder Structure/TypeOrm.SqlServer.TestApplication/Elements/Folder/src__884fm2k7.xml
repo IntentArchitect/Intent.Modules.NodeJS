@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="01d18d77-a5f7-4dd0-aa9f-a1ce89d7f186" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+  <name>src</name>
+  <display>src</display>
+  <externalReference>d358c34f-76b0-41a9-8827-a53a27a486c9</externalReference>
+  <isAbstract>false</isAbstract>
+  <order>1</order>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>561c8111-22e4-4b8f-958e-1b3326abe106</parentFolderId>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="427dad5c-a578-4f89-81da-4c8abf8f85cf" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+      <name>domain</name>
+      <display>domain</display>
+      <externalReference>0d4eff9c-99a6-4e8e-8987-cca341b9d476</externalReference>
+      <isAbstract>false</isAbstract>
+      <order>1</order>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>01d18d77-a5f7-4dd0-aa9f-a1ce89d7f186</parentFolderId>
+      <stereotypes />
+      <metadata />
+      <childElements>
+        <childElement id="8ecc1b8a-6fae-4b2b-a70b-b591c66898be" type="Role" typeId="8663c9f9-2852-45e7-aaa1-0883a2e6f1da">
+          <name>Domain</name>
+          <display>Domain</display>
+          <externalReference>7c03c1f1-8ee1-419d-9089-23b70fdb2096</externalReference>
+          <isAbstract>false</isAbstract>
+          <order>1</order>
+          <genericTypes />
+          <isMapped>false</isMapped>
+          <parentFolderId>427dad5c-a578-4f89-81da-4c8abf8f85cf</parentFolderId>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+      </childElements>
+    </childElement>
+    <childElement id="bae45d7a-5dde-4457-b176-041bc0b5d148" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+      <name>intent</name>
+      <display>intent</display>
+      <externalReference>af7a9adb-05d0-43af-9b01-540942489054</externalReference>
+      <isAbstract>false</isAbstract>
+      <order>2</order>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>01d18d77-a5f7-4dd0-aa9f-a1ce89d7f186</parentFolderId>
+      <stereotypes />
+      <metadata />
+      <childElements>
+        <childElement id="28f2c106-fba4-4469-9628-b6af575e7ff7" type="Role" typeId="8663c9f9-2852-45e7-aaa1-0883a2e6f1da">
+          <name>Intent</name>
+          <display>Intent</display>
+          <externalReference>ac90ab08-bbb3-40dc-860b-88602c1b8dbd</externalReference>
+          <isAbstract>false</isAbstract>
+          <order>1</order>
+          <genericTypes />
+          <isMapped>false</isMapped>
+          <parentFolderId>bae45d7a-5dde-4457-b176-041bc0b5d148</parentFolderId>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+        <childElement id="4c5726bd-add2-47a7-9123-e929aeefa465" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+          <name>Intent.TypeScript.Weaving.Decorators.IntentDecorators</name>
+          <display>Intent.TypeScript.Weaving.Decorators.IntentDecorators</display>
+          <externalReference>Intent.TypeScript.Weaving.Decorators</externalReference>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <isMapped>false</isMapped>
+          <parentFolderId>bae45d7a-5dde-4457-b176-041bc0b5d148</parentFolderId>
+          <stereotypes />
+          <metadata>
+            <entry key="status" value="assigned" />
+          </metadata>
+          <childElements />
+        </childElement>
+      </childElements>
+    </childElement>
+    <childElement id="b4881318-505f-4c88-b176-88c52789f718" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+      <name>repository</name>
+      <display>repository</display>
+      <externalReference>5f02b6a0-b35e-4541-b6fd-95e1dd1d6f18</externalReference>
+      <isAbstract>false</isAbstract>
+      <order>3</order>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>01d18d77-a5f7-4dd0-aa9f-a1ce89d7f186</parentFolderId>
+      <stereotypes />
+      <metadata />
+      <childElements>
+        <childElement id="f13d7455-88b2-479f-bc00-33d05fb114fe" type="Role" typeId="8663c9f9-2852-45e7-aaa1-0883a2e6f1da">
+          <name>Repositories</name>
+          <display>Repositories</display>
+          <externalReference>05510aca-afa9-4e87-80ef-41b634819bd6</externalReference>
+          <isAbstract>false</isAbstract>
+          <order>1</order>
+          <genericTypes />
+          <isMapped>false</isMapped>
+          <parentFolderId>b4881318-505f-4c88-b176-88c52789f718</parentFolderId>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+        <childElement id="2a4e7cb3-53de-4ad3-9d24-9999dbc0f944" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+          <name>Intent.NodeJS.TypeORM.Repository</name>
+          <display>Intent.NodeJS.TypeORM.Repository</display>
+          <externalReference>Intent.NodeJS.TypeORM</externalReference>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <isMapped>false</isMapped>
+          <parentFolderId>b4881318-505f-4c88-b176-88c52789f718</parentFolderId>
+          <stereotypes />
+          <metadata>
+            <entry key="status" value="assigned" />
+          </metadata>
+          <childElements />
+        </childElement>
+      </childElements>
+    </childElement>
+    <childElement id="915b7583-8805-411f-a765-5e1cd95e3748" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+      <name>services</name>
+      <display>services</display>
+      <externalReference>caf3287b-872f-4727-bed6-afb820992435</externalReference>
+      <isAbstract>false</isAbstract>
+      <order>4</order>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>01d18d77-a5f7-4dd0-aa9f-a1ce89d7f186</parentFolderId>
+      <stereotypes />
+      <metadata />
+      <childElements>
+        <childElement id="acdcab2c-0194-447f-bd56-07524e1bbaf9" type="Role" typeId="8663c9f9-2852-45e7-aaa1-0883a2e6f1da">
+          <name>Services</name>
+          <display>Services</display>
+          <externalReference>bc9c0fb6-e753-4f1a-8230-5bfccd538feb</externalReference>
+          <isAbstract>false</isAbstract>
+          <order>1</order>
+          <genericTypes />
+          <isMapped>false</isMapped>
+          <parentFolderId>915b7583-8805-411f-a765-5e1cd95e3748</parentFolderId>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+        <childElement id="14e1cf36-871e-4fab-9f5d-a3bc5b368d96" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+          <name>Intent.NodeJS.NestJS.Controllers.Service</name>
+          <display>Intent.NodeJS.NestJS.Controllers.Service</display>
+          <externalReference>Intent.NodeJS.NestJS.Controllers</externalReference>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <isMapped>false</isMapped>
+          <parentFolderId>915b7583-8805-411f-a765-5e1cd95e3748</parentFolderId>
+          <stereotypes />
+          <metadata>
+            <entry key="status" value="assigned" />
+          </metadata>
+          <childElements />
+        </childElement>
+      </childElements>
+    </childElement>
+    <childElement id="2d8d4160-2ce2-4233-9fc3-a6174768ca29" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+      <name>web</name>
+      <display>web</display>
+      <externalReference>67b0254e-5654-4962-aa56-4ceead2022f2</externalReference>
+      <isAbstract>false</isAbstract>
+      <order>5</order>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>01d18d77-a5f7-4dd0-aa9f-a1ce89d7f186</parentFolderId>
+      <stereotypes />
+      <metadata />
+      <childElements>
+        <childElement id="e518b122-0361-4d6f-a227-7770c75625b0" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+          <name>rest</name>
+          <display>rest</display>
+          <externalReference>2ed882f0-3d4e-4c7c-b135-45be6eefc649</externalReference>
+          <isAbstract>false</isAbstract>
+          <order>1</order>
+          <genericTypes />
+          <isMapped>false</isMapped>
+          <parentFolderId>2d8d4160-2ce2-4233-9fc3-a6174768ca29</parentFolderId>
+          <stereotypes />
+          <metadata />
+          <childElements>
+            <childElement id="d57552e3-f17b-49ad-b6ce-a823aa319820" type="Role" typeId="8663c9f9-2852-45e7-aaa1-0883a2e6f1da">
+              <name>Controllers</name>
+              <display>Controllers</display>
+              <externalReference>bf4a24da-201e-400c-91d8-432d6df300ac</externalReference>
+              <isAbstract>false</isAbstract>
+              <order>1</order>
+              <genericTypes />
+              <isMapped>false</isMapped>
+              <parentFolderId>e518b122-0361-4d6f-a227-7770c75625b0</parentFolderId>
+              <stereotypes />
+              <metadata />
+              <childElements />
+            </childElement>
+            <childElement id="f1b9083a-1372-4711-945a-3185e3969472" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+              <name>Intent.NodeJS.NestJS.Controllers.Controller</name>
+              <display>Intent.NodeJS.NestJS.Controllers.Controller</display>
+              <externalReference>Intent.NodeJS.NestJS.Controllers</externalReference>
+              <isAbstract>false</isAbstract>
+              <genericTypes />
+              <isMapped>false</isMapped>
+              <parentFolderId>e518b122-0361-4d6f-a227-7770c75625b0</parentFolderId>
+              <stereotypes />
+              <metadata>
+                <entry key="status" value="assigned" />
+              </metadata>
+              <childElements />
+            </childElement>
+            <childElement id="88ce9e67-96e3-4396-8372-8ea99fb6d9d9" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+              <name>Intent.NodeJS.NestJS.Controllers.ControllerBase</name>
+              <display>Intent.NodeJS.NestJS.Controllers.ControllerBase</display>
+              <externalReference>Intent.NodeJS.NestJS.Controllers</externalReference>
+              <isAbstract>false</isAbstract>
+              <genericTypes />
+              <isMapped>false</isMapped>
+              <parentFolderId>e518b122-0361-4d6f-a227-7770c75625b0</parentFolderId>
+              <stereotypes />
+              <metadata>
+                <entry key="status" value="assigned" />
+              </metadata>
+              <childElements />
+            </childElement>
+            <childElement id="2661b49f-4f43-4eae-baac-7802137f74aa" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+              <name>Intent.NodeJS.NestJS.Controllers.JsonResponse</name>
+              <display>Intent.NodeJS.NestJS.Controllers.JsonResponse</display>
+              <externalReference>Intent.NodeJS.NestJS.Controllers</externalReference>
+              <isAbstract>false</isAbstract>
+              <genericTypes />
+              <isMapped>false</isMapped>
+              <parentFolderId>e518b122-0361-4d6f-a227-7770c75625b0</parentFolderId>
+              <stereotypes />
+              <metadata>
+                <entry key="status" value="assigned" />
+              </metadata>
+              <childElements />
+            </childElement>
+          </childElements>
+        </childElement>
+      </childElements>
+    </childElement>
+    <childElement id="bb015bec-9992-447d-b7b0-d9e88c7f51fd" type="Role" typeId="8663c9f9-2852-45e7-aaa1-0883a2e6f1da">
+      <name>Startup</name>
+      <display>Startup</display>
+      <externalReference>55a7261e-84f9-4281-9544-cc6292c1f233</externalReference>
+      <isAbstract>false</isAbstract>
+      <order>6</order>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>01d18d77-a5f7-4dd0-aa9f-a1ce89d7f186</parentFolderId>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="73f537dd-d4be-4190-b532-1b46ac5ef56b" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Intent.NestJS.Winston.WinstonOptions</name>
+      <display>Intent.NestJS.Winston.WinstonOptions</display>
+      <externalReference>Intent.NestJS.Winston</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>01d18d77-a5f7-4dd0-aa9f-a1ce89d7f186</parentFolderId>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="95605f39-6b5b-460d-968f-30bfe6aabcff" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Intent.NodeJS.NestJS.Core.AppModule</name>
+      <display>Intent.NodeJS.NestJS.Core.AppModule</display>
+      <externalReference>Intent.NodeJS.NestJS.Core</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>01d18d77-a5f7-4dd0-aa9f-a1ce89d7f186</parentFolderId>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="4e990aca-676a-4c0d-95c8-9e8ca2d76d9b" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Intent.NodeJS.NestJS.Core.Main</name>
+      <display>Intent.NodeJS.NestJS.Core.Main</display>
+      <externalReference>Intent.NodeJS.NestJS.Core</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>01d18d77-a5f7-4dd0-aa9f-a1ce89d7f186</parentFolderId>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="24fb2a79-fc61-45a6-a1c4-d42131a5a639" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Intent.NodeJS.TypeORM.Datasource</name>
+      <display>Intent.NodeJS.TypeORM.Datasource</display>
+      <externalReference>Intent.NodeJS.TypeORM</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>01d18d77-a5f7-4dd0-aa9f-a1ce89d7f186</parentFolderId>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="75d5a439-1613-4148-9d94-0d536a781436" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Intent.NodeJS.TypeORM.OrmConfig</name>
+      <display>Intent.NodeJS.TypeORM.OrmConfig</display>
+      <externalReference>Intent.NodeJS.TypeORM</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>01d18d77-a5f7-4dd0-aa9f-a1ce89d7f186</parentFolderId>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

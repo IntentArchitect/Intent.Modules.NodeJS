@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="67d42aa3-4423-4ffb-ab9f-52de7b47bb1c">
+  <sourceEnd id="7b80f9c7-9d91-419f-a2ed-bbd264e09b69" type="Generalization Source End" typeId="8190bf43-222c-4b53-8a44-14626efe3574">
+    <name>Poly_BaseClassNonAbstract</name>
+    <display>Poly_BaseClassNonAbstract: Poly_BaseClassNonAbstract</display>
+    <order>0</order>
+    <typeReference id="ae31ae42-b1e6-4faf-a88c-f751aeea12eb">
+      <typeId>1684d25a-d436-4598-a0b8-04c92eae1728</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>TypeOrm.SqlServer.TestApplication.Domain</typePackageName>
+      <typePackageId>264605e5-49c3-4144-92c7-d48d328fe6ee</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="67d42aa3-4423-4ffb-ab9f-52de7b47bb1c" type="Generalization Target End" typeId="4686cc1d-b4d8-4b99-b45b-f77bd5496946">
+    <name>Poly_RootAbstract</name>
+    <display>Poly_RootAbstract: Poly_RootAbstract</display>
+    <order>1</order>
+    <typeReference id="87d82cb2-de39-426f-a4bb-ad9b727eb8fd">
+      <typeId>34bcca44-2300-4d5e-9c01-1625276ec87c</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>TypeOrm.SqlServer.TestApplication.Domain</typePackageName>
+      <typePackageId>264605e5-49c3-4144-92c7-d48d328fe6ee</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Generalization</associationType>
+  <associationTypeId>5de35973-3ac7-4e65-b48c-385605aec561</associationTypeId>
+  <stereotypes />
+</association>

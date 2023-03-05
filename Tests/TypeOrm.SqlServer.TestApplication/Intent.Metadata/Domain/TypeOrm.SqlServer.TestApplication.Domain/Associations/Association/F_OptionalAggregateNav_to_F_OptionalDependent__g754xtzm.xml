@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="ddb5e9cd-dba0-4238-ae7b-ae17be358fdb">
+  <sourceEnd id="b1b59a37-5f53-442d-b0d6-74e2b724ba0f" type="Association Source End" typeId="8d9d2e5b-bd55-4f36-9ae4-2b9e84fd4e58">
+    <name>F_OptionalAggregateNav</name>
+    <display>F_OptionalAggregateNav: F_OptionalAggregateNav?</display>
+    <order>1</order>
+    <typeReference id="c9509427-cce7-4d65-87be-8178c8937a0a">
+      <typeId>1b156227-3799-4b8b-96ba-80a16beaf854</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>true</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>TypeOrm.SqlServer.TestApplication.Domain</typePackageName>
+      <typePackageId>264605e5-49c3-4144-92c7-d48d328fe6ee</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="ddb5e9cd-dba0-4238-ae7b-ae17be358fdb" type="Association Target End" typeId="0a66489f-30aa-417b-a75d-b945863366fd">
+    <name>F_OptionalDependent</name>
+    <display>F_OptionalDependent: F_OptionalDependent?</display>
+    <order>1</order>
+    <typeReference id="0b3d3ec3-4c7c-4ae9-b336-86c04674320f">
+      <typeId>7162e925-598d-4fb4-bab1-248cac0d309d</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>true</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>TypeOrm.SqlServer.TestApplication.Domain</typePackageName>
+      <typePackageId>264605e5-49c3-4144-92c7-d48d328fe6ee</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Association</associationType>
+  <associationTypeId>eaf9ed4e-0b61-4ac1-ba88-09f912c12087</associationTypeId>
+  <stereotypes />
+</association>

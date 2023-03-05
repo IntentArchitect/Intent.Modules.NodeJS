@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="b7a36cde-b9b4-4943-86f7-ea92eb450bad">
+  <sourceEnd id="fc697fb7-214c-4130-a82d-92e8ec232c49" type="Association Source End" typeId="8d9d2e5b-bd55-4f36-9ae4-2b9e84fd4e58">
+    <name>E_RequiredCompositeNav</name>
+    <display>E_RequiredCompositeNav: E_RequiredCompositeNav</display>
+    <order>1</order>
+    <typeReference id="71aaabd2-e9ec-4614-aeaa-16e55c1d68dd">
+      <typeId>21424336-543d-44c0-8478-84fff0f3da23</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>TypeOrm.SqlServer.TestApplication.Domain</typePackageName>
+      <typePackageId>264605e5-49c3-4144-92c7-d48d328fe6ee</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="b7a36cde-b9b4-4943-86f7-ea92eb450bad" type="Association Target End" typeId="0a66489f-30aa-417b-a75d-b945863366fd">
+    <name>E_RequiredDependent</name>
+    <display>E_RequiredDependent: E_RequiredDependent</display>
+    <order>1</order>
+    <typeReference id="01dee55f-cccc-485b-92f4-1c114cc66d8a">
+      <typeId>1ea716e9-cc5b-4a36-ae4b-c7a1dece2451</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>TypeOrm.SqlServer.TestApplication.Domain</typePackageName>
+      <typePackageId>264605e5-49c3-4144-92c7-d48d328fe6ee</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Association</associationType>
+  <associationTypeId>eaf9ed4e-0b61-4ac1-ba88-09f912c12087</associationTypeId>
+  <stereotypes />
+</association>
