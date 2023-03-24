@@ -1,0 +1,80 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Intent.Modules.Common" Version="3.3.15" />
+    <PackageReference Include="Intent.Modules.Common.TypeScript" Version="3.3.6" />
+    <PackageReference Include="Intent.Modules.Metadata.RDBMS" Version="3.3.12" />
+    <PackageReference Include="Intent.Modules.Modelers.Domain" Version="3.3.10" />
+    <PackageReference Include="Intent.Packager" Version="3.4.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Intent.RoslynWeaver.Attributes" Version="2.0.1" />
+    <PackageReference Include="Intent.SoftwareFactory.SDK" Version="3.3.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Intent.Module.TypeScript.Domain\Intent.Module.TypeScript.Domain.csproj" />
+    <ProjectReference Include="..\Intent.Modules.NestJS.Core\Intent.Modules.NestJS.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Templates\RepositoryTemplate\RepositoryTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>RepositoryTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\OrmConfig\OrmConfigTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>OrmConfigTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\Repository\RepositoryTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>RepositoryTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\TypeOrmExDecorator\TypeOrmExDecoratorTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>TypeOrmExDecoratorTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\TypeOrmExModule\TypeOrmExModuleTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>TypeOrmExModuleTemplate.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Templates\RepositoryTemplate\RepositoryTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>RepositoryTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\OrmConfig\OrmConfigTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>OrmConfigTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Repository\RepositoryTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>RepositoryTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\TypeOrmExDecorator\TypeOrmExDecoratorTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>TypeOrmExDecoratorTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\TypeOrmExModule\TypeOrmExModuleTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>TypeOrmExModuleTemplate.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+</Project>

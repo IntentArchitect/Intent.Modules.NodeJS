@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="416f8fb1-56a3-4c6b-bcfb-9993c48cc8cd" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+  <name>ClassAS</name>
+  <display>ClassAS</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-by-name</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>5ee5788e-af11-4179-9323-869b68565609</parentFolderId>
+  <packageId>5ee5788e-af11-4179-9323-869b68565609</packageId>
+  <packageName>NodeJS.NestJS.TestApplication.Services</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="Templates\Role\RoleTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>RoleTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\RolesDecorator\RolesDecoratorTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>RolesDecoratorTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\RolesGuard\RolesGuardTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>RolesGuardTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\RoleEnum\RoleEnumTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>RoleEnumTemplate.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Templates\RolesDecorator\RolesDecoratorTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>RolesDecoratorTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\RolesGuard\RolesGuardTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>RolesGuardTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\RoleEnum\RoleEnumTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>RoleEnumTemplate.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Intent.Modules.Common" Version="3.3.11" />
+    <PackageReference Include="Intent.Modules.Common.TypeScript" Version="3.3.6" />
+    <PackageReference Include="Intent.Packager" Version="3.4.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Intent.RoslynWeaver.Attributes" Version="2.0.1" />
+    <PackageReference Include="Intent.SoftwareFactory.SDK" Version="3.3.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Intent.Modules.NestJS.Authentication\Intent.Modules.NestJS.Authentication.csproj" />
+    <ProjectReference Include="..\Intent.Modules.NestJS.Controllers\Intent.Modules.NestJS.Controllers.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+</Project>

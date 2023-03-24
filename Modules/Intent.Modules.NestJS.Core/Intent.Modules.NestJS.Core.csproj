@@ -1,0 +1,72 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\nestjs-bootstrap.zip" />
+    <None Update="Templates\Dotenv\DotenvTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>DotenvTemplate.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\nestjs-bootstrap.zip" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Templates\Main\MainTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>MainTemplate.cs</LastGenOutput>
+    </None>
+    <None Update="Templates\AppModule\AppModuleTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>AppModuleTemplate.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Templates\Main\MainTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MainTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\AppModule\AppModuleTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AppModuleTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Templates\Dotenv\DotenvTemplate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DotenvTemplate.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Intent.Modules.Common" Version="3.3.11" />
+    <PackageReference Include="Intent.Modules.Common.TypeScript" Version="3.3.6" />
+    <PackageReference Include="Intent.Modules.TypeScript.Weaving.Decorators" Version="3.3.2" />
+    <PackageReference Include="Intent.Packager" Version="3.4.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Intent.RoslynWeaver.Attributes" Version="2.0.1" />
+    <PackageReference Include="Intent.SoftwareFactory.SDK" Version="3.3.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Intent.Modules.Npm\Intent.Modules.Npm.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\nestjs-bootstrap.zip" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+</Project>
