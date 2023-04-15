@@ -11,7 +11,7 @@ namespace Intent.Modules.NestJS.Winston.Templates
 {
     public static class TemplateExtensions
     {
-        public static string GetWinstonOptionsName<T>(this IntentTemplateBase<T> template)
+        public static string GetWinstonOptionsName(this IIntentTemplate template)
         {
             return template.GetTypeName(WinstonOptionsTemplate.TemplateId);
         }

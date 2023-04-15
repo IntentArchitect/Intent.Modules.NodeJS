@@ -16,35 +16,35 @@ namespace Intent.Modules.TypeORM.Entities.Templates
 {
     public static class TemplateExtensions
     {
-        public static string GetBasicAuditingSubscriberName<T>(this IntentTemplateBase<T> template)
+        public static string GetBasicAuditingSubscriberName(this IIntentTemplate template)
         {
             return template.GetTypeName(BasicAuditingSubscriberTemplate.TemplateId);
         }
-        public static string GetDatasourceName<T>(this IntentTemplateBase<T> template)
+        public static string GetDatasourceName(this IIntentTemplate template)
         {
             return template.GetTypeName(DatasourceTemplate.TemplateId);
         }
-        public static string GetOrmConfigName<T>(this IntentTemplateBase<T> template)
+        public static string GetOrmConfigName(this IIntentTemplate template)
         {
             return template.GetTypeName(OrmConfigTemplate.TemplateId);
         }
 
-        public static string GetRepositoryTemplateName<T>(this IntentTemplateBase<T> template) where T : Intent.Modelers.Domain.Api.ClassModel
+        public static string GetRepositoryTemplateName<T>(this IIntentTemplate<T> template) where T : Intent.Modelers.Domain.Api.ClassModel
         {
             return template.GetTypeName(RepositoryTemplate.TemplateId, template.Model);
         }
 
-        public static string GetRepositoryTemplateName(this IntentTemplateBase template, Intent.Modelers.Domain.Api.ClassModel model)
+        public static string GetRepositoryTemplateName(this IIntentTemplate template, Intent.Modelers.Domain.Api.ClassModel model)
         {
             return template.GetTypeName(RepositoryTemplate.TemplateId, model);
         }
 
-        public static string GetTypeOrmExDecoratorName<T>(this IntentTemplateBase<T> template)
+        public static string GetTypeOrmExDecoratorName(this IIntentTemplate template)
         {
             return template.GetTypeName(TypeOrmExDecoratorTemplate.TemplateId);
         }
 
-        public static string GetTypeOrmExModuleName<T>(this IntentTemplateBase<T> template)
+        public static string GetTypeOrmExModuleName(this IIntentTemplate template)
         {
             return template.GetTypeName(TypeOrmExModuleTemplate.TemplateId);
         }

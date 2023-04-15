@@ -35,7 +35,7 @@
     <FileLog>
       <ProjectId>49722d16-76cb-4224-8aa3-c9e7da883f15</ProjectId>
       <CorrelationId>Intent.VisualStudio.Projects.CoreLibrary.CSProject#49722d16-76cb-4224-8aa3-c9e7da883f15</CorrelationId>
-      <OverwriteBehaviour>once-off</OverwriteBehaviour>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Intent.Modules.NestJS.Validation.csproj</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Intent.Modules.NestJS.Validation.csproj</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>

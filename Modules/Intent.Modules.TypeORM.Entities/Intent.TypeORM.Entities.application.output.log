@@ -53,7 +53,7 @@
     <FileLog>
       <ProjectId>9d34d137-f8cd-4985-8989-1b4a83d47a22</ProjectId>
       <CorrelationId>Intent.VisualStudio.Projects.CoreLibrary.CSProject#9d34d137-f8cd-4985-8989-1b4a83d47a22</CorrelationId>
-      <OverwriteBehaviour>once-off</OverwriteBehaviour>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Intent.Modules.TypeORM.Entities.csproj</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Intent.Modules.TypeORM.Entities.csproj</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>

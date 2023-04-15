@@ -27,7 +27,7 @@
     <FileLog>
       <ProjectId>e68440b8-d33a-45d5-be5a-5d0ec43621dd</ProjectId>
       <CorrelationId>Intent.VisualStudio.Projects.CoreLibrary.CSProject#e68440b8-d33a-45d5-be5a-5d0ec43621dd</CorrelationId>
-      <OverwriteBehaviour>once-off</OverwriteBehaviour>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Intent.Modules.NodeJS.Services.CRUD.csproj</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Intent.Modules.NodeJS.Services.CRUD.csproj</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>

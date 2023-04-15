@@ -11,7 +11,7 @@
     <FileLog>
       <ProjectId>cc9a4c9e-686e-403b-84d7-00b3f54236e8</ProjectId>
       <CorrelationId>Intent.VisualStudio.Projects.CoreLibrary.CSProject#cc9a4c9e-686e-403b-84d7-00b3f54236e8</CorrelationId>
-      <OverwriteBehaviour>once-off</OverwriteBehaviour>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Intent.Module.TypeScript.Domain.csproj</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Intent.Module.TypeScript.Domain.csproj</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>

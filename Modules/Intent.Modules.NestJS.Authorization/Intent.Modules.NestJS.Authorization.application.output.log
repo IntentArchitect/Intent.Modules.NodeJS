@@ -43,7 +43,7 @@
     <FileLog>
       <ProjectId>0591139a-a05b-44df-8060-0a627cc52397</ProjectId>
       <CorrelationId>Intent.VisualStudio.Projects.CoreLibrary.CSProject#0591139a-a05b-44df-8060-0a627cc52397</CorrelationId>
-      <OverwriteBehaviour>once-off</OverwriteBehaviour>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Intent.Modules.NestJS.Authorization.csproj</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Intent.Modules.NestJS.Authorization.csproj</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>

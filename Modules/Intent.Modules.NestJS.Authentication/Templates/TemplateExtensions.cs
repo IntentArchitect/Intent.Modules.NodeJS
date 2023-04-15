@@ -21,56 +21,56 @@ namespace Intent.Modules.NestJS.Authentication.Templates
 {
     public static class TemplateExtensions
     {
-        public static string GetAuthControllerName<T>(this IntentTemplateBase<T> template)
+        public static string GetAuthControllerName(this IIntentTemplate template)
         {
             return template.GetTypeName(AuthControllerTemplate.TemplateId);
         }
-        public static string GetAuthModuleName<T>(this IntentTemplateBase<T> template)
+        public static string GetAuthModuleName(this IIntentTemplate template)
         {
             return template.GetTypeName(AuthModuleTemplate.TemplateId);
         }
 
-        public static string GetAuthServiceName<T>(this IntentTemplateBase<T> template)
+        public static string GetAuthServiceName(this IIntentTemplate template)
         {
             return template.GetTypeName(AuthServiceTemplate.TemplateId);
         }
 
-        public static string GetJwtAuthGuardName<T>(this IntentTemplateBase<T> template)
+        public static string GetJwtAuthGuardName(this IIntentTemplate template)
         {
             return template.GetTypeName(JwtAuthGuardTemplate.TemplateId);
         }
 
-        public static string GetJwtStrategyName<T>(this IntentTemplateBase<T> template)
+        public static string GetJwtStrategyName(this IIntentTemplate template)
         {
             return template.GetTypeName(JwtStrategyTemplate.TemplateId);
         }
 
-        public static string GetLocalAuthGuardName<T>(this IntentTemplateBase<T> template)
+        public static string GetLocalAuthGuardName(this IIntentTemplate template)
         {
             return template.GetTypeName(LocalAuthGuardTemplate.TemplateId);
         }
 
-        public static string GetLocalStrategyName<T>(this IntentTemplateBase<T> template)
+        public static string GetLocalStrategyName(this IIntentTemplate template)
         {
             return template.GetTypeName(LocalStrategyTemplate.TemplateId);
         }
 
-        public static string GetPublicDecoratorName<T>(this IntentTemplateBase<T> template)
+        public static string GetPublicDecoratorName(this IIntentTemplate template)
         {
             return template.GetTypeName(PublicDecoratorTemplate.TemplateId);
         }
 
-        public static string GetUserContextName<T>(this IntentTemplateBase<T> template)
+        public static string GetUserContextName(this IIntentTemplate template)
         {
             return template.GetTypeName(UserContextTemplate.TemplateId);
         }
 
-        public static string GetUsersModuleName<T>(this IntentTemplateBase<T> template)
+        public static string GetUsersModuleName(this IIntentTemplate template)
         {
             return template.GetTypeName(UsersModuleTemplate.TemplateId);
         }
 
-        public static string GetUsersServiceName<T>(this IntentTemplateBase<T> template)
+        public static string GetUsersServiceName(this IIntentTemplate template)
         {
             return template.GetTypeName(UsersServiceTemplate.TemplateId);
         }

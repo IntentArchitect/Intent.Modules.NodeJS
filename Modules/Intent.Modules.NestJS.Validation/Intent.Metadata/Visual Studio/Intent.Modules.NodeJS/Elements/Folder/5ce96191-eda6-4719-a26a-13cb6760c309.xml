@@ -197,38 +197,6 @@
       </metadata>
       <childElements />
     </childElement>
-    <childElement id="e7d1d2c9-2d45-44cd-a102-5828ca50e39d" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
-      <name>Intent.ModuleBuilder.TypeScript.Templates.TypescriptPartialTemplate</name>
-      <display>Intent.ModuleBuilder.TypeScript.Templates.TypescriptPartialTemplate</display>
-      <externalReference>Intent.ModuleBuilder.TypeScript</externalReference>
-      <isAbstract>false</isAbstract>
-      <genericTypes />
-      <isMapped>false</isMapped>
-      <parentFolderId>5ce96191-eda6-4719-a26a-13cb6760c309</parentFolderId>
-      <packageId>80ceaa4d-2315-4f8f-b336-3f0a21660f0a</packageId>
-      <packageName>Intent.Modules.NodeJS</packageName>
-      <stereotypes />
-      <metadata>
-        <entry key="status" value="assigned" />
-      </metadata>
-      <childElements />
-    </childElement>
-    <childElement id="0a305662-2235-430d-b894-06ab1b17bad5" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
-      <name>Intent.ModuleBuilder.TypeScript.Templates.TypescriptT4Template</name>
-      <display>Intent.ModuleBuilder.TypeScript.Templates.TypescriptT4Template</display>
-      <externalReference>Intent.ModuleBuilder.TypeScript</externalReference>
-      <isAbstract>false</isAbstract>
-      <genericTypes />
-      <isMapped>false</isMapped>
-      <parentFolderId>5ce96191-eda6-4719-a26a-13cb6760c309</parentFolderId>
-      <packageId>80ceaa4d-2315-4f8f-b336-3f0a21660f0a</packageId>
-      <packageName>Intent.Modules.NodeJS</packageName>
-      <stereotypes />
-      <metadata>
-        <entry key="status" value="assigned" />
-      </metadata>
-      <childElements />
-    </childElement>
     <childElement id="7a7e829a-2c8e-4e51-98fe-d951c76de7e9" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
       <name>ModuleBuilder.Typescript.Templates.TypescriptTemplate.PreProcessT4</name>
       <display>ModuleBuilder.Typescript.Templates.TypescriptTemplate.PreProcessT4</display>
@@ -239,6 +207,48 @@
       <parentFolderId>5ce96191-eda6-4719-a26a-13cb6760c309</parentFolderId>
       <packageId>80ceaa4d-2315-4f8f-b336-3f0a21660f0a</packageId>
       <packageName>Intent.Modules.NodeJS</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="c60ab26b-17c0-4c21-91d8-7027d7cb4740" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
+      <name>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial</name>
+      <display>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplatePartial</display>
+      <externalReference>Intent.ModuleBuilder.TypeScript</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>5ce96191-eda6-4719-a26a-13cb6760c309</parentFolderId>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="f99e0c7f-32a9-4341-b7f9-b17be7a3112a" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
+      <name>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateStringInterpolation</name>
+      <display>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateStringInterpolation</display>
+      <externalReference>Intent.ModuleBuilder.TypeScript</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>5ce96191-eda6-4719-a26a-13cb6760c309</parentFolderId>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="91ae90ee-1466-4c05-bc3b-6f09e0db04b6" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
+      <name>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateT4</name>
+      <display>Intent.ModuleBuilder.TypeScript.Templates.TypescriptTemplateT4</display>
+      <externalReference>Intent.ModuleBuilder.TypeScript</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>5ce96191-eda6-4719-a26a-13cb6760c309</parentFolderId>
       <stereotypes />
       <metadata>
         <entry key="status" value="assigned" />

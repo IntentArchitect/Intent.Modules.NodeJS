@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package>
   <id>Intent.NodeJS.Domain</id>
   <version>3.3.5</version>
-  <supportedClientVersions>[3.3.16, 4.0.0)</supportedClientVersions>
+  <supportedClientVersions>[3.3.16, 5.0.0)</supportedClientVersions>
   <summary>Generates the Domain Entities from the Domain designer</summary>
   <description>Generates the Domain Entities from the Domain designer</description>
   <authors>Intent.Modules.NodeJS</authors>
@@ -20,10 +20,10 @@
   <decorators></decorators>
   <factoryExtensions></factoryExtensions>
   <dependencies>
-    <dependency id="Intent.Common" version="3.3.11" />
-    <dependency id="Intent.Common.Types" version="3.3.5" />
+    <dependency id="Intent.Common" version="3.3.18" />
+    <dependency id="Intent.Common.Types" version="3.3.7" />
     <dependency id="Intent.Common.TypeScript" version="3.3.8" />
-    <dependency id="Intent.Modelers.Domain" version="3.3.10" />
+    <dependency id="Intent.Modelers.Domain" version="3.4.0" />
     <dependency id="Intent.TypeScript.Weaving.Decorators" version="3.3.4" />
   </dependencies>
   <files>

@@ -13,17 +13,17 @@ namespace Intent.Modules.NestJS.Authorization.Templates
 {
     public static class TemplateExtensions
     {
-        public static string GetRoleEnumName<T>(this IntentTemplateBase<T> template)
+        public static string GetRoleEnumName(this IIntentTemplate template)
         {
             return template.GetTypeName(RoleEnumTemplate.TemplateId);
         }
 
-        public static string GetRolesDecoratorName<T>(this IntentTemplateBase<T> template)
+        public static string GetRolesDecoratorName(this IIntentTemplate template)
         {
             return template.GetTypeName(RolesDecoratorTemplate.TemplateId);
         }
 
-        public static string GetRolesGuardName<T>(this IntentTemplateBase<T> template)
+        public static string GetRolesGuardName(this IIntentTemplate template)
         {
             return template.GetTypeName(RolesGuardTemplate.TemplateId);
         }

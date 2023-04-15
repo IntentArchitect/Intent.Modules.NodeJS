@@ -19,7 +19,7 @@
     <FileLog>
       <ProjectId>4a552a10-949b-45ce-8d6b-61f56798a2ca</ProjectId>
       <CorrelationId>Intent.VisualStudio.Projects.CoreLibrary.CSProject#4a552a10-949b-45ce-8d6b-61f56798a2ca</CorrelationId>
-      <OverwriteBehaviour>once-off</OverwriteBehaviour>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Intent.ApplicationTemplate.NodeJS.csproj</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Intent.ApplicationTemplate.NodeJS.csproj</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>

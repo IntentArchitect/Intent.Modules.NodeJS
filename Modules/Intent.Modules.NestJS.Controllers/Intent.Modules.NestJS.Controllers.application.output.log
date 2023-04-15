@@ -9,33 +9,9 @@
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
-      <ProjectId>e843a4e1-f11e-4416-80b2-a61f530d6986</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.Templates.Api.ApiElementExtensionModel#cc34c677-376a-436e-b578-e51013e44d8a</CorrelationId>
-      <OverwriteBehaviour>always</OverwriteBehaviour>
-      <ApplicationRelativeFilePath>Api/OperationExtensionModel.cs</ApplicationRelativeFilePath>
-      <ProjectRelativeFilePath>OperationExtensionModel.cs</ProjectRelativeFilePath>
-      <IsIgnored>false</IsIgnored>
-    </FileLog>
-    <FileLog>
-      <ProjectId>e843a4e1-f11e-4416-80b2-a61f530d6986</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.Templates.Api.ApiElementExtensionModel#0e991b37-32fe-4ab5-89d6-61c814f93d05</CorrelationId>
-      <OverwriteBehaviour>always</OverwriteBehaviour>
-      <ApplicationRelativeFilePath>Api/ParameterExtensionModel.cs</ApplicationRelativeFilePath>
-      <ProjectRelativeFilePath>ParameterExtensionModel.cs</ProjectRelativeFilePath>
-      <IsIgnored>false</IsIgnored>
-    </FileLog>
-    <FileLog>
-      <ProjectId>e843a4e1-f11e-4416-80b2-a61f530d6986</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.Templates.Api.ApiElementExtensionModel#7187de57-a2d3-4be7-9d30-ce4b1fd146b3</CorrelationId>
-      <OverwriteBehaviour>always</OverwriteBehaviour>
-      <ApplicationRelativeFilePath>Api/ServiceExtensionModel.cs</ApplicationRelativeFilePath>
-      <ProjectRelativeFilePath>ServiceExtensionModel.cs</ProjectRelativeFilePath>
-      <IsIgnored>false</IsIgnored>
-    </FileLog>
-    <FileLog>
       <ProjectId>f147fd9a-501e-4202-80c5-fe7d2fb03a4f</ProjectId>
       <CorrelationId>Intent.VisualStudio.Projects.CoreLibrary.CSProject#f147fd9a-501e-4202-80c5-fe7d2fb03a4f</CorrelationId>
-      <OverwriteBehaviour>once-off</OverwriteBehaviour>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Intent.Modules.NestJS.Controllers.csproj</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Intent.Modules.NestJS.Controllers.csproj</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
@@ -46,14 +22,6 @@
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Intent.NodeJS.NestJS.Controllers.imodspec</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Intent.NodeJS.NestJS.Controllers.imodspec</ProjectRelativeFilePath>
-      <IsIgnored>false</IsIgnored>
-    </FileLog>
-    <FileLog>
-      <ProjectId>8dc81fb7-86f3-4826-99ed-d25fd079dfea</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.DesignerSettings#b86b3708-4bcf-4cf5-aadf-96aa943d085b</CorrelationId>
-      <OverwriteBehaviour>always</OverwriteBehaviour>
-      <ApplicationRelativeFilePath>modelers/Node Controller Settings.designer.settings</ApplicationRelativeFilePath>
-      <ProjectRelativeFilePath>Node Controller Settings.designer.settings</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>

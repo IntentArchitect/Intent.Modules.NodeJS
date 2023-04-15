@@ -21,7 +21,7 @@
     <FileLog>
       <ProjectId>96615273-0852-4d59-acfb-67f62095564b</ProjectId>
       <CorrelationId>Intent.VisualStudio.Projects.CoreLibrary.CSProject#96615273-0852-4d59-acfb-67f62095564b</CorrelationId>
-      <OverwriteBehaviour>once-off</OverwriteBehaviour>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Intent.Modules.NestJS.Core.csproj</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Intent.Modules.NestJS.Core.csproj</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>

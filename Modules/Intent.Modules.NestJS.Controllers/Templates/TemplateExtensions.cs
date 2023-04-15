@@ -15,42 +15,42 @@ namespace Intent.Modules.NestJS.Controllers.Templates
 {
     public static class TemplateExtensions
     {
-        public static string GetControllerName<T>(this IntentTemplateBase<T> template) where T : Intent.Modelers.Services.Api.ServiceModel
+        public static string GetControllerName<T>(this IIntentTemplate<T> template) where T : Intent.Modelers.Services.Api.ServiceModel
         {
             return template.GetTypeName(ControllerTemplate.TemplateId, template.Model);
         }
 
-        public static string GetControllerName(this IntentTemplateBase template, Intent.Modelers.Services.Api.ServiceModel model)
+        public static string GetControllerName(this IIntentTemplate template, Intent.Modelers.Services.Api.ServiceModel model)
         {
             return template.GetTypeName(ControllerTemplate.TemplateId, model);
         }
 
-        public static string GetControllerBaseName<T>(this IntentTemplateBase<T> template)
+        public static string GetControllerBaseName(this IIntentTemplate template)
         {
             return template.GetTypeName(ControllerBaseTemplate.TemplateId);
         }
 
-        public static string GetDtoModelName<T>(this IntentTemplateBase<T> template) where T : Intent.Modelers.Services.Api.DTOModel
+        public static string GetDtoModelName<T>(this IIntentTemplate<T> template) where T : Intent.Modelers.Services.Api.DTOModel
         {
             return template.GetTypeName(DtoModelTemplate.TemplateId, template.Model);
         }
 
-        public static string GetDtoModelName(this IntentTemplateBase template, Intent.Modelers.Services.Api.DTOModel model)
+        public static string GetDtoModelName(this IIntentTemplate template, Intent.Modelers.Services.Api.DTOModel model)
         {
             return template.GetTypeName(DtoModelTemplate.TemplateId, model);
         }
 
-        public static string GetJsonResponseName<T>(this IntentTemplateBase<T> template)
+        public static string GetJsonResponseName(this IIntentTemplate template)
         {
             return template.GetTypeName(JsonResponseTemplate.TemplateId);
         }
 
-        public static string GetServiceName<T>(this IntentTemplateBase<T> template) where T : Intent.Modelers.Services.Api.ServiceModel
+        public static string GetServiceName<T>(this IIntentTemplate<T> template) where T : Intent.Modelers.Services.Api.ServiceModel
         {
             return template.GetTypeName(ServiceTemplate.TemplateId, template.Model);
         }
 
-        public static string GetServiceName(this IntentTemplateBase template, Intent.Modelers.Services.Api.ServiceModel model)
+        public static string GetServiceName(this IIntentTemplate template, Intent.Modelers.Services.Api.ServiceModel model)
         {
             return template.GetTypeName(ServiceTemplate.TemplateId, model);
         }

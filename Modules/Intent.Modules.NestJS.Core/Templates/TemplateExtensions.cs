@@ -12,12 +12,12 @@ namespace Intent.Modules.NestJS.Core.Templates
 {
     public static class TemplateExtensions
     {
-        public static string GetAppModuleName<T>(this IntentTemplateBase<T> template)
+        public static string GetAppModuleName(this IIntentTemplate template)
         {
             return template.GetTypeName(AppModuleTemplate.TemplateId);
         }
 
-        public static string GetMainName<T>(this IntentTemplateBase<T> template)
+        public static string GetMainName(this IIntentTemplate template)
         {
             return template.GetTypeName(MainTemplate.TemplateId);
         }

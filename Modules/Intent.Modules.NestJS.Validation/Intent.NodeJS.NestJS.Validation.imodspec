@@ -2,7 +2,7 @@
 <package>
   <id>Intent.NodeJS.NestJS.Validation</id>
   <version>3.3.3</version>
-  <supportedClientVersions>[3.3.16, 4.0.0)</supportedClientVersions>
+  <supportedClientVersions>[3.3.16, 5.0.0)</supportedClientVersions>
   <summary>Validation for NestJS using declarative validation decorators.</summary>
   <description>Validation for NestJS using declarative validation decorators.</description>
   <authors>Intent.Modules.NodeJS</authors>
@@ -14,9 +14,9 @@
   <factoryExtensions />
   <moduleSettings></moduleSettings>
   <dependencies>
-    <dependency id="Intent.Common" version="3.3.11" />
-    <dependency id="Intent.Common.Types" version="3.3.5" />
-    <dependency id="Intent.Modelers.Services" version="3.3.6" />
+    <dependency id="Intent.Common" version="3.3.18" />
+    <dependency id="Intent.Common.Types" version="3.3.7" />
+    <dependency id="Intent.Modelers.Services" version="3.4.0" />
     <dependency id="Intent.NodeJS.NestJS.Controllers" version="3.3.3" />
     <dependency id="Intent.NodeJS.NestJS.Core" version="3.3.2" />
   </dependencies>

@@ -12,22 +12,22 @@ namespace Intent.Module.TypeScript.Domain.Templates
 {
     public static class TemplateExtensions
     {
-        public static string GetEntityName<T>(this IntentTemplateBase<T> template) where T : Intent.Modelers.Domain.Api.ClassModel
+        public static string GetEntityName<T>(this IIntentTemplate<T> template) where T : Intent.Modelers.Domain.Api.ClassModel
         {
             return template.GetTypeName(EntityTemplate.TemplateId, template.Model);
         }
 
-        public static string GetEntityName(this IntentTemplateBase template, Intent.Modelers.Domain.Api.ClassModel model)
+        public static string GetEntityName(this IIntentTemplate template, Intent.Modelers.Domain.Api.ClassModel model)
         {
             return template.GetTypeName(EntityTemplate.TemplateId, model);
         }
 
-        public static string GetEnumName<T>(this IntentTemplateBase<T> template) where T : Intent.Modules.Common.Types.Api.EnumModel
+        public static string GetEnumName<T>(this IIntentTemplate<T> template) where T : Intent.Modules.Common.Types.Api.EnumModel
         {
             return template.GetTypeName(EnumTemplate.TemplateId, template.Model);
         }
 
-        public static string GetEnumName(this IntentTemplateBase template, Intent.Modules.Common.Types.Api.EnumModel model)
+        public static string GetEnumName(this IIntentTemplate template, Intent.Modules.Common.Types.Api.EnumModel model)
         {
             return template.GetTypeName(EnumTemplate.TemplateId, model);
         }
