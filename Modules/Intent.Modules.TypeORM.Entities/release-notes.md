@@ -1,3 +1,7 @@
+### Version 3.3.12
+
+- Updated supported client version to [3.3.16, 5.0.0).
+
 ### Version 3.3.11
 
 - Fixed: In the generated content for `basic-auditing-subscriber.ts`, `Request` was not being imported.

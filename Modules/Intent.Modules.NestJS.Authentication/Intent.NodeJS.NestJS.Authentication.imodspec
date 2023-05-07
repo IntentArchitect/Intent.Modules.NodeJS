@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package>
   <id>Intent.NodeJS.NestJS.Authentication</id>
-  <version>3.3.4</version>
+  <version>3.3.5</version>
   <supportedClientVersions>[3.3.16, 5.0.0)</supportedClientVersions>
   <summary>Provides authentication and security to the NestJS application</summary>
   <description>Provides authentication and security to the NestJS application</description>

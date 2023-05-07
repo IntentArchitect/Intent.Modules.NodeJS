@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package>
   <id>Intent.Npm</id>
-  <version>3.3.3</version>
+  <version>3.3.4</version>
   <supportedClientVersions>[3.3.16, 5.0.0)</supportedClientVersions>
+  <releaseNotes>release-notes.md</releaseNotes>
   <summary>Generates the npm package file</summary>
   <description>Generates the npm package file</description>
   <authors>Intent.Modules.NodeJS</authors>
