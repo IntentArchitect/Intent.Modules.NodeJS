@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package>
   <id>Intent.Npm</id>
-  <version>3.3.4</version>
-  <supportedClientVersions>[3.3.16, 5.0.0)</supportedClientVersions>
+  <version>3.3.5</version>
+  <supportedClientVersions>[3.3.16, 5.0.0-a)</supportedClientVersions>
   <releaseNotes>release-notes.md</releaseNotes>
   <summary>Generates the npm package file</summary>
   <description>Generates the npm package file</description>
@@ -17,8 +17,8 @@
   <decorators></decorators>
   <factoryExtensions></factoryExtensions>
   <dependencies>
-    <dependency id="Intent.Common" version="3.3.18" />
-    <dependency id="Intent.Common.Types" version="3.3.7" />
+    <dependency id="Intent.Common" version="3.4.1" />
+    <dependency id="Intent.Common.Types" version="3.3.9" />
   </dependencies>
   <files>
     <file src="$outDir$/$id$.dll" />
