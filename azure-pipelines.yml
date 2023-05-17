@@ -9,7 +9,7 @@ variables:
 - name: 'vstsFeed'
   value: '4bb4c1b9-5b56-4972-8bac-0ad3fa64204e/intentarchitect-feed'
 - name: 'vstsFeedUrl'
-  value: https://pkgs.dev.azure.com/intentarchitect/4bb4c1b9-5b56-4972-8bac-0ad3fa64204e/_packaging/intentarchitect-feed/nuget/v3/index.json
+  value: 'https://pkgs.dev.azure.com/intentarchitect/4bb4c1b9-5b56-4972-8bac-0ad3fa64204e/_packaging/intentarchitect-feed/nuget/v3/index.json'
 - name: 'targetsToBuild'
   value: '**/*.sln'
 - group: 'Intent Architect Credentials'
@@ -25,13 +25,18 @@ pool:
 
 steps:
 
+- task: CmdLine@2
+  inputs:
+    script: |
+      git config --global core.longpaths true
+
 - checkout: 'self'
   persistCredentials: 'true'
   fetchDepth: '1'
   submodules: 'recursive'
 
 # Required for entry in NuGet.Config that is generated as part of 'dotnet pack'.
-- task: NuGetAuthenticate@0
+- task: NuGetAuthenticate@1
 
 # We pack upfront as some projects rely on NuGet packages from this same solution.
 - task: PowerShell@2
@@ -42,20 +47,6 @@ steps:
     ignoreLASTEXITCODE: true
     filePath: 'dotnet-pack-all.ps1'
     arguments: '-dotnetPackOutputDirectory $(Build.ArtifactStagingDirectory) -vstsFeedUrl $(vstsFeedUrl)'
-
-# Push the NuGet packages so that regardless of whether or not this build succeeds, they are 
-# available to other pipelines.
-- task: NuGetCommand@2
-  displayName: 'nuget push'
-  condition: succeededOrFailed()
-  inputs:
-      command: 'push'
-      feedsToUse: 'select'
-      includeNuGetOrg: false
-      publishVstsFeed: $(vstsFeed)
-      allowPackageConflicts: true
-      packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
-      nuGetFeedType: 'internal'
 
 - task: DotNetCoreCLI@2
   displayName: 'dotnet restore'
@@ -115,8 +106,21 @@ steps:
         throw "Template Testing failed. Please review [error] tags."
       }
 
+# Push the NuGet packages to the DevOps artifact feed so that it's available to other pipelines
+- task: NuGetCommand@2
+  displayName: 'nuget push'
+  condition: and(succeeded(), in(variables['Build.SourceBranch'], 'refs/heads/master', 'refs/heads/development'))
+  inputs:
+      command: 'push'
+      feedsToUse: 'select'
+      includeNuGetOrg: false
+      publishVstsFeed: $(vstsFeed)
+      allowPackageConflicts: true
+      packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
+      nuGetFeedType: 'internal'
+
 - task: PowerShell@2
-  displayName: 'Install Module Packager'
+  displayName: 'install intent packager'
   condition: and(succeeded(), in(variables['Build.SourceBranch'], 'refs/heads/master', 'refs/heads/development'))
   inputs:
     targetType: 'inline'
@@ -125,7 +129,7 @@ steps:
       dotnet tool install Intent.IArchitect.Packager.CommandLine --global --prerelease --add-source '$(vstsFeedUrl)'
 
 - task: PowerShell@2
-  displayName: 'Filter modules'
+  displayName: 'filter modules to publish'
   condition: and(succeeded(), in(variables['Build.SourceBranch'], 'refs/heads/master', 'refs/heads/development'))
   inputs:
     targetType: inline
@@ -133,11 +137,24 @@ steps:
     script: |
       $isPreReleaseRegex = '(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$'
       $isMaster = '$(Build.SourceBranch)' -eq 'refs/heads/master'
-      Get-ChildItem "./Modules/Intent.Modules/*.imod" | Where-Object { If ($isMaster) { $_.Name -Match $isPreReleaseRegex } Else { { $_.Name -NotMatch $isPreReleaseRegex } } } | Remove-Item
-      Get-ChildItem "./Modules/Intent.Modules/*.iat" | Where-Object { If ($isMaster) { $_.Name -Match $isPreReleaseRegex } Else { $true } } | Remove-Item
+
+      $imodFilesToRemove = Get-ChildItem "./Modules/Intent.Modules/*.imod" | Where-Object { If ($isMaster) { ($_.Name -Match $isPreReleaseRegex) } Else { $_.Name -NotMatch $isPreReleaseRegex } }
+      # Client has no way to filter pre-release application templates so they are never published from development
+      $iatFilesToRemove = Get-ChildItem "./Modules/Intent.Modules/*.iat" | Where-Object { $isMaster -Or ($_.Name -Match $isPreReleaseRegex) }
+
+      Write-Host "Deleting the following files to prevent them being published:"
+      $imodFilesToRemove | Select-Object Name
+      $iatFilesToRemove | Select-Object Name
+
+      $imodFilesToRemove | Remove-Item
+      $iatFilesToRemove | Remove-Item
+
+      Write-Host "Remaining files:"
+      Get-ChildItem "./Modules/Intent.Modules/*.imod" | Select-Object Name
+      Get-ChildItem "./Modules/Intent.Modules/*.iat" | Select-Object Name
 
 - task: PowerShell@2
-  displayName: 'Publish modules'
+  displayName: 'publish modules'
   condition: and(succeeded(), in(variables['Build.SourceBranch'], 'refs/heads/master', 'refs/heads/development'))
   env:
     DOTNET_NOLOGO: '1'
