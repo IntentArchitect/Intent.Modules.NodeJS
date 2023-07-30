@@ -18,6 +18,7 @@ namespace Intent.Modules.NestJS.Authentication.Templates.Auth.Strategies.LocalSt
     {
         public override string TemplateId => LocalStrategyTemplate.TemplateId;
 
+        [IntentManaged(Mode.Fully)]
         public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget)
         {
             return new LocalStrategyTemplate(outputTarget);

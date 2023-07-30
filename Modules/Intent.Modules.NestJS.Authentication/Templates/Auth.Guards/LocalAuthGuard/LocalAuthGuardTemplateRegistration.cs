@@ -18,6 +18,7 @@ namespace Intent.Modules.NestJS.Authentication.Templates.Auth.Guards.LocalAuthGu
     {
         public override string TemplateId => LocalAuthGuardTemplate.TemplateId;
 
+        [IntentManaged(Mode.Fully)]
         public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget)
         {
             return new LocalAuthGuardTemplate(outputTarget);

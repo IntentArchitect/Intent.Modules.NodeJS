@@ -18,6 +18,7 @@ namespace Intent.Modules.TypeORM.Entities.Templates.Datasource
     {
         public override string TemplateId => DatasourceTemplate.TemplateId;
 
+        [IntentManaged(Mode.Fully)]
         public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget)
         {
             return new DatasourceTemplate(outputTarget);

@@ -18,6 +18,7 @@ namespace Intent.Modules.NestJS.Authentication.Templates.Auth.Strategies.JwtStra
     {
         public override string TemplateId => JwtStrategyTemplate.TemplateId;
 
+        [IntentManaged(Mode.Fully)]
         public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget)
         {
             return new JwtStrategyTemplate(outputTarget);

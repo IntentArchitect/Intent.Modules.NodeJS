@@ -18,6 +18,7 @@ namespace Intent.Modules.TypeORM.Entities.Templates.TypeOrmExModule
     {
         public override string TemplateId => TypeOrmExModuleTemplate.TemplateId;
 
+        [IntentManaged(Mode.Fully)]
         public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget)
         {
             return new TypeOrmExModuleTemplate(outputTarget);

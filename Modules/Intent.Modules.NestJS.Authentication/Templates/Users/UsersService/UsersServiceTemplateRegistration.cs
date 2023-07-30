@@ -18,6 +18,7 @@ namespace Intent.Modules.NestJS.Authentication.Templates.Users.UsersService
     {
         public override string TemplateId => UsersServiceTemplate.TemplateId;
 
+        [IntentManaged(Mode.Fully)]
         public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget)
         {
             return new UsersServiceTemplate(outputTarget);

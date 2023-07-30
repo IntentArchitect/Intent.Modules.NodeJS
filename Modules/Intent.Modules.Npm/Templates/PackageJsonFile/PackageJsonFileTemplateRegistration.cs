@@ -19,6 +19,7 @@ namespace Intent.Modules.Npm.Templates.PackageJsonFile
     {
         public override string TemplateId => PackageJsonFileTemplate.TemplateId;
 
+        [IntentManaged(Mode.Fully)]
         public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget)
         {
             return new PackageJsonFileTemplate(outputTarget);

@@ -19,6 +19,7 @@ namespace Intent.Modules.TypeORM.Entities.Templates.OrmConfig
     {
         public override string TemplateId => OrmConfigTemplate.TemplateId;
 
+        [IntentManaged(Mode.Fully)]
         public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget, IList<ClassModel> model)
         {
             return new OrmConfigTemplate(outputTarget, model);

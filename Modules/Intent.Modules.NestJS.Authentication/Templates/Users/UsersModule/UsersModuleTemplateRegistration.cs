@@ -18,6 +18,7 @@ namespace Intent.Modules.NestJS.Authentication.Templates.Users.UsersModule
     {
         public override string TemplateId => UsersModuleTemplate.TemplateId;
 
+        [IntentManaged(Mode.Fully)]
         public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget)
         {
             return new UsersModuleTemplate(outputTarget);

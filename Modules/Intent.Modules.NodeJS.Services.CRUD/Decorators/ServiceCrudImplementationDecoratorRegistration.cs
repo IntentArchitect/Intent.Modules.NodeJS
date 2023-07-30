@@ -12,16 +12,10 @@ namespace Intent.Modules.NodeJS.Services.CRUD.Decorators
     [Description(ServiceCrudImplementationDecorator.DecoratorId)]
     public class ServiceCrudImplementationDecoratorRegistration : DecoratorRegistration<ServiceTemplate, ServiceDecorator>
     {
-        private readonly IMetadataManager _metadataManager;
-
-        public ServiceCrudImplementationDecoratorRegistration(IMetadataManager metadataManager)
-        {
-            _metadataManager = metadataManager;
-        }
-
+        [IntentManaged(Mode.Fully)]
         public override ServiceDecorator CreateDecoratorInstance(ServiceTemplate template, IApplication application)
         {
-            return new ServiceCrudImplementationDecorator(template, application, _metadataManager);
+            return new ServiceCrudImplementationDecorator(template, application);
         }
 
         public override string DecoratorId => ServiceCrudImplementationDecorator.DecoratorId;

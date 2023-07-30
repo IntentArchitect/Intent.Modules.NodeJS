@@ -18,6 +18,7 @@ namespace Intent.Modules.NestJS.Authorization.Templates.RoleEnum
     {
         public override string TemplateId => RoleEnumTemplate.TemplateId;
 
+        [IntentManaged(Mode.Fully)]
         public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget)
         {
             return new RoleEnumTemplate(outputTarget);

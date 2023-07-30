@@ -26,6 +26,7 @@ namespace Intent.Module.TypeScript.Domain.Templates.Entity
 
         public override string TemplateId => EntityTemplate.TemplateId;
 
+        [IntentManaged(Mode.Fully)]
         public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget, ClassModel model)
         {
             return new EntityTemplate(outputTarget, model);

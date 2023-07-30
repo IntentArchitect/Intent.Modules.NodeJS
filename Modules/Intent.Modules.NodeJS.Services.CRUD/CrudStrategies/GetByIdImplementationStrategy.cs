@@ -19,16 +19,14 @@ namespace Intent.Modules.NodeJS.Services.CRUD.CrudStrategies
     {
         private readonly ServiceTemplate _template;
         private readonly IApplication _application;
-        private readonly IMetadataManager _metadataManager;
         private string _repository;
         private DTOModel _dtoToReturn;
         private ParameterModel _idProperty;
 
-        public GetByIdImplementationStrategy(ServiceTemplate template, IApplication application, IMetadataManager metadataManager)
+        public GetByIdImplementationStrategy(ServiceTemplate template, IApplication application)
         {
             _template = template;
             _application = application;
-            _metadataManager = metadataManager;
         }
 
         public bool IsMatch(ClassModel targetEntity, OperationModel operation)
@@ -64,7 +62,7 @@ namespace Intent.Modules.NodeJS.Services.CRUD.CrudStrategies
                 return false;
             }
 
-            _dtoToReturn = _metadataManager.Services(_application).GetDTOModels().SingleOrDefault(x => x.Id == operation.TypeReference.Element.Id && x.IsMapped && x.Mapping.ElementId == targetEntity.Id);
+            _dtoToReturn = _application.MetadataManager.Services(_application).GetDTOModels().SingleOrDefault(x => x.Id == operation.TypeReference.Element.Id && x.IsMapped && x.Mapping.ElementId == targetEntity.Id);
             if (_dtoToReturn == null)
             {
                 return false;

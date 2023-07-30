@@ -12,6 +12,7 @@ namespace Intent.Modules.NestJS.Authorization.Decorators
     [Description(ControllerRolesDecorator.DecoratorId)]
     public class ControllerRolesDecoratorRegistration : DecoratorRegistration<ControllerTemplate, ControllerDecorator>
     {
+        [IntentManaged(Mode.Fully)]
         public override ControllerDecorator CreateDecoratorInstance(ControllerTemplate template, IApplication application)
         {
             return new ControllerRolesDecorator(template, application);

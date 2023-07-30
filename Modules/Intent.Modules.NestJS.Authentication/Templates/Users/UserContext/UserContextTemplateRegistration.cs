@@ -18,6 +18,7 @@ namespace Intent.Modules.NestJS.Authentication.Templates.Users.UserContext
     {
         public override string TemplateId => UserContextTemplate.TemplateId;
 
+        [IntentManaged(Mode.Fully)]
         public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget)
         {
             return new UserContextTemplate(outputTarget);

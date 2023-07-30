@@ -18,6 +18,7 @@ namespace Intent.Modules.NestJS.Authorization.Templates.RolesGuard
     {
         public override string TemplateId => RolesGuardTemplate.TemplateId;
 
+        [IntentManaged(Mode.Fully)]
         public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget)
         {
             return new RolesGuardTemplate(outputTarget);

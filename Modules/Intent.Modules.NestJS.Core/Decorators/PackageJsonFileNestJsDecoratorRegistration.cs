@@ -12,6 +12,7 @@ namespace Intent.Modules.NestJS.Core.Decorators
     [Description(PackageJsonFileNestJsDecorator.DecoratorId)]
     public class PackageJsonFileNestJsDecoratorRegistration : DecoratorRegistration<PackageJsonFileTemplate, PackageJsonFileDecorator>
     {
+        [IntentManaged(Mode.Fully)]
         public override PackageJsonFileDecorator CreateDecoratorInstance(PackageJsonFileTemplate template, IApplication application)
         {
             return new PackageJsonFileNestJsDecorator(template, application);

@@ -18,6 +18,7 @@ namespace Intent.Modules.NestJS.Authentication.Templates.Auth.Guards.JwtAuthGuar
     {
         public override string TemplateId => JwtAuthGuardTemplate.TemplateId;
 
+        [IntentManaged(Mode.Fully)]
         public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget)
         {
             return new JwtAuthGuardTemplate(outputTarget);

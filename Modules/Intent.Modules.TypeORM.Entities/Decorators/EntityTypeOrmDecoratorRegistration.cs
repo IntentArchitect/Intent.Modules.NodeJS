@@ -12,6 +12,7 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
     [Description(EntityTypeOrmDecorator.DecoratorId)]
     public class EntityTypeOrmDecoratorRegistration : DecoratorRegistration<EntityTemplate, EntityDecorator>
     {
+        [IntentManaged(Mode.Fully)]
         public override EntityDecorator CreateDecoratorInstance(EntityTemplate template, IApplication application)
         {
             return new EntityTypeOrmDecorator(template, application);

@@ -47,6 +47,7 @@ namespace Intent.Modules.NestJS.Core.Templates.ZipFileContent
             );
         }
 
+        [IntentManaged(Mode.Fully, Body = Mode.Ignore)]
         public override string TransformText()
         {
             return _zipEntry.Content;

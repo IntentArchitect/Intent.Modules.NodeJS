@@ -18,6 +18,7 @@ namespace Intent.Modules.TypeORM.Entities.Templates.BasicAuditingSubscriber
     {
         public override string TemplateId => BasicAuditingSubscriberTemplate.TemplateId;
 
+        [IntentManaged(Mode.Fully)]
         public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget)
         {
             return new BasicAuditingSubscriberTemplate(outputTarget);

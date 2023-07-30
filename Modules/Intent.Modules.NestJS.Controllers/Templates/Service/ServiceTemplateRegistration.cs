@@ -26,6 +26,7 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Service
 
         public override string TemplateId => ServiceTemplate.TemplateId;
 
+        [IntentManaged(Mode.Fully)]
         public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget, ServiceModel model)
         {
             return new ServiceTemplate(outputTarget, model);

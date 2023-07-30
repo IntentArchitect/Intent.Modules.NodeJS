@@ -12,6 +12,7 @@ namespace Intent.Modules.NestJS.Validation.Decorators
     [Description(DtoValidationDecorator.DecoratorId)]
     public class DtoValidationDecoratorRegistration : DecoratorRegistration<DtoModelTemplate, DtoModelDecorator>
     {
+        [IntentManaged(Mode.Fully)]
         public override DtoModelDecorator CreateDecoratorInstance(DtoModelTemplate template, IApplication application)
         {
             return new DtoValidationDecorator(template, application);

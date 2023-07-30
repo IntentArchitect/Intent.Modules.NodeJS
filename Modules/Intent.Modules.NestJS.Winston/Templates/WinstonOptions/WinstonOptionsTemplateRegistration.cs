@@ -18,6 +18,7 @@ namespace Intent.Modules.NestJS.Winston.Templates.WinstonOptions
     {
         public override string TemplateId => WinstonOptionsTemplate.TemplateId;
 
+        [IntentManaged(Mode.Fully)]
         public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget)
         {
             return new WinstonOptionsTemplate(outputTarget);

@@ -18,6 +18,7 @@ namespace Intent.Modules.NestJS.Core.Templates.Dotenv
     {
         public override string TemplateId => DotenvTemplate.TemplateId;
 
+        [IntentManaged(Mode.Fully)]
         public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget)
         {
             return new DotenvTemplate(outputTarget);

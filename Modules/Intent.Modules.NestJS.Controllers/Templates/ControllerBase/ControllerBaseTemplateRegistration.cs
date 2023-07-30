@@ -18,9 +18,10 @@ namespace Intent.Modules.NestJS.Controllers.Templates.ControllerBase
     {
         public override string TemplateId => ControllerBaseTemplate.TemplateId;
 
+        [IntentManaged(Mode.Fully)]
         public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget)
         {
-            return new ControllerBaseTemplate(outputTarget, null);
+            return new ControllerBaseTemplate(outputTarget);
         }
     }
 }

@@ -31,6 +31,7 @@ namespace Intent.Modules.Npm.Templates.PackageJsonFile
             ExecutionContext.EventDispatcher.Subscribe<NpmPackageDependency>(@package => _dependencies.Add(@package));
         }
 
+        [IntentManaged(Mode.Fully, Body = Mode.Ignore)]
         public override ITemplateFileConfig GetTemplateFileConfig()
         {
             return new TemplateFileConfig(

@@ -17,15 +17,13 @@ namespace Intent.Modules.NodeJS.Services.CRUD.CrudStrategies
     {
         private readonly ServiceTemplate _template;
         private readonly IApplication _application;
-        private readonly IMetadataManager _metadataManager;
         private string _repository;
         private ParameterModel _idParam;
 
-        public DeleteImplementationStrategy(ServiceTemplate template, IApplication application, IMetadataManager metadataManager)
+        public DeleteImplementationStrategy(ServiceTemplate template, IApplication application)
         {
             _template = template;
             _application = application;
-            _metadataManager = metadataManager;
         }
 
         public bool IsMatch(ClassModel targetEntity, OperationModel operation)

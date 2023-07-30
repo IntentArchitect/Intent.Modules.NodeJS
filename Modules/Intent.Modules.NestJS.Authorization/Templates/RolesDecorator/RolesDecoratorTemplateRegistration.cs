@@ -18,6 +18,7 @@ namespace Intent.Modules.NestJS.Authorization.Templates.RolesDecorator
     {
         public override string TemplateId => RolesDecoratorTemplate.TemplateId;
 
+        [IntentManaged(Mode.Fully)]
         public override ITemplate CreateTemplateInstance(IOutputTarget outputTarget)
         {
             return new RolesDecoratorTemplate(outputTarget);

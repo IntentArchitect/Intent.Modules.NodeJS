@@ -12,6 +12,7 @@ namespace Intent.Modules.TypeORM.Entities.Decorators
     [Description(TypeOrmPackageJsonFileDecorator.DecoratorId)]
     public class TypeOrmPackageJsonFileDecoratorRegistration : DecoratorRegistration<PackageJsonFileTemplate, PackageJsonFileDecorator>
     {
+        [IntentManaged(Mode.Fully)]
         public override PackageJsonFileDecorator CreateDecoratorInstance(PackageJsonFileTemplate template, IApplication application)
         {
             return new TypeOrmPackageJsonFileDecorator(template, application);

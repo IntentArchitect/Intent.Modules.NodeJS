@@ -72,6 +72,7 @@ namespace Intent.Modules.NestJS.Core.Templates.Dotenv
             return string.Join(Environment.NewLine, lines);
         }
 
+        [IntentManaged(Mode.Fully, Body = Mode.Ignore)]
         public override ITemplateFileConfig GetTemplateFileConfig()
         {
             return new TemplateFileConfig(
