@@ -241,7 +241,7 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Controller
 
             if (parameter.GetParameterSettings().Source().IsFromHeader())
             {
-                return $"@{ImportType("Headers", "@nestjs/common")}('{parameter.Name}') ";
+                return $"@{ImportType("Headers", "@nestjs/common")}('{parameter.GetParameterSettings().HeaderName()}') ";
             }
 
             if (parameter.GetParameterSettings().Source().IsFromQuery())

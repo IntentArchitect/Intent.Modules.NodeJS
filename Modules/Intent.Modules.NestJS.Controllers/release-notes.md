@@ -1,3 +1,7 @@
+### Version 3.4.2
+
+- Fixed: Header field was not adequately bound.
+
 ### Version 3.4.1
 
 - Updated dependencies and supported client versions to prevent warnings when used with Intent Architect 4.x.
