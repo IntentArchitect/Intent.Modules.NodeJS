@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package>
   <id>Intent.NodeJS.Services.CRUD</id>
-  <version>3.4.2-pre.0</version>
+  <version>3.4.2</version>
   <supportedClientVersions>[3.3.16, 5.0.0-a)</supportedClientVersions>
   <summary>CRUD conventions for standard NodeJS Services</summary>
   <description>CRUD conventions for standard NodeJS Services</description>
