@@ -1,7 +1,16 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <Version>3.3.5</Version>
+    <Authors>Intent Architect</Authors>
+    <Company>Intent Architect</Company>
+    <Product>Intent Architect</Product>
+    <Copyright>Copyright 2021</Copyright>
+    <PackageProjectUrl>https://github.com/IntentSoftware/Intent.Modules.NET</PackageProjectUrl>
+    <PackageIcon>logo.png</PackageIcon>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
@@ -33,6 +42,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>PackageJsonFileTemplate.tt</DependentUpon>
     </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\logo.png" Pack="True" PackagePath="" />
   </ItemGroup>
 
 </Project>
