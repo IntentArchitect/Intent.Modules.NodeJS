@@ -30,7 +30,7 @@
   </sourceEnd>
   <targetEnd id="4f6e9cf1-4c63-4b76-994f-e33c0d5b3b07" type="Association Target End" typeId="0a66489f-30aa-417b-a75d-b945863366fd">
     <name>K_SelfReference</name>
-    <display>K_SelfReference: K_SelfReference?</display>
+    <display>K_SelfReference: K_SelfReference?   [* --&gt; 0..1]</display>
     <order>1</order>
     <typeReference id="320f5674-4858-4d4b-804e-5246ef8cb27a">
       <typeId>84c49107-7307-4a59-a5c5-e50ac86f6641</typeId>

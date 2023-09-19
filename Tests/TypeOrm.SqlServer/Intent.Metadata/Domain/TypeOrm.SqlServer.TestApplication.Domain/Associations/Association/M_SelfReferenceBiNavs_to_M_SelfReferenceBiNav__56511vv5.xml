@@ -30,7 +30,7 @@
   </sourceEnd>
   <targetEnd id="0cd5384b-9126-4814-be1f-bf4031ee2403" type="Association Target End" typeId="0a66489f-30aa-417b-a75d-b945863366fd">
     <name>M_SelfReferenceBiNav</name>
-    <display>M_SelfReferenceBiNav: M_SelfReferenceBiNav?</display>
+    <display>M_SelfReferenceBiNav: M_SelfReferenceBiNav?   [* --&gt; 0..1]</display>
     <order>1</order>
     <typeReference id="8dae8e30-c0e7-4d12-8f48-97ef0c801682">
       <typeId>745cb08b-b422-4dd2-b88e-d2471e43b34c</typeId>

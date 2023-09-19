@@ -30,7 +30,7 @@
   </sourceEnd>
   <targetEnd id="e01c0d69-7597-4ccb-967c-7cec1870c987" type="Association Target End" typeId="0a66489f-30aa-417b-a75d-b945863366fd">
     <name>L_SelfReferenceMultiples</name>
-    <display>L_SelfReferenceMultiples: L_SelfReferenceMultiple[*]</display>
+    <display>L_SelfReferenceMultiples: L_SelfReferenceMultiple[*]   [* --&gt; *]</display>
     <order>1</order>
     <typeReference id="ffd892e2-0bb7-4f71-8366-5e87f9997f5c">
       <typeId>62dc7002-7f32-437b-b33e-1100d27edb22</typeId>

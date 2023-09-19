@@ -30,7 +30,7 @@
   </sourceEnd>
   <targetEnd id="e7c0f24a-b662-498d-af9f-f8892844d0ee" type="Association Target End" typeId="0a66489f-30aa-417b-a75d-b945863366fd">
     <name>D_OptionalAggregates</name>
-    <display>D_OptionalAggregates: D_OptionalAggregate[*]</display>
+    <display>D_OptionalAggregates: D_OptionalAggregate[*]   [0..1 --&gt; *]</display>
     <order>1</order>
     <typeReference id="6dbc32d2-4a75-46d0-a47c-b3d41eb61b59">
       <typeId>de5da1da-fad2-4c73-bcbe-a16ced779999</typeId>

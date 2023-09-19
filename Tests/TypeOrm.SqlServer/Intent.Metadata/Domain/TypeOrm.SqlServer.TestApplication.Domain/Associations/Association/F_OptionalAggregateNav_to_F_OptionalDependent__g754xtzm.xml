@@ -21,7 +21,7 @@
   </sourceEnd>
   <targetEnd id="ddb5e9cd-dba0-4238-ae7b-ae17be358fdb" type="Association Target End" typeId="0a66489f-30aa-417b-a75d-b945863366fd">
     <name>F_OptionalDependent</name>
-    <display>F_OptionalDependent: F_OptionalDependent?</display>
+    <display>F_OptionalDependent: F_OptionalDependent?   [0..1 --&gt; 0..1]</display>
     <order>1</order>
     <typeReference id="0b3d3ec3-4c7c-4ae9-b336-86c04674320f">
       <typeId>7162e925-598d-4fb4-bab1-248cac0d309d</typeId>

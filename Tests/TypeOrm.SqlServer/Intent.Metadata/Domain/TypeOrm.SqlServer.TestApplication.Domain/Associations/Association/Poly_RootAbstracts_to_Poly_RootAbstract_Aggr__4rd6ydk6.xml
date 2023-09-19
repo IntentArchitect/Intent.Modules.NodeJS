@@ -2,7 +2,7 @@
 <association id="b8b9cb44-7f43-448c-a346-cd3798d5366b">
   <sourceEnd id="e9ce117c-cf31-44b3-9aaa-0c52d1c3eba6" type="Association Source End" typeId="8d9d2e5b-bd55-4f36-9ae4-2b9e84fd4e58">
     <name>Poly_RootAbstracts</name>
-    <display>Poly_RootAbstracts: Poly_RootAbstract[*]</display>
+    <display>Poly_RootAbstracts: TphPoly_RootAbstract[*]</display>
     <order>0</order>
     <typeReference id="e714cf66-3f0b-4550-b839-a6f6e3b44bbf">
       <typeId>44f21868-1f6d-4bba-bb0c-612da73f173c</typeId>
@@ -30,8 +30,8 @@
   </sourceEnd>
   <targetEnd id="b8b9cb44-7f43-448c-a346-cd3798d5366b" type="Association Target End" typeId="0a66489f-30aa-417b-a75d-b945863366fd">
     <name>Poly_RootAbstract_Aggr</name>
-    <display>Poly_RootAbstract_Aggr: Poly_RootAbstract_Aggr?</display>
-    <order>1</order>
+    <display>Poly_RootAbstract_Aggr: TphPoly_RootAbstract_Aggr?   [* --&gt; 0..1]</display>
+    <order>4</order>
     <typeReference id="aa897822-c6de-43d1-b03a-4cf686da0694">
       <typeId>3b70f77d-feef-4a0e-9c87-87ebe4cf1996</typeId>
       <isNavigable>true</isNavigable>

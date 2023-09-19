@@ -2,7 +2,7 @@
 <association id="bc628f40-74a1-4523-b8b5-6b5276501d65">
   <sourceEnd id="cd8ce375-85c0-43fe-bf7a-f1766106b679" type="Association Source End" typeId="8d9d2e5b-bd55-4f36-9ae4-2b9e84fd4e58">
     <name>FkBaseClassAssociateds</name>
-    <display>FkBaseClassAssociateds: FkBaseClassAssociated[*]</display>
+    <display>FkBaseClassAssociateds: TphFkBaseClassAssociated[*]</display>
     <order>0</order>
     <typeReference id="80e9ec2c-6548-4bd4-a80a-e05143b0da5f">
       <typeId>d38cf25a-94e7-48be-8075-a0cfca57f9db</typeId>
@@ -30,8 +30,8 @@
   </sourceEnd>
   <targetEnd id="bc628f40-74a1-4523-b8b5-6b5276501d65" type="Association Target End" typeId="0a66489f-30aa-417b-a75d-b945863366fd">
     <name>FkBaseClass</name>
-    <display>FkBaseClass: FkBaseClass</display>
-    <order>3</order>
+    <display>FkBaseClass: TphFkBaseClass   [* --&gt; 1]</display>
+    <order>4</order>
     <typeReference id="a24bb4ff-b750-42f3-bbf3-15321429c4df">
       <typeId>983bfd70-681e-4991-8112-5e4cfb58a24f</typeId>
       <isNavigable>true</isNavigable>

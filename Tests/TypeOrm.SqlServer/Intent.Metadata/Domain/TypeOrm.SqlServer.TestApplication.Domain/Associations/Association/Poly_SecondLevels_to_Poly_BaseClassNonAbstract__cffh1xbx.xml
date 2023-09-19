@@ -2,7 +2,7 @@
 <association id="cd6c6ea5-84d2-4613-a84e-3b59e3179716">
   <sourceEnd id="76383e49-6468-4ad3-a0cc-8192f2409e57" type="Association Source End" typeId="8d9d2e5b-bd55-4f36-9ae4-2b9e84fd4e58">
     <name>Poly_SecondLevels</name>
-    <display>Poly_SecondLevels: Poly_SecondLevel[*]</display>
+    <display>Poly_SecondLevels: TphPoly_SecondLevel[*]</display>
     <order>0</order>
     <typeReference id="fb89e9d4-5a18-4022-89f0-321f0f2b0b0d">
       <typeId>514a830c-7056-4707-8165-9b9344a01cd6</typeId>
@@ -30,8 +30,8 @@
   </sourceEnd>
   <targetEnd id="cd6c6ea5-84d2-4613-a84e-3b59e3179716" type="Association Target End" typeId="0a66489f-30aa-417b-a75d-b945863366fd">
     <name>Poly_BaseClassNonAbstract</name>
-    <display>Poly_BaseClassNonAbstract: Poly_BaseClassNonAbstract</display>
-    <order>1</order>
+    <display>Poly_BaseClassNonAbstract: TphPoly_BaseClassNonAbstract   [* --&gt; 1]</display>
+    <order>3</order>
     <typeReference id="3575e69e-095f-43f7-be92-f1ba12144fd7">
       <typeId>05e0842c-4e91-4647-9ff9-17d9f1d19b95</typeId>
       <isNavigable>true</isNavigable>

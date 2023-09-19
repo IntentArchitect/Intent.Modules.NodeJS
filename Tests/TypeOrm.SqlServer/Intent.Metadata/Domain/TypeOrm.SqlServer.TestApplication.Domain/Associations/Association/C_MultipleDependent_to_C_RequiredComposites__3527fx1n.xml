@@ -30,7 +30,7 @@
   </sourceEnd>
   <targetEnd id="b95fc62d-8173-479d-856c-fba3fde1d91f" type="Association Target End" typeId="0a66489f-30aa-417b-a75d-b945863366fd">
     <name>C_RequiredComposites</name>
-    <display>C_RequiredComposites: C_RequiredComposite[*]</display>
+    <display>C_RequiredComposites: C_RequiredComposite[*]   [1 --&gt; *]</display>
     <order>1</order>
     <typeReference id="f385c7fb-8315-4d16-9660-dff727fccc65">
       <typeId>ca669c05-5795-44f5-a890-0cd508e0203c</typeId>

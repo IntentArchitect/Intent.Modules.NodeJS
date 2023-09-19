@@ -21,7 +21,7 @@
   </sourceEnd>
   <targetEnd id="f1971663-47e1-428e-8be7-f2e0d2bbcb71" type="Association Target End" typeId="0a66489f-30aa-417b-a75d-b945863366fd">
     <name>H_MultipleDependents</name>
-    <display>H_MultipleDependents: H_MultipleDependent[*]</display>
+    <display>H_MultipleDependents: H_MultipleDependent[*]   [0..1 --&gt; *]</display>
     <order>1</order>
     <typeReference id="9c0ea4b5-b11d-4424-a9c0-cc970187f4c4">
       <typeId>0dec5a21-815c-420c-abd0-b369aca4728a</typeId>

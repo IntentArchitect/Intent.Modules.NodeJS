@@ -2,7 +2,7 @@
 <association id="c2b31ac5-1e74-4d8b-8a86-044c0cba2503">
   <sourceEnd id="5ea7da8e-2bb2-483b-b4e6-9698a91f073c" type="Association Source End" typeId="8d9d2e5b-bd55-4f36-9ae4-2b9e84fd4e58">
     <name>ConcreteBaseClassAssociateds</name>
-    <display>ConcreteBaseClassAssociateds: ConcreteBaseClassAssociated[*]</display>
+    <display>ConcreteBaseClassAssociateds: TpcConcreteBaseClassAssociated[*]</display>
     <order>0</order>
     <typeReference id="7215b70a-7f96-404a-8db8-1bf5d1fad7a1">
       <typeId>59a157f6-8893-4d7a-af49-8127f3197fdd</typeId>
@@ -30,8 +30,8 @@
   </sourceEnd>
   <targetEnd id="c2b31ac5-1e74-4d8b-8a86-044c0cba2503" type="Association Target End" typeId="0a66489f-30aa-417b-a75d-b945863366fd">
     <name>ConcreteBaseClass</name>
-    <display>ConcreteBaseClass: ConcreteBaseClass</display>
-    <order>1</order>
+    <display>ConcreteBaseClass: TpcConcreteBaseClass   [* --&gt; 1]</display>
+    <order>3</order>
     <typeReference id="679c2e52-889c-4727-9ba0-b9060b9bd3aa">
       <typeId>fa7e2985-397e-470d-8984-ce262eae051c</typeId>
       <isNavigable>true</isNavigable>

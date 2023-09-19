@@ -2,7 +2,7 @@
 <association id="9b7da334-1d68-42e0-a073-f487c5118166">
   <sourceEnd id="c60a075e-3516-4055-8943-eaf61f18cb94" type="Generalization Source End" typeId="8190bf43-222c-4b53-8a44-14626efe3574">
     <name>Poly_BaseClassNonAbstract</name>
-    <display>Poly_BaseClassNonAbstract: Poly_BaseClassNonAbstract</display>
+    <display>Poly_BaseClassNonAbstract: TpcPoly_BaseClassNonAbstract</display>
     <order>0</order>
     <typeReference id="804a62d0-ce15-46ba-82ae-8a3a9ae936ec">
       <typeId>58471ad4-a7b1-4618-a749-4f8669edf33e</typeId>
@@ -21,8 +21,8 @@
   </sourceEnd>
   <targetEnd id="9b7da334-1d68-42e0-a073-f487c5118166" type="Generalization Target End" typeId="4686cc1d-b4d8-4b99-b45b-f77bd5496946">
     <name>Poly_RootAbstract</name>
-    <display>Poly_RootAbstract: Poly_RootAbstract</display>
-    <order>1</order>
+    <display>Poly_RootAbstract: TpcPoly_RootAbstract</display>
+    <order>2</order>
     <typeReference id="42f4aa14-1c62-4a2f-a4cf-9305d32bce35">
       <typeId>e0d132f2-6f19-4514-97bb-2b8563c0716c</typeId>
       <isNavigable>true</isNavigable>

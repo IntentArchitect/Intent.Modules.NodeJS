@@ -2,7 +2,7 @@
 <association id="e718cd62-8247-42ce-8dec-3e2e9029f375">
   <sourceEnd id="da7eccf6-db24-4e18-845d-014e1ebb9f6a" type="Association Source End" typeId="8d9d2e5b-bd55-4f36-9ae4-2b9e84fd4e58">
     <name>Poly_RootAbstract</name>
-    <display>Poly_RootAbstract: Poly_RootAbstract</display>
+    <display>Poly_RootAbstract: TphPoly_RootAbstract</display>
     <order>0</order>
     <typeReference id="d1aeb570-dc62-4854-8598-21620336a77d">
       <typeId>44f21868-1f6d-4bba-bb0c-612da73f173c</typeId>
@@ -30,8 +30,8 @@
   </sourceEnd>
   <targetEnd id="e718cd62-8247-42ce-8dec-3e2e9029f375" type="Association Target End" typeId="0a66489f-30aa-417b-a75d-b945863366fd">
     <name>Poly_RootAbstract_Comp</name>
-    <display>Poly_RootAbstract_Comp: Poly_RootAbstract_Comp?</display>
-    <order>2</order>
+    <display>Poly_RootAbstract_Comp: TphPoly_RootAbstract_Comp?   [1 --&gt; 0..1]</display>
+    <order>5</order>
     <typeReference id="9d1e6dfb-fdda-41b6-acae-20c1690a1ba5">
       <typeId>8bf67264-a95b-4082-b0bd-59207015ff3f</typeId>
       <isNavigable>true</isNavigable>

@@ -30,7 +30,7 @@
   </sourceEnd>
   <targetEnd id="ab15d3e9-29a3-4b10-9882-e2fac2ab6c75" type="Association Target End" typeId="0a66489f-30aa-417b-a75d-b945863366fd">
     <name>Inhabitants</name>
-    <display>Inhabitants: Inhabitant[*]</display>
+    <display>Inhabitants: Inhabitant[*]   [* --&gt; *]</display>
     <order>3</order>
     <typeReference id="0d8343be-b727-4633-b8e0-79a7952095cb">
       <typeId>c137e580-56fc-444e-a03e-de389e136333</typeId>

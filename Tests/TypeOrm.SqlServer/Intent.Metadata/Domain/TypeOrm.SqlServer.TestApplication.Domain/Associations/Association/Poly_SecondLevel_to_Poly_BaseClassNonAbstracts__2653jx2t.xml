@@ -2,7 +2,7 @@
 <association id="82d6d01f-480c-48a2-8dfe-e3eb3a0778b7">
   <sourceEnd id="147102aa-dd91-42d1-bc24-274c01397e55" type="Association Source End" typeId="8d9d2e5b-bd55-4f36-9ae4-2b9e84fd4e58">
     <name>Poly_SecondLevel</name>
-    <display>Poly_SecondLevel: Poly_SecondLevel?</display>
+    <display>Poly_SecondLevel: TptPoly_SecondLevel?</display>
     <order>0</order>
     <typeReference id="76b814ad-f36c-4dea-a2b3-be2ae18a62a2">
       <typeId>dbb43bc9-5780-4524-a719-25470c22b482</typeId>
@@ -30,8 +30,8 @@
   </sourceEnd>
   <targetEnd id="82d6d01f-480c-48a2-8dfe-e3eb3a0778b7" type="Association Target End" typeId="0a66489f-30aa-417b-a75d-b945863366fd">
     <name>Poly_BaseClassNonAbstracts</name>
-    <display>Poly_BaseClassNonAbstracts: Poly_BaseClassNonAbstract[*]</display>
-    <order>1</order>
+    <display>Poly_BaseClassNonAbstracts: TptPoly_BaseClassNonAbstract[*]   [0..1 --&gt; *]</display>
+    <order>2</order>
     <typeReference id="9f3e081c-9e43-4c28-8778-53307d9a7bb6">
       <typeId>1684d25a-d436-4598-a0b8-04c92eae1728</typeId>
       <isNavigable>true</isNavigable>

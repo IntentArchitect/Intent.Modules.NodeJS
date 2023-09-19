@@ -3,7 +3,7 @@
   <sourceEnd id="469c425a-2153-4d43-a442-4b2f2c0d2230" type="Comment Source End" typeId="7e98213c-4a9c-4d6f-98fc-f185948cc9e8">
     <name>Pointing out that the relationship between TopLevel and RootAbstract isn't supported yet</name>
     <display>Pointing out that the relationship between TopLevel and RootAbstract isn't supported yet: Note</display>
-    <order>1</order>
+    <order>2</order>
     <typeReference id="b755a360-db11-4731-9ba5-2e6f0eecfeba">
       <typeId>6cd5cc89-aea4-43b9-ba83-a48516971552</typeId>
       <isNavigable>true</isNavigable>
@@ -21,7 +21,7 @@
   </sourceEnd>
   <targetEnd id="081afe1e-9bbd-4b9a-b82e-98f652b118ac" type="Comment Target End" typeId="b7edce45-ccf0-47ed-b79f-86d5145c9f62">
     <name>Poly_TopLevel</name>
-    <display>Poly_TopLevel: Poly_TopLevel</display>
+    <display>Poly_TopLevel: TpcPoly_TopLevel</display>
     <order>0</order>
     <typeReference id="4dbf9d7b-ead6-4334-8156-46ea06e5c05a">
       <typeId>261bec1e-e87e-4cdf-b2dc-29c4cdad09ab</typeId>

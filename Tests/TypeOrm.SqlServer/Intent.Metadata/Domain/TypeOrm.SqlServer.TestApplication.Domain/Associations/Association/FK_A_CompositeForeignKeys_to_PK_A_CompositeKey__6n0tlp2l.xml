@@ -30,7 +30,7 @@
   </sourceEnd>
   <targetEnd id="55882960-1b84-4cb6-ab0a-e59c2a355aa5" type="Association Target End" typeId="0a66489f-30aa-417b-a75d-b945863366fd">
     <name>PK_A_CompositeKey</name>
-    <display>PK_A_CompositeKey: PK_A_CompositeKey</display>
+    <display>PK_A_CompositeKey: PK_A_CompositeKey   [* --&gt; 1]</display>
     <order>2</order>
     <typeReference id="e57166b9-9d1a-4345-b4f8-e02998962e04">
       <typeId>afe2f386-d5ff-413d-987a-b4b0087e5db3</typeId>

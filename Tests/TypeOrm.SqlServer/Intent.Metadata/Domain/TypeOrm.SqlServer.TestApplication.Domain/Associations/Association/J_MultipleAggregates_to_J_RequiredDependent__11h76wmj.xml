@@ -30,7 +30,7 @@
   </sourceEnd>
   <targetEnd id="754d2a0f-99b2-4578-842c-7032ebc99acf" type="Association Target End" typeId="0a66489f-30aa-417b-a75d-b945863366fd">
     <name>J_RequiredDependent</name>
-    <display>J_RequiredDependent: J_RequiredDependent</display>
+    <display>J_RequiredDependent: J_RequiredDependent   [* --&gt; 1]</display>
     <order>1</order>
     <typeReference id="65a7fe4b-6e34-42ac-89f6-2b09f8a3937f">
       <typeId>48421f00-1236-469b-a21d-1e824b1973c0</typeId>

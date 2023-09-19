@@ -30,7 +30,7 @@
   </sourceEnd>
   <targetEnd id="f8410926-6608-4094-ab61-8600459f99ed" type="Association Target End" typeId="0a66489f-30aa-417b-a75d-b945863366fd">
     <name>Internode</name>
-    <display>Internode: Internode</display>
+    <display>Internode: Internode   [1 --&gt; 1]</display>
     <order>2</order>
     <typeReference id="c0f6003a-4061-4e8b-a49c-4c63a5b10a51">
       <typeId>964392f5-4562-496b-81ad-7034bb12424d</typeId>

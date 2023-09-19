@@ -2,7 +2,7 @@
 <association id="1bb3246b-64d1-4f4d-8a2e-b83d28290f67">
   <sourceEnd id="0f95ba7a-cfab-49c0-b7ee-1bb806d0d9ef" type="Generalization Source End" typeId="8190bf43-222c-4b53-8a44-14626efe3574">
     <name>DerivedClassForAbstract</name>
-    <display>DerivedClassForAbstract: DerivedClassForAbstract</display>
+    <display>DerivedClassForAbstract: TphDerivedClassForAbstract</display>
     <order>0</order>
     <typeReference id="50acc24c-31ec-4ec3-a8fe-af7c3834cb94">
       <typeId>318adc07-5466-4a24-ade3-e020e74a1f24</typeId>
@@ -21,7 +21,7 @@
   </sourceEnd>
   <targetEnd id="1bb3246b-64d1-4f4d-8a2e-b83d28290f67" type="Generalization Target End" typeId="4686cc1d-b4d8-4b99-b45b-f77bd5496946">
     <name>AbstractBaseClass</name>
-    <display>AbstractBaseClass: AbstractBaseClass</display>
+    <display>AbstractBaseClass: TphAbstractBaseClass</display>
     <order>1</order>
     <typeReference id="a90c87f1-5a1b-48a5-aeb7-683bb999a4b7">
       <typeId>832c3ec6-ae13-4ea7-8dd7-f075d8e8fc84</typeId>

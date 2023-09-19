@@ -30,7 +30,7 @@
   </sourceEnd>
   <targetEnd id="c344128f-dec8-4403-84bc-5fe39949478f" type="Association Target End" typeId="0a66489f-30aa-417b-a75d-b945863366fd">
     <name>Texture</name>
-    <display>Texture: Texture</display>
+    <display>Texture: Texture   [* --&gt; 1]</display>
     <order>1</order>
     <typeReference id="995d364b-224a-4f39-a156-66ca75f83b56">
       <typeId>e48d2791-f7e6-47e6-a46d-4b6fcacbe3e3</typeId>

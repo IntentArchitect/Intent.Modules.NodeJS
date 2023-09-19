@@ -2,7 +2,7 @@
 <association id="50f167f5-4400-438a-8057-79a4f40d2a11">
   <sourceEnd id="46330111-270b-44f0-a08d-ca9953b3b722" type="Association Source End" typeId="8d9d2e5b-bd55-4f36-9ae4-2b9e84fd4e58">
     <name>Poly_TopLevel</name>
-    <display>Poly_TopLevel: Poly_TopLevel?</display>
+    <display>Poly_TopLevel: TphPoly_TopLevel?</display>
     <order>0</order>
     <typeReference id="b33ea914-5c6f-4e9e-9ebe-affcb7151fee">
       <typeId>1c2e6786-5e40-40d1-9fcc-83f682ab61c5</typeId>
@@ -30,8 +30,8 @@
   </sourceEnd>
   <targetEnd id="50f167f5-4400-438a-8057-79a4f40d2a11" type="Association Target End" typeId="0a66489f-30aa-417b-a75d-b945863366fd">
     <name>Poly_RootAbstracts</name>
-    <display>Poly_RootAbstracts: Poly_RootAbstract[*]</display>
-    <order>1</order>
+    <display>Poly_RootAbstracts: TphPoly_RootAbstract[*]   [0..1 --&gt; *]</display>
+    <order>2</order>
     <typeReference id="c917836a-caaa-4480-8e39-6918f32c5541">
       <typeId>44f21868-1f6d-4bba-bb0c-612da73f173c</typeId>
       <isNavigable>true</isNavigable>
