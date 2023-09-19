@@ -1,3 +1,7 @@
+### Version 3.3.15
+
+- Fixed: Generating a repository for abstract entities are properly omitted now.
+
 ### Version 3.3.13
 
 - Updated dependencies and supported client versions to prevent warnings when used with Intent Architect 4.x.

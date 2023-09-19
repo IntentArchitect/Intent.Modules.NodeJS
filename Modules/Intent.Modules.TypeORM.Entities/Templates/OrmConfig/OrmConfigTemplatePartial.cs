@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Intent.Engine;
 using Intent.Modelers.Domain.Api;
+using Intent.Modules.Common;
 using Intent.Modules.Common.Templates;
 using Intent.Modules.Common.TypeScript.Templates;
 using Intent.Modules.NestJS.Core.Events;
@@ -51,8 +52,11 @@ namespace Intent.Modules.TypeORM.Entities.Templates.OrmConfig
                     statement: @$"TypeOrmModule.forRoot({ClassName})")
                 .AddImport("TypeOrmModule", "@nestjs/typeorm")
                 .AddDependency(TemplateDependency.OnTemplate(this)));
-
-            var repositories = Model.Where(x => x.IsAggregateRoot()).Select(x => GetTemplate<RepositoryTemplate>(RepositoryTemplate.TemplateId, x, new TemplateDiscoveryOptions() { TrackDependency = false })).ToList();
+            
+            var existingModels = new HashSet<ClassModel>(Model.Where(x => x.IsAggregateRoot()));
+            var repositories = ExecutionContext.FindTemplateInstances<RepositoryTemplate>(TemplateDependency.OnTemplate(RepositoryTemplate.TemplateId))
+                .Where(temp => existingModels.Contains(temp.Model))
+                .ToArray();
 
             if (repositories.Any())
             {
@@ -66,6 +70,7 @@ namespace Intent.Modules.TypeORM.Entities.Templates.OrmConfig
                     .AddDependency(TemplateDependency.OnTemplate(TypeOrmExModuleTemplate.TemplateId))
                     .AddDependencies(repositories.Select(TemplateDependency.OnTemplate).ToArray()));
             }
+
             ExecutionContext.EventDispatcher.Publish(new EnvironmentVariableRequest("DB_MIGRATIONS_RUN", "false"));
             ExecutionContext.EventDispatcher.Publish(new EnvironmentVariableRequest("DB_SYNCHRONIZE", "true"));
 
