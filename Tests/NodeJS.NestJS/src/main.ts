@@ -12,7 +12,7 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe());
 
   const config = new DocumentBuilder()
-    .setTitle('NodeJS.NestJS.TestApplication')
+    .setTitle('NodeJS.NestJS')
     .setDescription('')
     .setVersion('1.0')
     .build();
