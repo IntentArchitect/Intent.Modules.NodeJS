@@ -1,3 +1,7 @@
+### Version 3.3.7
+
+- Fixed: A warning about a null CorrelationId would occur during Software Factory execution when used on Intent Architect 4.2 or greater.
+
 ### Version 3.3.6
 
 - Updated dependencies and supported client versions to prevent warnings when used with Intent Architect 4.x.

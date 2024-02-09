@@ -52,5 +52,10 @@ namespace Intent.Modules.NestJS.Core.Templates.ZipFileContent
         {
             return _zipEntry.Content;
         }
+
+        public override string GetCorrelationId()
+        {
+            return $"{Id}#{_zipEntry.FullFileNamePath}";
+        }
     }
 }
