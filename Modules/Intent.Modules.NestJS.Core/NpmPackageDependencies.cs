@@ -6,14 +6,14 @@ public static class NpmPackageDependencies
 {
     public static class NestJs
     {
-        public static NpmPackageDependency Cli = new("@nestjs/cli", "^9.0.0");
-        public static NpmPackageDependency Common = new("@nestjs/common", "^9.0.1");
-        public static NpmPackageDependency Config = new("@nestjs/config", "^2.2.0");
-        public static NpmPackageDependency Core = new("@nestjs/core", "^9.0.1");
-        public static NpmPackageDependency PlatformExpress = new("@nestjs/platform-express", "^9.0.1");
-        public static NpmPackageDependency Schematics = new("@nestjs/schematics", "^9.0.1");
-        public static NpmPackageDependency Swagger = new("@nestjs/swagger", "^6.0.1");
-        public static NpmPackageDependency Testing = new("@nestjs/testing", "^9.0.1");
+        public static NpmPackageDependency Cli = new("@nestjs/cli", "^10.3.2");
+        public static NpmPackageDependency Common = new("@nestjs/common", "^10.3.3");
+        public static NpmPackageDependency Config = new("@nestjs/config", "^3.2.0");
+        public static NpmPackageDependency Core = new("@nestjs/core", "^10.3.3");
+        public static NpmPackageDependency PlatformExpress = new("@nestjs/platform-express", "^10.3.3");
+        public static NpmPackageDependency Schematics = new("@nestjs/schematics", "^10.1.1");
+        public static NpmPackageDependency Swagger = new("@nestjs/swagger", "^7.3.0");
+        public static NpmPackageDependency Testing = new("@nestjs/testing", "^10.3.3");
     }
 
     public static class Types
@@ -35,7 +35,7 @@ public static class NpmPackageDependencies
     public static NpmPackageDependency EslintPluginPrettier = new("eslint-plugin-prettier", "^4.2.1");
     public static NpmPackageDependency Jest = new("jest", "^28.1.2");
     public static NpmPackageDependency Prettier = new("prettier", "^2.7.1");
-    public static NpmPackageDependency ReflectMetadata = new("reflect-metadata", "^0.1.13");
+    public static NpmPackageDependency ReflectMetadata = new("reflect-metadata", "^0.2.1");
     public static NpmPackageDependency Rimraf = new("rimraf", "^3.0.2");
     public static NpmPackageDependency Rxjs = new("rxjs", "^7.5.5");
     public static NpmPackageDependency Sqlite3 = new("sqlite3", "^5.0.2");

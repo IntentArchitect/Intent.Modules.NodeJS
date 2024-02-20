@@ -6,7 +6,7 @@ public static class NpmPackageDependencies
 {
     public static class NestJs
     {
-        public static NpmPackageDependency TypeOrm = new("@nestjs/typeorm", "^9.0.0");
+        public static NpmPackageDependency TypeOrm = new("@nestjs/typeorm", "^10.0.2");
     }
 
     public static NpmPackageDependency TypeOrm = new("typeorm", "^0.3.7");

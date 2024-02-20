@@ -1,3 +1,7 @@
+### Version 3.3.7
+
+- Improvement: Upgraded `class-validator` NPM package to latest due to vulnerability.
+
 ### Version 3.3.6
 
 - Improvement: Updates applied based on Web module changes.

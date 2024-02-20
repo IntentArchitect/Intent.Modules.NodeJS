@@ -1,3 +1,7 @@
+### Version 3.3.8
+
+- Improvement: Updated various NPM packages to latest.
+
 ### Version 3.3.7
 
 - Improvement: Updates applied based on Web module changes.

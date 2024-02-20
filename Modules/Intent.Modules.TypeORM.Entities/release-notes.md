@@ -1,3 +1,7 @@
+### Version 3.3.16
+
+- - Improvement: Updated various NPM packages to latest.
+
 ### Version 3.3.15
 
 - Fixed: Generating a repository for abstract entities are properly omitted now.

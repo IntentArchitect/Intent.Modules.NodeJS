@@ -1,3 +1,7 @@
+### Version 3.3.8
+
+- Improvement: Updated various NPM packages to latest.
+
 ### Version 3.3.7
 
 - Fixed: A warning about a null CorrelationId would occur during Software Factory execution when used on Intent Architect 4.2 or greater.
