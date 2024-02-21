@@ -1,3 +1,7 @@
+### Version 3.4.3
+
+- Improvement: Updated dependency on `Intent.Modelers.Services.CRUD.ServiceDispatch` to `Intent.Modelers.Services.DomainInteractions`.
+
 ### Version 3.4.2
 
 - Improvement: Updates applied based on Web module changes.

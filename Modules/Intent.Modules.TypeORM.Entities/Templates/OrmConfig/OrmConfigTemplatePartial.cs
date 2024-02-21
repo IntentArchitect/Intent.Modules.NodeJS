@@ -52,7 +52,7 @@ namespace Intent.Modules.TypeORM.Entities.Templates.OrmConfig
                     statement: @$"TypeOrmModule.forRoot({ClassName})")
                 .AddImport("TypeOrmModule", "@nestjs/typeorm")
                 .AddDependency(TemplateDependency.OnTemplate(this)));
-            
+
             var existingModels = new HashSet<ClassModel>(Model.Where(x => x.IsAggregateRoot()));
             var repositories = ExecutionContext.FindTemplateInstances<RepositoryTemplate>(TemplateDependency.OnTemplate(RepositoryTemplate.TemplateId))
                 .Where(temp => existingModels.Contains(temp.Model))

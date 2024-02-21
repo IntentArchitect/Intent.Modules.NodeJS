@@ -1,6 +1,7 @@
 ### Version 3.3.16
 
-- - Improvement: Updated various NPM packages to latest.
+- Improvement: Updated various NPM packages to latest.
+- Improvement: Added support for PostgreSQL.
 
 ### Version 3.3.15
 

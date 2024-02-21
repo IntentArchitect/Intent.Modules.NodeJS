@@ -108,9 +108,28 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Controller
             yield return GetHttpVerbAndPath(operation);
 
             var apiResponse = operation.ReturnType != null ? $"{GetTypeName((IElement)operation.TypeReference.Element)}" : null;
-            if (operation.ReturnType != null && GetTypeInfo(operation.ReturnType).IsPrimitive || operation.ReturnType.HasStringType())
+            
+            if (apiResponse != null && GetTypeInfo(operation.ReturnType).IsPrimitive || operation.ReturnType.HasStringType())
             {
-                apiResponse = $"'{GetTypeName((IElement)operation.TypeReference.Element)}'";
+                apiResponse = apiResponse switch
+                {
+                    "binary" => "String",
+                    "bool" => "Boolean",
+                    "byte" => "Number",
+                    "char" => "String",
+                    "date" => "Date",
+                    "datetime" => "Date",
+                    "datetimeoffset" => "Date",
+                    "decimal" => "Number",
+                    "double" => "Number",
+                    "float" => "Number",
+                    "guid" => "String",
+                    "int" => "Number",
+                    "long" => "Number",
+                    "short" => "Number",
+                    "string" => "String",
+                    _ => $"'{apiResponse}'"
+                };
             }
             switch (GetHttpVerb(operation))
             {

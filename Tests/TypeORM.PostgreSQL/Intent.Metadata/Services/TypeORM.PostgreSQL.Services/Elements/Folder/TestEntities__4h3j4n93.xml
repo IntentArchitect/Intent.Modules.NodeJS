@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="5e48ee40-2e67-4d4b-8544-6ba5f9df36dd" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+  <name>TestEntities</name>
+  <display>TestEntities</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-by-name</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>81922ee4-5f46-4d67-bdb5-268c9e73b6b6</parentFolderId>
+  <packageId>81922ee4-5f46-4d67-bdb5-268c9e73b6b6</packageId>
+  <packageName>TypeORM.PostgreSQL.Services</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

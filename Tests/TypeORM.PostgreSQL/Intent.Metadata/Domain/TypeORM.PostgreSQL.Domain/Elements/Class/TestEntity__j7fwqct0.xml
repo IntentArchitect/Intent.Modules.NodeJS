@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="f294fbea-2fcd-48a8-bb34-08d4a9a394ef" type="Class" typeId="04e12b51-ed12-42a3-9667-a6aa81bb6d10">
+  <name>TestEntity</name>
+  <display>TestEntity</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-manually</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>f6631848-497b-467f-8ab8-cc7cb3e682e1</parentFolderId>
+  <packageId>f6631848-497b-467f-8ab8-cc7cb3e682e1</packageId>
+  <packageName>TypeORM.PostgreSQL.Domain</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="83c27dcf-ef93-47c5-94be-8c68104fa248" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+      <name>id</name>
+      <display>id: guid</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="b944e2ac-f5e3-4774-a643-59cf05fb0353">
+        <typeId>6b649125-18ea-48fd-a6ba-0bfff0d8f488</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>f294fbea-2fcd-48a8-bb34-08d4a9a394ef</parentFolderId>
+      <packageId>f6631848-497b-467f-8ab8-cc7cb3e682e1</packageId>
+      <packageName>TypeORM.PostgreSQL.Domain</packageName>
+      <stereotypes>
+        <stereotype stereotypeDefinitionId="b99aac21-9ca4-467f-a3a6-046255a9eed6" name="Primary Key">
+          <addedByDefault>false</addedByDefault>
+          <definitionPackageName>Intent.Metadata.RDBMS</definitionPackageName>
+          <definitionPackageId>AF8F3810-745C-42A2-93C8-798860DC45B1</definitionPackageId>
+          <properties>
+            <property name="4c1e3f7e-61d4-460d-bd20-c2edbc0c0e2e" display="Identity" value="false" isActive="true" />
+            <property name="a7a5e921-18b9-43b4-8078-b4ac4e5dae6f" display="Data source" value="Default" isActive="true" />
+          </properties>
+        </stereotype>
+      </stereotypes>
+      <metadata>
+        <entry key="is-managed-key" value="true" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="ee601a03-2919-4eec-8660-87ff6927e0b2" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+      <name>binaryField</name>
+      <display>binaryField: binary</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="d9ba5c72-8315-40da-b29c-b25ccb6d619d">
+        <typeId>013af2c5-3c32-4752-8f59-db5691050aef</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>f294fbea-2fcd-48a8-bb34-08d4a9a394ef</parentFolderId>
+      <packageId>f6631848-497b-467f-8ab8-cc7cb3e682e1</packageId>
+      <packageName>TypeORM.PostgreSQL.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="17e48980-381c-45bf-b08a-55a85450f055" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+      <name>boolField</name>
+      <display>boolField: bool</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="350e7ea0-f980-49e0-88c5-3c0d3fef488f">
+        <typeId>e6f92b09-b2c5-4536-8270-a4d9e5bbd930</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>f294fbea-2fcd-48a8-bb34-08d4a9a394ef</parentFolderId>
+      <packageId>f6631848-497b-467f-8ab8-cc7cb3e682e1</packageId>
+      <packageName>TypeORM.PostgreSQL.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="92bedbef-e03e-4eba-abfe-c6e3fb426599" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+      <name>byteField</name>
+      <display>byteField: byte</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="0d0b1283-ba52-45be-b752-80ee18584934">
+        <typeId>A4E9102F-C1C8-4902-A417-CA418E1874D2</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>f294fbea-2fcd-48a8-bb34-08d4a9a394ef</parentFolderId>
+      <packageId>f6631848-497b-467f-8ab8-cc7cb3e682e1</packageId>
+      <packageName>TypeORM.PostgreSQL.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="6a098ad8-002a-46e2-99b1-d23e126b18e1" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+      <name>charField</name>
+      <display>charField: char</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="b77f5acb-ff60-45ce-b236-41f05ef02805">
+        <typeId>C1B3A361-B1C6-48C3-B34C-7999B3E071F0</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>f294fbea-2fcd-48a8-bb34-08d4a9a394ef</parentFolderId>
+      <packageId>f6631848-497b-467f-8ab8-cc7cb3e682e1</packageId>
+      <packageName>TypeORM.PostgreSQL.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="3c0a1bf0-fa27-49db-986a-24ccf9093c89" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+      <name>dateField</name>
+      <display>dateField: date</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="4cb481f7-805d-442e-aee1-70559fdfee4f">
+        <typeId>1fbaa056-b666-4f25-b8fd-76fe3165acc8</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>f294fbea-2fcd-48a8-bb34-08d4a9a394ef</parentFolderId>
+      <packageId>f6631848-497b-467f-8ab8-cc7cb3e682e1</packageId>
+      <packageName>TypeORM.PostgreSQL.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="6b42abf1-ef82-4482-9bd1-71aff14dc94d" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+      <name>datetimeField</name>
+      <display>datetimeField: datetime</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="065fa933-dbc9-48a2-9f79-9562b70fb730">
+        <typeId>a4107c29-7851-4121-9416-cf1236908f1e</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>f294fbea-2fcd-48a8-bb34-08d4a9a394ef</parentFolderId>
+      <packageId>f6631848-497b-467f-8ab8-cc7cb3e682e1</packageId>
+      <packageName>TypeORM.PostgreSQL.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="4f33b716-7c19-4932-bf88-43a2b8cf17e7" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+      <name>datetimeoffsetField</name>
+      <display>datetimeoffsetField: datetimeoffset</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="c0c4f306-4cc9-4c10-a9e5-decb18345fa3">
+        <typeId>f1ba4df3-a5bc-427e-a591-4f6029f89bd7</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>f294fbea-2fcd-48a8-bb34-08d4a9a394ef</parentFolderId>
+      <packageId>f6631848-497b-467f-8ab8-cc7cb3e682e1</packageId>
+      <packageName>TypeORM.PostgreSQL.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="c8a376b6-7653-4da3-a0e6-947f8975fb6d" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+      <name>decimalField</name>
+      <display>decimalField: decimal</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="c974035f-75a5-476a-819e-bff408bb8c6a">
+        <typeId>675c7b84-997a-44e0-82b9-cd724c07c9e6</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>f294fbea-2fcd-48a8-bb34-08d4a9a394ef</parentFolderId>
+      <packageId>f6631848-497b-467f-8ab8-cc7cb3e682e1</packageId>
+      <packageName>TypeORM.PostgreSQL.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="c1471560-89ee-4bce-ae75-5240275dfeab" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+      <name>doubleField</name>
+      <display>doubleField: double</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="a376e911-83a5-40d0-8850-94c4422c950f">
+        <typeId>24A77F70-5B97-40DD-8F9A-4208AD5F9219</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>f294fbea-2fcd-48a8-bb34-08d4a9a394ef</parentFolderId>
+      <packageId>f6631848-497b-467f-8ab8-cc7cb3e682e1</packageId>
+      <packageName>TypeORM.PostgreSQL.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="e5ef5c88-a8eb-4231-b5b6-eacf9dae5aa4" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+      <name>floatField</name>
+      <display>floatField: float</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="0edf0378-40bd-48a7-bc38-8d7d7a4a98f0">
+        <typeId>341929E9-E3E7-46AA-ACB3-B0438421F4C4</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>f294fbea-2fcd-48a8-bb34-08d4a9a394ef</parentFolderId>
+      <packageId>f6631848-497b-467f-8ab8-cc7cb3e682e1</packageId>
+      <packageName>TypeORM.PostgreSQL.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="a6b449b6-2d40-4ee2-8df2-12c7828b3ffe" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+      <name>guidField</name>
+      <display>guidField: guid</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="6721e1db-93d3-4fb6-baad-5f9c1ab3f888">
+        <typeId>6b649125-18ea-48fd-a6ba-0bfff0d8f488</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>f294fbea-2fcd-48a8-bb34-08d4a9a394ef</parentFolderId>
+      <packageId>f6631848-497b-467f-8ab8-cc7cb3e682e1</packageId>
+      <packageName>TypeORM.PostgreSQL.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="777bcec6-3a45-4d2e-999f-fc28ed9df4f5" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+      <name>intField</name>
+      <display>intField: int</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="9759be27-b67e-485c-b86c-241eb3a59715">
+        <typeId>fb0a362d-e9e2-40de-b6ff-5ce8167cbe74</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>f294fbea-2fcd-48a8-bb34-08d4a9a394ef</parentFolderId>
+      <packageId>f6631848-497b-467f-8ab8-cc7cb3e682e1</packageId>
+      <packageName>TypeORM.PostgreSQL.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="5f0585d0-0b13-4686-85cf-e7365770ece1" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+      <name>longField</name>
+      <display>longField: long</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="a0c2cd08-b922-43a8-9b6a-deb13e90a883">
+        <typeId>33013006-E404-48C2-AC46-24EF5A5774FD</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>f294fbea-2fcd-48a8-bb34-08d4a9a394ef</parentFolderId>
+      <packageId>f6631848-497b-467f-8ab8-cc7cb3e682e1</packageId>
+      <packageName>TypeORM.PostgreSQL.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="fc3704fd-8aa3-474f-90f9-61c687f076bf" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+      <name>shortField</name>
+      <display>shortField: short</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="f1aedd3e-8763-46e8-95f9-2fd911f5ec43">
+        <typeId>2ABF0FD3-CD56-4349-8838-D120ED268245</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>f294fbea-2fcd-48a8-bb34-08d4a9a394ef</parentFolderId>
+      <packageId>f6631848-497b-467f-8ab8-cc7cb3e682e1</packageId>
+      <packageName>TypeORM.PostgreSQL.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="02f01eb0-785f-41e9-bed6-7992c7b0d937" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+      <name>stringField</name>
+      <display>stringField: string</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="102b908e-430d-4a1c-a69b-950753bced51">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>f294fbea-2fcd-48a8-bb34-08d4a9a394ef</parentFolderId>
+      <packageId>f6631848-497b-467f-8ab8-cc7cb3e682e1</packageId>
+      <packageName>TypeORM.PostgreSQL.Domain</packageName>
+      <stereotypes>
+        <stereotype stereotypeDefinitionId="6347286E-A637-44D6-A5D7-D9BE5789CA7A" name="Text Constraints">
+          <addedByDefault>false</addedByDefault>
+          <definitionPackageName>Intent.Metadata.RDBMS</definitionPackageName>
+          <definitionPackageId>AF8F3810-745C-42A2-93C8-798860DC45B1</definitionPackageId>
+          <properties>
+            <property name="1288cfcd-ee51-437e-9713-73b80118f026" display="SQL Data Type" value="DEFAULT" isActive="true" />
+            <property name="A04CC24D-81FB-4EA2-A34A-B3C58E04DCFD" display="MaxLength" isActive="true" />
+            <property name="67EC4CF4-7706-4B39-BC7C-DF539EE2B0AF" display="IsUnicode" value="false" isActive="true" />
+          </properties>
+        </stereotype>
+      </stereotypes>
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

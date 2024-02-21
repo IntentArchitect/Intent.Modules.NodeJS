@@ -26,6 +26,7 @@ internal interface IOrmDatabaseProviderStrategy
         {
             DatabaseSettingsExtensions.DatabaseProviderOptionsEnum.Mssql => new MsSqlDatabaseProviderStrategy(outputTarget),
             DatabaseSettingsExtensions.DatabaseProviderOptionsEnum.Sqlite => new SqLiteDatabaseProviderStrategy(outputTarget),
+            DatabaseSettingsExtensions.DatabaseProviderOptionsEnum.Postgresql => new PostgresqlDatabaseProviderStrategy(outputTarget),
             null => throw new Exception("The database provider application setting is unset."),
             _ => throw new Exception($"No database provider strategy available for {databaseProvider}")
         };

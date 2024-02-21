@@ -5,15 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Resources\nestjs-bootstrap.zip" />
     <None Update="Templates\Dotenv\DotenvTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>DotenvTemplate.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\nestjs-bootstrap.zip" />
   </ItemGroup>
 
   <ItemGroup>
@@ -59,10 +54,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Intent.Modules.Npm\Intent.Modules.Npm.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="Resources\nestjs-bootstrap.zip" />
   </ItemGroup>
 
   <ItemGroup>

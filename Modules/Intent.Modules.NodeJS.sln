@@ -20,9 +20,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intent.Modules.NestJS.Winst
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intent.Modules.NestJS.Validation", "Intent.Modules.NestJS.Validation\Intent.Modules.NestJS.Validation.csproj", "{49722D16-76CB-4224-8AA3-C9E7DA883F15}"
 EndProject
-Project("{52B49DB5-3EA9-4095-B1A7-DF1AC22D7DAE}") = "Intent.Modules.NestJS.Authentication", "Intent.Modules.NestJS.Authentication\Intent.Modules.NestJS.Authentication.csproj", "{E5EFADD1-5947-44ED-9885-77BE31E7C358}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intent.Modules.NestJS.Authentication", "Intent.Modules.NestJS.Authentication\Intent.Modules.NestJS.Authentication.csproj", "{E5EFADD1-5947-44ED-9885-77BE31E7C358}"
 EndProject
-Project("{52B49DB5-3EA9-4095-B1A7-DF1AC22D7DAE}") = "Intent.Modules.NestJS.Authorization", "Intent.Modules.NestJS.Authorization\Intent.Modules.NestJS.Authorization.csproj", "{0591139A-A05B-44DF-8060-0A627CC52397}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intent.Modules.NestJS.Authorization", "Intent.Modules.NestJS.Authorization\Intent.Modules.NestJS.Authorization.csproj", "{0591139A-A05B-44DF-8060-0A627CC52397}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Solution Items", "0 - Solution Items", "{F8F6292B-72E2-4862-BFF1-8B16936B89A7}"
+	ProjectSection(SolutionItems) = preProject
+		..\Directory.Build.props = ..\Directory.Build.props
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

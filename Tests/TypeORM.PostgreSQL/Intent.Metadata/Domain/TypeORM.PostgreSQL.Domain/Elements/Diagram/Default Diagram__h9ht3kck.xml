@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="f5d679dd-fca9-45fb-9d82-3a204a847605" type="Diagram" typeId="4d66fecd-e9b8-436f-aa50-c59040ad0879">
+  <name>Default Diagram</name>
+  <display>Default Diagram</display>
+  <externalReference>9adaaba2-3f70-4a37-ba4b-b5909386cf0e</externalReference>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>f6631848-497b-467f-8ab8-cc7cb3e682e1</parentFolderId>
+  <packageId>f6631848-497b-467f-8ab8-cc7cb3e682e1</packageId>
+  <packageName>TypeORM.PostgreSQL.Domain</packageName>
+  <diagram>
+    <targetPackageId>f6631848-497b-467f-8ab8-cc7cb3e682e1</targetPackageId>
+  </diagram>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

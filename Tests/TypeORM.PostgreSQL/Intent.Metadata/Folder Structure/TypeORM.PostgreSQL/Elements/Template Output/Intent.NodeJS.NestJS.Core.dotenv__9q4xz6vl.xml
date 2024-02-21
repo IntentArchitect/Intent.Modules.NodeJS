@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="a8a5908c-1a8d-4b8b-900d-da19220a2d1f" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+  <name>Intent.NodeJS.NestJS.Core.dotenv</name>
+  <display>Intent.NodeJS.NestJS.Core.dotenv</display>
+  <externalReference>Intent.NodeJS.NestJS.Core</externalReference>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>cab82412-466c-4142-8139-88b8f4fc06fd</parentFolderId>
+  <stereotypes />
+  <metadata>
+    <entry key="status" value="assigned" />
+  </metadata>
+  <childElements />
+</class>

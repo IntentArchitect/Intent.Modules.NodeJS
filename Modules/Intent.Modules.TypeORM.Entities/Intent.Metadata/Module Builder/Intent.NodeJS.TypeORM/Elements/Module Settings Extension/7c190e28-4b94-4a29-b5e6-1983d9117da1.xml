@@ -49,8 +49,8 @@
       <metadata />
       <childElements>
         <childElement id="db0c05db-42c0-4743-9ca4-17839bbea9b3" type="Module Settings Field Option" typeId="1592709a-89b1-4cb0-9801-ce9d3b94545a">
-          <name>MS SQL</name>
-          <display>MS SQL = mssql</display>
+          <name>Microsoft SQL Server</name>
+          <display>Microsoft SQL Server</display>
           <isAbstract>false</isAbstract>
           <value>mssql</value>
           <genericTypes />
@@ -62,9 +62,23 @@
           <metadata />
           <childElements />
         </childElement>
+        <childElement id="2dab9030-14e2-4bf7-9543-60126cf63d93" type="Module Settings Field Option" typeId="1592709a-89b1-4cb0-9801-ce9d3b94545a">
+          <name>PostgreSQL</name>
+          <display>PostgreSQL</display>
+          <isAbstract>false</isAbstract>
+          <value>postgresql</value>
+          <genericTypes />
+          <isMapped>false</isMapped>
+          <parentFolderId>9bcab235-06d6-46dc-bc8d-b49483c6914d</parentFolderId>
+          <packageId>62374542-4fb1-4bf1-a322-f45b423ab2a8</packageId>
+          <packageName>Intent.NodeJS.TypeORM</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
         <childElement id="ba071065-9764-4268-b25d-9bcc1943e950" type="Module Settings Field Option" typeId="1592709a-89b1-4cb0-9801-ce9d3b94545a">
           <name>SQLite</name>
-          <display>SQLite = sqlite</display>
+          <display>SQLite</display>
           <isAbstract>false</isAbstract>
           <value>sqlite</value>
           <genericTypes />

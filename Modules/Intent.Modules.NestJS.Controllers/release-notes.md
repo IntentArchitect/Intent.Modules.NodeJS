@@ -1,3 +1,7 @@
+### Version 3.4.3
+
+- Fixed: When controller operations returned a string an error would show in the Swagger UI.
+
 ### Version 3.4.2
 
 - Fixed: Header field was not adequately bound.

@@ -52,7 +52,7 @@ internal class MsSqlDatabaseProviderStrategy : OrmDatabaseProviderStrategyBase
 
     public override IEnumerable<NpmPackageDependency> GetPackageDependencies()
     {
-        yield return new NpmPackageDependency("mssql", "^7.3.0");
+        yield return new NpmPackageDependency("mssql", "^10.0.2");
     }
 
     public override bool TryGetColumnType(string typeName, out (string Type, IEnumerable<string> AdditionalOptions) columnType)

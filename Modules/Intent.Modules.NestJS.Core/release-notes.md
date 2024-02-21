@@ -1,6 +1,7 @@
 ### Version 3.3.8
 
 - Improvement: Updated various NPM packages to latest.
+- Fixed: .gitgignore file would overwrite ignore entries for Intent Architect.
 
 ### Version 3.3.7
 

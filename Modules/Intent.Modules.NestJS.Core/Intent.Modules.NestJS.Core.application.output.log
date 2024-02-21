@@ -3,6 +3,14 @@
   <ApplicationId>7f96c1f3-13ba-4fb0-83bd-d383cb54fd85</ApplicationId>
   <FileLogs>
     <FileLog>
+      <ProjectId>96615273-0852-4d59-acfb-67f62095564b</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.Templates.StaticContentOutputReadme#a77e195c-7911-4fda-90f4-7243778afff6</CorrelationId>
+      <OverwriteBehaviour>once-off</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>content/StaticContent/readme.txt</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>content/StaticContent/readme.txt</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
       <ProjectId>9ecab0d4-7276-4fa5-800a-f3ad49983b39</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.Templates.TemplateDecorator#dc17a069-72ae-4843-9ad5-19859e195e30</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
@@ -132,26 +140,18 @@
     </FileLog>
     <FileLog>
       <ProjectId>b0d2955c-78d9-48d7-8e68-199ef7673464</ProjectId>
+      <CorrelationId>Intent.ModuleBuilder.Templates.StaticContentTemplateRegistration#a77e195c-7911-4fda-90f4-7243778afff6</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>Templates/StaticContentTemplateRegistrations/StaticStaticContentTemplateRegistration.cs</ApplicationRelativeFilePath>
+      <ProjectRelativeFilePath>StaticContentTemplateRegistrations/StaticStaticContentTemplateRegistration.cs</ProjectRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
+      <ProjectId>b0d2955c-78d9-48d7-8e68-199ef7673464</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.Templates.TemplateExtensions</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Templates/TemplateExtensions.cs</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>TemplateExtensions.cs</ProjectRelativeFilePath>
-      <IsIgnored>false</IsIgnored>
-    </FileLog>
-    <FileLog>
-      <ProjectId>b0d2955c-78d9-48d7-8e68-199ef7673464</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.ProjectItemTemplate.Partial#bb9942de-891f-4be5-818b-cf02935a551c</CorrelationId>
-      <OverwriteBehaviour>always</OverwriteBehaviour>
-      <ApplicationRelativeFilePath>Templates/ZipFileContent/ZipFileContentTemplatePartial.cs</ApplicationRelativeFilePath>
-      <ProjectRelativeFilePath>ZipFileContent/ZipFileContentTemplatePartial.cs</ProjectRelativeFilePath>
-      <IsIgnored>false</IsIgnored>
-    </FileLog>
-    <FileLog>
-      <ProjectId>b0d2955c-78d9-48d7-8e68-199ef7673464</ProjectId>
-      <CorrelationId>Intent.ModuleBuilder.TemplateRegistration.Custom#bb9942de-891f-4be5-818b-cf02935a551c</CorrelationId>
-      <OverwriteBehaviour>always</OverwriteBehaviour>
-      <ApplicationRelativeFilePath>Templates/ZipFileContent/ZipFileContentTemplateRegistration.cs</ApplicationRelativeFilePath>
-      <ProjectRelativeFilePath>ZipFileContent/ZipFileContentTemplateRegistration.cs</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
     </FileLog>
   </FileLogs>
