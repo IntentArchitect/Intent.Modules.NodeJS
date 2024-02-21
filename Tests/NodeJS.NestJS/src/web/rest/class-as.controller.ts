@@ -16,7 +16,7 @@ export class ClassASController {
   @Post('')
   @ApiCreatedResponse({
     description: 'The record has been successfully created.',
-    type: 'string',
+    type: String,
   })
   @ApiBadRequestResponse({ description: 'Bad request.' })
   async create(@Req() req: Request, @Body() dto: ClassACreateDto): Promise<JsonResponse<string>> {

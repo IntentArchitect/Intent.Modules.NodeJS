@@ -12,7 +12,7 @@ export class HttpServiceAppliedController {
   @Get('')
   @ApiOkResponse({
     description: 'Result retrieved successfully.',
-    type: 'string',
+    type: String,
   })
   @ApiNotFoundResponse({ description: 'Response not found.' })
   async getValue(@Req() req: Request): Promise<string> {
