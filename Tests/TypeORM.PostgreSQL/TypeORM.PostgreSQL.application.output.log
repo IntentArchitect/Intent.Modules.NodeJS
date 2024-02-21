@@ -8,7 +8,7 @@
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>.env</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>.env</ProjectRelativeFilePath>
-      <IsIgnored>false</IsIgnored>
+      <IsIgnored>true</IsIgnored>
     </FileLog>
     <FileLog>
       <ProjectId>cab82412-466c-4142-8139-88b8f4fc06fd</ProjectId>
