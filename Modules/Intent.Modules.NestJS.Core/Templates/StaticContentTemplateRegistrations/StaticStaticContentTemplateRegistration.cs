@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Intent.Engine;
 using Intent.Modules.Common.Templates.StaticContent;
 using Intent.RoslynWeaver.Attributes;
+using Intent.Templates;
 
 [assembly: DefaultIntentManaged(Mode.Fully)]
 [assembly: IntentTemplate("Intent.ModuleBuilder.Templates.StaticContentTemplateRegistration", Version = "1.0")]
@@ -22,5 +23,7 @@ namespace Intent.Modules.NestJS.Core.Templates.StaticContentTemplateRegistration
         public override IReadOnlyDictionary<string, string> Replacements(IOutputTarget outputTarget) => new Dictionary<string, string>
         {
         };
+
+        protected override OverwriteBehaviour DefaultOverrideBehaviour => OverwriteBehaviour.OnceOff;
     }
 }
