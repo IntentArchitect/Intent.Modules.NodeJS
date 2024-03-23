@@ -396,3 +396,8 @@ Temporary Items
 # Local
 .env
 dist
+
+# Intent Architect
+
+**/.intent/*
+!*.application.output.log
