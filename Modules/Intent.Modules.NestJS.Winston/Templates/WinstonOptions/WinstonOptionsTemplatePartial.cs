@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using Intent.Engine;
 using Intent.Eventing;
+using Intent.Modules.Common;
 using Intent.Modules.Common.Templates;
 using Intent.Modules.Common.TypeScript.Templates;
 using Intent.Modules.NestJS.Core.Events;

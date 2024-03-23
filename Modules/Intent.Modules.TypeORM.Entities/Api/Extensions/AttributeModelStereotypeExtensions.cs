@@ -15,14 +15,14 @@ namespace Intent.Modules.TypeORM.Entities.Api
     {
         public static ColumnOptions GetColumnOptions(this AttributeModel model)
         {
-            var stereotype = model.GetStereotype("Column Options");
+            var stereotype = model.GetStereotype("5121d8e7-7610-4cc8-bab7-a33e005953aa");
             return stereotype != null ? new ColumnOptions(stereotype) : null;
         }
 
 
         public static bool HasColumnOptions(this AttributeModel model)
         {
-            return model.HasStereotype("Column Options");
+            return model.HasStereotype("5121d8e7-7610-4cc8-bab7-a33e005953aa");
         }
 
         public static bool TryGetColumnOptions(this AttributeModel model, out ColumnOptions stereotype)
@@ -33,7 +33,7 @@ namespace Intent.Modules.TypeORM.Entities.Api
                 return false;
             }
 
-            stereotype = new ColumnOptions(model.GetStereotype("Column Options"));
+            stereotype = new ColumnOptions(model.GetStereotype("5121d8e7-7610-4cc8-bab7-a33e005953aa"));
             return true;
         }
 

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Intent.Modelers.Services.Api;
 using Intent.Modules.Common.Templates;
 using Intent.Modules.NestJS.Controllers.Templates.Controller;
 using Intent.Modules.NestJS.Controllers.Templates.ControllerBase;
@@ -15,12 +16,12 @@ namespace Intent.Modules.NestJS.Controllers.Templates
 {
     public static class TemplateExtensions
     {
-        public static string GetControllerName<T>(this IIntentTemplate<T> template) where T : Intent.Modelers.Services.Api.ServiceModel
+        public static string GetControllerName<T>(this IIntentTemplate<T> template) where T : ServiceModel
         {
             return template.GetTypeName(ControllerTemplate.TemplateId, template.Model);
         }
 
-        public static string GetControllerName(this IIntentTemplate template, Intent.Modelers.Services.Api.ServiceModel model)
+        public static string GetControllerName(this IIntentTemplate template, ServiceModel model)
         {
             return template.GetTypeName(ControllerTemplate.TemplateId, model);
         }
@@ -30,12 +31,12 @@ namespace Intent.Modules.NestJS.Controllers.Templates
             return template.GetTypeName(ControllerBaseTemplate.TemplateId);
         }
 
-        public static string GetDtoModelName<T>(this IIntentTemplate<T> template) where T : Intent.Modelers.Services.Api.DTOModel
+        public static string GetDtoModelName<T>(this IIntentTemplate<T> template) where T : DTOModel
         {
             return template.GetTypeName(DtoModelTemplate.TemplateId, template.Model);
         }
 
-        public static string GetDtoModelName(this IIntentTemplate template, Intent.Modelers.Services.Api.DTOModel model)
+        public static string GetDtoModelName(this IIntentTemplate template, DTOModel model)
         {
             return template.GetTypeName(DtoModelTemplate.TemplateId, model);
         }
@@ -45,12 +46,12 @@ namespace Intent.Modules.NestJS.Controllers.Templates
             return template.GetTypeName(JsonResponseTemplate.TemplateId);
         }
 
-        public static string GetServiceName<T>(this IIntentTemplate<T> template) where T : Intent.Modelers.Services.Api.ServiceModel
+        public static string GetServiceName<T>(this IIntentTemplate<T> template) where T : ServiceModel
         {
             return template.GetTypeName(ServiceTemplate.TemplateId, template.Model);
         }
 
-        public static string GetServiceName(this IIntentTemplate template, Intent.Modelers.Services.Api.ServiceModel model)
+        public static string GetServiceName(this IIntentTemplate template, ServiceModel model)
         {
             return template.GetTypeName(ServiceTemplate.TemplateId, model);
         }

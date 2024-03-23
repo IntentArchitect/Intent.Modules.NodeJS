@@ -8,7 +8,7 @@
   <isMapped>false</isMapped>
   <parentFolderId>ee92d06c-e636-4408-8120-481cb07279af</parentFolderId>
   <packageId>b0e28c08-9acb-4731-bedc-80c9ebb637b7</packageId>
-  <packageName>Intent.TypeORM.Entities</packageName>
+  <packageName>Intent.Modules.NodeJS</packageName>
   <stereotypes>
     <stereotype stereotypeDefinitionId="61132551-825d-4c6e-b9f1-0f95249d08d4" name="Folder Options">
       <addedByDefault>true</addedByDefault>
@@ -30,7 +30,7 @@
       <isMapped>false</isMapped>
       <parentFolderId>08b1c55f-28c5-432c-9ac5-5fe50ee63525</parentFolderId>
       <packageId>b0e28c08-9acb-4731-bedc-80c9ebb637b7</packageId>
-      <packageName>Intent.TypeORM.Entities</packageName>
+      <packageName>Intent.Modules.NodeJS</packageName>
       <stereotypes />
       <metadata />
       <childElements />
@@ -44,7 +44,7 @@
       <isMapped>false</isMapped>
       <parentFolderId>08b1c55f-28c5-432c-9ac5-5fe50ee63525</parentFolderId>
       <packageId>b0e28c08-9acb-4731-bedc-80c9ebb637b7</packageId>
-      <packageName>Intent.TypeORM.Entities</packageName>
+      <packageName>Intent.Modules.NodeJS</packageName>
       <stereotypes />
       <metadata />
       <childElements />
@@ -57,7 +57,7 @@
       <isMapped>false</isMapped>
       <parentFolderId>08b1c55f-28c5-432c-9ac5-5fe50ee63525</parentFolderId>
       <packageId>b0e28c08-9acb-4731-bedc-80c9ebb637b7</packageId>
-      <packageName>Intent.TypeORM.Entities</packageName>
+      <packageName>Intent.Modules.NodeJS</packageName>
       <stereotypes />
       <metadata />
       <childElements />
@@ -70,7 +70,7 @@
       <isMapped>false</isMapped>
       <parentFolderId>08b1c55f-28c5-432c-9ac5-5fe50ee63525</parentFolderId>
       <packageId>b0e28c08-9acb-4731-bedc-80c9ebb637b7</packageId>
-      <packageName>Intent.TypeORM.Entities</packageName>
+      <packageName>Intent.Modules.NodeJS</packageName>
       <stereotypes />
       <metadata />
       <childElements />

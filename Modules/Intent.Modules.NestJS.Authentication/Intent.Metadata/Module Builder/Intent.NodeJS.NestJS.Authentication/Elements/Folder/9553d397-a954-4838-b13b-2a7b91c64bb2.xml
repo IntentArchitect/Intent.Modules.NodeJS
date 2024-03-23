@@ -9,7 +9,16 @@
   <parentFolderId>aa8c4258-8d86-45a3-8ced-3565db1b15b8</parentFolderId>
   <packageId>aa8c4258-8d86-45a3-8ced-3565db1b15b8</packageId>
   <packageName>Intent.NodeJS.NestJS.Authentication</packageName>
-  <stereotypes />
+  <stereotypes>
+    <stereotype stereotypeDefinitionId="66fd9e66-42c7-4ef9-a778-b68e009272b9" name="Folder Options">
+      <addedByDefault>true</addedByDefault>
+      <definitionPackageName>Intent.Common.CSharp</definitionPackageName>
+      <definitionPackageId>730e1275-0c32-44f7-991a-9619d07ca68d</definitionPackageId>
+      <properties>
+        <property name="96df2fa6-7361-4e43-9acf-dbcea23b650a" display="Namespace Provider" value="true" isActive="true" />
+      </properties>
+    </stereotype>
+  </stereotypes>
   <metadata />
   <childElements />
 </class>

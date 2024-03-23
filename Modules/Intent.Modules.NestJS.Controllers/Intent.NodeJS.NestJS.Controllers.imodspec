@@ -33,14 +33,14 @@
   <decorators></decorators>
   <factoryExtensions></factoryExtensions>
   <dependencies>
-    <dependency id="Intent.Common" version="3.4.1" />
-    <dependency id="Intent.Common.Types" version="3.3.9" />
-    <dependency id="Intent.Common.TypeScript" version="4.0.0-pre.0" />
     <dependency id="Intent.Code.Weaving.TypeScript" version="1.0.0" />
-    <dependency id="Intent.Metadata.WebApi" version="4.2.4" />
-    <dependency id="Intent.Modelers.Services" version="3.4.6" />
+    <dependency id="Intent.Common" version="3.5.0" />
+    <dependency id="Intent.Common.Types" version="3.3.9" />
+    <dependency id="Intent.Common.TypeScript" version="4.0.0" />
+    <dependency id="Intent.Metadata.WebApi" version="4.4.3" />
+    <dependency id="Intent.Modelers.Services" version="3.5.1" />
     <dependency id="Intent.NodeJS.NestJS.Core" version="4.0.0-pre.0" />
-    <dependency id="Intent.TypeScript.Weaving.Decorators" version="4.0.0-pre.0" />
+    <dependency id="Intent.TypeScript.Weaving.Decorators" version="4.0.0" />
   </dependencies>
   <files>
     <file src="$outDir$/$id$.dll" />

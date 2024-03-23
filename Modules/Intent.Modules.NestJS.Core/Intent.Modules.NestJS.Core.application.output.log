@@ -3,6 +3,12 @@
   <ApplicationId>7f96c1f3-13ba-4fb0-83bd-d383cb54fd85</ApplicationId>
   <FileLogs>
     <FileLog>
+      <CorrelationId>Intent.VisualStudio.Projects.VisualStudioSolution#b3a947a8-f9b4-4d7a-9494-eea2b12b4e04</CorrelationId>
+      <OverwriteBehaviour>always</OverwriteBehaviour>
+      <ApplicationRelativeFilePath>../Intent.Modules.NodeJs.sln</ApplicationRelativeFilePath>
+      <IsIgnored>false</IsIgnored>
+    </FileLog>
+    <FileLog>
       <ProjectId>96615273-0852-4d59-acfb-67f62095564b</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.Templates.StaticContentOutputReadme#a77e195c-7911-4fda-90f4-7243778afff6</CorrelationId>
       <OverwriteBehaviour>once-off</OverwriteBehaviour>

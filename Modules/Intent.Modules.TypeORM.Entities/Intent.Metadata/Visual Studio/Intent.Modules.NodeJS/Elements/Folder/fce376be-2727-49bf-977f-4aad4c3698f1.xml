@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<class id="5fc8b2a7-9640-4c0f-ac9f-3767d004ffa7" type="Folder" typeId="3407a825-1331-4f3f-89a4-901903ed97ce">
-  <name>Settings</name>
-  <display>Settings</display>
+<class id="fce376be-2727-49bf-977f-4aad4c3698f1" type="Folder" typeId="3407a825-1331-4f3f-89a4-901903ed97ce">
+  <name>FactoryExtensions</name>
+  <display>FactoryExtensions</display>
   <isAbstract>false</isAbstract>
   <sort-children>by-type-then-by-name</sort-children>
   <genericTypes />
   <isMapped>false</isMapped>
   <parentFolderId>9d34d137-f8cd-4985-8989-1b4a83d47a22</parentFolderId>
   <packageId>b0e28c08-9acb-4731-bedc-80c9ebb637b7</packageId>
-  <packageName>Intent.TypeORM.Entities</packageName>
+  <packageName>Intent.Modules.NodeJS</packageName>
   <stereotypes>
     <stereotype stereotypeDefinitionId="61132551-825d-4c6e-b9f1-0f95249d08d4" name="Folder Options">
       <addedByDefault>true</addedByDefault>
@@ -21,16 +21,16 @@
   </stereotypes>
   <metadata />
   <childElements>
-    <childElement id="ba1f9bc7-342a-4902-8f8b-34dc2bb1c5fb" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
-      <name>Intent.ModuleBuilder.Templates.Settings.ModuleSettingsExtensions</name>
-      <display>Intent.ModuleBuilder.Templates.Settings.ModuleSettingsExtensions</display>
+    <childElement id="f48ab5d7-187e-4fdc-9ecb-90ca24ed2e0c" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
+      <name>Intent.ModuleBuilder.Templates.FactoryExtension</name>
+      <display>Intent.ModuleBuilder.Templates.FactoryExtension</display>
       <externalReference>Intent.ModuleBuilder</externalReference>
       <isAbstract>false</isAbstract>
       <genericTypes />
       <isMapped>false</isMapped>
-      <parentFolderId>5fc8b2a7-9640-4c0f-ac9f-3767d004ffa7</parentFolderId>
+      <parentFolderId>fce376be-2727-49bf-977f-4aad4c3698f1</parentFolderId>
       <packageId>b0e28c08-9acb-4731-bedc-80c9ebb637b7</packageId>
-      <packageName>Intent.TypeORM.Entities</packageName>
+      <packageName>Intent.Modules.NodeJS</packageName>
       <stereotypes />
       <metadata />
       <childElements />

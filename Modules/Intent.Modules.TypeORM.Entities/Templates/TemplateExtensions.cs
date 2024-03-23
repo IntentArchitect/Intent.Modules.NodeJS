@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Intent.Modelers.Domain.Api;
 using Intent.Modules.Common.Templates;
 using Intent.Modules.TypeORM.Entities.Templates.BasicAuditingSubscriber;
 using Intent.Modules.TypeORM.Entities.Templates.Datasource;
@@ -29,12 +30,12 @@ namespace Intent.Modules.TypeORM.Entities.Templates
             return template.GetTypeName(OrmConfigTemplate.TemplateId);
         }
 
-        public static string GetRepositoryTemplateName<T>(this IIntentTemplate<T> template) where T : Intent.Modelers.Domain.Api.ClassModel
+        public static string GetRepositoryTemplateName<T>(this IIntentTemplate<T> template) where T : ClassModel
         {
             return template.GetTypeName(RepositoryTemplate.TemplateId, template.Model);
         }
 
-        public static string GetRepositoryTemplateName(this IIntentTemplate template, Intent.Modelers.Domain.Api.ClassModel model)
+        public static string GetRepositoryTemplateName(this IIntentTemplate template, ClassModel model)
         {
             return template.GetTypeName(RepositoryTemplate.TemplateId, model);
         }

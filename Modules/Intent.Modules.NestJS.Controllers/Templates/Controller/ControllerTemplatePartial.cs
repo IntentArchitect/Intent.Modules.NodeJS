@@ -24,7 +24,8 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Controller
     partial class
         ControllerTemplate : TypeScriptTemplateBase<Intent.Modelers.Services.Api.ServiceModel, ControllerDecorator>
     {
-        [IntentManaged(Mode.Fully)] public const string TemplateId = "Intent.NodeJS.NestJS.Controllers.Controller";
+        [IntentManaged(Mode.Fully)]
+        public const string TemplateId = "Intent.NodeJS.NestJS.Controllers.Controller";
 
         [IntentManaged(Mode.Merge, Signature = Mode.Fully)]
         public ControllerTemplate(IOutputTarget outputTarget, Intent.Modelers.Services.Api.ServiceModel model) : base(TemplateId, outputTarget, model)
@@ -108,7 +109,7 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Controller
             yield return GetHttpVerbAndPath(operation);
 
             var apiResponse = operation.ReturnType != null ? $"{GetTypeName((IElement)operation.TypeReference.Element)}" : null;
-            
+
             if (apiResponse != null && GetTypeInfo(operation.ReturnType).IsPrimitive || operation.ReturnType.HasStringType())
             {
                 apiResponse = apiResponse switch
