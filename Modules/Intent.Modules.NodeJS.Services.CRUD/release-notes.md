@@ -1,3 +1,7 @@
+### Version 4.0.0
+
+- Improvement: Updated dependencies to use separate `Intent.Code.Weaving.TypeScript` module.
+
 ### Version 3.4.3
 
 - Improvement: Updated dependency on `Intent.Modelers.Services.CRUD.ServiceDispatch` to `Intent.Modelers.Services.DomainInteractions`.

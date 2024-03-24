@@ -1,3 +1,7 @@
+### Version 4.0.0
+
+- Improvement: Updated dependencies to use separate `Intent.Code.Weaving.TypeScript` module.
+
 ### Version 3.3.7
 
 - Improvement: Upgraded `class-validator` NPM package to latest due to vulnerability.

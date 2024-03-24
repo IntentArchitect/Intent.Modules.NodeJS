@@ -1,3 +1,7 @@
+### Version 4.0.0
+
+- Improvement: Updated dependencies to use separate `Intent.Code.Weaving.TypeScript` module.
+
 ### Version 3.4.3
 
 - Fixed: When controller operations returned a string an error would show in the Swagger UI.
