@@ -109,7 +109,7 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Controller
             yield return GetHttpVerbAndPath(operation);
 
             var returnTypeInfo = GetTypeInfo(operation.ReturnType);
-            
+
             string apiResponse = null;
             if (operation.ReturnType is not null && returnTypeInfo?.GenericTypeParameters?.Count == 1)
             {
@@ -164,7 +164,7 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Controller
                     _ => $"'{apiResponse}'"
                 };
             }
-            
+
             switch (GetHttpVerb(operation))
             {
                 case HttpVerb.GET:
