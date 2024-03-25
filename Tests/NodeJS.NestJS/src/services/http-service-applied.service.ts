@@ -26,4 +26,19 @@ export class HttpServiceAppliedService {
   async getNumberArray(): Promise<number[]> {
     return [1,2,3,4,5,10000];
   }
+
+  @IntentIgnoreBody()
+  async getStringArray(): Promise<string[]> {
+    return ["a", "b", "long string"];
+  }
+
+  @IntentIgnoreBody()
+  async getObjectArray(): Promise<any[]> {
+    return [{field:"value"}];
+  }
+
+  @IntentIgnoreBody()
+  async getDecimalArray(): Promise<number[]> {
+    return [1.5];
+  }
 }

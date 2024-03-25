@@ -39,4 +39,37 @@ export class HttpServiceAppliedController {
     const result = await this.httpServiceAppliedService.getNumberArray();
     return result;
   }
+
+  @Get('string-array')
+  @ApiOkResponse({
+    description: 'Result retrieved successfully.',
+    type: 'String',
+    isArray: true,
+  })
+  async getStringArray(@Req() req: Request): Promise<string[]> {
+    const result = await this.httpServiceAppliedService.getStringArray();
+    return result;
+  }
+
+  @Get('object-array')
+  @ApiOkResponse({
+    description: 'Result retrieved successfully.',
+    type: Object,
+    isArray: true,
+  })
+  async getObjectArray(@Req() req: Request): Promise<any[]> {
+    const result = await this.httpServiceAppliedService.getObjectArray();
+    return result;
+  }
+
+  @Get('decimal-array')
+  @ApiOkResponse({
+    description: 'Result retrieved successfully.',
+    type: Number,
+    isArray: true,
+  })
+  async getDecimalArray(@Req() req: Request): Promise<number[]> {
+    const result = await this.httpServiceAppliedService.getDecimalArray();
+    return result;
+  }
 }

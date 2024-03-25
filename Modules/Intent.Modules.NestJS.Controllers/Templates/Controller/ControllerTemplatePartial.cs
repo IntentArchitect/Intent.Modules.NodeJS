@@ -113,7 +113,28 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Controller
             string apiResponse = null;
             if (operation.ReturnType is not null && returnTypeInfo?.GenericTypeParameters?.Count == 1)
             {
-                apiResponse = returnTypeInfo.GenericTypeParameters.First().Name.ToPascalCase();
+                apiResponse = returnTypeInfo.GenericTypeParameters.First().TypeReference.Element.Name switch
+                {
+                    "number" => "Number",
+                    "any" => "Object",
+                    "binary" => "String",
+                    "bool" => "Boolean",
+                    "byte" => "Number",
+                    "char" => "String",
+                    "date" => "Date",
+                    "datetime" => "Date",
+                    "datetimeoffset" => "Date",
+                    "decimal" => "Number",
+                    "double" => "Number",
+                    "float" => "Number",
+                    "guid" => "String",
+                    "int" => "Number",
+                    "long" => "Number",
+                    "short" => "Number",
+                    "string" => "String",
+                    "object" => "Object",
+                    var defaultVal => defaultVal
+                };
             }
             else if (operation.ReturnType is not null)
             {
@@ -139,6 +160,7 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Controller
                     "long" => "Number",
                     "short" => "Number",
                     "string" => "String",
+                    "object" => "Object",
                     _ => $"'{apiResponse}'"
                 };
             }
