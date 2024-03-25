@@ -108,9 +108,19 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Controller
 
             yield return GetHttpVerbAndPath(operation);
 
-            var apiResponse = operation.ReturnType != null ? $"{GetTypeName((IElement)operation.TypeReference.Element)}" : null;
+            var returnTypeInfo = GetTypeInfo(operation.ReturnType);
+            
+            string apiResponse = null;
+            if (operation.ReturnType is not null && returnTypeInfo?.GenericTypeParameters?.Count == 1)
+            {
+                apiResponse = returnTypeInfo.GenericTypeParameters.First().Name.ToPascalCase();
+            }
+            else if (operation.ReturnType is not null)
+            {
+                apiResponse = $"{GetTypeName((IElement)operation.TypeReference.Element)}";
+            }
 
-            if (apiResponse != null && GetTypeInfo(operation.ReturnType).IsPrimitive || operation.ReturnType.HasStringType())
+            if (apiResponse is not null && GetTypeInfo(operation.ReturnType).IsPrimitive || operation.ReturnType.HasStringType())
             {
                 apiResponse = apiResponse switch
                 {
@@ -132,6 +142,7 @@ namespace Intent.Modules.NestJS.Controllers.Templates.Controller
                     _ => $"'{apiResponse}'"
                 };
             }
+            
             switch (GetHttpVerb(operation))
             {
                 case HttpVerb.GET:

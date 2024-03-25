@@ -28,4 +28,15 @@ export class HttpServiceAppliedController {
   async postValue(@Req() req: Request, @Query('value') value: string): Promise<void> {
     return await this.httpServiceAppliedService.postValue(value);
   }
+
+  @Get('num-array')
+  @ApiOkResponse({
+    description: 'Result retrieved successfully.',
+    type: Number,
+    isArray: true,
+  })
+  async getNumberArray(@Req() req: Request): Promise<number[]> {
+    const result = await this.httpServiceAppliedService.getNumberArray();
+    return result;
+  }
 }

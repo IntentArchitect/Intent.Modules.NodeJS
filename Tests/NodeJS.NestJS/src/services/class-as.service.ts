@@ -52,5 +52,6 @@ export class ClassASService {
       id: id,
     });
     await this.classARepository.remove(existingClassA);
+    return existingClassA;
   }
 }

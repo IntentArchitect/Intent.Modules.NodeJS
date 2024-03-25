@@ -1,6 +1,7 @@
 ### Version 4.0.0
 
 - Improvement: Updated dependencies to use separate `Intent.Code.Weaving.TypeScript` module.
+- Fixed: `ApiOkResponse` has a `type` argument that wasn't correctly set with primitive types.
 
 ### Version 3.4.3
 

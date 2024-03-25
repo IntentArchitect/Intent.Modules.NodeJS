@@ -21,4 +21,9 @@ export class HttpServiceAppliedService {
   async nonAppliedOperation(): Promise<void> {
     throw new Error("Write your implementation for this service here...");
   }
+
+  @IntentIgnoreBody()
+  async getNumberArray(): Promise<number[]> {
+    return [1,2,3,4,5,10000];
+  }
 }

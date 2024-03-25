@@ -116,6 +116,7 @@
               <properties>
                 <property name="d2630e0f-f930-404f-b453-1e8052a712f5" display="Source" value="Default" isActive="true" />
                 <property name="7a331e9b-f13c-4b33-9013-bd59b4a4999c" display="Header Name" isActive="false" />
+                <property name="c8caa58e-972a-42f2-983e-652ceee762b2" display="Query String Name" isActive="false" />
               </properties>
             </stereotype>
           </stereotypes>
@@ -142,6 +143,41 @@
       <packageId>5ee5788e-af11-4179-9323-869b68565609</packageId>
       <packageName>NodeJS.NestJS.TestApplication.Services</packageName>
       <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="b255fc4d-bce6-422a-870a-472d691c87da" type="Operation" typeId="e030c97a-e066-40a7-8188-808c275df3cb">
+      <name>GetNumberArray</name>
+      <display>GetNumberArray(): int[*]</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="64eae799-c2e5-4ed9-8f82-ba6a52910902">
+        <typeId>fb0a362d-e9e2-40de-b6ff-5ce8167cbe74</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>true</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>206d1218-26e4-4806-9b3b-e6a8a9a5f166</parentFolderId>
+      <packageId>5ee5788e-af11-4179-9323-869b68565609</packageId>
+      <packageName>NodeJS.NestJS.TestApplication.Services</packageName>
+      <stereotypes>
+        <stereotype stereotypeDefinitionId="b4581ed2-42ec-4ae2-83dd-dcdd5f0837b6" name="Http Settings">
+          <addedByDefault>false</addedByDefault>
+          <definitionPackageName>Intent.Metadata.WebApi</definitionPackageName>
+          <definitionPackageId>0011387a-b122-45d7-9cdb-8e21b315ab9f</definitionPackageId>
+          <properties>
+            <property name="801c3e61-4431-4d81-93fa-7e57d33cb3fa" display="Verb" value="GET" isActive="true" />
+            <property name="5dd3e07d-76eb-45d4-9956-4325fb068acc" display="Route" value="num-array" isActive="true" />
+            <property name="4490e212-1e99-43ce-b3dd-048ed2a6bae8" display="Return Type Mediatype" value="Default" isActive="true" />
+          </properties>
+        </stereotype>
+      </stereotypes>
       <metadata />
       <childElements />
     </childElement>
