@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="a19f7f8f-1e56-4364-be87-29cfc3bdfe9a" type="Module" typeId="6a811790-b322-4340-8b68-84dae5ffafa8">
+  <name>Intent.Modelers.Services</name>
+  <display>Intent.Modelers.Services 3.6.1</display>
+  <isAbstract>false</isAbstract>
+  <value>3.6.1</value>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>8d6e4e9c-f13b-49ce-9e56-870430d31756</parentFolderId>
+  <packageId>4c7176c7-0764-4a59-9583-5465261386ec</packageId>
+  <packageName>Intent.ApplicationTemplate.NestJS.Web</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

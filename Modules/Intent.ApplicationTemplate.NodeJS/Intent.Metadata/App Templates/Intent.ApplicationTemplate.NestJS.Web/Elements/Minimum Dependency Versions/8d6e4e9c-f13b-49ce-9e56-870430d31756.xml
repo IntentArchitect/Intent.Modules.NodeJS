@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="8d6e4e9c-f13b-49ce-9e56-870430d31756" type="Minimum Dependency Versions" typeId="63605213-ab56-4042-b801-907bb5a79c08">
+  <name>Minimum Dependency Versions</name>
+  <display>Minimum Dependency Versions</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-by-name</sort-children>
+  <order>1</order>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>4c7176c7-0764-4a59-9583-5465261386ec</parentFolderId>
+  <packageId>4c7176c7-0764-4a59-9583-5465261386ec</packageId>
+  <packageName>Intent.ApplicationTemplate.NestJS.Web</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

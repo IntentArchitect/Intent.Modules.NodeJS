@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package>
   <id>Intent.NodeJS.NestJS.Core</id>
-  <version>4.0.0-pre.1</version>
+  <version>4.0.0</version>
   <supportedClientVersions>[3.3.16, 5.0.0-a)</supportedClientVersions>
   <summary>Provides Application host bootstrap files</summary>
   <description>Provides Application host bootstrap files</description>
@@ -35,7 +35,7 @@
     <dependency id="Intent.Common" version="3.5.0" />
     <dependency id="Intent.Common.Types" version="3.3.9" />
     <dependency id="Intent.Common.TypeScript" version="4.0.1" />
-    <dependency id="Intent.Npm" version="4.0.0-pre.0" />
+    <dependency id="Intent.Npm" version="4.0.0" />
   </dependencies>
   <files>
     <file src="$outDir$/$id$.dll" />

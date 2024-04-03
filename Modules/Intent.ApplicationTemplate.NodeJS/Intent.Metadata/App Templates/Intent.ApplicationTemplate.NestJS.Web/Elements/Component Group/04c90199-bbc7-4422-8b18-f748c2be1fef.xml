@@ -48,7 +48,7 @@
       </stereotypes>
       <metadata />
       <childElements>
-        <childElement id="ad986d5f-da90-4d00-b45c-c67d94f86420" type="Module" typeId="ef75f8f0-520c-4ab8-814f-5e75f4877dd7">
+        <childElement id="ad986d5f-da90-4d00-b45c-c67d94f86420" type="Component Module" typeId="ef75f8f0-520c-4ab8-814f-5e75f4877dd7">
           <name>Intent.OutputTargets.Folders</name>
           <display>Intent.OutputTargets.Folders</display>
           <isAbstract>false</isAbstract>
