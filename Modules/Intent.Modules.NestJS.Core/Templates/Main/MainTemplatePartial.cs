@@ -98,5 +98,10 @@ namespace Intent.Modules.NestJS.Core.Templates.Main
             );
         }
 
+        public override void BeforeTemplateExecution()
+        {
+            base.BeforeTemplateExecution();
+            ExecutionContext.EventDispatcher.Publish(new EnvironmentVariableRequest(EnvironmentVariables.HostPort, EnvironmentVariables.HostPortDefault));
+        }
     }
 }

@@ -1,3 +1,7 @@
+### Version 4.0.1
+
+- Improvement: `.env` now can configure the host port.
+
 ### Version 4.0.0
 
 - Improvement: Updated dependencies to use separate `Intent.Code.Weaving.TypeScript` module.
