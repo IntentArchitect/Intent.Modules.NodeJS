@@ -8,7 +8,7 @@ Project("{52B49DB5-3EA9-4095-B1A7-DF1AC22D7DAE}") = "Intent.Modules.TypeORM.Enti
 EndProject
 Project("{52B49DB5-3EA9-4095-B1A7-DF1AC22D7DAE}") = "Intent.Modules.NestJS.Core", "Intent.Modules.NestJS.Core\Intent.Modules.NestJS.Core.csproj", "{AB51A39E-1A29-4E00-B843-A1677244C708}"
 EndProject
-Project("{52B49DB5-3EA9-4095-B1A7-DF1AC22D7DAE}") = "Intent.ApplicationTemplate.NodeJS", "Intent.ApplicationTemplate.NodeJS\Intent.ApplicationTemplate.NodeJS.csproj", "{4A552A10-949B-45CE-8D6B-61F56798A2CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intent.ApplicationTemplate.NodeJS", "Intent.ApplicationTemplate.NodeJS\Intent.ApplicationTemplate.NodeJS.csproj", "{4A552A10-949B-45CE-8D6B-61F56798A2CA}"
 EndProject
 Project("{52B49DB5-3EA9-4095-B1A7-DF1AC22D7DAE}") = "Intent.Module.TypeScript.Domain", "Intent.Module.TypeScript.Domain\Intent.Module.TypeScript.Domain.csproj", "{CC9A4C9E-686E-403B-84D7-00B3F54236E8}"
 EndProject

@@ -9,7 +9,7 @@
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
-      <ProjectId>4a552a10-949b-45ce-8d6b-61f56798a2ca</ProjectId>
+      <ProjectId>5e467cbe-13e5-4121-a66f-8ce78916f4e9</ProjectId>
       <CorrelationId>Intent.ApplicationTemplate.Builder.Templates.IatSpecFile#4c7176c7-0764-4a59-9583-5465261386ec</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Intent.ApplicationTemplate.NestJS.Web/metadata.iatspec</ApplicationRelativeFilePath>
@@ -17,8 +17,8 @@
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
-      <ProjectId>4a552a10-949b-45ce-8d6b-61f56798a2ca</ProjectId>
-      <CorrelationId>Intent.VisualStudio.Projects.CoreLibrary.CSProject#4a552a10-949b-45ce-8d6b-61f56798a2ca</CorrelationId>
+      <ProjectId>5e467cbe-13e5-4121-a66f-8ce78916f4e9</ProjectId>
+      <CorrelationId>Intent.VisualStudio.Projects.CSharpProject#5e467cbe-13e5-4121-a66f-8ce78916f4e9</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Intent.ApplicationTemplate.NodeJS.csproj</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Intent.ApplicationTemplate.NodeJS.csproj</ProjectRelativeFilePath>
