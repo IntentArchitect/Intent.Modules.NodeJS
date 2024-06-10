@@ -75,6 +75,17 @@ steps:
     vstsFeed: $(vstsFeed)
     projects: $(targetsToBuild)
 
+- task: PowerShell@2
+  displayName: 'Update Project URLs in imodspecs'
+  condition: and(succeeded(), in(true, variables.isMaster))
+  inputs:
+    targetType: 'inline'
+    pwsh: true
+    script: |
+      Get-ChildItem -Recurse -Filter "*.imodspec" | ForEach-Object {
+        (Get-Content $_.FullName) -replace '/development/', '/master/' | Set-Content $_.FullName
+      }
+
 - task: DotNetCoreCLI@2
   displayName: 'dotnet build'
   env:
@@ -152,7 +163,7 @@ steps:
       Write-Host "All files:"
       Get-ChildItem "./Modules/Intent.Modules/" | ForEach-Object { Write-Host $_.Name }
 
-      $imodFilesToRemove = Get-ChildItem "./Modules/Intent.Modules/*.imod" | Where-Object { -Not $isMaster -And ($_.Name -NotMatch $isPreReleaseRegex) }
+      $imodFilesToRemove = Get-ChildItem "./Modules/Intent.Modules/*.imod" | Where-Object { (-Not $isMaster -And ($_.Name -NotMatch $isPreReleaseRegex)) -Or ($_.Name.Contains('-alpha')) }
       # Client has no way to filter pre-release application templates so they are never published from development
       $iatFilesToRemove = Get-ChildItem "./Modules/Intent.Modules/*.iat" | Where-Object { -Not $isMaster -Or ($_.Name -Match $isPreReleaseRegex) }
 
