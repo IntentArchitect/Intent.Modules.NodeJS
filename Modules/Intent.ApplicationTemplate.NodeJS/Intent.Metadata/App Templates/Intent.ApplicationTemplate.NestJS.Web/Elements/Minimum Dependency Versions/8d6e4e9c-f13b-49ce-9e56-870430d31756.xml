@@ -17,7 +17,7 @@
       <name>Intent.Code.Weaving.TypeScript</name>
       <display>Intent.Code.Weaving.TypeScript 1.0.1-pre.0</display>
       <isAbstract>false</isAbstract>
-      <value>1.0.1-pre.0</value>
+      <value>1.0.1</value>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>8d6e4e9c-f13b-49ce-9e56-870430d31756</parentFolderId>
@@ -45,7 +45,7 @@
       <name>Intent.Common.TypeScript</name>
       <display>Intent.Common.TypeScript 4.1.0</display>
       <isAbstract>false</isAbstract>
-      <value>4.1.0</value>
+      <value>4.1.1</value>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>8d6e4e9c-f13b-49ce-9e56-870430d31756</parentFolderId>
@@ -73,7 +73,7 @@
       <name>Intent.Metadata.WebApi</name>
       <display>Intent.Metadata.WebApi 4.5.4</display>
       <isAbstract>false</isAbstract>
-      <value>4.5.4</value>
+      <value>4.5.5</value>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>8d6e4e9c-f13b-49ce-9e56-870430d31756</parentFolderId>
@@ -101,7 +101,7 @@
       <name>Intent.Modelers.Services</name>
       <display>Intent.Modelers.Services 3.7.3</display>
       <isAbstract>false</isAbstract>
-      <value>3.7.3</value>
+      <value>3.7.4</value>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>8d6e4e9c-f13b-49ce-9e56-870430d31756</parentFolderId>
@@ -115,7 +115,7 @@
       <name>Intent.Modelers.Services.DomainInteractions</name>
       <display>Intent.Modelers.Services.DomainInteractions 1.1.4</display>
       <isAbstract>false</isAbstract>
-      <value>1.1.4</value>
+      <value>1.1.5</value>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>8d6e4e9c-f13b-49ce-9e56-870430d31756</parentFolderId>

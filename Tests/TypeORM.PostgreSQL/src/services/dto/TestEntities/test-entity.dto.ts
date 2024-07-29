@@ -19,7 +19,7 @@ export class TestEntityDto {
   byteField: number;
 
   @ApiProperty()
-  charField: number;
+  charField: string;
 
   @IsDate()
   @ApiProperty()

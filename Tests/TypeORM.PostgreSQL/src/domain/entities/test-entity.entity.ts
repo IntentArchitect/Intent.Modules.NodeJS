@@ -15,7 +15,7 @@ export class TestEntity {
   byteField: number;
 
   @Column('character')
-  charField: number;
+  charField: string;
 
   @Column('date')
   dateField: Date;
