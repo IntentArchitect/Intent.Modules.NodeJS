@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <class id="0e913597-34fb-4dea-913a-b5f1642b966a" type="Component Group" typeId="027f8bb9-9b28-4c1d-a516-8c3daa70e46d">
   <name>Application</name>
-  <display>Application</display>
+  <display>Application (1)</display>
   <isAbstract>false</isAbstract>
   <sort-children>by-type-then-manually</sort-children>
   <order>3</order>
@@ -24,7 +24,7 @@
   <childElements>
     <childElement id="bbf636a3-00ea-4d4a-b57c-5e9735eb30c0" type="Component" typeId="47064ef1-2295-4287-8301-c446910a1b1e">
       <name>CRUD Implementations</name>
-      <display>CRUD Implementations</display>
+      <display>CRUD Implementations (1)</display>
       <isAbstract>false</isAbstract>
       <sort-children>by-type-then-manually</sort-children>
       <genericTypes />

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <class id="c66e65e8-532d-44be-9d24-eea11eeb80e8" type="Component Group" typeId="027f8bb9-9b28-4c1d-a516-8c3daa70e46d">
   <name>Persistence</name>
-  <display>Persistence</display>
+  <display>Persistence (1)</display>
   <isAbstract>false</isAbstract>
   <sort-children>by-type-then-manually</sort-children>
   <order>5</order>
@@ -24,7 +24,7 @@
   <childElements>
     <childElement id="af8c45be-ecd2-47bf-8b07-6cb70e2d577e" type="Component" typeId="47064ef1-2295-4287-8301-c446910a1b1e">
       <name>TypeORM Entities</name>
-      <display>TypeORM Entities</display>
+      <display>TypeORM Entities (1)</display>
       <isAbstract>false</isAbstract>
       <sort-children>by-type-then-manually</sort-children>
       <genericTypes />

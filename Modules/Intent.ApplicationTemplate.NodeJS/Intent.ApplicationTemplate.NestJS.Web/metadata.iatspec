@@ -155,6 +155,7 @@
     </group>
   </additionalSettings>
   <minimumDependencyVersions>
+    <module id="Intent.Code.Weaving.TypeScript" version="1.0.1-pre.0" />
     <module id="Intent.Common" version="3.6.0" />
     <module id="Intent.Common.TypeScript" version="4.1.0" />
     <module id="Intent.Metadata.RDBMS" version="3.6.2" />

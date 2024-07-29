@@ -13,6 +13,20 @@
   <stereotypes />
   <metadata />
   <childElements>
+    <childElement id="9d9be0db-0c0f-4f0b-b6b1-4e792e3dc145" type="Module" typeId="6a811790-b322-4340-8b68-84dae5ffafa8">
+      <name>Intent.Code.Weaving.TypeScript</name>
+      <display>Intent.Code.Weaving.TypeScript 1.0.1-pre.0</display>
+      <isAbstract>false</isAbstract>
+      <value>1.0.1-pre.0</value>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>8d6e4e9c-f13b-49ce-9e56-870430d31756</parentFolderId>
+      <packageId>4c7176c7-0764-4a59-9583-5465261386ec</packageId>
+      <packageName>Intent.ApplicationTemplate.NestJS.Web</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
     <childElement id="a6e999fd-2fe1-473d-b882-e89c369a04dc" type="Module" typeId="6a811790-b322-4340-8b68-84dae5ffafa8">
       <name>Intent.Common</name>
       <display>Intent.Common 3.6.0</display>
@@ -43,7 +57,7 @@
     </childElement>
     <childElement id="3138f311-15a3-4744-91a2-6be66bc62804" type="Module" typeId="6a811790-b322-4340-8b68-84dae5ffafa8">
       <name>Intent.Metadata.RDBMS</name>
-      <display>Intent.Metadata.RDBMS 3.6.0</display>
+      <display>Intent.Metadata.RDBMS 3.6.2</display>
       <isAbstract>false</isAbstract>
       <value>3.6.2</value>
       <genericTypes />
@@ -57,7 +71,7 @@
     </childElement>
     <childElement id="935e3c5b-9976-49da-864b-4e6947c81ae9" type="Module" typeId="6a811790-b322-4340-8b68-84dae5ffafa8">
       <name>Intent.Metadata.WebApi</name>
-      <display>Intent.Metadata.WebApi 4.5.0</display>
+      <display>Intent.Metadata.WebApi 4.5.4</display>
       <isAbstract>false</isAbstract>
       <value>4.5.4</value>
       <genericTypes />
@@ -85,7 +99,7 @@
     </childElement>
     <childElement id="a19f7f8f-1e56-4364-be87-29cfc3bdfe9a" type="Module" typeId="6a811790-b322-4340-8b68-84dae5ffafa8">
       <name>Intent.Modelers.Services</name>
-      <display>Intent.Modelers.Services 3.7.0</display>
+      <display>Intent.Modelers.Services 3.7.3</display>
       <isAbstract>false</isAbstract>
       <value>3.7.3</value>
       <genericTypes />
@@ -99,7 +113,7 @@
     </childElement>
     <childElement id="bb7a4131-d3f3-4f92-b66e-7087beaa2b4f" type="Module" typeId="6a811790-b322-4340-8b68-84dae5ffafa8">
       <name>Intent.Modelers.Services.DomainInteractions</name>
-      <display>Intent.Modelers.Services.DomainInteractions 1.1.0</display>
+      <display>Intent.Modelers.Services.DomainInteractions 1.1.4</display>
       <isAbstract>false</isAbstract>
       <value>1.1.4</value>
       <genericTypes />

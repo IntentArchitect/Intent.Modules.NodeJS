@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <class id="07f2173b-738e-484a-9b34-c5fa91b1ca26" type="Component Group" typeId="027f8bb9-9b28-4c1d-a516-8c3daa70e46d">
   <name>Domain</name>
-  <display>Domain</display>
+  <display>Domain (1)</display>
   <isAbstract>false</isAbstract>
   <sort-children>by-type-then-manually</sort-children>
   <order>4</order>
@@ -24,7 +24,7 @@
   <childElements>
     <childElement id="ae247be2-41a0-4267-b51b-62a49ae95852" type="Component" typeId="47064ef1-2295-4287-8301-c446910a1b1e">
       <name>Domain Entities</name>
-      <display>Domain Entities</display>
+      <display>Domain Entities (1)</display>
       <isAbstract>false</isAbstract>
       <sort-children>by-type-then-manually</sort-children>
       <genericTypes />

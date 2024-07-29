@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <class id="4d81fd4b-2549-43da-8eb6-8987ab0ed41e" type="Component Group" typeId="027f8bb9-9b28-4c1d-a516-8c3daa70e46d">
   <name>Api</name>
-  <display>Api</display>
+  <display>Api (3)</display>
   <isAbstract>false</isAbstract>
   <sort-children>by-type-then-manually</sort-children>
   <order>2</order>
@@ -24,7 +24,7 @@
   <childElements>
     <childElement id="915497fb-6e4e-48e6-a57b-eda17b13c827" type="Component" typeId="47064ef1-2295-4287-8301-c446910a1b1e">
       <name>NestJS RESTful Services</name>
-      <display>NestJS RESTful Services</display>
+      <display>NestJS RESTful Services (2)</display>
       <isAbstract>false</isAbstract>
       <sort-children>by-type-then-manually</sort-children>
       <genericTypes />
@@ -102,7 +102,7 @@
     </childElement>
     <childElement id="9b9d5981-1b43-4115-976a-dd9d1b8f69ec" type="Component" typeId="47064ef1-2295-4287-8301-c446910a1b1e">
       <name>Api Authentication and Authorization</name>
-      <display>Api Authentication and Authorization</display>
+      <display>Api Authentication and Authorization (2)</display>
       <isAbstract>false</isAbstract>
       <sort-children>by-type-then-manually</sort-children>
       <genericTypes />
@@ -180,7 +180,7 @@
     </childElement>
     <childElement id="d06825ce-9e20-49fb-bd62-35dc623e2b21" type="Component" typeId="47064ef1-2295-4287-8301-c446910a1b1e">
       <name>NestJS Validation</name>
-      <display>NestJS Validation</display>
+      <display>NestJS Validation (1)</display>
       <isAbstract>false</isAbstract>
       <sort-children>by-type-then-manually</sort-children>
       <genericTypes />
