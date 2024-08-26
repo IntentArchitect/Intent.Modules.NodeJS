@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <applicationTemplate>
   <id>Intent.ApplicationTemplate.NestJS.Web</id>
-  <version>3.4.18-pre.0</version>
+  <version>3.4.18</version>
   <supportedClientVersions>[4.0.0-beta.0, 5.0.0)</supportedClientVersions>
   <displayName>NestJS Web Application</displayName>
   <shortDescription>A Node.js web application server using NestJS and TypeORM.</shortDescription>
