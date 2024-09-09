@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <applicationTemplate>
   <id>Intent.ApplicationTemplate.NestJS.Web</id>
-  <version>3.4.19</version>
+  <version>3.4.20-pre.0</version>
   <supportedClientVersions>[4.0.0-beta.0, 5.0.0)</supportedClientVersions>
   <displayName>NestJS Web Application</displayName>
   <shortDescription>A Node.js web application server using NestJS and TypeORM.</shortDescription>
@@ -159,7 +159,7 @@
     <module id="Intent.Common" version="3.6.0" />
     <module id="Intent.Common.TypeScript" version="4.1.1" />
     <module id="Intent.Metadata.RDBMS" version="3.6.2" />
-    <module id="Intent.Metadata.WebApi" version="4.5.5" />
+    <module id="Intent.Metadata.WebApi" version="4.5.6" />
     <module id="Intent.Modelers.Domain" version="3.9.0" />
     <module id="Intent.Modelers.Services" version="3.7.5" />
     <module id="Intent.Modelers.Services.DomainInteractions" version="1.1.5" />
