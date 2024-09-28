@@ -15,7 +15,7 @@
   <childElements>
     <childElement id="9d9be0db-0c0f-4f0b-b6b1-4e792e3dc145" type="Module" typeId="6a811790-b322-4340-8b68-84dae5ffafa8">
       <name>Intent.Code.Weaving.TypeScript</name>
-      <display>Intent.Code.Weaving.TypeScript 1.0.1-pre.0</display>
+      <display>Intent.Code.Weaving.TypeScript 1.0.2</display>
       <isAbstract>false</isAbstract>
       <value>1.0.2</value>
       <genericTypes />
@@ -43,7 +43,7 @@
     </childElement>
     <childElement id="8c9e06c7-74b6-42d0-8ff2-a7a837ae903e" type="Module" typeId="6a811790-b322-4340-8b68-84dae5ffafa8">
       <name>Intent.Common.TypeScript</name>
-      <display>Intent.Common.TypeScript 4.1.0</display>
+      <display>Intent.Common.TypeScript 4.1.1</display>
       <isAbstract>false</isAbstract>
       <value>4.1.1</value>
       <genericTypes />
@@ -71,7 +71,7 @@
     </childElement>
     <childElement id="935e3c5b-9976-49da-864b-4e6947c81ae9" type="Module" typeId="6a811790-b322-4340-8b68-84dae5ffafa8">
       <name>Intent.Metadata.WebApi</name>
-      <display>Intent.Metadata.WebApi 4.5.4</display>
+      <display>Intent.Metadata.WebApi 4.5.7</display>
       <isAbstract>false</isAbstract>
       <value>4.5.7</value>
       <genericTypes />
@@ -85,7 +85,7 @@
     </childElement>
     <childElement id="c261fe23-04f1-42aa-a0cc-94d8306eaec1" type="Module" typeId="6a811790-b322-4340-8b68-84dae5ffafa8">
       <name>Intent.Modelers.Domain</name>
-      <display>Intent.Modelers.Domain 3.9.0</display>
+      <display>Intent.Modelers.Domain 3.9.1</display>
       <isAbstract>false</isAbstract>
       <value>3.9.1</value>
       <genericTypes />
@@ -99,7 +99,7 @@
     </childElement>
     <childElement id="a19f7f8f-1e56-4364-be87-29cfc3bdfe9a" type="Module" typeId="6a811790-b322-4340-8b68-84dae5ffafa8">
       <name>Intent.Modelers.Services</name>
-      <display>Intent.Modelers.Services 3.7.3</display>
+      <display>Intent.Modelers.Services 3.7.5</display>
       <isAbstract>false</isAbstract>
       <value>3.7.5</value>
       <genericTypes />
@@ -113,7 +113,7 @@
     </childElement>
     <childElement id="bb7a4131-d3f3-4f92-b66e-7087beaa2b4f" type="Module" typeId="6a811790-b322-4340-8b68-84dae5ffafa8">
       <name>Intent.Modelers.Services.DomainInteractions</name>
-      <display>Intent.Modelers.Services.DomainInteractions 1.1.4</display>
+      <display>Intent.Modelers.Services.DomainInteractions 1.1.6</display>
       <isAbstract>false</isAbstract>
       <value>1.1.6</value>
       <genericTypes />
