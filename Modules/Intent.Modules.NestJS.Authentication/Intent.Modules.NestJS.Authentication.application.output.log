@@ -25,15 +25,15 @@
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
-      <ProjectId>e5efadd1-5947-44ed-9885-77be31e7c358</ProjectId>
-      <CorrelationId>Intent.VisualStudio.Projects.CoreLibrary.CSProject#e5efadd1-5947-44ed-9885-77be31e7c358</CorrelationId>
+      <ProjectId>8d2809dd-eabd-4ba6-808e-e1c82ac7cdf7</ProjectId>
+      <CorrelationId>Intent.VisualStudio.Projects.CSharpProject#8d2809dd-eabd-4ba6-808e-e1c82ac7cdf7</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Intent.Modules.NestJS.Authentication.csproj</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Intent.Modules.NestJS.Authentication.csproj</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
-      <ProjectId>e5efadd1-5947-44ed-9885-77be31e7c358</ProjectId>
+      <ProjectId>8d2809dd-eabd-4ba6-808e-e1c82ac7cdf7</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.IModSpecFile</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Intent.NodeJS.NestJS.Authentication.imodspec</ApplicationRelativeFilePath>

@@ -6,7 +6,7 @@
   <sort-children>by-type-then-by-name</sort-children>
   <genericTypes />
   <isMapped>false</isMapped>
-  <parentFolderId>47d80e8c-bdc2-431a-9d38-a9543b1fe821</parentFolderId>
+  <parentFolderId>0ae105f6-e3e7-4c8d-bd6a-abdd420e5c7c</parentFolderId>
   <packageId>d4d80206-501b-4546-b81f-b7fc2444e431</packageId>
   <packageName>Intent.Modules.NodeJS</packageName>
   <stereotypes>

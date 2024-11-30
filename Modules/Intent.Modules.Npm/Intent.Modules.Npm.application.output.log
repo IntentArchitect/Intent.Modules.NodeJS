@@ -9,15 +9,15 @@
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
-      <ProjectId>47d80e8c-bdc2-431a-9d38-a9543b1fe821</ProjectId>
-      <CorrelationId>Intent.VisualStudio.Projects.CoreLibrary.CSProject#47d80e8c-bdc2-431a-9d38-a9543b1fe821</CorrelationId>
+      <ProjectId>0ae105f6-e3e7-4c8d-bd6a-abdd420e5c7c</ProjectId>
+      <CorrelationId>Intent.VisualStudio.Projects.CSharpProject#0ae105f6-e3e7-4c8d-bd6a-abdd420e5c7c</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Intent.Modules.Npm.csproj</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Intent.Modules.Npm.csproj</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
-      <ProjectId>47d80e8c-bdc2-431a-9d38-a9543b1fe821</ProjectId>
+      <ProjectId>0ae105f6-e3e7-4c8d-bd6a-abdd420e5c7c</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.IModSpecFile</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Intent.Npm.imodspec</ApplicationRelativeFilePath>

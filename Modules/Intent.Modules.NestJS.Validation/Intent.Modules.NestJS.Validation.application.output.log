@@ -33,15 +33,15 @@
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
-      <ProjectId>49722d16-76cb-4224-8aa3-c9e7da883f15</ProjectId>
-      <CorrelationId>Intent.VisualStudio.Projects.CoreLibrary.CSProject#49722d16-76cb-4224-8aa3-c9e7da883f15</CorrelationId>
+      <ProjectId>9706b3a5-562c-49c2-9c43-b79ab2f869cb</ProjectId>
+      <CorrelationId>Intent.VisualStudio.Projects.CSharpProject#9706b3a5-562c-49c2-9c43-b79ab2f869cb</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Intent.Modules.NestJS.Validation.csproj</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Intent.Modules.NestJS.Validation.csproj</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
-      <ProjectId>49722d16-76cb-4224-8aa3-c9e7da883f15</ProjectId>
+      <ProjectId>9706b3a5-562c-49c2-9c43-b79ab2f869cb</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.IModSpecFile</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Intent.NodeJS.NestJS.Validation.imodspec</ApplicationRelativeFilePath>

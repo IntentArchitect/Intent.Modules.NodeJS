@@ -9,15 +9,15 @@
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
-      <ProjectId>00d9adc0-f185-4287-9f1f-4ebc7ee0228c</ProjectId>
-      <CorrelationId>Intent.VisualStudio.Projects.CoreLibrary.CSProject#00d9adc0-f185-4287-9f1f-4ebc7ee0228c</CorrelationId>
+      <ProjectId>c7545e3e-5f18-437f-b240-e36baf191c4a</ProjectId>
+      <CorrelationId>Intent.VisualStudio.Projects.CSharpProject#c7545e3e-5f18-437f-b240-e36baf191c4a</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Intent.Modules.NestJS.Winston.csproj</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Intent.Modules.NestJS.Winston.csproj</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
-      <ProjectId>00d9adc0-f185-4287-9f1f-4ebc7ee0228c</ProjectId>
+      <ProjectId>c7545e3e-5f18-437f-b240-e36baf191c4a</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.IModSpecFile</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Intent.NestJS.Winston.imodspec</ApplicationRelativeFilePath>

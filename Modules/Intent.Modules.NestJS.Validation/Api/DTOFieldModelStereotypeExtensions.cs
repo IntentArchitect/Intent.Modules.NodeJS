@@ -15,14 +15,14 @@ namespace Intent.NodeJS.NestJS.Validation.Api
     {
         public static Validations GetValidations(this DTOFieldModel model)
         {
-            var stereotype = model.GetStereotype("2e7f99b2-0f21-4020-81a0-9ce74ef2bde3");
+            var stereotype = model.GetStereotype(Validations.DefinitionId);
             return stereotype != null ? new Validations(stereotype) : null;
         }
 
 
         public static bool HasValidations(this DTOFieldModel model)
         {
-            return model.HasStereotype("2e7f99b2-0f21-4020-81a0-9ce74ef2bde3");
+            return model.HasStereotype(Validations.DefinitionId);
         }
 
         public static bool TryGetValidations(this DTOFieldModel model, out Validations stereotype)
@@ -33,13 +33,14 @@ namespace Intent.NodeJS.NestJS.Validation.Api
                 return false;
             }
 
-            stereotype = new Validations(model.GetStereotype("2e7f99b2-0f21-4020-81a0-9ce74ef2bde3"));
+            stereotype = new Validations(model.GetStereotype(Validations.DefinitionId));
             return true;
         }
 
         public class Validations
         {
             private IStereotype _stereotype;
+            public const string DefinitionId = "2e7f99b2-0f21-4020-81a0-9ce74ef2bde3";
 
             public Validations(IStereotype stereotype)
             {

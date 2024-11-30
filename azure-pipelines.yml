@@ -31,6 +31,8 @@ variables:
   value: '**/*.sln'
 - name: 'intent-solution'
   value: 'Tests/Intent.Modules.NodeJS.Tests.isln'
+- name: 'intent-module-solution'
+  value: 'Modules/Intent.Modules.NodeJS.isln'
 - name: 'warning-logging-command'
   value: '##vso[task.logissue type=warning;]{@m} {@x}\n'
 - name: 'error-logging-command'
@@ -137,7 +139,7 @@ steps:
   inputs:
     targetType: 'inline'
     pwsh: true
-    script: ./PipelineScripts/pre-template-test-validation.ps1 "$(Build.ArtifactStagingDirectory)" "$(intent-solution)"
+    script: ./PipelineScripts/pre-template-test-validation.ps1 "$(Build.ArtifactStagingDirectory)" "$(intent-module-solution)" "$(intent-solution)"
 
 - task: DotNetCoreCLI@2
   displayName: 'dotnet test'
@@ -158,7 +160,18 @@ steps:
     script: dotnet tool install Intent.SoftwareFactory.CLI --global --prerelease
 
 - task: PowerShell@2
-  displayName: 'Template Testing'
+  displayName: 'Run SF CLI on module solution'
+  env:
+    INTENT_USER: $(intent-architect-user)
+    INTENT_PASS: $(intent-architect-password)
+    INTENT_MODULE_SOLUTION_PATH: $(intent-module-solution)
+  inputs:
+    targetType: 'inline'
+    pwsh: true
+    script: intent-cli ensure-no-outstanding-changes "$Env:INTENT_USER" "$Env:INTENT_PASS" "$Env:INTENT_MODULE_SOLUTION_PATH"
+
+- task: PowerShell@2
+  displayName: 'Run SF CLI on tests solution'
   env:
     INTENT_USER: $(intent-architect-user)
     INTENT_PASS: $(intent-architect-password)

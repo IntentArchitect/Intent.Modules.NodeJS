@@ -2,27 +2,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32602.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{52B49DB5-3EA9-4095-B1A7-DF1AC22D7DAE}") = "Intent.Modules.NestJS.Controllers", "Intent.Modules.NestJS.Controllers\Intent.Modules.NestJS.Controllers.csproj", "{69BFDEA9-E75F-4ED0-B4EB-AFC7D672048F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intent.Modules.NestJS.Controllers", "Intent.Modules.NestJS.Controllers\Intent.Modules.NestJS.Controllers.csproj", "{69BFDEA9-E75F-4ED0-B4EB-AFC7D672048F}"
 EndProject
-Project("{52B49DB5-3EA9-4095-B1A7-DF1AC22D7DAE}") = "Intent.Modules.TypeORM.Entities", "Intent.Modules.TypeORM.Entities\Intent.Modules.TypeORM.Entities.csproj", "{3296CE45-064B-4978-900E-427CB564F955}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intent.Modules.TypeORM.Entities", "Intent.Modules.TypeORM.Entities\Intent.Modules.TypeORM.Entities.csproj", "{3296CE45-064B-4978-900E-427CB564F955}"
 EndProject
-Project("{52B49DB5-3EA9-4095-B1A7-DF1AC22D7DAE}") = "Intent.Modules.NestJS.Core", "Intent.Modules.NestJS.Core\Intent.Modules.NestJS.Core.csproj", "{AB51A39E-1A29-4E00-B843-A1677244C708}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intent.Modules.NestJS.Core", "Intent.Modules.NestJS.Core\Intent.Modules.NestJS.Core.csproj", "{AB51A39E-1A29-4E00-B843-A1677244C708}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intent.ApplicationTemplate.NodeJS", "Intent.ApplicationTemplate.NodeJS\Intent.ApplicationTemplate.NodeJS.csproj", "{4A552A10-949B-45CE-8D6B-61F56798A2CA}"
 EndProject
-Project("{52B49DB5-3EA9-4095-B1A7-DF1AC22D7DAE}") = "Intent.Module.TypeScript.Domain", "Intent.Module.TypeScript.Domain\Intent.Module.TypeScript.Domain.csproj", "{CC9A4C9E-686E-403B-84D7-00B3F54236E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intent.Module.TypeScript.Domain", "Intent.Module.TypeScript.Domain\Intent.Module.TypeScript.Domain.csproj", "{CC9A4C9E-686E-403B-84D7-00B3F54236E8}"
 EndProject
-Project("{52B49DB5-3EA9-4095-B1A7-DF1AC22D7DAE}") = "Intent.Modules.NodeJS.Services.CRUD", "Intent.Modules.NodeJS.Services.CRUD\Intent.Modules.NodeJS.Services.CRUD.csproj", "{E68440B8-D33A-45D5-BE5A-5D0EC43621DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intent.Modules.NodeJS.Services.CRUD", "Intent.Modules.NodeJS.Services.CRUD\Intent.Modules.NodeJS.Services.CRUD.csproj", "{E68440B8-D33A-45D5-BE5A-5D0EC43621DD}"
 EndProject
-Project("{52B49DB5-3EA9-4095-B1A7-DF1AC22D7DAE}") = "Intent.Modules.Npm", "Intent.Modules.Npm\Intent.Modules.Npm.csproj", "{47D80E8C-BDC2-431A-9D38-A9543B1FE821}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intent.Modules.Npm", "Intent.Modules.Npm\Intent.Modules.Npm.csproj", "{47D80E8C-BDC2-431A-9D38-A9543B1FE821}"
 EndProject
-Project("{52B49DB5-3EA9-4095-B1A7-DF1AC22D7DAE}") = "Intent.Modules.NestJS.Winston", "Intent.Modules.NestJS.Winston\Intent.Modules.NestJS.Winston.csproj", "{00D9ADC0-F185-4287-9F1F-4EBC7EE0228C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intent.Modules.NestJS.Winston", "Intent.Modules.NestJS.Winston\Intent.Modules.NestJS.Winston.csproj", "{00D9ADC0-F185-4287-9F1F-4EBC7EE0228C}"
 EndProject
-Project("{52B49DB5-3EA9-4095-B1A7-DF1AC22D7DAE}") = "Intent.Modules.NestJS.Validation", "Intent.Modules.NestJS.Validation\Intent.Modules.NestJS.Validation.csproj", "{49722D16-76CB-4224-8AA3-C9E7DA883F15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intent.Modules.NestJS.Validation", "Intent.Modules.NestJS.Validation\Intent.Modules.NestJS.Validation.csproj", "{49722D16-76CB-4224-8AA3-C9E7DA883F15}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intent.Modules.NestJS.Authentication", "Intent.Modules.NestJS.Authentication\Intent.Modules.NestJS.Authentication.csproj", "{E5EFADD1-5947-44ED-9885-77BE31E7C358}"
 EndProject
-Project("{52B49DB5-3EA9-4095-B1A7-DF1AC22D7DAE}") = "Intent.Modules.NestJS.Authorization", "Intent.Modules.NestJS.Authorization\Intent.Modules.NestJS.Authorization.csproj", "{0591139A-A05B-44DF-8060-0A627CC52397}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intent.Modules.NestJS.Authorization", "Intent.Modules.NestJS.Authorization\Intent.Modules.NestJS.Authorization.csproj", "{0591139A-A05B-44DF-8060-0A627CC52397}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Solution Items", "0 - Solution Items", "{F8F6292B-72E2-4862-BFF1-8B16936B89A7}"
 	ProjectSection(SolutionItems) = preProject

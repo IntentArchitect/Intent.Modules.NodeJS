@@ -17,8 +17,8 @@
   <decorators></decorators>
   <factoryExtensions></factoryExtensions>
   <dependencies>
-    <dependency id="Intent.Common" version="3.5.0" />
-    <dependency id="Intent.Common.Types" version="3.3.9" />
+    <dependency id="Intent.Common" version="3.7.2" />
+    <dependency id="Intent.Common.Types" version="3.4.0" />
     <dependency id="Intent.Common.TypeScript" version="4.0.1" />
   </dependencies>
   <files>

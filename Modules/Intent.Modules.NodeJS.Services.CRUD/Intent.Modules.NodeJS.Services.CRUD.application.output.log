@@ -25,15 +25,15 @@
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
-      <ProjectId>e68440b8-d33a-45d5-be5a-5d0ec43621dd</ProjectId>
-      <CorrelationId>Intent.VisualStudio.Projects.CoreLibrary.CSProject#e68440b8-d33a-45d5-be5a-5d0ec43621dd</CorrelationId>
+      <ProjectId>dbb9751b-5602-4526-9de1-b7e9ab3ceec4</ProjectId>
+      <CorrelationId>Intent.VisualStudio.Projects.CSharpProject#dbb9751b-5602-4526-9de1-b7e9ab3ceec4</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Intent.Modules.NodeJS.Services.CRUD.csproj</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Intent.Modules.NodeJS.Services.CRUD.csproj</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
-      <ProjectId>e68440b8-d33a-45d5-be5a-5d0ec43621dd</ProjectId>
+      <ProjectId>dbb9751b-5602-4526-9de1-b7e9ab3ceec4</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.IModSpecFile</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Intent.NodeJS.Services.CRUD.imodspec</ApplicationRelativeFilePath>

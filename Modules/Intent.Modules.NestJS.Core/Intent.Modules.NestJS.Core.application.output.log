@@ -9,7 +9,7 @@
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
-      <ProjectId>96615273-0852-4d59-acfb-67f62095564b</ProjectId>
+      <ProjectId>7b718e52-fbaa-40f6-980e-3fa7a2062439</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.Templates.StaticContentOutputReadme#a77e195c-7911-4fda-90f4-7243778afff6</CorrelationId>
       <OverwriteBehaviour>once-off</OverwriteBehaviour>
       <ApplicationRelativeFilePath>content/StaticContent/readme.txt</ApplicationRelativeFilePath>
@@ -33,15 +33,15 @@
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
-      <ProjectId>96615273-0852-4d59-acfb-67f62095564b</ProjectId>
-      <CorrelationId>Intent.VisualStudio.Projects.CoreLibrary.CSProject#96615273-0852-4d59-acfb-67f62095564b</CorrelationId>
+      <ProjectId>7b718e52-fbaa-40f6-980e-3fa7a2062439</ProjectId>
+      <CorrelationId>Intent.VisualStudio.Projects.CSharpProject#7b718e52-fbaa-40f6-980e-3fa7a2062439</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Intent.Modules.NestJS.Core.csproj</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>Intent.Modules.NestJS.Core.csproj</ProjectRelativeFilePath>
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
-      <ProjectId>96615273-0852-4d59-acfb-67f62095564b</ProjectId>
+      <ProjectId>7b718e52-fbaa-40f6-980e-3fa7a2062439</ProjectId>
       <CorrelationId>Intent.ModuleBuilder.IModSpecFile</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>Intent.NodeJS.NestJS.Core.imodspec</ApplicationRelativeFilePath>

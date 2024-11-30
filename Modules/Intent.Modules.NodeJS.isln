@@ -19,6 +19,5 @@
     <application id="980f70f2-f02f-427f-9394-a92c31f1e336" name="Intent.Modules.NestJS.Validation" relativePath="Intent.Modules.NestJS.Validation/Intent.Modules.NestJS.Validation.application.config" />
     <application id="5ffb0fb3-f91e-4f5c-979c-5a9031f6506a" name="Intent.Modules.NestJS.Authentication" relativePath="Intent.Modules.NestJS.Authentication/Intent.Modules.NestJS.Authentication.application.config" />
     <application id="60592d70-c560-475e-afd8-594086c245fd" name="Intent.Modules.NestJS.Authorization" relativePath="Intent.Modules.NestJS.Authorization/Intent.Modules.NestJS.Authorization.application.config" />
-    <application id="a27a6e86-b086-4126-8daf-bf2829e0f158" name="Intent.ApplicationTemplate.NodeJS.Metadata" relativePath="Intent.ApplicationTemplate.NodeJS.Metadata/Intent.ApplicationTemplate.NodeJS.Metadata.application.config" />
   </applications>
 </solution>

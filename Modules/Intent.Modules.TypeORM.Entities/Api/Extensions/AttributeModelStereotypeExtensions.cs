@@ -4,6 +4,7 @@ using System.Linq;
 using Intent.Metadata.Models;
 using Intent.Modelers.Domain.Api;
 using Intent.Modules.Common;
+using Intent.Modules.Common.Types.Api;
 using Intent.RoslynWeaver.Attributes;
 
 [assembly: DefaultIntentManaged(Mode.Fully)]
@@ -15,14 +16,14 @@ namespace Intent.Modules.TypeORM.Entities.Api
     {
         public static ColumnOptions GetColumnOptions(this AttributeModel model)
         {
-            var stereotype = model.GetStereotype("5121d8e7-7610-4cc8-bab7-a33e005953aa");
+            var stereotype = model.GetStereotype(ColumnOptions.DefinitionId);
             return stereotype != null ? new ColumnOptions(stereotype) : null;
         }
 
 
         public static bool HasColumnOptions(this AttributeModel model)
         {
-            return model.HasStereotype("5121d8e7-7610-4cc8-bab7-a33e005953aa");
+            return model.HasStereotype(ColumnOptions.DefinitionId);
         }
 
         public static bool TryGetColumnOptions(this AttributeModel model, out ColumnOptions stereotype)
@@ -33,13 +34,14 @@ namespace Intent.Modules.TypeORM.Entities.Api
                 return false;
             }
 
-            stereotype = new ColumnOptions(model.GetStereotype("5121d8e7-7610-4cc8-bab7-a33e005953aa"));
+            stereotype = new ColumnOptions(model.GetStereotype(ColumnOptions.DefinitionId));
             return true;
         }
 
         public class ColumnOptions
         {
             private IStereotype _stereotype;
+            public const string DefinitionId = "5121d8e7-7610-4cc8-bab7-a33e005953aa";
 
             public ColumnOptions(IStereotype stereotype)
             {
