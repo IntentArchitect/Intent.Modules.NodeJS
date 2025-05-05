@@ -73,7 +73,7 @@
       <name>Intent.Metadata.RDBMS</name>
       <display>Intent.Metadata.RDBMS 3.7.0</display>
       <isAbstract>false</isAbstract>
-      <value>3.7.2</value>
+      <value>3.7.3</value>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>8d6e4e9c-f13b-49ce-9e56-870430d31756</parentFolderId>
@@ -129,7 +129,7 @@
       <name>Intent.Modelers.Services</name>
       <display>Intent.Modelers.Services 3.9.0</display>
       <isAbstract>false</isAbstract>
-      <value>3.9.3</value>
+      <value>3.9.4</value>
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>8d6e4e9c-f13b-49ce-9e56-870430d31756</parentFolderId>
