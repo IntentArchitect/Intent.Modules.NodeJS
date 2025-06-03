@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<applicationTemplate>
+<applicationTemplate type="application-template">
   <id>Intent.ApplicationTemplate.NestJS.Web</id>
-  <version>4.0.16</version>
+  <version>4.0.17-pre.0</version>
   <supportedClientVersions>[4.3.0-a, 5.0.0-a)</supportedClientVersions>
   <displayName>NestJS Web Application</displayName>
+  <additionalImages />
   <shortDescription>A Node.js web application server using NestJS and TypeORM.</shortDescription>
   <authors>Intent Architect</authors>
   <priority>1050</priority>
@@ -145,7 +146,7 @@
     </group>
   </componentGroups>
   <additionalSettings>
-    <group id="2b849f09-1126-493d-a3fb-0797d8fb9917" title="Domain Settings">
+    <group id="2b849f09-1126-493d-a3fb-0797d8fb9917" title="Domain Settings" type="application-settings">
       <settings>
         <setting id="c3789138-6649-47e4-901b-5f6469583cb7" title="Attribute Naming Convention" type="hidden">
           <defaultValue>camel-case</defaultValue>
@@ -160,9 +161,9 @@
     <module id="Intent.Common" version="3.7.7" />
     <module id="Intent.Common.Types" version="4.1.1" />
     <module id="Intent.Common.TypeScript" version="4.1.2" />
-    <module id="Intent.Metadata.RDBMS" version="3.7.3" />
-    <module id="Intent.Metadata.Security" version="1.0.3" />
-    <module id="Intent.Metadata.WebApi" version="4.7.7" />
+    <module id="Intent.Metadata.RDBMS" version="3.7.4" />
+    <module id="Intent.Metadata.Security" version="1.0.4" />
+    <module id="Intent.Metadata.WebApi" version="4.7.8" />
     <module id="Intent.Modelers.Domain" version="3.12.2" />
     <module id="Intent.Modelers.Services" version="3.9.4" />
     <module id="Intent.Modelers.Services.DomainInteractions" version="2.1.5" />
