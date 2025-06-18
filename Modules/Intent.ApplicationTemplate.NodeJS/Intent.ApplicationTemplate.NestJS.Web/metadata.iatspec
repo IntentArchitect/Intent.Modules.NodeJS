@@ -146,7 +146,7 @@
     </group>
   </componentGroups>
   <additionalSettings>
-    <group id="2b849f09-1126-493d-a3fb-0797d8fb9917" title="Domain Settings">
+    <group id="2b849f09-1126-493d-a3fb-0797d8fb9917" title="Domain Settings" type="application-settings">
       <settings>
         <setting id="c3789138-6649-47e4-901b-5f6469583cb7" title="Attribute Naming Convention" type="hidden">
           <defaultValue>camel-case</defaultValue>
