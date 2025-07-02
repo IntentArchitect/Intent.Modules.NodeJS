@@ -30,5 +30,5 @@
   <metadata>
     <install target="Services" src="Intent.Metadata/Module Builder/Intent.NodeJS.NestJS.Validation/Intent.NodeJS.NestJS.Validation.pkg.config" externalReference="af72b6bd-876c-476a-94be-1ec850226251" />
   </metadata>
-  <tags />
+  <tags>nodejs nestjs</tags>
 </package>

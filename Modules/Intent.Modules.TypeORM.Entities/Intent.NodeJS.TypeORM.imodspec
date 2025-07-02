@@ -75,5 +75,5 @@
       </settings>
     </groupExtension>
   </moduleSettingsExtensions>
-  <tags />
+  <tags>nodejs typeorm</tags>
 </package>
