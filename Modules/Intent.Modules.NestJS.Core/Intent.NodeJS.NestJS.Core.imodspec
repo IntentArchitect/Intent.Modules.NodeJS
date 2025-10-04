@@ -2,7 +2,7 @@
 <package>
   <id>Intent.NodeJS.NestJS.Core</id>
   <version>4.0.1</version>
-  <supportedClientVersions>[3.3.16, 5.0.0-a)</supportedClientVersions>
+  <supportedClientVersions>[4.4.0-a, 5.0.0-a)</supportedClientVersions>
   <summary>Provides Application host bootstrap files</summary>
   <description>Provides Application host bootstrap files</description>
   <authors>Intent Architect</authors>
@@ -45,4 +45,5 @@
   <moduleSettings />
   <moduleSettingsExtensions />
   <tags>nodejs nestjs</tags>
+  <migrations />
 </package>

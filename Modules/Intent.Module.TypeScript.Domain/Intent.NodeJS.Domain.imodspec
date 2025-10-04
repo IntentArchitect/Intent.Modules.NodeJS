@@ -2,7 +2,7 @@
 <package>
   <id>Intent.NodeJS.Domain</id>
   <version>4.0.0</version>
-  <supportedClientVersions>[3.3.16, 5.0.0-a)</supportedClientVersions>
+  <supportedClientVersions>[4.4.0-a, 5.0.0-a)</supportedClientVersions>
   <releaseNotes>release-notes.md</releaseNotes>
   <summary>Generates the Domain Entities from the Domain designer</summary>
   <description>Generates the Domain Entities from the Domain designer</description>
@@ -38,4 +38,5 @@
   <moduleSettings />
   <moduleSettingsExtensions />
   <tags>nodejs</tags>
+  <migrations />
 </package>

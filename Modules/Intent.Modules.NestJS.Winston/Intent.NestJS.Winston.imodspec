@@ -2,7 +2,7 @@
 <package>
   <id>Intent.NestJS.Winston</id>
   <version>4.0.0</version>
-  <supportedClientVersions>[3.3.16, 5.0.0-a)</supportedClientVersions>
+  <supportedClientVersions>[4.4.0-a, 5.0.0-a)</supportedClientVersions>
   <summary>Winston is a simple and universal logging library for NodeJS with support for multiple transports.</summary>
   <description>Winston is a simple and universal logging library for NodeJS with support for multiple transports.</description>
   <authors>Intent Architect</authors>
@@ -31,4 +31,5 @@
   <moduleSettingsExtensions />
   <metadata />
   <tags>nodejs nestjs</tags>
+  <migrations />
 </package>

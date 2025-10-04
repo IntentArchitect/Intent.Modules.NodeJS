@@ -27,9 +27,6 @@
       <type>string</type>
       <controlType>text</controlType>
       <optionsSource>n/a</optionsSource>
-      <placeholder />
-      <valueOptions />
-      <lookupTypes />
     </property>
     <property id="dbc22063-d7f2-4f37-914d-57087f47b023">
       <hint>Checks if value not equal ("!==") comparison.</hint>
@@ -37,9 +34,6 @@
       <type>string</type>
       <controlType>text</controlType>
       <optionsSource>n/a</optionsSource>
-      <placeholder />
-      <valueOptions />
-      <lookupTypes />
     </property>
     <property id="aa682825-407c-4c49-a1d6-ea3baa94dd29">
       <hint>Checks if given value is empty (=== '', === null, === undefined).</hint>
@@ -47,10 +41,7 @@
       <type>string</type>
       <controlType>checkbox</controlType>
       <optionsSource>n/a</optionsSource>
-      <placeholder />
       <defaultValue>false</defaultValue>
-      <valueOptions />
-      <lookupTypes />
     </property>
     <property id="fce9f2a6-f116-4525-bd0e-79939dc3cb85">
       <hint>Checks if given value is not empty (!== '', !== null, !== undefined).</hint>
@@ -58,10 +49,7 @@
       <type>string</type>
       <controlType>checkbox</controlType>
       <optionsSource>n/a</optionsSource>
-      <placeholder />
       <defaultValue>false</defaultValue>
-      <valueOptions />
-      <lookupTypes />
     </property>
     <property id="6194f0cd-dd52-4c6c-a79d-7b4a525b94b9">
       <hint>Checks if value is in a array of allowed values.</hint>
@@ -69,9 +57,6 @@
       <type>string</type>
       <controlType>text</controlType>
       <optionsSource>n/a</optionsSource>
-      <placeholder />
-      <valueOptions />
-      <lookupTypes />
     </property>
     <property id="56524d51-a60e-43e8-803c-41dd2410d66c">
       <hint>Checks if value is not in a array of disallowed values.</hint>
@@ -79,9 +64,6 @@
       <type>string</type>
       <controlType>text</controlType>
       <optionsSource>n/a</optionsSource>
-      <placeholder />
-      <valueOptions />
-      <lookupTypes />
     </property>
     <property id="759d6ce5-1974-478d-8a07-d01400fb2296">
       <hint>Options to apply to the @IsNumber() decorator.</hint>
@@ -89,9 +71,6 @@
       <type>string</type>
       <controlType>text</controlType>
       <optionsSource>n/a</optionsSource>
-      <placeholder />
-      <valueOptions />
-      <lookupTypes />
       <isActiveFunction>let typeNames = ["byte", "decimal", "double", "float", "int", "long", "short"];
 return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName =&gt; typeName === element.typeReference.getType()?.getName()).length &gt;= 1;</isActiveFunction>
     </property>
@@ -101,10 +80,6 @@ return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName 
       <type>string</type>
       <controlType>text</controlType>
       <optionsSource>n/a</optionsSource>
-      <placeholder />
-      <defaultValue />
-      <valueOptions />
-      <lookupTypes />
       <isActiveFunction>let typeNames = ["byte", "decimal", "double", "float", "int", "long", "short"];
 return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName =&gt; typeName === element.typeReference.getType()?.getName()).length &gt;= 1;</isActiveFunction>
     </property>
@@ -114,10 +89,7 @@ return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName 
       <type>string</type>
       <controlType>checkbox</controlType>
       <optionsSource>n/a</optionsSource>
-      <placeholder />
       <defaultValue>false</defaultValue>
-      <valueOptions />
-      <lookupTypes />
       <isActiveFunction>let typeNames = ["byte", "decimal", "double", "float", "int", "long", "short"];
 return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName =&gt; typeName === element.typeReference.getType()?.getName()).length &gt;= 1;</isActiveFunction>
     </property>
@@ -127,10 +99,7 @@ return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName 
       <type>string</type>
       <controlType>checkbox</controlType>
       <optionsSource>n/a</optionsSource>
-      <placeholder />
       <defaultValue>false</defaultValue>
-      <valueOptions />
-      <lookupTypes />
       <isActiveFunction>let typeNames = ["byte", "decimal", "double", "float", "int", "long", "short"];
 return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName =&gt; typeName === element.typeReference.getType()?.getName()).length &gt;= 1;</isActiveFunction>
     </property>
@@ -140,9 +109,6 @@ return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName 
       <type>string</type>
       <controlType>number</controlType>
       <optionsSource>n/a</optionsSource>
-      <placeholder />
-      <valueOptions />
-      <lookupTypes />
       <isActiveFunction>let typeNames = ["byte", "decimal", "double", "float", "int", "long", "short"];
 return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName =&gt; typeName === element.typeReference.getType()?.getName()).length &gt;= 1;</isActiveFunction>
     </property>
@@ -152,9 +118,6 @@ return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName 
       <type>string</type>
       <controlType>number</controlType>
       <optionsSource>n/a</optionsSource>
-      <placeholder />
-      <valueOptions />
-      <lookupTypes />
       <isActiveFunction>let typeNames = ["byte", "decimal", "double", "float", "int", "long", "short"];
 return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName =&gt; typeName === element.typeReference.getType()?.getName()).length &gt;= 1;</isActiveFunction>
     </property>
@@ -164,9 +127,6 @@ return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName 
       <type>string</type>
       <controlType>text</controlType>
       <optionsSource>n/a</optionsSource>
-      <placeholder />
-      <valueOptions />
-      <lookupTypes />
       <isActiveFunction>let typeNames = ["date", "datetime", "datetimeoffset"];
 return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName =&gt; typeName === element.typeReference.getType()?.getName()).length &gt;= 1;</isActiveFunction>
     </property>
@@ -176,9 +136,6 @@ return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName 
       <type>string</type>
       <controlType>text</controlType>
       <optionsSource>n/a</optionsSource>
-      <placeholder />
-      <valueOptions />
-      <lookupTypes />
       <isActiveFunction>let typeNames = ["date", "datetime", "datetimeoffset"];
 return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName =&gt; typeName === element.typeReference.getType()?.getName()).length &gt;= 1;</isActiveFunction>
     </property>
@@ -188,9 +145,6 @@ return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName 
       <type>string</type>
       <controlType>text</controlType>
       <optionsSource>n/a</optionsSource>
-      <placeholder />
-      <valueOptions />
-      <lookupTypes />
       <isActiveFunction>return !element.typeReference.isCollection &amp;&amp; element.typeReference.getType()?.getName() === "string";</isActiveFunction>
     </property>
     <property id="cfc0cf7e-a063-4e14-a858-10979f94575b">
@@ -199,9 +153,6 @@ return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName 
       <type>string</type>
       <controlType>text</controlType>
       <optionsSource>n/a</optionsSource>
-      <placeholder />
-      <valueOptions />
-      <lookupTypes />
       <isActiveFunction>return !element.typeReference.isCollection &amp;&amp; element.typeReference.getType()?.getName() === "string";</isActiveFunction>
     </property>
     <property id="3409a731-aea5-4d87-95a6-546ab519965d">
@@ -210,10 +161,7 @@ return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName 
       <type>string</type>
       <controlType>checkbox</controlType>
       <optionsSource>n/a</optionsSource>
-      <placeholder />
       <defaultValue>false</defaultValue>
-      <valueOptions />
-      <lookupTypes />
       <isActiveFunction>return !element.typeReference.isCollection &amp;&amp; element.typeReference.getType()?.getName() === "string";</isActiveFunction>
     </property>
     <property id="f6aef052-1a86-455c-ae28-609fb5a97c2c">
@@ -222,10 +170,7 @@ return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName 
       <type>string</type>
       <controlType>checkbox</controlType>
       <optionsSource>n/a</optionsSource>
-      <placeholder />
       <defaultValue>false</defaultValue>
-      <valueOptions />
-      <lookupTypes />
       <isActiveFunction>return !element.typeReference.isCollection &amp;&amp; element.typeReference.getType()?.getName() === "string";</isActiveFunction>
     </property>
     <property id="edeb80e9-f4c5-43af-924c-5fc09a2122be">
@@ -234,10 +179,7 @@ return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName 
       <type>string</type>
       <controlType>checkbox</controlType>
       <optionsSource>n/a</optionsSource>
-      <placeholder />
       <defaultValue>false</defaultValue>
-      <valueOptions />
-      <lookupTypes />
       <isActiveFunction>return !element.typeReference.isCollection &amp;&amp; element.typeReference.getType()?.getName() === "string";</isActiveFunction>
     </property>
     <property id="9ff2b875-8b79-4a90-8c05-2593b5bf4672">
@@ -245,10 +187,6 @@ return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName 
       <type>string</type>
       <controlType>text</controlType>
       <optionsSource>n/a</optionsSource>
-      <placeholder />
-      <defaultValue />
-      <valueOptions />
-      <lookupTypes />
       <isActiveFunction>return !element.typeReference.isCollection &amp;&amp; element.typeReference.getType()?.getName() === "string" &amp;&amp; IsEmail === true;</isActiveFunction>
     </property>
     <property id="6d37ce8c-2bfc-499b-be1f-7aafcf09470c">
@@ -257,10 +195,7 @@ return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName 
       <type>string</type>
       <controlType>checkbox</controlType>
       <optionsSource>n/a</optionsSource>
-      <placeholder />
       <defaultValue>false</defaultValue>
-      <valueOptions />
-      <lookupTypes />
       <isActiveFunction>return !element.typeReference.isCollection &amp;&amp; element.typeReference.getType()?.getName() === "string";</isActiveFunction>
     </property>
     <property id="3e5911b9-7998-48be-9e2b-bb9ed019ed37">
@@ -269,10 +204,7 @@ return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName 
       <type>string</type>
       <controlType>checkbox</controlType>
       <optionsSource>n/a</optionsSource>
-      <placeholder />
       <defaultValue>false</defaultValue>
-      <valueOptions />
-      <lookupTypes />
       <isActiveFunction>return !element.typeReference.isCollection &amp;&amp; element.typeReference.getType()?.getName() === "string";</isActiveFunction>
     </property>
     <property id="0ded5ee4-f4b5-455f-8c22-afb235fe67d5">
@@ -281,9 +213,6 @@ return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName 
       <type>string</type>
       <controlType>number</controlType>
       <optionsSource>n/a</optionsSource>
-      <placeholder />
-      <valueOptions />
-      <lookupTypes />
       <isActiveFunction>return !element.typeReference.isCollection &amp;&amp; element.typeReference.getType()?.getName() === "string";</isActiveFunction>
     </property>
     <property id="f555b4f3-750a-486f-959f-c5d5c1bed67e">
@@ -292,9 +221,6 @@ return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName 
       <type>string</type>
       <controlType>number</controlType>
       <optionsSource>n/a</optionsSource>
-      <placeholder />
-      <valueOptions />
-      <lookupTypes />
       <isActiveFunction>return !element.typeReference.isCollection &amp;&amp; element.typeReference.getType()?.getName() === "string";</isActiveFunction>
     </property>
     <property id="36f0e219-1a9a-4f40-84be-a0581329af97">
@@ -303,10 +229,6 @@ return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName 
       <type>string</type>
       <controlType>text</controlType>
       <optionsSource>n/a</optionsSource>
-      <placeholder />
-      <valueOptions />
-      <lookupTypes />
-      <isActiveFunction />
     </property>
     <property id="423867a7-2964-4c1b-9499-e6f0b2c611bc">
       <hint>Checks if array contains all values from the given array of values.</hint>
@@ -314,9 +236,6 @@ return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName 
       <type>string</type>
       <controlType>text</controlType>
       <optionsSource>n/a</optionsSource>
-      <placeholder />
-      <valueOptions />
-      <lookupTypes />
       <isActiveFunction>return element.typeReference.isCollection;</isActiveFunction>
     </property>
     <property id="6ced941b-def5-4e03-a4f4-9545932391cc">
@@ -325,9 +244,6 @@ return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName 
       <type>string</type>
       <controlType>text</controlType>
       <optionsSource>n/a</optionsSource>
-      <placeholder />
-      <valueOptions />
-      <lookupTypes />
       <isActiveFunction>return element.typeReference.isCollection;</isActiveFunction>
     </property>
     <property id="ece9257c-9e30-46ad-96d9-76756ebc0d72">
@@ -336,10 +252,7 @@ return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName 
       <type>string</type>
       <controlType>checkbox</controlType>
       <optionsSource>n/a</optionsSource>
-      <placeholder />
       <defaultValue>false</defaultValue>
-      <valueOptions />
-      <lookupTypes />
       <isActiveFunction>return element.typeReference.isCollection;</isActiveFunction>
     </property>
     <property id="921952c8-d528-4212-b174-98104d9f69ae">
@@ -348,9 +261,6 @@ return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName 
       <type>string</type>
       <controlType>number</controlType>
       <optionsSource>n/a</optionsSource>
-      <placeholder />
-      <valueOptions />
-      <lookupTypes />
       <isActiveFunction>return element.typeReference.isCollection;</isActiveFunction>
     </property>
     <property id="1bc5d48a-3a99-4a62-aacd-c1f590bc04f1">
@@ -359,9 +269,6 @@ return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName 
       <type>string</type>
       <controlType>number</controlType>
       <optionsSource>n/a</optionsSource>
-      <placeholder />
-      <valueOptions />
-      <lookupTypes />
       <isActiveFunction>return element.typeReference.isCollection;</isActiveFunction>
     </property>
     <property id="7c0c9119-48da-4751-9871-9ee1c17a68d2">
@@ -370,10 +277,7 @@ return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName 
       <type>string</type>
       <controlType>checkbox</controlType>
       <optionsSource>n/a</optionsSource>
-      <placeholder />
       <defaultValue>false</defaultValue>
-      <valueOptions />
-      <lookupTypes />
       <isActiveFunction>return element.typeReference.isCollection;</isActiveFunction>
     </property>
     <property id="9d373a09-01b6-4290-83d2-c901dfacaf0b">
@@ -382,9 +286,6 @@ return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName 
       <type>string</type>
       <controlType>text</controlType>
       <optionsSource>n/a</optionsSource>
-      <placeholder />
-      <valueOptions />
-      <lookupTypes />
     </property>
     <property id="915593d0-72f9-44c6-a87f-b4a58fea3c39">
       <hint>Prevent stripping off the property when no other constraint is specified for it.</hint>
@@ -392,10 +293,7 @@ return !element.typeReference.isCollection &amp;&amp; typeNames.filter(typeName 
       <type>string</type>
       <controlType>checkbox</controlType>
       <optionsSource>n/a</optionsSource>
-      <placeholder />
       <defaultValue>false</defaultValue>
-      <valueOptions />
-      <lookupTypes />
     </property>
   </properties>
 </stereotypeDefinition>

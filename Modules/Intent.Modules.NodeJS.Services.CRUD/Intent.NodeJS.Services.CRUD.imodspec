@@ -2,7 +2,7 @@
 <package>
   <id>Intent.NodeJS.Services.CRUD</id>
   <version>4.0.0</version>
-  <supportedClientVersions>[3.3.16, 5.0.0-a)</supportedClientVersions>
+  <supportedClientVersions>[4.4.0-a, 5.0.0-a)</supportedClientVersions>
   <summary>CRUD conventions for standard NodeJS Services</summary>
   <description>CRUD conventions for standard NodeJS Services</description>
   <authors>Intent Architect</authors>
@@ -37,4 +37,5 @@
   <moduleSettings />
   <moduleSettingsExtensions />
   <tags>nodejs nestjs</tags>
+  <migrations />
 </package>

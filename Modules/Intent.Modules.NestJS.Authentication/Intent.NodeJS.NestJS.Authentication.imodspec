@@ -2,7 +2,7 @@
 <package>
   <id>Intent.NodeJS.NestJS.Authentication</id>
   <version>4.0.0</version>
-  <supportedClientVersions>[3.3.16, 5.0.0-a)</supportedClientVersions>
+  <supportedClientVersions>[4.4.0-a, 5.0.0-a)</supportedClientVersions>
   <summary>Provides authentication and security to the NestJS application</summary>
   <description>Provides authentication and security to the NestJS application</description>
   <authors>Intent Architect</authors>
@@ -75,4 +75,5 @@
   <moduleSettingsExtensions />
   <metadata />
   <tags>nodejs nestjs</tags>
+  <migrations />
 </package>
