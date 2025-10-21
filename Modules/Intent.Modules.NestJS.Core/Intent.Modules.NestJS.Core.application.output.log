@@ -5,7 +5,7 @@
     <FileLog>
       <CorrelationId>Intent.VisualStudio.Projects.VisualStudioSolution#b3a947a8-f9b4-4d7a-9494-eea2b12b4e04</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
-      <ApplicationRelativeFilePath>../Intent.Modules.NodeJs.sln</ApplicationRelativeFilePath>
+      <ApplicationRelativeFilePath>../Intent.Modules.NodeJS.sln</ApplicationRelativeFilePath>
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>
@@ -14,7 +14,7 @@
       <OverwriteBehaviour>once-off</OverwriteBehaviour>
       <ApplicationRelativeFilePath>content/StaticContent/readme.txt</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>content/StaticContent/readme.txt</ProjectRelativeFilePath>
-      <IsIgnored>false</IsIgnored>
+      <IsIgnored>true</IsIgnored>
     </FileLog>
     <FileLog>
       <ProjectId>9ecab0d4-7276-4fa5-800a-f3ad49983b39</ProjectId>

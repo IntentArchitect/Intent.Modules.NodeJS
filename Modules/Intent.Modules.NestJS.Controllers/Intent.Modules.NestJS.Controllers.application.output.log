@@ -5,7 +5,7 @@
     <FileLog>
       <CorrelationId>Intent.VisualStudio.Projects.VisualStudioSolution#9875856f-7427-4246-a8fa-ddd3a2917202</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
-      <ApplicationRelativeFilePath>../Intent.Modules.NodeJs.sln</ApplicationRelativeFilePath>
+      <ApplicationRelativeFilePath>../Intent.Modules.NodeJS.sln</ApplicationRelativeFilePath>
       <IsIgnored>false</IsIgnored>
     </FileLog>
     <FileLog>

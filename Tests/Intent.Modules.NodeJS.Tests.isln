@@ -2,7 +2,7 @@
 <solution id="e74b6932-f47a-48b2-96f8-8bb5b451ab74">
   <name>Intent.Modules.NodeJS.Tests</name>
   <description>Test Applications for the NodeJS Intent Architect Modules</description>
-  <version>4.5.20</version>
+  <version>3.3.0</version>
   <icon>vial</icon>
   <iconType>FontAwesome</iconType>
   <metadataRelativePath>Intent.Metadata</metadataRelativePath>
