@@ -1,3 +1,7 @@
+### Version 4.0.1
+
+- Improvement: Added ability to add scripts and general entries to the npm package.json.
+
 ### Version 4.0.0
 
 - Improvement: Updated dependencies.

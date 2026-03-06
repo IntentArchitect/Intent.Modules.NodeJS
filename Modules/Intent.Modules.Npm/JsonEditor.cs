@@ -42,6 +42,16 @@ namespace Intent.Modules.Npm
             AddPropertyIfNotExists(dependency.Name, dependency.Version);
         }
 
+        public void AddOrUpdateDependency(NpmPackageDependency dependency)
+        {
+            if(!IsUpdatedVersion(dependency.Name, dependency.Version))
+            {
+                return;
+            }
+
+            AddOrUpdateProperty(dependency.Name, dependency.Version);
+        }
+
         public void AddPropertyIfNotExists(string key, object value)
         {
             if (PropertyExists(key))
@@ -65,6 +75,42 @@ namespace Intent.Modules.Npm
             {
                 Value[key] = JObject.FromObject(value);
             }
+        }
+
+        public void AddOrUpdateProperty(string key, object value)
+        {
+            
+
+            if (value is bool b)
+            {
+                Value[key] = b;
+            }
+            else if (value is int i)
+            {
+                Value[key] = i;
+            }
+            else if (value is string s)
+            {
+                Value[key] = s;
+            }
+            else
+            {
+                Value[key] = JObject.FromObject(value);
+            }
+        }
+
+        public bool IsUpdatedVersion(string key, object value)
+        {
+            if (PropertyExists(key))
+            {
+                var existingValue = Value[key];
+                var existingIntValue = NpmVersionHelper.VersionToInt(existingValue?.Value<string>() ?? string.Empty);
+                var incomingIntValue = NpmVersionHelper.VersionToInt(value?.ToString() ?? string.Empty);
+
+                return incomingIntValue > existingIntValue;
+            }
+
+            return true;
         }
 
         public void SetProperty(string key, string value)
