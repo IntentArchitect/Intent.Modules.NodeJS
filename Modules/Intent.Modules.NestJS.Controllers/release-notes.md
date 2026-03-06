@@ -1,3 +1,7 @@
+### Version 4.0.1
+
+- Improvement: Updated referecned modules and supported client version to [4.5.21-a, 5.0.0).
+
 ### Version 4.0.0
 
 - Improvement: Updated dependencies to use separate `Intent.Code.Weaving.TypeScript` module.

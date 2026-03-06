@@ -1,3 +1,7 @@
+### Version 4.0.2
+
+- Improvement: Updated referecned modules and supported client version to [4.5.21-a, 5.0.0).
+
 ### Version 4.0.1
 
 - Improvement: `.env` now can configure the host port.
