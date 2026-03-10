@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -43,7 +43,7 @@
 
   <ItemGroup>
     <PackageReference Include="Intent.Modules.Common" Version="3.9.1" />
-    <PackageReference Include="Intent.Modules.Common.TypeScript" Version="4.1.5-pre.0" />
+    <PackageReference Include="Intent.Modules.Common.TypeScript" Version="4.1.5" />
     <PackageReference Include="Intent.Packager" Version="3.6.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-    <Version>4.0.1-pre.0</Version>
+    <Version>4.0.1</Version>
     <Authors>Intent Architect</Authors>
     <Company>Intent Architect</Company>
     <Product>Intent Architect</Product>
@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <PackageReference Include="Intent.Modules.Common" Version="3.9.1" />
-    <PackageReference Include="Intent.Modules.Common.TypeScript" Version="4.1.5-pre.0" />
+    <PackageReference Include="Intent.Modules.Common.TypeScript" Version="4.1.5" />
     <PackageReference Include="Intent.Packager" Version="3.6.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
