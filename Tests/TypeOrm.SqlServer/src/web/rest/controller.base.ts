@@ -1,1 +1,1 @@
-export class ControllerBase {}
+export class ControllerBase { }

@@ -3,10 +3,9 @@ import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity('tpc_poly_base_class_non_abstract')
 export class TpcPoly_BaseClassNonAbstract extends TpcPoly_RootAbstract {
-  @PrimaryGeneratedColumn('uuid')
-  id: string;
+    @PrimaryGeneratedColumn('uuid')
+    id: string;
 
-  @Column()
-  baseField: string;
-
+    @Column()
+    baseField: string;
 }

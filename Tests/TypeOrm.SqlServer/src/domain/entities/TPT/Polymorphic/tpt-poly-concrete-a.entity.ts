@@ -3,7 +3,6 @@ import { Entity, Column } from 'typeorm';
 
 @Entity('tpt_poly_concrete_a')
 export class TptPoly_ConcreteA extends TptPoly_BaseClassNonAbstract {
-  @Column()
-  concreteField: string;
-
+    @Column()
+    concreteField: string;
 }

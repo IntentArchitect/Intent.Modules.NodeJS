@@ -5,31 +5,31 @@ import { LocalAuthGuard } from './guards/local-auth.guard';
 import { JwtAuthGuard } from './guards/jwt-auth.guard';
 
 class UserCredentials {
-  @ApiProperty({ example: 'john' })
-  username: string;
-  @ApiProperty({ example: 'changeme' })
-  password: string;
+    @ApiProperty({ example: 'john' })
+    username: string;
+    @ApiProperty({ example: 'changeme' })
+    password: string;
 }
 
 @ApiTags('Auth')
 @Controller()
 export class AuthController {
-  constructor(private authService: AuthService) {}
+    constructor(private authService: AuthService) { }
 
-  @UseGuards(LocalAuthGuard)
-  @Post('auth/login')
-  @ApiBody({
-    description: 'User credentials',
-    type: UserCredentials,
-  })
-  async login(@Request() req) {
-    return this.authService.login(req.user);
-  }
+    @UseGuards(LocalAuthGuard)
+    @Post('auth/login')
+    @ApiBody({
+        description: 'User credentials',
+        type: UserCredentials,
+    })
+    async login(@Request() req) {
+        return this.authService.login(req.user);
+    }
 
-  @ApiBearerAuth()
-  @UseGuards(JwtAuthGuard)
-  @Get('profile')
-  getProfile(@Request() req) {
-    return req.user;
-  }
+    @ApiBearerAuth()
+    @UseGuards(JwtAuthGuard)
+    @Get('profile')
+    getProfile(@Request() req) {
+        return req.user;
+    }
 }

@@ -17,29 +17,29 @@ import { IntentMerge } from './intent/intent.decorators';
 
 @IntentMerge()
 @Module({
-  imports: [
-    ConfigModule.forRoot({ isGlobal: true }),
-    AuthModule,
-    TypeOrmModule.forRoot(typeOrmConfig),
-    TypeOrmExModule.forCustomRepository([
-      ClassARepository,
-    ]),
-    ClsModule.forRoot({
-      global: true,
-      middleware: { mount: true },
-    }),
-    UsersModules
-  ],
-  controllers: [
-    ClassASController,
-    HttpServiceAppliedController
-  ],
-  providers: [
-    ClassASService,
-    HttpServiceAppliedService,
-    NonHttpServiceAppliedService,
-    Logger,
-    BasicAuditingSubscriber
-  ]
+    imports: [
+        ConfigModule.forRoot({ isGlobal: true }),
+        AuthModule,
+        UsersModules,
+        ClsModule.forRoot({
+            global: true,
+            middleware: { mount: true },
+        }),
+        TypeOrmModule.forRoot(typeOrmConfig),
+        TypeOrmExModule.forCustomRepository([
+            ClassARepository,
+        ])
+    ],
+    controllers: [
+        ClassASController,
+        HttpServiceAppliedController
+    ],
+    providers: [
+        Logger,
+        ClassASService,
+        HttpServiceAppliedService,
+        NonHttpServiceAppliedService,
+        BasicAuditingSubscriber
+    ]
 })
 export class AppModule { }

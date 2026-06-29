@@ -7,7 +7,7 @@
  * @see [TypeScript Code-Management](https://docs.intentarchitect.com/articles/application-development/code-management/code-management-typescript/code-management-typescript.html)
  */
 export const IntentIgnore = (identifier?: string) => {
-  return (target: any, propertyKey?: string, descriptor?: any) => {};
+    return (target: any, propertyKey?: string, descriptor?: any) => { };
 };
 
 /**
@@ -18,7 +18,7 @@ export const IntentIgnore = (identifier?: string) => {
  * @see [TypeScript Code-Management](https://docs.intentarchitect.com/articles/application-development/code-management/code-management-typescript/code-management-typescript.html)
  */
 export const IntentIgnoreBody = (identifier?: string) => {
-  return (target: any, propertyKey?: string, descriptor?: any) => {};
+    return (target: any, propertyKey?: string, descriptor?: any) => { };
 };
 
 /**
@@ -29,7 +29,7 @@ export const IntentIgnoreBody = (identifier?: string) => {
  * @see [TypeScript Code-Management](https://docs.intentarchitect.com/articles/application-development/code-management/code-management-typescript/code-management-typescript.html)
  */
 export const IntentMerge = (identifier?: string) => {
-  return (target: any, propertyKey?: string, descriptor?: any) => {};
+    return (target: any, propertyKey?: string, descriptor?: any) => { };
 };
 
 /**
@@ -40,7 +40,7 @@ export const IntentMerge = (identifier?: string) => {
  * @see [TypeScript Code-Management](https://docs.intentarchitect.com/articles/application-development/code-management/code-management-typescript/code-management-typescript.html)
  */
 export const IntentManage = (identifier?: string) => {
-  return (target: any, propertyKey?: string, descriptor?: any) => {};
+    return (target: any, propertyKey?: string, descriptor?: any) => { };
 };
 
 /**
@@ -51,5 +51,5 @@ export const IntentManage = (identifier?: string) => {
  * @see [TypeScript Code-Management](https://docs.intentarchitect.com/articles/application-development/code-management/code-management-typescript/code-management-typescript.html)
  */
 export const IntentManageClass = (identifier?: string) => {
-  return (target: any, propertyKey?: string, descriptor?: any) => {};
+    return (target: any, propertyKey?: string, descriptor?: any) => { };
 };

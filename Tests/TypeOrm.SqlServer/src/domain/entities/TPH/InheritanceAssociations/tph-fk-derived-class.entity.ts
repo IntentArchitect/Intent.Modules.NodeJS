@@ -3,7 +3,6 @@ import { Entity, Column } from 'typeorm';
 
 @Entity('tph_fk_derived_class')
 export class TphFkDerivedClass extends TphFkBaseClass {
-  @Column()
-  derivedField: string;
-
+    @Column()
+    derivedField: string;
 }

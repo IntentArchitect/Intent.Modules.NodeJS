@@ -9,25 +9,26 @@ import { LocalStrategy } from './strategies/local.strategy';
 import { JwtStrategy } from './strategies/jwt-strategy';
 
 @Module({
-  imports: [
-    UsersModules,
-    PassportModule,
-    JwtModule.registerAsync({
-      imports: [ConfigModule],
-      useFactory: (config: ConfigService) => ({
-        secret: config.get('JWT_KEY'),
-        signOptions: { expiresIn: '1h' },
-      }),
-      inject: [ConfigService],
-    }),
-  ],
-  controllers: [
-    AuthController
-  ],
-  providers: [
-    AuthService,
-    LocalStrategy,
-    JwtStrategy],
-  exports: [AuthService],
+    imports: [
+        UsersModules,
+        PassportModule,
+        JwtModule.registerAsync({
+            imports: [ConfigModule],
+            useFactory: (config: ConfigService) => ({
+                secret: config.get('JWT_KEY'),
+                signOptions: { expiresIn: '1h' },
+            }),
+            inject: [ConfigService],
+        }),
+    ],
+    controllers: [
+        AuthController
+    ],
+    providers: [
+        AuthService,
+        LocalStrategy,
+        JwtStrategy
+    ],
+    exports: [AuthService],
 })
-export class AuthModule {}
+export class AuthModule { }

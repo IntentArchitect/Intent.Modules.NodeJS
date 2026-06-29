@@ -4,16 +4,15 @@ import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm';
 
 @Entity('tpt_poly_base_class_non_abstract')
 export class TptPoly_BaseClassNonAbstract extends TptPoly_RootAbstract {
-  @PrimaryGeneratedColumn('uuid')
-  id: string;
+    @PrimaryGeneratedColumn('uuid')
+    id: string;
 
-  @Column()
-  baseField: string;
+    @Column()
+    baseField: string;
 
-  @Column({ nullable: true })
-  polySecondlevelId?: string;
+    @Column({ nullable: true })
+    polySecondlevelId?: string;
 
-  @ManyToOne(() => TptPoly_SecondLevel, (poly_SecondLevel) => poly_SecondLevel.poly_BaseClassNonAbstracts, { cascade: ['insert', 'update'] })
-  poly_SecondLevel?: TptPoly_SecondLevel;
-
+    @ManyToOne(() => TptPoly_SecondLevel, (poly_SecondLevel) => poly_SecondLevel.poly_BaseClassNonAbstracts, { cascade: ['insert', 'update'] })
+    poly_SecondLevel?: TptPoly_SecondLevel;
 }
