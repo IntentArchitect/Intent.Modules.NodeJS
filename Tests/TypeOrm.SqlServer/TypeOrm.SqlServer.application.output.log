@@ -12,7 +12,7 @@
     </FileLog>
     <FileLog>
       <ProjectId>561c8111-22e4-4b8f-958e-1b3326abe106</ProjectId>
-      <CorrelationId>Intent.Modules.NestJS.Core.Templates.StaticContentTemplateRegistrations.StaticStaticContentTemplateRegistration#.eslintrc.js</CorrelationId>
+      <CorrelationId>Intent.Modules.NestJS.Core.Templates.StaticContentTemplateRegistrations.StaticStaticContentTemplateRegistration#561c8111-22e4-4b8f-958e-1b3326abe106#.eslintrc.js</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>.eslintrc.js</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>.eslintrc.js</ProjectRelativeFilePath>
@@ -20,7 +20,7 @@
     </FileLog>
     <FileLog>
       <ProjectId>561c8111-22e4-4b8f-958e-1b3326abe106</ProjectId>
-      <CorrelationId>Intent.Modules.NestJS.Core.Templates.StaticContentTemplateRegistrations.StaticStaticContentTemplateRegistration#.gitignore</CorrelationId>
+      <CorrelationId>Intent.Modules.NestJS.Core.Templates.StaticContentTemplateRegistrations.StaticStaticContentTemplateRegistration#561c8111-22e4-4b8f-958e-1b3326abe106#.gitignore</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>.gitignore</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>.gitignore</ProjectRelativeFilePath>
@@ -28,7 +28,7 @@
     </FileLog>
     <FileLog>
       <ProjectId>561c8111-22e4-4b8f-958e-1b3326abe106</ProjectId>
-      <CorrelationId>Intent.Modules.NestJS.Core.Templates.StaticContentTemplateRegistrations.StaticStaticContentTemplateRegistration#.prettierrc</CorrelationId>
+      <CorrelationId>Intent.Modules.NestJS.Core.Templates.StaticContentTemplateRegistrations.StaticStaticContentTemplateRegistration#561c8111-22e4-4b8f-958e-1b3326abe106#.prettierrc</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>.prettierrc</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>.prettierrc</ProjectRelativeFilePath>
@@ -36,7 +36,7 @@
     </FileLog>
     <FileLog>
       <ProjectId>561c8111-22e4-4b8f-958e-1b3326abe106</ProjectId>
-      <CorrelationId>Intent.Modules.NestJS.Core.Templates.StaticContentTemplateRegistrations.StaticStaticContentTemplateRegistration#nest-cli.json</CorrelationId>
+      <CorrelationId>Intent.Modules.NestJS.Core.Templates.StaticContentTemplateRegistrations.StaticStaticContentTemplateRegistration#561c8111-22e4-4b8f-958e-1b3326abe106#nest-cli.json</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>nest-cli.json</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>nest-cli.json</ProjectRelativeFilePath>
@@ -52,7 +52,7 @@
     </FileLog>
     <FileLog>
       <ProjectId>561c8111-22e4-4b8f-958e-1b3326abe106</ProjectId>
-      <CorrelationId>Intent.Modules.NestJS.Core.Templates.StaticContentTemplateRegistrations.StaticStaticContentTemplateRegistration#README.md</CorrelationId>
+      <CorrelationId>Intent.Modules.NestJS.Core.Templates.StaticContentTemplateRegistrations.StaticStaticContentTemplateRegistration#561c8111-22e4-4b8f-958e-1b3326abe106#README.md</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>README.md</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>README.md</ProjectRelativeFilePath>
@@ -1660,7 +1660,7 @@
     </FileLog>
     <FileLog>
       <ProjectId>561c8111-22e4-4b8f-958e-1b3326abe106</ProjectId>
-      <CorrelationId>Intent.Modules.NestJS.Core.Templates.StaticContentTemplateRegistrations.StaticStaticContentTemplateRegistration#tsconfig.build.json</CorrelationId>
+      <CorrelationId>Intent.Modules.NestJS.Core.Templates.StaticContentTemplateRegistrations.StaticStaticContentTemplateRegistration#561c8111-22e4-4b8f-958e-1b3326abe106#tsconfig.build.json</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>tsconfig.build.json</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>tsconfig.build.json</ProjectRelativeFilePath>
@@ -1668,7 +1668,7 @@
     </FileLog>
     <FileLog>
       <ProjectId>561c8111-22e4-4b8f-958e-1b3326abe106</ProjectId>
-      <CorrelationId>Intent.Modules.NestJS.Core.Templates.StaticContentTemplateRegistrations.StaticStaticContentTemplateRegistration#tsconfig.json</CorrelationId>
+      <CorrelationId>Intent.Modules.NestJS.Core.Templates.StaticContentTemplateRegistrations.StaticStaticContentTemplateRegistration#561c8111-22e4-4b8f-958e-1b3326abe106#tsconfig.json</CorrelationId>
       <OverwriteBehaviour>always</OverwriteBehaviour>
       <ApplicationRelativeFilePath>tsconfig.json</ApplicationRelativeFilePath>
       <ProjectRelativeFilePath>tsconfig.json</ProjectRelativeFilePath>
