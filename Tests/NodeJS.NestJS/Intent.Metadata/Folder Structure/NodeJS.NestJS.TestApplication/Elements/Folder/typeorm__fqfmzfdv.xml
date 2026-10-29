@@ -52,6 +52,8 @@
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>859f92c6-7e30-49b7-a629-5bde8b2a2719</parentFolderId>
+      <packageId>8ca8dbb2-db0e-4241-936f-e3bbdfffd30c</packageId>
+      <packageName>NodeJS.NestJS.TestApplication</packageName>
       <stereotypes />
       <metadata>
         <entry key="status" value="assigned" />

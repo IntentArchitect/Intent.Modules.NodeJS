@@ -6,6 +6,8 @@
   <genericTypes />
   <isMapped>false</isMapped>
   <parentFolderId>01d18d77-a5f7-4dd0-aa9f-a1ce89d7f186</parentFolderId>
+  <packageId>561c8111-22e4-4b8f-958e-1b3326abe106</packageId>
+  <packageName>TypeOrm.SqlServer.TestApplication</packageName>
   <stereotypes />
   <metadata />
   <childElements>
@@ -17,6 +19,8 @@
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>549a78f3-4e31-4916-a049-2d91b40741f2</parentFolderId>
+      <packageId>561c8111-22e4-4b8f-958e-1b3326abe106</packageId>
+      <packageName>TypeOrm.SqlServer.TestApplication</packageName>
       <stereotypes />
       <metadata>
         <entry key="status" value="assigned" />
@@ -31,6 +35,8 @@
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>549a78f3-4e31-4916-a049-2d91b40741f2</parentFolderId>
+      <packageId>561c8111-22e4-4b8f-958e-1b3326abe106</packageId>
+      <packageName>TypeOrm.SqlServer.TestApplication</packageName>
       <stereotypes />
       <metadata>
         <entry key="status" value="assigned" />
@@ -45,6 +51,8 @@
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>549a78f3-4e31-4916-a049-2d91b40741f2</parentFolderId>
+      <packageId>561c8111-22e4-4b8f-958e-1b3326abe106</packageId>
+      <packageName>TypeOrm.SqlServer.TestApplication</packageName>
       <stereotypes />
       <metadata>
         <entry key="status" value="assigned" />

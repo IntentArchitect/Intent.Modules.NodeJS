@@ -7,6 +7,8 @@
   <genericTypes />
   <isMapped>false</isMapped>
   <parentFolderId>cab82412-466c-4142-8139-88b8f4fc06fd</parentFolderId>
+  <packageId>cab82412-466c-4142-8139-88b8f4fc06fd</packageId>
+  <packageName>TypeORM.PostgreSQL</packageName>
   <stereotypes />
   <metadata>
     <entry key="status" value="assigned" />

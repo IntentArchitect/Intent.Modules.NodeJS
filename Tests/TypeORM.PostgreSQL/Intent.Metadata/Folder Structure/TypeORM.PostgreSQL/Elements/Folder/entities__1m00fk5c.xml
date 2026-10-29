@@ -6,6 +6,8 @@
   <genericTypes />
   <isMapped>false</isMapped>
   <parentFolderId>d23b182b-170b-4a55-918d-c06d89f30780</parentFolderId>
+  <packageId>cab82412-466c-4142-8139-88b8f4fc06fd</packageId>
+  <packageName>TypeORM.PostgreSQL</packageName>
   <stereotypes />
   <metadata />
   <childElements>
@@ -17,6 +19,8 @@
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>35695617-c265-4048-8af5-36ef3203dc1a</parentFolderId>
+      <packageId>cab82412-466c-4142-8139-88b8f4fc06fd</packageId>
+      <packageName>TypeORM.PostgreSQL</packageName>
       <stereotypes />
       <metadata>
         <entry key="status" value="assigned" />

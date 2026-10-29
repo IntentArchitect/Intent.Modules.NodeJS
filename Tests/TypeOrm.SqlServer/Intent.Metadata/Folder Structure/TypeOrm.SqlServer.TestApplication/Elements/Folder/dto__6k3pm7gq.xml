@@ -6,6 +6,8 @@
   <genericTypes />
   <isMapped>false</isMapped>
   <parentFolderId>915b7583-8805-411f-a765-5e1cd95e3748</parentFolderId>
+  <packageId>561c8111-22e4-4b8f-958e-1b3326abe106</packageId>
+  <packageName>TypeOrm.SqlServer.TestApplication</packageName>
   <stereotypes />
   <metadata />
   <childElements>
@@ -17,6 +19,8 @@
       <genericTypes />
       <isMapped>false</isMapped>
       <parentFolderId>ab23ce5e-8d6a-45c1-bd77-4bc49138e4d6</parentFolderId>
+      <packageId>561c8111-22e4-4b8f-958e-1b3326abe106</packageId>
+      <packageName>TypeOrm.SqlServer.TestApplication</packageName>
       <stereotypes />
       <metadata>
         <entry key="status" value="assigned" />
